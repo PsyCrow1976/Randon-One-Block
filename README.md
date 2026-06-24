@@ -67,9 +67,49 @@ Do not commit save/world data; only version-control the quest definitions under 
 
 Related configs: `config/ftbquests-client.json5`, `config/ftbteams-server.json5`, `config/ftbchunks-world.json5`.
 
+## Core mechanic: Random One Block (KubeJS)
+
+A single world position generates a new random block each time it is mined.
+
+| Setting | Location |
+|---------|----------|
+| Config (weights, blacklist, active position) | `kubejs/config/random_one_block.json` |
+| Script | `kubejs/server_scripts/random_one_block.js` |
+
+**Flow**
+
+1. An operator sets the position — the block is placed as `minecraft:dirt`.
+2. A player mines that dirt → a random modpack block appears.
+3. Each time that block is mined → another random block appears.
+
+**Commands** (operator, permission level 2):
+
+```bash
+# Set the random block position and place dirt (example coords)
+/randomblock set 100 70 0
+
+# Revert the block at the active position back to dirt
+/randomblock revert
+
+# Reload config after editing random_one_block.json
+/randomblock reload
+
+# Show the active position
+/randomblock info
+```
+
+**Weights** — documented in `kubejs/config/random_one_block.json`:
+
+- `default_weight: 1` applies to every eligible block.
+- `weight_overrides` changes individual blocks (e.g. `minecraft:crafting_table: 3` is 3× more likely than weight-1 blocks).
+- `blacklist` excludes blocks entirely.
+- Weight `0` in overrides also excludes a block.
+
+After editing the JSON, run `/randomblock reload` or restart the server.
+
 ## Customization (KubeJS)
 
-Scripts in `kubejs/` will drive:
+Scripts in `kubejs/` will also drive:
 
 - Integration between mods from different pack styles
 - Recipe changes, item tweaks, and event hooks

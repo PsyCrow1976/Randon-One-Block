@@ -1,0 +1,47 @@
+{
+  "_readme": "Modded Random OneBlock — random block generator config. Edit while the server is stopped, or run /randomblock reload after changes.",
+
+  "_how_weights_work": "Every eligible block gets a weight. Default is default_weight (1). weight_overrides sets per-block weights. Higher weight = more likely. Example: crafting_table at 3 and default 1 means crafting_table is 3x as likely as a normal block. Set weight to 0 in overrides to exclude a block without using blacklist. Total chance for one block = its_weight / sum_of_all_weights.",
+
+  "default_weight": 1,
+
+  "weight_overrides": {
+    "minecraft:crafting_table": 3
+  },
+
+  "blacklist": [
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:void_air",
+    "minecraft:water",
+    "minecraft:lava",
+    "minecraft:fire",
+    "minecraft:soul_fire",
+    "minecraft:moving_piston",
+    "minecraft:piston_head",
+    "minecraft:barrier",
+    "minecraft:structure_void",
+    "minecraft:light",
+    "minecraft:command_block",
+    "minecraft:chain_command_block",
+    "minecraft:repeating_command_block",
+    "minecraft:structure_block",
+    "minecraft:jigsaw"
+  ],
+
+  "initial_block": "minecraft:dirt",
+
+  "active_block": {
+    "enabled": false,
+    "dimension": "",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "_command_examples": [
+    "/randomblock set 100 70 0",
+    "/randomblock revert",
+    "/randomblock reload"
+  ]
+}
