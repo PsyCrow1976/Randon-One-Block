@@ -956,51 +956,91 @@ function cmdReload(source) {
   return 1
 }
 
+function getTeamRandomBlockPosition(player) {
+  if (!$TeamManager || !player) return null
+
+  try {
+    const team = $TeamManager.getTeamByPlayer(player.getUUID())
+    const home = team && team.getHomePosition ? team.getHomePosition() : null
+    if (!home) return null
+
+    const playerLevel = player.level || (player.getLevel ? player.getLevel() : null)
+    if (!playerLevel) return null
+
+    return {
+      dimension: dimensionId(playerLevel),
+      x: home.getX(),
+      y: home.getY() - 1,
+      z: home.getZ(),
+      source: 'team_home'
+    }
+  } catch (ignored) {}
+
+  return null
+}
+
+function getRegisteredRandomBlock(player) {
+  const active = getActiveBlock()
+  if (active && active.enabled) {
+    return {
+      dimension: active.dimension,
+      x: active.x,
+      y: active.y,
+      z: active.z,
+      source: 'active_block'
+    }
+  }
+
+  if (player) return getTeamRandomBlockPosition(player)
+  return null
+}
+
 function cmdInfo(source) {
   ensurePoolReady()
 
-  const active = getActiveBlock()
   const level = commandLevel(source)
   const player = source.player
+  const registered = getRegisteredRandomBlock(player)
 
   if (!isMechanicEnabled()) {
     tell(source, '§eRandom block: §cdisabled')
-  } else if (active && active.enabled) {
-    tell(
-      source,
-      `§eActive: §f${active.dimension} ${active.x} ${active.y} ${active.z} §e| pool: §f${STATE.pool.length} §eblocks`
-    )
-  } else if (STATE.config?.island_template_mode) {
-    tell(
-      source,
-      `§eMode: §fisland template §e| pool: §f${STATE.pool.length} §eblocks §7(no fixed position saved)`
-    )
-  } else {
-    tell(source, '§eRandom block position is not set.')
+    return 1
   }
 
-  if (player) {
-    const stand = playerStandingBlock(player)
-    const dim = dimensionId(level)
-    const blockId = blockIdAt(level, stand.x, stand.y, stand.z)
-    const islandCenter = isIslandCenterAt(level, stand.x, stand.y, stand.z, null)
-    const matchesActive =
-      active &&
-      active.enabled &&
-      active.dimension === dim &&
-      active.x === stand.x &&
-      active.y === stand.y &&
-      active.z === stand.z
-
+  if (registered) {
+    const blockId = blockIdAt(level, registered.x, registered.y, registered.z)
     tell(
       source,
-      `§eStanding on: §f${dim} ${stand.x} ${stand.y} ${stand.z} §7(${blockId})`
+      `§eRandom block: §f${registered.dimension} ${registered.x} ${registered.y} ${registered.z} §7(${blockId})`
     )
+    tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
 
-    if (matchesActive) {
-      tell(source, '§aStanding on the active random block.')
-    } else if (islandCenter) {
-      tell(source, '§aThis block matches the §foneblock_island §acenter pattern.')
+    if (registered.source === 'team_home') {
+      tell(source, '§7From Haven team home (not yet saved to config — create island or run §f/randomblock setbelow§7)')
+    }
+
+    if (STATE.config?.island_template_mode) {
+      tell(source, '§7Island template mode: pyramid center dirt on any §foneblock_island §7also works')
+    }
+  } else if (STATE.config?.island_template_mode) {
+    tell(source, `§eRandom block: §7not registered §e| pool: §f${STATE.pool.length} §eblocks`)
+    tell(source, '§7Mine pyramid center dirt on §foneblock_island §7or run §f/randomblock setbelow')
+  } else {
+    tell(source, '§eRandom block: §7not set §7— use §f/randomblock setbelow')
+  }
+
+  if (player && registered) {
+    const stand = playerStandingBlock(player)
+    const onRandom =
+      registered.x === stand.x && registered.y === stand.y && registered.z === stand.z
+
+    if (onRandom) {
+      tell(source, '§aYou are standing on the random block.')
+    } else {
+      tell(
+        source,
+        `§7Your feet are on: §f${stand.x} ${stand.y} ${stand.z} §7(not the random block)`
+      )
     }
   }
 
@@ -1010,7 +1050,7 @@ function cmdInfo(source) {
 function cmdHelp(source) {
   tell(
     source,
-    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock give'
+    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7(random block placement) §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock give'
   )
   return 1
 }

@@ -142,19 +142,30 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 
 ### Commands (operator, permission level 2)
 
-All subcommands use a single **`/randomblock`** command via `ServerEvents.basicCommand` with `event.input` (reload-safe; do not use `commandRegistry`).
+All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` + `event.input` — reload-safe).
 
-```bash
-/randomblock                    # List subcommands
-/randomblock setbelow           # Set position 1 block below you
-/randomblock set <x> <y> <z>    # Set position by coordinates
-/randomblock info               # Active position, pool size, standing-on block
-/randomblock revert             # Reset active block to initial_block (dirt)
-/randomblock reload             # Reload config and rebuild block pool
-/randomblock give               # Test: gives 1 apple
-```
+| Command | What it does |
+|---------|----------------|
+| `/randomblock` | List subcommands |
+| `/randomblock setbelow` | Register the block you stand on (`getOnPos`) as the random block; saves to config |
+| `/randomblock set <x> <y> <z>` | Register random block at world coordinates (F3); saves to config |
+| `/randomblock info` | Show **registered random block** position + block id + pool size |
+| `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
+| `/randomblock reload` | Reload config and rebuild block pool |
+| `/randomblock give` | Test: gives 1 apple |
+
+On `oneblock_island` create, setbelow runs automatically (~1 s after `/havensb island create oneblock_island …`).
 
 After editing `random_one_block.json`, run `/randomblock reload` or `/reload`.
+
+**`/randomblock info` example** (shows the block placement, not your feet unless you are on it):
+
+```text
+Random block: minecraft:overworld -8190 73 1 (minecraft:dirt)
+Pool: 2172 blocks
+Island template mode: pyramid center dirt on any oneblock_island also works
+You are standing on the random block.
+```
 
 ### Weights
 
@@ -193,28 +204,16 @@ Each time the active block is mined, the server logs the replacement and the wei
 
 **Haven** uses standard Minecraft `BlockPos` (`x`, height `y`, `z`). Auto setbelow reads `Team.getHomePosition()` from Haven and registers dirt at `home.y - 1`.
 
-**KubeJS** must use the same space for `/randomblock info` and `setbelow`:
+**KubeJS** uses the same coordinate space as Haven for registration (`active_block` / team home). For `setbelow`, use Java `player.getOnPos()` — do **not** swap Y/Z or subtract 1 from `getOnPos()`.
 
-- Prefer Java `player.getOnPos()` for the block the player stands on.
-- Do **not** swap Y and Z — an earlier `swapYZ()` helper caused mismatches like:
-  - Active (correct): `minecraft:overworld -8190 73 1`
-  - Standing on (wrong): `minecraft:overworld 1 -8191 70`
-- Do **not** subtract 1 from `getOnPos()` — it already returns the support block (dirt), not the air cell.
-
-After `/reload`, `/randomblock info` should show matching coords:
-
-```text
-Active: minecraft:overworld -8190 73 1 | pool: 2172 blocks
-Standing on: minecraft:overworld -8190 73 1 (minecraft:dirt)
-Standing on the active random block.
-```
+`/randomblock info` reads the **saved random block** from config (`active_block`), or Haven team home if not saved yet. It only mentions your feet when you are **not** on that block.
 
 ### Troubleshooting
 
 | Symptom | Likely cause | What to check |
 |---------|--------------|---------------|
 | Spawn on grass, not dirt | Wrong Haven spawn offset | Use `0,1,0` from **structure center** for `oneblock_island` |
-| Active vs Standing on coords differ | Bad KubeJS position read (swap Y/Z, extra `y-1` on `getOnPos`) | See **Coordinates** above; use F3 to compare |
+| Info shows wrong block coords | Stale `active_block` or reading player feet instead of registration | Re-run island create or `/randomblock setbelow` on center dirt; compare F3 |
 | Random block not triggering | `mechanic_enabled: false` or wrong block | `/randomblock info`; mine center dirt on bedrock |
 | KubeJS error on `/reload` | Script regression (global state, `System`, top-level `ResourceLocation`) | `logs/kubejs/server.log`; see [`requirements.md`](requirements.md) constraints |
 | Commands silent or “unexpected error” after reload | `commandRegistry` instead of `basicCommand` | Script must use `ServerEvents.basicCommand` with `event.input` |

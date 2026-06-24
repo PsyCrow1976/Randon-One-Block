@@ -113,7 +113,7 @@ Use **`ServerEvents.basicCommand('randomblock', ...)`** with **`event.input`** s
 | `/randomblock` | Help |
 | `/randomblock setbelow` | Register block under feet (`getOnPos()`); island template left unchanged |
 | `/randomblock set <x> <y> <z>` | Set position by coords |
-| `/randomblock info` | Active position, pool size, standing-on block + match hints |
+| `/randomblock info` | Registered random block position + block id + pool; feet only if not on block |
 | `/randomblock revert` | Reset active block to `initial_block` |
 | `/randomblock reload` | Reload config + rebuild block pool |
 | `/randomblock give` | Test: give 1 apple (do not register `/give` — conflicts with vanilla) |
