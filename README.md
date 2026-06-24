@@ -88,6 +88,9 @@ A single world position generates a new random block each time it is mined.
 # Set the random block position and place dirt (example coords)
 /randomblock set 100 70 0
 
+# Set the random block one block below your feet
+/randomblock setbelow
+
 # Revert the block at the active position back to dirt
 /randomblock revert
 

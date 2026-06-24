@@ -41,6 +41,7 @@
 
   "_command_examples": [
     "/randomblock set 100 70 0",
+    "/randomblock setbelow",
     "/randomblock revert",
     "/randomblock reload"
   ]

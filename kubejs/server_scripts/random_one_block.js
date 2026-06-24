@@ -181,7 +181,13 @@ function setBlockAt(level, x, y, z, blockId) {
 }
 
 function tell(source, message) {
-  source.sendSuccess(() => Text.of(message), true)
+  const player = source.player
+  if (player) {
+    player.tell(Text.of(message))
+    return
+  }
+
+  source.sendSystemMessage(Text.of(message))
 }
 
 function getActiveBlock() {
@@ -206,6 +212,28 @@ function parseCoords(parts) {
   return { x: x, y: y, z: z }
 }
 
+function setActivePosition(source, x, y, z) {
+  const level = commandLevel(source)
+  const dim = dimensionId(level)
+  const initial = STATE.config.initial_block || 'minecraft:dirt'
+
+  STATE.config.active_block = {
+    enabled: true,
+    dimension: dim,
+    x: x,
+    y: y,
+    z: z
+  }
+  saveConfig()
+  setBlockAt(level, x, y, z, initial)
+
+  tell(
+    source,
+    `§aRandom block set at §f${dim} ${x} ${y} ${z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
+  )
+  return 1
+}
+
 function runRandomBlockCommand(source, input) {
   if (!STATE.config) reloadAll()
 
@@ -219,25 +247,20 @@ function runRandomBlockCommand(source, input) {
       return 0
     }
 
-    const level = commandLevel(source)
-    const dim = dimensionId(level)
-    const initial = STATE.config.initial_block || 'minecraft:dirt'
+    return setActivePosition(source, coords.x, coords.y, coords.z)
+  }
 
-    STATE.config.active_block = {
-      enabled: true,
-      dimension: dim,
-      x: coords.x,
-      y: coords.y,
-      z: coords.z
+  if (sub === 'setbelow') {
+    const player = source.player
+    if (!player) {
+      tell(source, '§cThis command must be run by a player.')
+      return 0
     }
-    saveConfig()
-    setBlockAt(level, coords.x, coords.y, coords.z, initial)
 
-    tell(
-      source,
-      `§aRandom block set at §f${dim} ${coords.x} ${coords.y} ${coords.z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
-    )
-    return 1
+    const x = Math.floor(player.x)
+    const y = Math.floor(player.y) - 1
+    const z = Math.floor(player.z)
+    return setActivePosition(source, x, y, z)
   }
 
   if (sub === 'revert') {
@@ -269,7 +292,10 @@ function runRandomBlockCommand(source, input) {
     return 1
   }
 
-  tell(source, '§e/randomblock set <x> <y> <z> §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock info')
+  tell(
+    source,
+    '§e/randomblock set <x> <y> <z> §7| §e/randomblock setbelow §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock info'
+  )
   return 1
 }
 
