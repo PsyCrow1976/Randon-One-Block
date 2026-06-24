@@ -2,6 +2,8 @@
 
 **Read this file first** at the start of a new session (human or AI) to understand what the project is, what must keep working, what is required next, and which technical constraints must not be broken.
 
+**Last playtest-verified:** 2026-06-24 — `oneblock_island` create, auto setbelow at player feet, mining with varied `roll=X/Y`, FTB Quest book in hotbar slot 0. Treat this flow as the regression baseline.
+
 Also read [`README.md`](README.md) for player-facing docs and quick start.
 
 ---
@@ -9,7 +11,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 ## For AI agents — start here
 
 1. **Project:** NeoForge skyblock modpack with a KubeJS “Random One Block” on **`oneblock_island`** Haven templates (~2100+ weighted blocks from the full registry).
-2. **Status:** Random One Block + `oneblock_island` spawn + auto setbelow are **working**. Do not regress without testing.
+2. **Status:** Random One Block + `oneblock_island` spawn + auto setbelow + quest book are **confirmed working** (playtest 2026-06-24). Do not regress without re-running the end-to-end checklist in README.
 3. **Before editing mechanics:** Read `kubejs/server_scripts/random_one_block.js` and the **KubeJS / Rhino constraints** section below.
 4. **After changes:** User runs `/reload` in CurseForge; verify `logs/kubejs/server.log` for pool size, test picks, and break logs.
 5. **Repo is source of truth** — `kubejs/` and `config/` symlink into the CurseForge instance via `./link-instance.sh`.
@@ -82,6 +84,12 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 **Do not** swap Y and Z. A removed `swapYZ()` caused scrambled coords (`1 71 8193` instead of `-8191 71 1`).
 
 **Confirmed playtest coords:** player Y=72, dirt Y=71, X=-8191, Z=1 with `auto_setbelow_y_offset: 0`.
+
+**Confirmed success log (2026-06-24):**
+
+```text
+[RandomOneBlock] Auto setbelow after island spawn at -8191 71 1 (player_feet, template=oneblock_island)
+```
 
 Auto setbelow must **not** skip registration because stale `active_block` in config matches an old manual test — compare active to **current target**, then call `setActivePosition` at player feet.
 
@@ -304,6 +312,18 @@ When changing `random_one_block.js`:
 3. Confirm **no KubeJS errors** in chat
 4. Check `server.log` for pool ready + test picks
 5. Break active block several times — ids and `roll=` should vary
+
+---
+
+## End-to-end regression checklist (confirmed 2026-06-24)
+
+Run after any mechanic change:
+
+1. `/havensb island create oneblock_island <name>` — spawn on center dirt
+2. Wait ~2 s — `server.log` shows auto setbelow at player feet (`player_feet, template=oneblock_island`)
+3. `/randomblock info` — active coords match dirt under feet
+4. Mine center dirt 3+ times — different block ids; `roll=` changes each break
+5. New player login — FTB Quest book in hotbar slot 0
 
 ---
 

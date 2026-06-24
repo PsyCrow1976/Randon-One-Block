@@ -32,13 +32,28 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
    ```text
    /havensb island create oneblock_island My Island
    ```
-3. You spawn on the **oneblock** pyramid; KubeJS auto-registers the random block at the dirt under your feet (~1 s after create).
+3. You spawn on the **oneblock** pyramid; KubeJS auto-registers the random block at the dirt under your feet (~2 s after create; see `auto_setbelow_delay_ticks`).
 4. Mine that center dirt — a random modpack block replaces it on the next tick. Keep mining for more rolls.
 5. You receive the **FTB Quest book** in hotbar slot 0 on first login / island setup.
 
 Run `/randomblock info` to see the registered random block (coordinates + block id). The pool has ~2100+ blocks. After config edits, run `/randomblock reload`.
 
-**Verified in playtest:** auto setbelow on `oneblock_island` create, mining rolls random blocks with varied `roll=X/Y` in `logs/kubejs/server.log`.
+### End-to-end playtest (confirmed 2026-06-24)
+
+| Step | Expected result |
+|------|-----------------|
+| `/havensb island create oneblock_island …` | Spawn on center dirt; ~2 s later auto setbelow registers feet block |
+| `logs/kubejs/server.log` | `[RandomOneBlock] Auto setbelow after island spawn at … (player_feet, template=oneblock_island)` |
+| `/randomblock info` | Active coords match dirt under feet (e.g. overworld `-8191 71 1`, `minecraft:dirt`) |
+| Mine center dirt | Varied blocks; each break logs `(pool=N, roll=X/Y)` with changing `roll` |
+| First login | FTB Quest book in hotbar slot 0 |
+
+Example success lines from a confirmed session:
+
+```text
+[RandomOneBlock] Auto setbelow after island spawn at -8191 71 1 (player_feet, template=oneblock_island)
+[RandomOneBlock] Replaced broken block at -8191 71 1 with minecraft:iron_ore (pool=2102, roll=847/2104)
+```
 
 Operators can still run `/randomblock setbelow` manually (same logic as auto — block under feet via `getBlockX/Y/Z`).
 
@@ -277,6 +292,8 @@ Mods, saves, logs, and jars stay in the CurseForge instance folder (not fully tr
 AppleSkin, Clumps, Cooking for Blockheads, Easy Villagers, Farming for Blockheads, FTB Chunks, FTB Essentials, FTB Library, FTB Quests, FTB Teams, GuideME, Haven Skyblock Builder, Jade, JourneyMap, JEI, Just Enough Resources, KubeJS, MATC, Mouse Tweaks, Mystical Agriculture (+ Additions, Automation), Powah, Refined Storage (+ JEI integration), Rhino, Sophisticated Backpacks/Core/Storage, and others.
 
 ## Status
+
+**Last playtest-verified:** 2026-06-24 — full `oneblock_island` create → auto setbelow → mining → quest book flow works in the CurseForge instance.
 
 | Area | Status |
 |------|--------|
