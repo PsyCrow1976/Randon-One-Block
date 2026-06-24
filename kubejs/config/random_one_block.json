@@ -40,9 +40,11 @@
   },
 
   "_command_examples": [
-    "/randomblock set 100 70 0",
-    "/randomblock setbelow",
-    "/randomblock revert",
-    "/randomblock reload"
+    "/give",
+    "/randomblocksetbelow",
+    "/randomblockset 100 70 0",
+    "/randomblockinfo",
+    "/randomblockrevert",
+    "/randomblockreload"
   ]
 }

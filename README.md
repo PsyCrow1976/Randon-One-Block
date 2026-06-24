@@ -84,21 +84,29 @@ A single world position generates a new random block each time it is mined.
 
 **Commands** (operator, permission level 2):
 
+KubeJS 8 on MC 26.1 uses flat command names (subcommands like `/randomblock set` do not run reliably):
+
 ```bash
-# Set the random block position and place dirt (example coords)
-/randomblock set 100 70 0
+# Test command — gives 1 apple
+/give
 
 # Set the random block one block below your feet
-/randomblock setbelow
+/randomblocksetbelow
 
-# Revert the block at the active position back to dirt
-/randomblock revert
-
-# Reload config after editing random_one_block.json
-/randomblock reload
+# Set the random block position manually (example coords)
+/randomblockset 100 70 0
 
 # Show the active position
-/randomblock info
+/randomblockinfo
+
+# Revert the block at the active position back to dirt
+/randomblockrevert
+
+# Reload config after editing random_one_block.json
+/randomblockreload
+
+# List all commands
+/randomblock
 ```
 
 **Weights** — documented in `kubejs/config/random_one_block.json`:

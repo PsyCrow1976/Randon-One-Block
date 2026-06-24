@@ -197,10 +197,18 @@ function getActiveBlock() {
 function requireActive(source) {
   const active = getActiveBlock()
   if (!active || !active.enabled) {
-    tell(source, '§cNo random block position set. Use §f/randomblock set <x> <y> <z>')
+    tell(source, '§cNo random block position set. Use §f/randomblocksetbelow §cor §f/randomblockset <x> <y> <z>')
     return null
   }
   return active
+}
+
+function requirePlayer(source) {
+  if (!source.player) {
+    tell(source, '§cThis command must be run by a player.')
+    return null
+  }
+  return source.player
 }
 
 function parseCoords(parts) {
@@ -234,69 +242,86 @@ function setActivePosition(source, x, y, z) {
   return 1
 }
 
-function runRandomBlockCommand(source, input) {
+function cmdSetBelow(source) {
   if (!STATE.config) reloadAll()
 
-  const parts = (input || '').trim().split(/\s+/).filter(part => part.length > 0)
-  const sub = (parts[0] || 'help').toLowerCase()
+  const player = requirePlayer(source)
+  if (!player) return 0
 
-  if (sub === 'set') {
-    const coords = parseCoords(parts.slice(1))
-    if (!coords) {
-      tell(source, '§cUsage: §f/randomblock set <x> <y> <z>')
-      return 0
-    }
+  const x = Math.floor(player.x)
+  const y = Math.floor(player.y) - 1
+  const z = Math.floor(player.z)
+  return setActivePosition(source, x, y, z)
+}
 
-    return setActivePosition(source, coords.x, coords.y, coords.z)
+function cmdSetCoords(source, coordText) {
+  if (!STATE.config) reloadAll()
+
+  const coords = parseCoords(coordText.trim().split(/\s+/))
+  if (!coords) {
+    tell(source, '§cUsage: §f/randomblockset <x> <y> <z>')
+    return 0
   }
 
-  if (sub === 'setbelow') {
-    const player = source.player
-    if (!player) {
-      tell(source, '§cThis command must be run by a player.')
-      return 0
-    }
+  return setActivePosition(source, coords.x, coords.y, coords.z)
+}
 
-    const x = Math.floor(player.x)
-    const y = Math.floor(player.y) - 1
-    const z = Math.floor(player.z)
-    return setActivePosition(source, x, y, z)
-  }
+function cmdRevert(source) {
+  if (!STATE.config) reloadAll()
 
-  if (sub === 'revert') {
-    const active = requireActive(source)
-    if (!active) return 0
+  const active = requireActive(source)
+  if (!active) return 0
 
-    const initial = STATE.config.initial_block || 'minecraft:dirt'
-    setBlockAt(commandLevel(source), active.x, active.y, active.z, initial)
-    tell(source, `§aReverted random block to §f${initial}§a at §f${active.x} ${active.y} ${active.z}`)
-    return 1
-  }
+  const initial = STATE.config.initial_block || 'minecraft:dirt'
+  setBlockAt(commandLevel(source), active.x, active.y, active.z, initial)
+  tell(source, `§aReverted random block to §f${initial}§a at §f${active.x} ${active.y} ${active.z}`)
+  return 1
+}
 
-  if (sub === 'reload') {
-    reloadAll()
-    tell(source, `§aReloaded random block config (${STATE.pool.length} blocks in pool).`)
-    return 1
-  }
+function cmdReload(source) {
+  reloadAll()
+  tell(source, `§aReloaded random block config (${STATE.pool.length} blocks in pool).`)
+  return 1
+}
 
-  if (sub === 'info') {
-    const active = getActiveBlock()
-    if (!active || !active.enabled) {
-      tell(source, '§eRandom block position is not set.')
-      return 1
-    }
-    tell(
-      source,
-      `§eActive: §f${active.dimension} ${active.x} ${active.y} ${active.z} §e| pool: §f${STATE.pool.length} §eblocks`
-    )
+function cmdInfo(source) {
+  if (!STATE.config) reloadAll()
+
+  const active = getActiveBlock()
+  if (!active || !active.enabled) {
+    tell(source, '§eRandom block position is not set.')
     return 1
   }
 
   tell(
     source,
-    '§e/randomblock set <x> <y> <z> §7| §e/randomblock setbelow §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock info'
+    `§eActive: §f${active.dimension} ${active.x} ${active.y} ${active.z} §e| pool: §f${STATE.pool.length} §eblocks`
   )
   return 1
+}
+
+function cmdHelp(source) {
+  tell(source, '§e/randomblocksetbelow §7| §e/randomblockset <x> <y> <z> §7| §e/randomblockinfo §7| §e/randomblockrevert §7| §e/randomblockreload §7| §e/give')
+  return 1
+}
+
+function cmdGive(source) {
+  const player = requirePlayer(source)
+  if (!player) return 0
+
+  player.give('minecraft:apple', 1)
+  tell(source, '§aGiven §f1 minecraft:apple§a.')
+  return 1
+}
+
+function registerSimpleCommand(event, name, handler) {
+  const { commands: Commands } = event
+
+  event.register(
+    Commands.literal(name)
+      .requires(source => hasCommandPermission(source))
+      .executes(ctx => handler(ctx.source))
+  )
 }
 
 ServerEvents.loaded(() => {
@@ -306,18 +331,25 @@ ServerEvents.loaded(() => {
 ServerEvents.commandRegistry(event => {
   const { commands: Commands, arguments: Arguments } = event
 
-  const root = Commands.literal('randomblock').requires(source => hasCommandPermission(source))
+  // KubeJS 8 on MC 26.1 does not reliably run subcommands on /randomblock <args>.
+  // Use single-level command names instead.
+  registerSimpleCommand(event, 'randomblock', cmdHelp)
+  registerSimpleCommand(event, 'randomblocksetbelow', cmdSetBelow)
+  registerSimpleCommand(event, 'randomblockinfo', cmdInfo)
+  registerSimpleCommand(event, 'randomblockrevert', cmdRevert)
+  registerSimpleCommand(event, 'randomblockreload', cmdReload)
+  registerSimpleCommand(event, 'give', cmdGive)
 
-  root.executes(ctx => runRandomBlockCommand(ctx.source, ''))
-
-  root.then(
-    Commands.argument('args', Arguments.GREEDY_STRING.create(event)).executes(ctx => {
-      const args = Arguments.GREEDY_STRING.getResult(ctx, 'args')
-      return runRandomBlockCommand(ctx.source, args)
-    })
+  event.register(
+    Commands.literal('randomblockset')
+      .requires(source => hasCommandPermission(source))
+      .then(
+        Commands.argument('coords', Arguments.GREEDY_STRING.create(event)).executes(ctx => {
+          const coords = Arguments.GREEDY_STRING.getResult(ctx, 'coords')
+          return cmdSetCoords(ctx.source, coords)
+        })
+      )
   )
-
-  event.register(root)
 })
 
 BlockEvents.broken(event => {
