@@ -1,0 +1,2 @@
+#Disable / enable any items here (disables their recipes)
+enabledItems = []

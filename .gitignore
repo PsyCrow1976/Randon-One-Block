@@ -1,0 +1,17 @@
+# Runtime / local instance data (lives only in the CurseForge folder)
+saves/
+logs/
+.crash-reports/
+.local/
+local/
+downloads/
+.cache/
+
+# Large binaries — track mod list separately, not jars
+mods/*.jar
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
