@@ -956,43 +956,46 @@ function cmdReload(source) {
   return 1
 }
 
-function getTeamRandomBlockPosition(player) {
+function getIslandRandomBlockPlacement(player) {
   if (!$TeamManager || !player) return null
 
   try {
     const team = $TeamManager.getTeamByPlayer(player.getUUID())
-    const home = team && team.getHomePosition ? team.getHomePosition() : null
+    if (!team || !team.getHomePosition) return null
+
+    const home = team.getHomePosition()
     if (!home) return null
 
-    const playerLevel = player.level || (player.getLevel ? player.getLevel() : null)
-    if (!playerLevel) return null
+    const template = team.getIslandTemplate ? String(team.getIslandTemplate()) : ''
 
     return {
-      dimension: dimensionId(playerLevel),
+      dimension: 'minecraft:overworld',
       x: home.getX(),
       y: home.getY() - 1,
       z: home.getZ(),
-      source: 'team_home'
+      template: template
     }
   } catch (ignored) {}
 
   return null
 }
 
-function getRegisteredRandomBlock(player) {
-  const active = getActiveBlock()
-  if (active && active.enabled) {
+function getRandomBlockPlacementForInfo(player) {
+  const island = getIslandRandomBlockPlacement(player)
+  if (island && shouldAutoSetbelowTemplate(island.template)) return island
+
+  const cfg = STATE.config?.active_block
+  if (cfg && cfg.enabled) {
     return {
-      dimension: active.dimension,
-      x: active.x,
-      y: active.y,
-      z: active.z,
-      source: 'active_block'
+      dimension: String(cfg.dimension),
+      x: Math.floor(cfg.x),
+      y: Math.floor(cfg.y),
+      z: Math.floor(cfg.z),
+      template: ''
     }
   }
 
-  if (player) return getTeamRandomBlockPosition(player)
-  return null
+  return island
 }
 
 function cmdInfo(source) {
@@ -1000,47 +1003,42 @@ function cmdInfo(source) {
 
   const level = commandLevel(source)
   const player = source.player
-  const registered = getRegisteredRandomBlock(player)
+  const placement = getRandomBlockPlacementForInfo(player)
 
   if (!isMechanicEnabled()) {
     tell(source, '§eRandom block: §cdisabled')
     return 1
   }
 
-  if (registered) {
-    const blockId = blockIdAt(level, registered.x, registered.y, registered.z)
+  if (placement) {
+    const blockId = blockIdAt(level, placement.x, placement.y, placement.z)
     tell(
       source,
-      `§eRandom block: §f${registered.dimension} ${registered.x} ${registered.y} ${registered.z} §7(${blockId})`
+      `§eRandom block placement: §f${placement.dimension} ${placement.x} ${placement.y} ${placement.z} §7(${blockId})`
     )
     tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
 
-    if (registered.source === 'team_home') {
-      tell(source, '§7From Haven team home (not yet saved to config — create island or run §f/randomblock setbelow§7)')
+    if (placement.template) {
+      tell(source, `§7Island: §f${placement.template} §7(center dirt, one block below Haven spawn)`)
     }
 
     if (STATE.config?.island_template_mode) {
-      tell(source, '§7Island template mode: pyramid center dirt on any §foneblock_island §7also works')
+      tell(source, '§7Mine this block to roll a random block from the pool')
     }
   } else if (STATE.config?.island_template_mode) {
-    tell(source, `§eRandom block: §7not registered §e| pool: §f${STATE.pool.length} §eblocks`)
-    tell(source, '§7Mine pyramid center dirt on §foneblock_island §7or run §f/randomblock setbelow')
+    tell(source, `§eRandom block placement: §7unknown §e| pool: §f${STATE.pool.length} §eblocks`)
+    tell(source, '§7Create a §foneblock_island §7or run §f/randomblock setbelow')
   } else {
-    tell(source, '§eRandom block: §7not set §7— use §f/randomblock setbelow')
-  }
-
-  if (player && registered) {
-    const stand = playerStandingBlock(player)
-    const onRandom =
-      registered.x === stand.x && registered.y === stand.y && registered.z === stand.z
-
-    if (onRandom) {
-      tell(source, '§aYou are standing on the random block.')
-    } else {
+    const cfg = STATE.config?.active_block
+    if (cfg && cfg.enabled) {
+      const blockId = blockIdAt(level, cfg.x, cfg.y, cfg.z)
       tell(
         source,
-        `§7Your feet are on: §f${stand.x} ${stand.y} ${stand.z} §7(not the random block)`
+        `§eRandom block placement: §f${cfg.dimension} ${cfg.x} ${cfg.y} ${cfg.z} §7(${blockId})`
       )
+      tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
+    } else {
+      tell(source, '§eRandom block placement: §7not set §7— use §f/randomblock setbelow')
     }
   }
 

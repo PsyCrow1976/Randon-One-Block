@@ -149,7 +149,7 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | `/randomblock` | List subcommands |
 | `/randomblock setbelow` | Register the block you stand on (`getOnPos`) as the random block; saves to config |
 | `/randomblock set <x> <y> <z>` | Register random block at world coordinates (F3); saves to config |
-| `/randomblock info` | Show **registered random block** position + block id + pool size |
+| `/randomblock info` | Show **random block placement** on your island (center dirt coords + block id), not your feet |
 | `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
 | `/randomblock reload` | Reload config and rebuild block pool |
 | `/randomblock give` | Test: gives 1 apple |
@@ -158,13 +158,13 @@ On `oneblock_island` create, setbelow runs automatically (~1 s after `/havensb i
 
 After editing `random_one_block.json`, run `/randomblock reload` or `/reload`.
 
-**`/randomblock info` example** (shows the block placement, not your feet unless you are on it):
+**`/randomblock info` example** (island center dirt — independent of where you stand):
 
 ```text
-Random block: minecraft:overworld -8190 73 1 (minecraft:dirt)
+Random block placement: minecraft:overworld -8190 73 1 (minecraft:dirt)
 Pool: 2172 blocks
-Island template mode: pyramid center dirt on any oneblock_island also works
-You are standing on the random block.
+Island: oneblock_island (center dirt, one block below Haven spawn)
+Mine this block to roll a random block from the pool
 ```
 
 ### Weights
@@ -206,7 +206,7 @@ Each time the active block is mined, the server logs the replacement and the wei
 
 **KubeJS** uses the same coordinate space as Haven for registration (`active_block` / team home). For `setbelow`, use Java `player.getOnPos()` — do **not** swap Y/Z or subtract 1 from `getOnPos()`.
 
-`/randomblock info` reads the **saved random block** from config (`active_block`), or Haven team home if not saved yet. It only mentions your feet when you are **not** on that block.
+`/randomblock info` reads your island’s **center dirt** from Haven (`team home.y - 1` for `oneblock_island`), or `active_block` in config for other layouts. It does **not** use your current position.
 
 ### Troubleshooting
 
