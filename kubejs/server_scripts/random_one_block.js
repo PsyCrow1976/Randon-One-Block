@@ -5,6 +5,40 @@ const CONFIG_FILE = 'random_one_block.json'
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 const $LiquidBlock = Java.loadClass('net.minecraft.world.level.block.LiquidBlock')
 
+const DEFAULT_CONFIG = {
+  default_weight: 1,
+  weight_overrides: {
+    'minecraft:crafting_table': 3
+  },
+  blacklist: [
+    'minecraft:air',
+    'minecraft:cave_air',
+    'minecraft:void_air',
+    'minecraft:water',
+    'minecraft:lava',
+    'minecraft:fire',
+    'minecraft:soul_fire',
+    'minecraft:moving_piston',
+    'minecraft:piston_head',
+    'minecraft:barrier',
+    'minecraft:structure_void',
+    'minecraft:light',
+    'minecraft:command_block',
+    'minecraft:chain_command_block',
+    'minecraft:repeating_command_block',
+    'minecraft:structure_block',
+    'minecraft:jigsaw'
+  ],
+  initial_block: 'minecraft:dirt',
+  active_block: {
+    enabled: false,
+    dimension: '',
+    x: 0,
+    y: 0,
+    z: 0
+  }
+}
+
 /** @type {{ config: any, pool: { id: string, weight: number }[], totalWeight: number }} */
 const STATE = {
   config: null,
@@ -12,12 +46,19 @@ const STATE = {
   totalWeight: 0
 }
 
+function cloneConfig(config) {
+  return JsonIO.parse(JsonIO.toString(config))
+}
+
 function loadConfig() {
-  const config = JsonIO.read(CONFIG_FILE)
+  let config = JsonIO.read(CONFIG_FILE)
+
   if (!config) {
-    console.error(`[RandomOneBlock] Missing config: kubejs/config/${CONFIG_FILE}`)
-    return null
+    console.warn(`[RandomOneBlock] Config not found, creating default at kubejs/config/${CONFIG_FILE}`)
+    config = cloneConfig(DEFAULT_CONFIG)
+    JsonIO.write(CONFIG_FILE, config)
   }
+
   return config
 }
 
@@ -95,7 +136,7 @@ function samePosition(level, block, active) {
 
 function pickRandomBlockId(level) {
   if (!STATE.pool.length || STATE.totalWeight <= 0) {
-    return STATE.config.initial_block || 'minecraft:dirt'
+    return STATE.config?.initial_block || 'minecraft:dirt'
   }
 
   let roll = level.random.nextInt(STATE.totalWeight)
@@ -108,116 +149,109 @@ function pickRandomBlockId(level) {
   return STATE.pool[STATE.pool.length - 1].id
 }
 
-function commandLevel(source) {
-  if (source.player) return source.player.level
-  return source.level
-}
-
 function setBlockAt(level, x, y, z, blockId) {
   level.getBlock(x, y, z).set(blockId)
 }
 
-function tell(source, message) {
-  source.sendSuccess(() => Text.of(message), true)
+function tell(player, message) {
+  player.tell(Text.of(message))
 }
 
 function getActiveBlock() {
   return STATE.config?.active_block
 }
 
-function requireActive(source) {
+function requireActive(player) {
   const active = getActiveBlock()
   if (!active || !active.enabled) {
-    tell(source, '§cNo random block position set. Use §f/randomblock set <x> <y> <z>')
+    tell(player, '§cNo random block position set. Use §f/randomblock set <x> <y> <z>')
     return null
   }
   return active
 }
 
-ServerEvents.loaded(event => {
+function parseCoords(parts) {
+  if (parts.length < 3) return null
+  const x = Number.parseInt(parts[0], 10)
+  const y = Number.parseInt(parts[1], 10)
+  const z = Number.parseInt(parts[2], 10)
+  if (Number.isNaN(x) || Number.isNaN(y) || Number.isNaN(z)) return null
+  return { x: x, y: y, z: z }
+}
+
+reloadAll()
+
+ServerEvents.loaded(() => {
   reloadAll()
 })
 
-ServerEvents.commandRegistry(event => {
-  const { commands: Commands, arguments: Arguments } = event
+ServerEvents.basicCommand('randomblock', event => {
+  const player = event.player
+  if (!player) return
 
-  const setPos = (source, x, y, z) => {
-    if (!STATE.config) reloadAll()
+  if (!STATE.config) reloadAll()
 
-    const level = commandLevel(source)
+  const parts = (event.input || '').trim().split(/\s+/).filter(part => part.length > 0)
+  const sub = (parts[0] || 'help').toLowerCase()
+
+  if (sub === 'set') {
+    const coords = parseCoords(parts.slice(1))
+    if (!coords) {
+      tell(player, '§cUsage: §f/randomblock set <x> <y> <z>')
+      return
+    }
+
+    const level = player.level
     const dim = dimensionId(level)
     const initial = STATE.config.initial_block || 'minecraft:dirt'
 
     STATE.config.active_block = {
       enabled: true,
       dimension: dim,
-      x: x,
-      y: y,
-      z: z
+      x: coords.x,
+      y: coords.y,
+      z: coords.z
     }
     saveConfig()
-    setBlockAt(level, x, y, z, initial)
+    setBlockAt(level, coords.x, coords.y, coords.z, initial)
 
     tell(
-      source,
-      `§aRandom block set at §f${dim} ${x} ${y} ${z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
+      player,
+      `§aRandom block set at §f${dim} ${coords.x} ${coords.y} ${coords.z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
     )
-    return 1
+    return
   }
 
-  const revert = source => {
-    const active = requireActive(source)
-    if (!active) return 0
+  if (sub === 'revert') {
+    const active = requireActive(player)
+    if (!active) return
 
     const initial = STATE.config.initial_block || 'minecraft:dirt'
-    setBlockAt(commandLevel(source), active.x, active.y, active.z, initial)
-    tell(source, `§aReverted random block to §f${initial}§a at §f${active.x} ${active.y} ${active.z}`)
-    return 1
+    setBlockAt(player.level, active.x, active.y, active.z, initial)
+    tell(player, `§aReverted random block to §f${initial}§a at §f${active.x} ${active.y} ${active.z}`)
+    return
   }
 
-  event.register(
-    Commands.literal('randomblock')
-      .requires(s => s.hasPermission(2))
-      .then(
-        Commands.literal('set')
-          .then(
-            Commands.argument('x', Arguments.INTEGER.create(event))
-              .then(
-                Commands.argument('y', Arguments.INTEGER.create(event))
-                  .then(
-                    Commands.argument('z', Arguments.INTEGER.create(event)).executes(ctx => {
-                      const x = Arguments.INTEGER.getResult(ctx, 'x')
-                      const y = Arguments.INTEGER.getResult(ctx, 'y')
-                      const z = Arguments.INTEGER.getResult(ctx, 'z')
-                      return setPos(ctx.source, x, y, z)
-                    })
-                  )
-              )
-          )
-      )
-      .then(Commands.literal('revert').executes(ctx => revert(ctx.source)))
-      .then(
-        Commands.literal('reload').executes(ctx => {
-          reloadAll()
-          tell(ctx.source, `§aReloaded random block config (${STATE.pool.length} blocks in pool).`)
-          return 1
-        })
-      )
-      .then(
-        Commands.literal('info').executes(ctx => {
-          const active = getActiveBlock()
-          if (!active || !active.enabled) {
-            tell(ctx.source, '§eRandom block position is not set.')
-            return 1
-          }
-          tell(
-            ctx.source,
-            `§eActive: §f${active.dimension} ${active.x} ${active.y} ${active.z} §e| pool: §f${STATE.pool.length} §eblocks`
-          )
-          return 1
-        })
-      )
-  )
+  if (sub === 'reload') {
+    reloadAll()
+    tell(player, `§aReloaded random block config (${STATE.pool.length} blocks in pool).`)
+    return
+  }
+
+  if (sub === 'info') {
+    const active = getActiveBlock()
+    if (!active || !active.enabled) {
+      tell(player, '§eRandom block position is not set.')
+      return
+    }
+    tell(
+      player,
+      `§eActive: §f${active.dimension} ${active.x} ${active.y} ${active.z} §e| pool: §f${STATE.pool.length} §eblocks`
+    )
+    return
+  }
+
+  tell(player, '§e/randomblock set <x> <y> <z> §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock info')
 })
 
 BlockEvents.broken(event => {
