@@ -15,6 +15,8 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
 | FTB support | FTB Library, FTB Teams, FTB Chunks, FTB Essentials | Shared FTB infrastructure (claims, teams, utilities) |
 | Pack scripting | **KubeJS** (`kubejs` 8.0.3) | Random One Block mechanic, future recipes/integrations |
 
+**What's new?** See [`CHANGELOG.md`](CHANGELOG.md) for release notes in plain language.
+
 **Continuing development?** Read [`requirements.md`](requirements.md) for session handoff, technical constraints, and what is left to build.
 
 ## Target versions
