@@ -32,10 +32,12 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
    ```text
    /havensb island create oneblock_island My Island
    ```
-3. You spawn on the center **dirt** block (small pyramid island). The random block is **auto-registered** a moment after island creation (same as `/randomblock setbelow`).
+3. You spawn on the center **dirt** block (small pyramid island).
 4. Mine the center dirt — a random modpack block replaces it on the next tick. Keep mining for more rolls.
 
-Use `/randomblock info` to confirm the active position matches **Standing on** (~2100+ blocks in pool). After config edits, run `/randomblock reload`.
+Run `/randomblock info` to see your island’s **random block placement** (center dirt coordinates + block id). The pool has ~2100+ blocks. After config edits, run `/randomblock reload`.
+
+**Verified in playtest:** spawn on dirt, mining rolls random blocks, `/randomblock info` shows island center placement (not player feet). Auto-registration runs ~1 s after island create.
 
 Operators can still run `/randomblock setbelow` manually on other layouts.
 
@@ -61,7 +63,7 @@ haven_skyblock_builder:skyblock_world
 | Template | Notes |
 |----------|-------|
 | `classic_island` | `additional_sand_island` at `0,0,-75`; spawn offset `1,1,-3` (west) |
-| `oneblock_island` | 3×3 grass + bedrock/dirt pyramid; spawn offset `0,1,0` (west); random block auto-setup |
+| `oneblock_island` | **Recommended** — 3×3 grass + bedrock/dirt pyramid; spawn `0,1,0` (west); random block auto-setup |
 
 **Player flow:** spawn island → `/havensb island create <template> <name>` → team island at configured distance. In-game UI: `J`.
 
@@ -135,10 +137,10 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 
 ### Flow
 
-1. Player creates `oneblock_island` → script reads Haven **team home** (`BlockPos`) and registers dirt at `home.y - 1` (or run `/randomblock setbelow` manually).
-2. Player mines that dirt → a random modpack block appears on the next tick.
+1. Player creates `oneblock_island` → you spawn on center dirt; auto-registration runs via Haven team home (`home.y - 1`).
+2. Player mines that dirt → a random modpack block appears on the next tick (`roll=X/Y` in server log).
 3. Sand/gravel falls → `initial_block` is restored so the player can mine again.
-4. Each subsequent mine at the same coordinates (or any matching pyramid center with `island_template_mode`) → another random block.
+4. Each subsequent mine at the pyramid center (`island_template_mode`) → another random block.
 
 ### Commands (operator, permission level 2)
 
@@ -213,7 +215,7 @@ Each time the active block is mined, the server logs the replacement and the wei
 | Symptom | Likely cause | What to check |
 |---------|--------------|---------------|
 | Spawn on grass, not dirt | Wrong Haven spawn offset | Use `0,1,0` from **structure center** for `oneblock_island` |
-| Info shows wrong block coords | Stale `active_block` or reading player feet instead of registration | Re-run island create or `/randomblock setbelow` on center dirt; compare F3 |
+| Info shows player coords instead of dirt | Old script build | `/reload`; info must say `Random block placement:` with `minecraft:dirt` at island center |
 | Random block not triggering | `mechanic_enabled: false` or wrong block | `/randomblock info`; mine center dirt on bedrock |
 | KubeJS error on `/reload` | Script regression (global state, `System`, top-level `ResourceLocation`) | `logs/kubejs/server.log`; see [`requirements.md`](requirements.md) constraints |
 | Commands silent or “unexpected error” after reload | `commandRegistry` instead of `basicCommand` | Script must use `ServerEvents.basicCommand` with `event.input` |
@@ -264,8 +266,9 @@ AppleSkin, Clumps, Cooking for Blockheads, Easy Villagers, Farming for Blockhead
 | Area | Status |
 |------|--------|
 | Haven Skyblock templates & config | In repo |
-| `oneblock_island` template + Haven spawn | **Working** — pyramid layout, offset `0,1,0` from center |
-| Random One Block (KubeJS) | **Working** — pool (~2100+ blocks), auto setbelow, island template mode, reload-safe commands |
+| `oneblock_island` template + Haven spawn | **Confirmed** — spawn on center dirt, offset `0,1,0` from structure center |
+| Random One Block (KubeJS) | **Confirmed** — mining, pool (~2100+ blocks), `roll=X/Y` logs, auto setbelow on island create |
+| `/randomblock info` | **Confirmed** — shows island center dirt placement via Haven team home (`home.y - 1`) |
 | FTB Quest chapters | Not started (`config/ftbquests/quests/` missing) |
 | Phase / tier design for random blocks | Not started |
 | Broader KubeJS integrations | Planned |
