@@ -5,6 +5,7 @@ const CONFIG_FILE = 'random_one_block.json'
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 const $LiquidBlock = Java.loadClass('net.minecraft.world.level.block.LiquidBlock')
 const $Integer = Java.loadClass('java.lang.Integer')
+const $ThreadLocalRandom = Java.loadClass('java.util.concurrent.ThreadLocalRandom')
 
 const DEFAULT_CONFIG = {
   default_weight: 1,
@@ -40,11 +41,12 @@ const DEFAULT_CONFIG = {
   }
 }
 
-/** @type {{ config: any, pool: { id: string, weight: number }[], totalWeight: number }} */
+/** @type {{ config: any, pool: { id: string, weight: number }[], totalWeight: number, active: any }} */
 const STATE = {
   config: null,
   pool: [],
-  totalWeight: 0
+  totalWeight: 0,
+  active: null
 }
 
 function cloneConfig(config) {
@@ -64,7 +66,6 @@ function loadConfig() {
 }
 
 function getBlockId(block) {
-  if (block && block.id) return String(block.id)
   return String($BuiltInRegistries.BLOCK.getKey(block).location())
 }
 
@@ -124,12 +125,13 @@ function rebuildPool() {
   })
 
   STATE.pool = pool
-  STATE.totalWeight = totalWeight
-  console.info(`[RandomOneBlock] Block pool ready: ${pool.length} blocks, total weight ${totalWeight}`)
+  STATE.totalWeight = Math.max(1, Math.floor(totalWeight))
+  console.info(`[RandomOneBlock] Block pool ready: ${pool.length} blocks, total weight ${STATE.totalWeight}`)
 }
 
 function reloadAll() {
   STATE.config = loadConfig()
+  syncActiveFromConfig()
   rebuildPool()
 }
 
@@ -138,30 +140,61 @@ function saveConfig() {
 }
 
 function dimensionId(level) {
-  return String(level.dimension)
+  const dim = level.dimension
+  if (!dim) return ''
+
+  try {
+    if (dim.location) return String(dim.location())
+  } catch (ignored) {}
+
+  const text = String(dim)
+  if (text.includes('overworld')) return 'minecraft:overworld'
+  if (text.includes('the_nether') || text.includes('nether')) return 'minecraft:the_nether'
+  if (text.includes('the_end') || text.includes('end')) return 'minecraft:the_end'
+  return text
 }
 
 function blockCoords(block) {
+  if (block.pos) {
+    return {
+      x: Math.floor(block.pos.x),
+      y: Math.floor(block.pos.y),
+      z: Math.floor(block.pos.z)
+    }
+  }
+
   return {
-    x: block.x ?? block.pos?.x,
-    y: block.y ?? block.pos?.y,
-    z: block.z ?? block.pos?.z
+    x: Math.floor(block.x),
+    y: Math.floor(block.y),
+    z: Math.floor(block.z)
   }
 }
 
 function samePosition(level, block, active) {
-  if (!active || !active.enabled) return false
-  if (dimensionId(level) !== String(active.dimension)) return false
+  if (!active) return false
+  if (dimensionId(level) !== active.dimension) return false
   const c = blockCoords(block)
   return c.x === active.x && c.y === active.y && c.z === active.z
 }
 
-function pickRandomBlockId(level) {
+function syncActiveFromConfig() {
+  const cfg = STATE.config?.active_block
+  if (cfg && cfg.enabled) {
+    STATE.active = {
+      dimension: String(cfg.dimension),
+      x: Math.floor(cfg.x),
+      y: Math.floor(cfg.y),
+      z: Math.floor(cfg.z)
+    }
+  }
+}
+
+function pickRandomBlockId() {
   if (!STATE.pool.length || STATE.totalWeight <= 0) {
     return STATE.config?.initial_block || 'minecraft:dirt'
   }
 
-  let roll = level.random.nextInt(STATE.totalWeight)
+  let roll = $ThreadLocalRandom.current().nextInt(STATE.totalWeight)
   for (let i = 0; i < STATE.pool.length; i++) {
     const entry = STATE.pool[i]
     roll -= entry.weight
@@ -169,6 +202,12 @@ function pickRandomBlockId(level) {
   }
 
   return STATE.pool[STATE.pool.length - 1].id
+}
+
+function placeNextRandomBlock(level, x, y, z) {
+  const nextId = pickRandomBlockId()
+  level.getBlock(x, y, z).set(nextId)
+  return nextId
 }
 
 function commandLevel(source) {
@@ -191,7 +230,7 @@ function tell(source, message) {
 }
 
 function getActiveBlock() {
-  return STATE.config?.active_block
+  return STATE.active
 }
 
 function requireActive(source) {
@@ -224,20 +263,27 @@ function setActivePosition(source, x, y, z) {
   const level = commandLevel(source)
   const dim = dimensionId(level)
   const initial = STATE.config.initial_block || 'minecraft:dirt'
+  const pos = {
+    dimension: dim,
+    x: Math.floor(x),
+    y: Math.floor(y),
+    z: Math.floor(z)
+  }
 
+  STATE.active = pos
   STATE.config.active_block = {
     enabled: true,
-    dimension: dim,
-    x: x,
-    y: y,
-    z: z
+    dimension: pos.dimension,
+    x: pos.x,
+    y: pos.y,
+    z: pos.z
   }
   saveConfig()
-  setBlockAt(level, x, y, z, initial)
+  setBlockAt(level, pos.x, pos.y, pos.z, initial)
 
   tell(
     source,
-    `§aRandom block set at §f${dim} ${x} ${y} ${z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
+    `§aRandom block set at §f${pos.dimension} ${pos.x} ${pos.y} ${pos.z}§a. Placed §f${initial}§a. Mine it to spawn a random block.`
   )
   return 1
 }
@@ -356,16 +402,14 @@ BlockEvents.broken(event => {
   if (!STATE.config) return
 
   const active = getActiveBlock()
+  if (!active) return
   if (!samePosition(event.level, event.block, active)) return
 
   const level = event.level
   const coords = blockCoords(event.block)
-  const nextId = pickRandomBlockId(level)
 
   event.server.scheduleInTicks(1, () => {
-    const current = level.getBlock(coords.x, coords.y, coords.z)
-    if (current.id === 'minecraft:air') {
-      current.set(nextId)
-    }
+    const nextId = placeNextRandomBlock(level, coords.x, coords.y, coords.z)
+    console.info(`[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId}`)
   })
 })
