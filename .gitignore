@@ -10,6 +10,10 @@ downloads/
 # Large binaries — track mod list separately, not jars
 mods/*.jar
 
+# Generated at runtime by Random One Block reload (regenerate via /randomblockreload)
+kubejs/config/random_one_block_pool.json
+kubejs/config/random_one_block_pool.txt
+
 # OS / editor
 .DS_Store
 Thumbs.db

@@ -31,6 +31,18 @@
 
   "initial_block": "minecraft:dirt",
 
+  "foundation_block": "minecraft:bedrock",
+
+  "mechanic_enabled": true,
+
+  "island_template_mode": true,
+
+  "auto_setbelow_on_island_create": true,
+
+  "auto_setbelow_templates": ["oneblock_island"],
+
+  "island_center_surround": "minecraft:grass_block",
+
   "active_block": {
     "enabled": false,
     "dimension": "",
@@ -40,11 +52,12 @@
   },
 
   "_command_examples": [
-    "/give",
-    "/randomblocksetbelow",
-    "/randomblockset 100 70 0",
-    "/randomblockinfo",
-    "/randomblockrevert",
-    "/randomblockreload"
+    "/randomblock",
+    "/randomblock setbelow",
+    "/randomblock set 100 70 0",
+    "/randomblock info",
+    "/randomblock revert",
+    "/randomblock reload",
+    "/randomblock give"
   ]
 }
