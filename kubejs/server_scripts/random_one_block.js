@@ -41,12 +41,29 @@ const DEFAULT_CONFIG = {
   }
 }
 
-/** @type {{ config: any, pool: { id: string, weight: number }[], totalWeight: number, active: any }} */
-const STATE = {
-  config: null,
-  pool: [],
-  totalWeight: 0,
-  active: null
+function getState() {
+  if (!global.RANDOM_ONE_BLOCK) {
+    global.RANDOM_ONE_BLOCK = {
+      config: null,
+      pool: [],
+      totalWeight: 0,
+      active: null
+    }
+  }
+  return global.RANDOM_ONE_BLOCK
+}
+
+const STATE = getState()
+
+function ensurePoolReady() {
+  if (!STATE.config) {
+    STATE.config = loadConfig()
+    syncActiveFromConfig()
+  }
+
+  if (!STATE.pool || STATE.pool.length === 0) {
+    rebuildPool()
+  }
 }
 
 function cloneConfig(config) {
@@ -190,7 +207,12 @@ function syncActiveFromConfig() {
 }
 
 function pickRandomBlockId() {
+  ensurePoolReady()
+
   if (!STATE.pool.length || STATE.totalWeight <= 0) {
+    console.warn(
+      `[RandomOneBlock] Pool empty during pick (size=${STATE.pool.length}, weight=${STATE.totalWeight}), using dirt`
+    )
     return STATE.config?.initial_block || 'minecraft:dirt'
   }
 
@@ -202,12 +224,6 @@ function pickRandomBlockId() {
   }
 
   return STATE.pool[STATE.pool.length - 1].id
-}
-
-function placeNextRandomBlock(level, x, y, z) {
-  const nextId = pickRandomBlockId()
-  level.getBlock(x, y, z).set(nextId)
-  return nextId
 }
 
 function commandLevel(source) {
@@ -289,7 +305,7 @@ function setActivePosition(source, x, y, z) {
 }
 
 function cmdSetBelow(source) {
-  if (!STATE.config) reloadAll()
+  ensurePoolReady()
 
   const player = requirePlayer(source)
   if (!player) return 0
@@ -301,7 +317,7 @@ function cmdSetBelow(source) {
 }
 
 function cmdSetCoords(source, coordText) {
-  if (!STATE.config) reloadAll()
+  ensurePoolReady()
 
   const coords = parseCoords(coordText.trim().split(/\s+/))
   if (!coords) {
@@ -313,7 +329,7 @@ function cmdSetCoords(source, coordText) {
 }
 
 function cmdRevert(source) {
-  if (!STATE.config) reloadAll()
+  ensurePoolReady()
 
   const active = requireActive(source)
   if (!active) return 0
@@ -331,7 +347,7 @@ function cmdReload(source) {
 }
 
 function cmdInfo(source) {
-  if (!STATE.config) reloadAll()
+  ensurePoolReady()
 
   const active = getActiveBlock()
   if (!active || !active.enabled) {
@@ -399,7 +415,7 @@ ServerEvents.commandRegistry(event => {
 })
 
 BlockEvents.broken(event => {
-  if (!STATE.config) return
+  ensurePoolReady()
 
   const active = getActiveBlock()
   if (!active) return
@@ -407,9 +423,13 @@ BlockEvents.broken(event => {
 
   const level = event.level
   const coords = blockCoords(event.block)
+  const nextId = pickRandomBlockId()
+  const poolSize = STATE.pool.length
 
   event.server.scheduleInTicks(1, () => {
-    const nextId = placeNextRandomBlock(level, coords.x, coords.y, coords.z)
-    console.info(`[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId}`)
+    level.getBlock(coords.x, coords.y, coords.z).set(nextId)
+    console.info(
+      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (pool=${poolSize})`
+    )
   })
 })
