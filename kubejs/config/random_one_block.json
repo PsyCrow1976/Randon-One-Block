@@ -43,7 +43,11 @@
 
   "auto_setbelow_y_offset": 0,
 
+  "auto_setbelow_delay_ticks": 40,
+
   "haven_island_distance": 8192,
+
+  "debug_logging": false,
 
   "island_center_surround": "minecraft:grass_block",
 
@@ -61,7 +65,6 @@
     "/randomblock set 100 70 0",
     "/randomblock info",
     "/randomblock revert",
-    "/randomblock reload",
-    "/randomblock give"
+    "/randomblock reload"
   ]
 }

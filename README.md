@@ -134,13 +134,15 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 | `auto_setbelow_on_island_create` | `true` | Register random block after Haven island create |
 | `auto_setbelow_templates` | `["oneblock_island"]` | Templates that trigger auto-setup |
 | `auto_setbelow_y_offset` | `0` | Extra Y added to auto target (use `-1` only if Haven spawn is one block too high) |
+| `auto_setbelow_delay_ticks` | `40` | Ticks to wait after island spawn before auto setbelow (~2 s at 20 TPS; lets teleport finish) |
 | `haven_island_distance` | `8192` | Haven grid spacing (used for debug / fallback center math) |
+| `debug_logging` | `false` | Verbose KubeJS log output (pool preview, auto setbelow trace, watcher startup) |
 | `initial_block` | `minecraft:dirt` | Block players mine / restored after falling blocks |
 | `foundation_block` | `minecraft:bedrock` | Under center dirt in template (not overwritten on register) |
 
 ### Flow
 
-1. Player creates `oneblock_island` → Haven teleports them to the island; a `ServerEvents.tick` watcher detects the team and runs the same logic as `/randomblock setbelow` (block under feet + `auto_setbelow_y_offset`).
+1. Player creates `oneblock_island` → Haven teleports them to the island; a `ServerEvents.tick` watcher detects the team, waits `auto_setbelow_delay_ticks`, then runs the same logic as `/randomblock setbelow` (block under feet + `auto_setbelow_y_offset`).
 2. Player mines that dirt → a random modpack block appears on the next tick (`roll=X/Y` in server log).
 3. Sand/gravel falls → `initial_block` is restored so the player can mine again.
 4. Each subsequent mine at the pyramid center (`island_template_mode`) → another random block.
@@ -157,9 +159,8 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | `/randomblock info` | Show registered random block coords + block id + pool size |
 | `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
 | `/randomblock reload` | Reload config and rebuild block pool |
-| `/randomblock give` | Test: gives 1 apple |
 
-On `oneblock_island` create, setbelow runs automatically within a few seconds (polls every 5 ticks after team + template are detected). Log line:
+On `oneblock_island` create, setbelow runs automatically after `auto_setbelow_delay_ticks` (default 40 ticks ≈ 2 s) once the team + template are detected (polls every 5 ticks). Log line:
 
 ```text
 [RandomOneBlock] Auto setbelow after island spawn at <x> <y> <z> (player_feet, template=oneblock_island)
@@ -190,8 +191,9 @@ After `/reload` or `/randomblock reload`, check `logs/kubejs/server.log`:
 
 ```text
 [RandomOneBlock] Block pool ready: 2102 unique blocks, total weight 2104
-[RandomOneBlock] Test random picks (8): <should be varied block ids>
 ```
+
+Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, and auto setbelow trace lines.
 
 Full block lists are written to `kubejs/config/random_one_block_pool.txt` (tab-separated) and `.json`. These files are gitignored and regenerated on each pool rebuild.
 
@@ -281,7 +283,7 @@ AppleSkin, Clumps, Cooking for Blockheads, Easy Villagers, Farming for Blockhead
 | Haven Skyblock templates & config | In repo |
 | `oneblock_island` template + Haven spawn | **Confirmed** — spawn on center dirt, offset `0,1,0` from structure center |
 | Random One Block (KubeJS) | **Confirmed** — mining, pool (~2100+ blocks), `roll=X/Y` logs, auto setbelow on island create |
-| Auto setbelow (`oneblock_island`) | **Confirmed** — `player_feet` + `auto_setbelow_y_offset: 0` |
+| Auto setbelow (`oneblock_island`) | **Confirmed** — `player_feet`, `auto_setbelow_y_offset: 0`, `auto_setbelow_delay_ticks: 40` |
 | FTB Quest starter chapter | **In repo** — `config/ftbquests/quests/` (JSON5, Getting started) |
 | Starter quest book (hotbar) | **Confirmed** — `kubejs/server_scripts/starter_items.js` |
 | Phase / tier design for random blocks | Not started |

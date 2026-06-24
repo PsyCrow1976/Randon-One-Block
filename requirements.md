@@ -37,7 +37,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 ### Random One Block mechanic
 
 1. **Active position** stored in `kubejs/config/random_one_block.json` → `active_block` (last registered; overwritten per auto setbelow).
-2. **Auto setbelow** after `oneblock_island` create — `ServerEvents.tick` watcher polls every 5 ticks; when Haven reports `team=yes` + `template=oneblock_island`, registers the block under player feet via `playerStandingBlock()` + `auto_setbelow_y_offset` (default `0`). Same coords as manual `/randomblock setbelow`. Manual command still works.
+2. **Auto setbelow** after `oneblock_island` create — `ServerEvents.tick` watcher polls every 5 ticks; when Haven reports `team=yes` + `template=oneblock_island`, waits `auto_setbelow_delay_ticks` (default `40`) for teleport/spawn to finish, then registers the block under player feet via `playerStandingBlock()` + `auto_setbelow_y_offset` (default `0`). Same coords as manual `/randomblock setbelow`. Manual command still works.
 3. **`island_template_mode`** — mining pyramid center dirt (dirt on bedrock, grass ring on base layer) works on **any** matching island, not only `active_block`.
 4. When a player **mines** a matching block → after 1 tick, place a **new random block** from the weighted pool.
 5. **Falling blocks** (sand/gravel) → schedule restore of `initial_block` when cell becomes air; bedrock foundation must remain.
@@ -56,7 +56,9 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 | `auto_setbelow_on_island_create` | Master switch for tick watcher |
 | `auto_setbelow_templates` | e.g. `["oneblock_island"]` |
 | `auto_setbelow_y_offset` | Extra Y on auto target (confirmed `0`; use `-1` only if spawn is one block high) |
+| `auto_setbelow_delay_ticks` | Ticks after island spawn before auto setbelow (confirmed `40` ≈ 2 s at 20 TPS) |
 | `haven_island_distance` | Haven grid spacing (`8192`) for fallback center math |
+| `debug_logging` | `false` — pool preview, test picks, auto setbelow trace, watcher startup logs |
 | `initial_block` / `foundation_block` | Default `dirt` / `bedrock` |
 | `island_center_surround` | Default `minecraft:grass_block` for pattern match |
 
@@ -111,12 +113,11 @@ Use **`ServerEvents.basicCommand('randomblock', ...)`** with **`event.input`** s
 | Command | Purpose |
 |---------|---------|
 | `/randomblock` | Help |
-| `/randomblock setbelow` | Register block under feet (`getOnPos()`); island template left unchanged |
+| `/randomblock setbelow` | Register block under feet (`playerStandingBlock()`); island template left unchanged |
 | `/randomblock set <x> <y> <z>` | Set position by coords |
 | `/randomblock info` | Registered random block position + block id + pool; feet only if not on block |
 | `/randomblock revert` | Reset active block to `initial_block` |
 | `/randomblock reload` | Reload config + rebuild block pool |
-| `/randomblock give` | Test: give 1 apple (do not register `/give` — conflicts with vanilla) |
 
 ### Config
 
@@ -179,6 +180,9 @@ These were learned from production debugging; violating them causes reload or co
 | 18 | **Auto setbelow level** — use `player.serverLevel()` / `playerServerLevel()` for block reads in tick handler. |
 | 19 | **Do not require loaded chunks** for auto target — register at player feet; optional `haven_island_distance` math is fallback only. |
 | 20 | **`auto_setbelow_y_offset`** — default `0`; only change if Haven spawn height drifts (was `-1` during debug, reverted). |
+| 21 | **`auto_setbelow_delay_ticks`** — default `40`; wait after team detected before setbelow so player lands on dirt. |
+| 22 | **`debug_logging`** — default `false`; gate pool preview, auto setbelow trace, watcher startup via `debugLog()`. Keep break log + pool ready + auto setbelow success always on. |
+| 23 | **No `/randomblock give`** — removed; do not re-add (test command was unused). |
 
 ---
 
@@ -195,7 +199,7 @@ BlockEvents.broken               → isRandomBlockBreak? (active OR island_templ
                                  → pickRandomBlockId() → scheduleInTicks(1) → set block
                                  → log: with <id> (pool=N, roll=X/Y)  [required diagnostic]
         ↓
-ServerEvents.tick (every 5 ticks) → auto setbelow when team + oneblock_island template
+ServerEvents.tick (every 5 ticks) → wait auto_setbelow_delay_ticks → auto setbelow at player feet
 ServerEvents.basicCommand        → flat commands (reload-safe)
 ServerEvents.loaded + afterRecipes → reloadAll()
 starter_items.js                 → FTB Quest book hotbar slot 0 on first login
@@ -208,8 +212,10 @@ Key functions in `random_one_block.js`:
 - `resolveSource()` / `tell()` / `hasCommandPermission()` — `basicCommand` compatibility
 - `dumpPoolReport()` — writes pool files + test picks to log
 - `playerStandingBlock()` / `resolveAutoSetbelowTarget()` — auto setbelow at feet + offset
-- `registerAutoSetbelowWatcher()` — `ServerEvents.tick` poll + debug trace
+- `registerAutoSetbelowWatcher()` — `ServerEvents.tick` poll + optional debug trace
+- `isAutoSetbelowReady()` / `getAutoSetbelowDelayTicks()` — spawn delay before setbelow
 - `readPersistentBoolean()` / `markAutoSetbelowDone()` — done flag (Optional-safe)
+- `debugLog()` / `isDebugLoggingEnabled()` — gated verbose logging (`debug_logging`)
 
 ---
 
@@ -246,7 +252,8 @@ Key functions in `random_one_block.js`:
 - [x] `oneblock_island` template (grass + bedrock/dirt pyramid)
 - [x] Haven spawn offset `0,1,0` for `oneblock_island`
 - [x] KubeJS Random One Block script + config
-- [x] Auto setbelow on `oneblock_island` create (`ServerEvents.tick`, player feet, `auto_setbelow_y_offset: 0`)
+- [x] Auto setbelow on `oneblock_island` create (`ServerEvents.tick`, player feet, `auto_setbelow_y_offset: 0`, `auto_setbelow_delay_ticks: 40`)
+- [x] Configurable `debug_logging` (default `false`); `/randomblock give` removed
 - [x] FTB Quests starter chapter (JSON5 under `config/ftbquests/quests/`)
 - [x] Starter quest book in hotbar (`starter_items.js`)
 - [x] Island template mode (pyramid pattern match)
@@ -265,10 +272,6 @@ Key functions in `random_one_block.js`:
 - [ ] Quest integration (unlock phases, rewards tied to random block tier)
 - [ ] KubeJS recipe/integration scripts beyond Random One Block
 - [ ] Phase-based pools instead of one global pool
-
-### Known minor issues
-
-- `/randomblock give` uses `player.give('minecraft:apple', 1)` — if this errors in logs, check KubeJS player API for MC 26.1 and adjust give syntax.
 
 ---
 
@@ -318,6 +321,8 @@ Before considering Random One Block work complete:
 8. Auto setbelow log after `island create oneblock_island`: `[RandomOneBlock] Auto setbelow after island spawn at ... (player_feet, template=oneblock_island)`
 9. `doneFlag` stops watcher after success (no per-tick “already active” spam)
 10. `auto_setbelow_y_offset` left at `0` unless Haven spawn height changes
+11. `auto_setbelow_delay_ticks` at `40` (or tuned) — setbelow runs after spawn delay, not instantly on team detect
+12. With `debug_logging: false`, log shows pool ready + break lines only (no auto setbelow trace spam)
 
 ---
 

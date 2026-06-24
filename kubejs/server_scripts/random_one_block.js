@@ -14,6 +14,7 @@ const $TeamManager = Java.tryLoadClass('net.cathienova.haven_skyblock_builder.te
 
 const AUTO_SETBELOW_POLL_INTERVAL = 5
 const AUTO_SETBELOW_DEBUG_INTERVAL = 100
+const AUTO_SETBELOW_DELAY_TICKS_DEFAULT = 40
 const AUTO_SETBELOW_Y_OFFSET = 0
 const AUTO_SETBELOW_DONE_KEY = 'random_one_block_autosetbelow_done'
 
@@ -48,7 +49,9 @@ const DEFAULT_CONFIG = {
   auto_setbelow_on_island_create: true,
   auto_setbelow_templates: ['oneblock_island'],
   auto_setbelow_y_offset: 0,
+  auto_setbelow_delay_ticks: 40,
   haven_island_distance: 8192,
+  debug_logging: false,
   island_center_surround: 'minecraft:grass_block',
   active_block: {
     enabled: false,
@@ -71,7 +74,8 @@ const STATE = {
   autoSetbelowDebug: {},
   autoSetbelowWatcherStarted: false,
   autoSetbelowGlobalDebugTick: -1,
-  autoSetbelowDoneByUuid: {}
+  autoSetbelowDoneByUuid: {},
+  autoSetbelowPendingSince: {}
 }
 
 function ensurePoolReady() {
@@ -83,6 +87,14 @@ function ensurePoolReady() {
   if (!STATE.pool || STATE.pool.length === 0) {
     rebuildPool()
   }
+}
+
+function isDebugLoggingEnabled() {
+  return STATE.config != null && STATE.config.debug_logging === true
+}
+
+function debugLog(message) {
+  if (isDebugLoggingEnabled()) console.info(message)
 }
 
 function cloneConfig(config) {
@@ -324,7 +336,7 @@ function rebuildPool() {
   for (i = 0; i < Math.min(5, pool.length); i++) {
     samples.push(pool[i].id)
   }
-  console.info(`[RandomOneBlock] Pool sample: ${samples.join(', ')}`)
+  debugLog(`[RandomOneBlock] Pool sample: ${samples.join(', ')}`)
 
   dumpPoolReport(true)
 }
@@ -366,17 +378,17 @@ function dumpPoolReport(verbose) {
   })
   JsonIO.write(POOL_DUMP_TEXT, textLines.join('\n'))
 
-  console.info(
+  debugLog(
     `[RandomOneBlock] Pool dumped to kubejs/config/${POOL_DUMP_JSON} and kubejs/config/${POOL_DUMP_TEXT}`
   )
 
-  if (verbose) {
-    console.info(`[RandomOneBlock] Pool preview (first 30): ${preview.join(', ')}`)
+  if (verbose && isDebugLoggingEnabled()) {
+    debugLog(`[RandomOneBlock] Pool preview (first 30): ${preview.join(', ')}`)
 
     for (i = 0; i < 8; i++) {
       testPicks.push(pickRandomBlockIdInternal())
     }
-    console.info(`[RandomOneBlock] Test random picks (8): ${testPicks.join(', ')}`)
+    debugLog(`[RandomOneBlock] Test random picks (8): ${testPicks.join(', ')}`)
   }
 }
 
@@ -599,6 +611,7 @@ function markAutoSetbelowDone(player) {
   if (!STATE.autoSetbelowDoneByUuid) STATE.autoSetbelowDoneByUuid = {}
   STATE.autoSetbelowDoneByUuid[key] = true
   writePersistentBoolean(player, AUTO_SETBELOW_DONE_KEY, true)
+  clearAutoSetbelowPending(player)
 }
 
 function tellPlayer(player, message) {
@@ -763,6 +776,62 @@ function findHavenIslandCenter(player, server) {
 function getAutoSetbelowYOffset() {
   var offset = Number(STATE.config?.auto_setbelow_y_offset ?? AUTO_SETBELOW_Y_OFFSET)
   return Number.isNaN(offset) ? AUTO_SETBELOW_Y_OFFSET : Math.floor(offset)
+}
+
+function getAutoSetbelowDelayTicks() {
+  var delay = Number(STATE.config?.auto_setbelow_delay_ticks ?? AUTO_SETBELOW_DELAY_TICKS_DEFAULT)
+  if (Number.isNaN(delay) || delay < 0) return AUTO_SETBELOW_DELAY_TICKS_DEFAULT
+  return Math.floor(delay)
+}
+
+function clearAutoSetbelowPending(player) {
+  var key = getPlayerUuidKey(player)
+  if (STATE.autoSetbelowPendingSince && STATE.autoSetbelowPendingSince[key] !== undefined) {
+    delete STATE.autoSetbelowPendingSince[key]
+  }
+}
+
+function isAutoSetbelowEligible(player, server) {
+  var template = getHavenIslandTemplate(player, server)
+  if (!template || !shouldAutoSetbelowTemplate(template)) return false
+  return resolveAutoSetbelowTarget(player, server) != null
+}
+
+function isAutoSetbelowReady(player, server) {
+  if (!player || !server) return false
+  if (!isAutoSetbelowEligible(player, server)) {
+    clearAutoSetbelowPending(player)
+    return false
+  }
+
+  var key = getPlayerUuidKey(player)
+  var now = server.tickCount
+  var delay = getAutoSetbelowDelayTicks()
+  var since = null
+
+  if (!STATE.autoSetbelowPendingSince) STATE.autoSetbelowPendingSince = {}
+  since = STATE.autoSetbelowPendingSince[key]
+
+  if (since === undefined || since < 0) {
+    STATE.autoSetbelowPendingSince[key] = now
+    logAutoSetbelowDebug(
+      player,
+      server,
+      `island spawn detected — waiting ${delay} ticks before auto setbelow`
+    )
+    return false
+  }
+
+  if (now - since < delay) {
+    logAutoSetbelowDebug(
+      player,
+      server,
+      `spawn wait ${now - since}/${delay} ticks before auto setbelow`
+    )
+    return false
+  }
+
+  return true
 }
 
 function autoSetbelowTargetFromStand(stand) {
@@ -975,7 +1044,7 @@ function scheduleGravityRecovery(server, level, coords) {
         if (!isRandomBlockFoundationAt(level, coords.x, coords.y, coords.z)) return
 
         setBlockAt(level, coords.x, coords.y, coords.z, initial)
-        console.info(
+        debugLog(
           `[RandomOneBlock] Gravity block fell at ${coords.x} ${coords.y} ${coords.z}; restored ${initial} for next mine`
         )
       })
@@ -1150,6 +1219,7 @@ function shouldLogAutoSetbelowDebug(player, server, message) {
 }
 
 function logAutoSetbelowDebug(player, server, message) {
+  if (!isDebugLoggingEnabled()) return
   if (!shouldLogAutoSetbelowDebug(player, server, message)) return
   console.info(`[RandomOneBlock] Auto setbelow debug [${getPlayerDebugName(player)}]: ${message}`)
 }
@@ -1222,6 +1292,7 @@ function describeAutoSetbelowWatchState(player, server) {
 }
 
 function debugAutoSetbelowTrace(player, server) {
+  if (!isDebugLoggingEnabled()) return
   ensurePoolReady()
 
   if (!isMechanicEnabled()) {
@@ -1278,6 +1349,8 @@ function debugAutoSetbelowTrace(player, server) {
 }
 
 function logAutoSetbelowGlobalDebug(server, playerCount) {
+  if (!isDebugLoggingEnabled()) return
+
   var tick = server.tickCount
 
   if (tick - STATE.autoSetbelowGlobalDebugTick < AUTO_SETBELOW_DEBUG_INTERVAL) return
@@ -1347,7 +1420,7 @@ function giveQuestBookToHotbar(player) {
 
     player.inventory.setStackInSlot(0, Item.of('ftbquests:book', 1))
     player.persistentData.putBoolean('random_one_block_starter_book', true)
-    console.info('[RandomOneBlock] Placed FTB Quest book in hotbar slot 0')
+    debugLog('[RandomOneBlock] Placed FTB Quest book in hotbar slot 0')
   } catch (e) {
     const err = e && e.javaException ? String(e.javaException) : String(e)
     console.error(`[RandomOneBlock] Failed to give quest book: ${err}`)
@@ -1453,9 +1526,7 @@ function tryAutoSetbelowFromPlayer(player, server) {
     active.z === target.z
   ) {
     markAutoSetbelowDone(player)
-    console.info(
-      `[RandomOneBlock] Auto setbelow already at ${target.x} ${target.y} ${target.z}`
-    )
+    debugLog(`[RandomOneBlock] Auto setbelow already at ${target.x} ${target.y} ${target.z}`)
     giveQuestBookToHotbar(player)
     return true
   }
@@ -1476,8 +1547,20 @@ function tryAutoSetbelowFromPlayer(player, server) {
   return true
 }
 
+function pollAutoSetbelowForPlayer(player, server) {
+  if (!shouldWatchPlayerForAutoSetbelow(player, server)) return
+  if (!isAutoSetbelowReady(player, server)) return
+
+  if (isDebugLoggingEnabled()) {
+    debugAutoSetbelowTrace(player, server)
+    return
+  }
+
+  tryAutoSetbelowFromPlayer(player, server)
+}
+
 function registerAutoSetbelowWatcher() {
-  console.info(
+  debugLog(
     `[RandomOneBlock] Registering auto setbelow watcher (ServerEvents.tick, poll=${AUTO_SETBELOW_POLL_INTERVAL}, debug=${AUTO_SETBELOW_DEBUG_INTERVAL})`
   )
 
@@ -1490,7 +1573,7 @@ function registerAutoSetbelowWatcher() {
 
     if (!STATE.autoSetbelowWatcherStarted) {
       STATE.autoSetbelowWatcherStarted = true
-      console.info('[RandomOneBlock] Auto setbelow watcher tick handler is alive')
+      debugLog('[RandomOneBlock] Auto setbelow watcher tick handler is alive')
     }
 
     var players = null
@@ -1514,10 +1597,10 @@ function registerAutoSetbelowWatcher() {
       if (!player) continue
 
       try {
-        debugAutoSetbelowTrace(player, server)
+        pollAutoSetbelowForPlayer(player, server)
       } catch (e) {
         const err = e && e.javaException ? String(e.javaException) : String(e)
-        console.error(`[RandomOneBlock] Auto setbelow trace failed: ${err}`)
+        console.error(`[RandomOneBlock] Auto setbelow poll failed: ${err}`)
       }
     }
   })
@@ -1613,7 +1696,7 @@ function cmdInfo(source) {
 function cmdHelp(source) {
   tell(
     source,
-    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7(random block placement) §7| §e/randomblock revert §7| §e/randomblock reload §7| §e/randomblock give'
+    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7(random block placement) §7| §e/randomblock revert §7| §e/randomblock reload'
   )
   return 1
 }
@@ -1643,23 +1726,12 @@ function cmdDispatch(source, input) {
       return cmdRevert(source)
     case 'reload':
       return cmdReload(source)
-    case 'give':
-      return cmdGive(source)
     case 'help':
       return cmdHelp(source)
     default:
       tell(source, `§cUnknown subcommand §f${sub}§c. Use §f/randomblock §cfor help.`)
       return 0
   }
-}
-
-function cmdGive(source) {
-  const player = requirePlayer(source)
-  if (!player) return 0
-
-  player.give('minecraft:apple', 1)
-  tell(source, '§aGiven §f1 minecraft:apple§a.')
-  return 1
 }
 
 function runCommand(event, handler) {
