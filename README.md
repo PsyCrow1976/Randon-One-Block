@@ -32,14 +32,15 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
    ```text
    /havensb island create oneblock_island My Island
    ```
-3. You spawn on the center **dirt** block (small pyramid island).
-4. Mine the center dirt — a random modpack block replaces it on the next tick. Keep mining for more rolls.
+3. You spawn on the **oneblock** pyramid; KubeJS auto-registers the random block at the dirt under your feet (~1 s after create).
+4. Mine that center dirt — a random modpack block replaces it on the next tick. Keep mining for more rolls.
+5. You receive the **FTB Quest book** in hotbar slot 0 on first login / island setup.
 
-Run `/randomblock info` to see your island’s **random block placement** (center dirt coordinates + block id). The pool has ~2100+ blocks. After config edits, run `/randomblock reload`.
+Run `/randomblock info` to see the registered random block (coordinates + block id). The pool has ~2100+ blocks. After config edits, run `/randomblock reload`.
 
-**Verified in playtest:** spawn on dirt, mining rolls random blocks, `/randomblock info` shows island center placement (not player feet). Auto-registration runs ~1 s after island create.
+**Verified in playtest:** auto setbelow on `oneblock_island` create, mining rolls random blocks with varied `roll=X/Y` in `logs/kubejs/server.log`.
 
-Operators can still run `/randomblock setbelow` manually on other layouts.
+Operators can still run `/randomblock setbelow` manually (same logic as auto — block under feet via `getBlockX/Y/Z`).
 
 ## Skyblock (Haven Skyblock Builder)
 
@@ -102,7 +103,7 @@ FTB Quests provides the modpack quest book and progression tracking.
 config/ftbquests/quests/
 ```
 
-Quest files are `.snbt` (edited in-game via the quest editor, then exported/saved to that folder). This directory does not exist yet — the quest book is empty until chapters are authored.
+Quest definitions use **JSON5** (FTB Quests 26.1+). A starter **Getting started** chapter is in `config/ftbquests/quests/`. Edit in-game via the quest editor or edit the `.json5` files in the repo.
 
 **Player progress** is stored per world:
 
@@ -132,12 +133,14 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 | `island_template_mode` | `true` | Also match pyramid center dirt on any `oneblock_island` (multi-team) |
 | `auto_setbelow_on_island_create` | `true` | Register random block after Haven island create |
 | `auto_setbelow_templates` | `["oneblock_island"]` | Templates that trigger auto-setup |
+| `auto_setbelow_y_offset` | `0` | Extra Y added to auto target (use `-1` only if Haven spawn is one block too high) |
+| `haven_island_distance` | `8192` | Haven grid spacing (used for debug / fallback center math) |
 | `initial_block` | `minecraft:dirt` | Block players mine / restored after falling blocks |
 | `foundation_block` | `minecraft:bedrock` | Under center dirt in template (not overwritten on register) |
 
 ### Flow
 
-1. Player creates `oneblock_island` → you spawn on center dirt; auto-registration runs via Haven team home (`home.y - 1`).
+1. Player creates `oneblock_island` → Haven teleports them to the island; a `ServerEvents.tick` watcher detects the team and runs the same logic as `/randomblock setbelow` (block under feet + `auto_setbelow_y_offset`).
 2. Player mines that dirt → a random modpack block appears on the next tick (`roll=X/Y` in server log).
 3. Sand/gravel falls → `initial_block` is restored so the player can mine again.
 4. Each subsequent mine at the pyramid center (`island_template_mode`) → another random block.
@@ -149,23 +152,26 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | Command | What it does |
 |---------|----------------|
 | `/randomblock` | List subcommands |
-| `/randomblock setbelow` | Register the block you stand on (`getOnPos`) as the random block; saves to config |
+| `/randomblock setbelow` | Register the block under your feet (`getBlockX/Y/Z`, stand Y = feet Y − 1); saves to config |
 | `/randomblock set <x> <y> <z>` | Register random block at world coordinates (F3); saves to config |
-| `/randomblock info` | Show **random block placement** on your island (center dirt coords + block id), not your feet |
+| `/randomblock info` | Show registered random block coords + block id + pool size |
 | `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
 | `/randomblock reload` | Reload config and rebuild block pool |
 | `/randomblock give` | Test: gives 1 apple |
 
-On `oneblock_island` create, setbelow runs automatically (~1 s after `/havensb island create oneblock_island …`).
+On `oneblock_island` create, setbelow runs automatically within a few seconds (polls every 5 ticks after team + template are detected). Log line:
+
+```text
+[RandomOneBlock] Auto setbelow after island spawn at <x> <y> <z> (player_feet, template=oneblock_island)
+```
 
 After editing `random_one_block.json`, run `/randomblock reload` or `/reload`.
 
-**`/randomblock info` example** (island center dirt — independent of where you stand):
+**`/randomblock info` example:**
 
 ```text
-Random block placement: minecraft:overworld -8190 73 1 (minecraft:dirt)
+Random block placement: minecraft:overworld -8191 71 1 (minecraft:dirt)
 Pool: 2172 blocks
-Island: oneblock_island (center dirt, one block below Haven spawn)
 Mine this block to roll a random block from the pool
 ```
 
@@ -204,19 +210,26 @@ Each time the active block is mined, the server logs the replacement and the wei
 
 ### Coordinates (Haven vs KubeJS)
 
-**Haven** uses standard Minecraft `BlockPos` (`x`, height `y`, `z`). Auto setbelow reads `Team.getHomePosition()` from Haven and registers dirt at `home.y - 1`.
+**Haven** uses standard Minecraft `BlockPos` (`x`, height `y`, `z`). Team home is the **spawn teleport** position, not always the mineable dirt cell.
 
-**KubeJS** uses the same coordinate space as Haven for registration (`active_block` / team home). For `setbelow`, use Java `player.getOnPos()` — do **not** swap Y/Z or subtract 1 from `getOnPos()`.
+**KubeJS** auto/manual setbelow uses `playerStandingBlock()`:
 
-`/randomblock info` reads your island’s **center dirt** from Haven (`team home.y - 1` for `oneblock_island`), or `active_block` in config for other layouts. It does **not** use your current position.
+- `x` / `z` from `player.getBlockX()` / `getBlockZ()`
+- stand block `y` = `player.getBlockY() - 1` (block directly under feet)
+- optional `auto_setbelow_y_offset` added for Haven spawn tuning (default `0`)
+
+Do **not** read `BlockPos.x` / `.y` / `.z` on Java wrappers (axes can scramble). Do **not** use removed `swapYZ()`.
+
+Call `BlockPos.getX()` / `getY()` / `getZ()` directly in Rhino.
 
 ### Troubleshooting
 
 | Symptom | Likely cause | What to check |
 |---------|--------------|---------------|
 | Spawn on grass, not dirt | Wrong Haven spawn offset | Use `0,1,0` from **structure center** for `oneblock_island` |
-| Info shows player coords instead of dirt | Old script build | `/reload`; info must say `Random block placement:` with `minecraft:dirt` at island center |
-| Random block not triggering | `mechanic_enabled: false` or wrong block | `/randomblock info`; mine center dirt on bedrock |
+| Auto setbelow never fires | Old script or no team yet | `/reload`; create island; check log for `Auto setbelow after island spawn` |
+| Random block one block too high/low | Haven spawn height | Tune `auto_setbelow_y_offset` in `random_one_block.json` (confirmed: `0`) |
+| Mining does nothing | Wrong coords or `mechanic_enabled: false` | `/randomblock info`; mine the registered dirt on bedrock |
 | KubeJS error on `/reload` | Script regression (global state, `System`, top-level `ResourceLocation`) | `logs/kubejs/server.log`; see [`requirements.md`](requirements.md) constraints |
 | Commands silent or “unexpected error” after reload | `commandRegistry` instead of `basicCommand` | Script must use `ServerEvents.basicCommand` with `event.input` |
 | Always same block (stone, crafting table, dirt) | Pool id extraction or RNG bug | Log should show 2100+ unique blocks and varied `roll=` values |
@@ -268,7 +281,8 @@ AppleSkin, Clumps, Cooking for Blockheads, Easy Villagers, Farming for Blockhead
 | Haven Skyblock templates & config | In repo |
 | `oneblock_island` template + Haven spawn | **Confirmed** — spawn on center dirt, offset `0,1,0` from structure center |
 | Random One Block (KubeJS) | **Confirmed** — mining, pool (~2100+ blocks), `roll=X/Y` logs, auto setbelow on island create |
-| `/randomblock info` | **Confirmed** — shows island center dirt placement via Haven team home (`home.y - 1`) |
-| FTB Quest chapters | Not started (`config/ftbquests/quests/` missing) |
+| Auto setbelow (`oneblock_island`) | **Confirmed** — `player_feet` + `auto_setbelow_y_offset: 0` |
+| FTB Quest starter chapter | **In repo** — `config/ftbquests/quests/` (JSON5, Getting started) |
+| Starter quest book (hotbar) | **Confirmed** — `kubejs/server_scripts/starter_items.js` |
 | Phase / tier design for random blocks | Not started |
 | Broader KubeJS integrations | Planned |

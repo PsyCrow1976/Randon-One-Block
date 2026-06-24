@@ -37,7 +37,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 ### Random One Block mechanic
 
 1. **Active position** stored in `kubejs/config/random_one_block.json` → `active_block` (last registered; overwritten per auto setbelow).
-2. **Auto setbelow** after `/havensb island create oneblock_island …` — reads Haven `Team.getHomePosition()`, registers dirt at `home.y - 1`. Manual `/randomblock setbelow` still works.
+2. **Auto setbelow** after `oneblock_island` create — `ServerEvents.tick` watcher polls every 5 ticks; when Haven reports `team=yes` + `template=oneblock_island`, registers the block under player feet via `playerStandingBlock()` + `auto_setbelow_y_offset` (default `0`). Same coords as manual `/randomblock setbelow`. Manual command still works.
 3. **`island_template_mode`** — mining pyramid center dirt (dirt on bedrock, grass ring on base layer) works on **any** matching island, not only `active_block`.
 4. When a player **mines** a matching block → after 1 tick, place a **new random block** from the weighted pool.
 5. **Falling blocks** (sand/gravel) → schedule restore of `initial_block` when cell becomes air; bedrock foundation must remain.
@@ -53,8 +53,10 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 |-----|---------|
 | `mechanic_enabled` | Master switch (`false` was used during spawn testing) |
 | `island_template_mode` | Detect pyramid center on any `oneblock_island` |
-| `auto_setbelow_on_island_create` | Hook Haven `island create` via `NativeEvents` `CommandEvent` |
+| `auto_setbelow_on_island_create` | Master switch for tick watcher |
 | `auto_setbelow_templates` | e.g. `["oneblock_island"]` |
+| `auto_setbelow_y_offset` | Extra Y on auto target (confirmed `0`; use `-1` only if spawn is one block high) |
+| `haven_island_distance` | Haven grid spacing (`8192`) for fallback center math |
 | `initial_block` / `foundation_block` | Default `dirt` / `bedrock` |
 | `island_center_surround` | Default `minecraft:grass_block` for pattern match |
 
@@ -70,18 +72,16 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 
 | Source | Correct usage |
 |--------|----------------|
-| Haven `BlockPos` / team home | Authoritative for auto setbelow: dirt at `(home.x, home.y - 1, home.z)` |
-| KubeJS `player.getOnPos()` | Block player stands on — use **as-is** for `setbelow` / `info` |
-| KubeJS `player.blockPosition()` | Air cell at feet — use `y - 1` only for this fallback |
+| `playerStandingBlock()` | **Authoritative** for setbelow/auto: `getBlockX()`, `getBlockY() - 1`, `getBlockZ()` |
+| Haven `Team.getHomePosition()` | Spawn teleport only — may differ from mineable dirt Z on grid; do **not** use alone for auto setbelow |
+| `BlockPos.getX/Y/Z()` | Call directly in Rhino — never `typeof === 'function'` gate; never `.x/.y/.z` on wrappers |
+| `player.persistentData.getBoolean()` | MC 26.1 returns `Optional` — unwrap via `readPersistentBoolean()` |
 
-**Do not** swap Y and Z in KubeJS. A removed `swapYZ()` caused:
+**Do not** swap Y and Z. A removed `swapYZ()` caused scrambled coords (`1 71 8193` instead of `-8191 71 1`).
 
-```text
-Active: minecraft:overworld -8190 73 1        ← Haven (correct)
-Standing on: minecraft:overworld 1 -8191 70   ← broken KubeJS read
-```
+**Confirmed playtest coords:** player Y=72, dirt Y=71, X=-8191, Z=1 with `auto_setbelow_y_offset: 0`.
 
-`/randomblock info` must show **matching** Active and Standing on when player is on center dirt.
+Auto setbelow must **not** skip registration because stale `active_block` in config matches an old manual test — compare active to **current target**, then call `setActivePosition` at player feet.
 
 ### Block-break diagnostic log (must keep)
 
@@ -171,8 +171,14 @@ These were learned from production debugging; violating them causes reload or co
 | 10 | **`console.error` in KubeJS** — single string argument only (use template strings). |
 | 11 | **MC 26.1 registry API** — `registry.get()` may return `Optional<Reference>`; use `unwrapRegistryEntry()` and `resolveRegistryBlock()`. |
 | 12 | **`resourceKeyToId`** — must handle both `ResourceKey` (`.location()`) and `ResourceLocation` (`.getNamespace()` / `.getPath()`). |
-| 13 | **Player position** — use Java `getOnPos()` / `BlockPos.getX()`; never `swapYZ()`; do not `y-1` on `getOnPos()`. |
-| 14 | **Haven integration** — auto setbelow uses `TeamManager.getTeamByPlayer()` + `getHomePosition()`; island create hook via `NativeEvents.onEvent('net.neoforged.neoforge.event.CommandEvent', …)` scheduled 20 ticks later. |
+| 13 | **Player position** — `playerStandingBlock()`: `getBlockX/Y/Z()`, stand Y = feet Y − 1; never `swapYZ()`; never `.x/.y/.z` on `BlockPos` wrappers. |
+| 14 | **Haven integration** — `TeamManager.getTeamByPlayer()` + `getIslandTemplate()`; auto watcher via `ServerEvents.tick` (GUI create has no `CommandEvent`). |
+| 15 | **`persistentData.getBoolean`** — returns `Optional.empty` (truthy in Rhino) when unset; use `readPersistentBoolean()` + `writePersistentBoolean()` + `STATE.autoSetbelowDoneByUuid` session cache. |
+| 16 | **No `const`/`let` in `try` on hot paths** — causes `redeclaration of var` on `/reload` (e.g. `starter_items.js` `current`). Use `var` at function top. |
+| 17 | **No duplicate top-level `const` across scripts** — shared KubeJS scope; use literals or module-private names per file. |
+| 18 | **Auto setbelow level** — use `player.serverLevel()` / `playerServerLevel()` for block reads in tick handler. |
+| 19 | **Do not require loaded chunks** for auto target — register at player feet; optional `haven_island_distance` math is fallback only. |
+| 20 | **`auto_setbelow_y_offset`** — default `0`; only change if Haven spawn height drifts (was `-1` during debug, reverted). |
 
 ---
 
@@ -189,9 +195,10 @@ BlockEvents.broken               → isRandomBlockBreak? (active OR island_templ
                                  → pickRandomBlockId() → scheduleInTicks(1) → set block
                                  → log: with <id> (pool=N, roll=X/Y)  [required diagnostic]
         ↓
-NativeEvents CommandEvent        → havensb island create oneblock_island → auto setbelow (20 ticks)
+ServerEvents.tick (every 5 ticks) → auto setbelow when team + oneblock_island template
 ServerEvents.basicCommand        → flat commands (reload-safe)
 ServerEvents.loaded + afterRecipes → reloadAll()
+starter_items.js                 → FTB Quest book hotbar slot 0 on first login
 ```
 
 Key functions in `random_one_block.js`:
@@ -200,6 +207,9 @@ Key functions in `random_one_block.js`:
 - `pickRandomBlockId()` / `randomInt()` — weighted pick via `java.util.Random`
 - `resolveSource()` / `tell()` / `hasCommandPermission()` — `basicCommand` compatibility
 - `dumpPoolReport()` — writes pool files + test picks to log
+- `playerStandingBlock()` / `resolveAutoSetbelowTarget()` — auto setbelow at feet + offset
+- `registerAutoSetbelowWatcher()` — `ServerEvents.tick` poll + debug trace
+- `readPersistentBoolean()` / `markAutoSetbelowDone()` — done flag (Optional-safe)
 
 ---
 
@@ -219,6 +229,12 @@ Key functions in `random_one_block.js`:
 | Spawn on grass not dirt | Haven offset from corner assumed | Offset `0,1,0` from **structure center** |
 | Active vs Standing coords differ | `swapYZ()` + wrong `y-1` on `getOnPos()` | Java `BlockPos` / `getOnPos()` only |
 | Random block not on mine | `mechanic_enabled: false` or bad coords | Enable mechanic; verify info lines match |
+| Auto setbelow silent | `Optional.empty` truthy on `getBoolean` | `readPersistentBoolean()` + session `autoSetbelowDoneByUuid` |
+| Auto setbelow `havenCenter=none` | Chunk unload / block verify at grid offset | Use `player_feet` target, not distant block reads |
+| “Already active” spam, wrong coords | Stale `active_block` from old manual test | Match active to target feet; `markAutoSetbelowDone()` once |
+| `redeclaration of var current` | `const` in `try` in `starter_items.js` | `var current` at function top |
+| Quest book empty | FTB Quests 26.1 needs JSON5 | `config/ftbquests/quests/data.json5` + chapters |
+| `globalThis is not defined` | Rhino | Module `STATE` only, no `global` writes |
 
 ---
 
@@ -230,7 +246,9 @@ Key functions in `random_one_block.js`:
 - [x] `oneblock_island` template (grass + bedrock/dirt pyramid)
 - [x] Haven spawn offset `0,1,0` for `oneblock_island`
 - [x] KubeJS Random One Block script + config
-- [x] Auto setbelow on `oneblock_island` create (Haven team home)
+- [x] Auto setbelow on `oneblock_island` create (`ServerEvents.tick`, player feet, `auto_setbelow_y_offset: 0`)
+- [x] FTB Quests starter chapter (JSON5 under `config/ftbquests/quests/`)
+- [x] Starter quest book in hotbar (`starter_items.js`)
 - [x] Island template mode (pyramid pattern match)
 - [x] Gravity block recovery (sand/gravel → restore `initial_block`)
 - [x] Coordinate handling aligned with Haven `BlockPos`
@@ -242,7 +260,7 @@ Key functions in `random_one_block.js`:
 
 ### Not implemented (future work)
 
-- [ ] FTB Quests chapters under `config/ftbquests/quests/` (directory does not exist yet)
+- [ ] Additional FTB Quest chapters beyond Getting started
 - [ ] OneBlock **phase** design (early game dirt/stone → mid mod blocks → etc.)
 - [ ] Quest integration (unlock phases, rewards tied to random block tier)
 - [ ] KubeJS recipe/integration scripts beyond Random One Block
@@ -260,7 +278,7 @@ Key functions in `random_one_block.js`:
 - Haven config: `config/haven_skyblock_builder-common.toml`
 - Templates: `config/HavenSkyblockBuilder/Templates/` (`classic_island.nbt`, `oneblock_island.nbt`), `spawn_island.nbt`
 - `oneblock_island` spawn: `island_specific_offsets = [..., "oneblock_island=0,1,0,-90"]`
-- FTB Quest definitions belong in `config/ftbquests/quests/` (not created yet)
+- FTB Quest definitions: `config/ftbquests/quests/` (**JSON5** for 26.1; starter chapter in repo)
 - Per-world progress stays in saves — do not commit
 
 ---
@@ -297,7 +315,9 @@ Before considering Random One Block work complete:
 5. Mining active block logs **different** `with <id>` and varying `roll=` values
 6. No regression on Haven island create / spawn on center dirt (`oneblock_island`)
 7. `/randomblock info` Active and Standing on coords **match** when on center dirt
-8. Auto setbelow log after `island create oneblock_island`: `[RandomOneBlock] Auto setbelow after island create ...`
+8. Auto setbelow log after `island create oneblock_island`: `[RandomOneBlock] Auto setbelow after island spawn at ... (player_feet, template=oneblock_island)`
+9. `doneFlag` stops watcher after success (no per-tick “already active” spam)
+10. `auto_setbelow_y_offset` left at `0` unless Haven spawn height changes
 
 ---
 

@@ -1,0 +1,43 @@
+{
+  id: "7364166FBA5DFE42",
+  group: "",
+  order_index: 0,
+  icon: {
+    id: "ftbquests:book",
+    count: 1,
+  },
+  filename: "getting_started",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "simplest_paxels:stone_paxel",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "54426B5BBE263DB4",
+      tasks: [
+        {
+          id: "1A4C7E9B0D2F3865",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5B8D2E1F4A7C9036",
+          type: "item",
+          item: {
+            id: "simplest_paxels:stone_paxel",
+            count: 1,
+          },
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

@@ -41,6 +41,10 @@
 
   "auto_setbelow_templates": ["oneblock_island"],
 
+  "auto_setbelow_y_offset": 0,
+
+  "haven_island_distance": 8192,
+
   "island_center_surround": "minecraft:grass_block",
 
   "active_block": {

@@ -12,6 +12,11 @@ const $ArrayList = Java.loadClass('java.util.ArrayList')
 const $Random = Java.loadClass('java.util.Random')
 const $TeamManager = Java.tryLoadClass('net.cathienova.haven_skyblock_builder.team.TeamManager')
 
+const AUTO_SETBELOW_POLL_INTERVAL = 5
+const AUTO_SETBELOW_DEBUG_INTERVAL = 100
+const AUTO_SETBELOW_Y_OFFSET = 0
+const AUTO_SETBELOW_DONE_KEY = 'random_one_block_autosetbelow_done'
+
 const DEFAULT_CONFIG = {
   default_weight: 1,
   weight_overrides: {
@@ -42,6 +47,8 @@ const DEFAULT_CONFIG = {
   island_template_mode: true,
   auto_setbelow_on_island_create: true,
   auto_setbelow_templates: ['oneblock_island'],
+  auto_setbelow_y_offset: 0,
+  haven_island_distance: 8192,
   island_center_surround: 'minecraft:grass_block',
   active_block: {
     enabled: false,
@@ -58,7 +65,13 @@ const STATE = {
   config: null,
   pool: [],
   totalWeight: 0,
-  active: null
+  active: null,
+  havenTeamManager: null,
+  havenTeamManagerTick: -1,
+  autoSetbelowDebug: {},
+  autoSetbelowWatcherStarted: false,
+  autoSetbelowGlobalDebugTick: -1,
+  autoSetbelowDoneByUuid: {}
 }
 
 function ensurePoolReady() {
@@ -395,23 +408,31 @@ function dimensionId(level) {
 function readBlockPos(pos) {
   if (pos == null) return null
 
+  // Java BlockPos in Rhino: getX/getY/getZ are not typeof "function" but are still callable.
+  // Do not read pos.x/pos.y/pos.z — KubeJS wrappers can scramble axes (e.g. z→x, x→z).
   try {
-    if (typeof pos.getX === 'function') {
+    const x = pos.getX()
+    const y = pos.getY()
+    const z = pos.getZ()
+    if (x !== undefined && y !== undefined && z !== undefined) {
       return {
-        x: pos.getX(),
-        y: pos.getY(),
-        z: pos.getZ()
+        x: Math.floor(Number(x)),
+        y: Math.floor(Number(y)),
+        z: Math.floor(Number(z))
       }
     }
   } catch (ignored) {}
 
-  if (pos.x !== undefined && pos.y !== undefined && pos.z !== undefined) {
-    return {
-      x: Math.floor(pos.x),
-      y: Math.floor(pos.y),
-      z: Math.floor(pos.z)
+  // Plain data objects (team JSON) — safe x/y/z, not BlockPos wrappers.
+  try {
+    if (pos.x !== undefined && pos.y !== undefined && pos.z !== undefined) {
+      return {
+        x: Math.floor(Number(pos.x)),
+        y: Math.floor(Number(pos.y)),
+        z: Math.floor(Number(pos.z))
+      }
     }
-  }
+  } catch (ignored2) {}
 
   return null
 }
@@ -445,51 +466,45 @@ function blockCoords(block) {
   return pos
 }
 
-// Block the player is standing on (same coordinate space as Haven BlockPos / F3).
+// Block under player feet — must match F3 (e.g. player y=72 standing on dirt at y=71 → x,z from F3, y=71).
 function playerStandingBlock(player) {
   try {
-    if (typeof player.getOnPos === 'function') {
-      const onPos = readBlockPos(player.getOnPos())
-      if (onPos) return onPos
+    const bx = player.getBlockX()
+    const by = player.getBlockY()
+    const bz = player.getBlockZ()
+    if (bx !== undefined && by !== undefined && bz !== undefined) {
+      return {
+        x: Math.floor(Number(bx)),
+        y: Math.floor(Number(by)) - 1,
+        z: Math.floor(Number(bz))
+      }
     }
   } catch (ignored) {}
 
-  var cell = null
-
   try {
-    if (typeof player.blockPosition === 'function') cell = readBlockPos(player.blockPosition())
+    const onPos = readBlockPos(player.getOnPos())
+    if (onPos) return onPos
   } catch (ignored2) {}
 
-  if (!cell) {
-    try {
-      if (typeof player.getBlockX === 'function') {
-        cell = {
-          x: player.getBlockX(),
-          y: player.getBlockY(),
-          z: player.getBlockZ()
-        }
-      }
-    } catch (ignored3) {}
-  }
-
-  if (cell) {
-    return { x: cell.x, y: cell.y - 1, z: cell.z }
-  }
+  try {
+    const cell = readBlockPos(player.blockPosition())
+    if (cell) {
+      return { x: cell.x, y: cell.y - 1, z: cell.z }
+    }
+  } catch (ignored3) {}
 
   try {
-    if (typeof player.getX === 'function') {
-      return {
-        x: Math.floor(player.getX()),
-        y: Math.floor(player.getY()) - 1,
-        z: Math.floor(player.getZ())
-      }
+    return {
+      x: Math.floor(Number(player.getX())),
+      y: Math.floor(Number(player.getY())) - 1,
+      z: Math.floor(Number(player.getZ()))
     }
   } catch (ignored4) {}
 
   return {
-    x: Math.floor(player.x),
-    y: Math.floor(player.y) - 1,
-    z: Math.floor(player.z)
+    x: Math.floor(Number(player.x)),
+    y: Math.floor(Number(player.y)) - 1,
+    z: Math.floor(Number(player.z))
   }
 }
 
@@ -501,13 +516,281 @@ function samePosition(level, block, active) {
 }
 
 function blockIdAt(level, x, y, z) {
+  if (!level) return 'minecraft:air'
+
   try {
     const wrapper = level.getBlock(x, y, z)
-    if (wrapper.id) return String(wrapper.id)
-    return getBlockId(wrapper)
-  } catch (ignored) {}
+    if (wrapper) {
+      if (wrapper.id) {
+        const id = String(wrapper.id)
+        if (id.indexOf(':') >= 0) return id
+      }
+      try {
+        if (wrapper.blockState && wrapper.blockState.getBlock) {
+          const stateId = getBlockId(wrapper.blockState.getBlock())
+          if (stateId && stateId !== 'unknown:block') return stateId
+        }
+      } catch (ignored) {}
+      const fromWrapper = getBlockId(wrapper)
+      if (fromWrapper && fromWrapper !== 'unknown:block') return fromWrapper
+    }
+  } catch (ignored2) {}
+
+  try {
+    const $BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+    const state = level.getBlockState(new $BlockPos(Math.floor(x), Math.floor(y), Math.floor(z)))
+    if (state && state.getBlock) return getBlockId(state.getBlock())
+  } catch (ignored3) {}
 
   return 'minecraft:air'
+}
+
+function readPersistentBoolean(player, key) {
+  if (!player || !player.persistentData) return false
+
+  try {
+    var raw = player.persistentData.getBoolean(key)
+    if (raw === true) return true
+    if (raw === false) return false
+
+    try {
+      if (raw != null && raw.isPresent) return raw.isPresent() ? !!raw.get() : false
+    } catch (ignored) {}
+  } catch (ignored2) {}
+
+  try {
+    if (player.persistentData.getInt(key + '_i') === 1) return true
+  } catch (ignored3) {}
+
+  return false
+}
+
+function writePersistentBoolean(player, key, value) {
+  if (!player || !player.persistentData) return
+
+  try {
+    player.persistentData.putBoolean(key, !!value)
+  } catch (ignored) {}
+
+  try {
+    if (value) player.persistentData.putInt(key + '_i', 1)
+    else player.persistentData.remove(key + '_i')
+  } catch (ignored2) {}
+}
+
+function getPlayerUuidKey(player) {
+  if (!player) return 'unknown'
+
+  try {
+    return String(player.getUUID())
+  } catch (ignored) {}
+
+  return getPlayerDebugName(player)
+}
+
+function isAutoSetbelowDone(player) {
+  var key = getPlayerUuidKey(player)
+  if (STATE.autoSetbelowDoneByUuid && STATE.autoSetbelowDoneByUuid[key]) return true
+  return readPersistentBoolean(player, AUTO_SETBELOW_DONE_KEY)
+}
+
+function markAutoSetbelowDone(player) {
+  var key = getPlayerUuidKey(player)
+  if (!STATE.autoSetbelowDoneByUuid) STATE.autoSetbelowDoneByUuid = {}
+  STATE.autoSetbelowDoneByUuid[key] = true
+  writePersistentBoolean(player, AUTO_SETBELOW_DONE_KEY, true)
+}
+
+function tellPlayer(player, message) {
+  if (!player) return
+
+  try {
+    if (player.tell) {
+      player.tell(Text.of(message))
+      return
+    }
+  } catch (ignored) {}
+
+  try {
+    if (player.sendSystemMessage) player.sendSystemMessage(Text.of(message))
+  } catch (ignored2) {}
+}
+
+function playerServerLevel(player, server) {
+  if (!player) return null
+
+  try {
+    if (player.serverLevel) {
+      var serverLevel = player.serverLevel()
+      if (serverLevel) return serverLevel
+    }
+  } catch (ignored) {}
+
+  try {
+    if (player.getLevel) {
+      var level = player.getLevel()
+      if (level) return level
+    }
+  } catch (ignored2) {}
+
+  if (server) {
+    try {
+      var ref = player.level || null
+      if (!ref && player.getLevel) ref = player.getLevel()
+      if (ref && ref.dimension && server.getLevel) {
+        var resolved = server.getLevel(ref.dimension)
+        if (resolved) return resolved
+      }
+    } catch (ignored3) {}
+  }
+
+  return player.level || null
+}
+
+function getHavenIslandDistance() {
+  var distance = Number(STATE.config?.haven_island_distance ?? 8192)
+  return distance > 0 ? distance : 8192
+}
+
+function isOneBlockCenterAt(level, x, y, z) {
+  if (!level) return false
+  if (isIslandCenterAt(level, x, y, z, null)) return true
+
+  var initial = getInitialBlock()
+  var foundation = getFoundationBlock()
+  return blockIdAt(level, x, y, z) === initial && blockIdAt(level, x, y - 1, z) === foundation
+}
+
+function readTeamHomePosition(team, player) {
+  if (!team) return null
+
+  var methods = ['getHomePosition', 'getSpawnPosition', 'getHomePos']
+  var i = 0
+  var pos = null
+
+  for (i = 0; i < methods.length; i++) {
+    try {
+      if (team[methods[i]]) {
+        pos = readBlockPos(team[methods[i]]())
+        if (pos) return pos
+      }
+    } catch (ignored) {}
+  }
+
+  try {
+    if (team.homePosition) {
+      pos = readBlockPos(team.homePosition)
+      if (pos) return pos
+    }
+  } catch (ignored2) {}
+
+  // Haven teleports the player to home on island create — use feet as home fallback.
+  if (player) {
+    try {
+      return {
+        x: Math.floor(Number(player.getBlockX())),
+        y: Math.floor(Number(player.getBlockY())),
+        z: Math.floor(Number(player.getBlockZ()))
+      }
+    } catch (ignored3) {}
+  }
+
+  return null
+}
+
+function getHavenHomePosition(player, server) {
+  return readTeamHomePosition(getHavenTeam(player, server), player)
+}
+
+function buildHavenIslandCenterCandidates(home) {
+  var distance = getHavenIslandDistance()
+  var dirtY = home.y - 1
+
+  // Haven home Z is the spawn teleport; island dirt is on the grid at home.z + island_distance.
+  return [
+    { x: home.x, y: dirtY, z: home.z + distance },
+    { x: home.x, y: dirtY, z: home.z },
+    { x: home.x, y: dirtY, z: home.z - distance },
+    { x: home.x + distance, y: dirtY, z: home.z },
+    { x: home.x - distance, y: dirtY, z: home.z }
+  ]
+}
+
+function ensureChunkLoaded(level, x, z) {
+  if (!level) return false
+
+  try {
+    if (level.getChunk) {
+      level.getChunk(Math.floor(x) >> 4, Math.floor(z) >> 4)
+      return true
+    }
+  } catch (ignored) {}
+
+  try {
+    if (level.getChunkSource) {
+      var source = level.getChunkSource()
+      if (source && source.getChunk) {
+        source.getChunk(Math.floor(x) >> 4, Math.floor(z) >> 4, true)
+        return true
+      }
+    }
+  } catch (ignored2) {}
+
+  return false
+}
+
+function findHavenIslandCenter(player, server) {
+  var home = getHavenHomePosition(player, server)
+  if (!home) return null
+
+  var level = playerServerLevel(player, server)
+  var candidates = buildHavenIslandCenterCandidates(home)
+  var i = 0
+
+  if (level) {
+    for (i = 0; i < candidates.length; i++) {
+      ensureChunkLoaded(level, candidates[i].x, candidates[i].z)
+      if (isOneBlockCenterAt(level, candidates[i].x, candidates[i].y, candidates[i].z)) {
+        return candidates[i]
+      }
+    }
+  }
+
+  // Chunks far from the player are often unloaded — use computed grid offset without block reads.
+  return candidates[0]
+}
+
+function getAutoSetbelowYOffset() {
+  var offset = Number(STATE.config?.auto_setbelow_y_offset ?? AUTO_SETBELOW_Y_OFFSET)
+  return Number.isNaN(offset) ? AUTO_SETBELOW_Y_OFFSET : Math.floor(offset)
+}
+
+function autoSetbelowTargetFromStand(stand) {
+  var offset = getAutoSetbelowYOffset()
+  return {
+    x: stand.x,
+    y: stand.y + offset,
+    z: stand.z,
+    source: 'player_feet'
+  }
+}
+
+function resolveAutoSetbelowTarget(player, server) {
+  var template = getHavenIslandTemplate(player, server)
+  var templateOk = template && shouldAutoSetbelowTemplate(template)
+  var stand = playerStandingBlock(player)
+  var level = playerServerLevel(player, server)
+
+  // Island create: block under player, adjusted for Haven spawn height (one block lower than stand).
+  if (templateOk) {
+    return autoSetbelowTargetFromStand(stand)
+  }
+
+  if (level && isOneBlockCenterAt(level, stand.x, stand.y, stand.z)) {
+    return autoSetbelowTargetFromStand(stand)
+  }
+
+  return null
 }
 
 function brokenBlockId(block) {
@@ -815,89 +1098,428 @@ function setActivePosition(source, x, y, z) {
   return 1
 }
 
+function normalizeIslandTemplate(template) {
+  const raw = String(template || '').toLowerCase().trim()
+  if (!raw) return ''
+  const colon = raw.lastIndexOf(':')
+  return colon >= 0 ? raw.slice(colon + 1) : raw
+}
+
 function shouldAutoSetbelowTemplate(template) {
   if (STATE.config?.auto_setbelow_on_island_create === false) return false
 
   const list = STATE.config?.auto_setbelow_templates
-  const wanted = String(template || '').toLowerCase()
+  const wanted = normalizeIslandTemplate(template)
   if (!wanted) return false
 
   if (!list || !list.length) return wanted === 'oneblock_island'
 
   var i = 0
   for (i = 0; i < list.length; i++) {
-    if (String(list[i]).toLowerCase() === wanted) return true
+    if (normalizeIslandTemplate(list[i]) === wanted) return true
   }
 
   return false
 }
 
-function autoSetbelowAfterIslandCreate(player, template) {
-  if (!isMechanicEnabled()) return
+function getPlayerDebugName(player) {
+  if (!player) return 'unknown'
+
+  try {
+    if (player.getName) return String(player.getName().getString())
+  } catch (ignored) {}
+
+  try {
+    if (player.username) return String(player.username)
+  } catch (ignored2) {}
+
+  return 'unknown'
+}
+
+function shouldLogAutoSetbelowDebug(player, server, message) {
+  var key = getPlayerDebugName(player)
+  var tick = server && server.tickCount !== undefined ? server.tickCount : 0
+  var entry = STATE.autoSetbelowDebug[key]
+
+  if (entry && entry.lastMsg === message && tick - entry.lastTick < AUTO_SETBELOW_DEBUG_INTERVAL) {
+    return false
+  }
+
+  STATE.autoSetbelowDebug[key] = { lastTick: tick, lastMsg: message }
+  return true
+}
+
+function logAutoSetbelowDebug(player, server, message) {
+  if (!shouldLogAutoSetbelowDebug(player, server, message)) return
+  console.info(`[RandomOneBlock] Auto setbelow debug [${getPlayerDebugName(player)}]: ${message}`)
+}
+
+function describePlayerPosition(player) {
+  var stand = playerStandingBlock(player)
+  var bx = '?'
+  var by = '?'
+  var bz = '?'
+
+  try {
+    bx = Math.floor(Number(player.getBlockX()))
+    by = Math.floor(Number(player.getBlockY()))
+    bz = Math.floor(Number(player.getBlockZ()))
+  } catch (ignored) {}
+
+  return `feet=${bx} ${by} ${bz} standBlock=${stand.x} ${stand.y} ${stand.z}`
+}
+
+function describePyramidContext(player, server) {
+  var level = playerServerLevel(player, server)
+  var stand = playerStandingBlock(player)
+
+  if (!level) {
+    return `no_level ${describePlayerPosition(player)}`
+  }
+
+  var initial = getInitialBlock()
+  var foundation = getFoundationBlock()
+  var surround = STATE.config?.island_center_surround || 'minecraft:grass_block'
+  var at = blockIdAt(level, stand.x, stand.y, stand.z)
+  var below = blockIdAt(level, stand.x, stand.y - 1, stand.z)
+  var below2 = blockIdAt(level, stand.x, stand.y - 2, stand.z)
+  var islandCenter = isIslandCenterAt(level, stand.x, stand.y, stand.z, null)
+  var dirtOnBedrock = at === initial && below === foundation
+  var dim = dimensionId(level)
+  var ring =
+    '+' +
+    blockIdAt(level, stand.x + 1, stand.y - 1, stand.z) +
+    ' -' +
+    blockIdAt(level, stand.x - 1, stand.y - 1, stand.z) +
+    ' ^' +
+    blockIdAt(level, stand.x, stand.y - 1, stand.z + 1) +
+    ' v' +
+    blockIdAt(level, stand.x, stand.y - 1, stand.z - 1)
+  var home = getHavenHomePosition(player, server)
+  var homeText = home ? `${home.x} ${home.y} ${home.z}` : 'none'
+  var havenCenter = findHavenIslandCenter(player, server)
+  var havenText = havenCenter ? `${havenCenter.x} ${havenCenter.y} ${havenCenter.z}` : 'none'
+  var target = resolveAutoSetbelowTarget(player, server)
+  var targetText = target ? `${target.x} ${target.y} ${target.z} (${target.source})` : 'none'
+
+  return (
+    `dim=${dim} ${describePlayerPosition(player)} at=${at} below=${below} below2=${below2} ` +
+    `islandCenter=${islandCenter} dirtOnBedrock=${dirtOnBedrock} grassRing${ring} surround=${surround} ` +
+    `havenHome=${homeText} havenCenter=${havenText} target=${targetText}`
+  )
+}
+
+function describeAutoSetbelowWatchState(player, server) {
+  var done = isAutoSetbelowDone(player)
+  var active = getActiveBlock()
+  var activeText = 'none'
+
+  if (active && active.enabled) {
+    activeText = `${active.dimension} ${active.x} ${active.y} ${active.z}`
+  }
+
+  return `doneFlag=${done} active=${activeText} activeMatches=${activeBlockMatchesStanding(player, server)}`
+}
+
+function debugAutoSetbelowTrace(player, server) {
+  ensurePoolReady()
+
+  if (!isMechanicEnabled()) {
+    logAutoSetbelowDebug(player, server, 'gate: mechanic_enabled=false')
+    return
+  }
+
+  if (STATE.config?.auto_setbelow_on_island_create === false) {
+    logAutoSetbelowDebug(player, server, 'gate: auto_setbelow_on_island_create=false')
+    return
+  }
+
+  var watching = shouldWatchPlayerForAutoSetbelow(player, server)
+  var target = resolveAutoSetbelowTarget(player, server)
+  var onPyramid = target != null
+  var template = getHavenIslandTemplate(player, server)
+  var havenTeam = getHavenTeam(player, server)
+  var teamInfo = havenTeam ? 'team=yes' : 'team=no'
+
+  if (!watching) {
+    logAutoSetbelowDebug(
+      player,
+      server,
+      `not watching — ${describeAutoSetbelowWatchState(player, server)} onPyramid=${onPyramid} template=${template || 'none'} ${teamInfo} — ${describePyramidContext(player, server)}`
+    )
+    return
+  }
+
+  if (!target) {
+    logAutoSetbelowDebug(
+      player,
+      server,
+      `watching (no target) — ${describeAutoSetbelowWatchState(player, server)} template=${template || 'none'} ${teamInfo} — ${describePyramidContext(player, server)}`
+    )
+    return
+  }
+
+  logAutoSetbelowDebug(
+    player,
+    server,
+    `watching — ${describeAutoSetbelowWatchState(player, server)} onPyramid=${onPyramid} template=${template || 'none'} ${teamInfo} — ${describePyramidContext(player, server)}`
+  )
+
+  if (template && !shouldAutoSetbelowTemplate(template)) {
+    logAutoSetbelowDebug(
+      player,
+      server,
+      `blocked: template not allowed template=${template} allowed=${JsonIO.toString(STATE.config?.auto_setbelow_templates || [])}`
+    )
+    return
+  }
+
+  tryAutoSetbelowFromPlayer(player, server)
+}
+
+function logAutoSetbelowGlobalDebug(server, playerCount) {
+  var tick = server.tickCount
+
+  if (tick - STATE.autoSetbelowGlobalDebugTick < AUTO_SETBELOW_DEBUG_INTERVAL) return
+  STATE.autoSetbelowGlobalDebugTick = tick
+
+  ensurePoolReady()
+  console.info(
+    `[RandomOneBlock] Auto setbelow poll tick=${tick} players=${playerCount} configLoaded=${STATE.config != null} ` +
+      `mechanic=${isMechanicEnabled()} autoSetbelow=${STATE.config?.auto_setbelow_on_island_create !== false} ` +
+      `havenMod=${$TeamManager != null}`
+  )
+}
+
+function resolvePlayerServer(player, fallbackServer) {
+  if (!player) return fallbackServer || null
+
+  try {
+    if (player.getServer) {
+      const server = player.getServer()
+      if (server) return server
+    }
+  } catch (ignored) {}
+
+  try {
+    if (player.server) return player.server
+  } catch (ignored2) {}
+
+  return fallbackServer || null
+}
+
+function getHavenTeamManager(server) {
+  if (!server || !$TeamManager) return null
+
+  var tick = server.tickCount
+  var havenManager = null
+
+  if (STATE.havenTeamManager && STATE.havenTeamManagerTick >= 0 && tick - STATE.havenTeamManagerTick < 5) {
+    return STATE.havenTeamManager
+  }
+
+  try {
+    havenManager = new $TeamManager()
+    havenManager.loadAllTeams(server)
+    STATE.havenTeamManager = havenManager
+    STATE.havenTeamManagerTick = tick
+    return havenManager
+  } catch (e) {
+    var err = e && e.javaException ? String(e.javaException) : String(e)
+    console.error(`[RandomOneBlock] Haven TeamManager load failed: ${err}`)
+    return null
+  }
+}
+
+function giveQuestBookToHotbar(player) {
   if (!player) return
+
+  var current = null
+
+  try {
+    if (readPersistentBoolean(player, 'random_one_block_starter_book')) return
+
+    current = player.inventory.getStackInSlot(0)
+    if (!current.isEmpty() && String(current.id) === 'ftbquests:book') {
+      player.persistentData.putBoolean('random_one_block_starter_book', true)
+      return
+    }
+
+    player.inventory.setStackInSlot(0, Item.of('ftbquests:book', 1))
+    player.persistentData.putBoolean('random_one_block_starter_book', true)
+    console.info('[RandomOneBlock] Placed FTB Quest book in hotbar slot 0')
+  } catch (e) {
+    const err = e && e.javaException ? String(e.javaException) : String(e)
+    console.error(`[RandomOneBlock] Failed to give quest book: ${err}`)
+  }
+}
+
+function getHavenTeam(player, server) {
+  var resolvedServer = resolvePlayerServer(player, server)
+  var havenManager = getHavenTeamManager(resolvedServer)
+  var uuid = null
+
+  if (!havenManager || !player) return null
+
+  try {
+    uuid = player.getUUID ? player.getUUID() : player.uuid
+    return havenManager.getTeamByPlayer(uuid)
+  } catch (ignored) {}
+
+  return null
+}
+
+function getHavenIslandTemplate(player, server) {
+  const team = getHavenTeam(player, server)
+  if (!team || !team.getIslandTemplate) return ''
+
+  try {
+    return String(team.getIslandTemplate())
+  } catch (ignored) {}
+
+  return ''
+}
+
+function activeBlockMatchesStanding(player, server) {
+  const active = getActiveBlock()
+  if (!active || !active.enabled) return false
+  if (!isStandingOnRandomBlock(player, server)) return false
+
+  const stand = playerStandingBlock(player)
+  return stand.x === active.x && stand.y === active.y && stand.z === active.z
+}
+
+function shouldWatchPlayerForAutoSetbelow(player, server) {
+  if (!player) return false
+  if (STATE.config?.auto_setbelow_on_island_create === false) return false
+  if (isAutoSetbelowDone(player)) return false
+  return true
+}
+
+function isStandingOnIslandPyramid(player, server) {
+  return resolveAutoSetbelowTarget(player, server) != null
+}
+
+function isStandingOnRandomBlock(player, server) {
+  const level = playerServerLevel(player, server)
+  if (!level) return false
+
+  const stand = playerStandingBlock(player)
+  const initial = getInitialBlock()
+  const blockId = blockIdAt(level, stand.x, stand.y, stand.z)
+
+  if (blockId === initial) return true
+  return isIslandCenterAt(level, stand.x, stand.y, stand.z, null)
+}
+
+function tryAutoSetbelowFromPlayer(player, server) {
+  if (isAutoSetbelowDone(player)) return true
+
+  if (!isMechanicEnabled()) {
+    logAutoSetbelowDebug(player, server, 'try: mechanic_enabled=false')
+    return false
+  }
+
+  var target = resolveAutoSetbelowTarget(player, server)
+  if (!target) {
+    logAutoSetbelowDebug(player, server, `try: no target — ${describePyramidContext(player, server)}`)
+    return false
+  }
+
+  var template = getHavenIslandTemplate(player, server)
+  if (template && !shouldAutoSetbelowTemplate(template)) {
+    logAutoSetbelowDebug(player, server, `try: template blocked template=${template}`)
+    return false
+  }
 
   ensurePoolReady()
 
   var source = null
+  var active = getActiveBlock()
   try {
     source = player.createCommandSourceStack()
-  } catch (ignored) {
-    return
+  } catch (e) {
+    const err = e && e.javaException ? String(e.javaException) : String(e)
+    console.error(`[RandomOneBlock] Auto setbelow could not build command source: ${err}`)
+    logAutoSetbelowDebug(player, server, `try: command source failed — ${err}`)
+    return false
   }
 
-  if ($TeamManager) {
-    try {
-      const team = $TeamManager.getTeamByPlayer(player.getUUID())
-      const home = team && team.getHomePosition ? team.getHomePosition() : null
-
-      if (home) {
-        setActivePosition(source, home.getX(), home.getY() - 1, home.getZ())
-        console.info(
-          `[RandomOneBlock] Auto setbelow after island create (${template}) at ${home.getX()} ${home.getY() - 1} ${home.getZ()}`
-        )
-        return
-      }
-    } catch (e) {
-      console.error(`[RandomOneBlock] Auto setbelow team lookup failed: ${String(e)}`)
-    }
+  if (
+    active &&
+    active.enabled &&
+    active.x === target.x &&
+    active.y === target.y &&
+    active.z === target.z
+  ) {
+    markAutoSetbelowDone(player)
+    console.info(
+      `[RandomOneBlock] Auto setbelow already at ${target.x} ${target.y} ${target.z}`
+    )
+    giveQuestBookToHotbar(player)
+    return true
   }
 
-  const stand = playerStandingBlock(player)
-  setActivePosition(source, stand.x, stand.y, stand.z)
+  setActivePosition(source, target.x, target.y, target.z)
+  markAutoSetbelowDone(player)
+
   console.info(
-    `[RandomOneBlock] Auto setbelow fallback after island create (${template}) at ${stand.x} ${stand.y} ${stand.z}`
+    `[RandomOneBlock] Auto setbelow after island spawn at ${target.x} ${target.y} ${target.z}` +
+      ` (${target.source}${template ? `, template=${template}` : ''})`
   )
+  tellPlayer(
+    player,
+    `§aRandom block set at §f${target.x} ${target.y} ${target.z}§a — mine the block under you!`
+  )
+
+  giveQuestBookToHotbar(player)
+  return true
 }
 
-function registerIslandCreateHook() {
-  NativeEvents.onEvent('net.neoforged.neoforge.event.CommandEvent', event => {
-    ensurePoolReady()
-    if (!isMechanicEnabled()) return
-    if (STATE.config?.auto_setbelow_on_island_create === false) return
+function registerAutoSetbelowWatcher() {
+  console.info(
+    `[RandomOneBlock] Registering auto setbelow watcher (ServerEvents.tick, poll=${AUTO_SETBELOW_POLL_INTERVAL}, debug=${AUTO_SETBELOW_DEBUG_INTERVAL})`
+  )
+
+  // Haven island create is async and may use the GUI (no CommandEvent). Poll on server
+  // until the player stands on the oneblock pyramid center, then run /randomblock setbelow logic.
+  ServerEvents.tick(event => {
+    const server = event.server
+    if (!server) return
+    if (server.tickCount % AUTO_SETBELOW_POLL_INTERVAL !== 0) return
+
+    if (!STATE.autoSetbelowWatcherStarted) {
+      STATE.autoSetbelowWatcherStarted = true
+      console.info('[RandomOneBlock] Auto setbelow watcher tick handler is alive')
+    }
+
+    var players = null
+    var count = 0
+    var i = 0
+    var player = null
 
     try {
-      const parse = event.getParseResults()
-      const cmd = String(parse.getReader().getString()).trim().replace(/^\//, '')
-      const match = cmd.match(/^havensb\s+island\s+create\s+(\S+)/i)
-      if (!match) return
+      players = server.getPlayerList().getPlayers()
+      count = players.size()
+    } catch (e) {
+      const err = e && e.javaException ? String(e.javaException) : String(e)
+      console.error(`[RandomOneBlock] Auto setbelow player list failed: ${err}`)
+      return
+    }
 
-      const template = match[1]
-      if (!shouldAutoSetbelowTemplate(template)) return
+    logAutoSetbelowGlobalDebug(server, count)
 
-      const source = parse.getContext().getSource()
-      const player = source.getPlayer()
-      if (!player) return
+    for (i = 0; i < count; i++) {
+      player = players.get(i)
+      if (!player) continue
 
-      const server = source.getServer()
-      server.scheduleInTicks(20, () => {
-        try {
-          autoSetbelowAfterIslandCreate(player, template)
-        } catch (e) {
-          const err = e && e.javaException ? String(e.javaException) : String(e)
-          console.error(`[RandomOneBlock] Auto setbelow failed: ${err}`)
-        }
-      })
-    } catch (ignored) {}
+      try {
+        debugAutoSetbelowTrace(player, server)
+      } catch (e) {
+        const err = e && e.javaException ? String(e.javaException) : String(e)
+        console.error(`[RandomOneBlock] Auto setbelow trace failed: ${err}`)
+      }
+    }
   })
 }
 
@@ -956,90 +1578,33 @@ function cmdReload(source) {
   return 1
 }
 
-function getIslandRandomBlockPlacement(player) {
-  if (!$TeamManager || !player) return null
-
-  try {
-    const team = $TeamManager.getTeamByPlayer(player.getUUID())
-    if (!team || !team.getHomePosition) return null
-
-    const home = team.getHomePosition()
-    if (!home) return null
-
-    const template = team.getIslandTemplate ? String(team.getIslandTemplate()) : ''
-
-    return {
-      dimension: 'minecraft:overworld',
-      x: home.getX(),
-      y: home.getY() - 1,
-      z: home.getZ(),
-      template: template
-    }
-  } catch (ignored) {}
-
-  return null
-}
-
-function getRandomBlockPlacementForInfo(player) {
-  const island = getIslandRandomBlockPlacement(player)
-  if (island && shouldAutoSetbelowTemplate(island.template)) return island
-
-  const cfg = STATE.config?.active_block
-  if (cfg && cfg.enabled) {
-    return {
-      dimension: String(cfg.dimension),
-      x: Math.floor(cfg.x),
-      y: Math.floor(cfg.y),
-      z: Math.floor(cfg.z),
-      template: ''
-    }
-  }
-
-  return island
-}
-
 function cmdInfo(source) {
   ensurePoolReady()
 
   const level = commandLevel(source)
-  const player = source.player
-  const placement = getRandomBlockPlacementForInfo(player)
+  const active = getActiveBlock()
 
   if (!isMechanicEnabled()) {
     tell(source, '§eRandom block: §cdisabled')
     return 1
   }
 
-  if (placement) {
-    const blockId = blockIdAt(level, placement.x, placement.y, placement.z)
+  if (active && active.enabled) {
+    const blockId = blockIdAt(level, active.x, active.y, active.z)
     tell(
       source,
-      `§eRandom block placement: §f${placement.dimension} ${placement.x} ${placement.y} ${placement.z} §7(${blockId})`
+      `§eRandom block placement: §f${active.dimension} ${active.x} ${active.y} ${active.z} §7(${blockId})`
     )
     tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
-
-    if (placement.template) {
-      tell(source, `§7Island: §f${placement.template} §7(center dirt, one block below Haven spawn)`)
-    }
 
     if (STATE.config?.island_template_mode) {
       tell(source, '§7Mine this block to roll a random block from the pool')
     }
   } else if (STATE.config?.island_template_mode) {
-    tell(source, `§eRandom block placement: §7unknown §e| pool: §f${STATE.pool.length} §eblocks`)
-    tell(source, '§7Create a §foneblock_island §7or run §f/randomblock setbelow')
+    tell(source, `§eRandom block placement: §7not set §e| pool: §f${STATE.pool.length} §eblocks`)
+    tell(source, '§7Create a §foneblock_island §7(stand on center dirt) or run §f/randomblock setbelow')
   } else {
-    const cfg = STATE.config?.active_block
-    if (cfg && cfg.enabled) {
-      const blockId = blockIdAt(level, cfg.x, cfg.y, cfg.z)
-      tell(
-        source,
-        `§eRandom block placement: §f${cfg.dimension} ${cfg.x} ${cfg.y} ${cfg.z} §7(${blockId})`
-      )
-      tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
-    } else {
-      tell(source, '§eRandom block placement: §7not set §7— use §f/randomblock setbelow')
-    }
+    tell(source, '§eRandom block placement: §7not set §7— use §f/randomblock setbelow')
   }
 
   return 1
@@ -1121,7 +1686,7 @@ function registerCommands() {
 }
 
 registerCommands()
-registerIslandCreateHook()
+registerAutoSetbelowWatcher()
 
 ServerEvents.loaded(() => {
   reloadAll()
