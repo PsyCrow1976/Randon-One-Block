@@ -6,6 +6,19 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.1] — 2026-06-24
+
+Quest book polish and a player-friendly way to reset stuck random blocks.
+
+### Quests
+
+- **The Basics chapter** — New chapter after *Getting started*; craft a crafting table to earn 10 experience.
+- **Chapter names fixed** — *Getting started* and *The Basics* now show their proper titles in the quest book (no more “Unnamed”).
+- **Cant mine the block?** — Repeatable quest under *Getting started*; claim the reward to reset your random block to dirt when you roll something you cannot break (no operator command needed).
+- **Quest text fixes** — Titles and task descriptions display correctly after in-game quest edits.
+
+---
+
 ## [1.0.0.0] — 2026-06-24
 
 First playable release.
@@ -26,7 +39,6 @@ First playable release.
 
 - **First quest chapter** — *Getting started* is in the quest book with a welcome quest to complete.
 - **Starter reward** — Finish the welcome quest to receive a stone paxel.
-- **The Basics chapter** — Craft a crafting table (detected when you obtain one); reward is 10 experience.
 - **Quest book on join** — The FTB Quest book is placed in your hotbar when you first log in.
 
 ### For server owners
