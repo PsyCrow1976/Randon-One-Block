@@ -150,7 +150,7 @@
     compass: true,
     /*
      * Enable minimap
-     * Default: true
+     * Default: false
      */
     enabled: true,
     /*
@@ -212,6 +212,9 @@
       entities: true,
       // Entity icons on minimap
       entity_icon: {
+        "minecraft:nautilus": true,
+        "minecraft:silverfish": true,
+        "minecraft:salmon": false,
       },
       /*
        * Make entity icons on the minimap larger
@@ -227,7 +230,7 @@
        * Mode for the pointer icon to render on minimap
        * Default: "both"
        * Valid values: "face", "pointer", "both"
-     */
+       */
       pointer_icon_mode_minimap: "both",
       /*
        * Always show player icon on minimap, even when rotation not locked

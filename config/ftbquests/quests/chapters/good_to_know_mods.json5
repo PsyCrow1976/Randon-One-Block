@@ -1,5 +1,5 @@
 {
-  id: "A84C61ACEE3614C8",
+  id: "72F7BBFBF1CB5500",
   group: "",
   order_index: 1,
   icon: {
@@ -26,10 +26,10 @@
       dependencies: [
         "54426B5BBE263DB4",
       ],
-      id: "90FC2550D77F558C",
+      id: "1B88CD62B3AA33C6",
       tasks: [
         {
-          id: "A1C14C0CBAC67803",
+          id: "7A242E28CD3A3800",
           type: "checkmark",
         },
       ],

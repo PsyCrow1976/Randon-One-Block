@@ -100,6 +100,9 @@
       "item_storage.sort": false,
       "painting": true
     },
+    "apothic_spawners": {
+      "spawner": true
+    },
     "jade_access": {
       "npc_description": true,
       "held_item": true,
@@ -107,6 +110,14 @@
       "block": true,
       "entity": true,
       "entity_variant": true
+    },
+    "easy_villagers": {
+      "villager": true,
+      "converter": true,
+      "breeder": true
+    },
+    "mysticalagradditions": {
+      "infused_farmland": true
     },
     "jade": {
       "coordinates.rel": false,
@@ -121,6 +132,20 @@
       "block_properties": false,
       "loot_table": false,
       "mod_name": "OFF"
+    },
+    "apotheosis": {
+      "adventure": true
+    },
+    "mysticalagriculture": {
+      "infused_farmland": true,
+      "crop": true,
+      "inferium_crop": true
+    },
+    "balm": {
+      "jade": true
+    },
+    "apothic_enchanting": {
+      "ench": true
     }
   }
 }
