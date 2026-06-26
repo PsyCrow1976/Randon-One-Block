@@ -35,6 +35,32 @@
         },
       ],
     },
+    {
+      icon: {
+        id: "minecraft:dirt",
+        count: 1,
+      },
+      x: 0.0,
+      y: 1.5,
+      id: "E8F3A2B1C4D50697",
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      tasks: [
+        {
+          id: "F9A4B3C2D5E60781",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "A0B5C4D3E6F71892",
+          type: "command",
+          command: "randomblock revert",
+          player_command: false,
+        },
+      ],
+    },
   ],
   quest_links: [
   ],
