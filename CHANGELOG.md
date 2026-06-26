@@ -6,6 +6,38 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.6] — 2026-06-27
+
+Removed the KubeJS uncrafting table experiment and refreshed the mod list (67 mods).
+
+### Removed
+
+- **Uncrafting Table** — Dropped the KubeJS custom block, config, and scripts. Custom chest GUI layouts are not viable on Minecraft 26.1.2 with the current KubeJS API; the feature is shelved.
+
+### Mods
+
+- **Added:** Baubley Heart Canisters `26.1.2-1.7.3`
+- **Added:** Colorful Hearts `26.1.2.0`
+- **Added:** Construction Sticks `26.1.2-3.1.3`
+- **Added:** Crafting on a stick `1.0`
+- **Added:** Curios API `beta.2+26.1.2`
+- **Added:** Day Count `1.6.0-NeoForge-mc26.1`
+- **Added:** Forgiving Void `26.1.2.1`
+- **Added:** GraveStone Mod `neoforge-1.0.37+26.1.2`
+- **Added:** Leaves Be Gone `v26.1.0-mc26.1.x-NeoForge`
+- **Added:** More Overlays Updated `1.24.4-mc26.1.2-neoforge`
+- **Added:** Puzzles Lib `v26.1.11-mc26.1.x-NeoForge`
+- **Added:** Simple Voice Chat `neoforge-2.6.20+26.1.2`
+- **Added:** Sodium `neoforge-0.8.12+mc26.1.2`
+- **Added:** Time in a Bottle `neoforge-7.0.0`
+- **Added:** Trade Cycling `neoforge-1.0.21+26.1.2`
+
+### Documentation
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (67 mods).
+
+---
+
 ## [1.0.0.5] — 2026-06-26
 
 Random block pool now excludes partial blocks (crops, flowers, rails, pots, etc.).

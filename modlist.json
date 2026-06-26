@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-26",
+  "generated": "2026-06-27",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 52,
+  "mod_count": 67,
   "mods": [
     {
       "name": "Apotheosis",
@@ -47,6 +47,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/balm"
     },
     {
+      "name": "Baubley Heart Canisters",
+      "version": "26.1.2-1.7.3",
+      "jar": "baubley-heart-canisters-26.1.2-1.7.3.jar",
+      "curseforge_id": 282947,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/baubley-heart-canisters"
+    },
+    {
       "name": "Cloth Config API (Fabric/Forge/NeoForge)",
       "version": "26.1.154",
       "jar": "cloth-config-26.1.154.jar",
@@ -59,6 +66,20 @@
       "jar": "Clumps-neoforge-26.1.2-26.1.2.1.jar",
       "curseforge_id": 256717,
       "url": "https://www.curseforge.com/minecraft/mc-mods/clumps"
+    },
+    {
+      "name": "Colorful Hearts",
+      "version": "26.1.2.0",
+      "jar": "colorfulhearts-neoforge-26.1.2-26.1.2.0.jar",
+      "curseforge_id": 854213,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/colorful-hearts"
+    },
+    {
+      "name": "Construction Sticks",
+      "version": "26.1.2-3.1.3",
+      "jar": "ConstructionSticks-26.1.2-3.1.3.jar",
+      "curseforge_id": 1156098,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/construction-sticks"
     },
     {
       "name": "Construction Wand - KOTS",
@@ -82,6 +103,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads"
     },
     {
+      "name": "Crafting on a stick",
+      "version": "1.0",
+      "jar": "crafting_on_a_stick-neoforge-26.1-1.0.jar",
+      "curseforge_id": 577850,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/crafting-on-a-stick"
+    },
+    {
       "name": "Cucumber Library",
       "version": "26.1.2-9.0.4",
       "jar": "Cucumber-26.1.2-9.0.4.jar",
@@ -89,11 +117,25 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/cucumber"
     },
     {
+      "name": "Curios API (Forge/NeoForge)",
+      "version": "beta.2+26.1.2",
+      "jar": "curios-neoforge-15.0.0-beta.2+26.1.2.jar",
+      "curseforge_id": 309927,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/curios"
+    },
+    {
       "name": "Dank Storage",
       "version": "0",
       "jar": "dankstorage-neoforge-26.1-0.jar",
       "curseforge_id": 335673,
       "url": "https://www.curseforge.com/minecraft/mc-mods/dank-storage"
+    },
+    {
+      "name": "Day Count - a day counter HUD (Forge/NeoForge/Fabric)",
+      "version": "1.6.0-NeoForge-mc26.1",
+      "jar": "DayCount-1.6.0-NeoForge-mc26.1.jar",
+      "curseforge_id": 1233297,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/daycount"
     },
     {
       "name": "Easy Piglins",
@@ -129,6 +171,13 @@
       "jar": "farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar",
       "curseforge_id": 261924,
       "url": "https://www.curseforge.com/minecraft/mc-mods/farming-for-blockheads"
+    },
+    {
+      "name": "Forgiving Void",
+      "version": "26.1.2.1",
+      "jar": "forgivingvoid-neoforge-26.1.2-26.1.2.1.jar",
+      "curseforge_id": 271009,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/forgiving-void"
     },
     {
       "name": "FTB Chunks (NeoForge)",
@@ -171,6 +220,13 @@
       "jar": "GatewaysToEternity-26.1.2-6.0.1.jar",
       "curseforge_id": 417802,
       "url": "https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity"
+    },
+    {
+      "name": "GraveStone Mod",
+      "version": "neoforge-1.0.37+26.1.2",
+      "jar": "gravestone-neoforge-1.0.37+26.1.2.jar",
+      "curseforge_id": 238551,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/gravestone-mod"
     },
     {
       "name": "GuideME",
@@ -236,11 +292,25 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs"
     },
     {
+      "name": "Leaves Be Gone",
+      "version": "v26.1.0-mc26.1.x-NeoForge",
+      "jar": "LeavesBeGone-v26.1.0-mc26.1.x-NeoForge.jar",
+      "curseforge_id": 686435,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/leaves-be-gone"
+    },
+    {
       "name": "Melody",
       "version": "neoforge_1.0.16_MC_26.1.1",
       "jar": "melody_neoforge_1.0.16_MC_26.1.1.jar",
       "curseforge_id": 938643,
       "url": "https://www.curseforge.com/minecraft/mc-mods/melody"
+    },
+    {
+      "name": "More Overlays Updated",
+      "version": "1.24.4-mc26.1.2-neoforge",
+      "jar": "moreoverlays-1.24.4-mc26.1.2-neoforge.jar",
+      "curseforge_id": 391382,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/more-overlays-updated"
     },
     {
       "name": "Mouse Tweaks",
@@ -306,6 +376,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected"
     },
     {
+      "name": "Puzzles Lib",
+      "version": "v26.1.11-mc26.1.x-NeoForge",
+      "jar": "PuzzlesLib-v26.1.11-mc26.1.x-NeoForge.jar",
+      "curseforge_id": 495476,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib"
+    },
+    {
       "name": "Reap Mod",
       "version": "neoforge-1.1.4+26.1.2",
       "jar": "reap-neoforge-1.1.4+26.1.2.jar",
@@ -341,11 +418,25 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/searchables"
     },
     {
+      "name": "Simple Voice Chat",
+      "version": "neoforge-2.6.20+26.1.2",
+      "jar": "voicechat-neoforge-2.6.20+26.1.2.jar",
+      "curseforge_id": 416089,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat"
+    },
+    {
       "name": "Simplest Paxels",
       "version": "26.1-1.0.6",
       "jar": "simplest_paxels-26.1-1.0.6.jar",
       "curseforge_id": 983683,
       "url": "https://www.curseforge.com/minecraft/mc-mods/simplest-paxels"
+    },
+    {
+      "name": "Sodium",
+      "version": "neoforge-0.8.12+mc26.1.2",
+      "jar": "sodium-neoforge-0.8.12+mc26.1.2.jar",
+      "curseforge_id": 394468,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/sodium"
     },
     {
       "name": "Sophisticated Backpacks",
@@ -367,6 +458,20 @@
       "jar": "sophisticatedstorage-26.1.2-1.5.81.1883.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
+    },
+    {
+      "name": "Time in a Bottle",
+      "version": "neoforge-7.0.0",
+      "jar": "tiab-neoforge-7.0.0.jar",
+      "curseforge_id": 895919,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/time-in-a-bottle"
+    },
+    {
+      "name": "Trade Cycling",
+      "version": "neoforge-1.0.21+26.1.2",
+      "jar": "trade-cycling-neoforge-1.0.21+26.1.2.jar",
+      "curseforge_id": 570431,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/trade-cycling"
     }
   ]
 }
