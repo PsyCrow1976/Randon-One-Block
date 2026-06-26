@@ -291,7 +291,7 @@ Mods, saves, logs, and jars stay in the CurseForge instance folder (not fully tr
 
 ## Installed mods (playtest instance)
 
-AppleSkin, Clumps, Cooking for Blockheads, Easy Villagers, Farming for Blockheads, FTB Chunks, FTB Essentials, FTB Library, FTB Quests, FTB Teams, GuideME, Haven Skyblock Builder, Jade, JourneyMap, JEI, Just Enough Resources, KubeJS, MATC, Mouse Tweaks, Mystical Agriculture (+ Additions, Automation), Powah, Refined Storage (+ JEI integration), Rhino, Sophisticated Backpacks/Core/Storage, and others.
+Full mod names and versions: [`modlist.md`](modlist.md) (47 mods as of last refresh). After changing mods in CurseForge, run `./update-modlist.sh` to refresh the list; use `./update-modlist.sh --changelog` for bullets to paste into `CHANGELOG.md`.
 
 ## Status
 

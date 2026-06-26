@@ -1,0 +1,337 @@
+{
+  "generated": "2026-06-26",
+  "minecraft": "26.1.2",
+  "neoforge": "26.1.2.76",
+  "mod_count": 47,
+  "mods": [
+    {
+      "name": "Apotheosis",
+      "version": "26.1.2-9.0.2",
+      "jar": "Apotheosis-26.1.2-9.0.2.jar",
+      "curseforge_id": 313970,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/apotheosis"
+    },
+    {
+      "name": "Apothic Attributes",
+      "version": "26.1.2-3.0.1",
+      "jar": "ApothicAttributes-26.1.2-3.0.1.jar",
+      "curseforge_id": 898963,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-attributes"
+    },
+    {
+      "name": "Apothic Enchanting",
+      "version": "26.1.2-2.0.0",
+      "jar": "ApothicEnchanting-26.1.2-2.0.0.jar",
+      "curseforge_id": 1063926,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-enchanting"
+    },
+    {
+      "name": "Apothic Spawners",
+      "version": "26.1.2-2.0.0",
+      "jar": "ApothicSpawners-26.1.2-2.0.0.jar",
+      "curseforge_id": 986583,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-spawners"
+    },
+    {
+      "name": "AppleSkin",
+      "version": "3.0.9",
+      "jar": "appleskin-neoforge-mc26.1-3.0.9.jar",
+      "curseforge_id": 248787,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/appleskin"
+    },
+    {
+      "name": "Balm",
+      "version": "26.1.2.7",
+      "jar": "balm-neoforge-26.1.2-26.1.2.7.jar",
+      "curseforge_id": 531761,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/balm"
+    },
+    {
+      "name": "Cloth Config API (Fabric/Forge/NeoForge)",
+      "version": "26.1.154",
+      "jar": "cloth-config-26.1.154.jar",
+      "curseforge_id": 348521,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/cloth-config"
+    },
+    {
+      "name": "Clumps",
+      "version": "26.1.2.1",
+      "jar": "Clumps-neoforge-26.1.2-26.1.2.1.jar",
+      "curseforge_id": 256717,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/clumps"
+    },
+    {
+      "name": "Construction Wand - KOTS",
+      "version": "26.1.2-2.17.5-fix",
+      "jar": "constructionwand-kots-26.1.2-2.17.5-fix.jar",
+      "curseforge_id": 1382688,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/construction-wand-kots"
+    },
+    {
+      "name": "Cooking for Blockheads",
+      "version": "26.1.2.2",
+      "jar": "cookingforblockheads-neoforge-26.1.2-26.1.2.2.jar",
+      "curseforge_id": 231484,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads"
+    },
+    {
+      "name": "Cucumber Library",
+      "version": "26.1.2-9.0.4",
+      "jar": "Cucumber-26.1.2-9.0.4.jar",
+      "curseforge_id": 272335,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/cucumber"
+    },
+    {
+      "name": "Dank Storage",
+      "version": "0",
+      "jar": "dankstorage-neoforge-26.1-0.jar",
+      "curseforge_id": 335673,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/dank-storage"
+    },
+    {
+      "name": "Easy Piglins",
+      "version": "neoforge-1.1.7+26.1.2",
+      "jar": "easy-piglins-neoforge-1.1.7+26.1.2.jar",
+      "curseforge_id": 419372,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/easy-piglins"
+    },
+    {
+      "name": "Easy Villagers",
+      "version": "neoforge-1.1.42+26.1.2",
+      "jar": "easy-villagers-neoforge-1.1.42+26.1.2.jar",
+      "curseforge_id": 400514,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/easy-villagers"
+    },
+    {
+      "name": "Ex Deorum",
+      "version": "4.0",
+      "jar": "exdeorum-4.0.jar",
+      "curseforge_id": 901420,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ex-deorum"
+    },
+    {
+      "name": "Farming for Blockheads",
+      "version": "26.1.2.1",
+      "jar": "farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar",
+      "curseforge_id": 261924,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/farming-for-blockheads"
+    },
+    {
+      "name": "FTB Chunks (NeoForge)",
+      "version": "chunks-neoforge-26.1.2.6",
+      "jar": "ftb-chunks-neoforge-26.1.2.6.jar",
+      "curseforge_id": 314906,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge"
+    },
+    {
+      "name": "FTB Essentials (Forge & Fabric)",
+      "version": "essentials-neoforge-26.1.2.4",
+      "jar": "ftb-essentials-neoforge-26.1.2.4.jar",
+      "curseforge_id": 410811,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-essentials"
+    },
+    {
+      "name": "FTB Library (NeoForge)",
+      "version": "library-neoforge-26.1.2.6",
+      "jar": "ftb-library-neoforge-26.1.2.6.jar",
+      "curseforge_id": 404465,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge"
+    },
+    {
+      "name": "FTB Quests (NeoForge)",
+      "version": "quests-neoforge-26.1.2.2",
+      "jar": "ftb-quests-neoforge-26.1.2.2.jar",
+      "curseforge_id": 289412,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge"
+    },
+    {
+      "name": "FTB Teams (NeoForge)",
+      "version": "teams-neoforge-26.1.2.4",
+      "jar": "ftb-teams-neoforge-26.1.2.4.jar",
+      "curseforge_id": 404468,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge"
+    },
+    {
+      "name": "Gateways to Eternity",
+      "version": "26.1.2-6.0.1",
+      "jar": "GatewaysToEternity-26.1.2-6.0.1.jar",
+      "curseforge_id": 417802,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity"
+    },
+    {
+      "name": "GuideME",
+      "version": "26.1.12-beta",
+      "jar": "guideme-26.1.12-beta.jar",
+      "curseforge_id": 1173950,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/guideme"
+    },
+    {
+      "name": "Haven Skyblock Builder",
+      "version": "26.1.2-0.2.0",
+      "jar": "HavenSkyblockBuilder-26.1.2-0.2.0.jar",
+      "curseforge_id": 1179600,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/haven-skyblock-builder"
+    },
+    {
+      "name": "Iron Furnaces (Fabric & NeoForge)",
+      "version": "26.1-1.1.0",
+      "jar": "ironfurnacesneoforge-26.1-1.1.0.jar",
+      "curseforge_id": 1506700,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/iron-furnaces-fabric-neoforge"
+    },
+    {
+      "name": "Jade \ud83d\udd0d",
+      "version": "NeoForge-26.1.7",
+      "jar": "Jade-mc26.1-NeoForge-26.1.7.jar",
+      "curseforge_id": 324717,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/jade"
+    },
+    {
+      "name": "JourneyMap",
+      "version": "6.0.0",
+      "jar": "journeymap-neoforge-26.1.2-6.0.0.jar",
+      "curseforge_id": 32274,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/journeymap"
+    },
+    {
+      "name": "Just Enough Items (JEI)",
+      "version": "26.1.2-neoforge-29.6.2.38",
+      "jar": "jei-26.1.2-neoforge-29.6.2.38.jar",
+      "curseforge_id": 238222,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/jei"
+    },
+    {
+      "name": "Just Enough Resources (JER)",
+      "version": "1.10.0.35",
+      "jar": "JustEnoughResources-NeoForge-26.1.2-1.10.0.35.jar",
+      "curseforge_id": 240630,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer"
+    },
+    {
+      "name": "KubeJS",
+      "version": "8.0.3",
+      "jar": "kubejs-neoforge-26.1.2-8.0.3.jar",
+      "curseforge_id": 238086,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs"
+    },
+    {
+      "name": "Mouse Tweaks",
+      "version": "2.31",
+      "jar": "MouseTweaks-neoforge-mc26.1-2.31.jar",
+      "curseforge_id": 60089,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks"
+    },
+    {
+      "name": "Mystical Agradditions",
+      "version": "26.1.2-9.0.0",
+      "jar": "MysticalAgradditions-26.1.2-9.0.0.jar",
+      "curseforge_id": 256247,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions"
+    },
+    {
+      "name": "Mystical Agriculture",
+      "version": "26.1.2-9.0.3",
+      "jar": "MysticalAgriculture-26.1.2-9.0.3.jar",
+      "curseforge_id": 246640,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture"
+    },
+    {
+      "name": "Mystical Agriculture Tiered Crystals",
+      "version": "1.8.0",
+      "jar": "matc-1.8.0.jar",
+      "curseforge_id": 299045,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture-tiered-crystals"
+    },
+    {
+      "name": "Mystical Automation",
+      "version": "26.1.2-2.0.6",
+      "jar": "MysticalAutomation-26.1.2-2.0.6.jar",
+      "curseforge_id": 1265613,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-automation"
+    },
+    {
+      "name": "Neat",
+      "version": "26.1.2-48-NEOFORGE",
+      "jar": "Neat-26.1.2-48-NEOFORGE.jar",
+      "curseforge_id": 238372,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/neat"
+    },
+    {
+      "name": "OpenBlocks Elevator",
+      "version": "1.16.2",
+      "jar": "elevatorid-neoforge-26.1-1.16.2.jar",
+      "curseforge_id": 250832,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/openblocks-elevator"
+    },
+    {
+      "name": "Placebo",
+      "version": "26.1.2-10.0.1",
+      "jar": "Placebo-26.1.2-10.0.1.jar",
+      "curseforge_id": 283644,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/placebo"
+    },
+    {
+      "name": "Powah! (Rearchitected)",
+      "version": "7.0.4-alpha",
+      "jar": "Powah-7.0.4-alpha.jar",
+      "curseforge_id": 633483,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected"
+    },
+    {
+      "name": "Reap Mod",
+      "version": "neoforge-1.1.4+26.1.2",
+      "jar": "reap-neoforge-1.1.4+26.1.2.jar",
+      "curseforge_id": 244256,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/reap-mod"
+    },
+    {
+      "name": "Refined Storage",
+      "version": "neoforge-3.2.1",
+      "jar": "refinedstorage-neoforge-3.2.1.jar",
+      "curseforge_id": 243076,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/refined-storage"
+    },
+    {
+      "name": "Refined Storage - JEI Integration",
+      "version": "jei-integration-neoforge-2.0.1",
+      "jar": "refinedstorage-jei-integration-neoforge-2.0.1.jar",
+      "curseforge_id": 1230497,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/refined-storage-jei-integration"
+    },
+    {
+      "name": "Rhino",
+      "version": "2101.2.7-build.85",
+      "jar": "rhino-2101.2.7-build.85.jar",
+      "curseforge_id": 416294,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/rhino"
+    },
+    {
+      "name": "Simplest Paxels",
+      "version": "26.1-1.0.6",
+      "jar": "simplest_paxels-26.1-1.0.6.jar",
+      "curseforge_id": 983683,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/simplest-paxels"
+    },
+    {
+      "name": "Sophisticated Backpacks",
+      "version": "26.1.2-3.25.74.1932",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.74.1932.jar",
+      "curseforge_id": 422301,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
+    },
+    {
+      "name": "Sophisticated Core",
+      "version": "26.1.2-1.4.73.2061",
+      "jar": "sophisticatedcore-26.1.2-1.4.73.2061.jar",
+      "curseforge_id": 618298,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
+    },
+    {
+      "name": "Sophisticated Storage",
+      "version": "26.1.2-1.5.81.1883",
+      "jar": "sophisticatedstorage-26.1.2-1.5.81.1883.jar",
+      "curseforge_id": 619320,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
+    }
+  ]
+}

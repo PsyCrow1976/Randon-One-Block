@@ -6,6 +6,17 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.3] — 2026-06-26
+
+Mod inventory tracking for the playtest instance.
+
+### Documentation
+
+- **`modlist.md`** — Full list of installed mods with versions (47 mods, Minecraft 26.1.2 / NeoForge 26.1.2.76).
+- **`update-modlist.sh`** — Refreshes the list from the CurseForge instance and can print added/removed/updated mods for the changelog.
+
+---
+
 ## [1.0.0.2] — 2026-06-26
 
 New mod intro chapter and a Gateways to Eternity starter quest.
