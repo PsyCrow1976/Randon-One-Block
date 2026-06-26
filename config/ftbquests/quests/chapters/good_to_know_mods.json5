@@ -1,0 +1,55 @@
+{
+  id: "A84C61ACEE3614C8",
+  group: "",
+  order_index: 1,
+  icon: {
+    id: "gateways:gate_pearl",
+    count: 1,
+    components: {
+      "gateways:gateway": "gateways:emerald_grove",
+    },
+  },
+  filename: "good_to_know_mods",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "gateways:gate_pearl",
+        count: 1,
+        components: {
+          "gateways:gateway": "gateways:emerald_grove",
+        },
+      },
+      x: 0.0,
+      y: 0.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "90FC2550D77F558C",
+      tasks: [
+        {
+          id: "A1C14C0CBAC67803",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "44AC07782A18CF80",
+          type: "item",
+          item: {
+            id: "gateways:gate_pearl",
+            count: 1,
+            components: {
+              "gateways:gateway": "gateways:emerald_grove",
+            },
+          },
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

@@ -6,6 +6,17 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.2] — 2026-06-26
+
+New mod intro chapter and a Gateways to Eternity starter quest.
+
+### Quests
+
+- **Good to Know Mods chapter** — New chapter directly under *Getting started* for short mod introductions.
+- **gateway to eternity** — Checkmark quest explaining Gateways to Eternity; reward is a Gateway of the Emerald Grove Gate Pearl (summons passive farm animals when completed).
+
+---
+
 ## [1.0.0.1] — 2026-06-24
 
 Quest book polish and a player-friendly way to reset stuck random blocks.
