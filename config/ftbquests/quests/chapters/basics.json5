@@ -1,0 +1,45 @@
+{
+  id: "A3B8C2D1E4F56789",
+  group: "",
+  order_index: 1,
+  icon: {
+    id: "minecraft:crafting_table",
+    count: 1,
+  },
+  filename: "basics",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "minecraft:crafting_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "B4C9D3E2F5A67890",
+      dependencies: ["54426B5BBE263DB4"],
+      tasks: [
+        {
+          id: "C5D0E4F3A6B78901",
+          type: "item",
+          item: {
+            id: "minecraft:crafting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D6E1F5A4B7C89012",
+          type: "xp",
+          xp: 250,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

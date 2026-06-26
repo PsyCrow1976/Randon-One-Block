@@ -26,6 +26,7 @@ First playable release.
 
 - **First quest chapter** — *Getting started* is in the quest book with a welcome quest to complete.
 - **Starter reward** — Finish the welcome quest to receive a stone paxel.
+- **Basics chapter** — Craft a crafting table (detected when you obtain one); reward is experience.
 - **Quest book on join** — The FTB Quest book is placed in your hotbar when you first log in.
 
 ### For server owners
