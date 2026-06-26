@@ -1,13 +1,12 @@
 {
 	"quest.54426B5BBE263DB4.title": "Welcome to Modded Random OneBlock",
 	"task.1A4C7E9B0D2F3865.title": "Read the welcome message",
-	"quest.E8F3A2B1C4D50697.title": "Stuck block? Reset to dirt",
-	"quest.E8F3A2B1C4D50697.quest_subtitle": "Can't break the random block?",
+	"quest.E8F3A2B1C4D50697.title": "Cant mine the block?",
 	"quest.E8F3A2B1C4D50697.quest_desc": [
-		"If the random block rolled something you cannot mine, use this quest to reset it back to dirt.",
+		"Check the task and claim the reward to reset your random block back to dirt.",
 		"",
-		"Check the box and claim the reward — the pack runs §f/randomblock revert §rfor you (no operator command needed)."
+		"You can repeat this quest whenever you get a block you cannot break."
 	],
-	"task.F9A4B3C2D5E60781.title": "Reset my random block to dirt",
+	"task.F9A4B3C2D5E60781.title": "cant mine the block in front of you.. remove it with this chapter reward",
 	"reward.A0B5C4D3E6F71892.title": "Revert random block"
 }

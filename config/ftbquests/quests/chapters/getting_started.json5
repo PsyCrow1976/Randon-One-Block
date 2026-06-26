@@ -37,12 +37,13 @@
     },
     {
       icon: {
-        id: "minecraft:dirt",
+        id: "minecraft:bedrock",
         count: 1,
       },
       x: 0.0,
       y: 1.5,
       id: "E8F3A2B1C4D50697",
+      can_repeat: true,
       dependencies: [
         "54426B5BBE263DB4",
       ],
