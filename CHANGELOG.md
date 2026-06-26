@@ -6,6 +6,20 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.4] — 2026-06-26
+
+Five new mods in the playtest instance (52 mods total).
+
+### Mods
+
+- **Added:** Controlling `26.1.2.4`
+- **Added:** FancyMenu `26.1.2`
+- **Added:** Konkrete `neoforge_1.10.1_MC_26.1.1`
+- **Added:** Melody `neoforge_1.0.16_MC_26.1.1`
+- **Added:** Searchables `1.0.2`
+
+---
+
 ## [1.0.0.3] — 2026-06-26
 
 Mod inventory tracking for the playtest instance.

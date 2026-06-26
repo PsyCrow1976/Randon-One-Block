@@ -2,7 +2,7 @@
   "generated": "2026-06-26",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 47,
+  "mod_count": 52,
   "mods": [
     {
       "name": "Apotheosis",
@@ -68,6 +68,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/construction-wand-kots"
     },
     {
+      "name": "Controlling",
+      "version": "26.1.2.4",
+      "jar": "Controlling-neoforge-26.1.2-26.1.2.4.jar",
+      "curseforge_id": 250398,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/controlling"
+    },
+    {
       "name": "Cooking for Blockheads",
       "version": "26.1.2.2",
       "jar": "cookingforblockheads-neoforge-26.1.2-26.1.2.2.jar",
@@ -108,6 +115,13 @@
       "jar": "exdeorum-4.0.jar",
       "curseforge_id": 901420,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ex-deorum"
+    },
+    {
+      "name": "FancyMenu",
+      "version": "26.1.2",
+      "jar": "fancymenu_neoforge_3.9.1_MC_26.1.1-26.1.2.jar",
+      "curseforge_id": 367706,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/fancymenu"
     },
     {
       "name": "Farming for Blockheads",
@@ -208,11 +222,25 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer"
     },
     {
+      "name": "Konkrete",
+      "version": "neoforge_1.10.1_MC_26.1.1",
+      "jar": "konkrete_neoforge_1.10.1_MC_26.1.1.jar",
+      "curseforge_id": 410295,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/konkrete"
+    },
+    {
       "name": "KubeJS",
       "version": "8.0.3",
       "jar": "kubejs-neoforge-26.1.2-8.0.3.jar",
       "curseforge_id": 238086,
       "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs"
+    },
+    {
+      "name": "Melody",
+      "version": "neoforge_1.0.16_MC_26.1.1",
+      "jar": "melody_neoforge_1.0.16_MC_26.1.1.jar",
+      "curseforge_id": 938643,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/melody"
     },
     {
       "name": "Mouse Tweaks",
@@ -304,6 +332,13 @@
       "jar": "rhino-2101.2.7-build.85.jar",
       "curseforge_id": 416294,
       "url": "https://www.curseforge.com/minecraft/mc-mods/rhino"
+    },
+    {
+      "name": "Searchables",
+      "version": "1.0.2",
+      "jar": "Searchables-neoforge-26.1.2-1.0.2.jar",
+      "curseforge_id": 858542,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/searchables"
     },
     {
       "name": "Simplest Paxels",

@@ -1,6 +1,6 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 47
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 52
 
 *Last updated: 2026-06-26*
 
@@ -23,12 +23,14 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
 | Clumps | 26.1.2.1 | `Clumps-neoforge-26.1.2-26.1.2.1.jar` |
 | Construction Wand - KOTS | 26.1.2-2.17.5-fix | `constructionwand-kots-26.1.2-2.17.5-fix.jar` |
+| Controlling | 26.1.2.4 | `Controlling-neoforge-26.1.2-26.1.2.4.jar` |
 | Cooking for Blockheads | 26.1.2.2 | `cookingforblockheads-neoforge-26.1.2-26.1.2.2.jar` |
 | Cucumber Library | 26.1.2-9.0.4 | `Cucumber-26.1.2-9.0.4.jar` |
 | Dank Storage | 0 | `dankstorage-neoforge-26.1-0.jar` |
 | Easy Piglins | neoforge-1.1.7+26.1.2 | `easy-piglins-neoforge-1.1.7+26.1.2.jar` |
 | Easy Villagers | neoforge-1.1.42+26.1.2 | `easy-villagers-neoforge-1.1.42+26.1.2.jar` |
 | Ex Deorum | 4.0 | `exdeorum-4.0.jar` |
+| FancyMenu | 26.1.2 | `fancymenu_neoforge_3.9.1_MC_26.1.1-26.1.2.jar` |
 | Farming for Blockheads | 26.1.2.1 | `farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar` |
 | FTB Chunks (NeoForge) | chunks-neoforge-26.1.2.6 | `ftb-chunks-neoforge-26.1.2.6.jar` |
 | FTB Essentials (Forge & Fabric) | essentials-neoforge-26.1.2.4 | `ftb-essentials-neoforge-26.1.2.4.jar` |
@@ -43,7 +45,9 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | JourneyMap | 6.0.0 | `journeymap-neoforge-26.1.2-6.0.0.jar` |
 | Just Enough Items (JEI) | 26.1.2-neoforge-29.6.2.38 | `jei-26.1.2-neoforge-29.6.2.38.jar` |
 | Just Enough Resources (JER) | 1.10.0.35 | `JustEnoughResources-NeoForge-26.1.2-1.10.0.35.jar` |
+| Konkrete | neoforge_1.10.1_MC_26.1.1 | `konkrete_neoforge_1.10.1_MC_26.1.1.jar` |
 | KubeJS | 8.0.3 | `kubejs-neoforge-26.1.2-8.0.3.jar` |
+| Melody | neoforge_1.0.16_MC_26.1.1 | `melody_neoforge_1.0.16_MC_26.1.1.jar` |
 | Mouse Tweaks | 2.31 | `MouseTweaks-neoforge-mc26.1-2.31.jar` |
 | Mystical Agradditions | 26.1.2-9.0.0 | `MysticalAgradditions-26.1.2-9.0.0.jar` |
 | Mystical Agriculture | 26.1.2-9.0.3 | `MysticalAgriculture-26.1.2-9.0.3.jar` |
@@ -57,6 +61,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Refined Storage | neoforge-3.2.1 | `refinedstorage-neoforge-3.2.1.jar` |
 | Refined Storage - JEI Integration | jei-integration-neoforge-2.0.1 | `refinedstorage-jei-integration-neoforge-2.0.1.jar` |
 | Rhino | 2101.2.7-build.85 | `rhino-2101.2.7-build.85.jar` |
+| Searchables | 1.0.2 | `Searchables-neoforge-26.1.2-1.0.2.jar` |
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sophisticated Backpacks | 26.1.2-3.25.74.1932 | `sophisticatedbackpacks-26.1.2-3.25.74.1932.jar` |
 | Sophisticated Core | 26.1.2-1.4.73.2061 | `sophisticatedcore-26.1.2-1.4.73.2061.jar` |
