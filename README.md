@@ -287,11 +287,77 @@ Restore symlinks after reinstalling the instance:
 
 **Logs:** `<instance>/logs/kubejs/server.log` (KubeJS) and `latest.log` (full game log).
 
-Mods, saves, logs, and jars stay in the CurseForge instance folder (not fully tracked in git).
+Mods, saves, logs, and jars stay in the CurseForge instance folder (not fully tracked in git). The **mod list** in the repo is the exception — it records which jars are installed and at what version.
 
-## Installed mods (playtest instance)
+## Installed mods & `update-modlist.sh`
 
-Full mod names and versions: [`modlist.md`](modlist.md) (47 mods as of last refresh). After changing mods in CurseForge, run `./update-modlist.sh` to refresh the list; use `./update-modlist.sh --changelog` for bullets to paste into `CHANGELOG.md`.
+The playtest instance mods folder is not version-controlled, but the pack keeps a snapshot of installed mods in the repo:
+
+| File | Purpose |
+|------|---------|
+| [`modlist.md`](modlist.md) | Human-readable table — mod name, version, jar filename |
+| [`modlist.json`](modlist.json) | Machine-readable snapshot used to detect changes on refresh |
+| [`update-modlist.sh`](update-modlist.sh) | Script that reads the CurseForge instance and updates both files |
+
+Data is pulled from `minecraftinstance.json` in the playtest instance (falls back to scanning `mods/*.jar` if that file is missing). Mod **names** come from CurseForge metadata; **versions** are parsed from the installed jar filename.
+
+### Refresh the mod list
+
+After you add, remove, or update mods in the CurseForge app, run from the repo root:
+
+```bash
+./update-modlist.sh
+```
+
+This rewrites `modlist.md` and `modlist.json` and prints a short summary, for example:
+
+```text
+updated modlist (47 mods) -> modlist.json
+changes: +2 added, -1 removed, ~3 updated
+```
+
+If nothing changed since the last snapshot:
+
+```text
+no mod additions, removals, or version changes
+```
+
+### Changelog bullets
+
+To get markdown lines ready for [`CHANGELOG.md`](CHANGELOG.md):
+
+```bash
+./update-modlist.sh --changelog
+```
+
+When there are changes, this prints a `### Mods` section with bullets such as:
+
+```text
+### Mods
+
+- **Added:** Ex Deorum `4.0`
+- **Removed:** Old Mod `1.0.0`
+- **Updated:** JEI `29.6.2.38` → `29.6.3.1`
+```
+
+Copy those lines into a new release section in `CHANGELOG.md`. The script only **prints** changelog text — it does not edit `CHANGELOG.md` automatically.
+
+### Custom instance path
+
+By default the script uses the standard playtest instance path. To point at a different folder:
+
+```bash
+MODLIST_INSTANCE="/path/to/instance" ./update-modlist.sh
+```
+
+### Typical workflow
+
+1. Install or update mods in CurseForge (playtest instance).
+2. Run `./update-modlist.sh --changelog`.
+3. Paste the printed mod bullets into `CHANGELOG.md` under a new version heading.
+4. Commit `modlist.md`, `modlist.json`, and `CHANGELOG.md` together.
+
+Current inventory: see [`modlist.md`](modlist.md) (47 mods, Minecraft 26.1.2 / NeoForge 26.1.2.76 as of last refresh).
 
 ## Status
 
