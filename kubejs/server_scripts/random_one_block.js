@@ -11,6 +11,9 @@ const $Integer = Java.loadClass('java.lang.Integer')
 const $ArrayList = Java.loadClass('java.util.ArrayList')
 const $Random = Java.loadClass('java.util.Random')
 const $TeamManager = Java.tryLoadClass('net.cathienova.haven_skyblock_builder.team.TeamManager')
+const $EmptyBlockGetter = Java.tryLoadClass('net.minecraft.world.level.EmptyBlockGetter')
+const $BlockPos = Java.tryLoadClass('net.minecraft.core.BlockPos')
+const $CollisionContext = Java.tryLoadClass('net.minecraft.world.phys.shapes.CollisionContext')
 
 const AUTO_SETBELOW_POLL_INTERVAL = 5
 const AUTO_SETBELOW_DEBUG_INTERVAL = 100
@@ -52,6 +55,8 @@ const DEFAULT_CONFIG = {
   auto_setbelow_delay_ticks: 40,
   haven_island_distance: 8192,
   debug_logging: false,
+  require_full_collision_cube: true,
+  collision_min_aabb_size: 1,
   island_center_surround: 'minecraft:grass_block',
   active_block: {
     enabled: false,
@@ -260,7 +265,92 @@ function blockFromId(registry, id) {
   return null
 }
 
-function addBlockToPool(poolById, id, block, config) {
+function isCollisionFilterEnabled(config) {
+  return config != null && config.require_full_collision_cube !== false
+}
+
+function collisionFilterReady() {
+  return $EmptyBlockGetter != null && $BlockPos != null && $CollisionContext != null
+}
+
+function getCollisionMinAabbSize(config) {
+  var minSize = Number(config != null ? config.collision_min_aabb_size : 1)
+  if (Number.isNaN(minSize) || minSize <= 0) return 1
+  return minSize
+}
+
+function readAabbSize(aabb, minSize) {
+  if (aabb == null) return 0
+
+  try {
+    if (aabb.size !== undefined && aabb.size !== null) {
+      return Number(aabb.size)
+    }
+  } catch (ignored) {}
+
+  try {
+    var xs = Number(aabb.getXsize())
+    var ys = Number(aabb.getYsize())
+    var zs = Number(aabb.getZsize())
+    if (Number.isNaN(xs) || Number.isNaN(ys) || Number.isNaN(zs)) return 0
+    if (xs < minSize || ys < minSize || zs < minSize) return 0
+    return minSize
+  } catch (ignored2) {}
+
+  return 0
+}
+
+function blockCollisionShape(block) {
+  var resolved = unwrapRegistryEntry(block)
+  if (!resolved || !resolved.defaultBlockState) return null
+
+  var state = resolved.defaultBlockState()
+  var emptyGetter = $EmptyBlockGetter.INSTANCE
+  var zeroPos = $BlockPos.ZERO
+  var emptyContext = $CollisionContext.empty()
+  var shape = null
+
+  try {
+    shape = state.getCollisionShape(emptyGetter, zeroPos, emptyContext)
+  } catch (ignored) {}
+
+  if (!shape) {
+    try {
+      shape = state.getCollisionShape(emptyGetter, zeroPos)
+    } catch (ignored2) {}
+  }
+
+  return shape
+}
+
+function isFullCollisionCube(block, config) {
+  if (!isCollisionFilterEnabled(config)) return true
+  if (!collisionFilterReady()) return true
+
+  var minSize = getCollisionMinAabbSize(config)
+
+  try {
+    var shape = blockCollisionShape(block)
+    if (!shape) return false
+
+    var aabbs = shape.toAabbs()
+    if (!aabbs || aabbs.isEmpty()) return false
+
+    return readAabbSize(aabbs.get(0), minSize) >= minSize
+  } catch (ignored) {
+    return false
+  }
+}
+
+function recordCollisionReject(rebuildStats, id) {
+  if (!rebuildStats) return
+  rebuildStats.collisionRejected++
+  if (rebuildStats.collisionRejectSample.length < 15) {
+    rebuildStats.collisionRejectSample.push(id)
+  }
+}
+
+function addBlockToPool(poolById, id, block, config, rebuildStats) {
   if (!id || id === 'unknown:block') return 0
   if (!block || !block.defaultBlockState) return 0
   if (isBlacklisted(id, config)) return 0
@@ -268,6 +358,11 @@ function addBlockToPool(poolById, id, block, config) {
   const state = block.defaultBlockState()
   if (state.isAir()) return 0
   if (block instanceof $LiquidBlock) return 0
+
+  if (!isFullCollisionCube(block, config)) {
+    recordCollisionReject(rebuildStats, id)
+    return 0
+  }
 
   const weight = getWeight(id, config)
   if (!(weight > 0)) return 0
@@ -299,6 +394,16 @@ function rebuildPool() {
   var pool = []
   var samples = []
   var poolId = null
+  var rebuildStats = {
+    collisionRejected: 0,
+    collisionRejectSample: []
+  }
+
+  if (isCollisionFilterEnabled(config) && !collisionFilterReady()) {
+    console.warn(
+      '[RandomOneBlock] require_full_collision_cube is enabled but collision classes are unavailable — skipping collision filter'
+    )
+  }
 
   while (keyIterator.hasNext()) {
     registryKeyList.add(keyIterator.next())
@@ -313,7 +418,7 @@ function rebuildPool() {
     block = resolveRegistryBlock(registry, key)
     if (!block) block = blockFromId(registry, id)
 
-    totalWeight += addBlockToPool(poolById, id, block, config)
+    totalWeight += addBlockToPool(poolById, id, block, config, rebuildStats)
   }
 
   for (poolId in poolById) {
@@ -329,9 +434,20 @@ function rebuildPool() {
 
   STATE.pool = pool
   STATE.totalWeight = Math.max(1, Math.floor(totalWeight))
-  console.info(
-    `[RandomOneBlock] Block pool ready: ${pool.length} unique blocks, total weight ${STATE.totalWeight}`
-  )
+  if (isCollisionFilterEnabled(config) && collisionFilterReady()) {
+    console.info(
+      `[RandomOneBlock] Block pool ready: ${pool.length} unique blocks, total weight ${STATE.totalWeight} (collision rejected: ${rebuildStats.collisionRejected})`
+    )
+    if (rebuildStats.collisionRejectSample.length > 0) {
+      debugLog(
+        `[RandomOneBlock] Collision reject sample: ${rebuildStats.collisionRejectSample.join(', ')}`
+      )
+    }
+  } else {
+    console.info(
+      `[RandomOneBlock] Block pool ready: ${pool.length} unique blocks, total weight ${STATE.totalWeight}`
+    )
+  }
 
   for (i = 0; i < Math.min(5, pool.length); i++) {
     samples.push(pool[i].id)

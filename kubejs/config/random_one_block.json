@@ -3,6 +3,8 @@
 
   "_how_weights_work": "Every eligible block gets a weight. Default is default_weight (1). weight_overrides sets per-block weights. Higher weight = more likely. Example: crafting_table at 3 and default 1 means crafting_table is 3x as likely as a normal block. Set weight to 0 in overrides to exclude a block without using blacklist. Total chance for one block = its_weight / sum_of_all_weights.",
 
+  "_collision_filter": "When require_full_collision_cube is true, only blocks whose default collision box is a full 1x1x1 cube are added to the pool (crops, flowers, rails, pots, etc. are excluded). Set require_full_collision_cube to false to restore the old all-blocks behavior.",
+
   "default_weight": 1,
 
   "weight_overrides": {
@@ -48,6 +50,10 @@
   "haven_island_distance": 8192,
 
   "debug_logging": false,
+
+  "require_full_collision_cube": true,
+
+  "collision_min_aabb_size": 1,
 
   "island_center_surround": "minecraft:grass_block",
 

@@ -6,6 +6,16 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.5] — 2026-06-26
+
+Random block pool now excludes partial blocks (crops, flowers, rails, pots, etc.).
+
+### Random One Block
+
+- **Collision filter** — Pool build only keeps blocks with a full 1×1×1 collision cube (Chaos OneBlock-style geometry check). Toggle with `require_full_collision_cube` in `kubejs/config/random_one_block.json`.
+
+---
+
 ## [1.0.0.4] — 2026-06-26
 
 Five new mods in the playtest instance (52 mods total).
