@@ -42,20 +42,20 @@
       },
       x: 0.0,
       y: 1.5,
-      id: "E8F3A2B1C4D50697",
-      can_repeat: true,
       dependencies: [
         "54426B5BBE263DB4",
       ],
+      can_repeat: true,
+      id: "7A5DE9240428A708",
       tasks: [
         {
-          id: "F9A4B3C2D5E60781",
+          id: "68102B3B6DBD2C07",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "A0B5C4D3E6F71892",
+          id: "7CF0D8878C532CD0",
           type: "command",
           command: "randomblock revert",
           player_command: false,

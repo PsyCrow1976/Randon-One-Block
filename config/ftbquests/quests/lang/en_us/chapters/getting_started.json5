@@ -1,12 +1,7 @@
 {
 	"quest.54426B5BBE263DB4.title": "Welcome to Modded Random OneBlock",
 	"task.1A4C7E9B0D2F3865.title": "Read the welcome message",
-	"quest.E8F3A2B1C4D50697.title": "Cant mine the block?",
-	"quest.E8F3A2B1C4D50697.quest_desc": [
-		"Check the task and claim the reward to reset your random block back to dirt.",
-		"",
-		"You can repeat this quest whenever you get a block you cannot break."
-	],
-	"task.F9A4B3C2D5E60781.title": "cant mine the block in front of you.. remove it with this chapter reward",
-	"reward.A0B5C4D3E6F71892.title": "Revert random block"
+	"quest.7A5DE9240428A708.title": "Cant mine the block?",
+	"task.68102B3B6DBD2C07.title": "cant mine the block in front of you.. remove it with this chapter reward",
+	"reward.7CF0D8878C532CD0.title": "Revert random block"
 }
