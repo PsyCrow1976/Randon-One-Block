@@ -1,12 +1,12 @@
 {
-	"quest.90FC2550D77F558C.title": "gateway to eternity",
-	"quest.90FC2550D77F558C.quest_desc": [
+	"quest.1B88CD62B3AA33C6.title": "gateway to eternity",
+	"quest.1B88CD62B3AA33C6.quest_desc": [
 		"Gateways to Eternity adds Gate Pearls that summon wave-based Gateways when used on a block.",
 		"",
 		"Defeat each wave before the timer runs out. Rewards spawn from the Gateway as you earn them. The gateway fails if mobs cannot spawn, wander too far away, or the wave timer expires.",
 		"",
 		"Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity"
 	],
-	"task.A1C14C0CBAC67803.title": "Read about Gateways to Eternity",
+	"task.7A242E28CD3A3800.title": "Read about Gateways to Eternity",
 	"reward.44AC07782A18CF80.title": "Gateway of the Emerald Grove"
 }
