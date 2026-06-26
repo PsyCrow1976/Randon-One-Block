@@ -2,9 +2,11 @@
 
 A modded Minecraft **skyblock** server modpack where players start on template-based islands and progress through varied modded content over time.
 
+**Heavily inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)** — the core idea of mining one block and receiving a random modpack block comes directly from that pack. Modded Random OneBlock is a separate project (different mod list, Haven Skyblock islands, FTB Quests, and its own KubeJS scripts), but Chaos OneBlock is the main reference for the random-block skyblock loop.
+
 ## Overview
 
-**Modded Random OneBlock** combines content and mechanics from many modded Minecraft modpacks into one playthrough. The pack blends tech, magic, storage, and farming mods on Haven Skyblock islands, with **FTB Quests** for progression and a **KubeJS random block generator** as the central resource mechanic.
+**Modded Random OneBlock** combines content and mechanics from many modded Minecraft modpacks into one playthrough. The pack blends tech, magic, storage, and farming mods on Haven Skyblock islands, with **FTB Quests** for progression and a **KubeJS random block generator** as the central resource mechanic — adapted from the approach used in [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock).
 
 ### Core systems
 
@@ -14,6 +16,16 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
 | Quest book & progression | **FTB Quests** (`ftbquests`) | In-game quest book; chapters, tasks, and rewards |
 | FTB support | FTB Library, FTB Teams, FTB Chunks, FTB Essentials | Shared FTB infrastructure (claims, teams, utilities) |
 | Pack scripting | **KubeJS** (`kubejs` 8.0.3) | Random One Block mechanic, future recipes/integrations |
+
+### Inspired by Chaos OneBlock
+
+| | |
+|--|--|
+| **Source pack** | [Chaos OneBlock on CurseForge](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock) |
+| **What we took from it** | One-block skyblock loop: mine a single block → random modded block appears in its place |
+| **What is different here** | Haven Skyblock team islands, weighted block pool, collision filter (full cubes only), FTB Quest book, auto `setbelow` on island create, and this repo’s own mod selection |
+
+If you enjoy this pack, play the original too — [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock) is where the random-block oneblock concept clicked for this project.
 
 **What's new?** See [`CHANGELOG.md`](CHANGELOG.md) for release notes in plain language.
 
@@ -134,7 +146,7 @@ Related configs: `config/ftbquests-client.json5`, `config/ftbteams-server.json5`
 
 ## Core mechanic: Random One Block (KubeJS)
 
-Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces it with a weighted random block from every eligible block in the modpack (~2100+ blocks).
+Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces it with a weighted random block from every eligible full-cube block in the modpack. The loop is **heavily inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)**; this implementation adds a weighted pool, Haven island integration, and a collision-shape filter so crops, pots, and other partial blocks are not rolled (see `require_full_collision_cube` in config).
 
 | Setting | Location |
 |---------|----------|
@@ -154,6 +166,8 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 | `auto_setbelow_delay_ticks` | `40` | Ticks to wait after island spawn before auto setbelow (~2 s at 20 TPS; lets teleport finish) |
 | `haven_island_distance` | `8192` | Haven grid spacing (used for debug / fallback center math) |
 | `debug_logging` | `false` | Verbose KubeJS log output (pool preview, auto setbelow trace, watcher startup) |
+| `require_full_collision_cube` | `true` | Only full 1×1×1 collision blocks in pool (Chaos OneBlock-style; excludes crops, rails, pots, etc.) |
+| `collision_min_aabb_size` | `1` | Minimum collision box size when `require_full_collision_cube` is on |
 | `initial_block` | `minecraft:dirt` | Block players mine / restored after falling blocks |
 | `foundation_block` | `minecraft:bedrock` | Under center dirt in template (not overwritten on register) |
 
