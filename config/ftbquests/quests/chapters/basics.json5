@@ -1,5 +1,5 @@
 {
-  id: "A3B8C2D1E4F56789",
+  id: "02482B0A2AAED9D8",
   group: "",
   order_index: 1,
   icon: {
@@ -17,11 +17,13 @@
       },
       x: 0.0,
       y: 0.0,
-      id: "B4C9D3E2F5A67890",
-      dependencies: ["54426B5BBE263DB4"],
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "4137D6CD3FC01F40",
       tasks: [
         {
-          id: "C5D0E4F3A6B78901",
+          id: "33E107AC2A3D7A05",
           type: "item",
           item: {
             id: "minecraft:crafting_table",
@@ -31,9 +33,9 @@
       ],
       rewards: [
         {
-          id: "D6E1F5A4B7C89012",
+          id: "0070252A5E056B87",
           type: "xp",
-          xp: 250,
+          xp: 10,
         },
       ],
     },

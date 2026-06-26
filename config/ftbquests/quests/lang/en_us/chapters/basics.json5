@@ -1,10 +1,10 @@
 {
-	"quest.B4C9D3E2F5A67890.title": "Craft a Crafting Table",
-	"quest.B4C9D3E2F5A67890.quest_subtitle": "Your first workbench",
-	"quest.B4C9D3E2F5A67890.quest_desc": [
+	"quest.4137D6CD3FC01F40.title": "Craft a Crafting Table",
+	"quest.4137D6CD3FC01F40.quest_subtitle": "Your first workbench",
+	"quest.4137D6CD3FC01F40.quest_desc": [
 		"Gather wood from your random blocks and craft a crafting table.",
 		"",
 		"The quest completes when a crafting table is in your inventory."
 	],
-	"task.C5D0E4F3A6B78901.title": "Obtain a Crafting Table"
+	"task.33E107AC2A3D7A05.title": "Obtain a Crafting Table"
 }
