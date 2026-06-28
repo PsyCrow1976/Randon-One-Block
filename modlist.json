@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-27",
+  "generated": "2026-06-28",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 67,
+  "mod_count": 72,
   "mods": [
     {
       "name": "Apotheosis",
@@ -73,6 +73,13 @@
       "jar": "colorfulhearts-neoforge-26.1.2-26.1.2.0.jar",
       "curseforge_id": 854213,
       "url": "https://www.curseforge.com/minecraft/mc-mods/colorful-hearts"
+    },
+    {
+      "name": "Common Network",
+      "version": "networking-neoforge-1.0.23-26.1.2",
+      "jar": "common-networking-neoforge-1.0.23-26.1.2.jar",
+      "curseforge_id": 806044,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/common-network"
     },
     {
       "name": "Construction Sticks",
@@ -215,6 +222,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge"
     },
     {
+      "name": "Fzzy Config",
+      "version": "0.7.6+26.1+neoforge",
+      "jar": "fzzy_config-0.7.6+26.1+neoforge.jar",
+      "curseforge_id": 1005914,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/fzzy-config"
+    },
+    {
       "name": "Gateways to Eternity",
       "version": "26.1.2-6.0.1",
       "jar": "GatewaysToEternity-26.1.2-6.0.1.jar",
@@ -251,8 +265,8 @@
     },
     {
       "name": "Jade \ud83d\udd0d",
-      "version": "NeoForge-26.1.7",
-      "jar": "Jade-mc26.1-NeoForge-26.1.7.jar",
+      "version": "NeoForge-26.1.8",
+      "jar": "Jade-mc26.1-NeoForge-26.1.8.jar",
       "curseforge_id": 324717,
       "url": "https://www.curseforge.com/minecraft/mc-mods/jade"
     },
@@ -283,6 +297,13 @@
       "jar": "konkrete_neoforge_1.10.1_MC_26.1.1.jar",
       "curseforge_id": 410295,
       "url": "https://www.curseforge.com/minecraft/mc-mods/konkrete"
+    },
+    {
+      "name": "Kotlin for Forge",
+      "version": "6.2.0-all",
+      "jar": "kotlinforforge-6.2.0-all.jar",
+      "curseforge_id": 351264,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge"
     },
     {
       "name": "KubeJS",
@@ -353,6 +374,13 @@
       "jar": "Neat-26.1.2-48-NEOFORGE.jar",
       "curseforge_id": 238372,
       "url": "https://www.curseforge.com/minecraft/mc-mods/neat"
+    },
+    {
+      "name": "Nirvana Library",
+      "version": "2.2.0",
+      "jar": "Nirvana Lib-neoforge-26.1.2-2.2.0.jar",
+      "curseforge_id": 1164411,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/nirvana-library"
     },
     {
       "name": "OpenBlocks Elevator",
@@ -447,17 +475,24 @@
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.73.2061",
-      "jar": "sophisticatedcore-26.1.2-1.4.73.2061.jar",
+      "version": "26.1.2-1.4.74.2074",
+      "jar": "sophisticatedcore-26.1.2-1.4.74.2074.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.81.1883",
-      "jar": "sophisticatedstorage-26.1.2-1.5.81.1883.jar",
+      "version": "26.1.2-1.5.82.1891",
+      "jar": "sophisticatedstorage-26.1.2-1.5.82.1891.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
+    },
+    {
+      "name": "The Uncrafting Table",
+      "version": "0.0.1",
+      "jar": "uncraftingtable-0.0.1.jar",
+      "curseforge_id": 1590819,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/the-uncrafting-table"
     },
     {
       "name": "Time in a Bottle",

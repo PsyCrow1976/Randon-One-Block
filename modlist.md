@@ -1,8 +1,8 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 67
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 72
 
-*Last updated: 2026-06-27*
+*Last updated: 2026-06-28*
 
 Canonical source for installed mods in the CurseForge playtest instance. To refresh after adding, removing, or updating mods, run:
 
@@ -24,6 +24,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
 | Clumps | 26.1.2.1 | `Clumps-neoforge-26.1.2-26.1.2.1.jar` |
 | Colorful Hearts | 26.1.2.0 | `colorfulhearts-neoforge-26.1.2-26.1.2.0.jar` |
+| Common Network | networking-neoforge-1.0.23-26.1.2 | `common-networking-neoforge-1.0.23-26.1.2.jar` |
 | Construction Sticks | 26.1.2-3.1.3 | `ConstructionSticks-26.1.2-3.1.3.jar` |
 | Construction Wand - KOTS | 26.1.2-2.17.5-fix | `constructionwand-kots-26.1.2-2.17.5-fix.jar` |
 | Controlling | 26.1.2.4 | `Controlling-neoforge-26.1.2-26.1.2.4.jar` |
@@ -44,16 +45,18 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | FTB Library (NeoForge) | library-neoforge-26.1.2.6 | `ftb-library-neoforge-26.1.2.6.jar` |
 | FTB Quests (NeoForge) | quests-neoforge-26.1.2.2 | `ftb-quests-neoforge-26.1.2.2.jar` |
 | FTB Teams (NeoForge) | teams-neoforge-26.1.2.4 | `ftb-teams-neoforge-26.1.2.4.jar` |
+| Fzzy Config | 0.7.6+26.1+neoforge | `fzzy_config-0.7.6+26.1+neoforge.jar` |
 | Gateways to Eternity | 26.1.2-6.0.1 | `GatewaysToEternity-26.1.2-6.0.1.jar` |
 | GraveStone Mod | neoforge-1.0.37+26.1.2 | `gravestone-neoforge-1.0.37+26.1.2.jar` |
 | GuideME | 26.1.12-beta | `guideme-26.1.12-beta.jar` |
 | Haven Skyblock Builder | 26.1.2-0.2.0 | `HavenSkyblockBuilder-26.1.2-0.2.0.jar` |
 | Iron Furnaces (Fabric & NeoForge) | 26.1-1.1.0 | `ironfurnacesneoforge-26.1-1.1.0.jar` |
-| Jade 🔍 | NeoForge-26.1.7 | `Jade-mc26.1-NeoForge-26.1.7.jar` |
+| Jade 🔍 | NeoForge-26.1.8 | `Jade-mc26.1-NeoForge-26.1.8.jar` |
 | JourneyMap | 6.0.0 | `journeymap-neoforge-26.1.2-6.0.0.jar` |
 | Just Enough Items (JEI) | 26.1.2-neoforge-29.6.2.38 | `jei-26.1.2-neoforge-29.6.2.38.jar` |
 | Just Enough Resources (JER) | 1.10.0.35 | `JustEnoughResources-NeoForge-26.1.2-1.10.0.35.jar` |
 | Konkrete | neoforge_1.10.1_MC_26.1.1 | `konkrete_neoforge_1.10.1_MC_26.1.1.jar` |
+| Kotlin for Forge | 6.2.0-all | `kotlinforforge-6.2.0-all.jar` |
 | KubeJS | 8.0.3 | `kubejs-neoforge-26.1.2-8.0.3.jar` |
 | Leaves Be Gone | v26.1.0-mc26.1.x-NeoForge | `LeavesBeGone-v26.1.0-mc26.1.x-NeoForge.jar` |
 | Melody | neoforge_1.0.16_MC_26.1.1 | `melody_neoforge_1.0.16_MC_26.1.1.jar` |
@@ -64,6 +67,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Mystical Agriculture Tiered Crystals | 1.8.0 | `matc-1.8.0.jar` |
 | Mystical Automation | 26.1.2-2.0.6 | `MysticalAutomation-26.1.2-2.0.6.jar` |
 | Neat | 26.1.2-48-NEOFORGE | `Neat-26.1.2-48-NEOFORGE.jar` |
+| Nirvana Library | 2.2.0 | `Nirvana Lib-neoforge-26.1.2-2.2.0.jar` |
 | OpenBlocks Elevator | 1.16.2 | `elevatorid-neoforge-26.1-1.16.2.jar` |
 | Placebo | 26.1.2-10.0.1 | `Placebo-26.1.2-10.0.1.jar` |
 | Powah! (Rearchitected) | 7.0.4-alpha | `Powah-7.0.4-alpha.jar` |
@@ -77,7 +81,8 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.8.12+mc26.1.2 | `sodium-neoforge-0.8.12+mc26.1.2.jar` |
 | Sophisticated Backpacks | 26.1.2-3.25.74.1932 | `sophisticatedbackpacks-26.1.2-3.25.74.1932.jar` |
-| Sophisticated Core | 26.1.2-1.4.73.2061 | `sophisticatedcore-26.1.2-1.4.73.2061.jar` |
-| Sophisticated Storage | 26.1.2-1.5.81.1883 | `sophisticatedstorage-26.1.2-1.5.81.1883.jar` |
+| Sophisticated Core | 26.1.2-1.4.74.2074 | `sophisticatedcore-26.1.2-1.4.74.2074.jar` |
+| Sophisticated Storage | 26.1.2-1.5.82.1891 | `sophisticatedstorage-26.1.2-1.5.82.1891.jar` |
+| The Uncrafting Table | 0.0.1 | `uncraftingtable-0.0.1.jar` |
 | Time in a Bottle | neoforge-7.0.0 | `tiab-neoforge-7.0.0.jar` |
 | Trade Cycling | neoforge-1.0.21+26.1.2 | `trade-cycling-neoforge-1.0.21+26.1.2.jar` |

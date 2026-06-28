@@ -6,6 +6,30 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.7] — 2026-06-28
+
+Mod list refresh after adding and removing mods in the playtest instance (72 mods).
+
+### Mods
+
+- **Added:** Common Network `networking-neoforge-1.0.23-26.1.2`
+- **Added:** Fzzy Config `0.7.6+26.1+neoforge`
+- **Added:** Jade 🔍 `NeoForge-26.1.8`
+- **Added:** Kotlin for Forge `6.2.0-all`
+- **Added:** Nirvana Library `2.2.0`
+- **Added:** Sophisticated Core `26.1.2-1.4.74.2074`
+- **Added:** Sophisticated Storage `26.1.2-1.5.82.1891`
+- **Added:** The Uncrafting Table `0.0.1`
+- **Removed:** Jade 🔍 `NeoForge-26.1.7`
+- **Removed:** Sophisticated Core `26.1.2-1.4.73.2061`
+- **Removed:** Sophisticated Storage `26.1.2-1.5.81.1883`
+
+### Documentation
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (72 mods).
+
+---
+
 ## [1.0.0.6] — 2026-06-27
 
 Removed the KubeJS uncrafting table experiment and refreshed the mod list (67 mods).
