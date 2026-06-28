@@ -21,6 +21,7 @@ Copy-paste assets and metadata for publishing **Randon One Block** on CurseForge
 |-------|-------|
 | Project ID | `1591048` |
 | Authors dashboard | https://authors.curseforge.com/#/projects/1591048/ |
+| General settings | https://authors.curseforge.com/#/projects/1591048/general — name **Randon One Block**, slug **randon-one-block** |
 | Public page (after approval) | https://www.curseforge.com/minecraft/modpacks/randon-one-block |
 
 ## Publish a release (recommended)

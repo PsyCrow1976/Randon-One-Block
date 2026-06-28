@@ -52,6 +52,7 @@ overrides/
 
 ## 4. Manual Authors steps (API cannot do these)
 
+- [ ] **General** → [project settings](https://authors.curseforge.com/#/projects/1591048/general): **Project name** `Randon One Block`, **Slug** `randon-one-block` → Save
 - [ ] Upload **logo** — `branding/logo/logo.png` (400×400, export from `logo.svg`)
 - [ ] **Categories** — Skyblock (main), Quests, Adventure, Multiplayer
 - [ ] Delete stray **test files** under Files (upload token cannot remove files)

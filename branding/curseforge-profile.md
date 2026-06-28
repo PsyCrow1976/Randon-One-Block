@@ -17,6 +17,17 @@ CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
 
 Token from [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens). Revoke after use. Logo and categories must be set manually in Authors.
 
+## Authors → General (project 1591048)
+
+Set these on [General](https://authors.curseforge.com/#/projects/1591048/general) before resubmitting:
+
+| Field | Value |
+|-------|--------|
+| **Project name** | `Randon One Block` |
+| **Slug / URL** | `randon-one-block` |
+
+The upload API token can push **name**, summary, description, and links (`update-project`), but **cannot change the slug** — edit slug manually on General, then Save.
+
 ## Main submission page
 
 | Field | Value |

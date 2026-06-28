@@ -174,4 +174,4 @@ out = subprocess.check_output(cmd, text=True)
 print("upload-file:", out.strip())
 PY
 
-echo "Done. Upload logo manually in Authors if needed; delete stray test files in Files."
+echo "Done. Set slug on Authors → General (randon-one-block); upload logo; delete stray test files in Files."
