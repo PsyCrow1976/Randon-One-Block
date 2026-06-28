@@ -1,0 +1,1 @@
+An experimental AI-built NeoForge skyblock: one center block re-rolls random modpack loot, FTB Quests, and The Uncrafting Table — inspired by Chaos OneBlock.

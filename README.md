@@ -29,6 +29,8 @@ If you enjoy this pack, play the original too — [Chaos OneBlock](https://www.c
 
 **What's new?** See [`CHANGELOG.md`](CHANGELOG.md) for release notes in plain language.
 
+**Publishing to CurseForge?** See [`branding/`](branding/) for avatar, summary, description, export checklist, and project metadata.
+
 **Continuing development?** Read [`requirements.md`](requirements.md) for session handoff, technical constraints, and what is left to build.
 
 ## Target versions
@@ -302,6 +304,20 @@ Restore symlinks after reinstalling the instance:
 **Logs:** `<instance>/logs/kubejs/server.log` (KubeJS) and `latest.log` (full game log).
 
 Mods, saves, logs, and jars stay in the CurseForge instance folder (not fully tracked in git). The **mod list** in the repo is the exception — it records which jars are installed and at what version.
+
+## CurseForge branding & release
+
+Pack copy, logo source, and submission steps live in [`branding/`](branding/). The CurseForge page describes this as an **AI-assisted experiment** (Grok Composer 2.5 fast) — random skyblock center block, AI-written quests, custom Uncrafting Table — inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock).
+
+| Asset | File |
+|-------|------|
+| One-line summary | [`branding/summary.txt`](branding/summary.txt) |
+| Project page (Markdown) | [`branding/description.md`](branding/description.md) |
+| Form fields & categories | [`branding/curseforge-profile.md`](branding/curseforge-profile.md) |
+| Export & upload steps | [`branding/export-checklist.md`](branding/export-checklist.md) |
+| Logo (export 400×400 PNG) | [`branding/logo/logo.svg`](branding/logo/logo.svg) |
+
+Export the playtest profile as a `.zip` from the CurseForge app before uploading the first file.
 
 ## Installed mods & `update-modlist.sh`
 

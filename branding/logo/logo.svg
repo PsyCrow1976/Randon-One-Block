@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Modded Random OneBlock — 3x3 grass with mystery block">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="100%" stop-color="#5ba3d9"/>
+    </linearGradient>
+    <linearGradient id="grass-top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7cbd4a"/>
+      <stop offset="100%" stop-color="#5a9a32"/>
+    </linearGradient>
+    <linearGradient id="grass-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6aaa3f"/>
+      <stop offset="100%" stop-color="#4a7a2c"/>
+    </linearGradient>
+    <linearGradient id="mystery" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c77dff"/>
+      <stop offset="50%" stop-color="#7b2cbf"/>
+      <stop offset="100%" stop-color="#3c096c"/>
+    </linearGradient>
+
+    <g id="grass-iso">
+      <polygon points="0,-18 22,0 0,18 -22,0" fill="url(#grass-top)"/>
+      <polygon points="-22,0 0,18 0,36 -22,18" fill="url(#grass-side)"/>
+      <polygon points="22,0 0,18 0,36 22,18" fill="#4a7a2c"/>
+    </g>
+
+    <g id="mystery-iso">
+      <polygon points="0,-26 22,-8 0,10 -22,-8" fill="url(#mystery)"/>
+      <polygon points="-22,-8 0,10 0,28 -22,10" fill="#5a189a"/>
+      <polygon points="22,-8 0,10 0,28 22,10" fill="#3c096c"/>
+      <text x="0" y="2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">?</text>
+    </g>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#sky)"/>
+
+  <!-- 3x3 isometric grass platform, mystery block in center -->
+  <g transform="translate(200 248)">
+    <g transform="translate(-66,-38)"><use href="#grass-iso"/></g>
+    <g transform="translate(-22,-38)"><use href="#grass-iso"/></g>
+    <g transform="translate(22,-38)"><use href="#grass-iso"/></g>
+
+    <g transform="translate(-66,-8)"><use href="#grass-iso"/></g>
+    <g transform="translate(-22,-8)"><use href="#mystery-iso"/></g>
+    <g transform="translate(22,-8)"><use href="#grass-iso"/></g>
+
+    <g transform="translate(-66,22)"><use href="#grass-iso"/></g>
+    <g transform="translate(-22,22)"><use href="#grass-iso"/></g>
+    <g transform="translate(22,22)"><use href="#grass-iso"/></g>
+  </g>
+
+  <text x="200" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Modded Random</text>
+  <text x="200" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#e0aaff">OneBlock</text>
+</svg>
