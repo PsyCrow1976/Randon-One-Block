@@ -18,6 +18,7 @@ CurseForge resubmission rename (Authors naming rules — no “mod/modded” in 
 
 ### Documentation
 
+- **`branding/description.md`** — added “Why Randon?” note (repo typo for Random).
 - **`README.md`**, **`requirements.md`**, **`branding/`** — all references updated.
 - **`scripts/publish-curseforge.sh`** — zip output `dist/Randon-One-Block-<version>.zip`; fixed manifest version and mod list sorting bugs.
 

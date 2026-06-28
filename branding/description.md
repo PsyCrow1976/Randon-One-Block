@@ -6,6 +6,10 @@ This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast)
 
 There is no deep endgame vision here — it is a sandbox to learn what AI can ship on the latest Minecraft version.
 
+### Why “Randon”?
+
+**Randon** is not a clever brand — I simply misspelled **Random** when creating the GitHub repo (`Randon-One-Block`). CurseForge later asked for a project name without “mod/modded” in the title, so the typo became the official pack name instead of fixing years of paths and links. The gameplay is still a **random** one-block skyblock; the name is just an honest mistake that stuck.
+
 ---
 
 ## What you do in-game

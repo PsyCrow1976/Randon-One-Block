@@ -48,6 +48,7 @@ Token from [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens
 
 ## Moderation notes
 
+- Description explains the name: **Randon** = typo for **Random** when the GitHub repo was created; kept for CurseForge naming rules and repo consistency.
 - Description clearly states **AI-assisted development** and credits **Chaos OneBlock**.
 - All listed mods have CurseForge IDs in `modlist.json` (no manual overrides/mods folder needed for CF-hosted jars).
 - Avatar: simple 3×3 grass island + mystery block (see `logo.svg`).
