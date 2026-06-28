@@ -1,6 +1,6 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 72
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 73
 
 *Last updated: 2026-06-28*
 
@@ -21,6 +21,8 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | AppleSkin | 3.0.9 | `appleskin-neoforge-mc26.1-3.0.9.jar` |
 | Balm | 26.1.2.7 | `balm-neoforge-26.1.2-26.1.2.7.jar` |
 | Baubley Heart Canisters | 26.1.2-1.7.3 | `baubley-heart-canisters-26.1.2-1.7.3.jar` |
+| BBL Core | 26.1.2-12.6.2 | `bblcore-26.1.2-12.6.2.jar` |
+| BBL Utility | 26.1.2-2.7.10 | `utility-26.1.2-2.7.10.jar` |
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
 | Clumps | 26.1.2.1 | `Clumps-neoforge-26.1.2-26.1.2.1.jar` |
 | Colorful Hearts | 26.1.2.0 | `colorfulhearts-neoforge-26.1.2-26.1.2.0.jar` |
@@ -37,7 +39,6 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Easy Piglins | neoforge-1.1.7+26.1.2 | `easy-piglins-neoforge-1.1.7+26.1.2.jar` |
 | Easy Villagers | neoforge-1.1.42+26.1.2 | `easy-villagers-neoforge-1.1.42+26.1.2.jar` |
 | Ex Deorum | 4.0 | `exdeorum-4.0.jar` |
-| FancyMenu | 26.1.2 | `fancymenu_neoforge_3.9.1_MC_26.1.1-26.1.2.jar` |
 | Farming for Blockheads | 26.1.2.1 | `farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar` |
 | Forgiving Void | 26.1.2.1 | `forgivingvoid-neoforge-26.1.2-26.1.2.1.jar` |
 | FTB Chunks (NeoForge) | chunks-neoforge-26.1.2.6 | `ftb-chunks-neoforge-26.1.2.6.jar` |
@@ -80,9 +81,9 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simple Voice Chat | neoforge-2.6.20+26.1.2 | `voicechat-neoforge-2.6.20+26.1.2.jar` |
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.8.12+mc26.1.2 | `sodium-neoforge-0.8.12+mc26.1.2.jar` |
-| Sophisticated Backpacks | 26.1.2-3.25.74.1932 | `sophisticatedbackpacks-26.1.2-3.25.74.1932.jar` |
+| Sophisticated Backpacks | 26.1.2-3.25.75.1946 | `sophisticatedbackpacks-26.1.2-3.25.75.1946.jar` |
 | Sophisticated Core | 26.1.2-1.4.74.2074 | `sophisticatedcore-26.1.2-1.4.74.2074.jar` |
-| Sophisticated Storage | 26.1.2-1.5.82.1891 | `sophisticatedstorage-26.1.2-1.5.82.1891.jar` |
-| The Uncrafting Table | 0.0.1 | `uncraftingtable-0.0.1.jar` |
+| Sophisticated Storage | 26.1.2-1.5.83.1896 | `sophisticatedstorage-26.1.2-1.5.83.1896.jar` |
+| The Uncrafting Table | 0.0.3 | `uncraftingtable-0.0.3.jar` |
 | Time in a Bottle | neoforge-7.0.0 | `tiab-neoforge-7.0.0.jar` |
 | Trade Cycling | neoforge-1.0.21+26.1.2 | `trade-cycling-neoforge-1.0.21+26.1.2.jar` |

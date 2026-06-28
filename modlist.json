@@ -2,7 +2,7 @@
   "generated": "2026-06-28",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 72,
+  "mod_count": 73,
   "mods": [
     {
       "name": "Apotheosis",
@@ -52,6 +52,20 @@
       "jar": "baubley-heart-canisters-26.1.2-1.7.3.jar",
       "curseforge_id": 282947,
       "url": "https://www.curseforge.com/minecraft/mc-mods/baubley-heart-canisters"
+    },
+    {
+      "name": "BBL Core",
+      "version": "26.1.2-12.6.2",
+      "jar": "bblcore-26.1.2-12.6.2.jar",
+      "curseforge_id": 1135181,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-core"
+    },
+    {
+      "name": "BBL Utility",
+      "version": "26.1.2-2.7.10",
+      "jar": "utility-26.1.2-2.7.10.jar",
+      "curseforge_id": 649644,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-utility"
     },
     {
       "name": "Cloth Config API (Fabric/Forge/NeoForge)",
@@ -164,13 +178,6 @@
       "jar": "exdeorum-4.0.jar",
       "curseforge_id": 901420,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ex-deorum"
-    },
-    {
-      "name": "FancyMenu",
-      "version": "26.1.2",
-      "jar": "fancymenu_neoforge_3.9.1_MC_26.1.1-26.1.2.jar",
-      "curseforge_id": 367706,
-      "url": "https://www.curseforge.com/minecraft/mc-mods/fancymenu"
     },
     {
       "name": "Farming for Blockheads",
@@ -468,8 +475,8 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.74.1932",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.74.1932.jar",
+      "version": "26.1.2-3.25.75.1946",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.75.1946.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
@@ -482,15 +489,15 @@
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.82.1891",
-      "jar": "sophisticatedstorage-26.1.2-1.5.82.1891.jar",
+      "version": "26.1.2-1.5.83.1896",
+      "jar": "sophisticatedstorage-26.1.2-1.5.83.1896.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },
     {
       "name": "The Uncrafting Table",
-      "version": "0.0.1",
-      "jar": "uncraftingtable-0.0.1.jar",
+      "version": "0.0.3",
+      "jar": "uncraftingtable-0.0.3.jar",
       "curseforge_id": 1590819,
       "url": "https://www.curseforge.com/minecraft/mc-mods/the-uncrafting-table"
     },

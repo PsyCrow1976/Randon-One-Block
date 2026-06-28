@@ -6,6 +6,28 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.9] — 2026-06-28
+
+Mod list refresh after playtest instance changes (73 mods).
+
+### Mods
+
+- **Added:** BBL Core `26.1.2-12.6.2`
+- **Added:** BBL Utility `26.1.2-2.7.10`
+- **Added:** Sophisticated Backpacks `26.1.2-3.25.75.1946`
+- **Added:** Sophisticated Storage `26.1.2-1.5.83.1896`
+- **Added:** The Uncrafting Table `0.0.3`
+- **Removed:** FancyMenu `26.1.2`
+- **Removed:** Sophisticated Backpacks `26.1.2-3.25.74.1932`
+- **Removed:** Sophisticated Storage `26.1.2-1.5.82.1891`
+- **Removed:** The Uncrafting Table `0.0.1`
+
+### Documentation
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (73 mods).
+
+---
+
 ## [1.0.0.8] — 2026-06-28
 
 CurseForge resubmission rename (Authors naming rules — no “mod/modded” in project title).

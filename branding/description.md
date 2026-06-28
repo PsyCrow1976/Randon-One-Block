@@ -58,7 +58,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 |--|--|
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.76 |
-| Mods | 72 |
+| Mods | 73 |
 
 ---
 

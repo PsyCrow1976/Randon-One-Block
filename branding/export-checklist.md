@@ -22,7 +22,7 @@ CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
 The script:
 
 1. Reads mod **projectID** / **fileID** pairs from the instance `minecraftinstance.json`
-2. Writes `manifest.json` (NeoForge 26.1.2.76, 72 mods)
+2. Writes `manifest.json` (NeoForge 26.1.2.76, 73 mods)
 3. Zips repo `config/` and `kubejs/` under `overrides/` (excludes `voicechat/`, `*.bak`)
 4. Calls `update-project` — summary, description, source, issues, license from `branding/`
 5. Calls `upload-file` — beta release with changelog from `CHANGELOG.md`
