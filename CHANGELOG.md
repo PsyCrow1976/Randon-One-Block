@@ -6,6 +6,23 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.10] — 2026-06-28
+
+New **Storage Options** quest chapter — Sophisticated Backpacks progression and upgrades.
+
+### Quests
+
+- **Added:** FTB Quests chapter **Storage Options** (`storage_options.json5`) — gated behind Getting Started.
+- **Backpack tiers:** Leather → Iron (direct or via optional Copper) → Gold → Diamond → Netherite, laid out left to right.
+- **Upgrades:** Upgrade Base from the leather backpack, then **52** optional upgrade quests (pickup, filter, magnet, smelting forks, stack tiers, pump, crafting, tank, infinity, and more) with basic → advanced chains and `one_completed` forks where recipes branch.
+- **Layout:** Backpack tier line on top; all upgrade quests flow **left to right** on rows below.
+
+### Documentation
+
+- **`howtoquest.md`** — FTB Quests how-to for this pack (chapter/lang files, dependencies, forks, in-game editor pitfalls).
+
+---
+
 ## [1.0.0.9] — 2026-06-28
 
 Mod list refresh after playtest instance changes (73 mods).

@@ -133,22 +133,24 @@ if [[ "${CF_SKIP_UPLOAD:-0}" == "1" ]]; then
   exit 0
 fi
 
-CHANGELOG="$(python3 - "$REPO" <<'PY'
+CHANGELOG="$(python3 - "$REPO" "$VERSION" <<'PY'
 import pathlib, sys
 text = pathlib.Path(sys.argv[1], "CHANGELOG.md").read_text()
-# first release section bullets
+version = sys.argv[2]
 lines = text.splitlines()
-out = ["## Initial CurseForge release", ""]
+out = []
 capture = False
 for line in lines:
-    if line.startswith("## [1.0.0.7]"):
+    if line.startswith(f"## [{version}]"):
         capture = True
+        out.append(line)
         continue
     if capture and line.startswith("## ["):
         break
-    if capture and line.strip():
+    if capture:
         out.append(line)
-print("\n".join(out[:20]))
+body = "\n".join(out).strip()
+print(body if body else f"## Randon One Block {version}\n\nSee CHANGELOG.md on GitHub.")
 PY
 )"
 
