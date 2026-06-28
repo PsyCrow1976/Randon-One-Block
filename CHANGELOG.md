@@ -25,6 +25,7 @@ CurseForge resubmission rename (Authors naming rules — no “mod/modded” in 
 ### CurseForge
 
 - Project metadata and **1.0.0.8** file uploaded via API (display name **Randon One Block**). Re-upload logo PNG in Authors if needed.
+- Rejected title **Random Modded One Block** replaced with **Randon One Block** on Authors (API `update-project`).
 
 ---
 
