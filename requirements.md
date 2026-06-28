@@ -1,4 +1,4 @@
-# Modded Random OneBlock — Requirements & Session Handoff
+# Randon One Block — Requirements & Session Handoff
 
 **Read this file first** at the start of a new session (human or AI) to understand what the project is, what must keep working, what is required next, and which technical constraints must not be broken.
 
@@ -21,7 +21,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 
 ## Project summary
 
-**Modded Random OneBlock** is a NeoForge skyblock modpack repo. Players start on Haven Skyblock islands and progress via FTB Quests. The signature mechanic is a **random block generator** on the center dirt of the **`oneblock_island`** template: mining it replaces it with a weighted random block from the full modpack block registry (~2100+ eligible blocks). Each team island can use the same layout; `island_template_mode` detects the pyramid pattern without per-island config.
+**Randon One Block** is a NeoForge skyblock pack repo. Players start on Haven Skyblock islands and progress via FTB Quests. The signature mechanic is a **random block generator** on the center dirt of the **`oneblock_island`** template: mining it replaces it with a weighted random block from the full modpack block registry (~2100+ eligible blocks). Each team island can use the same layout; `island_template_mode` detects the pyramid pattern without per-island config.
 
 | Item | Value |
 |------|-------|
@@ -379,7 +379,7 @@ Before considering Random One Block work complete:
 
 **Workflow:** playtest → `./update-modlist.sh` → `CF_API_TOKEN=… ./scripts/publish-curseforge.sh` → upload logo + set categories in Authors → submit for review → revoke token.
 
-The script builds `dist/Modded-Random-OneBlock-<version>.zip` from instance `minecraftinstance.json` (mod IDs) plus repo `config/` and `kubejs/`. It pushes `branding/summary.txt`, `branding/description.md`, and links via `update-project`, then uploads via `upload-file`. The API token **cannot** upload logo, set categories, or delete files.
+The script builds `dist/Randon-One-Block-<version>.zip` from instance `minecraftinstance.json` (mod IDs) plus repo `config/` and `kubejs/`. It pushes `branding/summary.txt`, `branding/description.md`, and links via `update-project`, then uploads via `upload-file`. The API token **cannot** upload logo, set categories, or delete files.
 
 Do **not** commit API tokens. Version string comes from `branding/project-metadata.json` unless `CF_VERSION` is set.
 

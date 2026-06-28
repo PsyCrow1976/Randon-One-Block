@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Modded Random OneBlock — 3x3 grass with mystery block">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Randon One Block — 3x3 grass with mystery block">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#87ceeb"/>
@@ -34,8 +34,8 @@
 
   <rect width="400" height="400" fill="url(#sky)"/>
 
-  <text x="200" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Modded Random</text>
-  <text x="200" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#e0aaff">OneBlock</text>
+  <text x="200" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Randon</text>
+  <text x="200" y="84" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#e0aaff">One Block</text>
 
   <!-- 3x3 isometric grass platform, mystery block in center — scaled and centered -->
   <g transform="translate(200 210) scale(1.65) translate(22 -1)">

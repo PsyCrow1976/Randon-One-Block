@@ -1,12 +1,12 @@
-# Modded Random OneBlock
+# Randon One Block
 
 A modded Minecraft **skyblock** server modpack where players start on template-based islands and progress through varied modded content over time.
 
-**Heavily inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)** — the core idea of mining one block and receiving a random modpack block comes directly from that pack. Modded Random OneBlock is a separate project (different mod list, Haven Skyblock islands, FTB Quests, and its own KubeJS scripts), but Chaos OneBlock is the main reference for the random-block skyblock loop.
+**Heavily inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)** — the core idea of mining one block and receiving a random modpack block comes directly from that pack. Randon One Block is a separate project (different mod list, Haven Skyblock islands, FTB Quests, and its own KubeJS scripts), but Chaos OneBlock is the main reference for the random-block skyblock loop.
 
 ## Overview
 
-**Modded Random OneBlock** combines content and mechanics from many modded Minecraft modpacks into one playthrough. The pack blends tech, magic, storage, and farming mods on Haven Skyblock islands, with **FTB Quests** for progression and a **KubeJS random block generator** as the central resource mechanic — adapted from the approach used in [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock).
+**Randon One Block** combines content and mechanics from many modded Minecraft modpacks into one playthrough. The pack blends tech, magic, storage, and farming mods on Haven Skyblock islands, with **FTB Quests** for progression and a **KubeJS random block generator** as the central resource mechanic — adapted from the approach used in [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock).
 
 ### Core systems
 
@@ -318,7 +318,7 @@ Pack copy, logo source, and submission steps live in [`branding/`](branding/). T
 | Logo (export 400×400 PNG) | [`branding/logo/logo.svg`](branding/logo/logo.svg) |
 | Publish script | [`scripts/publish-curseforge.sh`](scripts/publish-curseforge.sh) |
 
-**Authors dashboard:** [Modded Random OneBlock (project 1591048)](https://authors.curseforge.com/#/projects/1591048/)
+**Authors dashboard:** [Randon One Block (project 1591048)](https://authors.curseforge.com/#/projects/1591048/)
 
 ### Publish a release
 
@@ -330,7 +330,7 @@ Pack copy, logo source, and submission steps live in [`branding/`](branding/). T
 CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
 ```
 
-Output lands in `dist/Modded-Random-OneBlock-<version>.zip` (gitignored). The script reads mod file IDs from the playtest instance `minecraftinstance.json`, bundles repo `config/` and `kubejs/` as overrides, and calls `update-project` plus `upload-file`.
+Output lands in `dist/Randon-One-Block-<version>.zip` (gitignored). The script reads mod file IDs from the playtest instance `minecraftinstance.json`, bundles repo `config/` and `kubejs/` as overrides, and calls `update-project` plus `upload-file`.
 
 **Manual steps the API cannot do:** upload the **logo** (400×400 PNG from `logo.svg`), set **categories** (Skyblock + Quests/Adventure/Multiplayer), and delete stray test files under **Files**. Revoke the token after publishing.
 

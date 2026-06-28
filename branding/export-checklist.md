@@ -27,14 +27,14 @@ The script:
 4. Calls `update-project` — summary, description, source, issues, license from `branding/`
 5. Calls `upload-file` — beta release with changelog from `CHANGELOG.md`
 
-Output: `dist/Modded-Random-OneBlock-<version>.zip` (gitignored).
+Output: `dist/Randon-One-Block-<version>.zip` (gitignored).
 
 Optional: `CF_SKIP_UPLOAD=1` (build zip only), `CF_SKIP_METADATA=1`, `CF_RELEASE_TYPE=release`.
 
 ## 3. Verify the zip
 
 ```bash
-unzip -l dist/Modded-Random-OneBlock-*.zip | head
+unzip -l dist/Randon-One-Block-*.zip | head
 ```
 
 Confirm:

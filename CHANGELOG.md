@@ -1,8 +1,29 @@
 # Changelog
 
-User-friendly summary of what changed in **Modded Random OneBlock**. Technical details live in [`README.md`](README.md) and [`requirements.md`](requirements.md).
+User-friendly summary of what changed in **Randon One Block**. Technical details live in [`README.md`](README.md) and [`requirements.md`](requirements.md).
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
+
+---
+
+## [1.0.0.8] — 2026-06-28
+
+CurseForge resubmission rename (Authors naming rules — no “mod/modded” in project title).
+
+### Renamed
+
+- Display name **Randon One Block** (intentional spelling; replaces “Modded Random OneBlock”).
+- CurseForge slug target: `randon-one-block`.
+- Logo title text, quest book title, branding copy, and publish script manifest name updated to match.
+
+### Documentation
+
+- **`README.md`**, **`requirements.md`**, **`branding/`** — all references updated.
+- **`scripts/publish-curseforge.sh`** — zip output `dist/Randon-One-Block-<version>.zip`; fixed manifest version and mod list sorting bugs.
+
+### CurseForge
+
+- Project metadata and **1.0.0.8** file uploaded via API (display name **Randon One Block**). Re-upload logo PNG in Authors if needed.
 
 ---
 

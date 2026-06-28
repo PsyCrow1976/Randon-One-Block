@@ -1,8 +1,8 @@
-# Modded Random OneBlock
+# Randon One Block
 
 **An experimental AI-built modpack — no grand plan, just curiosity.**
 
-This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Modded Random OneBlock** is that experiment made playable.
+This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Randon One Block** is that experiment made playable.
 
 There is no deep endgame vision here — it is a sandbox to learn what AI can ship on the latest Minecraft version.
 

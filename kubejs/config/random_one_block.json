@@ -1,5 +1,5 @@
 {
-  "_readme": "Modded Random OneBlock — random block generator config. Edit while the server is stopped, or run /randomblock reload after changes.",
+  "_readme": "Randon One Block — random block generator config. Edit while the server is stopped, or run /randomblock reload after changes.",
 
   "_how_weights_work": "Every eligible block gets a weight. Default is default_weight (1). weight_overrides sets per-block weights. Higher weight = more likely. Example: crafting_table at 3 and default 1 means crafting_table is 3x as likely as a normal block. Set weight to 0 in overrides to exclude a block without using blacklist. Total chance for one block = its_weight / sum_of_all_weights.",
 

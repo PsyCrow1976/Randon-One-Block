@@ -1,5 +1,5 @@
 // priority: 0
-// Modded Random OneBlock — single-position random block generator
+// Randon One Block — single-position random block generator
 
 const CONFIG_FILE = 'random_one_block.json'
 const POOL_DUMP_JSON = 'random_one_block_pool.json'

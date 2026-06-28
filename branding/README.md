@@ -1,6 +1,6 @@
 # CurseForge branding
 
-Copy-paste assets and metadata for publishing **Modded Random OneBlock** on CurseForge.
+Copy-paste assets and metadata for publishing **Randon One Block** on CurseForge.
 
 **Positioning:** experimental **AI-assisted** modpack (Grok Composer 2.5 fast) on Minecraft 26.1.2 — random center block skyblock, AI-written quests, custom Uncrafting Table mod. Inspired by [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock).
 
@@ -21,7 +21,7 @@ Copy-paste assets and metadata for publishing **Modded Random OneBlock** on Curs
 |-------|-------|
 | Project ID | `1591048` |
 | Authors dashboard | https://authors.curseforge.com/#/projects/1591048/ |
-| Public page (after approval) | https://www.curseforge.com/minecraft/modpacks/modded-random-oneblock |
+| Public page (after approval) | https://www.curseforge.com/minecraft/modpacks/randon-one-block |
 
 ## Publish a release (recommended)
 
@@ -37,7 +37,7 @@ CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
 
 The script:
 
-- Builds `dist/Modded-Random-OneBlock-<version>.zip` from instance mod IDs + repo `config/` and `kubejs/`
+- Builds `dist/Randon-One-Block-<version>.zip` from instance mod IDs + repo `config/` and `kubejs/`
 - Pushes summary, description, source/issues links, and license via `update-project`
 - Uploads the zip via `upload-file` (beta release, MC 26.1.2 + NeoForge)
 
@@ -58,7 +58,7 @@ The upload API **cannot** set logo, categories, or delete files. After each publ
 
 | Field | Value |
 |-------|-------|
-| Display name | Modded Random OneBlock |
+| Display name | Randon One Block |
 | Minecraft | 26.1.2 |
 | Mod loader | NeoForge 26.1.2.76 |
 | Mod count | 72 (see [`modlist.md`](../modlist.md)) |

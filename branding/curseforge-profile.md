@@ -8,7 +8,7 @@ Honest positioning: **experimental AI-assisted modpack** for Minecraft 26.1.2. N
 |-------|--------|
 | **Project ID** | `1591048` |
 | **Authors dashboard** | https://authors.curseforge.com/#/projects/1591048/ |
-| **Slug** | `modded-random-oneblock` |
+| **Slug** | `randon-one-block` |
 | **Publish script** | [`scripts/publish-curseforge.sh`](../scripts/publish-curseforge.sh) |
 
 ```bash
@@ -22,7 +22,7 @@ Token from [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens
 | Field | Value |
 |-------|--------|
 | **Game** | Minecraft |
-| **Project name** | Modded Random OneBlock |
+| **Project name** | Randon One Block |
 | **Logo** | `branding/logo/logo.png` (400×400, export from `logo.svg`) |
 | **Summary** | Paste from [`summary.txt`](summary.txt) |
 | **Class** | Modpack |

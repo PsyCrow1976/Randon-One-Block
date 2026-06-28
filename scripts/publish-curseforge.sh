@@ -20,7 +20,7 @@ PROJECT_ID="${CF_PROJECT_ID:-1591048}"
 TOKEN="${CF_API_TOKEN:-}"
 VERSION="${CF_VERSION:-$(python3 -c "import json; print(json.load(open('$REPO/branding/project-metadata.json'))['version'])")}"
 RELEASE_TYPE="${CF_RELEASE_TYPE:-beta}"
-DIST="$REPO/dist/Modded-Random-OneBlock-${VERSION}.zip"
+DIST="$REPO/dist/Randon-One-Block-${VERSION}.zip"
 
 if [[ -z "$TOKEN" && "${CF_SKIP_UPLOAD:-0}" != "1" && "${CF_SKIP_METADATA:-0}" != "1" ]]; then
   echo "error: set CF_API_TOKEN (or CF_SKIP_UPLOAD=1 / CF_SKIP_METADATA=1)" >&2
@@ -30,7 +30,8 @@ fi
 python3 - "$REPO" "$INSTANCE" "$DIST" "$VERSION" <<'PY'
 import json, os, pathlib, shutil, sys, tempfile, zipfile
 
-repo, instance, dist, version = map(pathlib.Path, sys.argv[1:5])
+repo, instance, dist = map(pathlib.Path, sys.argv[1:4])
+version = sys.argv[4]
 instance_json = instance / "minecraftinstance.json"
 if not instance_json.is_file():
     raise SystemExit(f"error: missing {instance_json}")
@@ -38,7 +39,7 @@ if not instance_json.is_file():
 with open(instance_json) as f:
     inst = json.load(f)
 
-files = sorted(
+files = [
     {
         "projectID": a["addonID"],
         "fileID": a["installedFile"]["id"],
@@ -46,7 +47,8 @@ files = sorted(
     }
     for a in inst.get("installedAddons", [])
     if a.get("addonID") and a.get("installedFile", {}).get("id")
-)
+]
+files.sort(key=lambda x: (x["projectID"], x["fileID"]))
 
 manifest = {
     "minecraft": {
@@ -55,7 +57,7 @@ manifest = {
     },
     "manifestType": "minecraftModpack",
     "manifestVersion": 1,
-    "name": "Modded Random OneBlock",
+    "name": "Randon One Block",
     "version": version,
     "author": "PsyCrow1976",
     "files": files,
@@ -105,9 +107,9 @@ else
   python3 - "$REPO" "$PROJECT_ID" "$TOKEN" <<'PY'
 import json, pathlib, subprocess, sys
 
-repo, project_id, token = sys.argv[1:4]
+repo, project_id, token = pathlib.Path(sys.argv[1]), sys.argv[2], sys.argv[3]
 meta = {
-    "name": "Modded Random OneBlock",
+    "name": "Randon One Block",
     "summary": (repo / "branding/summary.txt").read_text().strip(),
     "description": (repo / "branding/description.md").read_text(),
     "descriptionType": "markdown",
@@ -157,7 +159,7 @@ dist, project_id, token, version, release_type, changelog = sys.argv[1:7]
 meta = {
     "changelog": changelog,
     "changelogType": "markdown",
-    "displayName": f"Modded Random OneBlock {version}",
+    "displayName": f"Randon One Block {version}",
     "releaseType": release_type,
     "gameVersionNames": ["26.1.2", "NeoForge", "Client", "Server"],
 }
