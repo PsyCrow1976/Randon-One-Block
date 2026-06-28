@@ -13,7 +13,7 @@ CurseForge requires a **square avatar, minimum 400×400 pixels**, PNG recommende
 
 **Inkscape / GIMP:** open `logo.svg` → export 400×400 PNG.
 
-**Command line (if `rsvg-convert` or Inkscape is installed):**
+**Command line:**
 
 ```bash
 # Inkscape
@@ -21,9 +21,14 @@ inkscape branding/logo/logo.svg --export-filename=branding/logo/logo.png -w 400 
 
 # librsvg
 rsvg-convert -w 400 -h 400 branding/logo/logo.svg -o branding/logo/logo.png
+
+# Headless Chrome (if Inkscape/librsvg unavailable)
+google-chrome --headless=new --disable-gpu --hide-scrollbars \
+  --screenshot=branding/logo/logo.png --window-size=400,400 \
+  "file://$(pwd)/branding/logo/logo.svg"
 ```
 
-Add `branding/logo/logo.png` to `.gitignore` if you prefer not to commit the raster (optional).
+`logo.png` is gitignored — upload manually in [Authors → General](https://authors.curseforge.com/#/projects/1591048/) (the publish API cannot set the avatar). Re-export after editing `logo.svg`.
 
 ## Design
 

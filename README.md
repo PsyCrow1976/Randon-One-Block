@@ -316,8 +316,25 @@ Pack copy, logo source, and submission steps live in [`branding/`](branding/). T
 | Form fields & categories | [`branding/curseforge-profile.md`](branding/curseforge-profile.md) |
 | Export & upload steps | [`branding/export-checklist.md`](branding/export-checklist.md) |
 | Logo (export 400×400 PNG) | [`branding/logo/logo.svg`](branding/logo/logo.svg) |
+| Publish script | [`scripts/publish-curseforge.sh`](scripts/publish-curseforge.sh) |
 
-Export the playtest profile as a `.zip` from the CurseForge app before uploading the first file.
+**Authors dashboard:** [Modded Random OneBlock (project 1591048)](https://authors.curseforge.com/#/projects/1591048/)
+
+### Publish a release
+
+1. Playtest and run `./update-modlist.sh` so the instance matches `modlist.json`.
+2. Generate a one-time token at [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens) — do not commit it.
+3. Build the modpack zip, push project metadata, and upload the file:
+
+```bash
+CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
+```
+
+Output lands in `dist/Modded-Random-OneBlock-<version>.zip` (gitignored). The script reads mod file IDs from the playtest instance `minecraftinstance.json`, bundles repo `config/` and `kubejs/` as overrides, and calls `update-project` plus `upload-file`.
+
+**Manual steps the API cannot do:** upload the **logo** (400×400 PNG from `logo.svg`), set **categories** (Skyblock + Quests/Adventure/Multiplayer), and delete stray test files under **Files**. Revoke the token after publishing.
+
+See [`branding/export-checklist.md`](branding/export-checklist.md) for verification steps and a CurseForge-app export fallback.
 
 ## Installed mods & `update-modlist.sh`
 

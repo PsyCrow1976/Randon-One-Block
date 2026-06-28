@@ -27,6 +27,14 @@ Mod list refresh after adding and removing mods in the playtest instance (72 mod
 ### Documentation
 
 - **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (72 mods).
+- **`branding/`** — CurseForge copy (summary, description, logo SVG, profile fields, export checklist).
+- **`scripts/publish-curseforge.sh`** — Build modpack zip from instance + repo overrides; push project metadata and upload via CurseForge API (project `1591048`).
+- **`README.md`**, **`branding/README.md`**, **`branding/curseforge-profile.md`**, **`branding/export-checklist.md`** — Publish workflow and Authors dashboard links.
+
+### CurseForge
+
+- Initial project setup on [Authors (1591048)](https://authors.curseforge.com/#/projects/1591048/) — metadata and **1.0.0.7** modpack file uploaded via API.
+- Logo centered and enlarged in `branding/logo/logo.svg`; PNG export for avatar upload in Authors UI.
 
 ---
 

@@ -17,10 +17,14 @@
   "ai_assisted": true,
   "ai_tool": "Grok Composer 2.5 fast",
   "curseforge": {
+    "project_id": 1591048,
+    "authors_url": "https://authors.curseforge.com/#/projects/1591048/",
+    "slug": "modded-random-oneblock",
     "class": "modpack",
     "main_category": "Skyblock",
     "additional_categories": ["Quests", "Adventure", "Multiplayer"],
-    "tags": ["skyblock", "oneblock", "ai", "experimental", "kubejs", "ftb quests", "neoforge", "haven", "uncrafting"]
+    "tags": ["skyblock", "oneblock", "ai", "experimental", "kubejs", "ftb quests", "neoforge", "haven", "uncrafting"],
+    "publish_script": "scripts/publish-curseforge.sh"
   },
   "inspiration": {
     "name": "Chaos OneBlock",

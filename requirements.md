@@ -368,6 +368,23 @@ Before considering Random One Block work complete:
 
 ---
 
+## CurseForge publish (branding + API)
+
+| Item | Location |
+|------|----------|
+| Copy & logo | `branding/` — see [`branding/README.md`](branding/README.md) |
+| Project ID | `1591048` — [Authors dashboard](https://authors.curseforge.com/#/projects/1591048/) |
+| Publish script | `scripts/publish-curseforge.sh` |
+| Checklist | `branding/export-checklist.md` |
+
+**Workflow:** playtest → `./update-modlist.sh` → `CF_API_TOKEN=… ./scripts/publish-curseforge.sh` → upload logo + set categories in Authors → submit for review → revoke token.
+
+The script builds `dist/Modded-Random-OneBlock-<version>.zip` from instance `minecraftinstance.json` (mod IDs) plus repo `config/` and `kubejs/`. It pushes `branding/summary.txt`, `branding/description.md`, and links via `update-project`, then uploads via `upload-file`. The API token **cannot** upload logo, set categories, or delete files.
+
+Do **not** commit API tokens. Version string comes from `branding/project-metadata.json` unless `CF_VERSION` is set.
+
+---
+
 ## Instructions for AI agents continuing this project
 
 1. Read this file and `README.md`.

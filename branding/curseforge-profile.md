@@ -2,6 +2,21 @@
 
 Honest positioning: **experimental AI-assisted modpack** for Minecraft 26.1.2. Not a handcrafted expert pack — a playable test of how far AI can build skyblock + KubeJS + quests.
 
+## Project links
+
+| Field | Value |
+|-------|--------|
+| **Project ID** | `1591048` |
+| **Authors dashboard** | https://authors.curseforge.com/#/projects/1591048/ |
+| **Slug** | `modded-random-oneblock` |
+| **Publish script** | [`scripts/publish-curseforge.sh`](../scripts/publish-curseforge.sh) |
+
+```bash
+CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
+```
+
+Token from [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens). Revoke after use. Logo and categories must be set manually in Authors.
+
 ## Main submission page
 
 | Field | Value |
@@ -29,7 +44,7 @@ Honest positioning: **experimental AI-assisted modpack** for Minecraft 26.1.2. N
 | **Source** | `https://github.com/PsyCrow1976/Randon-One-Block` |
 | **Issues tracker** | `https://github.com/PsyCrow1976/Randon-One-Block/issues` |
 | **Images** | Screenshots from `branding/screenshots/` |
-| **First file** | CurseForge app export `.zip` — see [`export-checklist.md`](export-checklist.md) |
+| **First file** | `scripts/publish-curseforge.sh` or CurseForge app export — see [`export-checklist.md`](export-checklist.md) |
 
 ## Moderation notes
 
