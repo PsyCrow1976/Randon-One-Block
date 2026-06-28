@@ -34,8 +34,11 @@
 
   <rect width="400" height="400" fill="url(#sky)"/>
 
-  <!-- 3x3 isometric grass platform, mystery block in center -->
-  <g transform="translate(200 248)">
+  <text x="200" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Modded Random</text>
+  <text x="200" y="82" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800" fill="#e0aaff">OneBlock</text>
+
+  <!-- 3x3 isometric grass platform, mystery block in center — scaled and centered -->
+  <g transform="translate(200 210) scale(1.65) translate(-22 5)">
     <g transform="translate(-66,-38)"><use href="#grass-iso"/></g>
     <g transform="translate(-22,-38)"><use href="#grass-iso"/></g>
     <g transform="translate(22,-38)"><use href="#grass-iso"/></g>
@@ -48,7 +51,4 @@
     <g transform="translate(-22,22)"><use href="#grass-iso"/></g>
     <g transform="translate(22,22)"><use href="#grass-iso"/></g>
   </g>
-
-  <text x="200" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Modded Random</text>
-  <text x="200" y="104" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#e0aaff">OneBlock</text>
 </svg>
