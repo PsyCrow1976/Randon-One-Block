@@ -17,6 +17,9 @@ kubejs/config/random_one_block_pool.txt
 # Exported branding raster (keep SVG source in git)
 branding/logo/logo.png
 
+# CurseForge export artifacts
+dist/
+
 # OS / editor
 .DS_Store
 Thumbs.db

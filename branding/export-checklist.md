@@ -38,10 +38,22 @@ overrides/
 
 ## 4. Upload to CurseForge
 
+**Automated (API):** from repo root, with a token from [CurseForge API Tokens](https://www.curseforge.com/account/api-tokens):
+
+```bash
+CF_API_TOKEN='your-token' CF_PROJECT_ID=1591048 ./scripts/publish-curseforge.sh
+```
+
+This builds `dist/Modded-Random-OneBlock-<version>.zip`, runs `update-project` (summary, description, links, license), and `upload-file`.
+
+**Manual fallback:**
+
 1. Create project using [`curseforge-profile.md`](curseforge-profile.md).
 2. **Files** → **Upload file** → select the `.zip`.
 3. Set display name and changelog for this version (match [`project-metadata.json`](project-metadata.json)).
 4. Submit for review.
+
+**API limits:** logo/avatar and categories must be set in the [Authors dashboard](https://authors.curseforge.com/). The token cannot delete files — remove test uploads manually under **Files**.
 
 ## 5. After approval
 
