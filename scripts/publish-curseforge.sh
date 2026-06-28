@@ -147,6 +147,8 @@ for line in lines:
         continue
     if capture and line.startswith("## ["):
         break
+    if capture and line.strip() == "---":
+        continue
     if capture:
         out.append(line)
 body = "\n".join(out).strip()
