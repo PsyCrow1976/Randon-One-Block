@@ -6,29 +6,9 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
-## [1.0.0.12] — 2026-06-29
+## [1.0.0.11] — 2026-06-29
 
-Mod list refresh and quest book updates. **Storage Options** is complete for now.
-
-### Mods
-
-- **Added:** The Uncrafting Table `0.0.4`
-
-### Quests
-
-- **Getting started** — Crafting table, Uncrafting Table, Flying Items, and Good To Know intro quests; early-game tips and rewards in one chapter.
-- **Good to Know Mods** — Sophisticated Storage overview quest (leather backpack reward).
-- **Storage Options** — Chapter finished: backpack and storage tiers, upgrade branches, shulker line, and crafting-material rewards.
-
-### Documentation
-
-- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (79 mods).
-
----
-
-## [1.0.0.11] — 2026-06-28
-
-Mod list refresh after playtest instance changes (78 mods).
+Mod list refresh, quest book updates, and **Storage Options** complete for now (79 mods).
 
 ### Mods
 
@@ -42,6 +22,7 @@ Mod list refresh after playtest instance changes (78 mods).
 - **Added:** Runelic `26.1.2.3`
 - **Added:** Sophisticated Core `26.1.2-1.4.75.2082`
 - **Added:** Sophisticated Storage `26.1.2-1.5.84.1898`
+- **Added:** The Uncrafting Table `0.0.4`
 - **Added:** Time in a Bottle `neoforge-7.1.0`
 - **Removed:** BBL Utility `26.1.2-2.7.10`
 - **Removed:** Kotlin for Forge `6.2.0-all`
@@ -50,9 +31,15 @@ Mod list refresh after playtest instance changes (78 mods).
 - **Removed:** The Uncrafting Table `0.0.3`
 - **Removed:** Time in a Bottle `neoforge-7.0.0`
 
+### Quests
+
+- **Getting started** — Crafting table, Uncrafting Table, Flying Items, and Good To Know intro quests; early-game tips and rewards in one chapter.
+- **Good to Know Mods** — Sophisticated Storage overview quest (leather backpack reward).
+- **Storage Options** — Chapter finished: backpack and storage tiers, upgrade branches, shulker line, and crafting-material rewards.
+
 ### Documentation
 
-- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (78 mods).
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (79 mods).
 
 ---
 
