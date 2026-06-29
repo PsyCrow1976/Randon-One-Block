@@ -1,12 +1,22 @@
 {
-	"quest.1B88CD62B3AA33C6.title": "gateway to eternity",
-	"quest.1B88CD62B3AA33C6.quest_desc": [
-		"Gateways to Eternity adds Gate Pearls that summon wave-based Gateways when used on a block.",
-		"",
-		"Defeat each wave before the timer runs out. Rewards spawn from the Gateway as you earn them. The gateway fails if mobs cannot spawn, wander too far away, or the wave timer expires.",
-		"",
-		"Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity"
-	],
-	"task.7A242E28CD3A3800.title": "Read about Gateways to Eternity",
-	"reward.44AC07782A18CF80.title": "Gateway of the Emerald Grove"
+  "quest.1B88CD62B3AA33C6.quest_desc": [
+    "Gateways to Eternity adds Gate Pearls that summon wave-based Gateways when used on a block.",
+    "",
+    "Defeat each wave before the timer runs out. Rewards spawn from the Gateway as you earn them. The gateway fails if mobs cannot spawn, wander too far away, or the wave timer expires.",
+    "",
+    "Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity",
+  ],
+  "task.7A242E28CD3A3800.title": "Read about Gateways to Eternity",
+  "quest.1B88CD62B3AA33C6.title": "Gateway to Eternity",
+  "quest.330C599A54702742.title": "Sophisticated Storage",
+  "quest.330C599A54702742.quest_desc": [
+    "Sophisticated Storage upgrades vanilla-style storage into tiered chests, barrels, and shulker boxes with many more slots and upgrade slots than a normal chest.",
+    "",
+    "Start with a basic chest or shulker, then upgrade through copper, iron, gold, diamond, and netherite for larger inventories. Double-chest upgrades merge two chests into one wide inventory. Insert storage upgrades for sorting, voiding, compacting, and more — the same module system as Sophisticated Backpacks.",
+    "",
+    "Pair placed storage with a leather backpack for items on the go. See the Storage Options chapter for full tier and upgrade paths.",
+    "",
+    "Mod page: https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
+  ],
+  "task.05BB138E07F774FC.title": "Read about Sophisticated Storage",
 }

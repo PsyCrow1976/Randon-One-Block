@@ -58,7 +58,86 @@
           id: "7CF0D8878C532CD0",
           type: "command",
           command: "randomblock revert",
-          player_command: false,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:crafting_table",
+        count: 1,
+      },
+      x: 2.0,
+      y: 0.0,
+      id: "4137D6CD3FC01F40",
+      tasks: [
+        {
+          id: "33E107AC2A3D7A05",
+          type: "item",
+          item: {
+            id: "minecraft:crafting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0070252A5E056B87",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "uncraftingtable:uncrafting_table",
+        count: 1,
+      },
+      x: 4.0,
+      y: 0.0,
+      id: "4A1F5EA13AF49DDA",
+      tasks: [
+        {
+          id: "31EC56B4B7D51F67",
+          type: "item",
+          item: {
+            id: "uncraftingtable:uncrafting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6E1E5552FE16EE6C",
+          type: "item",
+          item: {
+            id: "simplest_paxels:diamond_paxel",
+            count: 1,
+          },
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:creative_controller",
+        count: 1,
+      },
+      x: 2.0,
+      y: 1.5,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "F2A8B4C91D3E7056",
+      tasks: [
+        {
+          id: "E3B9C5D02E4F8167",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "D4CA6E13F5A09278",
+          type: "xp",
+          xp: 10,
         },
       ],
     },

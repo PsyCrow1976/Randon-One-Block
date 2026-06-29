@@ -18,9 +18,6 @@
       x: 0.0,
       y: 0.0,
       shape: "rsquare",
-      dependencies: [
-        "54426B5BBE263DB4",
-      ],
       size: 1.5,
       id: "1D5A582F52D7CB30",
       tasks: [
@@ -35,6 +32,14 @@
       ],
       rewards: [
         {
+          id: "6EE64EFE960370F8",
+          type: "item",
+          item: {
+            id: "minecraft:leather",
+            count: 1,
+          },
+        },
+        {
           id: "2B3C4D5E6F708192",
           type: "xp",
           xp: 10,
@@ -47,7 +52,7 @@
         count: 1,
       },
       x: 2.0,
-      y: 2.5,
+      y: 1.0,
       dependencies: [
         "1D5A582F52D7CB30",
       ],
@@ -65,7 +70,7 @@
       ],
       rewards: [
         {
-          id: "4D5E6F708192A3B4",
+          id: "6A49366A8877F31D",
           type: "item",
           item: {
             id: "minecraft:copper_ingot",
@@ -73,9 +78,9 @@
           },
         },
         {
-          id: "5E6F708192A3B4C5",
+          id: "4D5E6F708192A3B4",
           type: "xp",
-          xp: 25,
+          xp: 10,
         },
       ],
     },
@@ -84,7 +89,7 @@
         id: "sophisticatedbackpacks:iron_backpack",
         count: 1,
       },
-      x: 4.5,
+      x: 3.5,
       y: 0.0,
       dependencies: [
         "1D5A582F52D7CB30",
@@ -104,7 +109,7 @@
       ],
       rewards: [
         {
-          id: "708192A3B4C5D6E7",
+          id: "04696F97BA2A51C2",
           type: "item",
           item: {
             id: "minecraft:iron_ingot",
@@ -112,9 +117,9 @@
           },
         },
         {
-          id: "05B0DC1BCE95F2D8",
+          id: "708192A3B4C5D6E7",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -123,8 +128,9 @@
         id: "sophisticatedbackpacks:gold_backpack",
         count: 1,
       },
-      x: 9.0,
+      x: 6.0,
       y: 0.0,
+      hide_dependency_lines: false,
       dependencies: [
         "4485085C6BFD2FC6",
       ],
@@ -141,7 +147,7 @@
       ],
       rewards: [
         {
-          id: "631093F95D526E5F",
+          id: "1943456B66231C44",
           type: "item",
           item: {
             id: "minecraft:gold_ingot",
@@ -149,9 +155,9 @@
           },
         },
         {
-          id: "1C7E92FE40AA82AC",
+          id: "631093F95D526E5F",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -160,7 +166,7 @@
         id: "sophisticatedbackpacks:diamond_backpack",
         count: 1,
       },
-      x: 13.5,
+      x: 8.0,
       y: 0.0,
       dependencies: [
         "08E47E11A1D8C0DB",
@@ -178,7 +184,7 @@
       ],
       rewards: [
         {
-          id: "091A2B3C4D5E6F70",
+          id: "6AC9246454757B87",
           type: "item",
           item: {
             id: "minecraft:diamond",
@@ -186,9 +192,9 @@
           },
         },
         {
-          id: "1A2B3C4D5E6F7089",
+          id: "091A2B3C4D5E6F70",
           type: "xp",
-          xp: 100,
+          xp: 10,
         },
       ],
     },
@@ -197,7 +203,7 @@
         id: "sophisticatedbackpacks:netherite_backpack",
         count: 1,
       },
-      x: 18.0,
+      x: 10.0,
       y: 0.0,
       dependencies: [
         "0EF32096EC1AA836",
@@ -215,7 +221,7 @@
       ],
       rewards: [
         {
-          id: "3C4D5E6F7089ABCD",
+          id: "0C22E681FECA04FC",
           type: "item",
           item: {
             id: "minecraft:netherite_ingot",
@@ -223,9 +229,9 @@
           },
         },
         {
-          id: "4D5E6F7089ABCDEF",
+          id: "3C4D5E6F7089ABCD",
           type: "xp",
-          xp: 100,
+          xp: 10,
         },
       ],
     },
@@ -235,10 +241,13 @@
         count: 1,
       },
       x: 0.0,
-      y: 4.0,
+      y: 7.0,
       dependencies: [
         "1D5A582F52D7CB30",
+        "76CC1DA68BD390DF",
+        "2E32375A2D5A152F",
       ],
+      dependency_requirement: "one_completed",
       id: "038F98D454194789",
       tasks: [
         {
@@ -252,7 +261,7 @@
       ],
       rewards: [
         {
-          id: "75FD88E7D4C938FE",
+          id: "6ABE83875BDE943A",
           type: "item",
           item: {
             id: "minecraft:iron_ingot",
@@ -260,7 +269,7 @@
           },
         },
         {
-          id: "5ECE6BED14BFF4AA",
+          id: "75FD88E7D4C938FE",
           type: "xp",
           xp: 10,
         },
@@ -289,6 +298,14 @@
         },
       ],
       rewards: [
+        {
+          id: "1C4A094270AEC96C",
+          type: "item",
+          item: {
+            id: "minecraft:redstone",
+            count: 1,
+          },
+        },
         {
           id: "03C254FF22501F33",
           type: "xp",
@@ -320,126 +337,17 @@
       ],
       rewards: [
         {
+          id: "61FE1715FF1B5CB1",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "001F3A519D7E63C9",
           type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:filter_upgrade",
-        count: 1,
-      },
-      x: 7.5,
-      y: 4.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "00625A342BB1F96F",
-      tasks: [
-        {
-          id: "04C62544F5EAEE53",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:filter_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "731EEABD8B6C177E",
-          type: "xp",
           xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_filter_upgrade",
-        count: 1,
-      },
-      x: 10.0,
-      y: 4.0,
-      dependencies: [
-        "00625A342BB1F96F",
-      ],
-      optional: true,
-      id: "2880EC6A1B661C46",
-      tasks: [
-        {
-          id: "467DA71B81A1E7B1",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_filter_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "0A2D3A09FBAE2522",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:deposit_upgrade",
-        count: 1,
-      },
-      x: 12.5,
-      y: 4.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "12B933E2F85FC3E8",
-      tasks: [
-        {
-          id: "1E951B36D5EE9629",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:deposit_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "02C8DFD5EAF4EAFC",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_deposit_upgrade",
-        count: 1,
-      },
-      x: 15.0,
-      y: 4.0,
-      optional: true,
-      id: "656C269AA7ED77E8",
-      tasks: [
-        {
-          id: "3DCE53E4E95099A0",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_deposit_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "62B9A1D69C1B8DD7",
-          type: "xp",
-          xp: 50,
         },
       ],
     },
@@ -448,8 +356,8 @@
         id: "sophisticatedbackpacks:feeding_upgrade",
         count: 1,
       },
-      x: 17.5,
-      y: 4.0,
+      x: -2.5,
+      y: 4.5,
       dependencies: [
         "038F98D454194789",
       ],
@@ -467,6 +375,14 @@
       ],
       rewards: [
         {
+          id: "44034A02EDDADA03",
+          type: "item",
+          item: {
+            id: "minecraft:redstone",
+            count: 1,
+          },
+        },
+        {
           id: "18A19549A1E839D4",
           type: "xp",
           xp: 10,
@@ -478,8 +394,8 @@
         id: "sophisticatedbackpacks:advanced_feeding_upgrade",
         count: 1,
       },
-      x: 20.0,
-      y: 4.0,
+      x: -4.5,
+      y: 4.5,
       dependencies: [
         "015958C3FF5F62DC",
       ],
@@ -497,9 +413,17 @@
       ],
       rewards: [
         {
+          id: "33E34B1752EA4888",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "78BF3DBA4730C937",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -508,8 +432,8 @@
         id: "sophisticatedbackpacks:compacting_upgrade",
         count: 1,
       },
-      x: 22.5,
-      y: 4.0,
+      x: -2.5,
+      y: 7.0,
       dependencies: [
         "038F98D454194789",
       ],
@@ -527,6 +451,14 @@
       ],
       rewards: [
         {
+          id: "314536B86AE5C9E3",
+          type: "item",
+          item: {
+            id: "minecraft:redstone",
+            count: 1,
+          },
+        },
+        {
           id: "28CAC79D6CF5F942",
           type: "xp",
           xp: 10,
@@ -538,8 +470,8 @@
         id: "sophisticatedbackpacks:advanced_compacting_upgrade",
         count: 1,
       },
-      x: 25.0,
-      y: 4.0,
+      x: -4.5,
+      y: 7.0,
       dependencies: [
         "08D30836535B73A3",
       ],
@@ -557,9 +489,17 @@
       ],
       rewards: [
         {
+          id: "326F2B87A7FCDC13",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "3681BEA602781374",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -568,8 +508,8 @@
         id: "sophisticatedbackpacks:void_upgrade",
         count: 1,
       },
-      x: 27.5,
-      y: 4.0,
+      x: -2.5,
+      y: 9.5,
       dependencies: [
         "038F98D454194789",
       ],
@@ -587,6 +527,14 @@
       ],
       rewards: [
         {
+          id: "2382BD55D8AC622A",
+          type: "item",
+          item: {
+            id: "minecraft:redstone",
+            count: 1,
+          },
+        },
+        {
           id: "12FD0F6DF5DD4BFC",
           type: "xp",
           xp: 10,
@@ -598,8 +546,11 @@
         id: "sophisticatedbackpacks:advanced_void_upgrade",
         count: 1,
       },
-      x: 30.0,
-      y: 4.0,
+      x: -4.5,
+      y: 9.5,
+      dependencies: [
+        "1CC5EB2FA2002B10",
+      ],
       optional: true,
       id: "093E9B19F14A9D7A",
       tasks: [
@@ -614,129 +565,17 @@
       ],
       rewards: [
         {
+          id: "77098B124065AD16",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "53B653C4FD290837",
           type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:restock_upgrade",
-        count: 1,
-      },
-      x: 32.5,
-      y: 4.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "6700A8210E98FC61",
-      tasks: [
-        {
-          id: "3375E6D9CA23ADF3",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:restock_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "3E0BE40591A99CB5",
-          type: "xp",
           xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_restock_upgrade",
-        count: 1,
-      },
-      x: 35.0,
-      y: 4.0,
-      dependencies: [
-        "6700A8210E98FC61",
-      ],
-      optional: true,
-      id: "08FE2BE78538E4B3",
-      tasks: [
-        {
-          id: "0EABAED333354560",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_restock_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "011FCAEFC40E4367",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:refill_upgrade",
-        count: 1,
-      },
-      x: 37.5,
-      y: 4.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "2F069CD94D337DEC",
-      tasks: [
-        {
-          id: "0DF23CD4AF55E0A3",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:refill_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "000BADB163F3BC40",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_refill_upgrade",
-        count: 1,
-      },
-      x: 40.0,
-      y: 4.0,
-      dependencies: [
-        "2F069CD94D337DEC",
-      ],
-      optional: true,
-      id: "62FBFD2DD6A70727",
-      tasks: [
-        {
-          id: "60A6F3E01610A4C2",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_refill_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7266F4C8C56A89F9",
-          type: "xp",
-          xp: 50,
         },
       ],
     },
@@ -764,6 +603,14 @@
       ],
       rewards: [
         {
+          id: "7CD4D920BBCED553",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "20D1B6B83237238C",
           type: "xp",
           xp: 10,
@@ -778,6 +625,7 @@
       x: 5.0,
       y: 5.5,
       dependencies: [
+        "3B5A6B96B887FD91",
         "7568008105FC11BE",
       ],
       dependency_requirement: "one_completed",
@@ -795,9 +643,17 @@
       ],
       rewards: [
         {
+          id: "20C46B71C7C1EAB7",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "53A6EA9AFF19ACA1",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -806,8 +662,8 @@
         id: "sophisticatedbackpacks:smelting_upgrade",
         count: 1,
       },
-      x: 0.0,
-      y: 7.0,
+      x: 2.5,
+      y: 8.5,
       dependencies: [
         "038F98D454194789",
       ],
@@ -825,6 +681,14 @@
       ],
       rewards: [
         {
+          id: "401FD6984C66F9BC",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "1CC85A2532261A88",
           type: "xp",
           xp: 10,
@@ -836,12 +700,11 @@
         id: "sophisticatedbackpacks:smoking_upgrade",
         count: 1,
       },
-      x: 0.0,
+      x: 5.0,
       y: 8.5,
       dependencies: [
-        "038F98D454194789",
+        "2C1EC7A7081A11B3",
       ],
-      dependency_requirement: "one_completed",
       optional: true,
       id: "4ED71BFE25C5ED21",
       tasks: [
@@ -856,6 +719,14 @@
       ],
       rewards: [
         {
+          id: "630B7DDC1C2114D7",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "518457A2B4FF7A79",
           type: "xp",
           xp: 10,
@@ -867,12 +738,11 @@
         id: "sophisticatedbackpacks:blasting_upgrade",
         count: 1,
       },
-      x: 0.0,
+      x: 5.0,
       y: 10.0,
       dependencies: [
-        "038F98D454194789",
+        "2C1EC7A7081A11B3",
       ],
-      dependency_requirement: "one_completed",
       optional: true,
       id: "4039A8DF1D2ED4F6",
       tasks: [
@@ -887,6 +757,14 @@
       ],
       rewards: [
         {
+          id: "14F5260930A585DE",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "5550175423086337",
           type: "xp",
           xp: 10,
@@ -898,8 +776,11 @@
         id: "sophisticatedbackpacks:auto_smelting_upgrade",
         count: 1,
       },
-      x: 2.5,
+      x: 5.0,
       y: 7.0,
+      dependencies: [
+        "2C1EC7A7081A11B3",
+      ],
       optional: true,
       id: "74D5EFA0CE52AC1A",
       tasks: [
@@ -914,9 +795,17 @@
       ],
       rewards: [
         {
+          id: "6EE4E75697A4BCAA",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "6E46D1883B42617C",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -925,9 +814,11 @@
         id: "sophisticatedbackpacks:auto_smoking_upgrade",
         count: 1,
       },
-      x: 5.0,
-      y: 7.0,
-      dependency_requirement: "one_completed",
+      x: 8.0,
+      y: 8.5,
+      dependencies: [
+        "4ED71BFE25C5ED21",
+      ],
       optional: true,
       id: "1D34F555F013F974",
       tasks: [
@@ -942,9 +833,17 @@
       ],
       rewards: [
         {
+          id: "71ED8CE6D0A16F36",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "2489DA35F1A1869D",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
@@ -953,12 +852,11 @@
         id: "sophisticatedbackpacks:auto_blasting_upgrade",
         count: 1,
       },
-      x: 5.0,
-      y: 8.5,
+      x: 8.0,
+      y: 10.0,
       dependencies: [
         "4039A8DF1D2ED4F6",
       ],
-      dependency_requirement: "one_completed",
       optional: true,
       id: "52553480C164F806",
       tasks: [
@@ -973,37 +871,15 @@
       ],
       rewards: [
         {
-          id: "7A0A3CC3EC3BBCA9",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:stack_upgrade_starter_tier",
-        count: 1,
-      },
-      x: 2.5,
-      y: 12.5,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "1E422906A1A28F2C",
-      tasks: [
-        {
-          id: "03F79F9921636BBA",
+          id: "763F134F98A795E6",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:stack_upgrade_starter_tier",
+            id: "minecraft:gold_ingot",
             count: 1,
           },
         },
-      ],
-      rewards: [
         {
-          id: "4589F177D5260D83",
+          id: "7A0A3CC3EC3BBCA9",
           type: "xp",
           xp: 10,
         },
@@ -1015,12 +891,10 @@
         count: 1,
       },
       x: 2.5,
-      y: 11.0,
+      y: 12.0,
       dependencies: [
         "038F98D454194789",
-        "1E422906A1A28F2C",
       ],
-      dependency_requirement: "one_completed",
       optional: true,
       id: "7E343AB276F2D584",
       tasks: [
@@ -1035,6 +909,14 @@
       ],
       rewards: [
         {
+          id: "5B173357784B238D",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "0D406385EC7BEF2D",
           type: "xp",
           xp: 10,
@@ -1047,7 +929,10 @@
         count: 1,
       },
       x: 5.0,
-      y: 11.0,
+      y: 12.0,
+      dependencies: [
+        "7E343AB276F2D584",
+      ],
       optional: true,
       id: "06324BDB1F1A57B1",
       tasks: [
@@ -1062,9 +947,17 @@
       ],
       rewards: [
         {
+          id: "796CF0A55BBA8170",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "15A23276B922AEE7",
           type: "xp",
-          xp: 100,
+          xp: 10,
         },
       ],
     },
@@ -1074,7 +967,10 @@
         count: 1,
       },
       x: 7.5,
-      y: 11.0,
+      y: 12.0,
+      dependencies: [
+        "06324BDB1F1A57B1",
+      ],
       optional: true,
       id: "2351E11B89D38557",
       tasks: [
@@ -1089,9 +985,17 @@
       ],
       rewards: [
         {
+          id: "41D9B8146EAAB783",
+          type: "item",
+          item: {
+            id: "minecraft:diamond",
+            count: 1,
+          },
+        },
+        {
           id: "1FBD002050367C02",
           type: "xp",
-          xp: 150,
+          xp: 10,
         },
       ],
     },
@@ -1101,7 +1005,7 @@
         count: 1,
       },
       x: 10.0,
-      y: 11.0,
+      y: 12.0,
       dependencies: [
         "2351E11B89D38557",
       ],
@@ -1119,9 +1023,17 @@
       ],
       rewards: [
         {
+          id: "6D741F13A2B5CEE1",
+          type: "item",
+          item: {
+            id: "minecraft:diamond",
+            count: 1,
+          },
+        },
+        {
           id: "0F984CA112E26515",
           type: "xp",
-          xp: 200,
+          xp: 10,
         },
       ],
     },
@@ -1131,7 +1043,10 @@
         count: 1,
       },
       x: 12.5,
-      y: 11.0,
+      y: 12.0,
+      dependencies: [
+        "13C26C8EC324EA4A",
+      ],
       optional: true,
       id: "0BEC7982C24E3A67",
       tasks: [
@@ -1146,37 +1061,57 @@
       ],
       rewards: [
         {
+          id: "15F86E3D869E12AA",
+          type: "item",
+          item: {
+            id: "minecraft:netherite_ingot",
+            count: 1,
+          },
+        },
+        {
           id: "2B0FF2B1BD718A66",
           type: "xp",
-          xp: 300,
+          xp: 10,
         },
       ],
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:pump_upgrade",
+        id: "sophisticatedstorage:chest",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
-      x: 0.0,
-      y: 14.0,
+      x: 1.5,
+      y: 13.5,
+      shape: "rsquare",
       dependencies: [
-        "038F98D454194789",
+        "54426B5BBE263DB4",
       ],
-      optional: true,
-      id: "4EC4A207D42359D8",
+      size: 1.5,
+      id: "2E32375A2D5A152F",
       tasks: [
         {
-          id: "2B98E4157AFF8B4E",
+          id: "15B68D72A4FDF522",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:pump_upgrade",
+            id: "sophisticatedstorage:chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "0CB72D32B2BCA91B",
+          id: "6BD3B3662622B320",
+          type: "item",
+          item: {
+            id: "minecraft:lever",
+            count: 1,
+          },
+        },
+        {
+          id: "09B8489E977AE3C3",
           type: "xp",
           xp: 10,
         },
@@ -1184,89 +1119,120 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:advanced_pump_upgrade",
+        id: "sophisticatedstorage:copper_chest",
         count: 1,
       },
       x: 2.5,
-      y: 14.0,
+      y: 15.0,
       dependencies: [
-        "4EC4A207D42359D8",
+        "2E32375A2D5A152F",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "5AE07F4FE7291B60",
+      id: "38E68E5A8AC67417",
       tasks: [
         {
-          id: "27D14F6D09C028E7",
+          id: "168A735320C85E61",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:advanced_pump_upgrade",
+            id: "sophisticatedstorage:copper_chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "0EC9EF5BB8BEC8C7",
+          id: "7852B6AF707710E6",
+          type: "item",
+          item: {
+            id: "minecraft:copper_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "5E6BECC250767AE4",
           type: "xp",
-          xp: 50,
+          xp: 10,
         },
       ],
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:xp_pump_upgrade",
+        id: "sophisticatedstorage:iron_chest",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
       x: 5.0,
-      y: 14.0,
+      y: 13.5,
       dependencies: [
-        "5AE07F4FE7291B60",
+        "38E68E5A8AC67417",
+        "2E32375A2D5A152F",
       ],
-      optional: true,
-      id: "62788F2D8C81D363",
+      dependency_requirement: "one_completed",
+      id: "551C30829E0EFBA0",
       tasks: [
         {
-          id: "477E3F87622E1968",
+          id: "67A726F5091168D8",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:xp_pump_upgrade",
+            id: "sophisticatedstorage:iron_chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "44180EDEE87016DF",
+          id: "4814D9FC088EEB6C",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "7A232E68839E242E",
           type: "xp",
-          xp: 100,
+          xp: 10,
         },
       ],
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:crafting_upgrade",
+        id: "sophisticatedstorage:gold_chest",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
       x: 7.5,
-      y: 14.0,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "551C30829E0EFBA0",
       ],
-      optional: true,
-      id: "09F1019979B41001",
+      id: "4DCEBF5B4E326628",
       tasks: [
         {
-          id: "3621C4FC328E0454",
+          id: "285B39C2DD601082",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:crafting_upgrade",
+            id: "sophisticatedstorage:gold_chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "0F76938008DF12BE",
+          id: "6B6052B0E91EEFE8",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "0121A5B7DE85F7A2",
           type: "xp",
           xp: 10,
         },
@@ -1274,29 +1240,39 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:stonecutter_upgrade",
+        id: "sophisticatedstorage:diamond_chest",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
       x: 10.0,
-      y: 14.0,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "4DCEBF5B4E326628",
       ],
-      optional: true,
-      id: "63F51246A0A8AA55",
+      id: "4E56E0E9637E513F",
       tasks: [
         {
-          id: "272C1C4829AB6A91",
+          id: "7BC412534CFEC429",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:stonecutter_upgrade",
+            id: "sophisticatedstorage:diamond_chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "48A2CAA30C2F0935",
+          id: "40B4E460812B686E",
+          type: "item",
+          item: {
+            id: "minecraft:diamond",
+            count: 1,
+          },
+        },
+        {
+          id: "0562304C7D6B5006",
           type: "xp",
           xp: 10,
         },
@@ -1304,29 +1280,39 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:tank_upgrade",
+        id: "sophisticatedstorage:netherite_chest",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
       x: 12.5,
-      y: 14.0,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "4E56E0E9637E513F",
       ],
-      optional: true,
-      id: "6D5499571D7E5EF0",
+      id: "01293E78CA10AB32",
       tasks: [
         {
-          id: "630DDA575894BC48",
+          id: "5FA7FEE4D9F0EE40",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:tank_upgrade",
+            id: "sophisticatedstorage:netherite_chest",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "14D091C2E05B8B46",
+          id: "5DAF31A058F5B787",
+          type: "item",
+          item: {
+            id: "minecraft:netherite_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "463C326EB59B7094",
           type: "xp",
           xp: 10,
         },
@@ -1334,29 +1320,39 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:battery_upgrade",
+        id: "sophisticatedstorage:shulker_box",
         count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
       },
-      x: 15.0,
-      y: 14.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
+      x: -1.5,
+      y: 13.5,
+      shape: "rsquare",
+      size: 1.5,
       optional: true,
-      id: "0E4FC3C10A4C17AA",
+      id: "76CC1DA68BD390DF",
       tasks: [
         {
-          id: "2413A5C5350A5B9C",
+          id: "71FCFA6F7DF6F77F",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:battery_upgrade",
+            id: "sophisticatedstorage:shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "322E03CD29486612",
+          id: "504905A5776EB45C",
+          type: "item",
+          item: {
+            id: "minecraft:shulker_shell",
+            count: 1,
+          },
+        },
+        {
+          id: "7AA7C2034165C2EC",
           type: "xp",
           xp: 10,
         },
@@ -1364,29 +1360,38 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:anvil_upgrade",
+        id: "sophisticatedstorage:copper_shulker_box",
         count: 1,
       },
-      x: 0.0,
-      y: 16.5,
+      x: -3.0,
+      y: 15.0,
       dependencies: [
-        "038F98D454194789",
+        "76CC1DA68BD390DF",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "76354EEAADEBF6DD",
+      id: "7706E16703E02B57",
       tasks: [
         {
-          id: "43A7A86B20A66226",
+          id: "1CFDF45067F18E98",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:anvil_upgrade",
+            id: "sophisticatedstorage:copper_shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "46F3984001F2F171",
+          id: "7FAAB60A7355BCA6",
+          type: "item",
+          item: {
+            id: "minecraft:copper_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "5E4BEEA94E9AC753",
           type: "xp",
           xp: 10,
         },
@@ -1394,29 +1399,39 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:smithing_upgrade",
+        id: "sophisticatedstorage:iron_shulker_box",
         count: 1,
       },
-      x: 2.5,
-      y: 16.5,
+      x: -4.0,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "7706E16703E02B57",
+        "76CC1DA68BD390DF",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "10240696CB3FDA22",
+      id: "4AEA232E613A6FF0",
       tasks: [
         {
-          id: "7CA92E03997EC827",
+          id: "57D3583825F85ECE",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:smithing_upgrade",
+            id: "sophisticatedstorage:iron_shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "668F0E18C5B1AAE2",
+          id: "4711E0916F4063E0",
+          type: "item",
+          item: {
+            id: "minecraft:iron_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "0EDCDB2A4FD993DE",
           type: "xp",
           xp: 10,
         },
@@ -1424,29 +1439,38 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:inception_upgrade",
+        id: "sophisticatedstorage:gold_shulker_box",
         count: 1,
       },
-      x: 5.0,
-      y: 16.5,
+      x: -6.5,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "4AEA232E613A6FF0",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "14E096DCE6E43B12",
+      id: "07319B24500B1902",
       tasks: [
         {
-          id: "34081791FD278C04",
+          id: "28C267232911C19C",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:inception_upgrade",
+            id: "sophisticatedstorage:gold_shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "3FEA35783DBCFC2F",
+          id: "482562157C01A4E0",
+          type: "item",
+          item: {
+            id: "minecraft:gold_ingot",
+            count: 1,
+          },
+        },
+        {
+          id: "6B93D44FC72528D2",
           type: "xp",
           xp: 10,
         },
@@ -1454,29 +1478,38 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:everlasting_upgrade",
+        id: "sophisticatedstorage:diamond_shulker_box",
         count: 1,
       },
-      x: 7.5,
-      y: 16.5,
+      x: -8.5,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "07319B24500B1902",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "5C570769FAE6640B",
+      id: "10BBC2953FB66D76",
       tasks: [
         {
-          id: "186DA1A01093552A",
+          id: "55F9C11A3897D6D4",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:everlasting_upgrade",
+            id: "sophisticatedstorage:diamond_shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "4A0640DB1935A4AC",
+          id: "5C5C299D55883483",
+          type: "item",
+          item: {
+            id: "minecraft:diamond",
+            count: 1,
+          },
+        },
+        {
+          id: "3307EA9C629793DE",
           type: "xp",
           xp: 10,
         },
@@ -1484,296 +1517,38 @@
     },
     {
       icon: {
-        id: "sophisticatedbackpacks:jukebox_upgrade",
+        id: "sophisticatedstorage:netherite_shulker_box",
         count: 1,
       },
-      x: 10.0,
-      y: 16.5,
+      x: -10.5,
+      y: 13.5,
       dependencies: [
-        "038F98D454194789",
+        "10BBC2953FB66D76",
       ],
+      dependency_requirement: "one_completed",
       optional: true,
-      id: "49FCB72E0E1000E8",
+      id: "240917DB78DCE9C7",
       tasks: [
         {
-          id: "719D8DC7AE3D759A",
+          id: "46D22566F38004C9",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:jukebox_upgrade",
+            id: "sophisticatedstorage:netherite_shulker_box",
             count: 1,
           },
         },
       ],
       rewards: [
         {
-          id: "55E18996A6ED6EB5",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_jukebox_upgrade",
-        count: 1,
-      },
-      x: 12.5,
-      y: 16.5,
-      dependencies: [
-        "49FCB72E0E1000E8",
-      ],
-      optional: true,
-      id: "2D35D83381BEFA23",
-      tasks: [
-        {
-          id: "3FD268CE07F0798D",
+          id: "2701E5DF023C9D7D",
           type: "item",
           item: {
-            id: "sophisticatedbackpacks:advanced_jukebox_upgrade",
+            id: "minecraft:netherite_ingot",
             count: 1,
           },
         },
-      ],
-      rewards: [
         {
-          id: "01F0A175448528A9",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:tool_swapper_upgrade",
-        count: 1,
-      },
-      x: 15.0,
-      y: 16.5,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "5EE81B56DF840B3B",
-      tasks: [
-        {
-          id: "7EB86047FC417E7A",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:tool_swapper_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "07526E62E1903B3E",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
-        count: 1,
-      },
-      x: 17.5,
-      y: 16.5,
-      optional: true,
-      id: "0056A3ACBCB42220",
-      tasks: [
-        {
-          id: "1EC3217082579288",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "0DDC18A3D30FBC3F",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:alchemy_upgrade",
-        count: 1,
-      },
-      x: 0.0,
-      y: 19.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "425576C1AEAB9F1A",
-      tasks: [
-        {
-          id: "012AC705F55CA79E",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:alchemy_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5C26C66EE5DAD500",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_alchemy_upgrade",
-        count: 1,
-      },
-      x: 2.5,
-      y: 19.0,
-      dependencies: [
-        "425576C1AEAB9F1A",
-      ],
-      optional: true,
-      id: "32C5EFEDCB057A2D",
-      tasks: [
-        {
-          id: "40F8DD1C1FA35146",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_alchemy_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7DA0F8BD434F17E6",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:mob_catcher_upgrade",
-        count: 1,
-      },
-      x: 5.0,
-      y: 19.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "00EDD9DA35625207",
-      tasks: [
-        {
-          id: "0B0923E8D7A6A4B3",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:mob_catcher_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "704E6E460AFF5668",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:advanced_mob_catcher_upgrade",
-        count: 1,
-      },
-      x: 7.5,
-      y: 19.0,
-      dependencies: [
-        "00EDD9DA35625207",
-      ],
-      optional: true,
-      id: "6C8A953861E3BFDA",
-      tasks: [
-        {
-          id: "2E5F99857F8A6985",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:advanced_mob_catcher_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7EF883AC5EA1BF09",
-          type: "xp",
-          xp: 50,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:infinity_upgrade",
-        count: 1,
-      },
-      x: 10.0,
-      y: 19.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "0A313B403F8F4FAE",
-      tasks: [
-        {
-          id: "739B99A673CEA048",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:infinity_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "661D16428894AB73",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "sophisticatedbackpacks:survival_infinity_upgrade",
-        count: 1,
-      },
-      x: 12.5,
-      y: 19.0,
-      dependencies: [
-        "038F98D454194789",
-      ],
-      optional: true,
-      id: "34AB75838E1883CE",
-      tasks: [
-        {
-          id: "545D5876BBBD7B99",
-          type: "item",
-          item: {
-            id: "sophisticatedbackpacks:survival_infinity_upgrade",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "28FC661D5622D37F",
+          id: "6482C19CA7B5774F",
           type: "xp",
           xp: 10,
         },

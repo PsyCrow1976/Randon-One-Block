@@ -47,6 +47,37 @@
         },
       ],
     },
+    {
+      icon: {
+        id: "sophisticatedstorage:chest",
+        count: 1,
+        components: {
+          "sophisticatedstorage:wood_type": "oak",
+        },
+      },
+      x: 2.0,
+      y: 0.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "330C599A54702742",
+      tasks: [
+        {
+          id: "05BB138E07F774FC",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "38B1E59F63445119",
+          type: "item",
+          item: {
+            id: "sophisticatedbackpacks:backpack",
+            count: 1,
+          },
+        },
+      ],
+    },
   ],
   quest_links: [
   ],
