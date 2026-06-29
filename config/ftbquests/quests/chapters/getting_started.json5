@@ -50,16 +50,16 @@
       dependencies: [
         "54426B5BBE263DB4",
       ],
-      id: "A9C4E2B81F6037D5",
+      id: "6639B6CEC400B59F",
       tasks: [
         {
-          id: "B8D5F3C92A7148E6",
+          id: "1F223341E102CF8B",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C7E6A4D83B8259F7",
+          id: "2A58C774324AC98D",
           type: "xp",
           xp: 10,
         },
