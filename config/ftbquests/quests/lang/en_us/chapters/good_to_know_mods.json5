@@ -7,8 +7,6 @@
     "Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity",
   ],
   "task.7A242E28CD3A3800.title": "Read about Gateways to Eternity",
-  "quest.1B88CD62B3AA33C6.title": "Gateway to Eternity",
-  "quest.330C599A54702742.title": "Sophisticated Storage",
   "quest.330C599A54702742.quest_desc": [
     "Sophisticated Storage upgrades vanilla-style storage into tiered chests, barrels, and shulker boxes with many more slots and upgrade slots than a normal chest.",
     "",
@@ -18,5 +16,7 @@
     "",
     "Mod page: https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
   ],
+  "quest.1B88CD62B3AA33C6.title": "Gateway to Eternity",
   "task.05BB138E07F774FC.title": "Read about Sophisticated Storage",
+  "quest.330C599A54702742.title": "Sophisticated Storage",
 }

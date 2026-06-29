@@ -2,7 +2,7 @@
   "generated": "2026-06-29",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 78,
+  "mod_count": 79,
   "mods": [
     {
       "name": "Animal Pens",
@@ -535,6 +535,13 @@
       "jar": "sophisticatedstorage-26.1.2-1.5.84.1898.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
+    },
+    {
+      "name": "The Uncrafting Table",
+      "version": "0.0.4",
+      "jar": "uncraftingtable-0.0.4.jar",
+      "curseforge_id": 1590819,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/the-uncrafting-table"
     },
     {
       "name": "Time in a Bottle",

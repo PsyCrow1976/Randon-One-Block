@@ -6,6 +6,26 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.12] — 2026-06-29
+
+Mod list refresh and quest book updates. **Storage Options** is complete for now.
+
+### Mods
+
+- **Added:** The Uncrafting Table `0.0.4`
+
+### Quests
+
+- **Getting started** — Crafting table, Uncrafting Table, Flying Items, and Good To Know intro quests; early-game tips and rewards in one chapter.
+- **Good to Know Mods** — Sophisticated Storage overview quest (leather backpack reward).
+- **Storage Options** — Chapter finished: backpack and storage tiers, upgrade branches, shulker line, and crafting-material rewards.
+
+### Documentation
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (79 mods).
+
+---
+
 ## [1.0.0.11] — 2026-06-28
 
 Mod list refresh after playtest instance changes (78 mods).

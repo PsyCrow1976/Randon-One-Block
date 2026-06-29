@@ -1,6 +1,6 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 78
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 79
 
 *Last updated: 2026-06-29*
 
@@ -90,5 +90,6 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Sophisticated Backpacks | 26.1.2-3.25.75.1946 | `sophisticatedbackpacks-26.1.2-3.25.75.1946.jar` |
 | Sophisticated Core | 26.1.2-1.4.75.2082 | `sophisticatedcore-26.1.2-1.4.75.2082.jar` |
 | Sophisticated Storage | 26.1.2-1.5.84.1898 | `sophisticatedstorage-26.1.2-1.5.84.1898.jar` |
+| The Uncrafting Table | 0.0.4 | `uncraftingtable-0.0.4.jar` |
 | Time in a Bottle | neoforge-7.1.0 | `tiab-neoforge-7.1.0.jar` |
 | Trade Cycling | neoforge-1.0.21+26.1.2 | `trade-cycling-neoforge-1.0.21+26.1.2.jar` |
