@@ -1,9 +1,16 @@
 {
-  "generated": "2026-06-28",
+  "generated": "2026-06-29",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 73,
+  "mod_count": 78,
   "mods": [
+    {
+      "name": "Animal Pens",
+      "version": "2.4.3",
+      "jar": "animal_pen-neoforge-26.1-2.4.3.jar",
+      "curseforge_id": 1206722,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/animal-pens"
+    },
     {
       "name": "Apotheosis",
       "version": "26.1.2-9.0.2",
@@ -62,10 +69,17 @@
     },
     {
       "name": "BBL Utility",
-      "version": "26.1.2-2.7.10",
-      "jar": "utility-26.1.2-2.7.10.jar",
+      "version": "26.1.2-2.7.11",
+      "jar": "utility-26.1.2-2.7.11.jar",
       "curseforge_id": 649644,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-utility"
+    },
+    {
+      "name": "Bookshelf",
+      "version": "26.1.2.12",
+      "jar": "Bookshelf-neoforge-MC26.1.2-26.1.2.12.jar",
+      "curseforge_id": 228525,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/bookshelf"
     },
     {
       "name": "Cloth Config API (Fabric/Forge/NeoForge)",
@@ -150,6 +164,13 @@
       "jar": "dankstorage-neoforge-26.1-0.jar",
       "curseforge_id": 335673,
       "url": "https://www.curseforge.com/minecraft/mc-mods/dank-storage"
+    },
+    {
+      "name": "Dark Utilities",
+      "version": "26.1.2.2",
+      "jar": "DarkUtilities-neoforge-MC26.1.2-26.1.2.2.jar",
+      "curseforge_id": 242195,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/dark-utilities"
     },
     {
       "name": "Day Count - a day counter HUD (Forge/NeoForge/Fabric)",
@@ -307,8 +328,8 @@
     },
     {
       "name": "Kotlin for Forge",
-      "version": "6.2.0-all",
-      "jar": "kotlinforforge-6.2.0-all.jar",
+      "version": "6.3.0-all",
+      "jar": "kotlinforforge-6.3.0-all.jar",
       "curseforge_id": 351264,
       "url": "https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge"
     },
@@ -390,11 +411,25 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/nirvana-library"
     },
     {
+      "name": "Nyctography",
+      "version": "26.1.2.3",
+      "jar": "Nyctography-neoforge-MC26.1.2-26.1.2.3.jar",
+      "curseforge_id": 1126493,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/nyctography"
+    },
+    {
       "name": "OpenBlocks Elevator",
       "version": "1.16.2",
       "jar": "elevatorid-neoforge-26.1-1.16.2.jar",
       "curseforge_id": 250832,
       "url": "https://www.curseforge.com/minecraft/mc-mods/openblocks-elevator"
+    },
+    {
+      "name": "Pig Pen Cipher",
+      "version": "26.1.2.4",
+      "jar": "PigPen-neoforge-MC26.1.2-26.1.2.4.jar",
+      "curseforge_id": 396234,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/pig-pen-cipher"
     },
     {
       "name": "Placebo",
@@ -446,6 +481,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/rhino"
     },
     {
+      "name": "Runelic",
+      "version": "26.1.2.3",
+      "jar": "Runelic-neoforge-MC26.1.2-26.1.2.3.jar",
+      "curseforge_id": 393149,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/runelic"
+    },
+    {
       "name": "Searchables",
       "version": "1.0.2",
       "jar": "Searchables-neoforge-26.1.2-1.0.2.jar",
@@ -482,29 +524,22 @@
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.74.2074",
-      "jar": "sophisticatedcore-26.1.2-1.4.74.2074.jar",
+      "version": "26.1.2-1.4.75.2082",
+      "jar": "sophisticatedcore-26.1.2-1.4.75.2082.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.83.1896",
-      "jar": "sophisticatedstorage-26.1.2-1.5.83.1896.jar",
+      "version": "26.1.2-1.5.84.1898",
+      "jar": "sophisticatedstorage-26.1.2-1.5.84.1898.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },
     {
-      "name": "The Uncrafting Table",
-      "version": "0.0.3",
-      "jar": "uncraftingtable-0.0.3.jar",
-      "curseforge_id": 1590819,
-      "url": "https://www.curseforge.com/minecraft/mc-mods/the-uncrafting-table"
-    },
-    {
       "name": "Time in a Bottle",
-      "version": "neoforge-7.0.0",
-      "jar": "tiab-neoforge-7.0.0.jar",
+      "version": "neoforge-7.1.0",
+      "jar": "tiab-neoforge-7.1.0.jar",
       "curseforge_id": 895919,
       "url": "https://www.curseforge.com/minecraft/mc-mods/time-in-a-bottle"
     },

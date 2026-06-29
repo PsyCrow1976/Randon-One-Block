@@ -6,6 +6,36 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.11] — 2026-06-28
+
+Mod list refresh after playtest instance changes (78 mods).
+
+### Mods
+
+- **Added:** Animal Pens `2.4.3`
+- **Added:** BBL Utility `26.1.2-2.7.11`
+- **Added:** Bookshelf `26.1.2.12`
+- **Added:** Dark Utilities `26.1.2.2`
+- **Added:** Kotlin for Forge `6.3.0-all`
+- **Added:** Nyctography `26.1.2.3`
+- **Added:** Pig Pen Cipher `26.1.2.4`
+- **Added:** Runelic `26.1.2.3`
+- **Added:** Sophisticated Core `26.1.2-1.4.75.2082`
+- **Added:** Sophisticated Storage `26.1.2-1.5.84.1898`
+- **Added:** Time in a Bottle `neoforge-7.1.0`
+- **Removed:** BBL Utility `26.1.2-2.7.10`
+- **Removed:** Kotlin for Forge `6.2.0-all`
+- **Removed:** Sophisticated Core `26.1.2-1.4.74.2074`
+- **Removed:** Sophisticated Storage `26.1.2-1.5.83.1896`
+- **Removed:** The Uncrafting Table `0.0.3`
+- **Removed:** Time in a Bottle `neoforge-7.0.0`
+
+### Documentation
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (78 mods).
+
+---
+
 ## [1.0.0.10] — 2026-06-28
 
 New **Storage Options** quest chapter — Sophisticated Backpacks progression and upgrades.
