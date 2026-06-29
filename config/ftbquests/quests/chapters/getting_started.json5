@@ -39,6 +39,34 @@
     },
     {
       icon: {
+        id: "ftbquests:custom_icon",
+        count: 1,
+        components: {
+          "ftbquests:icon": "ftbquests:textures/gui/info.png",
+        },
+      },
+      x: -2.5,
+      y: 0.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "A9C4E2B81F6037D5",
+      tasks: [
+        {
+          id: "B8D5F3C92A7148E6",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C7E6A4D83B8259F7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
         id: "minecraft:bedrock",
         count: 1,
       },
@@ -130,24 +158,24 @@
     },
     {
       icon: {
-        id: "refinedstorage:creative_controller",
+        id: "minecraft:elytra",
         count: 1,
       },
-      x: 6.0,
-      y: 0.0,
+      x: 0.0,
+      y: -3.0,
       dependencies: [
         "54426B5BBE263DB4",
       ],
-      id: "F2A8B4C91D3E7056",
+      id: "51521D28751E05D4",
       tasks: [
         {
-          id: "E3B9C5D02E4F8167",
+          id: "7B73F034EBE58ADA",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "D4CA6E13F5A09278",
+          id: "3C5BAA5D90E690FF",
           type: "xp",
           xp: 10,
         },
