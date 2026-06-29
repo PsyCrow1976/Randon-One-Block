@@ -170,7 +170,7 @@ meta = {
 cmd = [
     "curl", "-sS", "-f", "-X", "POST",
     "-H", f"X-Api-Token: {token}",
-    "-F", f"metadata={json.dumps(meta)};type=application/json",
+    "--form-string", f"metadata={json.dumps(meta, ensure_ascii=False)}",
     "-F", f"file=@{dist};type=application/zip",
     f"https://minecraft.curseforge.com/api/projects/{project_id}/upload-file",
 ]
