@@ -17,6 +17,8 @@
       },
       x: 0.0,
       y: 0.0,
+      shape: "rsquare",
+      size: 2.0,
       id: "54426B5BBE263DB4",
       tasks: [
         {
@@ -41,10 +43,12 @@
         count: 1,
       },
       x: 0.0,
-      y: 1.5,
+      y: 2.5,
+      shape: "gear",
       dependencies: [
         "54426B5BBE263DB4",
       ],
+      size: 1.5,
       can_repeat: true,
       id: "7A5DE9240428A708",
       tasks: [
@@ -68,6 +72,9 @@
       },
       x: 2.0,
       y: 0.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
       id: "4137D6CD3FC01F40",
       tasks: [
         {
@@ -94,6 +101,11 @@
       },
       x: 4.0,
       y: 0.0,
+      shape: "octagon",
+      dependencies: [
+        "4137D6CD3FC01F40",
+      ],
+      size: 1.5,
       id: "4A1F5EA13AF49DDA",
       tasks: [
         {
@@ -121,8 +133,8 @@
         id: "refinedstorage:creative_controller",
         count: 1,
       },
-      x: 2.0,
-      y: 1.5,
+      x: 6.0,
+      y: 0.0,
       dependencies: [
         "54426B5BBE263DB4",
       ],
