@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.25] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlock** — Completing **Leather Backpack** (`1D5A582F52D7CB30`, Storage Options) unlocks `sophisticatedstorage` blocks in the random pool for your team. Replaces the old Good-to-Know Mods GTKM quest mapping.
+
+---
+
 ## [1.0.0.24] — 2026-06-30
 
 ### Random One Block

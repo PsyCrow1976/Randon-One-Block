@@ -302,7 +302,7 @@ Edit [`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_o
     mods_with_minable_blocks: ["minecraft", "elevatorid", "..."]  // catalog from master pool
   },
   quest_unlock_map: {
-    "330C599A54702742": "sophisticatedstorage"   // quest hex id -> mod namespace
+    "1D5A582F52D7CB30": "sophisticatedstorage"   // Leather Backpack -> mod namespace
   }
 }
 ```
