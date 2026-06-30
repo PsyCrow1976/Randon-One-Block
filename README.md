@@ -154,7 +154,7 @@ Mining the pack’s **random block** (center dirt on `oneblock_island`) replaces
 |---------|----------|
 | Config (weights, blacklist, active position) | `kubejs/config/random_one_block.json` |
 | Script | `kubejs/server_scripts/random_one_block.js` |
-| Pool dump (generated on reload) | `kubejs/config/random_one_block_pool.json`, `random_one_block_pool.txt` |
+| Pool debug (when `debug_logging: true`) | `logs/kubejs/server.log` |
 
 ### Config flags (`random_one_block.json`)
 
@@ -226,9 +226,7 @@ After `/reload` or `/randomblock reload`, check `logs/kubejs/server.log`:
 [RandomOneBlock] Block pool ready: 2102 unique blocks, total weight 2104
 ```
 
-Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, and auto setbelow trace lines.
-
-Full block lists are written to `kubejs/config/random_one_block_pool.txt` (tab-separated) and `.json`. These files are gitignored and regenerated on each pool rebuild.
+Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, mod-pool debug (`/randomblock pools debug`), and auto setbelow trace lines. All of that goes to `logs/kubejs/server.log` — no pool dump files are written.
 
 ### Mining log (`roll=X/Y`)
 

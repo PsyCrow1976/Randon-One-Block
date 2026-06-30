@@ -2,8 +2,7 @@
 // Randon One Block — single-position random block generator
 
 const CONFIG_FILE = 'random_one_block.json'
-const POOL_DUMP_JSON = 'config/random_one_block_pool.json'
-const POOL_DUMP_TEXT = 'config/random_one_block_pool.txt'
+
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 const $LiquidBlock = Java.loadClass('net.minecraft.world.level.block.LiquidBlock')
 const $FallingBlock = Java.loadClass('net.minecraft.world.level.block.FallingBlock')
@@ -497,32 +496,20 @@ function dumpPoolReport(verbose) {
   if (!STATE.pool || !STATE.pool.length) return
 
   var i = 0
-  var blocks = []
-  var textLines = []
   var preview = []
   var testPicks = []
 
-  textLines.push('# RandomOneBlock block pool')
-  textLines.push('# unique_blocks: ' + STATE.pool.length)
-  textLines.push('# total_weight: ' + STATE.totalWeight)
-  textLines.push('# id\tweight')
+  if (!isDebugLoggingEnabled()) return
+
+  debugLog(
+    '[RandomOneBlock] Pool dump: ' + STATE.pool.length + ' unique blocks, total weight ' + STATE.totalWeight
+  )
 
   for (i = 0; i < STATE.pool.length; i++) {
-    blocks.push({ id: STATE.pool[i].id, weight: STATE.pool[i].weight })
-    textLines.push(STATE.pool[i].id + '\t' + STATE.pool[i].weight)
     if (i < 30) preview.push(STATE.pool[i].id)
   }
 
-  JsonIO.write(POOL_DUMP_JSON, {
-    unique_blocks: STATE.pool.length,
-    total_weight: STATE.totalWeight,
-    blocks: blocks,
-    text_lines: textLines
-  })
-
-  debugLog('[RandomOneBlock] Pool dumped to kubejs/' + POOL_DUMP_JSON + ' (includes text_lines)')
-
-  if (verbose && isDebugLoggingEnabled()) {
+  if (verbose) {
     debugLog(`[RandomOneBlock] Pool preview (first 30): ${preview.join(', ')}`)
 
     for (i = 0; i < 8; i++) {
@@ -1805,7 +1792,8 @@ function cmdReload(source) {
   }
   tell(
     source,
-    `§aReloaded random block config (${STATE.pool.length} master blocks).${summary} Pool saved to §fkubejs/config/${POOL_DUMP_TEXT}`
+    `§aReloaded random block config (${STATE.pool.length} master blocks).${summary}` +
+      (isDebugLoggingEnabled() ? ' §7Pool details in §flogs/kubejs/server.log' : '')
   )
   return 1
 }
@@ -1922,15 +1910,16 @@ function cmdPools(source, args) {
 
   if (sub === 'debug') {
     var debugResult = pools.dumpModPoolsDebug(summary.scopeId)
-    var debugPath =
-      debugResult && debugResult.path
-        ? debugResult.path
-        : 'kubejs/config/random_one_block_mod_pools_debug.json'
-    tell(source, '§aMod pool debug test file written to §f' + debugPath)
-    if (!debugResult || !debugResult.path) {
-      tell(source, '§cWrite failed — see logs/kubejs/server.log for details.')
+    if (debugResult && debugResult.logged) {
+      tell(source, '§aMod pool debug report written to §flogs/kubejs/server.log')
+      return 1
     }
-    return debugResult && debugResult.path ? 1 : 0
+    tell(
+      source,
+      '§eEnable §fdebug_logging§e in §fkubejs/config/random_one_block.json §ethen run this again.'
+    )
+    tell(source, '§7Output goes to §flogs/kubejs/server.log')
+    return 0
   }
 
   if (sub === 'list') {

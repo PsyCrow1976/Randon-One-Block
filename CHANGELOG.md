@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.18] — 2026-06-30
+
+### Random One Block
+
+- **Debug output** — Pool and mod-pool debug no longer write files. With `"debug_logging": true`, `/randomblock pools debug` and pool rebuild dump to **`logs/kubejs/server.log`** instead of `kubejs/config/`.
+
+---
+
 ## [1.0.0.17] — 2026-06-30
 
 ### Random One Block

@@ -49,7 +49,7 @@
 
   "haven_island_distance": 8192,
 
-  "debug_logging": false,
+  "debug_logging": true,
 
   "require_full_collision_cube": true,
 
@@ -75,6 +75,6 @@
     "/randomblock poolenable refinedstorage true",
     "/randomblock pools",
     "/randomblock pools list",
-    "/randomblock pools debug (writes kubejs/config/random_one_block_mod_pools_debug.json)"
+    "/randomblock pools debug (logs to logs/kubejs/server.log when debug_logging is true)"
   ]
 }

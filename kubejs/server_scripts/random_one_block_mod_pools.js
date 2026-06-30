@@ -3,8 +3,7 @@
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const MOD_POOLS_UNLOCK_DIR = 'data/random_one_block_unlocks'
-// JsonIO.write bare names land in the instance root; prefix config/ for kubejs/config/.
-const MOD_POOLS_DEBUG_FILE = 'config/random_one_block_mod_pools_debug.json'
+const MAIN_CONFIG_FILE = 'random_one_block.json'
 const VANILLA_NAMESPACE = 'minecraft'
 
 const DEFAULT_MOD_POOLS_CONFIG = {
@@ -35,26 +34,13 @@ const MOD_POOL_STATE = {
   teamPoolCache: {}
 }
 
-function modPoolsDebugPathLabel(filename) {
-  var name = String(filename)
-  if (name.indexOf('config/') === 0) return 'kubejs/' + name
-  if (name.indexOf('data/') === 0) return 'kubejs/' + name
-  return name
+function isModPoolsDebugLoggingEnabled() {
+  var config = JsonIO.read(MAIN_CONFIG_FILE)
+  return config != null && config.debug_logging === true
 }
 
-function writeKubeJsConfigJson(filename, payload) {
-  var data = payload == null ? {} : payload
-
-  try {
-    JsonIO.write(String(filename), data)
-    var label = modPoolsDebugPathLabel(filename)
-    console.info('[RandomOneBlock] Wrote JSON file: ' + label)
-    return label
-  } catch (e) {
-    var err = e && e.javaException ? String(e.javaException) : String(e)
-    console.error('[RandomOneBlock] Failed to write JSON file ' + filename + ': ' + err)
-    return null
-  }
+function modPoolsDebugLog(message) {
+  if (isModPoolsDebugLoggingEnabled()) console.info(message)
 }
 
 function modPoolsCloneConfig(config) {
@@ -600,9 +586,38 @@ function buildModPoolReportRows(scopeId) {
 }
 
 function dumpModPoolsDebug(scopeId) {
-  // Minimal write test — empty object verifies JsonIO path (kubejs/config/).
-  var writtenPath = writeKubeJsConfigJson(MOD_POOLS_DEBUG_FILE, {})
-  return { rows: [], path: writtenPath, scope_id: scopeId }
+  var rows = buildModPoolReportRows(scopeId)
+  var effective = buildEffectivePool(scopeId)
+  var i = 0
+
+  if (!isModPoolsDebugLoggingEnabled()) {
+    return { rows: rows, logged: false, scope_id: scopeId }
+  }
+
+  modPoolsDebugLog('[RandomOneBlock] === Mod pool debug report ===')
+  modPoolsDebugLog('[RandomOneBlock] scope_id: ' + scopeId)
+  modPoolsDebugLog('[RandomOneBlock] effective_blocks: ' + effective.pool.length)
+  modPoolsDebugLog('[RandomOneBlock] effective_weight: ' + effective.totalWeight)
+  modPoolsDebugLog('[RandomOneBlock] master_mods: ' + rows.length)
+  modPoolsDebugLog('[RandomOneBlock] display_name | namespace | blocks | status | effective')
+
+  for (i = 0; i < rows.length; i++) {
+    modPoolsDebugLog(
+      '[RandomOneBlock] ' +
+        rows[i].display_name +
+        ' | ' +
+        rows[i].namespace +
+        ' | ' +
+        rows[i].blocks +
+        ' | ' +
+        rows[i].status +
+        ' | ' +
+        (rows[i].effective ? 'ON' : 'OFF')
+    )
+  }
+
+  modPoolsDebugLog('[RandomOneBlock] === End mod pool debug report ===')
+  return { rows: rows, logged: true, scope_id: scopeId }
 }
 
 function reloadModPoolsConfig() {
@@ -697,6 +712,5 @@ var RandonOneBlockPools = {
   buildModPoolReportRows: buildModPoolReportRows,
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
-  resolveKnownModNamespace: resolveKnownModNamespace,
-  writeKubeJsConfigJson: writeKubeJsConfigJson
+  resolveKnownModNamespace: resolveKnownModNamespace
 }

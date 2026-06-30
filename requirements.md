@@ -135,13 +135,13 @@ Use **`ServerEvents.basicCommand('randomblock', ...)`** with **`event.input`** s
 
 ### Pool verification (on every pool rebuild)
 
-Script writes dumps and logs diagnostics:
+Script logs diagnostics (pool dumps are log-only when `debug_logging` is on):
 
 | Output | Path |
 |--------|------|
-| JSON pool dump | `kubejs/config/random_one_block_pool.json` (gitignored) |
-| Text pool dump | `kubejs/config/random_one_block_pool.txt` (gitignored, `id<TAB>weight` per line) |
-| Server log | `<instance>/logs/kubejs/server.log` and `latest.log` |
+| Pool preview / test picks | `<instance>/logs/kubejs/server.log` (requires `debug_logging: true`) |
+| Mod pool debug (`/randomblock pools debug`) | `<instance>/logs/kubejs/server.log` (requires `debug_logging: true`) |
+| Always-on lines | `latest.log` — pool ready, break rolls, auto setbelow |
 
 Expect log lines like:
 
@@ -193,8 +193,8 @@ These were learned from production debugging; violating them causes reload or co
 | 23 | **No `/randomblock give`** — removed; do not re-add (test command was unused). |
 | 24 | **Mod pool gating** — default pool is **vanilla only** plus `starter_exceptions` in `random_one_block_mod_pools.json`. Other namespaces unlock per **team** via `quest_unlock_map` / `poolenable`. Do not regress to global full-pool picks for gameplay breaks. |
 | 25 | **No `global.RandonOneBlockPools`** — cross-script API uses shared-scope `var RandonOneBlockPools` in `random_one_block_mod_pools.js` (same unmodifiable-`global` rule as #1). |
-| 26 | **No `java.nio.file.Files`** — blocked by KubeJS class filter. Use `JsonIO.write` for pool/debug dumps (`.json` only). |
-| 27 | **JsonIO paths** — bare filenames write to the **instance root**. Prefix `config/` or `data/` so files land under `kubejs/config/` or `kubejs/data/`. |
+| 26 | **No `java.nio.file.Files`** — blocked by KubeJS class filter. Pool/mod debug output goes to **`logs/kubejs/server.log`** via `debugLog()` / `modPoolsDebugLog()` when `debug_logging: true` — do not write pool dump files. |
+| 27 | **JsonIO paths** — bare filenames write to the **instance root**. Prefix `config/` or `data/` so persistence files land under `kubejs/config/` or `kubejs/data/` (e.g. team unlocks). |
 
 ---
 
@@ -359,10 +359,10 @@ Before considering Random One Block work complete:
 |------|-------|
 | Change weights / blacklist | `kubejs/config/random_one_block.json` |
 | Change mechanic / commands | `kubejs/server_scripts/random_one_block.js` |
-| Debug pool contents | `kubejs/config/random_one_block_pool.txt` (after reload) |
+| Debug pool / mod pools | Set `debug_logging: true`, then `/randomblock reload` or `/randomblock pools debug` — read `logs/kubejs/server.log` |
 | Island layout | `config/HavenSkyblockBuilder/`, `config/haven_skyblock_builder-common.toml` |
 | Quests | `config/ftbquests/quests/` (create when ready) |
-| Ignore generated pool dumps | `.gitignore` (already listed) |
+| Team mod unlock persistence | `kubejs/data/random_one_block_unlocks/` (gitignored) |
 
 ---
 
