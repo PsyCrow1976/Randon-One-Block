@@ -4,7 +4,16 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.1.x`** — bump patch per change (`1.0.1.1`, `1.0.1.2`, …). Milestone **`1.0.1.0`** = first mod-pool gating release. Keep `branding/project-metadata.json` in sync.
+**Versioning:** **`1.0.1.x`** — for **every** change in this track: add a new `## [1.0.1.N]` section here, bump `branding/project-metadata.json` to the same version, then commit. Milestone **`1.0.1.0`** = first mod-pool gating CurseForge release.
+
+---
+
+## [1.0.1.2] — 2026-06-30
+
+### FTB Quests
+
+- **Getting Started** — New **Random Pools** read quest: explains tiered mod pools (vanilla-heavy start, more mods unlock as you complete quests).
+- **Getting Started** — New **Crafting Table on a Stick** quest with description for portable crafting on the island. Quest icons added in chapter layout.
 
 ---
 

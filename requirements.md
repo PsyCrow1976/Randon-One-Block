@@ -17,6 +17,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 5. **After changes:** User runs `/reload` in CurseForge; verify `logs/kubejs/server.log` for pool size, test picks, and break logs.
 6. **Repo is source of truth** — `kubejs/` and `config/` symlink into the CurseForge instance via `./link-instance.sh`.
 7. **Scope:** Prefer small diffs. Do not refactor working patterns. Do not commit generated pool dumps unless asked.
+8. **`1.0.1.x` changelog** — every change gets a new `CHANGELOG.md` entry and matching `branding/project-metadata.json` version before commit.
 
 ---
 
