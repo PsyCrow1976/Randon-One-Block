@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.5] — 2026-06-30
+
+### Random One Block
+
+- **Config path fix** — Pack JSON now resolves via `GAMEDIR/kubejs/config/` first (KubeJS 8 `CONFIG` could point at the instance root). Runtime files (`team_unlocks`, `team_counters`, etc.) auto-create on first load instead of warning.
+
+---
+
 ## [1.0.2.4] — 2026-06-30
 
 ### Random One Block

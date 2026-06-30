@@ -15,6 +15,7 @@ kubejs/config/random_one_block_pool.json
 kubejs/config/random_one_block_pool.txt
 kubejs/config/random_one_block_mod_pools_debug.json
 kubejs/config/random_one_block_team_unlocks.json
+kubejs/config/random_one_block_team_counters.json
 
 # Exported branding raster (keep SVG source in git)
 branding/logo/logo.png

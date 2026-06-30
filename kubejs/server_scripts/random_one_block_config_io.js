@@ -11,13 +11,62 @@ var RANDOM_ONE_BLOCK_CONFIG_FILES = [
   'random_one_block_pool.txt'
 ]
 
-function robKubejsConfigPath(filename) {
-  try {
-    var $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
-    // KubeJS 8.x: CONFIG may resolve to the instance root — pack files live in kubejs/config/
-    return String($KubeJSPaths.DIRECTORY.resolve('config').resolve(String(filename)).toAbsolutePath())
-  } catch (ignored) {}
+var RANDOM_ONE_BLOCK_RUNTIME_CONFIG_FILES = {
+  'random_one_block_team_unlocks.json': {},
+  'random_one_block_team_counters.json': {},
+  'random_one_block_mod_pools_debug.json': {},
+  'random_one_block_pool.json': {}
+}
 
+function robIsRuntimeConfigFile(filename) {
+  return RANDOM_ONE_BLOCK_RUNTIME_CONFIG_FILES.hasOwnProperty(String(filename))
+}
+
+function robDefaultRuntimeConfig(filename) {
+  var name = String(filename)
+  if (!robIsRuntimeConfigFile(name)) return null
+  return RANDOM_ONE_BLOCK_RUNTIME_CONFIG_FILES[name]
+}
+
+function robKubejsConfigPath(filename) {
+  var name = String(filename)
+  var $KubeJSPaths = null
+  var candidates = []
+  var i = 0
+  var pathStr = ''
+
+  try {
+    $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
+  } catch (ignored) {
+    return null
+  }
+
+  // KubeJS 8.x: CONFIG/DIRECTORY can resolve to the instance root on some builds.
+  // Always prefer an explicit kubejs/config path under GAMEDIR.
+  try {
+    candidates.push($KubeJSPaths.GAMEDIR.resolve('kubejs').resolve('config').resolve(name).toAbsolutePath())
+  } catch (ignored2) {}
+
+  try {
+    if ($KubeJSPaths.CONFIG) {
+      candidates.push($KubeJSPaths.CONFIG.resolve(name).toAbsolutePath())
+    }
+  } catch (ignored3) {}
+
+  try {
+    if ($KubeJSPaths.DIRECTORY) {
+      candidates.push($KubeJSPaths.DIRECTORY.resolve('config').resolve(name).toAbsolutePath())
+    }
+  } catch (ignored4) {}
+
+  for (i = 0; i < candidates.length; i++) {
+    pathStr = String(candidates[i])
+    if (pathStr.indexOf('/kubejs/config/') >= 0 || pathStr.indexOf('\\kubejs\\config\\') >= 0) {
+      return pathStr
+    }
+  }
+
+  if (candidates.length) return String(candidates[0])
   return null
 }
 
@@ -32,10 +81,17 @@ function robReadKubejsConfigJson(filename) {
   var config = JsonIO.read(path)
   if (config) return config
 
+  var runtimeDefault = robDefaultRuntimeConfig(filename)
+  if (runtimeDefault != null) {
+    robWriteKubejsConfigJson(filename, runtimeDefault)
+    console.info('[RandomOneBlock] Created runtime config at ' + path)
+    return runtimeDefault
+  }
+
   console.warn(
     '[RandomOneBlock] Config not found at ' +
       path +
-      ' — pack configs must live in kubejs/config/ (delete any copy at the instance root).'
+      ' — expected under kubejs/config/ in the pack.'
   )
   return null
 }
