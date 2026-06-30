@@ -21,6 +21,17 @@ Add shaped 3×3 compression recipes so blocks that only exist as “crafted” i
 - [ ] Audit other **craft-only storage/decorative blocks** and add recipes where missing
 - [x] Document custom block workflow in **`howtocustomblocks.md`**
 
+## Random One Block — mine counter rewards
+
+Team-scoped milestones (not per-player) when the **Randon Mined** counter hits:
+
+- [ ] **100** blocks mined — reward TBD
+- [ ] **1,000** blocks mined — reward TBD
+- [ ] **5,000** blocks mined — reward TBD
+- [ ] **10,000** blocks mined — reward TBD
+- [ ] **50,000** blocks mined — reward TBD
+- [ ] **100,000** blocks mined — reward TBD
+
 ## Random block tiers (progression gating)
 
 - [x] **Mod pool gating** — vanilla default + `starter_exceptions`; per-team unlocks via `quest_unlock_map` / `poolenable` ([`random_one_block_mod_pools.json`](kubejs/config/random_one_block_mod_pools.json))

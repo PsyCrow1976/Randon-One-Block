@@ -1,6 +1,6 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 80
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 79
 
 *Last updated: 2026-06-30*
 
@@ -57,7 +57,6 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Haven Skyblock Builder | 26.1.2-0.2.0 | `HavenSkyblockBuilder-26.1.2-0.2.0.jar` |
 | Iron Furnaces (Fabric & NeoForge) | 26.1-1.1.0 | `ironfurnacesneoforge-26.1-1.1.0.jar` |
 | Jade 🔍 | NeoForge-26.1.8 | `Jade-mc26.1-NeoForge-26.1.8.jar` |
-| JourneyMap | 6.0.0 | `journeymap-neoforge-26.1.2-6.0.0.jar` |
 | Just Enough Items (JEI) | 26.1.2-neoforge-29.6.2.38 | `jei-26.1.2-neoforge-29.6.2.38.jar` |
 | Just Enough Resources (JER) | 1.10.0.35 | `JustEnoughResources-NeoForge-26.1.2-1.10.0.35.jar` |
 | Konkrete | neoforge_1.10.1_MC_26.1.1 | `konkrete_neoforge_1.10.1_MC_26.1.1.jar` |

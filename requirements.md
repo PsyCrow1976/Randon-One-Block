@@ -2,7 +2,7 @@
 
 **Read this file first** at the start of a new session (human or AI) to understand what the project is, what must keep working, what is required next, and which technical constraints must not be broken.
 
-**Last playtest-verified:** 2026-06-30 — `oneblock_island` create, auto setbelow, mod pool gating + quest unlocks, custom `kubejs` compression blocks, `/randomblock pools` commands. Treat this flow as the regression baseline.
+**Last playtest-verified:** 2026-06-30 — `oneblock_island` create, auto setbelow, mod pool gating + quest unlocks, custom `kubejs` compression blocks, `/randomblock pools` commands, **Randon Mined** team counter overlay. Treat this flow as the regression baseline.
 
 Also read [`README.md`](README.md) for player-facing docs and quick start.
 
@@ -17,7 +17,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 5. **After changes:** User runs `/reload` in CurseForge; verify `logs/kubejs/server.log` for pool size, test picks, and break logs.
 6. **Repo is source of truth** — `kubejs/` and `config/` symlink into the CurseForge instance via `./link-instance.sh`.
 7. **Scope:** Prefer small diffs. Do not refactor working patterns. Do not commit generated pool dumps unless asked.
-8. **`1.0.1.x` changelog** — every change gets a new `CHANGELOG.md` entry and matching `branding/project-metadata.json` version before commit.
+8. **`1.0.3.x` changelog** — every change gets a new `CHANGELOG.md` entry and matching `branding/project-metadata.json` version before commit.
 
 ---
 
@@ -387,6 +387,7 @@ Before considering Random One Block work complete:
 | Island layout | `config/HavenSkyblockBuilder/`, `config/haven_skyblock_builder-common.toml` |
 | Quests | `config/ftbquests/quests/` (create when ready) |
 | Team mod unlock persistence | `kubejs/config/random_one_block_team_unlocks.json` (gitignored) |
+| Team mine counter | `kubejs/server_scripts/random_one_block_team_counters.js`, `kubejs/client_scripts/random_one_block_counter_hud.js`, `kubejs/config/random_one_block_team_counters.json` (gitignored) |
 
 ---
 
@@ -403,16 +404,15 @@ Before considering Random One Block work complete:
 
 | Phase | Version | When |
 |-------|---------|------|
-| Development | `1.0.0.x` | Bump **one** patch step (`…12` → `…13`) for each meaningful change (quests, KubeJS, configs, docs, tooling). |
-| Milestone release | **`1.0.1.0`** | Publish to CurseForge when the current work track is done (todo items, recipes, tier gating, etc.). |
+| Development | `1.0.3.x` | Bump patch for each meaningful change (KubeJS, quests, configs, docs). |
+| Milestone release | **`1.0.3.0`** | CurseForge publish — team mine counter overlay (current). |
 
 **On every change:**
 
-1. Add a new `## [1.0.0.x] — YYYY-MM-DD` section at the top of [`CHANGELOG.md`](CHANGELOG.md) (below the header).
+1. Add a new `## [1.0.3.x] — YYYY-MM-DD` section at the top of [`CHANGELOG.md`](CHANGELOG.md) (below the header).
 2. Set `"version"` in [`branding/project-metadata.json`](branding/project-metadata.json) to the same string.
 3. Commit changelog + metadata together with the change (or immediately after).
-4. Do **not** skip version numbers on CurseForge — merge changelog entries if needed before publish (as with 1.0.0.12 → 1.0.0.11).
-5. CurseForge publish stays at **`1.0.1.0`** until the author requests upload; dev versions are git-only until then.
+4. Merge patch entries into a milestone section before CurseForge upload when appropriate.
 
 ---
 

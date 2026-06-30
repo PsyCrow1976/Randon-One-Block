@@ -4,7 +4,25 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.2.x`** — for **every** change in this track: add a new `## [1.0.2.N]` section here, bump `branding/project-metadata.json` to the same version, then commit. Milestone **`1.0.2.0`** = initial Ex Deorum quest book. Previous track **`1.0.1.x`** — milestone **`1.0.1.0`** = first mod-pool gating CurseForge release.
+**Versioning:** **`1.0.3.x`** — patch bumps during development; milestone **`1.0.3.0`** = team mine counter overlay (CurseForge). Previous milestone **`1.0.2.0`** = Ex Deorum quest book. Track **`1.0.1.x`** — **`1.0.1.0`** = mod-pool gating.
+
+---
+
+## [1.0.3.0] — 2026-06-30
+
+**Milestone** — team **Randon Mined** counter and overlay (CurseForge release).
+
+### Random One Block
+
+- **Team mine counter** — Tracks how many Randon center blocks your **island team** has mined (shared count, not per-player). Persists in `kubejs/config/random_one_block_team_counters.json`.
+- **Randon Mined overlay** — Shows **Randon Mined :** plus your team total above the hotbar (MC 26 `setOverlayMessage`). Toggle with `randon_counter_hud.enabled` in `kubejs/config/random_one_block.json`.
+- **`/randomblock counter`** — Prints team scope, mined total, and overlay on/off; refreshes the on-screen count.
+- **Config path fix** — Pack JSON resolves under `GAMEDIR/kubejs/config/`; runtime files (`team_unlocks`, `team_counters`, etc.) auto-create on first load.
+- **Instance linking** — `link-instance.sh` and `clean-stale-instance-config.sh` remove stray instance-root pack configs from **both** CurseForge instances by default.
+
+### Mods
+
+- **`modlist.md` / `modlist.json`** — Refreshed from the playtest instance (**79** mods). **Removed:** JourneyMap.
 
 ---
 

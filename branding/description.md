@@ -31,7 +31,8 @@ Progression is light:
 1. Create a world with preset **`haven_skyblock_builder:skyblock_world`**
 2. Run: `/havensb island create oneblock_island My Island`
 3. Mine the **center dirt** on the small pyramid — it will keep re-rolling random blocks
-4. Open the **FTB Quest book** in your hotbar for starter tasks
+4. Watch **Randon Mined :** above the hotbar — your **team** total for center blocks broken
+5. Open the **FTB Quest book** in your hotbar for starter tasks
 
 Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** quest to reset the center to dirt.
 
@@ -58,7 +59,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 |--|--|
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.76 |
-| Mods | 73 |
+| Mods | 79 |
 
 ---
 

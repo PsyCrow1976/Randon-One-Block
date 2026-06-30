@@ -192,6 +192,7 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | `/randomblock info` | Show registered random block coords + block id + pool size |
 | `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
 | `/randomblock reload` | Reload config, mod-pool config, and rebuild block pool |
+| `/randomblock counter` | Show your team’s mined block total and refresh the **Randon Mined** overlay |
 | `/randomblock poolenable <mod> <true\|false>` | Enable or disable a mod namespace in **your team’s** effective pool (persisted). Starter exceptions cannot be disabled. Example: `/randomblock poolenable refinedstorage true` |
 | `/randomblock pools` | Summary: effective block count, master pool size, mod count, and subcommand help |
 | `/randomblock pools list` | Paginated list of mods (status, display name, namespace, block count, ON/OFF). Optional page: `pools list 2` |
@@ -211,6 +212,13 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | `locked` | In the master pool but not in your team’s effective pool yet |
 
 Config: `kubejs/config/random_one_block_mod_pools.json`. Unlock scope is **per team** (`haven-…` after island create). See [`howtoquest.md`](howtoquest.md) for wiring new quest unlocks.
+
+### Team mine counter (Randon Mined)
+
+- **Per island team** — all players on the same Haven/FTB team share one count (not per-player).
+- **Overlay** — **Randon Mined :** plus the total appears above the hotbar while you play.
+- **Disable** — set `randon_counter_hud.enabled` to `false` in `kubejs/config/random_one_block.json`, then `/randomblock reload`.
+- **Persistence** — `kubejs/config/random_one_block_team_counters.json` (runtime; auto-created).
 
 On `oneblock_island` create, setbelow runs automatically after `auto_setbelow_delay_ticks` (default 40 ticks ≈ 2 s) once the team + template are detected (polls every 5 ticks). Log line:
 

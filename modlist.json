@@ -2,7 +2,7 @@
   "generated": "2026-06-30",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 80,
+  "mod_count": 79,
   "mods": [
     {
       "name": "Animal Pens",
@@ -304,13 +304,6 @@
       "jar": "Jade-mc26.1-NeoForge-26.1.8.jar",
       "curseforge_id": 324717,
       "url": "https://www.curseforge.com/minecraft/mc-mods/jade"
-    },
-    {
-      "name": "JourneyMap",
-      "version": "6.0.0",
-      "jar": "journeymap-neoforge-26.1.2-6.0.0.jar",
-      "curseforge_id": 32274,
-      "url": "https://www.curseforge.com/minecraft/mc-mods/journeymap"
     },
     {
       "name": "Just Enough Items (JEI)",
