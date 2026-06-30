@@ -4,7 +4,19 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.1.x`** — for **every** change in this track: add a new `## [1.0.1.N]` section here, bump `branding/project-metadata.json` to the same version, then commit. Milestone **`1.0.1.0`** = first mod-pool gating CurseForge release.
+**Versioning:** **`1.0.2.x`** — for **every** change in this track: add a new `## [1.0.2.N]` section here, bump `branding/project-metadata.json` to the same version, then commit. Milestone **`1.0.2.0`** = initial Ex Deorum quest book. Previous track **`1.0.1.x`** — milestone **`1.0.1.0`** = first mod-pool gating CurseForge release.
+
+---
+
+## [1.0.2.0] — 2026-06-30
+
+**Milestone** — initial **Ex Deorum** quest book chapter.
+
+### FTB Quests
+
+- **Ex Deorum** — New quest chapter with **78** item quests covering the full Ex Deorum skyblock loop: compressed blocks, crushing, sieving, ore chunks, mesh and hammer tiers, watering cans, oak barrel/sieve/crucible stations, and mechanical automation.
+- **Quest descriptions** — Every quest includes detailed `quest_desc` text (crafting, sieving, and island tips).
+- **Random pool unlock** — Completing the **Compressed Dirt** quest unlocks the **Ex Deorum** mod namespace in the random one-block pool for your team.
 
 ---
 
