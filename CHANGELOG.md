@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.20] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock pools debug`** — Always prints the mod list in chat (paginated, 20 per page) and logs the full report to `logs/kubejs/server.log`. No longer requires `debug_logging` in config.
+
+---
+
 ## [1.0.0.19] — 2026-06-30
 
 ### Random One Block

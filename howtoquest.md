@@ -319,7 +319,7 @@ Edit [`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_o
 /randomblock pools debug
 ```
 
-Team unlocks persist under `kubejs/data/random_one_block_unlocks/` (gitignored). With `"debug_logging": true` in `random_one_block.json`, `/randomblock pools debug` writes the per-mod report to `logs/kubejs/server.log`.
+Team unlocks persist under `kubejs/data/random_one_block_unlocks/` (gitignored). `/randomblock pools debug` lists every mod namespace in chat and copies the full report to `logs/kubejs/server.log`.
 
 ---
 

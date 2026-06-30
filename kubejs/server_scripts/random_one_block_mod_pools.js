@@ -3,7 +3,6 @@
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const MOD_POOLS_UNLOCK_DIR = 'data/random_one_block_unlocks'
-const MAIN_CONFIG_FILE = 'random_one_block.json'
 const VANILLA_NAMESPACE = 'minecraft'
 
 const DEFAULT_MOD_POOLS_CONFIG = {
@@ -32,31 +31,6 @@ const MOD_POOL_STATE = {
   modNamespaces: [],
   teamUnlockCache: {},
   teamPoolCache: {}
-}
-
-function isModPoolsDebugLoggingEnabled() {
-  if (typeof isDebugLoggingEnabled === 'function') {
-    return isDebugLoggingEnabled()
-  }
-
-  var config = JsonIO.read(MAIN_CONFIG_FILE)
-  if (!config) return false
-
-  config = modPoolsCloneConfig(config)
-  var raw = config.debug_logging
-  if (raw === true) return true
-  if (raw === false) return false
-  if (raw == null) return false
-
-  try {
-    return String(raw).toLowerCase() === 'true'
-  } catch (ignored) {}
-
-  return !!raw
-}
-
-function modPoolsDebugLog(message) {
-  if (isModPoolsDebugLoggingEnabled()) console.info(message)
 }
 
 function modPoolsCloneConfig(config) {
@@ -606,19 +580,15 @@ function dumpModPoolsDebug(scopeId) {
   var effective = buildEffectivePool(scopeId)
   var i = 0
 
-  if (!isModPoolsDebugLoggingEnabled()) {
-    return { rows: rows, logged: false, scope_id: scopeId }
-  }
-
-  modPoolsDebugLog('[RandomOneBlock] === Mod pool debug report ===')
-  modPoolsDebugLog('[RandomOneBlock] scope_id: ' + scopeId)
-  modPoolsDebugLog('[RandomOneBlock] effective_blocks: ' + effective.pool.length)
-  modPoolsDebugLog('[RandomOneBlock] effective_weight: ' + effective.totalWeight)
-  modPoolsDebugLog('[RandomOneBlock] master_mods: ' + rows.length)
-  modPoolsDebugLog('[RandomOneBlock] display_name | namespace | blocks | status | effective')
+  console.info('[RandomOneBlock] === Mod pool debug report ===')
+  console.info('[RandomOneBlock] scope_id: ' + scopeId)
+  console.info('[RandomOneBlock] effective_blocks: ' + effective.pool.length)
+  console.info('[RandomOneBlock] effective_weight: ' + effective.totalWeight)
+  console.info('[RandomOneBlock] master_mods: ' + rows.length)
+  console.info('[RandomOneBlock] display_name | namespace | blocks | status | effective')
 
   for (i = 0; i < rows.length; i++) {
-    modPoolsDebugLog(
+    console.info(
       '[RandomOneBlock] ' +
         rows[i].display_name +
         ' | ' +
@@ -632,8 +602,8 @@ function dumpModPoolsDebug(scopeId) {
     )
   }
 
-  modPoolsDebugLog('[RandomOneBlock] === End mod pool debug report ===')
-  return { rows: rows, logged: true, scope_id: scopeId }
+  console.info('[RandomOneBlock] === End mod pool debug report ===')
+  return { rows: rows, scope_id: scopeId }
 }
 
 function reloadModPoolsConfig() {

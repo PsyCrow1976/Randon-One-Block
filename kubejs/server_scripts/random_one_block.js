@@ -1924,18 +1924,31 @@ function cmdPools(source, args) {
   rows = summary.rows || []
 
   if (sub === 'debug') {
-    STATE.config = loadConfig()
     var debugResult = pools.dumpModPoolsDebug(summary.scopeId)
-    if (debugResult && debugResult.logged) {
-      tell(source, '§aMod pool debug report written to §flogs/kubejs/server.log')
-      return 1
-    }
+    rows = (debugResult && debugResult.rows) || rows
+    page = args.length > 1 ? Math.max(0, Number.parseInt(args[1], 10) || 0) : 0
+    pageSize = 20
+    start = page * pageSize
+    end = Math.min(rows.length, start + pageSize)
+
     tell(
       source,
-      '§eEnable §fdebug_logging§e in §fkubejs/config/random_one_block.json §ethen run this again.'
+      `§eMod pool debug §7(page ${page + 1}, scope ${summary.scopeId})§e — effective §f${summary.effectiveBlocks}§e / master §f${STATE.pool.length}`
     )
-    tell(source, '§7Output goes to §flogs/kubejs/server.log')
-    return 0
+
+    for (i = start; i < end; i++) {
+      tell(
+        source,
+        `§7${rows[i].status} §f${rows[i].display_name} §7(${rows[i].namespace}) §f${rows[i].blocks} §7blocks ${rows[i].effective ? '§aON' : '§cOFF'}`
+      )
+    }
+
+    if (end < rows.length) {
+      tell(source, `§7More mods: §f/randomblock pools debug ${page + 1}`)
+    }
+
+    tell(source, '§7Full report copied to §flogs/kubejs/server.log')
+    return 1
   }
 
   if (sub === 'list') {
