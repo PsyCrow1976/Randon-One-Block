@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.2] — 2026-06-30
+
+### Random One Block
+
+- **Counter HUD crash fix** — MC 26 uses `GuiGraphicsExtractor.text()` instead of `drawString()`; entering a world no longer crashes when the Randon counter HUD renders.
+
+---
+
 ## [1.0.2.1] — 2026-06-30
 
 ### Random One Block

@@ -73,7 +73,8 @@ function registerHudListener() {
     var y = sh - 39 + HUD_STATE.offsetY
     var text = 'Randon Counter : ' + HUD_STATE.count
 
-    guiGraphics.drawString(mc.font, text, x, y, 0xffffff, true)
+    // MC 26+: GuiGraphicsExtractor uses text(), not drawString()
+    guiGraphics.text(mc.font, text, x, y, 0xffffff, true)
   })
 }
 
