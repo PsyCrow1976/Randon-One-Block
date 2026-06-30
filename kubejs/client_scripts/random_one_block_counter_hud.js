@@ -1,17 +1,40 @@
 // priority: 0
-// Randon One Block — team mine counter HUD (above health hearts)
+// Randon One Block — counter screen text (diagnostic: text1..text12)
 
 const COUNTER_SYNC_CHANNEL = 'random_one_block_counter'
-const HUD_TEXT_COLOR = 0xffffffff
+
+// Set false after you tell us which textN label is visible in-game.
+const SHOW_TEXT_DIAGNOSTIC = true
 
 const $NeoForge = Java.loadClass('net.neoforged.neoforge.common.NeoForge')
+const $EventPriority = Java.loadClass('net.neoforged.bus.api.EventPriority')
 const $RegisterGuiLayersEvent = Java.loadClass('net.neoforged.neoforge.client.event.RegisterGuiLayersEvent')
 const $GuiLayerOrdering = Java.loadClass('net.neoforged.neoforge.client.event.RegisterGuiLayersEvent$Ordering')
+const $RenderGuiEventPre = Java.loadClass('net.neoforged.neoforge.client.event.RenderGuiEvent$Pre')
+const $RenderGuiEventPost = Java.loadClass('net.neoforged.neoforge.client.event.RenderGuiEvent$Post')
+const $RenderGuiLayerEventPost = Java.loadClass('net.neoforged.neoforge.client.event.RenderGuiLayerEvent$Post')
 const $VanillaGuiLayers = Java.loadClass('net.neoforged.neoforge.client.gui.VanillaGuiLayers')
 const $Identifier = Java.loadClass('net.minecraft.resources.Identifier')
 const $Minecraft = Java.loadClass('net.minecraft.client.Minecraft')
 
-const HUD_LAYER_ID = $Identifier.fromNamespaceAndPath('randon_one_block', 'counter_hud')
+const HUD_LAYER_AFTER_HEALTH = $Identifier.fromNamespaceAndPath('randon_one_block', 'counter_after_health')
+const HUD_LAYER_BEFORE_HEALTH = $Identifier.fromNamespaceAndPath('randon_one_block', 'counter_before_health')
+const HUD_LAYER_ABOVE_HEALTH = $Identifier.fromNamespaceAndPath('randon_one_block', 'counter_above_health')
+
+const TEXT_COLORS = [
+  0xffff5555,
+  0xff55ff55,
+  0xff5555ff,
+  0xffffff55,
+  0xffff55ff,
+  0xff55ffff,
+  0xffffaa00,
+  0xffaa55ff,
+  0xff00aaaa,
+  0xffffffff,
+  0xffff8888,
+  0xff88ff88
+]
 
 const HUD_STATE = {
   count: 0,
@@ -115,8 +138,11 @@ function applyCounterPayload(data) {
   HUD_STATE.offsetY = readIntTag(data, 'offset_y', -12)
 }
 
-function shouldRenderHud(mc) {
-  if (!HUD_STATE.enabled) return false
+function getMc() {
+  return $Minecraft.getInstance()
+}
+
+function shouldDrawInWorld(mc) {
   if (!mc || !mc.player) return false
 
   try {
@@ -128,28 +154,163 @@ function shouldRenderHud(mc) {
   return true
 }
 
-function renderCounterHud(guiGraphics, partialTick) {
-  var mc = $Minecraft.getInstance()
-  if (!shouldRenderHud(mc)) return
+function counterSuffix() {
+  return ' count=' + coerceJavaInt(HUD_STATE.count, 0)
+}
 
-  var sh = coerceJavaInt(mc.getWindow().getGuiScaledHeight(), 0)
-  var offsetX = coerceJavaInt(HUD_STATE.offsetX, 0)
-  var offsetY = coerceJavaInt(HUD_STATE.offsetY, -12)
-  var count = coerceJavaInt(HUD_STATE.count, 0)
-  var x = 10 + offsetX
-  var y = sh - 51 + offsetY
-  var text = 'Randon Counter : ' + count
+function safeDraw(label, drawFn) {
+  try {
+    drawFn()
+  } catch (e) {
+    console.warn('[RandomOneBlock] ' + label + ' failed: ' + e)
+  }
+}
 
-  // MC 26: ARGB color (alpha in high byte) and GuiGraphicsExtractor.text()
-  guiGraphics.text(mc.font, text, x, y, HUD_TEXT_COLOR, true)
+function drawTextString(guiGraphics, mc, line, x, y, color, shadow) {
+  guiGraphics.text(mc.font, line, x, y, color, shadow === true)
+}
+
+function drawTextComponent(guiGraphics, mc, line, x, y, color, shadow) {
+  guiGraphics.text(mc.font, Text.of(line), x, y, color, shadow === true)
+}
+
+function drawDiagnosticLine(guiGraphics, index, methodName, x, y) {
+  var mc = getMc()
+  if (!mc) return
+
+  var color = TEXT_COLORS[(index - 1) % TEXT_COLORS.length]
+  var line = 'text' + index + ': ' + methodName + counterSuffix()
+
+  safeDraw('text' + index, function () {
+    drawTextString(guiGraphics, mc, line, x, y, color, true)
+  })
+}
+
+function renderDiagnosticOnLayer(guiGraphics, textIndex, methodName, y) {
+  if (!SHOW_TEXT_DIAGNOSTIC) return
+  if (!HUD_STATE.enabled) return
+
+  var mc = getMc()
+  if (!shouldDrawInWorld(mc)) return
+
+  drawDiagnosticLine(guiGraphics, textIndex, methodName, 10, y)
+}
+
+function renderText7Centered(guiGraphics) {
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled) return
+
+  var mc = getMc()
+  if (!shouldDrawInWorld(mc)) return
+
+  var sw = coerceJavaInt(mc.getWindow().getGuiScaledWidth(), 0)
+  var line = 'text7: centeredText AFTER health' + counterSuffix()
+
+  safeDraw('text7', function () {
+    guiGraphics.centeredText(mc.font, line, Math.floor(sw / 2), 30, TEXT_COLORS[6], true)
+  })
+}
+
+function renderText8Component(guiGraphics) {
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled) return
+
+  var mc = getMc()
+  if (!shouldDrawInWorld(mc)) return
+
+  var line = 'text8: Component text AFTER health' + counterSuffix()
+
+  safeDraw('text8', function () {
+    drawTextComponent(guiGraphics, mc, line, 10, 150, TEXT_COLORS[7], true)
+  })
+}
+
+function renderText9Backdrop(guiGraphics) {
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled) return
+
+  var mc = getMc()
+  if (!shouldDrawInWorld(mc)) return
+
+  var line = 'text9: textWithBackdrop AFTER health' + counterSuffix()
+
+  safeDraw('text9', function () {
+    guiGraphics.textWithBackdrop(mc.font, Text.of(line), 10, 165, 220, TEXT_COLORS[8])
+  })
+}
+
+function renderText4PrePost(guiGraphics, index, phaseName, y) {
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled) return
+
+  var mc = getMc()
+  if (!shouldDrawInWorld(mc)) return
+
+  drawDiagnosticLine(guiGraphics, index, phaseName, 10, y)
+}
+
+function isPlayerHealthLayer(layerId) {
+  return String(layerId) === String($VanillaGuiLayers.PLAYER_HEALTH)
 }
 
 $NeoForge.EVENT_BUS.addListener($RegisterGuiLayersEvent, function (event) {
-  event.register($GuiLayerOrdering.AFTER, HUD_LAYER_ID, $VanillaGuiLayers.PLAYER_HEALTH, function (guiGraphics, partialTick) {
-    renderCounterHud(guiGraphics, partialTick)
+  event.register(
+    $GuiLayerOrdering.AFTER,
+    HUD_LAYER_AFTER_HEALTH,
+    $VanillaGuiLayers.PLAYER_HEALTH,
+    function (guiGraphics, partialTick) {
+      renderDiagnosticOnLayer(guiGraphics, 1, 'GuiLayer AFTER health + text()', 10)
+      renderText7Centered(guiGraphics)
+      renderText8Component(guiGraphics)
+      renderText9Backdrop(guiGraphics)
+    }
+  )
+
+  event.register(
+    $GuiLayerOrdering.BEFORE,
+    HUD_LAYER_BEFORE_HEALTH,
+    $VanillaGuiLayers.PLAYER_HEALTH,
+    function (guiGraphics, partialTick) {
+      renderDiagnosticOnLayer(guiGraphics, 2, 'GuiLayer BEFORE health + text()', 25)
+    }
+  )
+
+  event.registerAbove($VanillaGuiLayers.PLAYER_HEALTH, HUD_LAYER_ABOVE_HEALTH, function (guiGraphics, partialTick) {
+    renderDiagnosticOnLayer(guiGraphics, 3, 'registerAbove(PLAYER_HEALTH) + text()', 40)
+  })
+})
+
+$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiEventPre, function (event) {
+  renderText4PrePost(event.getGuiGraphics(), 4, 'RenderGuiEvent.Pre + text()', 55)
+})
+
+$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiEventPost, function (event) {
+  renderText4PrePost(event.getGuiGraphics(), 5, 'RenderGuiEvent.Post + text()', 70)
+})
+
+$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiLayerEventPost, function (event) {
+  if (!isPlayerHealthLayer(event.getName())) return
+  renderText4PrePost(event.getGuiGraphics(), 6, 'RenderGuiLayerEvent.Post(PLAYER_HEALTH)', 85)
+})
+
+ClientEvents.leftDebugInfo(function (event) {
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled) return
+  event.lines.add('text10: leftDebugInfo (visible with F3)' + counterSuffix())
+})
+
+ClientEvents.tick(function () {
+  var mc = getMc()
+  if (!SHOW_TEXT_DIAGNOSTIC || !HUD_STATE.enabled || !shouldDrawInWorld(mc)) return
+
+  safeDraw('text11', function () {
+    mc.gui.setOverlayMessage(Text.of('text11: setOverlayMessage (top bar)' + counterSuffix()), false)
+  })
+
+  safeDraw('text12', function () {
+    mc.gui.setSubtitle(Text.of('text12: setSubtitle (bottom)' + counterSuffix()))
   })
 })
 
 NetworkEvents.dataReceived(COUNTER_SYNC_CHANNEL, function (event) {
   applyCounterPayload(event.data)
 })
+
+console.info(
+  '[RandomOneBlock] Counter text diagnostic enabled — look for text1..text12 on screen (text10 needs F3). Tell us which labels you see.'
+)

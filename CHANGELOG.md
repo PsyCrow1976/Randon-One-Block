@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.6] — 2026-06-30
+
+### Random One Block
+
+- **Counter text diagnostic** — Client script draws `text1`..`text12` using different MC 26 screen-text APIs (Gui layers, RenderGui events, overlay message, subtitle, F3 debug line) so you can report which label is visible.
+
+---
+
 ## [1.0.2.5] — 2026-06-30
 
 ### Random One Block
