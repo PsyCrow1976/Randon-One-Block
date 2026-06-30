@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.27] — 2026-06-30
+
+### Random One Block
+
+- **KubeJS fix** — Removed `java.io.File` (class filter). Config and team unlocks now read/write via `KubeJSPaths.CONFIG` absolute paths. Single `random_one_block_team_unlocks.json` replaces per-scope files. Fixes empty `quest_unlock_map` when a stale instance-root mod pools copy existed.
+
+---
+
 ## [1.0.0.26] — 2026-06-30
 
 ### Random One Block
