@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.31] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — Fixed script load order: `mod_pools.js` priority 3, `quest_unlocks.js` priority 2 (KubeJS loads higher priority first). Fixes `handlers not registered` warning and quest completion not unlocking mods.
+
+---
+
 ## [1.0.0.30] — 2026-06-30
 
 ### Random One Block

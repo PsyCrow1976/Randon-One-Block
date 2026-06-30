@@ -212,7 +212,7 @@ buildEffectivePool(scopeId)        → vanilla + starter_exceptions + team quest
 BlockEvents.broken                 → pickRandomBlockIdForPlayer(breaker) → scheduleInTicks(1) → set block
                                  → log: effectivePool, scope, mod namespace
         ↓
-FTBQuestsEvents.completed          → register at **script load** (priority 2, not ServerEvents) → quest_unlock_map → enableModForTeam
+FTBQuestsEvents.completed          → register at **script load** (`mod_pools.js` priority 3, `quest_unlocks.js` priority 2 — higher loads first) → quest_unlock_map → enableModForTeam
 /randomblock poolenable            → manual/admin team unlock (same persistence)
 kubejs/config/random_one_block_team_unlocks.json → persisted team unlocks (all scopes)
         ↓

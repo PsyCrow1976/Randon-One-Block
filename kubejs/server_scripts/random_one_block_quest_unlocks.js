@@ -1,5 +1,6 @@
 // priority: 2
 // Randon One Block — FTB Quest completion hooks for mod pool unlocks
+// KubeJS loads higher priority first — mod_pools.js (3) must load before this file.
 // FTBQuestsEvents.completed must register during script load (not ServerEvents).
 
 function registerRandomOneBlockQuestUnlocks() {

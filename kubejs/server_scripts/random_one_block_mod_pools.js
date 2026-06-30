@@ -1,5 +1,6 @@
-// priority: 1
+// priority: 3
 // Randon One Block — per-team mod namespace gating for the random block pool
+// KubeJS loads higher priority first — must load before random_one_block_quest_unlocks.js
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const TEAM_UNLOCKS_FILE = 'random_one_block_team_unlocks.json'
