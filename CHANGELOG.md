@@ -8,6 +8,15 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.26] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock poolenable`** — Fixed `NoSuchFileException` when saving team unlocks; files now go to `kubejs/config/random_one_block_unlocks/` with the directory auto-created.
+- **Quest unlock map** — Fixed `quest_unlock_map` not registering handlers (`Registered 0` in log); map entries are parsed reliably from JsonIO config.
+
+---
+
 ## [1.0.0.25] — 2026-06-30
 
 ### Random One Block

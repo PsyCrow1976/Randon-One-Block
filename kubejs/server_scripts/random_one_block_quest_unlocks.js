@@ -20,8 +20,7 @@ function registerRandomOneBlockQuestUnlocks() {
     return
   }
 
-  config = pools.ensureModPoolsConfig()
-  map = config.quest_unlock_map || {}
+  map = pools.getQuestUnlockMap ? pools.getQuestUnlockMap() : {}
 
   var signature = JSON.stringify(map)
   if (RandonOneBlockQuestUnlockSig === signature) return

@@ -195,7 +195,7 @@ These were learned from production debugging; violating them causes reload or co
 | 24 | **Mod pool gating** — default pool is **vanilla only** plus `starter_exceptions` in `random_one_block_mod_pools.json`. Other namespaces unlock per **team** via `quest_unlock_map` / `poolenable`. Do not regress to global full-pool picks for gameplay breaks. |
 | 25 | **No `global.RandonOneBlockPools`** — cross-script API uses shared-scope `var RandonOneBlockPools` in `random_one_block_mod_pools.js` (same unmodifiable-`global` rule as #1). |
 | 26 | **No `java.nio.file.Files`** — blocked by KubeJS class filter. Pool/mod debug output goes to **`logs/kubejs/server.log`** via `debugLog()` / `modPoolsDebugLog()` when `debug_logging: true` — do not write pool dump files. |
-| 27 | **JsonIO paths** — pack configs in `kubejs/config/` use bare filenames (e.g. `random_one_block_mod_pools.json`). Team data uses `data/` prefix (`data/random_one_block_unlocks/`). Do not keep duplicate JSON copies in the **instance root** — they can override `kubejs/config/` on read. |
+| 27 | **JsonIO paths** — pack configs in `kubejs/config/` use bare filenames (e.g. `random_one_block_mod_pools.json`). Team unlock files use `random_one_block_unlocks/<scope>.json` under `kubejs/config/` (create dir via `KubeJSPaths.CONFIG` + `java.io.File.mkdirs` before first write). Do not keep duplicate JSON copies in the **instance root**. |
 
 ---
 
@@ -214,7 +214,7 @@ BlockEvents.broken                 → pickRandomBlockIdForPlayer(breaker) → s
         ↓
 FTBQuestsEvents.completed          → quest_unlock_map → enableModForTeam (per Haven/FTB team)
 /randomblock poolenable            → manual/admin team unlock (same persistence)
-kubejs/data/random_one_block_unlocks/<scopeId>.json → persisted team unlocks
+kubejs/config/random_one_block_unlocks/<scopeId>.json → persisted team unlocks
         ↓
 ServerEvents.tick (every 5 ticks) → auto setbelow at player feet
 ServerEvents.basicCommand          → randomblock subcommands (reload-safe)

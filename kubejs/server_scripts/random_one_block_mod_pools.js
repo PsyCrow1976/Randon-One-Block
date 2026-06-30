@@ -2,7 +2,8 @@
 // Randon One Block — per-team mod namespace gating for the random block pool
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
-const MOD_POOLS_UNLOCK_DIR = 'data/random_one_block_unlocks'
+// JsonIO subpaths under kubejs/config/ (not instance-root data/).
+const MOD_POOLS_UNLOCK_DIR = 'random_one_block_unlocks'
 const VANILLA_NAMESPACE = 'minecraft'
 
 const DEFAULT_MOD_POOLS_CONFIG = {
@@ -52,6 +53,48 @@ function readConfigObjectField(obj, key) {
   } catch (ignored2) {}
 
   return null
+}
+
+function readConfigStringMap(obj, key) {
+  var raw = readConfigObjectField(obj, key)
+  var out = {}
+  var iter = null
+  var entry = null
+  var k = null
+
+  if (!raw) return out
+
+  try {
+    for (k in raw) {
+      if (Object.prototype.hasOwnProperty.call(raw, k)) out[String(k)] = String(raw[k])
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored) {}
+
+  try {
+    if (raw.entrySet && typeof raw.entrySet === 'function') {
+      iter = raw.entrySet().iterator()
+      while (iter.hasNext()) {
+        entry = iter.next()
+        out[String(entry.getKey())] = String(entry.getValue())
+      }
+    }
+  } catch (ignored2) {}
+
+  return out
+}
+
+function ensureTeamUnlocksDir() {
+  try {
+    var $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
+    var $File = Java.loadClass('java.io.File')
+    var dir = $KubeJSPaths.CONFIG.resolve(MOD_POOLS_UNLOCK_DIR)
+    var file = new $File(String(dir.toString()))
+    if (!file.exists()) file.mkdirs()
+  } catch (e) {
+    var err = e && e.javaException ? String(e.javaException) : String(e)
+    console.error('[RandomOneBlock] Failed to create team unlocks directory: ' + err)
+  }
 }
 
 function coerceConfigStringList(value) {
@@ -254,6 +297,10 @@ function teamUnlockFilePath(scopeId) {
   return MOD_POOLS_UNLOCK_DIR + '/' + safe + '.json'
 }
 
+function getQuestUnlockMap() {
+  return readConfigStringMap(ensureModPoolsConfig(), 'quest_unlock_map')
+}
+
 function defaultTeamUnlockData(scopeId) {
   return {
     scope: ensureModPoolsConfig().unlock_scope || 'team',
@@ -287,6 +334,7 @@ function loadTeamUnlocks(scopeId) {
 function saveTeamUnlocks(scopeId, data) {
   if (!scopeId || !data) return
 
+  ensureTeamUnlocksDir()
   data.scope_id = scopeId
   data.updated_at = new Date().toISOString()
   MOD_POOL_STATE.teamUnlockCache[scopeId] = data
@@ -767,8 +815,12 @@ function dumpModPoolsDebugComplete(scopeId) {
 function reloadModPoolsConfig() {
   MOD_POOL_STATE.config = loadModPoolsConfig()
   invalidateAllTeamPoolCaches()
+  ensureTeamUnlocksDir()
   console.info(
     '[RandomOneBlock] Mod pool starter exceptions: ' + getStarterExceptions().join(', ')
+  )
+  console.info(
+    '[RandomOneBlock] Mod pool quest unlock map: ' + Object.keys(getQuestUnlockMap()).length + ' quest(s)'
   )
 }
 
@@ -831,8 +883,7 @@ function isQuestCompletedForPlayer(player, questId) {
 }
 
 function backfillQuestUnlocksForPlayer(player) {
-  var config = ensureModPoolsConfig()
-  var map = config.quest_unlock_map || {}
+  var map = getQuestUnlockMap()
   var questId = null
   var mod = null
 
@@ -862,5 +913,7 @@ var RandonOneBlockPools = {
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
   resolveKnownModNamespace: resolveKnownModNamespace,
-  getModsWithMinableBlocks: getModsWithMinableBlocks
+  getModsWithMinableBlocks: getModsWithMinableBlocks,
+  getQuestUnlockMap: getQuestUnlockMap,
+  ensureTeamUnlocksDir: ensureTeamUnlocksDir
 }
