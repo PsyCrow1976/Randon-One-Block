@@ -4,6 +4,23 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
+**Versioning:** During development, bump the patch segment for each change (`1.0.0.12`, `1.0.0.13`, …). When the current work track is complete, publish **`1.0.1.0`** to CurseForge. Keep `branding/project-metadata.json` in sync with the newest changelog entry.
+
+---
+
+## [1.0.0.12] — 2026-06-29
+
+Post-**1.0.0.11** repo updates (not yet published to CurseForge).
+
+### Documentation
+
+- **`todolist.md`** — Expanded with custom compression recipes (leather block, wool) for the random block pool and tiered progression gating (e.g. Refined Storage unlocks).
+- **Versioning policy** — Documented `1.0.0.x` dev bumps → **`1.0.1.0`** milestone release.
+
+### Tooling
+
+- **`scripts/publish-curseforge.sh`** — Fixed CurseForge upload metadata encoding (`--form-string`) so long markdown changelogs upload successfully.
+
 ---
 
 ## [1.0.0.11] — 2026-06-29

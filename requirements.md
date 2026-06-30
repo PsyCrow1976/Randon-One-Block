@@ -368,6 +368,23 @@ Before considering Random One Block work complete:
 
 ---
 
+## Versioning & changelog
+
+| Phase | Version | When |
+|-------|---------|------|
+| Development | `1.0.0.x` | Bump **one** patch step (`…12` → `…13`) for each meaningful change (quests, KubeJS, configs, docs, tooling). |
+| Milestone release | **`1.0.1.0`** | Publish to CurseForge when the current work track is done (todo items, recipes, tier gating, etc.). |
+
+**On every change:**
+
+1. Add a new `## [1.0.0.x] — YYYY-MM-DD` section at the top of [`CHANGELOG.md`](CHANGELOG.md) (below the header).
+2. Set `"version"` in [`branding/project-metadata.json`](branding/project-metadata.json) to the same string.
+3. Commit changelog + metadata together with the change (or immediately after).
+4. Do **not** skip version numbers on CurseForge — merge changelog entries if needed before publish (as with 1.0.0.12 → 1.0.0.11).
+5. CurseForge publish stays at **`1.0.1.0`** until the author requests upload; dev versions are git-only until then.
+
+---
+
 ## CurseForge publish (branding + API)
 
 | Item | Location |
@@ -395,3 +412,4 @@ Do **not** commit API tokens. Version string comes from `branding/project-metada
 6. Do not commit generated pool dumps unless the user asks.
 7. User executes in CurseForge; repo is source of truth via symlinks.
 8. Do not create markdown files the user did not ask for; these two docs are the canonical handoff pair.
+9. **Bump `1.0.0.x`** in `CHANGELOG.md` and `branding/project-metadata.json` for each change; target milestone **`1.0.1.0`** for the next CurseForge release.
