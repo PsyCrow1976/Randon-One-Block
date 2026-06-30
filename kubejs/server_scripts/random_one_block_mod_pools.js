@@ -53,7 +53,9 @@ function kubejsConfigPath(filename) {
 }
 
 function readKubejsConfigJson(filename) {
-  return JsonIO.read(kubejsConfigPath(filename))
+  var config = JsonIO.read(kubejsConfigPath(filename))
+  if (config) return config
+  return JsonIO.read(String(filename))
 }
 
 function writeKubejsConfigJson(filename, payload) {
@@ -323,6 +325,16 @@ function resolveFtbTeamScopeId(player) {
   return null
 }
 
+function getPlayerUnlockScopeId(player) {
+  return 'player-' + getPlayerUuidString(player)
+}
+
+function resolvePlayerServer(player, server) {
+  if (server) return server
+  if (player && player.server) return player.server
+  return null
+}
+
 function getUnlockScopeId(player, server) {
   var havenScope = resolveHavenTeamScopeId(player, server)
   if (havenScope) return havenScope
@@ -330,7 +342,57 @@ function getUnlockScopeId(player, server) {
   var ftbScope = resolveFtbTeamScopeId(player)
   if (ftbScope) return ftbScope
 
-  return 'player-' + getPlayerUuidString(player)
+  return getPlayerUnlockScopeId(player)
+}
+
+function normalizeTeamUnlockRecord(scopeId, data) {
+  var mods = coerceConfigStringList(data && data.enabled_mods ? data.enabled_mods : [])
+
+  return {
+    scope: String((data && data.scope) || ensureModPoolsConfig().unlock_scope || 'team'),
+    scope_id: String(scopeId),
+    enabled_mods: mods,
+    updated_at: new Date().toISOString()
+  }
+}
+
+function mergePlayerScopeUnlocks(player, server, teamScopeId) {
+  var playerScope = getPlayerUnlockScopeId(player)
+  var teamUnlocks = null
+  var playerUnlocks = null
+  var i = 0
+  var changed = false
+
+  if (!teamScopeId || teamScopeId === playerScope) return teamScopeId
+
+  teamUnlocks = normalizeTeamUnlockRecord(teamScopeId, loadTeamUnlocks(teamScopeId))
+  playerUnlocks = normalizeTeamUnlockRecord(playerScope, loadTeamUnlocks(playerScope))
+
+  for (i = 0; i < playerUnlocks.enabled_mods.length; i++) {
+    if (!modPoolsListIncludes(teamUnlocks.enabled_mods, playerUnlocks.enabled_mods[i])) {
+      teamUnlocks.enabled_mods.push(playerUnlocks.enabled_mods[i])
+      changed = true
+    }
+  }
+
+  if (changed) {
+    teamUnlocks.enabled_mods.sort()
+    saveTeamUnlocks(teamScopeId, teamUnlocks)
+    console.info('[RandomOneBlock] Merged player-scope unlocks into ' + teamScopeId)
+  }
+
+  return teamScopeId
+}
+
+function resolveUnlockScopeId(player, server) {
+  var resolvedServer = resolvePlayerServer(player, server)
+  var scopeId = getUnlockScopeId(player, resolvedServer)
+
+  if (scopeId.indexOf('haven-') === 0 || scopeId.indexOf('ftbteam-') === 0) {
+    return mergePlayerScopeUnlocks(player, resolvedServer, scopeId)
+  }
+
+  return scopeId
 }
 
 function getQuestUnlockMap() {
@@ -369,11 +431,9 @@ function loadTeamUnlocks(scopeId) {
 
   if (!data) {
     data = defaultTeamUnlockData(scopeId)
-  } else {
-    data = modPoolsCloneConfig(data)
-    if (!data.enabled_mods) data.enabled_mods = []
   }
 
+  data = normalizeTeamUnlockRecord(scopeId, data)
   MOD_POOL_STATE.teamUnlockCache[scopeId] = data
   return data
 }
@@ -382,13 +442,13 @@ function saveTeamUnlocks(scopeId, data) {
   if (!scopeId || !data) return
 
   var all = loadAllTeamUnlocks()
-  data.scope_id = scopeId
-  data.updated_at = new Date().toISOString()
-  all[scopeId] = data
-  MOD_POOL_STATE.teamUnlockCache[scopeId] = data
+  var record = normalizeTeamUnlockRecord(scopeId, data)
+
+  all[scopeId] = record
+  MOD_POOL_STATE.teamUnlockCache[scopeId] = record
   MOD_POOL_STATE.allTeamUnlocks = all
   invalidateTeamPoolCache(scopeId)
-  writeKubejsConfigJson(TEAM_UNLOCKS_FILE, all)
+  writeKubejsConfigJson(TEAM_UNLOCKS_FILE, modPoolsCloneConfig(all))
 }
 
 function invalidateTeamPoolCache(scopeId) {
@@ -598,7 +658,7 @@ function pickRandomBlockIdForPlayer(player, server, fallbackId) {
     return fallbackId || 'minecraft:dirt'
   }
 
-  var scopeId = getUnlockScopeId(player, server)
+  var scopeId = resolveUnlockScopeId(player, server)
   var effective = buildEffectivePool(scopeId)
   return pickRandomBlockIdFromPool(effective, fallbackId)
 }
@@ -626,8 +686,8 @@ function resolveKnownModNamespace(mod) {
   return normalized
 }
 
-function enableModForTeam(player, modNamespace, announce) {
-  var scopeId = getUnlockScopeId(player, player && player.server ? player.server : null)
+function enableModForTeam(player, modNamespace, announce, server) {
+  var scopeId = resolveUnlockScopeId(player, server)
   var resolvedMod = resolveKnownModNamespace(modNamespace)
   var unlocks = loadTeamUnlocks(scopeId)
   var displayName = getModDisplayName(resolvedMod)
@@ -677,8 +737,8 @@ function enableModForTeam(player, modNamespace, announce) {
   return true
 }
 
-function disableModForTeam(player, modNamespace, announce) {
-  var scopeId = getUnlockScopeId(player, player && player.server ? player.server : null)
+function disableModForTeam(player, modNamespace, announce, server) {
+  var scopeId = resolveUnlockScopeId(player, server)
   var resolvedMod = resolveKnownModNamespace(modNamespace)
   var unlocks = loadTeamUnlocks(scopeId)
   var next = []
@@ -885,7 +945,7 @@ function getLastModPoolPickMeta() {
 }
 
 function getEffectivePoolSummaryForPlayer(player, server) {
-  var scopeId = getUnlockScopeId(player, server)
+  var scopeId = resolveUnlockScopeId(player, server)
   var effective = buildEffectivePool(scopeId)
   var rows = buildModPoolReportRows(scopeId)
   var starterCount = 0
@@ -936,12 +996,13 @@ function backfillQuestUnlocksForPlayer(player) {
   var map = getQuestUnlockMap()
   var questId = null
   var mod = null
+  var server = resolvePlayerServer(player, null)
 
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
     mod = map[questId]
     if (!isQuestCompletedForPlayer(player, questId)) continue
-    enableModForTeam(player, mod, false)
+    enableModForTeam(player, mod, false, server)
   }
 }
 
@@ -952,6 +1013,7 @@ var RandonOneBlockPools = {
   isModPoolGatingEnabled: isModPoolGatingEnabled,
   updateMasterCatalogFromPool: updateMasterCatalogFromPool,
   getUnlockScopeId: getUnlockScopeId,
+  resolveUnlockScopeId: resolveUnlockScopeId,
   enableModForTeam: enableModForTeam,
   disableModForTeam: disableModForTeam,
   pickRandomBlockIdForPlayer: pickRandomBlockIdForPlayer,

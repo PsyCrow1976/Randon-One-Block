@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.30] — 2026-06-30
+
+### Random One Block
+
+- **Quest pool unlocks** — FTB quest completion now passes `event.server` so Haven team scope resolves correctly. Player-scope unlocks merge into `haven-` / `ftbteam-` scope on login and pool list. Normalized team unlock JSON so `enabled_mods` persists reliably.
+
+---
+
 ## [1.0.0.29] — 2026-06-30
 
 ### Random One Block

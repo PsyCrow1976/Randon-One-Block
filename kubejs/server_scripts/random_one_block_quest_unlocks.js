@@ -27,8 +27,13 @@ function registerRandomOneBlockQuestUnlocks() {
     count++
     ;(function (boundQuestId, boundMod) {
       FTBQuestsEvents.completed(boundQuestId, event => {
+        var server = null
         if (!event || !event.player) return
-        pools.enableModForTeam(event.player, boundMod, true)
+        try {
+          server = event.server
+        } catch (ignored) {}
+        if (!server && event.player.server) server = event.player.server
+        pools.enableModForTeam(event.player, boundMod, true, server)
       })
     })(questId, mod)
   }
