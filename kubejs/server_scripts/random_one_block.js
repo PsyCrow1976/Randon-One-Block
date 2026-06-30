@@ -1100,23 +1100,51 @@ function syncActiveFromConfig() {
   STATE.active = null
 }
 
+function formatPickChancePercent(weight, totalWeight) {
+  var w = Number(weight)
+  var t = Number(totalWeight)
+  var pct = 0
+
+  if (!isFinite(w) || !isFinite(t) || t <= 0 || w <= 0) return '0%'
+
+  pct = (w / t) * 100
+  if (pct < 0.01) return pct.toFixed(4) + '%'
+  if (pct < 1) return pct.toFixed(3) + '%'
+  return pct.toFixed(2) + '%'
+}
+
+function recordMasterPickMeta(entry, roll, totalWeight) {
+  STATE._lastRoll = roll
+  STATE._lastTotalWeight = totalWeight
+  STATE._lastPickedId = entry ? entry.id : ''
+  STATE._lastPickedWeight = entry ? Number(entry.weight) || 0 : 0
+}
+
 function pickRandomBlockIdInternal() {
+  var originalRoll = 0
+
   if (!STATE.pool.length || STATE.totalWeight <= 0) {
+    recordMasterPickMeta(null, 0, 0)
     return STATE.config?.initial_block || 'minecraft:dirt'
   }
 
-  var roll = randomInt(STATE.totalWeight)
-  STATE._lastRoll = roll
+  originalRoll = randomInt(STATE.totalWeight)
+  var roll = originalRoll
   var i = 0
   var entry = null
 
   for (i = 0; i < STATE.pool.length; i++) {
     entry = STATE.pool[i]
     roll -= Number(entry.weight)
-    if (roll < 0) return entry.id
+    if (roll < 0) {
+      recordMasterPickMeta(entry, originalRoll, STATE.totalWeight)
+      return entry.id
+    }
   }
 
-  return STATE.pool[STATE.pool.length - 1].id
+  entry = STATE.pool[STATE.pool.length - 1]
+  recordMasterPickMeta(entry, originalRoll, STATE.totalWeight)
+  return entry.id
 }
 
 function pickRandomBlockId() {
@@ -2219,15 +2247,25 @@ BlockEvents.broken(event => {
   var pickMeta =
     modPoolsPick && modPoolsPick.getLastModPoolPickMeta
       ? modPoolsPick.getLastModPoolPickMeta()
-      : { poolSize: poolSize, scopeId: '', namespace: '', roll: STATE._lastRoll }
+      : {
+          poolSize: poolSize,
+          scopeId: '',
+          namespace: '',
+          roll: STATE._lastRoll,
+          totalWeight: STATE._lastTotalWeight,
+          pickedWeight: STATE._lastPickedWeight
+        }
   var effectiveSize = pickMeta.poolSize || poolSize
   var roll = pickMeta.roll != null ? pickMeta.roll : STATE._lastRoll
+  var totalWeight = pickMeta.totalWeight || STATE._lastTotalWeight || STATE.totalWeight || 0
+  var pickedWeight = pickMeta.pickedWeight || STATE._lastPickedWeight || getWeight(nextId, STATE.config)
+  var chancePct = formatPickChancePercent(pickedWeight, totalWeight)
   var rolledNamespace = pickMeta.namespace || String(nextId).split(':')[0]
 
   event.server.scheduleInTicks(1, () => {
     level.getBlock(coords.x, coords.y, coords.z).set(nextId)
     console.info(
-      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
+      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}/${totalWeight}, w=${pickedWeight}, chance=${chancePct}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
     )
 
     if (isFallingBlockId(nextId)) {

@@ -782,17 +782,23 @@ function pickRandomBlockIdFromPool(poolData, fallbackId) {
   MOD_POOL_STATE._lastPoolSize = pool.length
   MOD_POOL_STATE._lastTotalWeight = totalWeight
 
+  MOD_POOL_STATE._lastOriginalRoll = roll
+
   for (i = 0; i < pool.length; i++) {
     entry = pool[i]
     roll -= Number(entry.weight)
     if (roll < 0) {
       MOD_POOL_STATE._lastNamespace = entry.namespace
+      MOD_POOL_STATE._lastPickedId = entry.id
+      MOD_POOL_STATE._lastPickedWeight = Number(entry.weight) || 0
       return entry.id
     }
   }
 
   entry = pool[pool.length - 1]
   MOD_POOL_STATE._lastNamespace = entry.namespace
+  MOD_POOL_STATE._lastPickedId = entry.id
+  MOD_POOL_STATE._lastPickedWeight = Number(entry.weight) || 0
   return entry.id
 }
 
@@ -1106,7 +1112,9 @@ function getLastModPoolPickMeta() {
     namespace: MOD_POOL_STATE._lastNamespace || '',
     poolSize: MOD_POOL_STATE._lastPoolSize || 0,
     totalWeight: MOD_POOL_STATE._lastTotalWeight || 0,
-    roll: MOD_POOL_STATE._lastRoll
+    roll: MOD_POOL_STATE._lastOriginalRoll != null ? MOD_POOL_STATE._lastOriginalRoll : MOD_POOL_STATE._lastRoll,
+    pickedId: MOD_POOL_STATE._lastPickedId || '',
+    pickedWeight: MOD_POOL_STATE._lastPickedWeight || 0
   }
 }
 

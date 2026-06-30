@@ -4,7 +4,16 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** During development, bump the patch segment for each change (`1.0.0.12`, `1.0.0.13`, …). Publish milestone releases to CurseForge (`1.0.1.0`, …). Keep `branding/project-metadata.json` in sync with the newest changelog entry.
+**Versioning:** **`1.0.1.x`** — bump patch per change (`1.0.1.1`, `1.0.1.2`, …). Milestone **`1.0.1.0`** = first mod-pool gating release. Keep `branding/project-metadata.json` in sync.
+
+---
+
+## [1.0.1.1] — 2026-06-30
+
+### Random One Block
+
+- **Mining log** — Restored `roll=X/Y` (effective total weight). Added `w=` (picked block weight) and `chance=` (percent from `weight / total_weight`). Fixes misleading logs after mod-pool gating dropped the `/Y` suffix.
+- **README** — Expanded weight math: chance formula, 3-block example, and large-pool examples for weights 1 / 3 / 5 / 10.
 
 ---
 

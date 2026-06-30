@@ -61,14 +61,14 @@ Run `/randomblock info` to see the registered random block (coordinates + block 
 | `/havensb island create oneblock_island …` | Spawn on center dirt; ~2 s later auto setbelow registers feet block |
 | `logs/kubejs/server.log` | `[RandomOneBlock] Auto setbelow after island spawn at … (player_feet, template=oneblock_island)` |
 | `/randomblock info` | Active coords match dirt under feet (e.g. overworld `-8191 71 1`, `minecraft:dirt`) |
-| Mine center dirt | Varied blocks; each break logs `(pool=N, roll=X/Y)` with changing `roll` |
+| Mine center dirt | Varied blocks; each break logs `roll=X/Y`, `w=`, `chance=` with changing values |
 | First login | FTB Quest book in hotbar slot 0 |
 
 Example success lines from a confirmed session:
 
 ```text
 [RandomOneBlock] Auto setbelow after island spawn at -8191 71 1 (player_feet, template=oneblock_island)
-[RandomOneBlock] Replaced broken block at -8191 71 1 with minecraft:iron_ore (pool=2102, roll=847/2104)
+[RandomOneBlock] Replaced broken block at -8191 71 1 with minecraft:iron_ore (effectivePool=820, master=2102, roll=47/854, w=1, chance=0.117%, scope=haven-…, mod=minecraft)
 ```
 
 Operators can still run `/randomblock setbelow` manually (same logic as auto — block under feet via `getBlockX/Y/Z`).
@@ -230,12 +230,49 @@ Mine this block to roll a random block from the pool
 
 ### Weights
 
-Documented in `kubejs/config/random_one_block.json`:
+Configured in `kubejs/config/random_one_block.json`:
 
-- `default_weight: 1` — default for every eligible block.
-- `weight_overrides` — per-block weights (e.g. `minecraft:crafting_table: 3` is 3× more likely than weight-1 blocks).
-- `blacklist` — blocks never spawned.
-- Weight `0` in overrides also excludes a block.
+| Key | Role |
+|-----|------|
+| `default_weight` | Every eligible block starts here (default `1`) unless overridden |
+| `weight_overrides` | Per-block weight (replaces default for that id) |
+| `blacklist` | Block never enters the pool |
+| Weight `0` in overrides | Same as blacklist for that id |
+
+**How a roll works:** The game draws one integer `roll` from `0` up to **total weight − 1**, then walks the **effective pool** (your team’s enabled blocks) in order, subtracting each block’s weight until `roll` goes negative. That block wins.
+
+**Chance for one block:**
+
+```text
+chance = block_weight / total_weight × 100%
+```
+
+`total_weight` is the **sum of weights** in your effective pool, not the number of unique block ids. With mod pool gating, only enabled namespaces count toward that sum.
+
+#### Small example (3 blocks)
+
+| Block | Weight | Chance |
+|-------|--------|--------|
+| `minecraft:stone` | 1 | 1/16 = **6.25%** |
+| `minecraft:crafting_table` | 5 | 5/16 = **31.25%** |
+| `minecraft:dirt` | 10 | 10/16 = **62.50%** |
+
+Total weight = 16. Crafting table (5) is **5×** as likely as stone (1). Dirt (10) is **10×** stone and **2×** crafting table.
+
+#### Large pool (this pack)
+
+Suppose the effective pool has **~800** blocks at weight `1`, plus overrides:
+
+| Block | Weight | Approx. chance |
+|-------|--------|----------------|
+| Typical block | 1 | 1/850 ≈ **0.12%** |
+| `minecraft:crafting_table` | 5 | 5/850 ≈ **0.59%** (5× a weight-1 block) |
+| `minecraft:dirt` or `cobblestone` | 10 | 10/850 ≈ **1.18%** (10× weight-1) |
+| `uncraftingtable:uncrafting_table` | 3 | 3/850 ≈ **0.35%** |
+
+Exact percentages change when mods unlock (effective pool grows) and after `/randomblock reload`. Overrides do **not** stack on top of default — they **replace** it for that id.
+
+**Relative odds:** Weight 3 vs 1 → 3× more likely. Weight 10 vs 5 → 2× more likely.
 
 ### Verifying the pool
 
@@ -247,18 +284,25 @@ After `/reload` or `/randomblock reload`, check `logs/kubejs/server.log`:
 
 Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, and auto setbelow trace lines in `logs/kubejs/server.log`. `/randomblock pools debug` lists mods in chat; `/randomblock pools debug complete` logs every block id per mod (use `complete <mod>` to page a mod's blocks in chat).
 
-### Mining log (`roll=X/Y`)
+### Mining log (`roll`, `w`, `chance`)
 
-Each time the active block is mined, the server logs the replacement and the weighted random draw:
+Each time the active block is mined, the server logs the replacement and weighted draw:
 
 ```text
-[RandomOneBlock] Replaced broken block at 12 64 -8 with minecraft:iron_ore (pool=2102, roll=847/2104)
+[RandomOneBlock] Replaced broken block at 12 64 -8 with minecraft:dirt (effectivePool=820, master=2102, roll=47/854, w=10, chance=1.171%, scope=haven-…, mod=minecraft)
 ```
 
-- **`pool=2102`** — unique blocks in the pool
-- **`roll=847/2104`** — this pick’s roll (`847`) out of total weight (`2104`, the sum of all entry weights)
+| Field | Meaning |
+|-------|---------|
+| `effectivePool` | Unique blocks in **your team’s** rollable pool |
+| `master` | Full modpack pool size (all namespaces) |
+| `roll=47/854` | RNG roll `47` out of effective **total weight** `854` |
+| `w=10` | Weight of the block that won (from config override or default) |
+| `chance=1.171%` | `w / total_weight × 100` for this pick |
+| `scope` | Team unlock scope (`haven-…`, `player-…`) |
+| `mod` | Namespace of the rolled block |
 
-`roll` should change on every break; a stuck value (e.g. always `roll=0/2104`) means the RNG needs fixing. See [`requirements.md`](requirements.md) — this log line is a required diagnostic and must be kept.
+`roll` and `chance` should vary each break. If `chance` never matches `w` divided by the logged total weight, or `roll` is always `0`, report it — see [`requirements.md`](requirements.md).
 
 ### Coordinates (Haven vs KubeJS)
 

@@ -99,21 +99,24 @@ Auto setbelow must **not** skip registration because stale `active_block` in con
 When a player mines the active random block, `BlockEvents.broken` logs one line per replacement. **This format is intentional** — keep it when editing the script.
 
 ```text
-[RandomOneBlock] Replaced broken block at <x> <y> <z> with <block_id> (pool=N, roll=X/Y)
+[RandomOneBlock] Replaced broken block at <x> <y> <z> with <block_id> (effectivePool=N, master=M, roll=X/Y, w=W, chance=P%, scope=…, mod=…)
 ```
 
 | Field | Meaning |
 |-------|---------|
 | `<block_id>` | Block placed on the next tick |
-| `pool=N` | Number of **unique** block ids in the weighted pool |
-| `roll=X/Y` | Weighted RNG roll used for this pick: `X` is `0` … `Y−1`, `Y` is **total weight** (sum of all entry weights; usually close to `pool` unless overrides add extra weight) |
+| `effectivePool=N` | Unique blocks in the **team effective** pool |
+| `master=M` | Unique blocks in the full master pool |
+| `roll=X/Y` | RNG roll `X` in `0` … `Y−1`; `Y` = **effective total weight** (sum of weights, not block count) |
+| `w=W` | Weight of the winning block (`weight_overrides` or `default_weight`) |
+| `chance=P%` | `W / Y × 100` — per-roll probability for that block |
 
 Implementation (do not remove):
 
-- `pickRandomBlockIdInternal()` sets `STATE._lastRoll` from `randomInt(STATE.totalWeight)`.
-- `BlockEvents.broken` logs `roll=${STATE._lastRoll}/${STATE.totalWeight}` alongside `pool=${STATE.pool.length}`.
+- `pickRandomBlockIdFromPool()` / `pickRandomBlockIdInternal()` record original roll, picked weight, and total weight.
+- `BlockEvents.broken` logs `roll=X/Y`, `w=W`, and `chance=P%`.
 
-**Why it matters:** `roll=X/Y` shows the random draw against the full weight range — if `X` is always the same (e.g. always `0`) or the same block id appears every break, the RNG or pool is broken.
+**Why it matters:** `chance` must equal `w` divided by the logged `Y`. If `roll` is always `0` or `chance` does not match, the RNG or weight lookup is broken.
 
 ### Commands (operator, permission level 2)
 
@@ -158,7 +161,7 @@ Expect log lines like:
 [RandomOneBlock] Block pool ready: 2102 unique blocks, total weight 2104
 [RandomOneBlock] Pool preview (first 30): ...
 [RandomOneBlock] Test random picks (8): <8 different ids>
-[RandomOneBlock] Replaced broken block at ... with <id> (pool=2102, roll=847/2104)
+[RandomOneBlock] Replaced broken block at ... with <id> (effectivePool=820, master=2102, roll=47/854, w=10, chance=1.171%, ...)
 ```
 
 **Failure signals:**
