@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.3] — 2026-06-30
+
+### Random One Block
+
+- **Counter HUD crash fix** — MC 26 NBT `getInt()` returns `Optional`; HUD offsets and count are now coerced to plain integers before rendering.
+
+---
+
 ## [1.0.2.2] — 2026-06-30
 
 ### Random One Block

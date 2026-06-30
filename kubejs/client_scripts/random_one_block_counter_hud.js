@@ -16,15 +16,66 @@ const HUD_STATE = {
   listenerRegistered: false
 }
 
+function coerceJavaInt(value, fallback) {
+  var n = 0
+
+  if (value == null) return fallback
+
+  try {
+    if (value.isPresent != null) {
+      if (typeof value.isPresent === 'function') {
+        if (!value.isPresent()) return fallback
+        if (value.get) value = value.get()
+      } else if (!value.isPresent) {
+        return fallback
+      } else if (value.get) {
+        value = value.get()
+      }
+    }
+  } catch (ignored) {}
+
+  try {
+    if (value.orElse != null) value = value.orElse(fallback)
+  } catch (ignored2) {}
+
+  n = Number(value)
+  if (Number.isNaN(n)) return fallback
+  return Math.floor(n)
+}
+
+function coerceJavaBool(value, fallback) {
+  if (value == null) return fallback
+
+  try {
+    if (value.isPresent != null) {
+      if (typeof value.isPresent === 'function') {
+        if (!value.isPresent()) return fallback
+        if (value.get) value = value.get()
+      } else if (!value.isPresent) {
+        return fallback
+      } else if (value.get) {
+        value = value.get()
+      }
+    }
+  } catch (ignored) {}
+
+  try {
+    if (value.orElse != null) value = value.orElse(fallback)
+  } catch (ignored2) {}
+
+  if (value === true || value === false) return value
+  return String(value).toLowerCase() === 'true'
+}
+
 function readIntTag(data, key, fallback) {
   if (!data) return fallback
 
   try {
-    if (data.getInt) return data.getInt(key)
+    if (data.getInt) return coerceJavaInt(data.getInt(key), fallback)
   } catch (ignored) {}
 
   try {
-    if (data[key] != null) return Math.floor(Number(data[key]) || fallback)
+    if (data[key] != null) return coerceJavaInt(data[key], fallback)
   } catch (ignored2) {}
 
   return fallback
@@ -34,11 +85,11 @@ function readBoolTag(data, key, fallback) {
   if (!data) return fallback
 
   try {
-    if (data.getBoolean) return data.getBoolean(key)
+    if (data.getBoolean) return coerceJavaBool(data.getBoolean(key), fallback)
   } catch (ignored) {}
 
   try {
-    if (data[key] != null) return !!data[key]
+    if (data[key] != null) return coerceJavaBool(data[key], fallback)
   } catch (ignored2) {}
 
   return fallback
@@ -68,10 +119,13 @@ function registerHudListener() {
     if (mc.screen != null) return
 
     var guiGraphics = event.getGuiGraphics()
-    var sh = mc.getWindow().getGuiScaledHeight()
-    var x = 10 + HUD_STATE.offsetX
-    var y = sh - 39 + HUD_STATE.offsetY
-    var text = 'Randon Counter : ' + HUD_STATE.count
+    var sh = coerceJavaInt(mc.getWindow().getGuiScaledHeight(), 0)
+    var offsetX = coerceJavaInt(HUD_STATE.offsetX, 0)
+    var offsetY = coerceJavaInt(HUD_STATE.offsetY, -12)
+    var count = coerceJavaInt(HUD_STATE.count, 0)
+    var x = 10 + offsetX
+    var y = sh - 39 + offsetY
+    var text = 'Randon Counter : ' + count
 
     // MC 26+: GuiGraphicsExtractor uses text(), not drawString()
     guiGraphics.text(mc.font, text, x, y, 0xffffff, true)
