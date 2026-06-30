@@ -98,7 +98,7 @@
         id: "minecraft:crafting_table",
         count: 1,
       },
-      x: 2.0,
+      x: 3.0,
       y: 0.0,
       dependencies: [
         "54426B5BBE263DB4",
@@ -127,7 +127,7 @@
         id: "uncraftingtable:uncrafting_table",
         count: 1,
       },
-      x: 4.0,
+      x: 5.25,
       y: 0.0,
       shape: "octagon",
       dependencies: [
@@ -176,6 +176,60 @@
       rewards: [
         {
           id: "3C5BAA5D90E690FF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "crafting_on_a_stick:crafting_table",
+        count: 1,
+      },
+      x: 4.0,
+      y: -1.0,
+      dependencies: [
+        "4137D6CD3FC01F40",
+      ],
+      id: "4C45A23F18643143",
+      tasks: [
+        {
+          id: "26A14924618FB8F1",
+          type: "item",
+          item: {
+            id: "crafting_on_a_stick:crafting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F0E454F0FCA36D2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:grass_block",
+        count: 1,
+      },
+      x: -2.0,
+      y: -2.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "2B9686474CA8C9C3",
+      tasks: [
+        {
+          id: "42B5325C25528463",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "256709D4773DE455",
           type: "xp",
           xp: 10,
         },
