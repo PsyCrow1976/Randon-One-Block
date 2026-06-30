@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.15] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock pools debug`** — Writes plain-text report via `Files.writeString` (JsonIO only supports JSON, so `.txt` dumps were silently skipped).
+
+---
+
 ## [1.0.0.14] — 2026-06-30
 
 ### Random One Block

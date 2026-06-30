@@ -34,6 +34,24 @@ const MOD_POOL_STATE = {
   teamPoolCache: {}
 }
 
+const $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
+const $NioFiles = Java.loadClass('java.nio.file.Files')
+
+function writeKubeJsConfigText(filename, content) {
+  var path = $KubeJSPaths.CONFIG.resolve(String(filename))
+
+  try {
+    var parent = path.getParent()
+    if (parent != null) $NioFiles.createDirectories(parent)
+    $NioFiles.writeString(path, String(content))
+    return String(path)
+  } catch (e) {
+    var err = e && e.javaException ? String(e.javaException) : String(e)
+    console.error('[RandomOneBlock] Failed to write config text file ' + filename + ': ' + err)
+    return null
+  }
+}
+
 function modPoolsCloneConfig(config) {
   return JsonIO.parse(JsonIO.toString(config))
 }
@@ -602,8 +620,11 @@ function dumpModPoolsDebug(scopeId) {
     )
   }
 
-  JsonIO.write(MOD_POOLS_DEBUG_FILE, lines.join('\n'))
-  return rows
+  var writtenPath = writeKubeJsConfigText(MOD_POOLS_DEBUG_FILE, lines.join('\n') + '\n')
+  if (writtenPath) {
+    console.info('[RandomOneBlock] Mod pool debug written to ' + writtenPath)
+  }
+  return { rows: rows, path: writtenPath }
 }
 
 function reloadModPoolsConfig() {
@@ -698,5 +719,6 @@ var RandonOneBlockPools = {
   buildModPoolReportRows: buildModPoolReportRows,
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
-  resolveKnownModNamespace: resolveKnownModNamespace
+  resolveKnownModNamespace: resolveKnownModNamespace,
+  writeKubeJsConfigText: writeKubeJsConfigText
 }
