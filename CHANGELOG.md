@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.8] — 2026-06-30
+
+### Random One Block
+
+- **Counter diagnostic startup fix** — Removed `RegisterGuiLayersEvent` from client scripts (mod-bus only); text1..text12 now use game-bus `RenderGui` / overlay APIs so KubeJS client scripts load without bus errors.
+
+---
+
 ## [1.0.2.7] — 2026-06-30
 
 ### Random One Block
