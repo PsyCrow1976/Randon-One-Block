@@ -68,9 +68,7 @@ const DEFAULT_CONFIG = {
     z: 0
   },
   randon_counter_hud: {
-    enabled: true,
-    offset_x: 0,
-    offset_y: -12
+    enabled: true
   }
 }
 
@@ -1877,10 +1875,10 @@ function cmdCounter(source) {
   count = counters.getTeamBlocksMined(scopeId)
   hud = counters.readHudConfigFromMainConfig()
 
-  tell(source, `§eRandon Counter §7(${scopeId})§e: §f${count} §7blocks mined on your island team.`)
+  tell(source, `§eRandon Mined §7(${scopeId})§e: §f${count} §7blocks on your island team.`)
   tell(
     source,
-    `§7HUD: ${hud.enabled ? '§aenabled' : '§cdisabled'} §7offset §fx=${hud.offset_x} y=${hud.offset_y} §7— edit §frandon_counter_hud §7in §fkubejs/config/random_one_block.json`
+    `§7Overlay: ${hud.enabled ? '§aenabled' : '§cdisabled'} §7— edit §frandon_counter_hud.enabled §7in §fkubejs/config/random_one_block.json`
   )
   counters.syncCounterForPlayer(player, server)
   return 1

@@ -46,25 +46,15 @@ function readHudConfigFromMainConfig() {
 
   rawEnabled = hud.enabled
   if (rawEnabled === false) {
-    return {
-      enabled: false,
-      offset_x: Number(hud.offset_x) || 0,
-      offset_y: hud.offset_y == null ? -12 : Number(hud.offset_y) || 0
-    }
+    return { enabled: false }
   }
 
   if (rawEnabled == null) {
-    return {
-      enabled: true,
-      offset_x: Number(hud.offset_x) || 0,
-      offset_y: hud.offset_y == null ? -12 : Number(hud.offset_y) || 0
-    }
+    return { enabled: true }
   }
 
   return {
-    enabled: String(rawEnabled).toLowerCase() !== 'false',
-    offset_x: Number(hud.offset_x) || 0,
-    offset_y: hud.offset_y == null ? -12 : Number(hud.offset_y) || 0
+    enabled: String(rawEnabled).toLowerCase() !== 'false'
   }
 }
 
@@ -151,9 +141,7 @@ function invalidateTeamCounterCache() {
 function buildCounterSyncPayload(count, hud) {
   return {
     count: Math.max(0, Math.floor(Number(count) || 0)),
-    enabled: hud.enabled ? 1 : 0,
-    offset_x: Math.floor(Number(hud.offset_x) || 0),
-    offset_y: Math.floor(hud.offset_y == null ? -12 : Number(hud.offset_y) || 0)
+    enabled: hud.enabled ? 1 : 0
   }
 }
 

@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.9] — 2026-06-30
+
+### Random One Block
+
+- **Mine counter overlay** — Uses `setOverlayMessage` (the only reliable text path on MC 26 in this pack). Shows **Randon Mined :** plus your team count above the hotbar. Set `randon_counter_hud.enabled` to `false` to hide.
+
+---
+
 ## [1.0.2.8] — 2026-06-30
 
 ### Random One Block

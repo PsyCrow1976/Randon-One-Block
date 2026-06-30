@@ -68,12 +68,10 @@
     "z": 0
   },
 
-  "_randon_counter_hud": "Team island counter shown above health hearts. enabled=false hides HUD. offset_x/offset_y move the text (negative y moves up). Counter is per island team, not per player.",
+  "_randon_counter_hud": "Team island counter shown as overlay text above the hotbar (Randon Mined : count). enabled=false hides it. Counter is per island team, not per player.",
 
   "randon_counter_hud": {
-    "enabled": true,
-    "offset_x": 0,
-    "offset_y": -12
+    "enabled": true
   },
 
   "_command_examples": [
