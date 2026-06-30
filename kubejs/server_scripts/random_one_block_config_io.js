@@ -13,7 +13,8 @@ var RANDOM_ONE_BLOCK_CONFIG_FILES = [
 function robKubejsConfigPath(filename) {
   try {
     var $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
-    return String($KubeJSPaths.CONFIG.resolve(String(filename)).toAbsolutePath())
+    // KubeJS 8.x: CONFIG may resolve to the instance root — pack files live in kubejs/config/
+    return String($KubeJSPaths.DIRECTORY.resolve('config').resolve(String(filename)).toAbsolutePath())
   } catch (ignored) {}
 
   return null

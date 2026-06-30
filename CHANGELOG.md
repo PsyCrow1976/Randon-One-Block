@@ -8,6 +8,19 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.1.4] — 2026-06-30
+
+### Random One Block
+
+- **Config path fix** — Pack JSON now loads from `kubejs/config/` via `KubeJSPaths.DIRECTORY` (KubeJS 8 was resolving `CONFIG` to the instance root). Stale copies at the instance root no longer shadow quest unlock mappings.
+- **Quest unlock handlers** — Ex Deorum Compressed Dirt (`5F76BA38891F3B07`) registers alongside Sophisticated Storage; handlers refresh on server load after config reload.
+
+### FTB Quests
+
+- **Ex Deorum chapter title** — `chapter.E8D4F2A1B3C59607.title` added in both `chapter.json5` and `chapters/ex_deorum.json5` so the tab shows **Ex Deorum** instead of Unnamed.
+
+---
+
 ## [1.0.1.3] — 2026-06-30
 
 ### FTB Quests

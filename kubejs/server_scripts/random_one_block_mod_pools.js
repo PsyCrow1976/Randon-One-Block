@@ -25,12 +25,17 @@ const DEFAULT_MOD_POOLS_CONFIG = {
     'neoforge',
     'rhino'
   ],
-  mod_display_names: {},
+  mod_display_names: {
+    exdeorum: 'Ex Deorum',
+    sophisticatedstorage: 'Sophisticated Storage'
+  },
   quest_unlock_map: {
-    '1D5A582F52D7CB30': 'sophisticatedstorage'
+    '1D5A582F52D7CB30': 'sophisticatedstorage',
+    '5F76BA38891F3B07': 'exdeorum'
   },
   quest_task_fallback: {
-    '1D5A582F52D7CB30': ['1A2B3C4D5E6F7081']
+    '1D5A582F52D7CB30': ['1A2B3C4D5E6F7081'],
+    '5F76BA38891F3B07': ['1A85CE9EB3CAAD93']
   }
 }
 

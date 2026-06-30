@@ -6,6 +6,7 @@
 // Register one handler per task for each quest in quest_unlock_map; unlock when the quest is complete.
 
 var RANDOM_ONE_BLOCK_QUEST_HANDLER_COUNT = 0
+var RANDOM_ONE_BLOCK_REGISTERED_TASK_HANDLERS = {}
 
 function registerRandomOneBlockQuestUnlocks() {
   var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
@@ -29,6 +30,11 @@ function registerRandomOneBlockQuestUnlocks() {
 
   map = pools.getQuestUnlockMap()
 
+  if (pools.reloadModPoolsConfig) {
+    pools.reloadModPoolsConfig()
+    map = pools.getQuestUnlockMap()
+  }
+
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
     questHex = pools.parseFtbQuestIdHex(questId)
@@ -42,6 +48,12 @@ function registerRandomOneBlockQuestUnlocks() {
     }
 
     for (i = 0; i < taskIds.length; i++) {
+      if (RANDOM_ONE_BLOCK_REGISTERED_TASK_HANDLERS[taskIds[i]]) {
+        continue
+      }
+
+      RANDOM_ONE_BLOCK_REGISTERED_TASK_HANDLERS[taskIds[i]] = true
+
       ;(function (boundTaskId, boundQuestId) {
         FTBQuestsEvents.completed(boundTaskId, function (event) {
           var player = pools.resolveQuestEventPlayer ? pools.resolveQuestEventPlayer(event) : null
@@ -116,9 +128,7 @@ ServerEvents.loaded(function (event) {
   var players = null
   var i = 0
 
-  if (RANDOM_ONE_BLOCK_QUEST_HANDLER_COUNT === 0) {
-    registerRandomOneBlockQuestUnlocks()
-  }
+  registerRandomOneBlockQuestUnlocks()
 
   if (!pools || !pools.backfillQuestUnlocksForPlayer || !event.server) return
 

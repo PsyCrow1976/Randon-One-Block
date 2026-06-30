@@ -305,7 +305,7 @@ These are non-negotiable; ignoring them produces silent failures (`Registered 0`
 | **Always add `quest_task_fallback` for each mapped quest** | At script load the FTB quest file may not be loaded yet. Without fallback task ids, log shows `Registered 0 FTB task unlock handler(s)` and nothing ever fires. |
 | **Register handlers at script load only** | `random_one_block_quest_unlocks.js` priority **2**, `random_one_block_mod_pools.js` priority **3** (KubeJS loads higher priority first). Do **not** register from `ServerEvents.loaded` only. |
 | **Do NOT use NeoForge `EventBus.addListener` from KubeJS** | Rhino cannot resolve `addListener` overloads reliably → `/reload` breaks. Quest completion via `FTBQuestsEvent.QuestProgress` is **not** bridged to KubeJS. |
-| **Edit only `kubejs/config/random_one_block_mod_pools.json`** | A stray `random_one_block_mod_pools.json` at the **instance root** overrides kubejs config and strips `quest_task_fallback`. Delete it if present. |
+| **Edit only `kubejs/config/random_one_block_mod_pools.json`** | A stray `random_one_block_mod_pools.json` at the **instance root** can shadow the real file if config I/O points at the wrong path. Run `./scripts/clean-stale-instance-config.sh` after linking the instance. After `/reload`, log must show config path ending in `kubejs/config/random_one_block_mod_pools.json` and `Registered 2` handlers when two quests are mapped. |
 | **Player UUID in KubeJS** | Use `player.uuid` / `FTBQuests.getData(player)` — **not** `player.getUUID()` (crashes in scheduled callbacks). |
 | **Unlock when quest is *ready*** | Task event can fire before FTB marks the quest complete. Code checks all task progress + retries at 1/5/20 ticks. Login **backfill** covers already-completed quests. |
 
@@ -350,8 +350,10 @@ Optional display name in `mod_display_names`.
 (or restart world). Then confirm in `logs/kubejs/server.log`:
 
 ```
-[RandomOneBlock] Registered 1 FTB task unlock handler(s) for mod pools
-[RandomOneBlock] Quest unlock handlers: 1A2B3C4D5E6F7081->1D5A582F52D7CB30
+[RandomOneBlock] Mod pools config path: .../kubejs/config/random_one_block_mod_pools.json
+[RandomOneBlock] Mod pool quest unlock map: 2 quest(s)
+[RandomOneBlock] Registered 2 FTB task unlock handler(s) for mod pools
+[RandomOneBlock] Quest unlock handlers: 1A2B3C4D5E6F7081->1D5A582F52D7CB30, 1A85CE9EB3CAAD93->5F76BA38891F3B07
 ```
 
 **If you see `Registered 0`** — fix `quest_task_fallback`, remove instance-root config duplicate, `/reload` again.
