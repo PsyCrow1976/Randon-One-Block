@@ -226,7 +226,7 @@ After `/reload` or `/randomblock reload`, check `logs/kubejs/server.log`:
 [RandomOneBlock] Block pool ready: 2102 unique blocks, total weight 2104
 ```
 
-Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, and auto setbelow trace lines in `logs/kubejs/server.log`. `/randomblock pools debug` always lists mods in chat and logs the full per-mod report (no config flag needed).
+Set `"debug_logging": true` in `random_one_block.json` for pool preview, test picks, and auto setbelow trace lines in `logs/kubejs/server.log`. `/randomblock pools debug` lists mods in chat; `/randomblock pools debug complete` logs every block id per mod (use `complete <mod>` to page a mod's blocks in chat).
 
 ### Mining log (`roll=X/Y`)
 

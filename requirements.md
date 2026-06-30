@@ -141,6 +141,7 @@ Script logs diagnostics (pool dumps are log-only when `debug_logging` is on):
 |--------|------|
 | Pool preview / test picks | `<instance>/logs/kubejs/server.log` (requires `debug_logging: true`) |
 | Mod pool debug (`/randomblock pools debug`) | In-game chat list + `<instance>/logs/kubejs/server.log` (always on command) |
+| Mod pool complete (`/randomblock pools debug complete`) | Every block id per mod in `logs/kubejs/server.log`; `complete <mod>` pages blocks in chat |
 | Always-on lines | `latest.log` — pool ready, break rolls, auto setbelow |
 
 Expect log lines like:

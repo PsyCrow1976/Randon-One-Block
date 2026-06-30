@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.21] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock pools debug complete`** — Lists every mod and all master-pool block ids (with weights) in `logs/kubejs/server.log`. Chat shows the mod overview; use `complete <mod>` to page a mod's blocks in chat.
+
+---
+
 ## [1.0.0.20] — 2026-06-30
 
 ### Random One Block

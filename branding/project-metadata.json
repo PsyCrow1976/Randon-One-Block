@@ -1,7 +1,7 @@
 {
   "name": "Randon One Block",
   "slug": "randon-one-block",
-  "version": "1.0.0.20",
+  "version": "1.0.0.21",
   "author": "PsyCrow1976",
   "tagline": "Experimental AI-built NeoForge skyblock — random center block, FTB Quests, Uncrafting Table",
   "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2. The author does not hand-write mods or KubeJS — Grok Composer 2.5 fast implements features from descriptions. Core loop: mine one skyblock center block, get a random modpack block back (KubeJS, inspired by Chaos OneBlock). Quest book and pack wiring are AI-assisted too. The Uncrafting Table mod reverses crafting for 26.1.2 where no similar mod existed. No fixed endgame — a sandbox to see how far AI can go on the latest Minecraft.",

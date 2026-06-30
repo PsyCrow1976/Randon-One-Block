@@ -1901,6 +1901,69 @@ function cmdPoolEnable(source, args) {
   return 0
 }
 
+function cmdPoolsDebugComplete(source, pools, summary, extraArgs) {
+  var modArg = extraArgs.length ? String(extraArgs[0]) : ''
+  var blockPage = extraArgs.length > 1 ? Math.max(0, Number.parseInt(extraArgs[1], 10) || 0) : 0
+  var report = pools.dumpModPoolsDebugComplete(summary.scopeId)
+  var mods = report.mods || []
+  var resolved = null
+  var modEntry = null
+  var blockPageSize = 25
+  var start = 0
+  var end = 0
+  var i = 0
+  var j = 0
+
+  if (!modArg) {
+    tell(
+      source,
+      `§eMod pool complete §7(scope ${summary.scopeId})§e — §f${report.total_blocks}§e master blocks, §f${mods.length}§e mods`
+    )
+    tell(source, '§7Every block id is in §flogs/kubejs/server.log')
+
+    for (i = 0; i < mods.length; i++) {
+      tell(
+        source,
+        `§7${mods[i].status} §f${mods[i].display_name} §7(${mods[i].namespace}) §f${mods[i].block_entries.length} §7blocks ${mods[i].effective ? '§aON' : '§cOFF'}`
+      )
+    }
+
+    tell(source, '§7Blocks in chat: §f/randomblock pools debug complete <mod>')
+    return 1
+  }
+
+  resolved = pools.resolveKnownModNamespace(modArg)
+  for (i = 0; i < mods.length; i++) {
+    if (mods[i].namespace === resolved) {
+      modEntry = mods[i]
+      break
+    }
+  }
+
+  if (!modEntry) {
+    tell(source, '§cUnknown mod namespace: §f' + modArg)
+    return 0
+  }
+
+  start = blockPage * blockPageSize
+  end = Math.min(modEntry.block_entries.length, start + blockPageSize)
+
+  tell(
+    source,
+    `§e${modEntry.display_name} §7(${modEntry.namespace})§e — blocks ${start + 1}-${end} of ${modEntry.block_entries.length} ${modEntry.effective ? '§aON' : '§cOFF'}`
+  )
+
+  for (j = start; j < end; j++) {
+    tell(source, `§7${modEntry.block_entries[j].id} §8w=${modEntry.block_entries[j].weight}`)
+  }
+
+  if (end < modEntry.block_entries.length) {
+    tell(source, `§7More: §f/randomblock pools debug complete ${modEntry.namespace} ${blockPage + 1}`)
+  }
+
+  return 1
+}
+
 function cmdPools(source, args) {
   var pools = modPoolsApi()
   var player = requirePlayer(source)
@@ -1924,6 +1987,12 @@ function cmdPools(source, args) {
   rows = summary.rows || []
 
   if (sub === 'debug') {
+    var debugSub = args.length > 1 ? String(args[1]).toLowerCase() : ''
+
+    if (debugSub === 'complete') {
+      return cmdPoolsDebugComplete(source, pools, summary, args.slice(2))
+    }
+
     var debugResult = pools.dumpModPoolsDebug(summary.scopeId)
     rows = (debugResult && debugResult.rows) || rows
     page = args.length > 1 ? Math.max(0, Number.parseInt(args[1], 10) || 0) : 0
@@ -1983,7 +2052,7 @@ function cmdPools(source, args) {
     source,
     `§7Statuses: vanilla + §f${summary.starterExceptions} §7exceptions, §f${summary.unlockedMods} §7unlocked, §f${summary.lockedMods} §7locked`
   )
-  tell(source, '§7Use §f/randomblock pools list §7or §f/randomblock pools debug')
+  tell(source, '§7Use §f/randomblock pools list §7| §f/randomblock pools debug §7| §f/randomblock pools debug complete')
   return 1
 }
 
@@ -1994,7 +2063,7 @@ function cmdHelp(source) {
   )
   tell(
     source,
-    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools list §7| §e/randomblock pools debug'
+    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools list §7| §e/randomblock pools debug §7| §e/randomblock pools debug complete'
   )
   return 1
 }

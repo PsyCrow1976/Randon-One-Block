@@ -75,6 +75,7 @@
     "/randomblock poolenable refinedstorage true",
     "/randomblock pools",
     "/randomblock pools list",
-    "/randomblock pools debug (lists all mods in chat + logs/kubejs/server.log)"
+    "/randomblock pools debug (lists all mods in chat + logs/kubejs/server.log)",
+    "/randomblock pools debug complete (all mods + every block id in log; complete <mod> for chat)"
   ]
 }

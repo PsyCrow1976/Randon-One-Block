@@ -606,6 +606,93 @@ function dumpModPoolsDebug(scopeId) {
   return { rows: rows, scope_id: scopeId }
 }
 
+function buildModPoolCompleteReport(scopeId) {
+  var rows = buildModPoolReportRows(scopeId)
+  var mods = []
+  var i = 0
+  var j = 0
+  var namespace = null
+  var masterBlocks = null
+  var entries = []
+  var totalBlocks = 0
+
+  for (i = 0; i < rows.length; i++) {
+    namespace = rows[i].namespace
+    masterBlocks = MOD_POOL_STATE.masterByMod[namespace] || []
+    entries = []
+
+    for (j = 0; j < masterBlocks.length; j++) {
+      entries.push({
+        id: masterBlocks[j].id,
+        weight: Number(masterBlocks[j].weight) || 1,
+        rollable: rows[i].effective
+      })
+    }
+
+    entries.sort(function (a, b) {
+      return String(a.id).localeCompare(String(b.id))
+    })
+
+    totalBlocks += entries.length
+
+    mods.push({
+      display_name: rows[i].display_name,
+      namespace: namespace,
+      status: rows[i].status,
+      effective: rows[i].effective,
+      block_entries: entries
+    })
+  }
+
+  return { scope_id: scopeId, mods: mods, total_blocks: totalBlocks }
+}
+
+function dumpModPoolsDebugComplete(scopeId) {
+  var report = buildModPoolCompleteReport(scopeId)
+  var effective = buildEffectivePool(scopeId)
+  var i = 0
+  var j = 0
+  var mod = null
+  var entry = null
+
+  console.info('[RandomOneBlock] === Mod pool complete debug report ===')
+  console.info('[RandomOneBlock] scope_id: ' + scopeId)
+  console.info('[RandomOneBlock] effective_blocks: ' + effective.pool.length)
+  console.info('[RandomOneBlock] master_blocks: ' + report.total_blocks)
+  console.info('[RandomOneBlock] master_mods: ' + report.mods.length)
+
+  for (i = 0; i < report.mods.length; i++) {
+    mod = report.mods[i]
+    console.info(
+      '[RandomOneBlock] --- ' +
+        mod.display_name +
+        ' (' +
+        mod.namespace +
+        ') | ' +
+        mod.status +
+        ' | ' +
+        (mod.effective ? 'ON' : 'OFF') +
+        ' | ' +
+        mod.block_entries.length +
+        ' blocks ---'
+    )
+
+    for (j = 0; j < mod.block_entries.length; j++) {
+      entry = mod.block_entries[j]
+      console.info(
+        '[RandomOneBlock]   ' +
+          entry.id +
+          '\tweight=' +
+          entry.weight +
+          (entry.rollable ? '' : '\t(not in effective pool)')
+      )
+    }
+  }
+
+  console.info('[RandomOneBlock] === End mod pool complete debug report ===')
+  return report
+}
+
 function reloadModPoolsConfig() {
   MOD_POOL_STATE.config = loadModPoolsConfig()
   invalidateAllTeamPoolCaches()
@@ -695,7 +782,9 @@ var RandonOneBlockPools = {
   pickRandomBlockIdForPlayer: pickRandomBlockIdForPlayer,
   getEffectivePoolSummaryForPlayer: getEffectivePoolSummaryForPlayer,
   dumpModPoolsDebug: dumpModPoolsDebug,
+  dumpModPoolsDebugComplete: dumpModPoolsDebugComplete,
   buildModPoolReportRows: buildModPoolReportRows,
+  buildModPoolCompleteReport: buildModPoolCompleteReport,
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
   resolveKnownModNamespace: resolveKnownModNamespace
