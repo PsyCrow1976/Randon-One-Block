@@ -1,8 +1,8 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 79
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 80
 
-*Last updated: 2026-06-29*
+*Last updated: 2026-06-30*
 
 Canonical source for installed mods in the CurseForge playtest instance. To refresh after adding, removing, or updating mods, run:
 
@@ -49,6 +49,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | FTB Library (NeoForge) | library-neoforge-26.1.2.6 | `ftb-library-neoforge-26.1.2.6.jar` |
 | FTB Quests (NeoForge) | quests-neoforge-26.1.2.2 | `ftb-quests-neoforge-26.1.2.2.jar` |
 | FTB Teams (NeoForge) | teams-neoforge-26.1.2.4 | `ftb-teams-neoforge-26.1.2.4.jar` |
+| FTB XMod Compat | neoforge-26.1.2.1 | `ftb-xmod-compat-neoforge-26.1.2.1.jar` |
 | Fzzy Config | 0.7.6+26.1+neoforge | `fzzy_config-0.7.6+26.1+neoforge.jar` |
 | Gateways to Eternity | 26.1.2-6.0.1 | `GatewaysToEternity-26.1.2-6.0.1.jar` |
 | GraveStone Mod | neoforge-1.0.37+26.1.2 | `gravestone-neoforge-1.0.37+26.1.2.jar` |
@@ -66,8 +67,8 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Melody | neoforge_1.0.16_MC_26.1.1 | `melody_neoforge_1.0.16_MC_26.1.1.jar` |
 | More Overlays Updated | 1.24.4-mc26.1.2-neoforge | `moreoverlays-1.24.4-mc26.1.2-neoforge.jar` |
 | Mouse Tweaks | 2.31 | `MouseTweaks-neoforge-mc26.1-2.31.jar` |
-| Mystical Agradditions | 26.1.2-9.0.0 | `MysticalAgradditions-26.1.2-9.0.0.jar` |
-| Mystical Agriculture | 26.1.2-9.0.3 | `MysticalAgriculture-26.1.2-9.0.3.jar` |
+| Mystical Agradditions | 26.1.2-9.0.1 | `MysticalAgradditions-26.1.2-9.0.1.jar` |
+| Mystical Agriculture | 26.1.2-9.0.4 | `MysticalAgriculture-26.1.2-9.0.4.jar` |
 | Mystical Agriculture Tiered Crystals | 1.8.0 | `matc-1.8.0.jar` |
 | Mystical Automation | 26.1.2-2.0.6 | `MysticalAutomation-26.1.2-2.0.6.jar` |
 | Neat | 26.1.2-48-NEOFORGE | `Neat-26.1.2-48-NEOFORGE.jar` |
@@ -87,7 +88,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simple Voice Chat | neoforge-2.6.20+26.1.2 | `voicechat-neoforge-2.6.20+26.1.2.jar` |
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.8.12+mc26.1.2 | `sodium-neoforge-0.8.12+mc26.1.2.jar` |
-| Sophisticated Backpacks | 26.1.2-3.25.75.1946 | `sophisticatedbackpacks-26.1.2-3.25.75.1946.jar` |
+| Sophisticated Backpacks | 26.1.2-3.25.76.1956 | `sophisticatedbackpacks-26.1.2-3.25.76.1956.jar` |
 | Sophisticated Core | 26.1.2-1.4.75.2082 | `sophisticatedcore-26.1.2-1.4.75.2082.jar` |
 | Sophisticated Storage | 26.1.2-1.5.84.1898 | `sophisticatedstorage-26.1.2-1.5.84.1898.jar` |
 | The Uncrafting Table | 0.0.4 | `uncraftingtable-0.0.4.jar` |

@@ -18,10 +18,6 @@ Add shaped 3×3 compression recipes so blocks that only exist as “crafted” i
 
 ## Random block tiers (progression gating)
 
-Gate the weighted block pool so late-mod blocks do not appear until the player has unlocked that mod’s dependencies (quest completion, item craft, or FTB Quest chapter gate).
-
-- [ ] Design **tier structure** — e.g. Tier 0 (vanilla / early skyblock), Tier 1 (basic storage & utilities), Tier 2 (Sophisticated Storage, etc.), Tier 3 (**Refined Storage** and peers)
-- [ ] Map **mods → tier** and **unlock conditions** (quest id, crafted item, or chapter completion)
-- [ ] Extend `random_one_block.json` / `random_one_block.js` to filter pool by active tier per player or per island/team
-- [ ] Tie unlocks to **FTB Quests** where possible (e.g. no Refined Storage blocks until Storage Options / RS intro is complete)
-- [ ] Document tier rules in `requirements.md` and add `/randomblock` debug output for current tier + eligible pool size
+- [x] **Mod pool gating** — vanilla default + `starter_exceptions`; per-team unlocks via `quest_unlock_map` / `poolenable` ([`random_one_block_mod_pools.json`](kubejs/config/random_one_block_mod_pools.json))
+- [ ] Map more mods in `quest_unlock_map` (e.g. **Refined Storage**, Gateways, Ex Deorum) as intro quests are added
+- [ ] Custom compression recipes (leather block, wool) so craft-only blocks can enter the master pool

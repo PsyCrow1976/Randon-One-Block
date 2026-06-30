@@ -191,26 +191,30 @@ These were learned from production debugging; violating them causes reload or co
 | 21 | **`auto_setbelow_delay_ticks`** — default `40`; wait after team detected before setbelow so player lands on dirt. |
 | 22 | **`debug_logging`** — default `false`; gate pool preview, auto setbelow trace, watcher startup via `debugLog()`. Keep break log + pool ready + auto setbelow success always on. |
 | 23 | **No `/randomblock give`** — removed; do not re-add (test command was unused). |
+| 24 | **Mod pool gating** — default pool is **vanilla only** plus `starter_exceptions` in `random_one_block_mod_pools.json`. Other namespaces unlock per **team** via `quest_unlock_map` / `poolenable`. Do not regress to global full-pool picks for gameplay breaks. |
 
 ---
 
 ## Architecture (Random One Block)
 
 ```text
-random_one_block.json          → loadConfig / saveConfig (clone before mutate)
+random_one_block.json            → loadConfig / saveConfig (clone before mutate)
+random_one_block_mod_pools.json  → starter_exceptions, quest_unlock_map, force_disabled_mods
         ↓
-rebuildPool()                    → keySet → ArrayList.get(i) → poolById (unique ids)
+rebuildPool()                      → master pool (all eligible blocks) + masterByMod namespace index
         ↓
-STATE.pool + STATE.totalWeight   → dumpPoolReport() → .json / .txt + log diagnostics
+buildEffectivePool(scopeId)        → vanilla + starter_exceptions + team quest unlocks
         ↓
-BlockEvents.broken               → isRandomBlockBreak? (active OR island_template pyramid)
-                                 → pickRandomBlockId() → scheduleInTicks(1) → set block
-                                 → log: with <id> (pool=N, roll=X/Y)  [required diagnostic]
+BlockEvents.broken                 → pickRandomBlockIdForPlayer(breaker) → scheduleInTicks(1) → set block
+                                 → log: effectivePool, scope, mod namespace
         ↓
-ServerEvents.tick (every 5 ticks) → wait auto_setbelow_delay_ticks → auto setbelow at player feet
-ServerEvents.basicCommand        → flat commands (reload-safe)
-ServerEvents.loaded + afterRecipes → reloadAll()
-starter_items.js                 → FTB Quest book hotbar slot 0 on first login
+FTBQuestsEvents.completed          → quest_unlock_map → enableModForTeam (per Haven/FTB team)
+/randomblock poolenable            → manual/admin team unlock (same persistence)
+kubejs/data/random_one_block_unlocks/<scopeId>.json → persisted team unlocks
+        ↓
+ServerEvents.tick (every 5 ticks) → auto setbelow at player feet
+ServerEvents.basicCommand          → randomblock subcommands (reload-safe)
+ServerEvents.loaded + afterRecipes → reloadAll() + quest handler registration
 ```
 
 Key functions in `random_one_block.js`:
@@ -361,7 +365,7 @@ Before considering Random One Block work complete:
 
 ## Open design questions (for pack author)
 
-- Should random blocks be **tiered by FTB Quest chapter** instead of one global pool?
+- ~~Should random blocks be **tiered by FTB Quest chapter** instead of one global pool?~~ **Partially resolved:** mod-namespace gating per team via `random_one_block_mod_pools.json` + FTB Quest unlocks (v1.0.0.13). Expand `quest_unlock_map` as chapters ship.
 - Should `initial_block` stay dirt forever or change per phase?
 - Which mod blocks should be **blacklisted** or **weighted up/down** for balance?
 - ~~Single random block for whole island vs per-player islands?~~ **Resolved:** `island_template_mode` matches pyramid on each island; `active_block` is last registered (info/debug).

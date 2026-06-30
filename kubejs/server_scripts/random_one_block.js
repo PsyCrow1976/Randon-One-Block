@@ -224,6 +224,22 @@ function hasCommandPermission(source) {
   return false
 }
 
+function isOperatorSource(source) {
+  if (!source) return false
+
+  try {
+    const method = source.getClass().getMethod('hasPermissions', $Integer.TYPE)
+    return method.invoke(source, $Integer.valueOf(2))
+  } catch (ignored) {}
+
+  try {
+    const method = source.getClass().getMethod('hasPermission', $Integer.TYPE)
+    return method.invoke(source, $Integer.valueOf(2))
+  } catch (ignored) {}
+
+  return false
+}
+
 function isBlacklisted(id, config) {
   const list = config.blacklist || []
   for (let i = 0; i < list.length; i++) {
@@ -434,6 +450,11 @@ function rebuildPool() {
 
   STATE.pool = pool
   STATE.totalWeight = Math.max(1, Math.floor(totalWeight))
+
+  if (global.RandonOneBlockPools && global.RandonOneBlockPools.updateMasterCatalogFromPool) {
+    global.RandonOneBlockPools.updateMasterCatalogFromPool(pool)
+  }
+
   if (isCollisionFilterEnabled(config) && collisionFilterReady()) {
     console.info(
       `[RandomOneBlock] Block pool ready: ${pool.length} unique blocks, total weight ${STATE.totalWeight} (collision rejected: ${rebuildStats.collisionRejected})`
@@ -511,6 +532,9 @@ function dumpPoolReport(verbose) {
 function reloadAll() {
   STATE.config = loadConfig()
   syncActiveFromConfig()
+  if (global.RandonOneBlockPools && global.RandonOneBlockPools.reloadModPoolsConfig) {
+    global.RandonOneBlockPools.reloadModPoolsConfig()
+  }
   rebuildPool()
 }
 
@@ -1770,9 +1794,13 @@ function cmdRevert(source) {
 
 function cmdReload(source) {
   reloadAll()
+  var summary = ''
+  if (global.RandonOneBlockPools && global.RandonOneBlockPools.isModPoolGatingEnabled()) {
+    summary = ' Mod pools reloaded.'
+  }
   tell(
     source,
-    `§aReloaded random block config (${STATE.pool.length} blocks). Pool saved to §fkubejs/config/${POOL_DUMP_TEXT}`
+    `§aReloaded random block config (${STATE.pool.length} master blocks).${summary} Pool saved to §fkubejs/config/${POOL_DUMP_TEXT}`
   )
   return 1
 }
@@ -1794,7 +1822,23 @@ function cmdInfo(source) {
       source,
       `§eRandom block placement: §f${active.dimension} ${active.x} ${active.y} ${active.z} §7(${blockId})`
     )
-    tell(source, `§ePool: §f${STATE.pool.length} §eblocks`)
+    tell(source, `§eMaster pool: §f${STATE.pool.length} §eblocks`)
+
+    if (global.RandonOneBlockPools && global.RandonOneBlockPools.isModPoolGatingEnabled()) {
+      var player = source.player || (source.tell && source.getLevel ? source : null)
+      if (player) {
+        var poolSummary = global.RandonOneBlockPools.getEffectivePoolSummaryForPlayer(
+          player,
+          player.server || (source.server ? source.server : null)
+        )
+        tell(
+          source,
+          `§eYour team pool: §f${poolSummary.effectiveBlocks} §eblocks §7(scope ${poolSummary.scopeId})`
+        )
+      } else {
+        tell(source, '§7Mod pool gating is on — run as a player to see your team pool size.')
+      }
+    }
 
     if (STATE.config?.island_template_mode) {
       tell(source, '§7Mine this block to roll a random block from the pool')
@@ -1809,10 +1853,120 @@ function cmdInfo(source) {
   return 1
 }
 
+function cmdPoolEnable(source, args) {
+  var pools = global.RandonOneBlockPools
+  var player = requirePlayer(source)
+  var mod = null
+  var flag = null
+
+  if (!pools || !pools.enableModForTeam) {
+    tell(source, '§cMod pool gating is not loaded.')
+    return 0
+  }
+
+  if (!player) return 0
+
+  if (args.length < 2) {
+    tell(source, '§cUsage: §f/randomblock poolenable <mod> <true|false>')
+    return 0
+  }
+
+  mod = args[0]
+  flag = String(args[1]).toLowerCase()
+
+  if (flag === 'true' || flag === '1' || flag === 'on' || flag === 'yes') {
+    pools.enableModForTeam(player, mod, true)
+    return 1
+  }
+
+  if (flag === 'false' || flag === '0' || flag === 'off' || flag === 'no') {
+    if (!isOperatorSource(source)) {
+      tell(source, '§cOnly operators can disable mod pools.')
+      return 0
+    }
+    pools.disableModForTeam(player, mod, true)
+    return 1
+  }
+
+  tell(source, '§cUsage: §f/randomblock poolenable <mod> <true|false>')
+  return 0
+}
+
+function cmdPools(source, args) {
+  var pools = global.RandonOneBlockPools
+  var player = requirePlayer(source)
+  var sub = args.length ? String(args[0]).toLowerCase() : ''
+  var summary = null
+  var rows = null
+  var i = 0
+  var page = 0
+  var pageSize = 12
+  var start = 0
+  var end = 0
+
+  if (!pools || !pools.getEffectivePoolSummaryForPlayer) {
+    tell(source, '§cMod pool gating is not loaded.')
+    return 0
+  }
+
+  if (!player) return 0
+
+  summary = pools.getEffectivePoolSummaryForPlayer(player, player.server)
+  rows = summary.rows || []
+
+  if (sub === 'debug') {
+    pools.dumpModPoolsDebug(summary.scopeId)
+    tell(
+      source,
+      `§aMod pool debug saved to §fkubejs/config/random_one_block_mod_pools_debug.txt§a (${rows.length} mods, effective ${summary.effectiveBlocks} blocks).`
+    )
+    return 1
+  }
+
+  if (sub === 'list') {
+    page = args.length > 1 ? Math.max(0, Number.parseInt(args[1], 10) || 0) : 0
+    start = page * pageSize
+    end = Math.min(rows.length, start + pageSize)
+
+    tell(
+      source,
+      `§eMod pools §7(page ${page + 1}, scope ${summary.scopeId})§e — effective §f${summary.effectiveBlocks}§e / master §f${STATE.pool.length}`
+    )
+
+    for (i = start; i < end; i++) {
+      tell(
+        source,
+        `§7${rows[i].status} §f${rows[i].display_name} §7(${rows[i].namespace}) §f${rows[i].blocks} §7blocks ${rows[i].effective ? '§aON' : '§cOFF'}`
+      )
+    }
+
+    if (end < rows.length) {
+      tell(source, `§7More mods: §f/randomblock pools list ${page + 1}`)
+    }
+
+    return 1
+  }
+
+  tell(
+    source,
+    `§eMod pools §7(${summary.scopeId})§e — effective §f${summary.effectiveBlocks}§e blocks, master §f${STATE.pool.length}§e, mods §f${summary.masterMods}`
+  )
+  tell(
+    source,
+    `§7Statuses: vanilla + §f${summary.starterExceptions} §7exceptions, §f${summary.unlockedMods} §7unlocked, §f${summary.lockedMods} §7locked`
+  )
+  tell(source, '§7Use §f/randomblock pools list §7or §f/randomblock pools debug')
+  return 1
+}
+
 function cmdHelp(source) {
   tell(
     source,
-    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7(random block placement) §7| §e/randomblock revert §7| §e/randomblock reload'
+    '§e/randomblock setbelow §7| §e/randomblock set <x> <y> <z> §7| §e/randomblock info §7| §e/randomblock revert §7| §e/randomblock reload'
+  )
+  tell(
+    source,
+    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools list §7| §e/randomblock pools debug'
   )
   return 1
 }
@@ -1842,6 +1996,10 @@ function cmdDispatch(source, input) {
       return cmdRevert(source)
     case 'reload':
       return cmdReload(source)
+    case 'poolenable':
+      return cmdPoolEnable(source, parsed.args)
+    case 'pools':
+      return cmdPools(source, parsed.args)
     case 'help':
       return cmdHelp(source)
     default:
@@ -1892,14 +2050,25 @@ BlockEvents.broken(event => {
 
   const level = event.level
   const coords = blockCoords(event.block)
-  const nextId = pickRandomBlockId()
+  const breaker = event.player
+  const fallback = getInitialBlock()
+  const nextId =
+    breaker && global.RandonOneBlockPools && global.RandonOneBlockPools.pickRandomBlockIdForPlayer
+      ? global.RandonOneBlockPools.pickRandomBlockIdForPlayer(breaker, event.server, fallback)
+      : pickRandomBlockId()
   const poolSize = STATE.pool.length
-  const roll = STATE._lastRoll
+  var pickMeta =
+    global.RandonOneBlockPools && global.RandonOneBlockPools.getLastModPoolPickMeta
+      ? global.RandonOneBlockPools.getLastModPoolPickMeta()
+      : { poolSize: poolSize, scopeId: '', namespace: '', roll: STATE._lastRoll }
+  var effectiveSize = pickMeta.poolSize || poolSize
+  var roll = pickMeta.roll != null ? pickMeta.roll : STATE._lastRoll
+  var rolledNamespace = pickMeta.namespace || String(nextId).split(':')[0]
 
   event.server.scheduleInTicks(1, () => {
     level.getBlock(coords.x, coords.y, coords.z).set(nextId)
     console.info(
-      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (pool=${poolSize}, roll=${roll}/${STATE.totalWeight})`
+      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
     )
 
     if (isFallingBlockId(nextId)) {

@@ -8,6 +8,28 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.13] — 2026-06-29
+
+**Mod-pool gating** for the random one-block — vanilla-only default, quest unlocks, per-team persistence (80 mods).
+
+### Mods
+
+- **Added:** FTB XMod Compat `26.1.2.1` (KubeJS ↔ FTB Quests events)
+
+### Random One Block
+
+- **Default pool** — Only **vanilla** blocks at pack start; `starter_exceptions` in config adds early mods (e.g. OpenBlocks Elevator).
+- **Per-team unlocks** — Completing mapped FTB Quests unlocks a mod's blocks for the whole Haven team; persisted in `kubejs/data/random_one_block_unlocks/`.
+- **Commands** — `/randomblock poolenable`, `pools`, `pools list`, `pools debug`.
+- **First quest map** — Sophisticated Storage GTKM quest unlocks `sophisticatedstorage` namespace.
+
+### Scripts
+
+- **`random_one_block_mod_pools.js`** — Namespace catalog, effective pool builder, team persistence.
+- **`random_one_block_quest_unlocks.js`** — `FTBQuestsEvents.completed` + login backfill from `quest_unlock_map`.
+
+---
+
 ## [1.0.0.12] — 2026-06-29
 
 Post-**1.0.0.11** repo updates (not yet published to CurseForge).

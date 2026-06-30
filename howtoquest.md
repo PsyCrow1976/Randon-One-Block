@@ -287,6 +287,42 @@ Every reward needs its own unique `id`.
 
 ---
 
+## Random block mod unlocks (FTB XMod Compat)
+
+Completing certain quests unlocks that mod's blocks in the **random one-block pool** for the player's **team** (shared Haven island).
+
+### Config map
+
+Edit [`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_one_block_mod_pools.json):
+
+```json5
+{
+  starter_exceptions: ["elevatorid"],   // also in pool from day one (vanilla is always on)
+  quest_unlock_map: {
+    "330C599A54702742": "sophisticatedstorage"   // quest hex id -> mod namespace
+  }
+}
+```
+
+1. Right-click a quest in the editor → **Copy ID** (hex string).
+2. Add `QUEST_ID: "modnamespace"` to `quest_unlock_map` (namespace = block id prefix, e.g. `refinedstorage:machine` → `refinedstorage`).
+3. Run `/randomblock reload` in-game (or restart).
+
+**FTB XMod Compat** registers `FTBQuestsEvents.completed` handlers automatically — a command reward is optional. Login backfill applies unlocks for quests already completed.
+
+### Manual / admin unlock
+
+```
+/randomblock poolenable refinedstorage true
+/randomblock pools
+/randomblock pools list
+/randomblock pools debug
+```
+
+Team unlocks persist under `kubejs/data/random_one_block_unlocks/` (gitignored).
+
+---
+
 ## Reload & test
 
 1. Edit JSON5 files in `config/ftbquests/`

@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-29",
+  "generated": "2026-06-30",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 79,
+  "mod_count": 80,
   "mods": [
     {
       "name": "Animal Pens",
@@ -250,6 +250,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge"
     },
     {
+      "name": "FTB XMod Compat",
+      "version": "neoforge-26.1.2.1",
+      "jar": "ftb-xmod-compat-neoforge-26.1.2.1.jar",
+      "curseforge_id": 889915,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat"
+    },
+    {
       "name": "Fzzy Config",
       "version": "0.7.6+26.1+neoforge",
       "jar": "fzzy_config-0.7.6+26.1+neoforge.jar",
@@ -370,15 +377,15 @@
     },
     {
       "name": "Mystical Agradditions",
-      "version": "26.1.2-9.0.0",
-      "jar": "MysticalAgradditions-26.1.2-9.0.0.jar",
+      "version": "26.1.2-9.0.1",
+      "jar": "MysticalAgradditions-26.1.2-9.0.1.jar",
       "curseforge_id": 256247,
       "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions"
     },
     {
       "name": "Mystical Agriculture",
-      "version": "26.1.2-9.0.3",
-      "jar": "MysticalAgriculture-26.1.2-9.0.3.jar",
+      "version": "26.1.2-9.0.4",
+      "jar": "MysticalAgriculture-26.1.2-9.0.4.jar",
       "curseforge_id": 246640,
       "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture"
     },
@@ -517,8 +524,8 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.75.1946",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.75.1946.jar",
+      "version": "26.1.2-3.25.76.1956",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.76.1956.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },

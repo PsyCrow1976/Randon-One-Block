@@ -71,6 +71,10 @@
     "/randomblock set 100 70 0",
     "/randomblock info",
     "/randomblock revert",
-    "/randomblock reload"
+    "/randomblock reload",
+    "/randomblock poolenable refinedstorage true",
+    "/randomblock pools",
+    "/randomblock pools list",
+    "/randomblock pools debug"
   ]
 }
