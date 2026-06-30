@@ -4,7 +4,73 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** During development, bump the patch segment for each change (`1.0.0.12`, `1.0.0.13`, …). When the current work track is complete, publish **`1.0.1.0`** to CurseForge. Keep `branding/project-metadata.json` in sync with the newest changelog entry.
+**Versioning:** During development, bump the patch segment for each change (`1.0.0.12`, `1.0.0.13`, …). Publish milestone releases to CurseForge (`1.0.1.0`, …). Keep `branding/project-metadata.json` in sync with the newest changelog entry.
+
+---
+
+## [1.0.1.0] — 2026-06-30
+
+**CurseForge milestone** — mod-pool gating, quest unlocks, and custom compression blocks for the random one-block loop.
+
+### Random One Block — mod pool gating
+
+- **Tiered pool** — Day one rolls **vanilla** plus **starter exceptions** (`elevatorid`, `kubejs`, `uncraftingtable`). Other mod namespaces unlock **per team** when FTB quests complete or an operator runs `/randomblock poolenable`.
+- **Quest unlocks** — Completing quests (e.g. Leather Backpack → Sophisticated Storage) auto-enables the linked mod pool. Task-level FTB handlers, login backfill, and `/randomblock pools debug quests` for troubleshooting.
+- **Pool commands** — `/randomblock pools`, `pools list`, `pools debug`, `pools debug complete <mod>`, `pools debug quests`, and `poolenable <mod> true|false`. Full reference in [`README.md`](README.md).
+
+### Custom blocks & recipes (KubeJS)
+
+- **Compression blocks** — Leather, sapling, carrot, potato, and torch blocks: craft 3×3 → 1 block, decompress → 9 items. Minable and in the random pool under namespace `kubejs`.
+- **Docs** — [`howtocustomblocks.md`](howtocustomblocks.md) for adding more storage blocks; [`howtoquest.md`](howtoquest.md) for quest → mod unlock wiring.
+
+### Config & stability
+
+- **Authoritative config** — All pack JSON loads/saves via `kubejs/config/` only (`RandonOneBlockConfigIO`). `./link-instance.sh` and `./scripts/clean-stale-instance-config.sh` remove stray instance-root copies that shadowed real config.
+- **Weight overrides** — Crafting table, dirt, cobblestone, and uncrafting table tuning in `random_one_block.json`.
+
+### Docs
+
+- Updated **README**, **requirements**, **todolist**, and pool-command tables for mod gating and custom blocks.
+
+---
+
+## [1.0.0.37] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — Fixed `player.getUUID()` crashes in scheduled backfill (use `player.uuid` / `FTBQuests.getData`). Task fallback merges pack defaults when instance-root config is stale. Retry handler registration on server load if script-load pass registered 0 handlers. Removed stray instance-root `random_one_block_mod_pools.json` (missing `quest_task_fallback` → 0 handlers).
+
+---
+
+## [1.0.0.36] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlock debug** — `quest_unlock_trace_log` writes each task event / unlock attempt to `logs/kubejs/server.log`. `/randomblock pools debug quests` shows FTB completion state in chat. Delayed unlock retries (1/5/20 ticks) fix quest-marked-complete timing after task events.
+
+---
+
+## [1.0.0.35] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — Removed NeoForge `EventBus.addListener` (Rhino overload errors broke `/reload`). Restored `FTBQuestsEvents.completed` on **task** hex ids per quest (`quest_task_fallback` + live FTB quest file lookup). Unlock runs when the parent quest is complete; login backfill unchanged.
+
+---
+
+## [1.0.0.34] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — Fixed Rhino `EventBus.addListener` ambiguity by wrapping the QuestProgress handler in `java.util.function.Consumer`. Persistent listener flag is only set after successful registration.
+
+---
+
+## [1.0.0.33] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — `FTBQuestsEvents.completed` only fires for **task** completion, not **quest** completion. Leather Backpack unlock now listens to NeoForge `FTBQuestsEvent.QuestProgress` (COMPLETED) with quest hex ids from `quest_unlock_map`. Player resolution uses `getPlayer()`, notified/online members, and FTB current player. Listener registers once per world via overworld persistent flag (safe across `/reload`).
 
 ---
 

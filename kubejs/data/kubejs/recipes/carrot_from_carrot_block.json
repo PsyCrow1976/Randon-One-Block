@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["kubejs:carrot_block"],
+  "result": { "id": "minecraft:carrot", "count": 9 }
+}

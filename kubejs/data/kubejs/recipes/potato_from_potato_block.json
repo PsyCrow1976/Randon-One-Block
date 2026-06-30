@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["kubejs:potato_block"],
+  "result": { "id": "minecraft:potato", "count": 9 }
+}

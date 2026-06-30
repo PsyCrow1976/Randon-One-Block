@@ -191,7 +191,26 @@ All subcommands use one **`/randomblock`** command (`ServerEvents.basicCommand` 
 | `/randomblock set <x> <y> <z>` | Register random block at world coordinates (F3); saves to config |
 | `/randomblock info` | Show registered random block coords + block id + pool size |
 | `/randomblock revert` | Reset registered block to `initial_block` (dirt) |
-| `/randomblock reload` | Reload config and rebuild block pool |
+| `/randomblock reload` | Reload config, mod-pool config, and rebuild block pool |
+| `/randomblock poolenable <mod> <true\|false>` | Enable or disable a mod namespace in **your team’s** effective pool (persisted). Starter exceptions cannot be disabled. Example: `/randomblock poolenable refinedstorage true` |
+| `/randomblock pools` | Summary: effective block count, master pool size, mod count, and subcommand help |
+| `/randomblock pools list` | Paginated list of mods (status, display name, namespace, block count, ON/OFF). Optional page: `pools list 2` |
+| `/randomblock pools debug` | Same as list but 20 mods per page; **full report** always copied to `logs/kubejs/server.log` |
+| `/randomblock pools debug <page>` | Paginate the mod overview (page 2 = `pools debug 1`) |
+| `/randomblock pools debug quests` | FTB quest completion, unlock readiness, and pool ON/OFF per quest-linked mod (chat + trace in `server.log` when `quest_unlock_trace_log` is on) |
+| `/randomblock pools debug complete` | Log **every** master-pool block id (with weights) per mod to `logs/kubejs/server.log` |
+| `/randomblock pools debug complete <mod>` | Page one mod’s block ids in chat (e.g. `complete kubejs`, `complete kubejs 1` for page 2) |
+
+### Mod pool gating (what actually rolls)
+
+| Status | Meaning |
+|--------|---------|
+| `vanilla` | Always on (`minecraft`) |
+| `exception` | On from day one (`starter_exceptions.enabled`: elevatorid, kubejs, uncraftingtable) |
+| `unlocked` | Your team enabled it via quest or `/randomblock poolenable` |
+| `locked` | In the master pool but not in your team’s effective pool yet |
+
+Config: `kubejs/config/random_one_block_mod_pools.json`. Unlock scope is **per team** (`haven-…` after island create). See [`howtoquest.md`](howtoquest.md) for wiring new quest unlocks.
 
 On `oneblock_island` create, setbelow runs automatically after `auto_setbelow_delay_ticks` (default 40 ticks ≈ 2 s) once the team + template are detected (polls every 5 ticks). Log line:
 
@@ -270,12 +289,28 @@ Call `BlockPos.getX()` / `getY()` / `getZ()` directly in Rhino.
 | `unique blocks: 1` in log | Registry iteration bug | Id must come from registry key, not block instance |
 | Sand/gravel fell, can’t mine again | Gravity recovery | Wait for dirt restore log; bedrock must stay under center |
 
+## Custom blocks & compression recipes (KubeJS)
+
+Custom **storage blocks** compress 9 items into one minable block (and decompress back in crafting). They can roll from the random one-block pool when `kubejs` is enabled in the mod pool.
+
+| Block | Compress (3×3) | Decompress |
+|-------|------------------|------------|
+| Leather Block | leather | 9× leather |
+| Sapling Block | oak sapling | 9× oak sapling |
+| Carrot Block | carrot | 9× carrot |
+| Potato Block | potato | 9× potato |
+| Torch Block | torch | 9× torch |
+
+**Developer guide:** [`howtocustomblocks.md`](howtocustomblocks.md) — file layout, KubeJS 8 pitfalls, pool verification.
+
+**Apply changes:** full **restart** after editing `startup_scripts/` or assets; **`/reload`** after recipes or `kubejs/data/`.
+
 ## Customization (KubeJS)
 
-Planned uses of `kubejs/` beyond Random One Block:
+Further planned uses of `kubejs/`:
 
 - Integration between mods from different pack styles
-- Recipe changes, item tweaks, and event hooks
+- More recipe changes, item tweaks, and event hooks
 - Pack-specific phases and unlock conditions tied to FTB Quests progression
 
 ## Local development
@@ -295,6 +330,12 @@ Restore symlinks after reinstalling the instance:
 
 ```bash
 ./link-instance.sh
+```
+
+`link-instance.sh` also removes **stale pack config files at the instance root** (`random_one_block.json`, `random_one_block_mod_pools.json`, etc.). Authoritative config lives only in **`kubejs/config/`** in the repo. If behaviour looks wrong after edits, run:
+
+```bash
+./scripts/clean-stale-instance-config.sh
 ```
 
 **Workflow:** edit files in repo → `/reload` in game → check `logs/kubejs/server.log` for errors and pool diagnostics.

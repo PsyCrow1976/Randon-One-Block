@@ -287,44 +287,116 @@ Every reward needs its own unique `id`.
 
 ---
 
-## Random block mod unlocks (FTB XMod Compat)
+## Random block mod unlocks (quest → mod pool)
 
-Completing certain quests unlocks that mod's blocks in the **random one-block pool** for the player's **team** (shared Haven island).
+Completing certain FTB Quests unlocks that mod's blocks in the **random one-block pool** for the player's **team** (shared Haven island scope: `haven-…` when a Haven team exists).
 
-### Config map
+**Implementation:** [`kubejs/server_scripts/random_one_block_mod_pools.js`](../kubejs/server_scripts/random_one_block_mod_pools.js) + [`kubejs/server_scripts/random_one_block_quest_unlocks.js`](../kubejs/server_scripts/random_one_block_quest_unlocks.js). Requires **FTB Quests** + **FTB XMod Compat** (KubeJS `FTBQuestsEvents` binding).
 
-Edit [`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_one_block_mod_pools.json):
+---
+
+### HARD RULES — read before adding a quest unlock
+
+These are non-negotiable; ignoring them produces silent failures (`Registered 0` handlers, no unlock on complete).
+
+| Rule | Why |
+|------|-----|
+| **`FTBQuestsEvents.completed` fires on TASK completion, not quest completion** | KubeJS handlers must register on **task** hex ids. `quest_unlock_map` still uses **quest** ids for authors. |
+| **Always add `quest_task_fallback` for each mapped quest** | At script load the FTB quest file may not be loaded yet. Without fallback task ids, log shows `Registered 0 FTB task unlock handler(s)` and nothing ever fires. |
+| **Register handlers at script load only** | `random_one_block_quest_unlocks.js` priority **2**, `random_one_block_mod_pools.js` priority **3** (KubeJS loads higher priority first). Do **not** register from `ServerEvents.loaded` only. |
+| **Do NOT use NeoForge `EventBus.addListener` from KubeJS** | Rhino cannot resolve `addListener` overloads reliably → `/reload` breaks. Quest completion via `FTBQuestsEvent.QuestProgress` is **not** bridged to KubeJS. |
+| **Edit only `kubejs/config/random_one_block_mod_pools.json`** | A stray `random_one_block_mod_pools.json` at the **instance root** overrides kubejs config and strips `quest_task_fallback`. Delete it if present. |
+| **Player UUID in KubeJS** | Use `player.uuid` / `FTBQuests.getData(player)` — **not** `player.getUUID()` (crashes in scheduled callbacks). |
+| **Unlock when quest is *ready*** | Task event can fire before FTB marks the quest complete. Code checks all task progress + retries at 1/5/20 ticks. Login **backfill** covers already-completed quests. |
+
+---
+
+### Step-by-step: add a new quest → mod unlock
+
+#### 1. Collect IDs (repo JSON5, not in-game save)
+
+| ID | Where |
+|----|--------|
+| **Quest hex id** | Quest `id` in `config/ftbquests/quests/chapters/<chapter>.json5`, or right-click quest → Copy ID |
+| **Task hex id(s)** | Each `tasks[].id` under that quest (e.g. Leather Backpack task `1A2B3C4D5E6F7081`) |
+| **Mod namespace** | Block id prefix in master pool, e.g. `refinedstorage:machine` → `refinedstorage` |
+
+#### 2. Edit config (repo → symlinked `kubejs/config/`)
+
+[`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_one_block_mod_pools.json):
 
 ```json5
 {
-  starter_exceptions: {
-    enabled: ["elevatorid", "uncraftingtable"],  // also in pool from day one (vanilla is always on)
-    mods_with_minable_blocks: ["minecraft", "elevatorid", "..."]  // catalog from master pool
+  "quest_unlock_map": {
+    "1D5A582F52D7CB30": "sophisticatedstorage"
   },
-  quest_unlock_map: {
-    "1D5A582F52D7CB30": "sophisticatedstorage"   // Leather Backpack -> mod namespace
+  "quest_task_fallback": {
+    "1D5A582F52D7CB30": ["1A2B3C4D5E6F7081"]
   }
 }
 ```
 
-1. Right-click a quest in the editor → **Copy ID** (hex string).
-2. Add `QUEST_ID: "modnamespace"` to `quest_unlock_map` (namespace = block id prefix, e.g. `refinedstorage:machine` → `refinedstorage`).
-3. Run `/randomblock reload` in-game (or restart).
+- `quest_unlock_map` — **quest hex id** → **mod namespace** (what players/designers think in).
+- `quest_task_fallback` — **same quest hex id** → array of **task hex ids** (what KubeJS handlers listen on). Required even if FTB would discover tasks later at runtime.
 
-**FTB XMod Compat** registers `FTBQuestsEvents.completed` handlers automatically — a command reward is optional. Login backfill applies unlocks for quests already completed.
+Optional display name in `mod_display_names`.
 
-### Manual / admin unlock
+#### 3. Reload scripts
 
 ```
-/randomblock poolenable refinedstorage true
-/randomblock pools
+/reload
+```
+
+(or restart world). Then confirm in `logs/kubejs/server.log`:
+
+```
+[RandomOneBlock] Registered 1 FTB task unlock handler(s) for mod pools
+[RandomOneBlock] Quest unlock handlers: 1A2B3C4D5E6F7081->1D5A582F52D7CB30
+```
+
+**If you see `Registered 0`** — fix `quest_task_fallback`, remove instance-root config duplicate, `/reload` again.
+
+#### 4. Test in-game
+
+```
+/randomblock poolenable <mod> false          # start locked
+/randomblock pools debug quests              # FTB state: completed / ready / pool ON
+```
+
+Complete the quest → chat unlock message + log lines:
+
+```
+Quest unlock trace: task_event | task=... | quest=...
+Quest completed unlock: <QUEST_HEX> -> <mod>
+```
+
+`/randomblock pools debug quests` → `ready=yes`, `pool=ON`. Scope should be `haven-…` after island team exists ( `player-…` only before Haven team).
+
+#### 5. Optional belt-and-suspenders (FTB command reward)
+
+Not required if KubeJS handlers register. On the quest, add reward type `command`:
+
+```
+/randomblock poolenable sophisticatedstorage true
+```
+
+Same team persistence as automatic unlock.
+
+---
+
+### Debug commands
+
+```
+/randomblock poolenable <mod> true|false
+/randomblock pools debug quests     # FTB completion + handler ids + pool state (chat + server.log)
 /randomblock pools list
 /randomblock pools debug
 /randomblock pools debug complete
-/randomblock pools debug complete minecraft
 ```
 
-Team unlocks persist in `kubejs/config/random_one_block_team_unlocks.json` (gitignored). `/randomblock pools debug` lists mod namespaces in chat; `/randomblock pools debug complete` logs every block id per mod to `logs/kubejs/server.log` (use `complete <mod>` to page blocks in chat).
+Set `"quest_unlock_trace_log": true` in `random_one_block_mod_pools.json` for per-event lines in `logs/kubejs/server.log`.
+
+Team unlocks persist in `kubejs/config/random_one_block_team_unlocks.json` (gitignored).
 
 ---
 
@@ -369,6 +441,16 @@ Fix: restore `dependencies` in the JSON5 file. `dependency_requirement` alone is
 Cause: lang keys reference old quest/task IDs.
 
 Fix: grep the chapter JSON5 for current `id` values and update `lang/en_us/chapters/<filename>.json5`.
+
+### Quest completes but mod pool stays locked
+
+Check in order:
+
+1. **`logs/kubejs/server.log` on `/reload`** — must show `Registered N FTB task unlock handler(s)` with `task->quest` pairs, not `Registered 0`.
+2. **`quest_task_fallback`** — task hex id(s) for that quest in `kubejs/config/random_one_block_mod_pools.json` (pack defaults exist for Leather Backpack; new quests need explicit entries).
+3. **Instance-root config** — delete `random_one_block_mod_pools.json` at instance root if it exists (stale copy without `quest_task_fallback`).
+4. **`/randomblock pools debug quests`** — after complete: `ready=yes`, `pool=ON`; if `completed=yes` but `pool=OFF`, backfill failed (check log for `getUUID` errors).
+5. **Wrong id type** — handlers listen on **task** ids; map keys are **quest** ids. Do not put quest id in `FTBQuestsEvents.completed` without a matching task in `quest_task_fallback`.
 
 ---
 

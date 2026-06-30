@@ -2,7 +2,7 @@
 
 **Read this file first** at the start of a new session (human or AI) to understand what the project is, what must keep working, what is required next, and which technical constraints must not be broken.
 
-**Last playtest-verified:** 2026-06-24 — `oneblock_island` create, auto setbelow at player feet, mining with varied `roll=X/Y`, FTB Quest book in hotbar slot 0. Treat this flow as the regression baseline.
+**Last playtest-verified:** 2026-06-30 — `oneblock_island` create, auto setbelow, mod pool gating + quest unlocks, custom `kubejs` compression blocks, `/randomblock pools` commands. Treat this flow as the regression baseline.
 
 Also read [`README.md`](README.md) for player-facing docs and quick start.
 
@@ -13,9 +13,10 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 1. **Project:** NeoForge skyblock modpack with a KubeJS “Random One Block” on **`oneblock_island`** Haven templates (~2100+ weighted blocks from the full registry).
 2. **Status:** Random One Block + `oneblock_island` spawn + auto setbelow + quest book are **confirmed working** (playtest 2026-06-24). Do not regress without re-running the end-to-end checklist in README.
 3. **Before editing mechanics:** Read `kubejs/server_scripts/random_one_block.js` and the **KubeJS / Rhino constraints** section below.
-4. **After changes:** User runs `/reload` in CurseForge; verify `logs/kubejs/server.log` for pool size, test picks, and break logs.
-5. **Repo is source of truth** — `kubejs/` and `config/` symlink into the CurseForge instance via `./link-instance.sh`.
-6. **Scope:** Prefer small diffs. Do not refactor working patterns. Do not commit generated pool dumps unless asked.
+4. **Before adding custom blocks/recipes:** Read [`howtocustomblocks.md`](howtocustomblocks.md) (startup vs server scripts, assets, datapack recipes, pool gating).
+5. **After changes:** User runs `/reload` in CurseForge; verify `logs/kubejs/server.log` for pool size, test picks, and break logs.
+6. **Repo is source of truth** — `kubejs/` and `config/` symlink into the CurseForge instance via `./link-instance.sh`.
+7. **Scope:** Prefer small diffs. Do not refactor working patterns. Do not commit generated pool dumps unless asked.
 
 ---
 
@@ -125,7 +126,14 @@ Use **`ServerEvents.basicCommand('randomblock', ...)`** with **`event.input`** s
 | `/randomblock set <x> <y> <z>` | Set position by coords |
 | `/randomblock info` | Registered random block position + block id + pool; feet only if not on block |
 | `/randomblock revert` | Reset active block to `initial_block` |
-| `/randomblock reload` | Reload config + rebuild block pool |
+| `/randomblock reload` | Reload `random_one_block.json`, mod-pools config, rebuild master + effective pools |
+| `/randomblock poolenable <mod> <true\|false>` | Per-team enable/disable mod namespace (persisted in `random_one_block_team_unlocks.json`). Starter exceptions cannot be disabled. |
+| `/randomblock pools` | Effective vs master pool summary + subcommand help |
+| `/randomblock pools list [page]` | Paginated mod list: status, display name, namespace, blocks, ON/OFF |
+| `/randomblock pools debug [page]` | Mod list (20/page) + full report in `logs/kubejs/server.log` |
+| `/randomblock pools debug quests` | FTB quest completed/ready + pool state per `quest_unlock_map` entry |
+| `/randomblock pools debug complete` | All master-pool block ids per mod → `server.log` |
+| `/randomblock pools debug complete <mod> [page]` | Page one mod’s blocks in chat |
 
 ### Config
 
@@ -195,7 +203,12 @@ These were learned from production debugging; violating them causes reload or co
 | 24 | **Mod pool gating** — default pool is **vanilla only** plus `starter_exceptions` in `random_one_block_mod_pools.json`. Other namespaces unlock per **team** via `quest_unlock_map` / `poolenable`. Do not regress to global full-pool picks for gameplay breaks. |
 | 25 | **No `global.RandonOneBlockPools`** — cross-script API uses shared-scope `var RandonOneBlockPools` in `random_one_block_mod_pools.js` (same unmodifiable-`global` rule as #1). |
 | 26 | **No `java.nio.file.Files`** — blocked by KubeJS class filter. Pool/mod debug output goes to **`logs/kubejs/server.log`** via `debugLog()` / `modPoolsDebugLog()` when `debug_logging: true` — do not write pool dump files. |
-| 27 | **JsonIO paths** — use `KubeJSPaths.CONFIG.resolve(filename).toAbsolutePath()` for read/write so files land in `kubejs/config/`, not the instance root. Team unlocks: single `random_one_block_team_unlocks.json`. No `java.io.File` / `java.nio.file.Files` (class filter). Delete stray instance-root `random_one_block_*.json` duplicates. |
+| 27 | **Pack config paths** — all Random One Block JSON must load/save via `RandonOneBlockConfigIO` (`random_one_block_config_io.js` → `KubeJSPaths.CONFIG` only). **Never** `JsonIO.read('random_one_block.json')` without the config path (instance-root copies shadow `kubejs/config/`). After linking the instance, run `./link-instance.sh` or `./scripts/clean-stale-instance-config.sh` to delete stray instance-root `random_one_block*.json` / `.txt` files. |
+| 28 | **Quest → mod pool unlock** — `quest_unlock_map` uses **quest** hex ids; KubeJS `FTBQuestsEvents.completed` must register on **task** hex ids. Always ship matching `quest_task_fallback` entries. Log must show `Registered N FTB task unlock handler(s)` (N > 0). See [`howtoquest.md`](howtoquest.md) § Random block mod unlocks. |
+| 29 | **No NeoForge EventBus for quest unlocks** — do not call `NeoForge.EVENT_BUS.addListener` from KubeJS for FTB quest progress; Rhino overload/`ClassCastException` breaks `/reload`. `FTBQuestsEvent.QuestProgress` is not exposed to KubeJS. |
+| 30 | **Quest unlock player UUID** — use `resolvePlayerUuid()` / `player.uuid` / `FTBQuests.getData(player)`; never bare `player.getUUID()` in quest/backfill paths (scheduled callbacks throw on KubeJS `ServerPlayer`). |
+| 31 | **Quest unlock timing** — task event may run before quest is marked complete; use `isQuestReadyForUnlock()` (task progress) + delayed retries (1/5/20 ticks) + login backfill. |
+| 32 | **Custom KubeJS blocks** — register in `startup_scripts/` only; recipes in `server_scripts/` + `kubejs/data/kubejs/recipes/`; no `.textureAll()` or `ServerEvents.recipes` in startup (KubeJS 8.0.3). Full restart for blocks; `/reload` for recipes. Put `kubejs` in `starter_exceptions.enabled`, **not** in `force_disabled_mods`. See [`howtocustomblocks.md`](howtocustomblocks.md). |
 
 ---
 
@@ -203,7 +216,7 @@ These were learned from production debugging; violating them causes reload or co
 
 ```text
 random_one_block.json            → loadConfig / saveConfig (clone before mutate)
-random_one_block_mod_pools.json  → starter_exceptions.enabled, starter_exceptions.mods_with_minable_blocks, quest_unlock_map, force_disabled_mods
+random_one_block_mod_pools.json  → starter_exceptions, quest_unlock_map, quest_task_fallback, force_disabled_mods
         ↓
 rebuildPool()                      → master pool (all eligible blocks) + masterByMod namespace index
         ↓
@@ -212,13 +225,17 @@ buildEffectivePool(scopeId)        → vanilla + starter_exceptions + team quest
 BlockEvents.broken                 → pickRandomBlockIdForPlayer(breaker) → scheduleInTicks(1) → set block
                                  → log: effectivePool, scope, mod namespace
         ↓
-FTBQuestsEvents.completed          → register at **script load** (`mod_pools.js` priority 3, `quest_unlocks.js` priority 2 — higher loads first) → quest_unlock_map → enableModForTeam
+FTBQuestsEvents.completed(TASK_ID) → script load: quest_unlocks.js (prio 2) after mod_pools.js (prio 3)
+                                 → on task complete: if quest ready → enableModForTeam(scope)
+                                 → quest_unlock_map keyed by QUEST_ID; handlers keyed by TASK_ID
 /randomblock poolenable            → manual/admin team unlock (same persistence)
+/randomblock pools debug quests    → FTB completed/ready/pool state
 kubejs/config/random_one_block_team_unlocks.json → persisted team unlocks (all scopes)
         ↓
 ServerEvents.tick (every 5 ticks) → auto setbelow at player feet
 ServerEvents.basicCommand          → randomblock subcommands (reload-safe)
-ServerEvents.loaded + afterRecipes → reloadAll() + quest handler registration
+ServerEvents.loaded + afterRecipes → reloadAll(); quest handler retry if Registered 0 at script load
+PlayerEvents.loggedIn              → backfill quest unlocks (delayed)
 ```
 
 Key functions in `random_one_block.js`:
@@ -280,13 +297,14 @@ Key functions in `random_one_block.js`:
 - [x] Active position persistence in JSON
 - [x] Pool dump files + diagnostic logging
 - [x] Instance symlink workflow (`link-instance.sh`)
+- [x] Custom KubeJS storage blocks + compression recipes (leather, sapling, carrot, potato, torch) — see [`howtocustomblocks.md`](howtocustomblocks.md)
 
 ### Not implemented (future work)
 
 - [ ] Additional FTB Quest chapters beyond Getting started
 - [ ] OneBlock **phase** design (early game dirt/stone → mid mod blocks → etc.)
 - [ ] Quest integration (unlock phases, rewards tied to random block tier)
-- [ ] KubeJS recipe/integration scripts beyond Random One Block
+- [ ] More custom compression blocks (e.g. wool) and broader KubeJS integrations
 - [ ] Phase-based pools instead of one global pool
 
 ---
@@ -361,6 +379,7 @@ Before considering Random One Block work complete:
 | Change weights / blacklist | `kubejs/config/random_one_block.json` |
 | Change mechanic / commands | `kubejs/server_scripts/random_one_block.js` |
 | Debug pool / mod pools | Set `debug_logging: true`, then `/randomblock reload` or `/randomblock pools debug` — read `logs/kubejs/server.log` |
+| Debug quest → mod unlock | `/randomblock pools debug quests`; `quest_unlock_trace_log: true` in mod pools config; on `/reload` confirm `Registered N FTB task unlock handler(s)` (N > 0) |
 | Island layout | `config/HavenSkyblockBuilder/`, `config/haven_skyblock_builder-common.toml` |
 | Quests | `config/ftbquests/quests/` (create when ready) |
 | Team mod unlock persistence | `kubejs/config/random_one_block_team_unlocks.json` (gitignored) |

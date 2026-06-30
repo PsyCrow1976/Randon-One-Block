@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["kubejs:sapling_block"],
+  "result": { "id": "minecraft:oak_sapling", "count": 9 }
+}

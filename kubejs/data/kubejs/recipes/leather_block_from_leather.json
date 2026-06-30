@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": "minecraft:leather"
+  },
+  "result": {
+    "id": "kubejs:leather_block",
+    "count": 1
+  }
+}

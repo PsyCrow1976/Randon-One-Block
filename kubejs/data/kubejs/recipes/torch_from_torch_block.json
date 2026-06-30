@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["kubejs:torch_block"],
+  "result": { "id": "minecraft:torch", "count": 9 }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["PPP", "PPP", "PPP"],
+  "key": { "P": "minecraft:potato" },
+  "result": { "id": "kubejs:potato_block", "count": 1 }
+}

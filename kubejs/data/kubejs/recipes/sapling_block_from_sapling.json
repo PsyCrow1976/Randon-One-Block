@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["SSS", "SSS", "SSS"],
+  "key": { "S": "minecraft:oak_sapling" },
+  "result": { "id": "kubejs:sapling_block", "count": 1 }
+}

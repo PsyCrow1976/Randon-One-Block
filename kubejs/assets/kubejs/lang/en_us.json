@@ -1,0 +1,12 @@
+{
+  "block.kubejs.leather_block": "Leather Block",
+  "item.kubejs.leather_block": "Leather Block",
+  "block.kubejs.sapling_block": "Sapling Block",
+  "item.kubejs.sapling_block": "Sapling Block",
+  "block.kubejs.carrot_block": "Carrot Block",
+  "item.kubejs.carrot_block": "Carrot Block",
+  "block.kubejs.potato_block": "Potato Block",
+  "item.kubejs.potato_block": "Potato Block",
+  "block.kubejs.torch_block": "Torch Block",
+  "item.kubejs.torch_block": "Torch Block"
+}

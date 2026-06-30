@@ -1,13 +1,16 @@
 {
-  "_readme": "Mod-pool gating for Random One Block. Vanilla (minecraft) is always enabled. starter_exceptions.enabled adds mod namespaces from day one. starter_exceptions.mods_with_minable_blocks catalogs every mod namespace in the master random block pool (regenerate after /randomblock reload when the mod list changes). Other mods unlock per team via FTB Quests (quest_unlock_map) or /randomblock poolenable.",
+  "_readme": "Mod-pool gating for Random One Block. Vanilla (minecraft) is always enabled. starter_exceptions.enabled adds mod namespaces from day one (overrides force_disabled_mods). starter_exceptions.mods_with_minable_blocks catalogs every mod namespace in the master random block pool (regenerate after /randomblock reload when the mod list changes). force_disabled_mods blocks namespaces from the effective pool — do not put the same id in both force_disabled_mods and starter_exceptions.enabled (e.g. custom kubejs blocks need kubejs in enabled, not in force_disabled). Other mods unlock per team via FTB Quests (quest_unlock_map) or /randomblock poolenable.",
 
   "mod_pool_gating_enabled": true,
+
+  "quest_unlock_trace_log": true,
 
   "unlock_scope": "team",
 
   "starter_exceptions": {
     "enabled": [
       "elevatorid",
+      "kubejs",
       "uncraftingtable"
     ],
     "mods_with_minable_blocks": [
@@ -21,6 +24,7 @@
       "exdeorum",
       "ftbquests",
       "ironfurnaces",
+      "kubejs",
       "minecraft",
       "mysticalagradditions",
       "mysticalagriculture",
@@ -40,13 +44,13 @@
     "ftbquests",
     "ftbteams",
     "ftbxmodcompat",
-    "kubejs",
     "neoforge",
     "rhino"
   ],
 
   "mod_display_names": {
     "elevatorid": "OpenBlocks Elevator",
+    "kubejs": "Randon One Block",
     "minecraft": "Vanilla",
     "refinedstorage": "Refined Storage",
     "sophisticatedbackpacks": "Sophisticated Backpacks",
@@ -56,5 +60,9 @@
 
   "quest_unlock_map": {
     "1D5A582F52D7CB30": "sophisticatedstorage"
+  },
+
+  "quest_task_fallback": {
+    "1D5A582F52D7CB30": ["1A2B3C4D5E6F7081"]
   }
 }

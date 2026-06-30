@@ -23,7 +23,10 @@ const AUTO_SETBELOW_DONE_KEY = 'random_one_block_autosetbelow_done'
 const DEFAULT_CONFIG = {
   default_weight: 1,
   weight_overrides: {
-    'minecraft:crafting_table': 3
+    'minecraft:crafting_table': 5,
+    'minecraft:dirt': 10,
+    'minecraft:cobblestone': 10,
+    'uncraftingtable:uncrafting_table': 3
   },
   blacklist: [
     'minecraft:air',
@@ -125,12 +128,18 @@ function cloneConfig(config) {
 }
 
 function loadConfig() {
-  let config = JsonIO.read(CONFIG_FILE)
+  var config = null
+
+  if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.read) {
+    config = RandonOneBlockConfigIO.read(CONFIG_FILE)
+  }
 
   if (!config) {
     console.warn('[RandomOneBlock] Config not found, creating default at kubejs/config/' + CONFIG_FILE)
     config = cloneConfig(DEFAULT_CONFIG)
-    JsonIO.write(CONFIG_FILE, config)
+    if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.write) {
+      RandonOneBlockConfigIO.write(CONFIG_FILE, config)
+    }
     return config
   }
 
@@ -529,7 +538,11 @@ function reloadAll() {
 }
 
 function saveConfig() {
-  JsonIO.write(CONFIG_FILE, STATE.config)
+  if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.write) {
+    RandonOneBlockConfigIO.write(CONFIG_FILE, STATE.config)
+    return
+  }
+  console.error('[RandomOneBlock] Cannot save config — RandonOneBlockConfigIO is not loaded')
 }
 
 function dimensionId(level) {
@@ -1889,6 +1902,59 @@ function cmdPoolEnable(source, args) {
   return 0
 }
 
+function cmdPoolsDebugQuests(source, pools, player) {
+  var report = null
+  var i = 0
+  var j = 0
+  var quest = null
+  var task = null
+
+  if (!pools.dumpQuestUnlockDebug || !pools.buildQuestUnlockDebugReport) {
+    tell(source, '§cQuest unlock debug is not loaded.')
+    return 0
+  }
+
+  report = pools.dumpQuestUnlockDebug(player, player.server)
+
+  tell(source, '§eQuest unlock debug §7(scope ' + report.scope_id + ')')
+  tell(source, '§7Trace lines also go to §flogs/kubejs/server.log §7when quest_unlock_trace_log is true')
+
+  for (i = 0; i < (report.quests || []).length; i++) {
+    quest = report.quests[i]
+    tell(
+      source,
+      '§f' +
+        quest.quest_id +
+        ' §7-> §f' +
+        quest.mod +
+        ' §7| completed=' +
+        (quest.quest_completed ? '§ayes' : '§cno') +
+        '§7 ready=' +
+        (quest.quest_ready ? '§ayes' : '§cno') +
+        '§7 pool=' +
+        (quest.mod_unlocked ? '§aON' : '§cOFF')
+    )
+    tell(source, '§7  handlers: §f' + (quest.task_ids || []).join(', '))
+
+    for (j = 0; j < (quest.tasks || []).length; j++) {
+      task = quest.tasks[j]
+      tell(
+        source,
+        '§7  task §f' +
+          task.task_id +
+          ' §7progress §f' +
+          task.progress +
+          '/' +
+          task.max_progress +
+          ' §7completed=' +
+          (task.task_completed ? '§ayes' : '§cno')
+      )
+    }
+  }
+
+  return 1
+}
+
 function cmdPoolsDebugComplete(source, pools, summary, extraArgs) {
   var modArg = extraArgs.length ? String(extraArgs[0]) : ''
   var blockPage = extraArgs.length > 1 ? Math.max(0, Number.parseInt(extraArgs[1], 10) || 0) : 0
@@ -1981,6 +2047,10 @@ function cmdPools(source, args) {
       return cmdPoolsDebugComplete(source, pools, summary, args.slice(2))
     }
 
+    if (debugSub === 'quests') {
+      return cmdPoolsDebugQuests(source, pools, player)
+    }
+
     var debugResult = pools.dumpModPoolsDebug(summary.scopeId)
     rows = (debugResult && debugResult.rows) || rows
     page = args.length > 1 ? Math.max(0, Number.parseInt(args[1], 10) || 0) : 0
@@ -2040,7 +2110,10 @@ function cmdPools(source, args) {
     source,
     `§7Statuses: vanilla + §f${summary.starterExceptions} §7exceptions, §f${summary.unlockedMods} §7unlocked, §f${summary.lockedMods} §7locked`
   )
-  tell(source, '§7Use §f/randomblock pools list §7| §f/randomblock pools debug §7| §f/randomblock pools debug complete')
+  tell(
+    source,
+    '§7Use §f/randomblock pools list §7| §f/randomblock pools debug §7| §f/randomblock pools debug quests §7| §f/randomblock pools debug complete'
+  )
   return 1
 }
 
@@ -2051,7 +2124,7 @@ function cmdHelp(source) {
   )
   tell(
     source,
-    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools list §7| §e/randomblock pools debug §7| §e/randomblock pools debug complete'
+    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
   )
   return 1
 }

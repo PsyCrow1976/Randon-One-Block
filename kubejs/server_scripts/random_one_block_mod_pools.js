@@ -5,13 +5,15 @@
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const TEAM_UNLOCKS_FILE = 'random_one_block_team_unlocks.json'
 const VANILLA_NAMESPACE = 'minecraft'
+const PACK_POOL_ALWAYS_ENABLED = ['elevatorid', 'kubejs', 'uncraftingtable']
 
 const DEFAULT_MOD_POOLS_CONFIG = {
   mod_pool_gating_enabled: true,
+  quest_unlock_trace_log: true,
   unlock_scope: 'team',
   starter_exceptions: {
-    enabled: ['elevatorid', 'uncraftingtable'],
-    mods_with_minable_blocks: ['minecraft', 'elevatorid', 'uncraftingtable']
+    enabled: ['elevatorid', 'kubejs', 'uncraftingtable'],
+    mods_with_minable_blocks: ['minecraft', 'elevatorid', 'kubejs', 'uncraftingtable']
   },
   force_disabled_mods: [
     'c',
@@ -20,13 +22,15 @@ const DEFAULT_MOD_POOLS_CONFIG = {
     'ftbquests',
     'ftbteams',
     'ftbxmodcompat',
-    'kubejs',
     'neoforge',
     'rhino'
   ],
   mod_display_names: {},
   quest_unlock_map: {
     '1D5A582F52D7CB30': 'sophisticatedstorage'
+  },
+  quest_task_fallback: {
+    '1D5A582F52D7CB30': ['1A2B3C4D5E6F7081']
   }
 }
 
@@ -45,22 +49,24 @@ function modPoolsCloneConfig(config) {
 }
 
 function kubejsConfigPath(filename) {
-  try {
-    var $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
-    return String($KubeJSPaths.CONFIG.resolve(String(filename)).toAbsolutePath())
-  } catch (ignored) {}
-
-  return String(filename)
+  if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.path) {
+    return RandonOneBlockConfigIO.path(filename)
+  }
+  return null
 }
 
 function readKubejsConfigJson(filename) {
-  var config = JsonIO.read(kubejsConfigPath(filename))
-  if (config) return config
-  return JsonIO.read(String(filename))
+  if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.read) {
+    return RandonOneBlockConfigIO.read(filename)
+  }
+  return null
 }
 
 function writeKubejsConfigJson(filename, payload) {
-  JsonIO.write(kubejsConfigPath(filename), payload == null ? {} : payload)
+  if (typeof RandonOneBlockConfigIO !== 'undefined' && RandonOneBlockConfigIO.write) {
+    return RandonOneBlockConfigIO.write(filename, payload)
+  }
+  return false
 }
 
 function readConfigObjectField(obj, key) {
@@ -178,6 +184,75 @@ function coerceConfigStringList(value) {
   return out
 }
 
+function getStarterExceptionsFromConfig(config) {
+  var raw = config ? config.starter_exceptions : null
+  var enabled = null
+
+  if (!raw) return []
+
+  enabled = coerceConfigStringList(readConfigObjectField(raw, 'enabled'))
+  if (enabled.length) return enabled
+
+  return coerceConfigStringList(raw)
+}
+
+function getPackAlwaysEnabledMods(config) {
+  var merged = []
+  var seen = {}
+  var i = 0
+  var mod = null
+  var fromConfig = getStarterExceptionsFromConfig(config)
+
+  for (i = 0; i < PACK_POOL_ALWAYS_ENABLED.length; i++) {
+    mod = normalizeModNamespace(PACK_POOL_ALWAYS_ENABLED[i])
+    if (!seen[mod]) {
+      seen[mod] = true
+      merged.push(mod)
+    }
+  }
+
+  for (i = 0; i < fromConfig.length; i++) {
+    mod = normalizeModNamespace(fromConfig[i])
+    if (!seen[mod]) {
+      seen[mod] = true
+      merged.push(mod)
+    }
+  }
+
+  return merged
+}
+
+function sanitizeModPoolsConfig(config) {
+  var next = modPoolsCloneConfig(config)
+  var alwaysEnabled = getPackAlwaysEnabledMods(next)
+  var forceDisabled = coerceConfigStringList(next.force_disabled_mods)
+  var cleaned = []
+  var removed = []
+  var i = 0
+  var mod = null
+  var changed = false
+
+  for (i = 0; i < forceDisabled.length; i++) {
+    mod = normalizeModNamespace(forceDisabled[i])
+    if (modPoolsListIncludes(alwaysEnabled, mod)) {
+      removed.push(mod)
+      changed = true
+      continue
+    }
+    cleaned.push(mod)
+  }
+
+  if (changed) {
+    next.force_disabled_mods = cleaned
+    writeKubejsConfigJson(MOD_POOLS_CONFIG_FILE, next)
+    console.warn(
+      '[RandomOneBlock] Removed starter exceptions from force_disabled_mods: ' + removed.join(', ')
+    )
+  }
+
+  return next
+}
+
 function loadModPoolsConfig() {
   var config = readKubejsConfigJson(MOD_POOLS_CONFIG_FILE)
 
@@ -190,7 +265,7 @@ function loadModPoolsConfig() {
     return config
   }
 
-  return modPoolsCloneConfig(config)
+  return sanitizeModPoolsConfig(config)
 }
 
 function ensureModPoolsConfig() {
@@ -271,18 +346,73 @@ function readObjectStringField(obj, names) {
   return null
 }
 
-function getPlayerUuidString(player) {
-  if (!player) return 'unknown-player'
+function resolvePlayerUuid(player) {
+  var uuid = null
+  var $UUID = null
+  var text = null
+
+  if (!player) return null
 
   try {
-    return String(player.getUUID())
+    uuid = player.uuid
+    if (uuid != null) {
+      if (typeof uuid === 'string') {
+        $UUID = Java.loadClass('java.util.UUID')
+        return $UUID.fromString(uuid)
+      }
+      return uuid
+    }
   } catch (ignored) {}
 
   try {
-    return String(player.uuid)
+    if (player.getUUID) return player.getUUID()
+  } catch (ignored2) {}
+
+  try {
+    if (player.getUuid) return player.getUuid()
+  } catch (ignored3) {}
+
+  return null
+}
+
+function getPlayerUuidString(player) {
+  var uuid = resolvePlayerUuid(player)
+
+  if (!uuid) return 'unknown-player'
+
+  try {
+    return String(uuid)
+  } catch (ignored) {}
+
+  try {
+    return uuid.toString()
   } catch (ignored2) {}
 
   return 'unknown-player'
+}
+
+function resolveFtbQuestTeamData(player) {
+  var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
+  var questFile = null
+  var uuid = null
+
+  if (!player) return null
+
+  try {
+    if (typeof FTBQuests !== 'undefined' && FTBQuests.getData) {
+      return FTBQuests.getData(player)
+    }
+  } catch (ignored) {}
+
+  if (!FTBQuestsAPI) return null
+
+  try {
+    questFile = FTBQuestsAPI.api().getQuestFile(false)
+    uuid = resolvePlayerUuid(player)
+    if (questFile && uuid) return questFile.getOrCreateTeamData(uuid)
+  } catch (ignored2) {}
+
+  return null
 }
 
 function resolveHavenTeamScopeId(player, server) {
@@ -307,11 +437,13 @@ function resolveFtbTeamScopeId(player) {
   var FTBTeams = Java.tryLoadClass('dev.ftb.mods.ftbteams.api.FTBTeamsAPI')
   var team = null
   var teamId = null
+  var uuid = null
 
   if (!FTBTeams || !player) return null
 
   try {
-    team = FTBTeams.api().getManager().getTeamForPlayerID(player.getUUID()).orElse(null)
+    uuid = resolvePlayerUuid(player)
+    if (uuid) team = FTBTeams.api().getManager().getTeamForPlayerID(uuid).orElse(null)
   } catch (ignored) {}
 
   if (!team) return null
@@ -464,7 +596,19 @@ function invalidateAllTeamPoolCaches() {
 }
 
 function getForceDisabledMods() {
-  return ensureModPoolsConfig().force_disabled_mods || []
+  var raw = coerceConfigStringList(ensureModPoolsConfig().force_disabled_mods)
+  var alwaysEnabled = getPackAlwaysEnabledMods(ensureModPoolsConfig())
+  var cleaned = []
+  var i = 0
+  var mod = null
+
+  for (i = 0; i < raw.length; i++) {
+    mod = normalizeModNamespace(raw[i])
+    if (modPoolsListIncludes(alwaysEnabled, mod)) continue
+    cleaned.push(mod)
+  }
+
+  return cleaned
 }
 
 function getStarterExceptionsRaw() {
@@ -472,13 +616,7 @@ function getStarterExceptionsRaw() {
 }
 
 function getStarterExceptions() {
-  var raw = getStarterExceptionsRaw()
-  if (!raw) return []
-
-  var list = coerceConfigStringList(raw)
-  if (list.length) return list
-
-  return coerceConfigStringList(readConfigObjectField(raw, 'enabled'))
+  return getPackAlwaysEnabledMods(ensureModPoolsConfig())
 }
 
 function getModsWithMinableBlocks() {
@@ -491,7 +629,12 @@ function getModsWithMinableBlocks() {
 }
 
 function isForceDisabledMod(namespace) {
-  return modPoolsListIncludes(getForceDisabledMods(), namespace)
+  var mod = normalizeModNamespace(namespace)
+
+  // starter_exceptions.enabled intentionally overrides force_disabled_mods
+  if (modPoolsListIncludes(getStarterExceptions(), mod)) return false
+
+  return modPoolsListIncludes(getForceDisabledMods(), mod)
 }
 
 function getModPoolStatus(namespace, scopeId) {
@@ -701,6 +844,24 @@ function enableModForTeam(player, modNamespace, announce, server) {
   if (resolvedMod === VANILLA_NAMESPACE) {
     if (announce && player && player.tell) {
       player.tell(Text.of('§7Vanilla blocks are always enabled in the random pool.'))
+    }
+    return true
+  }
+
+  if (modPoolsListIncludes(getStarterExceptions(), resolvedMod)) {
+    if (announce && player && player.tell) {
+      var starterPool = buildEffectivePool(scopeId)
+      player.tell(
+        Text.of(
+          '§7Starter exception mod §f' +
+            displayName +
+            ' §7(§f' +
+            resolvedMod +
+            '§7) is already enabled. Effective pool: §f' +
+            starterPool.pool.length +
+            '§7 blocks.'
+        )
+      )
     }
     return true
   }
@@ -927,8 +1088,12 @@ function dumpModPoolsDebugComplete(scopeId) {
 function reloadModPoolsConfig() {
   MOD_POOL_STATE.config = loadModPoolsConfig()
   invalidateAllTeamPoolCaches()
+  console.info('[RandomOneBlock] Mod pools config path: ' + kubejsConfigPath(MOD_POOLS_CONFIG_FILE))
   console.info(
-    '[RandomOneBlock] Mod pool starter exceptions: ' + getStarterExceptions().join(', ')
+    '[RandomOneBlock] Mod pool starter exceptions (enabled): ' + getStarterExceptions().join(', ')
+  )
+  console.info(
+    '[RandomOneBlock] Mod pool force_disabled_mods (effective): ' + (getForceDisabledMods() || []).join(', ')
   )
   console.info(
     '[RandomOneBlock] Mod pool quest unlock map: ' + Object.keys(getQuestUnlockMap()).length + ' quest(s)'
@@ -997,6 +1162,7 @@ function parseFtbQuestIdLong(questId) {
 function resolveQuestObject(questFile, questId) {
   var idLong = parseFtbQuestIdLong(questId)
   var quest = null
+  var base = null
 
   if (!questFile || idLong == null) return null
 
@@ -1006,11 +1172,53 @@ function resolveQuestObject(questFile, questId) {
 
   if (!quest) {
     try {
-      if (questFile.getBase) quest = questFile.getBase(idLong)
+      if (questFile.getBase) base = questFile.getBase(idLong)
+      if (base) quest = base
     } catch (ignored2) {}
   }
 
   return quest
+}
+
+function firstPlayerFromCollection(players) {
+  var i = 0
+  var size = 0
+
+  if (!players) return null
+
+  try {
+    if (typeof players.size === 'function' && typeof players.get === 'function') {
+      size = players.size()
+      if (size > 0) return players.get(0)
+    }
+  } catch (ignored) {}
+
+  try {
+    if (players.length > 0) return players[0]
+  } catch (ignored2) {}
+
+  try {
+    if (players.iterator) {
+      var iter = players.iterator()
+      if (iter.hasNext()) return iter.next()
+    }
+  } catch (ignored3) {}
+
+  return null
+}
+
+function resolveQuestFileCurrentPlayer() {
+  var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
+  var questFile = null
+
+  if (!FTBQuestsAPI) return null
+
+  try {
+    questFile = FTBQuestsAPI.api().getQuestFile(false)
+    if (questFile && questFile.getCurrentPlayer) return questFile.getCurrentPlayer()
+  } catch (ignored) {}
+
+  return null
 }
 
 function resolveQuestEventPlayer(event) {
@@ -1019,16 +1227,57 @@ function resolveQuestEventPlayer(event) {
   if (!event) return null
 
   try {
-    if (event.getCurrentPlayer) player = event.getCurrentPlayer()
+    if (event.getPlayer) player = event.getPlayer()
   } catch (ignored) {}
 
   if (!player) {
     try {
-      if (event.player) player = event.player
+      if (event.getCurrentPlayer) player = event.getCurrentPlayer()
     } catch (ignored2) {}
   }
 
+  if (!player) {
+    try {
+      if (event.player) player = event.player
+    } catch (ignored3) {}
+  }
+
+  if (!player) {
+    try {
+      player = firstPlayerFromCollection(event.getNotifiedPlayers ? event.getNotifiedPlayers() : null)
+    } catch (ignored4) {}
+  }
+
+  if (!player) {
+    try {
+      player = firstPlayerFromCollection(event.getOnlineMembers ? event.getOnlineMembers() : null)
+    } catch (ignored5) {}
+  }
+
+  if (!player) player = resolveQuestFileCurrentPlayer()
+
   return player
+}
+
+function resolveProgressEventPlayer(progressData) {
+  var player = null
+
+  if (!progressData) return null
+
+  player = resolveQuestFileCurrentPlayer()
+  if (player) return player
+
+  try {
+    player = firstPlayerFromCollection(progressData.notifiedPlayers())
+    if (player) return player
+  } catch (ignored) {}
+
+  try {
+    player = firstPlayerFromCollection(progressData.onlineMembers())
+    if (player) return player
+  } catch (ignored2) {}
+
+  return null
 }
 
 function resolveQuestEventServer(event, player) {
@@ -1049,6 +1298,395 @@ function resolveQuestEventServer(event, player) {
   return resolvePlayerServer(player, server)
 }
 
+function resolveProgressEventServer(progressData, player) {
+  return resolvePlayerServer(player, null)
+}
+
+function lookupQuestUnlockMod(questId) {
+  var map = getQuestUnlockMap()
+  var normalized = parseFtbQuestIdHex(questId)
+  var key = null
+
+  if (!normalized) return null
+  if (map[normalized]) return map[normalized]
+
+  for (key in map) {
+    if (!map.hasOwnProperty(key)) continue
+    if (parseFtbQuestIdHex(key) === normalized) return map[key]
+  }
+
+  return null
+}
+
+function readConfigMapEntry(raw, key) {
+  if (!raw || !key) return null
+
+  try {
+    if (raw[key] != null && raw[key] !== undefined) return raw[key]
+  } catch (ignored) {}
+
+  try {
+    if (raw.get && typeof raw.get === 'function') return raw.get(key)
+  } catch (ignored2) {}
+
+  return null
+}
+
+function getQuestTaskFallbackList(questId) {
+  var normalized = parseFtbQuestIdHex(questId)
+  var fileRaw = readConfigObjectField(ensureModPoolsConfig(), 'quest_task_fallback')
+  var defaultRaw = DEFAULT_MOD_POOLS_CONFIG.quest_task_fallback
+  var entry = readConfigMapEntry(fileRaw, normalized)
+  var list = []
+  var out = []
+  var i = 0
+  var taskId = null
+
+  if (entry == null && defaultRaw) {
+    entry = readConfigMapEntry(defaultRaw, normalized)
+  }
+
+  list = coerceConfigStringList(entry)
+
+  for (i = 0; i < list.length; i++) {
+    taskId = parseFtbQuestIdHex(list[i])
+    if (taskId) out.push(taskId)
+  }
+
+  return out
+}
+
+function discoverQuestTaskHexIds(questId) {
+  var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
+  var questFile = null
+  var quest = null
+  var tasks = null
+  var out = []
+  var seen = {}
+  var i = 0
+  var task = null
+  var taskId = null
+  var iter = null
+  var fallback = null
+
+  fallback = getQuestTaskFallbackList(questId)
+  for (i = 0; i < fallback.length; i++) {
+    if (fallback[i] && !seen[fallback[i]]) {
+      seen[fallback[i]] = true
+      out.push(fallback[i])
+    }
+  }
+
+  if (!FTBQuestsAPI) return out
+
+  try {
+    questFile = FTBQuestsAPI.api().getQuestFile(false)
+  } catch (ignored) {}
+
+  if (!questFile) return out
+
+  quest = resolveQuestObject(questFile, questId)
+  if (!quest) return out
+
+  try {
+    tasks = quest.getTasks()
+  } catch (ignored2) {}
+
+  if (!tasks) return out
+
+  try {
+    if (typeof tasks.size === 'function' && typeof tasks.get === 'function') {
+      for (i = 0; i < tasks.size(); i++) {
+        task = tasks.get(i)
+        if (!task) continue
+        taskId = parseFtbQuestIdHex(String(task.toString()))
+        if (taskId && !seen[taskId]) {
+          seen[taskId] = true
+          out.push(taskId)
+        }
+      }
+      return out
+    }
+  } catch (ignored3) {}
+
+  try {
+    iter = tasks.iterator()
+    while (iter.hasNext()) {
+      task = iter.next()
+      if (!task) continue
+      taskId = parseFtbQuestIdHex(String(task.toString()))
+      if (taskId && !seen[taskId]) {
+        seen[taskId] = true
+        out.push(taskId)
+      }
+    }
+  } catch (ignored4) {}
+
+  return out
+}
+
+function isQuestUnlockTraceEnabled() {
+  var config = ensureModPoolsConfig()
+  return config.quest_unlock_trace_log !== false
+}
+
+function logQuestUnlockTrace(message, details) {
+  var text = '[RandomOneBlock] Quest unlock trace: ' + String(message || '')
+  var key = null
+
+  if (!isQuestUnlockTraceEnabled()) return
+
+  if (details) {
+    for (key in details) {
+      if (!details.hasOwnProperty(key)) continue
+      text += ' | ' + key + '=' + String(details[key])
+    }
+  }
+
+  console.info(text)
+}
+
+function forEachQuestTask(quest, callback) {
+  var tasks = null
+  var i = 0
+  var task = null
+  var iter = null
+
+  if (!quest || !callback) return
+
+  try {
+    tasks = quest.getTasks()
+  } catch (ignored) {}
+
+  if (!tasks) return
+
+  try {
+    if (typeof tasks.size === 'function' && typeof tasks.get === 'function') {
+      for (i = 0; i < tasks.size(); i++) {
+        task = tasks.get(i)
+        if (task) callback(task, i)
+      }
+      return
+    }
+  } catch (ignored2) {}
+
+  try {
+    iter = tasks.iterator()
+    while (iter.hasNext()) {
+      task = iter.next()
+      if (task) callback(task, i++)
+    }
+  } catch (ignored3) {}
+}
+
+function getQuestTaskProgressRows(player, questId) {
+  var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
+  var questFile = null
+  var data = null
+  var quest = null
+  var rows = []
+
+  if (!FTBQuestsAPI || !player || !questId) return rows
+
+  try {
+    questFile = FTBQuestsAPI.api().getQuestFile(false)
+    if (!questFile) return rows
+    data = resolveFtbQuestTeamData(player)
+    if (!data) return rows
+    quest = resolveQuestObject(questFile, questId)
+    if (!quest) return rows
+
+    forEachQuestTask(quest, function (task) {
+      var progress = 0
+      var maxProgress = 1
+      var taskHex = ''
+      var complete = false
+
+      try {
+        progress = Number(data.getProgress(task))
+      } catch (ignored) {}
+
+      try {
+        maxProgress = Number(task.getMaxProgress())
+      } catch (ignored2) {
+        maxProgress = 1
+      }
+
+      try {
+        taskHex = parseFtbQuestIdHex(String(task.toString()))
+      } catch (ignored3) {}
+
+      try {
+        complete = data.isCompleted(task)
+      } catch (ignored4) {
+        complete = progress >= maxProgress && maxProgress > 0
+      }
+
+      rows.push({
+        task_id: taskHex,
+        progress: progress,
+        max_progress: maxProgress,
+        task_completed: complete
+      })
+    })
+  } catch (ignored5) {}
+
+  return rows
+}
+
+function isQuestReadyForUnlock(player, questId) {
+  var rows = getQuestTaskProgressRows(player, questId)
+  var i = 0
+
+  if (isQuestCompletedForPlayer(player, questId)) return true
+  if (!rows.length) return false
+
+  for (i = 0; i < rows.length; i++) {
+    if (!rows[i].task_completed && !(rows[i].progress >= rows[i].max_progress && rows[i].max_progress > 0)) {
+      return false
+    }
+  }
+
+  return true
+}
+
+function isModUnlockedForPlayer(player, modNamespace, server) {
+  var scopeId = resolveUnlockScopeId(player, server)
+  var unlocks = loadTeamUnlocks(scopeId)
+  return modPoolsListIncludes(unlocks.enabled_mods, modNamespace)
+}
+
+function buildQuestUnlockDebugReport(player, server) {
+  var map = getQuestUnlockMap()
+  var questId = null
+  var mod = null
+  var rows = []
+  var taskRows = []
+  var i = 0
+
+  for (questId in map) {
+    if (!map.hasOwnProperty(questId)) continue
+    mod = map[questId]
+    taskRows = getQuestTaskProgressRows(player, questId)
+    rows.push({
+      quest_id: parseFtbQuestIdHex(questId),
+      mod: mod,
+      task_ids: discoverQuestTaskHexIds(questId),
+      quest_completed: isQuestCompletedForPlayer(player, questId),
+      quest_ready: isQuestReadyForUnlock(player, questId),
+      mod_unlocked: isModUnlockedForPlayer(player, mod, server),
+      tasks: taskRows
+    })
+  }
+
+  return {
+    player: getPlayerUuidString(player),
+    scope_id: resolveUnlockScopeId(player, server),
+    quests: rows
+  }
+}
+
+function dumpQuestUnlockDebug(player, server) {
+  var report = buildQuestUnlockDebugReport(player, server)
+  var i = 0
+  var j = 0
+  var quest = null
+  var task = null
+
+  console.info('[RandomOneBlock] === Quest unlock debug report ===')
+  console.info('[RandomOneBlock] player: ' + report.player)
+  console.info('[RandomOneBlock] scope_id: ' + report.scope_id)
+
+  for (i = 0; i < report.quests.length; i++) {
+    quest = report.quests[i]
+    console.info(
+      '[RandomOneBlock] quest ' +
+        quest.quest_id +
+        ' -> ' +
+        quest.mod +
+        ' | completed=' +
+        quest.quest_completed +
+        ' ready=' +
+        quest.quest_ready +
+        ' unlocked=' +
+        quest.mod_unlocked +
+        ' handlers=' +
+        (quest.task_ids || []).join(',')
+    )
+
+    for (j = 0; j < (quest.tasks || []).length; j++) {
+      task = quest.tasks[j]
+      console.info(
+        '[RandomOneBlock]   task ' +
+          task.task_id +
+          ' progress=' +
+          task.progress +
+          '/' +
+          task.max_progress +
+          ' completed=' +
+          task.task_completed
+      )
+    }
+  }
+
+  console.info('[RandomOneBlock] === End quest unlock debug report ===')
+  return report
+}
+
+function unlockModPoolForQuestId(player, questId, announce, server) {
+  var mod = lookupQuestUnlockMod(questId)
+
+  if (!mod || !player) return false
+
+  if (isModUnlockedForPlayer(player, mod, server)) {
+    logQuestUnlockTrace('already_unlocked', {
+      quest: parseFtbQuestIdHex(questId),
+      mod: mod
+    })
+    return true
+  }
+
+  console.info('[RandomOneBlock] Quest completed unlock: ' + parseFtbQuestIdHex(questId) + ' -> ' + mod)
+  return enableModForTeam(player, mod, announce !== false, server)
+}
+
+function tryUnlockQuestForPlayer(player, questId, announce, server, reason) {
+  var mod = lookupQuestUnlockMod(questId)
+  var questHex = parseFtbQuestIdHex(questId)
+
+  if (!player || !mod) {
+    logQuestUnlockTrace('try_skip_missing', { reason: reason, quest: questHex, mod: mod || 'none' })
+    return false
+  }
+
+  if (!isQuestReadyForUnlock(player, questId)) {
+    logQuestUnlockTrace('try_skip_not_ready', {
+      reason: reason,
+      quest: questHex,
+      completed: isQuestCompletedForPlayer(player, questId)
+    })
+    return false
+  }
+
+  logQuestUnlockTrace('try_unlock', { reason: reason, quest: questHex, mod: mod })
+  return unlockModPoolForQuestId(player, questId, announce, server)
+}
+
+function scheduleQuestUnlockAttempts(player, questId, server, reason) {
+  var delays = [1, 5, 20]
+  var i = 0
+
+  if (!player || !server || !server.scheduleInTicks) return
+
+  for (i = 0; i < delays.length; i++) {
+    ;(function (delayTicks, attemptReason) {
+      server.scheduleInTicks(delayTicks, function () {
+        tryUnlockQuestForPlayer(player, questId, true, server, attemptReason + '@' + delayTicks + 't')
+      })
+    })(delays[i], reason)
+  }
+}
+
 function isQuestCompletedForPlayer(player, questId) {
   var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
   var questFile = null
@@ -1060,7 +1698,7 @@ function isQuestCompletedForPlayer(player, questId) {
   try {
     questFile = FTBQuestsAPI.api().getQuestFile(false)
     if (!questFile) return false
-    data = questFile.getOrCreateTeamData(player.getUUID())
+    data = resolveFtbQuestTeamData(player)
     if (!data) return false
     quest = resolveQuestObject(questFile, questId)
     if (!quest) return false
@@ -1073,14 +1711,12 @@ function isQuestCompletedForPlayer(player, questId) {
 function backfillQuestUnlocksForPlayer(player) {
   var map = getQuestUnlockMap()
   var questId = null
-  var mod = null
   var server = resolvePlayerServer(player, null)
 
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
-    mod = map[questId]
-    if (!isQuestCompletedForPlayer(player, questId)) continue
-    enableModForTeam(player, mod, false, server)
+    if (!isQuestReadyForUnlock(player, questId)) continue
+    tryUnlockQuestForPlayer(player, questId, false, server, 'backfill')
   }
 }
 
@@ -1105,6 +1741,22 @@ var RandonOneBlockPools = {
   resolveKnownModNamespace: resolveKnownModNamespace,
   getModsWithMinableBlocks: getModsWithMinableBlocks,
   getQuestUnlockMap: getQuestUnlockMap,
+  lookupQuestUnlockMod: lookupQuestUnlockMod,
+  unlockModPoolForQuestId: unlockModPoolForQuestId,
+  discoverQuestTaskHexIds: discoverQuestTaskHexIds,
+  isQuestCompletedForPlayer: isQuestCompletedForPlayer,
+  isQuestReadyForUnlock: isQuestReadyForUnlock,
+  tryUnlockQuestForPlayer: tryUnlockQuestForPlayer,
+  scheduleQuestUnlockAttempts: scheduleQuestUnlockAttempts,
+  buildQuestUnlockDebugReport: buildQuestUnlockDebugReport,
+  dumpQuestUnlockDebug: dumpQuestUnlockDebug,
+  logQuestUnlockTrace: logQuestUnlockTrace,
+  parseFtbQuestIdHex: parseFtbQuestIdHex,
+  getPlayerUuidString: getPlayerUuidString,
   resolveQuestEventPlayer: resolveQuestEventPlayer,
   resolveQuestEventServer: resolveQuestEventServer
 }
+
+ServerEvents.loaded(event => {
+  reloadModPoolsConfig()
+})

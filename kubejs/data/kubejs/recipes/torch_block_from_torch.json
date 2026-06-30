@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": ["TTT", "TTT", "TTT"],
+  "key": { "T": "minecraft:torch" },
+  "result": { "id": "kubejs:torch_block", "count": 1 }
+}

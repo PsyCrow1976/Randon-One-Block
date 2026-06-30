@@ -8,7 +8,10 @@
   "default_weight": 1,
 
   "weight_overrides": {
-    "minecraft:crafting_table": 3
+    "minecraft:crafting_table": 5,
+    "minecraft:dirt": 10,
+    "minecraft:cobblestone": 10,
+    "uncraftingtable:uncrafting_table": 3
   },
 
   "blacklist": [

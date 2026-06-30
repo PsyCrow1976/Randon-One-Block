@@ -28,6 +28,10 @@ link_dir() {
   echo "linked: $name -> $target"
 }
 
+clean_stale_pack_configs() {
+  "$REPO/scripts/clean-stale-instance-config.sh" "$INSTANCE"
+}
+
 if [[ ! -d "$INSTANCE" ]]; then
   echo "error: CurseForge instance not found: $INSTANCE" >&2
   exit 1
@@ -35,5 +39,7 @@ fi
 
 link_dir kubejs
 link_dir config
+clean_stale_pack_configs
 
 echo "done — edit pack files in $REPO; CurseForge reads them via symlinks."
+echo "      pack config belongs in $REPO/kubejs/config/ only (never the instance root)."
