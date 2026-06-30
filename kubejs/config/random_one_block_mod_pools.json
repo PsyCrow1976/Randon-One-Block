@@ -1,0 +1,35 @@
+{
+  "_readme": "Mod-pool gating for Random One Block. Vanilla (minecraft) is always enabled. starter_exceptions adds mod namespaces from day one. Other mods unlock per team via FTB Quests (quest_unlock_map) or /randomblock poolenable.",
+
+  "mod_pool_gating_enabled": true,
+
+  "unlock_scope": "team",
+
+  "starter_exceptions": [
+    "elevatorid"
+  ],
+
+  "force_disabled_mods": [
+    "c",
+    "ftbchunks",
+    "ftblibrary",
+    "ftbquests",
+    "ftbteams",
+    "ftbxmodcompat",
+    "kubejs",
+    "neoforge",
+    "rhino"
+  ],
+
+  "mod_display_names": {
+    "elevatorid": "OpenBlocks Elevator",
+    "minecraft": "Vanilla",
+    "refinedstorage": "Refined Storage",
+    "sophisticatedbackpacks": "Sophisticated Backpacks",
+    "sophisticatedstorage": "Sophisticated Storage"
+  },
+
+  "quest_unlock_map": {
+    "330C599A54702742": "sophisticatedstorage"
+  }
+}
