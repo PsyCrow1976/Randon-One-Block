@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.1.5] — 2026-06-30
+
+### FTB Quests
+
+- **Ex Deorum** — Added detailed `quest_desc` text for all **78** quests in the chapter (compression, crushing, sieving, ore chunks, mesh/hammer/watering-can tiers, barrels, and automation). Your existing Compressed Dirt description and progression layout are unchanged.
+
+---
+
 ## [1.0.1.4] — 2026-06-30
 
 ### Random One Block
