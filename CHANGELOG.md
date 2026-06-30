@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.23] — 2026-06-30
+
+### Random One Block
+
+- **Starter exceptions** — Added `uncraftingtable` to `starter_exceptions.enabled` so the Uncrafting Table block can roll from day one (1 block in master pool).
+
+---
+
 ## [1.0.0.22] — 2026-06-30
 
 ### Random One Block

@@ -7,7 +7,8 @@
 
   "starter_exceptions": {
     "enabled": [
-      "elevatorid"
+      "elevatorid",
+      "uncraftingtable"
     ],
     "mods_with_minable_blocks": [
       "animal_pen",
@@ -49,7 +50,8 @@
     "minecraft": "Vanilla",
     "refinedstorage": "Refined Storage",
     "sophisticatedbackpacks": "Sophisticated Backpacks",
-    "sophisticatedstorage": "Sophisticated Storage"
+    "sophisticatedstorage": "Sophisticated Storage",
+    "uncraftingtable": "The Uncrafting Table"
   },
 
   "quest_unlock_map": {

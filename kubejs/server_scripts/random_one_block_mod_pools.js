@@ -9,8 +9,8 @@ const DEFAULT_MOD_POOLS_CONFIG = {
   mod_pool_gating_enabled: true,
   unlock_scope: 'team',
   starter_exceptions: {
-    enabled: ['elevatorid'],
-    mods_with_minable_blocks: ['minecraft', 'elevatorid']
+    enabled: ['elevatorid', 'uncraftingtable'],
+    mods_with_minable_blocks: ['minecraft', 'elevatorid', 'uncraftingtable']
   },
   force_disabled_mods: [
     'c',
