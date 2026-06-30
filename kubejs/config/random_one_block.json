@@ -75,6 +75,6 @@
     "/randomblock poolenable refinedstorage true",
     "/randomblock pools",
     "/randomblock pools list",
-    "/randomblock pools debug (writes random_one_block_mod_pools_debug.json)"
+    "/randomblock pools debug (writes kubejs/config/random_one_block_mod_pools_debug.json)"
   ]
 }

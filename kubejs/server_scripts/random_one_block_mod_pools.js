@@ -3,7 +3,8 @@
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const MOD_POOLS_UNLOCK_DIR = 'data/random_one_block_unlocks'
-const MOD_POOLS_DEBUG_FILE = 'random_one_block_mod_pools_debug.json'
+// JsonIO.write bare names land in the instance root; prefix config/ for kubejs/config/.
+const MOD_POOLS_DEBUG_FILE = 'config/random_one_block_mod_pools_debug.json'
 const VANILLA_NAMESPACE = 'minecraft'
 
 const DEFAULT_MOD_POOLS_CONFIG = {
@@ -34,13 +35,24 @@ const MOD_POOL_STATE = {
   teamPoolCache: {}
 }
 
+function modPoolsDebugPathLabel(filename) {
+  var name = String(filename)
+  if (name.indexOf('config/') === 0) return 'kubejs/' + name
+  if (name.indexOf('data/') === 0) return 'kubejs/' + name
+  return name
+}
+
 function writeKubeJsConfigJson(filename, payload) {
+  var data = payload == null ? {} : payload
+
   try {
-    JsonIO.write(String(filename), payload)
-    return 'kubejs/config/' + String(filename)
+    JsonIO.write(String(filename), data)
+    var label = modPoolsDebugPathLabel(filename)
+    console.info('[RandomOneBlock] Wrote JSON file: ' + label)
+    return label
   } catch (e) {
     var err = e && e.javaException ? String(e.javaException) : String(e)
-    console.error('[RandomOneBlock] Failed to write config json file ' + filename + ': ' + err)
+    console.error('[RandomOneBlock] Failed to write JSON file ' + filename + ': ' + err)
     return null
   }
 }
@@ -588,23 +600,9 @@ function buildModPoolReportRows(scopeId) {
 }
 
 function dumpModPoolsDebug(scopeId) {
-  var rows = buildModPoolReportRows(scopeId)
-  var effective = buildEffectivePool(scopeId)
-  var report = {
-    scope_id: scopeId,
-    master_mods: rows.length,
-    effective_blocks: effective.pool.length,
-    effective_weight: effective.totalWeight,
-    columns: ['display_name', 'namespace', 'blocks', 'status', 'effective'],
-    mods: rows
-  }
-  var writtenPath = writeKubeJsConfigJson(MOD_POOLS_DEBUG_FILE, report)
-
-  if (writtenPath) {
-    console.info('[RandomOneBlock] Mod pool debug written to ' + writtenPath)
-  }
-
-  return { rows: rows, path: writtenPath }
+  // Minimal write test — empty object verifies JsonIO path (kubejs/config/).
+  var writtenPath = writeKubeJsConfigJson(MOD_POOLS_DEBUG_FILE, {})
+  return { rows: [], path: writtenPath, scope_id: scopeId }
 }
 
 function reloadModPoolsConfig() {

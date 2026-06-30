@@ -2,8 +2,8 @@
 // Randon One Block — single-position random block generator
 
 const CONFIG_FILE = 'random_one_block.json'
-const POOL_DUMP_JSON = 'random_one_block_pool.json'
-const POOL_DUMP_TEXT = 'random_one_block_pool.txt'
+const POOL_DUMP_JSON = 'config/random_one_block_pool.json'
+const POOL_DUMP_TEXT = 'config/random_one_block_pool.txt'
 const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 const $LiquidBlock = Java.loadClass('net.minecraft.world.level.block.LiquidBlock')
 const $FallingBlock = Java.loadClass('net.minecraft.world.level.block.FallingBlock')
@@ -520,7 +520,7 @@ function dumpPoolReport(verbose) {
     text_lines: textLines
   })
 
-  debugLog(`[RandomOneBlock] Pool dumped to kubejs/config/${POOL_DUMP_JSON} (includes text_lines)`)
+  debugLog('[RandomOneBlock] Pool dumped to kubejs/' + POOL_DUMP_JSON + ' (includes text_lines)')
 
   if (verbose && isDebugLoggingEnabled()) {
     debugLog(`[RandomOneBlock] Pool preview (first 30): ${preview.join(', ')}`)
@@ -1926,10 +1926,7 @@ function cmdPools(source, args) {
       debugResult && debugResult.path
         ? debugResult.path
         : 'kubejs/config/random_one_block_mod_pools_debug.json'
-    tell(
-      source,
-      `§aMod pool debug saved to §f${debugPath}§a (${rows.length} mods, effective ${summary.effectiveBlocks} blocks).`
-    )
+    tell(source, '§aMod pool debug test file written to §f' + debugPath)
     if (!debugResult || !debugResult.path) {
       tell(source, '§cWrite failed — see logs/kubejs/server.log for details.')
     }

@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.17] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock pools debug`** — JsonIO bare filenames wrote to the **instance root**; dumps now use `config/` so files land in **`kubejs/config/`**. Debug command writes `{}` as a path verification test.
+
+---
+
 ## [1.0.0.16] — 2026-06-30
 
 ### Random One Block
