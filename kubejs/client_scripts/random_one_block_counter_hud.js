@@ -249,7 +249,11 @@ function isPlayerHealthLayer(layerId) {
   return String(layerId) === String($VanillaGuiLayers.PLAYER_HEALTH)
 }
 
-$NeoForge.EVENT_BUS.addListener($RegisterGuiLayersEvent, function (event) {
+function addBusListener(eventClass, handler) {
+  $NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, eventClass, handler)
+}
+
+addBusListener($RegisterGuiLayersEvent, function (event) {
   event.register(
     $GuiLayerOrdering.AFTER,
     HUD_LAYER_AFTER_HEALTH,
@@ -276,15 +280,15 @@ $NeoForge.EVENT_BUS.addListener($RegisterGuiLayersEvent, function (event) {
   })
 })
 
-$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiEventPre, function (event) {
+addBusListener($RenderGuiEventPre, function (event) {
   renderText4PrePost(event.getGuiGraphics(), 4, 'RenderGuiEvent.Pre + text()', 55)
 })
 
-$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiEventPost, function (event) {
+addBusListener($RenderGuiEventPost, function (event) {
   renderText4PrePost(event.getGuiGraphics(), 5, 'RenderGuiEvent.Post + text()', 70)
 })
 
-$NeoForge.EVENT_BUS.addListener($EventPriority.NORMAL, false, $RenderGuiLayerEventPost, function (event) {
+addBusListener($RenderGuiLayerEventPost, function (event) {
   if (!isPlayerHealthLayer(event.getName())) return
   renderText4PrePost(event.getGuiGraphics(), 6, 'RenderGuiLayerEvent.Post(PLAYER_HEALTH)', 85)
 })

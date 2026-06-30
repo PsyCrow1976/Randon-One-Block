@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.7] — 2026-06-30
+
+### Random One Block
+
+- **Counter diagnostic startup fix** — NeoForge `EventBus.addListener` now uses the explicit 4-argument form so KubeJS/Rhino no longer fails with an ambiguous method error on launch.
+
+---
+
 ## [1.0.2.6] — 2026-06-30
 
 ### Random One Block
