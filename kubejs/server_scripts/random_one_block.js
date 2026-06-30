@@ -242,22 +242,6 @@ function hasCommandPermission(source) {
   return false
 }
 
-function isOperatorSource(source) {
-  if (!source) return false
-
-  try {
-    const method = source.getClass().getMethod('hasPermissions', $Integer.TYPE)
-    return method.invoke(source, $Integer.valueOf(2))
-  } catch (ignored) {}
-
-  try {
-    const method = source.getClass().getMethod('hasPermission', $Integer.TYPE)
-    return method.invoke(source, $Integer.valueOf(2))
-  } catch (ignored) {}
-
-  return false
-}
-
 function isBlacklisted(id, config) {
   const list = config.blacklist || []
   for (let i = 0; i < list.length; i++) {
@@ -1889,11 +1873,15 @@ function cmdPoolEnable(source, args) {
   }
 
   if (flag === 'false' || flag === '0' || flag === 'off' || flag === 'no') {
-    if (!isOperatorSource(source)) {
-      tell(source, '§cOnly operators can disable mod pools.')
+    if (!pools.disableModForTeam(player, mod, true)) {
+      tell(
+        source,
+        '§cCould not disable §f' +
+          mod +
+          '§c — not in your team unlocks, unknown namespace, or a starter exception.'
+      )
       return 0
     }
-    pools.disableModForTeam(player, mod, true)
     return 1
   }
 

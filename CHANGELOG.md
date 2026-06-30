@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.29] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock poolenable <mod> false`** — Removed extra operator-only gate; disable now uses the same permission as enable. Clearer message when disable fails (starter exception, not unlocked, etc.).
+
+---
+
 ## [1.0.0.28] — 2026-06-30
 
 ### Random One Block
