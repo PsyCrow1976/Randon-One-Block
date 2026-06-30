@@ -363,7 +363,7 @@ Before considering Random One Block work complete:
 | Debug pool / mod pools | Set `debug_logging: true`, then `/randomblock reload` or `/randomblock pools debug` — read `logs/kubejs/server.log` |
 | Island layout | `config/HavenSkyblockBuilder/`, `config/haven_skyblock_builder-common.toml` |
 | Quests | `config/ftbquests/quests/` (create when ready) |
-| Team mod unlock persistence | `kubejs/data/random_one_block_unlocks/` (gitignored) |
+| Team mod unlock persistence | `kubejs/config/random_one_block_unlocks/` (gitignored) |
 
 ---
 
