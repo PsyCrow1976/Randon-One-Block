@@ -8,6 +8,15 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.1.3] — 2026-06-30
+
+### FTB Quests
+
+- **Ex Deorum** — New quest chapter with **153** item quests grouped by recipe chain (compressed blocks, crushed, sieving outputs, mesh/hammer tiers, porcelain, wood stations, and more). No dependency lines — link progression yourself in the quest editor.
+- **Compressed Dirt** quest unlocks the **Ex Deorum** mod namespace in the random one-block pool for your team.
+
+---
+
 ## [1.0.1.2] — 2026-06-30
 
 ### FTB Quests

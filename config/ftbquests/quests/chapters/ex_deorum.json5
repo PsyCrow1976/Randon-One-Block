@@ -1,0 +1,3993 @@
+{
+  id: "E8D4F2A1B3C59607",
+  group: "",
+  order_index: 3,
+  icon: { id: "exdeorum:compressed_dirt", count: 1 },
+  filename: "ex_deorum",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "exdeorum:compressed_dirt",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      shape: "rsquare",
+      size: 1.5,
+      id: "5F76BA38891F3B07",
+      tasks: [
+        {
+          id: "1A85CE9EB3CAAD93",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_dirt",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9F976AD6C9CC4B92",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_gravel",
+        count: 1,
+      },
+      x: 1.2,
+      y: 0.0,
+      id: "3E3A0D8F8C2F93DC",
+      tasks: [
+        {
+          id: "B531F04C3E2822F8",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_gravel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B2569DB029CA9CF9",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_sand",
+        count: 1,
+      },
+      x: 2.4,
+      y: 0.0,
+      id: "6832EF8F46B42D52",
+      tasks: [
+        {
+          id: "124199CB6CB7B1DD",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_sand",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1C5A8FFE12D26464",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_red_sand",
+        count: 1,
+      },
+      x: 3.6,
+      y: 0.0,
+      id: "9D7968FA1EE9A15C",
+      tasks: [
+        {
+          id: "CE3C5EF08ADEAEA6",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_red_sand",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "04753637D0FB9F31",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_cobblestone",
+        count: 1,
+      },
+      x: 4.8,
+      y: 0.0,
+      id: "37CFE7B7327C9F02",
+      tasks: [
+        {
+          id: "CE33FDB2698F95A9",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_cobblestone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DAB99CB7047350AA",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_deepslate",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "22DD9AA87FF627F3",
+      tasks: [
+        {
+          id: "E964987602955F81",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_deepslate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "09F316795619B7FB",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_cobbled_deepslate",
+        count: 1,
+      },
+      x: 0.0,
+      y: 1.2,
+      id: "3C110226142BBC3D",
+      tasks: [
+        {
+          id: "F8915B2240FC4FE9",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_cobbled_deepslate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CF10AE527386DF14",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_andesite",
+        count: 1,
+      },
+      x: 1.2,
+      y: 1.2,
+      id: "DEA2C4E35A17DC58",
+      tasks: [
+        {
+          id: "D50B3BD26E98455A",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_andesite",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DDBEBAB828244996",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_diorite",
+        count: 1,
+      },
+      x: 2.4,
+      y: 1.2,
+      id: "B1D3FB96A15C44C4",
+      tasks: [
+        {
+          id: "702D6E5CC3BE9572",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_diorite",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C2AF1FFD7CB83878",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_granite",
+        count: 1,
+      },
+      x: 3.6,
+      y: 1.2,
+      id: "B32C4204E0ACA254",
+      tasks: [
+        {
+          id: "8BF8872AC382C6C0",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_granite",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "35DEB1A59775AEAE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_blackstone",
+        count: 1,
+      },
+      x: 4.8,
+      y: 1.2,
+      id: "ED4CEF03F17B2F16",
+      tasks: [
+        {
+          id: "08B87F07153E663E",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_blackstone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6ED84BED46E79FC5",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_netherrack",
+        count: 1,
+      },
+      x: 6.0,
+      y: 1.2,
+      id: "5B784C734CBA7999",
+      tasks: [
+        {
+          id: "3F518AFE4BA21306",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_netherrack",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "195237776BC75E6D",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_end_stone",
+        count: 1,
+      },
+      x: 0.0,
+      y: 2.4,
+      id: "A8E0CCA68D2C8947",
+      tasks: [
+        {
+          id: "E5C250D7E1EE5EBE",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_end_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "467B2BF9D6089D75",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_soul_sand",
+        count: 1,
+      },
+      x: 1.2,
+      y: 2.4,
+      id: "0CAD460EE0859F73",
+      tasks: [
+        {
+          id: "ADF74E0E5CA55593",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_soul_sand",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "92F19DB2916A1DF2",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_moss_block",
+        count: 1,
+      },
+      x: 2.4,
+      y: 2.4,
+      id: "128BF56BDD8A8031",
+      tasks: [
+        {
+          id: "2981988C7FEC2E97",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_moss_block",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "60CDD49B2C156638",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_dust",
+        count: 1,
+      },
+      x: 3.6,
+      y: 2.4,
+      id: "2E6616B12F8684D7",
+      tasks: [
+        {
+          id: "C15885C5281F9246",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7FE1B60BC509C31F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crushed_blackstone",
+        count: 1,
+      },
+      x: 0.0,
+      y: 5.0,
+      id: "8A6AF96B7A073088",
+      tasks: [
+        {
+          id: "2E890C9ECCC81727",
+          type: "item",
+          item: {
+            id: "exdeorum:crushed_blackstone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DD13CC726E5D7779",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crushed_deepslate",
+        count: 1,
+      },
+      x: 1.2,
+      y: 5.0,
+      id: "14A245109B2568D7",
+      tasks: [
+        {
+          id: "1220DCA8BD497E04",
+          type: "item",
+          item: {
+            id: "exdeorum:crushed_deepslate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9BD7E98908E0B22B",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crushed_end_stone",
+        count: 1,
+      },
+      x: 2.4,
+      y: 5.0,
+      id: "18199AC996F8FE2F",
+      tasks: [
+        {
+          id: "4DFAF2CADABE62A4",
+          type: "item",
+          item: {
+            id: "exdeorum:crushed_end_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "09CAEE1A8848403F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crushed_netherrack",
+        count: 1,
+      },
+      x: 3.6,
+      y: 5.0,
+      id: "865771D757122A81",
+      tasks: [
+        {
+          id: "268D608C9DDA8392",
+          type: "item",
+          item: {
+            id: "exdeorum:crushed_netherrack",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BCC2300714D9580A",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_crushed_blackstone",
+        count: 1,
+      },
+      x: 4.8,
+      y: 5.0,
+      id: "7FF9305C2B04B7C5",
+      tasks: [
+        {
+          id: "DB9254D2D79CBA0E",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_crushed_blackstone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8B888A5380AF66C6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_crushed_deepslate",
+        count: 1,
+      },
+      x: 6.0,
+      y: 5.0,
+      id: "46CB48C7B9058439",
+      tasks: [
+        {
+          id: "535139CE84A569C8",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_crushed_deepslate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ABEEE71DAA9FBBB3",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_crushed_end_stone",
+        count: 1,
+      },
+      x: 0.0,
+      y: 6.2,
+      id: "B1CD74CD95CE6573",
+      tasks: [
+        {
+          id: "AD1EE15857986520",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_crushed_end_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BB64A76CE33C6296",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_crushed_netherrack",
+        count: 1,
+      },
+      x: 1.2,
+      y: 6.2,
+      id: "F8114ED1453E3C41",
+      tasks: [
+        {
+          id: "1F7C5AD75B3DD682",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_crushed_netherrack",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "36577A9B2E687D51",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:dust",
+        count: 1,
+      },
+      x: -3.0,
+      y: 5.0,
+      id: "B5C7DA4D7E4C74CF",
+      tasks: [
+        {
+          id: "2F221E9B5525B379",
+          type: "item",
+          item: {
+            id: "exdeorum:dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E5AE912C076D57B1",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crook",
+        count: 1,
+      },
+      x: -8.0,
+      y: 0.0,
+      id: "B401E9ABD7136A79",
+      tasks: [
+        {
+          id: "24DF2A90F64AA4DF",
+          type: "item",
+          item: {
+            id: "exdeorum:crook",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "499590D28C1BAB1C",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:bone_crook",
+        count: 1,
+      },
+      x: -7.0,
+      y: 0.0,
+      id: "2618BFD7249F2BB8",
+      tasks: [
+        {
+          id: "A46F3C45313EB005",
+          type: "item",
+          item: {
+            id: "exdeorum:bone_crook",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "54150C70E643CFE3",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:infested_leaves",
+        count: 1,
+      },
+      x: -8.0,
+      y: 3.0,
+      id: "7FA12E4159568F08",
+      tasks: [
+        {
+          id: "BFC3766363205F1A",
+          type: "item",
+          item: {
+            id: "exdeorum:infested_leaves",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C62F958F493F90B8",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:wood_chippings",
+        count: 1,
+      },
+      x: -7.0,
+      y: 3.0,
+      id: "747A3E36B26785B7",
+      tasks: [
+        {
+          id: "9624BC5F76792902",
+          type: "item",
+          item: {
+            id: "exdeorum:wood_chippings",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "92118C05CA9120D5",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:silkworm",
+        count: 1,
+      },
+      x: -6.0,
+      y: 3.0,
+      id: "F2D64C132767D50F",
+      tasks: [
+        {
+          id: "072731F4F12DAEAC",
+          type: "item",
+          item: {
+            id: "exdeorum:silkworm",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0A51C766C35C7B81",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cooked_silkworm",
+        count: 1,
+      },
+      x: -5.0,
+      y: 3.0,
+      id: "EC088A107AFBA9C9",
+      tasks: [
+        {
+          id: "B8B91C3A965DCE72",
+          type: "item",
+          item: {
+            id: "exdeorum:cooked_silkworm",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B7A417994AB35573",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:grass_seeds",
+        count: 1,
+      },
+      x: -8.0,
+      y: 7.0,
+      id: "F2178DA1D4D8A719",
+      tasks: [
+        {
+          id: "13C65440087CF684",
+          type: "item",
+          item: {
+            id: "exdeorum:grass_seeds",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B1C0431D06569AD9",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mycelium_spores",
+        count: 1,
+      },
+      x: -7.0,
+      y: 7.0,
+      id: "CAE9B59DEB74E520",
+      tasks: [
+        {
+          id: "049B4BD6CF987663",
+          type: "item",
+          item: {
+            id: "exdeorum:mycelium_spores",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F1B1718D46D751F6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crimson_nylium_spores",
+        count: 1,
+      },
+      x: -6.0,
+      y: 7.0,
+      id: "13CA7F095C6670B2",
+      tasks: [
+        {
+          id: "7C95E38A20C8DB07",
+          type: "item",
+          item: {
+            id: "exdeorum:crimson_nylium_spores",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "19A5D7BFCE7D775D",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:warped_nylium_spores",
+        count: 1,
+      },
+      x: -5.0,
+      y: 7.0,
+      id: "6271BAE6A1DD3732",
+      tasks: [
+        {
+          id: "7AC8AB2AEE6818F7",
+          type: "item",
+          item: {
+            id: "exdeorum:warped_nylium_spores",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "801D0C9460BB97E4",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:andesite_pebble",
+        count: 1,
+      },
+      x: 14.0,
+      y: 0.0,
+      id: "A507D2BEFDA1F195",
+      tasks: [
+        {
+          id: "460C4406C1FD1C70",
+          type: "item",
+          item: {
+            id: "exdeorum:andesite_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B4585F37E584A840",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:basalt_pebble",
+        count: 1,
+      },
+      x: 15.0,
+      y: 0.0,
+      id: "462709C7A45FABC8",
+      tasks: [
+        {
+          id: "38C23868CF3740FC",
+          type: "item",
+          item: {
+            id: "exdeorum:basalt_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D74F04E3FEF3D1F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:blackstone_pebble",
+        count: 1,
+      },
+      x: 16.0,
+      y: 0.0,
+      id: "1451BDF53C1772E8",
+      tasks: [
+        {
+          id: "186AE4506F54B977",
+          type: "item",
+          item: {
+            id: "exdeorum:blackstone_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "37E81B61E58F90D9",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:calcite_pebble",
+        count: 1,
+      },
+      x: 17.0,
+      y: 0.0,
+      id: "C993DC2B134A6007",
+      tasks: [
+        {
+          id: "83EA1FEB6CEF7B5B",
+          type: "item",
+          item: {
+            id: "exdeorum:calcite_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A382197926E9A807",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:deepslate_pebble",
+        count: 1,
+      },
+      x: 14.0,
+      y: 1.0,
+      id: "DE6A5D3238DE5333",
+      tasks: [
+        {
+          id: "9E3576DCC7314BD6",
+          type: "item",
+          item: {
+            id: "exdeorum:deepslate_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4D6B8E2C3F8097D4",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:diorite_pebble",
+        count: 1,
+      },
+      x: 15.0,
+      y: 1.0,
+      id: "B4C275C590083990",
+      tasks: [
+        {
+          id: "F2E2834B2B6DACF6",
+          type: "item",
+          item: {
+            id: "exdeorum:diorite_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EF8597F34F730137",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:granite_pebble",
+        count: 1,
+      },
+      x: 16.0,
+      y: 1.0,
+      id: "2C77069B434C9EA1",
+      tasks: [
+        {
+          id: "4E9987F5C3F0D4D9",
+          type: "item",
+          item: {
+            id: "exdeorum:granite_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F72FD4BD87BCCAEC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:stone_pebble",
+        count: 1,
+      },
+      x: 17.0,
+      y: 1.0,
+      id: "B839C0695D8356B2",
+      tasks: [
+        {
+          id: "38BE6F035ECB0DBE",
+          type: "item",
+          item: {
+            id: "exdeorum:stone_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7040D41178CAF6C3",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:tuff_pebble",
+        count: 1,
+      },
+      x: 14.0,
+      y: 2.0,
+      id: "093A01EEC00109B8",
+      tasks: [
+        {
+          id: "BE7DADCA83F989BF",
+          type: "item",
+          item: {
+            id: "exdeorum:tuff_pebble",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ADABDB99D5B84373",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:aluminum_ore_chunk",
+        count: 1,
+      },
+      x: 14.0,
+      y: 11.0,
+      id: "7360394B1A918F1E",
+      tasks: [
+        {
+          id: "A20EE60C5FBD1FED",
+          type: "item",
+          item: {
+            id: "exdeorum:aluminum_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ADDD28D69E6EB0BF",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:boron_ore_chunk",
+        count: 1,
+      },
+      x: 15.0,
+      y: 11.0,
+      id: "299D7BE7048102C9",
+      tasks: [
+        {
+          id: "672B92B5BE1D3D2B",
+          type: "item",
+          item: {
+            id: "exdeorum:boron_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BECA4B49ACC025A7",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cobalt_ore_chunk",
+        count: 1,
+      },
+      x: 16.0,
+      y: 11.0,
+      id: "CAFECE45BE3CCBA6",
+      tasks: [
+        {
+          id: "023885320226369B",
+          type: "item",
+          item: {
+            id: "exdeorum:cobalt_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DA71D19864D1B9DC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:copper_ore_chunk",
+        count: 1,
+      },
+      x: 17.0,
+      y: 11.0,
+      id: "25E04CACAD8D2D2E",
+      tasks: [
+        {
+          id: "6A63869C01414AE8",
+          type: "item",
+          item: {
+            id: "exdeorum:copper_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C5CDC0C06311F637",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:gold_ore_chunk",
+        count: 1,
+      },
+      x: 14.0,
+      y: 12.0,
+      id: "C5EA489261FE06D9",
+      tasks: [
+        {
+          id: "4736810CB607E506",
+          type: "item",
+          item: {
+            id: "exdeorum:gold_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B3569077279C8B33",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:iridium_ore_chunk",
+        count: 1,
+      },
+      x: 15.0,
+      y: 12.0,
+      id: "6C883C1773842248",
+      tasks: [
+        {
+          id: "C389354D16D1FA3D",
+          type: "item",
+          item: {
+            id: "exdeorum:iridium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "73292C9BA034A0AC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:iron_ore_chunk",
+        count: 1,
+      },
+      x: 16.0,
+      y: 12.0,
+      id: "C5BEDD4F11DEDAA4",
+      tasks: [
+        {
+          id: "8F57B8D5FF2CC813",
+          type: "item",
+          item: {
+            id: "exdeorum:iron_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "54CFC1B964A51C65",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:lead_ore_chunk",
+        count: 1,
+      },
+      x: 17.0,
+      y: 12.0,
+      id: "3D35A5E8C9D4C211",
+      tasks: [
+        {
+          id: "F5370B1EEDB86682",
+          type: "item",
+          item: {
+            id: "exdeorum:lead_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BA88BE2C87DEB08E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:lithium_ore_chunk",
+        count: 1,
+      },
+      x: 14.0,
+      y: 13.0,
+      id: "E3B30FADC6E0A2E4",
+      tasks: [
+        {
+          id: "6D5FBD69131DC502",
+          type: "item",
+          item: {
+            id: "exdeorum:lithium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E13501D0A668F19F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:magnesium_ore_chunk",
+        count: 1,
+      },
+      x: 15.0,
+      y: 13.0,
+      id: "A984A2EDB37D607E",
+      tasks: [
+        {
+          id: "B3BAE564C6E36CC5",
+          type: "item",
+          item: {
+            id: "exdeorum:magnesium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CF1072D19FCFB154",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:nickel_ore_chunk",
+        count: 1,
+      },
+      x: 16.0,
+      y: 13.0,
+      id: "D472B846765E7689",
+      tasks: [
+        {
+          id: "DBB023D164FD6D2A",
+          type: "item",
+          item: {
+            id: "exdeorum:nickel_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2DC5941A9ADA0DD9",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:osmium_ore_chunk",
+        count: 1,
+      },
+      x: 17.0,
+      y: 13.0,
+      id: "B1DD8E349C9751B3",
+      tasks: [
+        {
+          id: "D86E03AB3B5E0E03",
+          type: "item",
+          item: {
+            id: "exdeorum:osmium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4A955FF8D6914FAA",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:platinum_ore_chunk",
+        count: 1,
+      },
+      x: 14.0,
+      y: 14.0,
+      id: "D5461C5E68B3E4F9",
+      tasks: [
+        {
+          id: "0E87943B5CD19F41",
+          type: "item",
+          item: {
+            id: "exdeorum:platinum_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "543E5A8DC140029E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:silver_ore_chunk",
+        count: 1,
+      },
+      x: 15.0,
+      y: 14.0,
+      id: "D2640161E1FAC49F",
+      tasks: [
+        {
+          id: "2E78E6A2B78AEF39",
+          type: "item",
+          item: {
+            id: "exdeorum:silver_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "041D5C9404068BC1",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:thorium_ore_chunk",
+        count: 1,
+      },
+      x: 16.0,
+      y: 14.0,
+      id: "04E39C1E315761B7",
+      tasks: [
+        {
+          id: "22929A163B23095A",
+          type: "item",
+          item: {
+            id: "exdeorum:thorium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "594881763E188DC5",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:tin_ore_chunk",
+        count: 1,
+      },
+      x: 17.0,
+      y: 14.0,
+      id: "8EF4D68C53D3B820",
+      tasks: [
+        {
+          id: "D94CCDDD4FA0F6F2",
+          type: "item",
+          item: {
+            id: "exdeorum:tin_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "68E8CA0B7B68F9DF",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:uranium_ore_chunk",
+        count: 1,
+      },
+      x: 14.0,
+      y: 15.0,
+      id: "FA9F6ADA7984A216",
+      tasks: [
+        {
+          id: "59AA117E5BAA4F1C",
+          type: "item",
+          item: {
+            id: "exdeorum:uranium_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D9E168F031F9BAC5",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:zinc_ore_chunk",
+        count: 1,
+      },
+      x: 15.0,
+      y: 15.0,
+      id: "ED478F78A2FCAF13",
+      tasks: [
+        {
+          id: "8819CB52078FD95E",
+          type: "item",
+          item: {
+            id: "exdeorum:zinc_ore_chunk",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FAFAC957A51B2181",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:string_mesh",
+        count: 1,
+      },
+      x: 0.0,
+      y: 12.0,
+      id: "4A904E2EF22F6D51",
+      tasks: [
+        {
+          id: "C08A8D89E3275BE9",
+          type: "item",
+          item: {
+            id: "exdeorum:string_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1D1152F78BE63AC2",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:flint_mesh",
+        count: 1,
+      },
+      x: 1.5,
+      y: 12.0,
+      id: "EF24D056F7B6F1B8",
+      tasks: [
+        {
+          id: "9D1EADF1316AE7CE",
+          type: "item",
+          item: {
+            id: "exdeorum:flint_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A9E69A87A6EB2EDC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:iron_mesh",
+        count: 1,
+      },
+      x: 3.0,
+      y: 12.0,
+      id: "0A19396D2C5933FA",
+      tasks: [
+        {
+          id: "85B231C20C0470FE",
+          type: "item",
+          item: {
+            id: "exdeorum:iron_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "524DAFE3CE395039",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:golden_mesh",
+        count: 1,
+      },
+      x: 4.5,
+      y: 12.0,
+      id: "812C7730301EB8D4",
+      tasks: [
+        {
+          id: "9679A36361940848",
+          type: "item",
+          item: {
+            id: "exdeorum:golden_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DD0ABF26BB12B10F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:diamond_mesh",
+        count: 1,
+      },
+      x: 6.0,
+      y: 12.0,
+      id: "6A90824B453CDFC7",
+      tasks: [
+        {
+          id: "F0D20A2EC78B0E87",
+          type: "item",
+          item: {
+            id: "exdeorum:diamond_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "43DAC706CCF12A32",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:netherite_mesh",
+        count: 1,
+      },
+      x: 7.5,
+      y: 12.0,
+      id: "F0E8BDBE06EDE896",
+      tasks: [
+        {
+          id: "2D3FFB88769E65C9",
+          type: "item",
+          item: {
+            id: "exdeorum:netherite_mesh",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6C015AFEBC99148E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:wooden_hammer",
+        count: 1,
+      },
+      x: 0.0,
+      y: 15.0,
+      id: "4F2AD810A4A8FEEA",
+      tasks: [
+        {
+          id: "3B407E269524FFA8",
+          type: "item",
+          item: {
+            id: "exdeorum:wooden_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F7AB4F3D2A75B46B",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:stone_hammer",
+        count: 1,
+      },
+      x: 1.5,
+      y: 15.0,
+      id: "0EB3542B8101E102",
+      tasks: [
+        {
+          id: "CE64E84C77B88060",
+          type: "item",
+          item: {
+            id: "exdeorum:stone_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FF20F8440A4EF6DF",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:iron_hammer",
+        count: 1,
+      },
+      x: 3.0,
+      y: 15.0,
+      id: "4897B1997578A52F",
+      tasks: [
+        {
+          id: "64AB5B74F3E04895",
+          type: "item",
+          item: {
+            id: "exdeorum:iron_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1C15267CEE9F89A8",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:golden_hammer",
+        count: 1,
+      },
+      x: 4.5,
+      y: 15.0,
+      id: "CFEFDBDDDDC332A9",
+      tasks: [
+        {
+          id: "E79BCAE485AB7D0E",
+          type: "item",
+          item: {
+            id: "exdeorum:golden_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "44A0A42252CEE3BC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:diamond_hammer",
+        count: 1,
+      },
+      x: 6.0,
+      y: 15.0,
+      id: "66933F94FDF704AB",
+      tasks: [
+        {
+          id: "5E0F632ABDA5F3B8",
+          type: "item",
+          item: {
+            id: "exdeorum:diamond_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "37F896A5F2E53F65",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:netherite_hammer",
+        count: 1,
+      },
+      x: 7.5,
+      y: 15.0,
+      id: "E311F5EA1EB43E02",
+      tasks: [
+        {
+          id: "44594974CC1D7424",
+          type: "item",
+          item: {
+            id: "exdeorum:netherite_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EFF776D919B1A232",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_wooden_hammer",
+        count: 1,
+      },
+      x: 0.0,
+      y: 18.0,
+      id: "FA98F179B2A70C6C",
+      tasks: [
+        {
+          id: "43286CF8A37F3078",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_wooden_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8E7BC822B6A71AE6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_stone_hammer",
+        count: 1,
+      },
+      x: 1.5,
+      y: 18.0,
+      id: "22E9A734075BE72C",
+      tasks: [
+        {
+          id: "64883BD818988746",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_stone_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1825508B81D155E4",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_iron_hammer",
+        count: 1,
+      },
+      x: 3.0,
+      y: 18.0,
+      id: "A3FF9E3652AE12C3",
+      tasks: [
+        {
+          id: "F759B9B8C0857E37",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_iron_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C9C8C47D495F0A30",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_golden_hammer",
+        count: 1,
+      },
+      x: 4.5,
+      y: 18.0,
+      id: "DDBD4D162C33A83E",
+      tasks: [
+        {
+          id: "9A0A4B142B7F6AE0",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_golden_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "13CE8BFA5D974B57",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_diamond_hammer",
+        count: 1,
+      },
+      x: 6.0,
+      y: 18.0,
+      id: "7F960CE8D9FCC08D",
+      tasks: [
+        {
+          id: "8CFC2E43CCF81B2F",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_diamond_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D5E59F0936A139D8",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_netherite_hammer",
+        count: 1,
+      },
+      x: 7.5,
+      y: 18.0,
+      id: "3BFA03189D833994",
+      tasks: [
+        {
+          id: "96ACA0232A3F19AA",
+          type: "item",
+          item: {
+            id: "exdeorum:compressed_netherite_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "879D92ED0CD1B378",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mechanical_hammer",
+        count: 1,
+      },
+      x: 10.0,
+      y: 18.0,
+      id: "69B1D4E0AB31BD5F",
+      tasks: [
+        {
+          id: "0D5E12DC9F8397CF",
+          type: "item",
+          item: {
+            id: "exdeorum:mechanical_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "38DC61EB2D34412A",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mechanical_sieve",
+        count: 1,
+      },
+      x: 11.5,
+      y: 18.0,
+      id: "C9DF1383D59E6000",
+      tasks: [
+        {
+          id: "EC7CDBBCCF630940",
+          type: "item",
+          item: {
+            id: "exdeorum:mechanical_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "986C019F054735B9",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:wooden_watering_can",
+        count: 1,
+      },
+      x: -14.0,
+      y: 12.0,
+      id: "1C1AE2C77CD283A8",
+      tasks: [
+        {
+          id: "FCACD0374CB842B6",
+          type: "item",
+          item: {
+            id: "exdeorum:wooden_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CC3955A5185183AE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:stone_watering_can",
+        count: 1,
+      },
+      x: -13.0,
+      y: 12.0,
+      id: "4101B3D526BA095C",
+      tasks: [
+        {
+          id: "8D4C24DC57857AC3",
+          type: "item",
+          item: {
+            id: "exdeorum:stone_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C38B9315750E7662",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:copper_watering_can",
+        count: 1,
+      },
+      x: -12.0,
+      y: 12.0,
+      id: "DD8439ACA07F9589",
+      tasks: [
+        {
+          id: "3756FF25A49BD230",
+          type: "item",
+          item: {
+            id: "exdeorum:copper_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FE66DA22CEC6EA69",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:iron_watering_can",
+        count: 1,
+      },
+      x: -11.0,
+      y: 12.0,
+      id: "B8FB2CC9637BC163",
+      tasks: [
+        {
+          id: "25E878954CBDCD59",
+          type: "item",
+          item: {
+            id: "exdeorum:iron_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BB301CEA8E65ADD6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:golden_watering_can",
+        count: 1,
+      },
+      x: -10.0,
+      y: 12.0,
+      id: "3C158388E46634EB",
+      tasks: [
+        {
+          id: "9E09F4736E6DB201",
+          type: "item",
+          item: {
+            id: "exdeorum:golden_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6803647CB8F5AE42",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:diamond_watering_can",
+        count: 1,
+      },
+      x: -9.0,
+      y: 12.0,
+      id: "0AD067CE4FA05CB0",
+      tasks: [
+        {
+          id: "715B299F9B8955EE",
+          type: "item",
+          item: {
+            id: "exdeorum:diamond_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F2E651622E60169F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:netherite_watering_can",
+        count: 1,
+      },
+      x: -14.0,
+      y: 13.2,
+      id: "EE01795C04B3F5C2",
+      tasks: [
+        {
+          id: "9E2701F30D9FF99B",
+          type: "item",
+          item: {
+            id: "exdeorum:netherite_watering_can",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BAD79C48877AC317",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_clay_ball",
+        count: 1,
+      },
+      x: -14.0,
+      y: 0.0,
+      id: "C4D0785465CF0368",
+      tasks: [
+        {
+          id: "06563F2FAF7E8B6A",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_clay_ball",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ADAEA580E187E5F7",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:unfired_porcelain_bucket",
+        count: 1,
+      },
+      x: -13.0,
+      y: 0.0,
+      id: "13565DE8E4496973",
+      tasks: [
+        {
+          id: "EDF20E326E74DC8E",
+          type: "item",
+          item: {
+            id: "exdeorum:unfired_porcelain_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "045872108530BB4A",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_bucket",
+        count: 1,
+      },
+      x: -12.0,
+      y: 0.0,
+      id: "1DE0184FE1B5532C",
+      tasks: [
+        {
+          id: "899D889997F2A769",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1E2DDFB33113A2A1",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:unfired_porcelain_crucible",
+        count: 1,
+      },
+      x: -11.0,
+      y: 0.0,
+      id: "7662A947831DDABF",
+      tasks: [
+        {
+          id: "8DD0581666423923",
+          type: "item",
+          item: {
+            id: "exdeorum:unfired_porcelain_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0DAC5F06D7C755EE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_crucible",
+        count: 1,
+      },
+      x: -10.0,
+      y: 0.0,
+      id: "2E9821C9AC9E285A",
+      tasks: [
+        {
+          id: "E843158013B65CA4",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "99466F2F9F9F8AF6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_water_bucket",
+        count: 1,
+      },
+      x: -9.0,
+      y: 0.0,
+      id: "4067679DC475BC9E",
+      tasks: [
+        {
+          id: "62422C13CD76829B",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_water_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FBBCC60DB981976E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_lava_bucket",
+        count: 1,
+      },
+      x: -14.0,
+      y: 1.2,
+      id: "065A3EA664C24712",
+      tasks: [
+        {
+          id: "E5353FE2D904B858",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_lava_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "02B937F6EAB40A3F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_milk_bucket",
+        count: 1,
+      },
+      x: -13.0,
+      y: 1.2,
+      id: "E10D1D8AD972B106",
+      tasks: [
+        {
+          id: "58B444FA8BC501B4",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_milk_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F7D0D4B4F2879D91",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:porcelain_witch_water_bucket",
+        count: 1,
+      },
+      x: -12.0,
+      y: 1.2,
+      id: "09BE46A0FD7C5048",
+      tasks: [
+        {
+          id: "E74B0F84A5D5794C",
+          type: "item",
+          item: {
+            id: "exdeorum:porcelain_witch_water_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6DEA68EA9AFB7941",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:witch_water_bucket",
+        count: 1,
+      },
+      x: -11.0,
+      y: 1.2,
+      id: "829A038ACC79F8AE",
+      tasks: [
+        {
+          id: "B498853C4AA5C315",
+          type: "item",
+          item: {
+            id: "exdeorum:witch_water_bucket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D65DAD76FAE1E13",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:acacia_barrel",
+        count: 1,
+      },
+      x: 28.0,
+      y: 0.0,
+      id: "075E970BC966FE7C",
+      tasks: [
+        {
+          id: "AA3AF6439D3BF6FD",
+          type: "item",
+          item: {
+            id: "exdeorum:acacia_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "52E8CB964EA9FE8B",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:bamboo_barrel",
+        count: 1,
+      },
+      x: 29.0,
+      y: 0.0,
+      id: "F5705EBDF36158A0",
+      tasks: [
+        {
+          id: "A38A57AEAD56CB68",
+          type: "item",
+          item: {
+            id: "exdeorum:bamboo_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CD4A09D5A568D1CB",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:birch_barrel",
+        count: 1,
+      },
+      x: 30.0,
+      y: 0.0,
+      id: "E173F8EA60EFDA0E",
+      tasks: [
+        {
+          id: "3AE6937D56BEFAD0",
+          type: "item",
+          item: {
+            id: "exdeorum:birch_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E145DF56B0746ECF",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cherry_barrel",
+        count: 1,
+      },
+      x: 31.0,
+      y: 0.0,
+      id: "07CBE5FEE8E3D5C5",
+      tasks: [
+        {
+          id: "7E4B10DB58A49463",
+          type: "item",
+          item: {
+            id: "exdeorum:cherry_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "413A3A8FB81DDB5A",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crimson_barrel",
+        count: 1,
+      },
+      x: 28.0,
+      y: 1.0,
+      id: "A98BE0FFC72674FE",
+      tasks: [
+        {
+          id: "85DC38AA5A9BE9C4",
+          type: "item",
+          item: {
+            id: "exdeorum:crimson_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "399CE10332D389DE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:dark_oak_barrel",
+        count: 1,
+      },
+      x: 29.0,
+      y: 1.0,
+      id: "C882B8857DD1C798",
+      tasks: [
+        {
+          id: "74BA9C6BFA4AAA5F",
+          type: "item",
+          item: {
+            id: "exdeorum:dark_oak_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DA1441F4A20A7E2B",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:jungle_barrel",
+        count: 1,
+      },
+      x: 30.0,
+      y: 1.0,
+      id: "E7453E23B35188B3",
+      tasks: [
+        {
+          id: "175525C4EF532D35",
+          type: "item",
+          item: {
+            id: "exdeorum:jungle_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BAFB19FDF2316455",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mangrove_barrel",
+        count: 1,
+      },
+      x: 31.0,
+      y: 1.0,
+      id: "36DF5EDE16D6DFB9",
+      tasks: [
+        {
+          id: "8E1ACE2A78AACF21",
+          type: "item",
+          item: {
+            id: "exdeorum:mangrove_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FB5B9DC94518B78B",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:oak_barrel",
+        count: 1,
+      },
+      x: 28.0,
+      y: 2.0,
+      id: "D6DEBFA67A1A1506",
+      tasks: [
+        {
+          id: "4E6F5342AEB59628",
+          type: "item",
+          item: {
+            id: "exdeorum:oak_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0AAE4DDEECCFD31D",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:pale_oak_barrel",
+        count: 1,
+      },
+      x: 29.0,
+      y: 2.0,
+      id: "C5805C95D17D4DD7",
+      tasks: [
+        {
+          id: "517D28D0733AE758",
+          type: "item",
+          item: {
+            id: "exdeorum:pale_oak_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F635FE84945CA271",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:spruce_barrel",
+        count: 1,
+      },
+      x: 30.0,
+      y: 2.0,
+      id: "2BCE3AC493E6C77D",
+      tasks: [
+        {
+          id: "7EE37B6C9298DAFF",
+          type: "item",
+          item: {
+            id: "exdeorum:spruce_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "38A6CE58CFE85F42",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:stone_barrel",
+        count: 1,
+      },
+      x: 31.0,
+      y: 2.0,
+      id: "0585803F010658F8",
+      tasks: [
+        {
+          id: "9DD3E38FEB50DFD6",
+          type: "item",
+          item: {
+            id: "exdeorum:stone_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "35433DF54BE89030",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:warped_barrel",
+        count: 1,
+      },
+      x: 28.0,
+      y: 3.0,
+      id: "84B7AD2F7AA06169",
+      tasks: [
+        {
+          id: "AABB9CA4A436755A",
+          type: "item",
+          item: {
+            id: "exdeorum:warped_barrel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B076E9E8C28E48E0",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:acacia_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 5.0,
+      id: "D719A93DC6EBB731",
+      tasks: [
+        {
+          id: "34A4ADE7E46AFDE2",
+          type: "item",
+          item: {
+            id: "exdeorum:acacia_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1C5690DA6690E981",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:bamboo_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 5.0,
+      id: "96BFA7396FD4C2F8",
+      tasks: [
+        {
+          id: "872AAB1C04FD69C2",
+          type: "item",
+          item: {
+            id: "exdeorum:bamboo_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2120C00B7E1A0E72",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:birch_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 5.0,
+      id: "6614730BEE5B9E16",
+      tasks: [
+        {
+          id: "E46B211FB1077ADB",
+          type: "item",
+          item: {
+            id: "exdeorum:birch_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1EC4F045B8DAFF84",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cherry_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 5.0,
+      id: "DAEDBC94E930BB81",
+      tasks: [
+        {
+          id: "B896B0F96FFD8E40",
+          type: "item",
+          item: {
+            id: "exdeorum:cherry_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FEDA322C970AAF26",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crimson_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 6.0,
+      id: "69EB72B3E09280A4",
+      tasks: [
+        {
+          id: "D1BB0B07D3788A8B",
+          type: "item",
+          item: {
+            id: "exdeorum:crimson_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4CCD8CB5381C856D",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:dark_oak_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 6.0,
+      id: "95BFBD313611F1D1",
+      tasks: [
+        {
+          id: "0913270DBA9B7F80",
+          type: "item",
+          item: {
+            id: "exdeorum:dark_oak_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "58CB05CE6A046172",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:jungle_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 6.0,
+      id: "E3DC241B47DC0AFD",
+      tasks: [
+        {
+          id: "60F3F9B7496D048D",
+          type: "item",
+          item: {
+            id: "exdeorum:jungle_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2D21B4D98A12B0C7",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mangrove_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 6.0,
+      id: "C2829CAA2B61E7FE",
+      tasks: [
+        {
+          id: "90C94AEEDB922278",
+          type: "item",
+          item: {
+            id: "exdeorum:mangrove_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0A66F76808E41271",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:oak_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 7.0,
+      id: "8103CC9B3A85BD34",
+      tasks: [
+        {
+          id: "C9100637186AC11C",
+          type: "item",
+          item: {
+            id: "exdeorum:oak_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D4E742251DDC122E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:pale_oak_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 7.0,
+      id: "229BA1E40CEEDA0C",
+      tasks: [
+        {
+          id: "3BAB02B29991BBE9",
+          type: "item",
+          item: {
+            id: "exdeorum:pale_oak_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3A6DD359D7CFF61D",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:spruce_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 7.0,
+      id: "FDD85CC873603019",
+      tasks: [
+        {
+          id: "8229764FDF125ECE",
+          type: "item",
+          item: {
+            id: "exdeorum:spruce_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EDBAFF15092A3758",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:warped_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 7.0,
+      id: "A20CD56504FD43B9",
+      tasks: [
+        {
+          id: "D5C05954203DA227",
+          type: "item",
+          item: {
+            id: "exdeorum:warped_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "597245EC4DFD39CA",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:acacia_compressed_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 10.0,
+      id: "9AFB5D6CB0D506BC",
+      tasks: [
+        {
+          id: "43CB5A814C833129",
+          type: "item",
+          item: {
+            id: "exdeorum:acacia_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6FF71D19AFA5DBB1",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:bamboo_compressed_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 10.0,
+      id: "B2C22CB2BF7ED580",
+      tasks: [
+        {
+          id: "DBB4B72BE85708DD",
+          type: "item",
+          item: {
+            id: "exdeorum:bamboo_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ED17940612A4ED5F",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:birch_compressed_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 10.0,
+      id: "A2D59619EE5CD6E3",
+      tasks: [
+        {
+          id: "5D5F84BC0709D438",
+          type: "item",
+          item: {
+            id: "exdeorum:birch_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9357F65726627F6C",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cherry_compressed_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 10.0,
+      id: "E91B4D1BDB3456A7",
+      tasks: [
+        {
+          id: "6F32FBD6912D7E94",
+          type: "item",
+          item: {
+            id: "exdeorum:cherry_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9912FF9F3FF4B4E8",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crimson_compressed_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 11.0,
+      id: "B6FB34F454EF3F8E",
+      tasks: [
+        {
+          id: "975BA829A1438789",
+          type: "item",
+          item: {
+            id: "exdeorum:crimson_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "388D4927D0C313D2",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:dark_oak_compressed_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 11.0,
+      id: "6E43AC43C73E3D3E",
+      tasks: [
+        {
+          id: "9303AE4E2B32F97C",
+          type: "item",
+          item: {
+            id: "exdeorum:dark_oak_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FFB4713A1EE366D6",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:jungle_compressed_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 11.0,
+      id: "75B06F2C6FE4D336",
+      tasks: [
+        {
+          id: "0D8CEC3EC56C9677",
+          type: "item",
+          item: {
+            id: "exdeorum:jungle_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1D7C65B282183D28",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mangrove_compressed_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 11.0,
+      id: "940B86B3090F2CC1",
+      tasks: [
+        {
+          id: "9019B3C923CF4750",
+          type: "item",
+          item: {
+            id: "exdeorum:mangrove_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "55D7C7BABB805A28",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:oak_compressed_sieve",
+        count: 1,
+      },
+      x: 28.0,
+      y: 12.0,
+      id: "0C7B0803E6729957",
+      tasks: [
+        {
+          id: "53E5078FF402BDA5",
+          type: "item",
+          item: {
+            id: "exdeorum:oak_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EC420325FC8F03A0",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:pale_oak_compressed_sieve",
+        count: 1,
+      },
+      x: 29.0,
+      y: 12.0,
+      id: "A8698F37511148B1",
+      tasks: [
+        {
+          id: "D3BCF1A858237520",
+          type: "item",
+          item: {
+            id: "exdeorum:pale_oak_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D4BA4BD8C45DD781",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:spruce_compressed_sieve",
+        count: 1,
+      },
+      x: 30.0,
+      y: 12.0,
+      id: "8C6D786AEDF6399A",
+      tasks: [
+        {
+          id: "1AC511D44F056F9C",
+          type: "item",
+          item: {
+            id: "exdeorum:spruce_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BD24FFEBC5BB43DF",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:warped_compressed_sieve",
+        count: 1,
+      },
+      x: 31.0,
+      y: 12.0,
+      id: "EAB91C246037BC1B",
+      tasks: [
+        {
+          id: "B9375DFE65A63042",
+          type: "item",
+          item: {
+            id: "exdeorum:warped_compressed_sieve",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4DA867A916532576",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:acacia_crucible",
+        count: 1,
+      },
+      x: 28.0,
+      y: 15.0,
+      id: "216B23F520B5417B",
+      tasks: [
+        {
+          id: "F401B8EC1C816F39",
+          type: "item",
+          item: {
+            id: "exdeorum:acacia_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "11A7592059C185EE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:bamboo_crucible",
+        count: 1,
+      },
+      x: 29.0,
+      y: 15.0,
+      id: "DE17AB467968327C",
+      tasks: [
+        {
+          id: "C21CEE479C786314",
+          type: "item",
+          item: {
+            id: "exdeorum:bamboo_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5F186E9FD2A9539C",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:birch_crucible",
+        count: 1,
+      },
+      x: 30.0,
+      y: 15.0,
+      id: "E7E7D31A0035D29F",
+      tasks: [
+        {
+          id: "2D91A564FF89C726",
+          type: "item",
+          item: {
+            id: "exdeorum:birch_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4A3B45EF55C783FC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:cherry_crucible",
+        count: 1,
+      },
+      x: 31.0,
+      y: 15.0,
+      id: "D38D378F9E4880C6",
+      tasks: [
+        {
+          id: "E67CB268873AFE67",
+          type: "item",
+          item: {
+            id: "exdeorum:cherry_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C3857720FD026EEC",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:crimson_crucible",
+        count: 1,
+      },
+      x: 28.0,
+      y: 16.0,
+      id: "5996BD40B0EA27FA",
+      tasks: [
+        {
+          id: "E3DE49384FD0FA87",
+          type: "item",
+          item: {
+            id: "exdeorum:crimson_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D0809D7EF0DFE421",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:dark_oak_crucible",
+        count: 1,
+      },
+      x: 29.0,
+      y: 16.0,
+      id: "BF637960A373D40A",
+      tasks: [
+        {
+          id: "79D817B729D3FB05",
+          type: "item",
+          item: {
+            id: "exdeorum:dark_oak_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3A8D86C06DEAE995",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:jungle_crucible",
+        count: 1,
+      },
+      x: 30.0,
+      y: 16.0,
+      id: "CA8BA915C228943B",
+      tasks: [
+        {
+          id: "AC8E523AA6767E41",
+          type: "item",
+          item: {
+            id: "exdeorum:jungle_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BAB27D11258F6AB7",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:mangrove_crucible",
+        count: 1,
+      },
+      x: 31.0,
+      y: 16.0,
+      id: "37FBC1DCC565A4EB",
+      tasks: [
+        {
+          id: "93F77B1A745F20DF",
+          type: "item",
+          item: {
+            id: "exdeorum:mangrove_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ABFD39EA9C8F4C81",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:oak_crucible",
+        count: 1,
+      },
+      x: 28.0,
+      y: 17.0,
+      id: "055224309CBABB1E",
+      tasks: [
+        {
+          id: "606673515555D36D",
+          type: "item",
+          item: {
+            id: "exdeorum:oak_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "AF5F8189AD684DB2",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:pale_oak_crucible",
+        count: 1,
+      },
+      x: 29.0,
+      y: 17.0,
+      id: "064C53BF6EE08286",
+      tasks: [
+        {
+          id: "44622188911ACA28",
+          type: "item",
+          item: {
+            id: "exdeorum:pale_oak_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CD8B6B46226746EA",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:spruce_crucible",
+        count: 1,
+      },
+      x: 30.0,
+      y: 17.0,
+      id: "5BFD57CBFEB0B6F9",
+      tasks: [
+        {
+          id: "B54E50FE1567EA34",
+          type: "item",
+          item: {
+            id: "exdeorum:spruce_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "95947A96445FD953",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:warped_crucible",
+        count: 1,
+      },
+      x: 31.0,
+      y: 17.0,
+      id: "96F0757063F160EF",
+      tasks: [
+        {
+          id: "EE77E687AA3A5F3F",
+          type: "item",
+          item: {
+            id: "exdeorum:warped_crucible",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E3EB5A677C6AE567",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:creaking_core",
+        count: 1,
+      },
+      x: 38.0,
+      y: 0.0,
+      id: "105720ED3734FD9E",
+      tasks: [
+        {
+          id: "E32C1DC801FEDE06",
+          type: "item",
+          item: {
+            id: "exdeorum:creaking_core",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7DC02799F954D6C2",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:sculk_core",
+        count: 1,
+      },
+      x: 39.5,
+      y: 0.0,
+      id: "20EA0324AA0490C3",
+      tasks: [
+        {
+          id: "54CCC9B84F286A2D",
+          type: "item",
+          item: {
+            id: "exdeorum:sculk_core",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D4B1A5252521F37E",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:end_cake",
+        count: 1,
+      },
+      x: 41.0,
+      y: 0.0,
+      id: "3E93730531A46E0C",
+      tasks: [
+        {
+          id: "232B1F2D903379E7",
+          type: "item",
+          item: {
+            id: "exdeorum:end_cake",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4DB21A1AF5A67656",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:random_armor_trim",
+        count: 1,
+      },
+      x: 38.0,
+      y: 4.0,
+      id: "B23D4F6979A2B23C",
+      tasks: [
+        {
+          id: "C66BD5DBDD10FECE",
+          type: "item",
+          item: {
+            id: "exdeorum:random_armor_trim",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D9B187A3F3F20C52",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:random_pottery_sherd",
+        count: 1,
+      },
+      x: 39.5,
+      y: 4.0,
+      id: "39A4EB4D8739AE6E",
+      tasks: [
+        {
+          id: "2B7DB899D9F82F36",
+          type: "item",
+          item: {
+            id: "exdeorum:random_pottery_sherd",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ABF2C3EEE02FB7DE",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}
