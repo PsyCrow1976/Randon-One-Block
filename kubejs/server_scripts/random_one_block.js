@@ -97,8 +97,23 @@ function ensurePoolReady() {
   }
 }
 
+function configFlagEnabled(config, key) {
+  if (!config) return false
+
+  var raw = config[key]
+  if (raw === true) return true
+  if (raw === false) return false
+  if (raw == null) return false
+
+  try {
+    return String(raw).toLowerCase() === 'true'
+  } catch (ignored) {}
+
+  return !!raw
+}
+
 function isDebugLoggingEnabled() {
-  return STATE.config != null && STATE.config.debug_logging === true
+  return configFlagEnabled(STATE.config, 'debug_logging')
 }
 
 function debugLog(message) {
@@ -1909,6 +1924,7 @@ function cmdPools(source, args) {
   rows = summary.rows || []
 
   if (sub === 'debug') {
+    STATE.config = loadConfig()
     var debugResult = pools.dumpModPoolsDebug(summary.scopeId)
     if (debugResult && debugResult.logged) {
       tell(source, '§aMod pool debug report written to §flogs/kubejs/server.log')

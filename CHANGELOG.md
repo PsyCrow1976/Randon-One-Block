@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.19] — 2026-06-30
+
+### Random One Block
+
+- **`/randomblock pools debug`** — Fixed false “enable debug_logging” message: mod-pools script now reads the cloned config (JsonIO returns unmodifiable maps) and reloads config from disk before dumping.
+
+---
+
 ## [1.0.0.18] — 2026-06-30
 
 ### Random One Block

@@ -35,8 +35,24 @@ const MOD_POOL_STATE = {
 }
 
 function isModPoolsDebugLoggingEnabled() {
+  if (typeof isDebugLoggingEnabled === 'function') {
+    return isDebugLoggingEnabled()
+  }
+
   var config = JsonIO.read(MAIN_CONFIG_FILE)
-  return config != null && config.debug_logging === true
+  if (!config) return false
+
+  config = modPoolsCloneConfig(config)
+  var raw = config.debug_logging
+  if (raw === true) return true
+  if (raw === false) return false
+  if (raw == null) return false
+
+  try {
+    return String(raw).toLowerCase() === 'true'
+  } catch (ignored) {}
+
+  return !!raw
 }
 
 function modPoolsDebugLog(message) {
