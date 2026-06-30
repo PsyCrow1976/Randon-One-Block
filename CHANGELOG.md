@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.4] — 2026-06-30
+
+### Random One Block
+
+- **Counter HUD visibility** — Text now uses opaque ARGB white (`0xFFFFFFFF`); MC 26 treated `0xFFFFFF` as fully transparent. HUD registers on the official player-health GUI layer so it draws in the correct pass.
+
+---
+
 ## [1.0.2.3] — 2026-06-30
 
 ### Random One Block
