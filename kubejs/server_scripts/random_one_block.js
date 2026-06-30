@@ -66,6 +66,11 @@ const DEFAULT_CONFIG = {
     x: 0,
     y: 0,
     z: 0
+  },
+  randon_counter_hud: {
+    enabled: true,
+    offset_x: 0,
+    offset_y: -12
   }
 }
 
@@ -527,12 +532,20 @@ function dumpPoolReport(verbose) {
   }
 }
 
+function countersApi() {
+  return typeof RandonOneBlockCounters !== 'undefined' ? RandonOneBlockCounters : null
+}
+
 function reloadAll() {
   STATE.config = loadConfig()
   syncActiveFromConfig()
   var modPoolsReload = modPoolsApi()
   if (modPoolsReload && modPoolsReload.reloadModPoolsConfig) {
     modPoolsReload.reloadModPoolsConfig()
+  }
+  var counters = countersApi()
+  if (counters && counters.invalidateTeamCounterCache) {
+    counters.invalidateTeamCounterCache()
   }
   rebuildPool()
 }
@@ -1827,14 +1840,49 @@ function cmdReload(source) {
   reloadAll()
   var summary = ''
   var modPoolsSummary = modPoolsApi()
+  var counters = countersApi()
+  var server = resolvePlayerServer(source.player, source.server)
+
   if (modPoolsSummary && modPoolsSummary.isModPoolGatingEnabled()) {
     summary = ' Mod pools reloaded.'
   }
+
+  if (counters && counters.broadcastHudConfig && server) {
+    counters.broadcastHudConfig(server)
+    summary += ' Counter HUD refreshed.'
+  }
+
   tell(
     source,
     `§aReloaded random block config (${STATE.pool.length} master blocks).${summary}` +
       (isDebugLoggingEnabled() ? ' §7Pool details in §flogs/kubejs/server.log' : '')
   )
+  return 1
+}
+
+function cmdCounter(source) {
+  var counters = countersApi()
+  var player = requirePlayer(source)
+  var server = resolvePlayerServer(player, source.server)
+  var scopeId = ''
+  var count = 0
+  var hud = null
+
+  if (!counters || !player) {
+    tell(source, '§cRandon counter is not loaded.')
+    return 0
+  }
+
+  scopeId = counters.resolveScopeId(player, server)
+  count = counters.getTeamBlocksMined(scopeId)
+  hud = counters.readHudConfigFromMainConfig()
+
+  tell(source, `§eRandon Counter §7(${scopeId})§e: §f${count} §7blocks mined on your island team.`)
+  tell(
+    source,
+    `§7HUD: ${hud.enabled ? '§aenabled' : '§cdisabled'} §7offset §fx=${hud.offset_x} y=${hud.offset_y} §7— edit §frandon_counter_hud §7in §fkubejs/config/random_one_block.json`
+  )
+  counters.syncCounterForPlayer(player, server)
   return 1
 }
 
@@ -2152,7 +2200,7 @@ function cmdHelp(source) {
   )
   tell(
     source,
-    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
+    '§e/randomblock counter §7| §e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
   )
   return 1
 }
@@ -2182,6 +2230,8 @@ function cmdDispatch(source, input) {
       return cmdRevert(source)
     case 'reload':
       return cmdReload(source)
+    case 'counter':
+      return cmdCounter(source)
     case 'poolenable':
       return cmdPoolEnable(source, parsed.args)
     case 'pools':
@@ -2237,6 +2287,11 @@ BlockEvents.broken(event => {
   const level = event.level
   const coords = blockCoords(event.block)
   const breaker = event.player
+  var counters = countersApi()
+
+  if (breaker && counters && counters.onRandomBlockMined) {
+    counters.onRandomBlockMined(breaker, event.server)
+  }
   const fallback = getInitialBlock()
   var modPoolsPick = modPoolsApi()
   const nextId =

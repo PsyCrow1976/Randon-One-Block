@@ -8,6 +8,20 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.2.1] — 2026-06-30
+
+### Random One Block
+
+- **Team mine counter** — Tracks how many Randon center blocks your **island team** has mined (shared count, not per-player). Persists in `kubejs/config/random_one_block_team_counters.json`.
+- **Counter HUD** — Shows `Randon Counter : <count>` above the health hearts. Configure position or disable in `randon_counter_hud` inside `kubejs/config/random_one_block.json` (`enabled`, `offset_x`, `offset_y`). Run `/randomblock reload` after edits.
+- **`/randomblock counter`** — Prints your team scope, mined total, and current HUD settings; refreshes the on-screen counter.
+
+### Instance linking
+
+- **Stale config cleanup** — `link-instance.sh` and `scripts/clean-stale-instance-config.sh` now remove stray instance-root pack configs from **both** CurseForge instances by default (`Modded Randon One Block` and `Randon One Block`).
+
+---
+
 ## [1.0.2.0] — 2026-06-30
 
 **Milestone** — initial **Ex Deorum** quest book chapter.

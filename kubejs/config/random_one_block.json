@@ -68,6 +68,14 @@
     "z": 0
   },
 
+  "_randon_counter_hud": "Team island counter shown above health hearts. enabled=false hides HUD. offset_x/offset_y move the text (negative y moves up). Counter is per island team, not per player.",
+
+  "randon_counter_hud": {
+    "enabled": true,
+    "offset_x": 0,
+    "offset_y": -12
+  },
+
   "_command_examples": [
     "/randomblock",
     "/randomblock setbelow",
@@ -75,6 +83,7 @@
     "/randomblock info",
     "/randomblock revert",
     "/randomblock reload",
+    "/randomblock counter",
     "/randomblock poolenable refinedstorage true",
     "/randomblock pools",
     "/randomblock pools list",

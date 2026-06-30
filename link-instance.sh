@@ -29,7 +29,7 @@ link_dir() {
 }
 
 clean_stale_pack_configs() {
-  "$REPO/scripts/clean-stale-instance-config.sh" "$INSTANCE"
+  "$REPO/scripts/clean-stale-instance-config.sh"
 }
 
 if [[ ! -d "$INSTANCE" ]]; then
