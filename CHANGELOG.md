@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.28] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — `FTBQuestsEvents.completed` now registers at script load (priority 2, after mod pools). Fixes KubeJS error: handlers cannot be registered from `ServerEvents.loaded`.
+
+---
+
 ## [1.0.0.27] — 2026-06-30
 
 ### Random One Block

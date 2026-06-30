@@ -1,16 +1,15 @@
-// priority: 0
+// priority: 2
 // Randon One Block — FTB Quest completion hooks for mod pool unlocks
-
-var RandonOneBlockQuestUnlockSig = ''
+// FTBQuestsEvents.completed must register during script load (not ServerEvents).
 
 function registerRandomOneBlockQuestUnlocks() {
   var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
-  var config = null
   var map = null
   var questId = null
   var mod = null
+  var count = 0
 
-  if (!pools || !pools.ensureModPoolsConfig) {
+  if (!pools || !pools.getQuestUnlockMap) {
     console.warn('[RandomOneBlock] Quest unlock script loaded before mod pools — handlers not registered')
     return
   }
@@ -20,15 +19,12 @@ function registerRandomOneBlockQuestUnlocks() {
     return
   }
 
-  map = pools.getQuestUnlockMap ? pools.getQuestUnlockMap() : {}
-
-  var signature = JSON.stringify(map)
-  if (RandonOneBlockQuestUnlockSig === signature) return
-  RandonOneBlockQuestUnlockSig = signature
+  map = pools.getQuestUnlockMap()
 
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
     mod = map[questId]
+    count++
     ;(function (boundQuestId, boundMod) {
       FTBQuestsEvents.completed(boundQuestId, event => {
         if (!event || !event.player) return
@@ -37,21 +33,13 @@ function registerRandomOneBlockQuestUnlocks() {
     })(questId, mod)
   }
 
-  console.info(
-    `[RandomOneBlock] Registered ${Object.keys(map).length} FTB quest unlock handler(s) for mod pools`
-  )
+  console.info('[RandomOneBlock] Registered ' + count + ' FTB quest unlock handler(s) for mod pools')
 }
+
+registerRandomOneBlockQuestUnlocks()
 
 PlayerEvents.loggedIn(event => {
   var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
   if (!pools || !pools.backfillQuestUnlocksForPlayer) return
   pools.backfillQuestUnlocksForPlayer(event.player)
-})
-
-ServerEvents.loaded(() => {
-  registerRandomOneBlockQuestUnlocks()
-})
-
-ServerEvents.afterRecipes(() => {
-  registerRandomOneBlockQuestUnlocks()
 })
