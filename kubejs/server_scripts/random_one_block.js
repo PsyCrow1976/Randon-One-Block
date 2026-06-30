@@ -516,19 +516,11 @@ function dumpPoolReport(verbose) {
   JsonIO.write(POOL_DUMP_JSON, {
     unique_blocks: STATE.pool.length,
     total_weight: STATE.totalWeight,
-    blocks: blocks
+    blocks: blocks,
+    text_lines: textLines
   })
 
-  var poolTextApi = modPoolsApi()
-  var poolTextPath = null
-  if (poolTextApi && poolTextApi.writeKubeJsConfigText) {
-    poolTextPath = poolTextApi.writeKubeJsConfigText(POOL_DUMP_TEXT, textLines.join('\n') + '\n')
-  }
-
-  debugLog(
-    `[RandomOneBlock] Pool dumped to kubejs/config/${POOL_DUMP_JSON}` +
-      (poolTextPath ? ' and ' + poolTextPath : ' (text dump skipped — mod pools helper not loaded)')
-  )
+  debugLog(`[RandomOneBlock] Pool dumped to kubejs/config/${POOL_DUMP_JSON} (includes text_lines)`)
 
   if (verbose && isDebugLoggingEnabled()) {
     debugLog(`[RandomOneBlock] Pool preview (first 30): ${preview.join(', ')}`)
@@ -1933,7 +1925,7 @@ function cmdPools(source, args) {
     var debugPath =
       debugResult && debugResult.path
         ? debugResult.path
-        : 'kubejs/config/random_one_block_mod_pools_debug.txt'
+        : 'kubejs/config/random_one_block_mod_pools_debug.json'
     tell(
       source,
       `§aMod pool debug saved to §f${debugPath}§a (${rows.length} mods, effective ${summary.effectiveBlocks} blocks).`

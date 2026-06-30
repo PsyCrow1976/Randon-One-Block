@@ -3,7 +3,7 @@
 
 const MOD_POOLS_CONFIG_FILE = 'random_one_block_mod_pools.json'
 const MOD_POOLS_UNLOCK_DIR = 'data/random_one_block_unlocks'
-const MOD_POOLS_DEBUG_FILE = 'random_one_block_mod_pools_debug.txt'
+const MOD_POOLS_DEBUG_FILE = 'random_one_block_mod_pools_debug.json'
 const VANILLA_NAMESPACE = 'minecraft'
 
 const DEFAULT_MOD_POOLS_CONFIG = {
@@ -34,20 +34,13 @@ const MOD_POOL_STATE = {
   teamPoolCache: {}
 }
 
-const $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
-const $NioFiles = Java.loadClass('java.nio.file.Files')
-
-function writeKubeJsConfigText(filename, content) {
-  var path = $KubeJSPaths.CONFIG.resolve(String(filename))
-
+function writeKubeJsConfigJson(filename, payload) {
   try {
-    var parent = path.getParent()
-    if (parent != null) $NioFiles.createDirectories(parent)
-    $NioFiles.writeString(path, String(content))
-    return String(path)
+    JsonIO.write(String(filename), payload)
+    return 'kubejs/config/' + String(filename)
   } catch (e) {
     var err = e && e.javaException ? String(e.javaException) : String(e)
-    console.error('[RandomOneBlock] Failed to write config text file ' + filename + ': ' + err)
+    console.error('[RandomOneBlock] Failed to write config json file ' + filename + ': ' + err)
     return null
   }
 }
@@ -597,33 +590,20 @@ function buildModPoolReportRows(scopeId) {
 function dumpModPoolsDebug(scopeId) {
   var rows = buildModPoolReportRows(scopeId)
   var effective = buildEffectivePool(scopeId)
-  var lines = []
-  var i = 0
-
-  lines.push('# RandomOneBlock mod pool report')
-  lines.push('# scope_id: ' + scopeId)
-  lines.push('# master_mods: ' + rows.length)
-  lines.push('# effective_blocks: ' + effective.pool.length)
-  lines.push('# display_name\tnamespace\tblocks\tstatus\teffective')
-
-  for (i = 0; i < rows.length; i++) {
-    lines.push(
-      rows[i].display_name +
-        '\t' +
-        rows[i].namespace +
-        '\t' +
-        rows[i].blocks +
-        '\t' +
-        rows[i].status +
-        '\t' +
-        (rows[i].effective ? 'yes' : 'no')
-    )
+  var report = {
+    scope_id: scopeId,
+    master_mods: rows.length,
+    effective_blocks: effective.pool.length,
+    effective_weight: effective.totalWeight,
+    columns: ['display_name', 'namespace', 'blocks', 'status', 'effective'],
+    mods: rows
   }
+  var writtenPath = writeKubeJsConfigJson(MOD_POOLS_DEBUG_FILE, report)
 
-  var writtenPath = writeKubeJsConfigText(MOD_POOLS_DEBUG_FILE, lines.join('\n') + '\n')
   if (writtenPath) {
     console.info('[RandomOneBlock] Mod pool debug written to ' + writtenPath)
   }
+
   return { rows: rows, path: writtenPath }
 }
 
@@ -720,5 +700,5 @@ var RandonOneBlockPools = {
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
   resolveKnownModNamespace: resolveKnownModNamespace,
-  writeKubeJsConfigText: writeKubeJsConfigText
+  writeKubeJsConfigJson: writeKubeJsConfigJson
 }

@@ -319,7 +319,7 @@ Edit [`kubejs/config/random_one_block_mod_pools.json`](../kubejs/config/random_o
 /randomblock pools debug
 ```
 
-Team unlocks persist under `kubejs/data/random_one_block_unlocks/` (gitignored).
+Team unlocks persist under `kubejs/data/random_one_block_unlocks/` (gitignored). Debug report: `kubejs/config/random_one_block_mod_pools_debug.json`.
 
 ---
 

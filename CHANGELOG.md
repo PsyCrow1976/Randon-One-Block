@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.16] — 2026-06-30
+
+### Random One Block
+
+- **KubeJS fix** — Removed `java.nio.file.Files` (class filter blocked). `/randomblock pools debug` now writes **`random_one_block_mod_pools_debug.json`** via `JsonIO`.
+
+---
+
 ## [1.0.0.15] — 2026-06-30
 
 ### Random One Block
