@@ -28,13 +28,14 @@ function registerRandomOneBlockQuestUnlocks() {
     count++
     ;(function (boundQuestId, boundMod) {
       FTBQuestsEvents.completed(boundQuestId, event => {
+        var player = pools.resolveQuestEventPlayer ? pools.resolveQuestEventPlayer(event) : null
         var server = null
-        if (!event || !event.player) return
-        try {
-          server = event.server
-        } catch (ignored) {}
-        if (!server && event.player.server) server = event.player.server
-        pools.enableModForTeam(event.player, boundMod, true, server)
+
+        if (!player) return
+
+        server = pools.resolveQuestEventServer ? pools.resolveQuestEventServer(event, player) : null
+        console.info('[RandomOneBlock] Quest completed unlock: ' + boundQuestId + ' -> ' + boundMod)
+        pools.enableModForTeam(player, boundMod, true, server)
       })
     })(questId, mod)
   }
@@ -44,8 +45,42 @@ function registerRandomOneBlockQuestUnlocks() {
 
 registerRandomOneBlockQuestUnlocks()
 
-PlayerEvents.loggedIn(event => {
+function backfillQuestUnlocksDelayed(player, server, delayTicks) {
   var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
+  var ticks = delayTicks == null ? 40 : Number(delayTicks)
+
+  if (!pools || !pools.backfillQuestUnlocksForPlayer || !player || !server) return
+
+  server.scheduleInTicks(Math.max(1, ticks), function () {
+    pools.backfillQuestUnlocksForPlayer(player)
+  })
+}
+
+PlayerEvents.loggedIn(event => {
+  backfillQuestUnlocksDelayed(event.player, event.server, 40)
+})
+
+ServerEvents.loaded(() => {
+  var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
+  var server = null
+  var players = null
+  var i = 0
+
   if (!pools || !pools.backfillQuestUnlocksForPlayer) return
-  pools.backfillQuestUnlocksForPlayer(event.player)
+
+  try {
+    server = Utils.getServer()
+  } catch (ignored) {}
+
+  if (!server) return
+
+  try {
+    players = server.players
+  } catch (ignored2) {}
+
+  if (!players || !players.size) return
+
+  for (i = 0; i < players.size(); i++) {
+    backfillQuestUnlocksDelayed(players.get(i), server, 60)
+  }
 })

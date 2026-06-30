@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.32] — 2026-06-30
+
+### Random One Block
+
+- **Quest unlocks** — FTB `completed` events use `getCurrentPlayer()` (not `event.player`). Quest lookup for backfill uses FTB long ids from hex quest ids. Delayed backfill on login and server load for already-completed quests.
+
+---
+
 ## [1.0.0.31] — 2026-06-30
 
 ### Random One Block

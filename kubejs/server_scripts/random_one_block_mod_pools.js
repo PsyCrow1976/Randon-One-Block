@@ -972,6 +972,83 @@ function getEffectivePoolSummaryForPlayer(player, server) {
   }
 }
 
+function parseFtbQuestIdHex(questId) {
+  return String(questId || '')
+    .replace(/[^0-9A-Fa-f]/g, '')
+    .toUpperCase()
+}
+
+function parseFtbQuestIdLong(questId) {
+  var hex = parseFtbQuestIdHex(questId)
+  var $Long = null
+
+  if (!hex) return null
+
+  try {
+    $Long = Java.loadClass('java.lang.Long')
+    while (hex.length < 16) hex = '0' + hex
+    if (hex.length > 16) hex = hex.substring(hex.length - 16)
+    return $Long.parseUnsignedLong(hex, 16)
+  } catch (ignored) {}
+
+  return null
+}
+
+function resolveQuestObject(questFile, questId) {
+  var idLong = parseFtbQuestIdLong(questId)
+  var quest = null
+
+  if (!questFile || idLong == null) return null
+
+  try {
+    if (questFile.getQuest) quest = questFile.getQuest(idLong)
+  } catch (ignored) {}
+
+  if (!quest) {
+    try {
+      if (questFile.getBase) quest = questFile.getBase(idLong)
+    } catch (ignored2) {}
+  }
+
+  return quest
+}
+
+function resolveQuestEventPlayer(event) {
+  var player = null
+
+  if (!event) return null
+
+  try {
+    if (event.getCurrentPlayer) player = event.getCurrentPlayer()
+  } catch (ignored) {}
+
+  if (!player) {
+    try {
+      if (event.player) player = event.player
+    } catch (ignored2) {}
+  }
+
+  return player
+}
+
+function resolveQuestEventServer(event, player) {
+  var server = null
+
+  if (!event) return resolvePlayerServer(player, null)
+
+  try {
+    if (event.server) server = event.server
+  } catch (ignored) {}
+
+  if (!server) {
+    try {
+      if (event.getServer) server = event.getServer()
+    } catch (ignored2) {}
+  }
+
+  return resolvePlayerServer(player, server)
+}
+
 function isQuestCompletedForPlayer(player, questId) {
   var FTBQuestsAPI = Java.tryLoadClass('dev.ftb.mods.ftbquests.api.FTBQuestsAPI')
   var questFile = null
@@ -985,7 +1062,7 @@ function isQuestCompletedForPlayer(player, questId) {
     if (!questFile) return false
     data = questFile.getOrCreateTeamData(player.getUUID())
     if (!data) return false
-    quest = questFile.get(questId)
+    quest = resolveQuestObject(questFile, questId)
     if (!quest) return false
     return data.isCompleted(quest)
   } catch (ignored) {}
@@ -1027,5 +1104,7 @@ var RandonOneBlockPools = {
   getLastModPoolPickMeta: getLastModPoolPickMeta,
   resolveKnownModNamespace: resolveKnownModNamespace,
   getModsWithMinableBlocks: getModsWithMinableBlocks,
-  getQuestUnlockMap: getQuestUnlockMap
+  getQuestUnlockMap: getQuestUnlockMap,
+  resolveQuestEventPlayer: resolveQuestEventPlayer,
+  resolveQuestEventServer: resolveQuestEventServer
 }
