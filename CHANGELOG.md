@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.22] — 2026-06-30
+
+### Random One Block
+
+- **`random_one_block_mod_pools.json`** — `starter_exceptions` is now an object with `enabled` (day-one mods) and `mods_with_minable_blocks` (catalog of all 19 mod namespaces in the current master pool). Script accepts the legacy array form for `enabled`.
+
+---
+
 ## [1.0.0.21] — 2026-06-30
 
 ### Random One Block

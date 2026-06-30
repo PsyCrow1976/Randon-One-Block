@@ -1,13 +1,36 @@
 {
-  "_readme": "Mod-pool gating for Random One Block. Vanilla (minecraft) is always enabled. starter_exceptions adds mod namespaces from day one. Other mods unlock per team via FTB Quests (quest_unlock_map) or /randomblock poolenable.",
+  "_readme": "Mod-pool gating for Random One Block. Vanilla (minecraft) is always enabled. starter_exceptions.enabled adds mod namespaces from day one. starter_exceptions.mods_with_minable_blocks catalogs every mod namespace in the master random block pool (regenerate after /randomblock reload when the mod list changes). Other mods unlock per team via FTB Quests (quest_unlock_map) or /randomblock poolenable.",
 
   "mod_pool_gating_enabled": true,
 
   "unlock_scope": "team",
 
-  "starter_exceptions": [
-    "elevatorid"
-  ],
+  "starter_exceptions": {
+    "enabled": [
+      "elevatorid"
+    ],
+    "mods_with_minable_blocks": [
+      "animal_pen",
+      "apotheosis",
+      "apothic_enchanting",
+      "cookingforblockheads",
+      "darkutils",
+      "easy_piglins",
+      "elevatorid",
+      "exdeorum",
+      "ftbquests",
+      "ironfurnaces",
+      "minecraft",
+      "mysticalagradditions",
+      "mysticalagriculture",
+      "mysticalautomation",
+      "powah",
+      "refinedstorage",
+      "sophisticatedstorage",
+      "uncraftingtable",
+      "utility"
+    ]
+  },
 
   "force_disabled_mods": [
     "c",

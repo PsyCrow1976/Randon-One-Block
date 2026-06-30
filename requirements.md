@@ -203,7 +203,7 @@ These were learned from production debugging; violating them causes reload or co
 
 ```text
 random_one_block.json            → loadConfig / saveConfig (clone before mutate)
-random_one_block_mod_pools.json  → starter_exceptions, quest_unlock_map, force_disabled_mods
+random_one_block_mod_pools.json  → starter_exceptions.enabled, starter_exceptions.mods_with_minable_blocks, quest_unlock_map, force_disabled_mods
         ↓
 rebuildPool()                      → master pool (all eligible blocks) + masterByMod namespace index
         ↓

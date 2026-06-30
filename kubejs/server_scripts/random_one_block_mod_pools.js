@@ -8,7 +8,10 @@ const VANILLA_NAMESPACE = 'minecraft'
 const DEFAULT_MOD_POOLS_CONFIG = {
   mod_pool_gating_enabled: true,
   unlock_scope: 'team',
-  starter_exceptions: ['elevatorid'],
+  starter_exceptions: {
+    enabled: ['elevatorid'],
+    mods_with_minable_blocks: ['minecraft', 'elevatorid']
+  },
   force_disabled_mods: [
     'c',
     'ftbchunks',
@@ -255,8 +258,25 @@ function getForceDisabledMods() {
   return ensureModPoolsConfig().force_disabled_mods || []
 }
 
+function getStarterExceptionsRaw() {
+  return ensureModPoolsConfig().starter_exceptions
+}
+
 function getStarterExceptions() {
-  return ensureModPoolsConfig().starter_exceptions || []
+  var raw = getStarterExceptionsRaw()
+  if (!raw) return []
+  if (Array.isArray(raw)) return raw
+  if (raw.enabled && Array.isArray(raw.enabled)) return raw.enabled
+  return []
+}
+
+function getModsWithMinableBlocks() {
+  var raw = getStarterExceptionsRaw()
+  if (!raw || Array.isArray(raw)) return []
+  if (raw.mods_with_minable_blocks && Array.isArray(raw.mods_with_minable_blocks)) {
+    return raw.mods_with_minable_blocks
+  }
+  return []
 }
 
 function isForceDisabledMod(namespace) {
@@ -787,5 +807,6 @@ var RandonOneBlockPools = {
   buildModPoolCompleteReport: buildModPoolCompleteReport,
   backfillQuestUnlocksForPlayer: backfillQuestUnlocksForPlayer,
   getLastModPoolPickMeta: getLastModPoolPickMeta,
-  resolveKnownModNamespace: resolveKnownModNamespace
+  resolveKnownModNamespace: resolveKnownModNamespace,
+  getModsWithMinableBlocks: getModsWithMinableBlocks
 }
