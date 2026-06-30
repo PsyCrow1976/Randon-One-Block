@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.14] — 2026-06-30
+
+### Random One Block
+
+- **KubeJS fix** — `random_one_block_mod_pools.js` no longer assigns to `global` (fixes `UnsupportedOperationException` on load; mod pool script was 4/5 loaded).
+
+---
+
 ## [1.0.0.13] — 2026-06-29
 
 **Mod-pool gating** for the random one-block — vanilla-only default, quest unlocks, per-team persistence (80 mods).

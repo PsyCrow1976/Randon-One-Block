@@ -83,6 +83,10 @@ const STATE = {
   autoSetbelowPendingSince: {}
 }
 
+function modPoolsApi() {
+  return typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
+}
+
 function ensurePoolReady() {
   if (!STATE.config) {
     STATE.config = loadConfig()
@@ -451,8 +455,9 @@ function rebuildPool() {
   STATE.pool = pool
   STATE.totalWeight = Math.max(1, Math.floor(totalWeight))
 
-  if (global.RandonOneBlockPools && global.RandonOneBlockPools.updateMasterCatalogFromPool) {
-    global.RandonOneBlockPools.updateMasterCatalogFromPool(pool)
+  var modPools = modPoolsApi()
+  if (modPools && modPools.updateMasterCatalogFromPool) {
+    modPools.updateMasterCatalogFromPool(pool)
   }
 
   if (isCollisionFilterEnabled(config) && collisionFilterReady()) {
@@ -532,8 +537,9 @@ function dumpPoolReport(verbose) {
 function reloadAll() {
   STATE.config = loadConfig()
   syncActiveFromConfig()
-  if (global.RandonOneBlockPools && global.RandonOneBlockPools.reloadModPoolsConfig) {
-    global.RandonOneBlockPools.reloadModPoolsConfig()
+  var modPoolsReload = modPoolsApi()
+  if (modPoolsReload && modPoolsReload.reloadModPoolsConfig) {
+    modPoolsReload.reloadModPoolsConfig()
   }
   rebuildPool()
 }
@@ -1795,7 +1801,8 @@ function cmdRevert(source) {
 function cmdReload(source) {
   reloadAll()
   var summary = ''
-  if (global.RandonOneBlockPools && global.RandonOneBlockPools.isModPoolGatingEnabled()) {
+  var modPoolsSummary = modPoolsApi()
+  if (modPoolsSummary && modPoolsSummary.isModPoolGatingEnabled()) {
     summary = ' Mod pools reloaded.'
   }
   tell(
@@ -1824,10 +1831,11 @@ function cmdInfo(source) {
     )
     tell(source, `§eMaster pool: §f${STATE.pool.length} §eblocks`)
 
-    if (global.RandonOneBlockPools && global.RandonOneBlockPools.isModPoolGatingEnabled()) {
+    var modPoolsInfo = modPoolsApi()
+    if (modPoolsInfo && modPoolsInfo.isModPoolGatingEnabled()) {
       var player = source.player || (source.tell && source.getLevel ? source : null)
       if (player) {
-        var poolSummary = global.RandonOneBlockPools.getEffectivePoolSummaryForPlayer(
+        var poolSummary = modPoolsInfo.getEffectivePoolSummaryForPlayer(
           player,
           player.server || (source.server ? source.server : null)
         )
@@ -1854,7 +1862,7 @@ function cmdInfo(source) {
 }
 
 function cmdPoolEnable(source, args) {
-  var pools = global.RandonOneBlockPools
+  var pools = modPoolsApi()
   var player = requirePlayer(source)
   var mod = null
   var flag = null
@@ -1893,7 +1901,7 @@ function cmdPoolEnable(source, args) {
 }
 
 function cmdPools(source, args) {
-  var pools = global.RandonOneBlockPools
+  var pools = modPoolsApi()
   var player = requirePlayer(source)
   var sub = args.length ? String(args[0]).toLowerCase() : ''
   var summary = null
@@ -2052,14 +2060,15 @@ BlockEvents.broken(event => {
   const coords = blockCoords(event.block)
   const breaker = event.player
   const fallback = getInitialBlock()
+  var modPoolsPick = modPoolsApi()
   const nextId =
-    breaker && global.RandonOneBlockPools && global.RandonOneBlockPools.pickRandomBlockIdForPlayer
-      ? global.RandonOneBlockPools.pickRandomBlockIdForPlayer(breaker, event.server, fallback)
+    breaker && modPoolsPick && modPoolsPick.pickRandomBlockIdForPlayer
+      ? modPoolsPick.pickRandomBlockIdForPlayer(breaker, event.server, fallback)
       : pickRandomBlockId()
   const poolSize = STATE.pool.length
   var pickMeta =
-    global.RandonOneBlockPools && global.RandonOneBlockPools.getLastModPoolPickMeta
-      ? global.RandonOneBlockPools.getLastModPoolPickMeta()
+    modPoolsPick && modPoolsPick.getLastModPoolPickMeta
+      ? modPoolsPick.getLastModPoolPickMeta()
       : { poolSize: poolSize, scopeId: '', namespace: '', roll: STATE._lastRoll }
   var effectiveSize = pickMeta.poolSize || poolSize
   var roll = pickMeta.roll != null ? pickMeta.roll : STATE._lastRoll

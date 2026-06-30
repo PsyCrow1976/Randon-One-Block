@@ -683,7 +683,8 @@ function backfillQuestUnlocksForPlayer(player) {
   }
 }
 
-global.RandonOneBlockPools = {
+// Shared KubeJS server scope — do not assign to `global` (unmodifiable on reload).
+var RandonOneBlockPools = {
   ensureModPoolsConfig: ensureModPoolsConfig,
   reloadModPoolsConfig: reloadModPoolsConfig,
   isModPoolGatingEnabled: isModPoolGatingEnabled,

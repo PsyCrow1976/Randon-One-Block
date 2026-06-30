@@ -1,8 +1,10 @@
 // priority: 0
 // Randon One Block — FTB Quest completion hooks for mod pool unlocks
 
+var RandonOneBlockQuestUnlockSig = ''
+
 function registerRandomOneBlockQuestUnlocks() {
-  var pools = global.RandonOneBlockPools
+  var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
   var config = null
   var map = null
   var questId = null
@@ -22,8 +24,8 @@ function registerRandomOneBlockQuestUnlocks() {
   map = config.quest_unlock_map || {}
 
   var signature = JSON.stringify(map)
-  if (global.RandonOneBlockQuestUnlockSig === signature) return
-  global.RandonOneBlockQuestUnlockSig = signature
+  if (RandonOneBlockQuestUnlockSig === signature) return
+  RandonOneBlockQuestUnlockSig = signature
 
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
@@ -42,7 +44,7 @@ function registerRandomOneBlockQuestUnlocks() {
 }
 
 PlayerEvents.loggedIn(event => {
-  var pools = global.RandonOneBlockPools
+  var pools = typeof RandonOneBlockPools !== 'undefined' ? RandonOneBlockPools : null
   if (!pools || !pools.backfillQuestUnlocksForPlayer) return
   pools.backfillQuestUnlocksForPlayer(event.player)
 })
