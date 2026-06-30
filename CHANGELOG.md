@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.0.24] — 2026-06-30
+
+### Random One Block
+
+- **KubeJS fix** — Starter-exception parsing now handles nested `starter_exceptions.enabled` reliably (Java/JsonIO list types). Removed stale duplicate `random_one_block_mod_pools.json` from the instance root that only had `elevatorid` and overrode your `kubejs/config/` edits. Reload logs loaded starter exceptions.
+
+---
+
 ## [1.0.0.23] — 2026-06-30
 
 ### Random One Block

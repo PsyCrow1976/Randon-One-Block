@@ -195,7 +195,7 @@ These were learned from production debugging; violating them causes reload or co
 | 24 | **Mod pool gating** — default pool is **vanilla only** plus `starter_exceptions` in `random_one_block_mod_pools.json`. Other namespaces unlock per **team** via `quest_unlock_map` / `poolenable`. Do not regress to global full-pool picks for gameplay breaks. |
 | 25 | **No `global.RandonOneBlockPools`** — cross-script API uses shared-scope `var RandonOneBlockPools` in `random_one_block_mod_pools.js` (same unmodifiable-`global` rule as #1). |
 | 26 | **No `java.nio.file.Files`** — blocked by KubeJS class filter. Pool/mod debug output goes to **`logs/kubejs/server.log`** via `debugLog()` / `modPoolsDebugLog()` when `debug_logging: true` — do not write pool dump files. |
-| 27 | **JsonIO paths** — bare filenames write to the **instance root**. Prefix `config/` or `data/` so persistence files land under `kubejs/config/` or `kubejs/data/` (e.g. team unlocks). |
+| 27 | **JsonIO paths** — pack configs in `kubejs/config/` use bare filenames (e.g. `random_one_block_mod_pools.json`). Team data uses `data/` prefix (`data/random_one_block_unlocks/`). Do not keep duplicate JSON copies in the **instance root** — they can override `kubejs/config/` on read. |
 
 ---
 

@@ -40,12 +40,61 @@ function modPoolsCloneConfig(config) {
   return JsonIO.parse(JsonIO.toString(config))
 }
 
+function readConfigObjectField(obj, key) {
+  if (!obj) return null
+
+  try {
+    if (obj[key] != null && obj[key] !== undefined) return obj[key]
+  } catch (ignored) {}
+
+  try {
+    if (obj.get && typeof obj.get === 'function') return obj.get(key)
+  } catch (ignored2) {}
+
+  return null
+}
+
+function coerceConfigStringList(value) {
+  var out = []
+  var i = 0
+  var size = 0
+
+  if (!value) return out
+
+  if (Array.isArray(value)) {
+    for (i = 0; i < value.length; i++) {
+      if (value[i] != null && value[i] !== undefined) out.push(String(value[i]))
+    }
+    return out
+  }
+
+  try {
+    if (typeof value.size === 'function' && typeof value.get === 'function') {
+      size = value.size()
+      for (i = 0; i < size; i++) {
+        if (value.get(i) != null) out.push(String(value.get(i)))
+      }
+      return out
+    }
+  } catch (ignored) {}
+
+  try {
+    if (value.length != null) {
+      for (i = 0; i < value.length; i++) {
+        if (value[i] != null && value[i] !== undefined) out.push(String(value[i]))
+      }
+    }
+  } catch (ignored2) {}
+
+  return out
+}
+
 function loadModPoolsConfig() {
   var config = JsonIO.read(MOD_POOLS_CONFIG_FILE)
 
   if (!config) {
     console.warn(
-      `[RandomOneBlock] Mod pools config not found, creating default at kubejs/config/${MOD_POOLS_CONFIG_FILE}`
+      '[RandomOneBlock] Mod pools config not found, creating default at kubejs/config/' + MOD_POOLS_CONFIG_FILE
     )
     config = modPoolsCloneConfig(DEFAULT_MOD_POOLS_CONFIG)
     JsonIO.write(MOD_POOLS_CONFIG_FILE, config)
@@ -265,18 +314,20 @@ function getStarterExceptionsRaw() {
 function getStarterExceptions() {
   var raw = getStarterExceptionsRaw()
   if (!raw) return []
-  if (Array.isArray(raw)) return raw
-  if (raw.enabled && Array.isArray(raw.enabled)) return raw.enabled
-  return []
+
+  var list = coerceConfigStringList(raw)
+  if (list.length) return list
+
+  return coerceConfigStringList(readConfigObjectField(raw, 'enabled'))
 }
 
 function getModsWithMinableBlocks() {
   var raw = getStarterExceptionsRaw()
-  if (!raw || Array.isArray(raw)) return []
-  if (raw.mods_with_minable_blocks && Array.isArray(raw.mods_with_minable_blocks)) {
-    return raw.mods_with_minable_blocks
-  }
-  return []
+  if (!raw) return []
+
+  if (coerceConfigStringList(raw).length) return []
+
+  return coerceConfigStringList(readConfigObjectField(raw, 'mods_with_minable_blocks'))
 }
 
 function isForceDisabledMod(namespace) {
@@ -716,6 +767,9 @@ function dumpModPoolsDebugComplete(scopeId) {
 function reloadModPoolsConfig() {
   MOD_POOL_STATE.config = loadModPoolsConfig()
   invalidateAllTeamPoolCaches()
+  console.info(
+    '[RandomOneBlock] Mod pool starter exceptions: ' + getStarterExceptions().join(', ')
+  )
 }
 
 function getLastModPoolPickMeta() {

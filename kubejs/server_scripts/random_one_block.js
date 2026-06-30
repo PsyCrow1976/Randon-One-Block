@@ -128,7 +128,7 @@ function loadConfig() {
   let config = JsonIO.read(CONFIG_FILE)
 
   if (!config) {
-    console.warn(`[RandomOneBlock] Config not found, creating default at kubejs/config/${CONFIG_FILE}`)
+    console.warn('[RandomOneBlock] Config not found, creating default at kubejs/config/' + CONFIG_FILE)
     config = cloneConfig(DEFAULT_CONFIG)
     JsonIO.write(CONFIG_FILE, config)
     return config
