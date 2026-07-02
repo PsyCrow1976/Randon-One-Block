@@ -1,11 +1,22 @@
 # Todo list
 
+## Mods
+- [ ] Remove Construction wands mod
 ## Quest book
 
 - [ ] Add a **quick book section** on getting a **bone block** (and using it) to obtain **seeds** — early-game farming tip for one-block skyblock
 - [ ] Add **Gateways to Eternity** quest chapter (full progression beyond the intro quest in *Good to Know Mods*)
 - [ ] Add **Ex Deorum** quest chapter
 - [ ] Add **Construction Wands** intro quest to *Good to Know Mods*
+- [ ] Add AnimalPens Chapter (trigger by creating Avian net)
+- [ ] Add Aphothious Chapter (triggered by Enchanting table)
+- [ ] Add Bauble Heart Containers (triggered by getting minirature heart)
+- [ ] Add Constructions Sticks in a common chapter (exa good to knwo mods)
+- [ ] Add Dank Storage in common chaptr (ex good to know mods)
+- [ ] Add Easy Villiage/piglongs Chaptor (trigger by picking up villager)
+- [ ] Add Market in good to know mods
+- [ ] Add Iron Furnaces Chapter (triggered by Furnace)
+- [ ] Add Mystical Agriculter (triggered by inferiums essens)
 - [ ] Catagories the modlist.md to core/lib mods, helper mods and dedicatde mods
 
 ## Custom recipes (random block pool)
