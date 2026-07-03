@@ -1,0 +1,2380 @@
+{
+  id: "5053B37E4642C6D9",
+  group: "",
+  order_index: 6,
+  icon: {
+    id: "apotheosis:reforging_table",
+    count: 1,
+  },
+  filename: "apotheosis",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "apotheosis:augmenting_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "4F2FFDBB7BCC353B",
+      tasks: [
+        {
+          id: "6EC22D6D21C2F9C5",
+          type: "item",
+          item: {
+            id: "apotheosis:augmenting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6507E23450C99877",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:ender_gem_case",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "0EB14389DD29B1C0",
+      tasks: [
+        {
+          id: "45B59F8E89F26E8F",
+          type: "item",
+          item: {
+            id: "apotheosis:ender_gem_case",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "168C2AD8F006B856",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gem_case",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "71D6A64A2BBF6B7A",
+      tasks: [
+        {
+          id: "324E94FD388652DE",
+          type: "item",
+          item: {
+            id: "apotheosis:gem_case",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "34ADD8D297E409F3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gem_cutting_table",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "1F33F7CA8DA18ADB",
+      tasks: [
+        {
+          id: "6D1BE23249695502",
+          type: "item",
+          item: {
+            id: "apotheosis:gem_cutting_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3C7C1C2136ADA3C2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:reforging_table",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "2A8CCBC70DDEBC80",
+      tasks: [
+        {
+          id: "2CA0B991E16AC78F",
+          type: "item",
+          item: {
+            id: "apotheosis:reforging_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7242232709368CE6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:salvaging_table",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "067B3EC3F21A5EAC",
+      tasks: [
+        {
+          id: "46FDB78E27185716",
+          type: "item",
+          item: {
+            id: "apotheosis:salvaging_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6D25DE2871E84791",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:simple_reforging_table",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "7FA593FBD86EDF21",
+      tasks: [
+        {
+          id: "7F74CF5A56874D63",
+          type: "item",
+          item: {
+            id: "apotheosis:simple_reforging_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4D26E691C1CE4B81",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:ancient_material",
+        },
+      },
+      x: 0.0,
+      y: 2.5,
+      id: "4E06D12682EC262D",
+      tasks: [
+        {
+          id: "79E245638817207C",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:ancient_material",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D3BE63D0C482F93",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gem",
+        count: 1,
+      },
+      x: 1.5,
+      y: 2.5,
+      id: "051FCAC9705768EF",
+      tasks: [
+        {
+          id: "2DA1AC94E4EE483A",
+          type: "item",
+          item: {
+            id: "apotheosis:gem",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "65713A278CA6CC01",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gem_dust",
+        count: 1,
+      },
+      x: 3.0,
+      y: 2.5,
+      id: "23D4950FDF426BA9",
+      tasks: [
+        {
+          id: "0FE1598305495504",
+          type: "item",
+          item: {
+            id: "apotheosis:gem_dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5DFAB1D572275FE7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gem_fused_slate",
+        count: 1,
+      },
+      x: 4.5,
+      y: 2.5,
+      id: "2591808AA0B3FEF1",
+      tasks: [
+        {
+          id: "77A4DCB12CF1B11A",
+          type: "item",
+          item: {
+            id: "apotheosis:gem_fused_slate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "679AB10FC3675909",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_ballast",
+        },
+      },
+      x: 6.0,
+      y: 2.5,
+      id: "4662CE5DE687F2A2",
+      tasks: [
+        {
+          id: "1B45E8CD8C2E1AC1",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_ballast",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "178FA730DD12031B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_brawlers",
+        },
+      },
+      x: 7.5,
+      y: 2.5,
+      id: "62C08CB5EB59984F",
+      tasks: [
+        {
+          id: "5214E7300DC4275B",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_brawlers",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "495D9E1F0330E877",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_breach",
+        },
+      },
+      x: 9.0,
+      y: 2.5,
+      id: "1D37C5171BA4491E",
+      tasks: [
+        {
+          id: "29B29F661830D625",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_breach",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1096251FDEF4C0D0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_combatant",
+        },
+      },
+      x: 10.5,
+      y: 2.5,
+      id: "10F6ED7FEFBC01CB",
+      tasks: [
+        {
+          id: "608F59465AAF8E7F",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_combatant",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0BA6FE98DA3E892E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_guardian",
+        },
+      },
+      x: 12.0,
+      y: 2.5,
+      id: "17B57BB70EC260F1",
+      tasks: [
+        {
+          id: "2466F02AAF976091",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_guardian",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6AF3160350B4EB6E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_lightning",
+        },
+      },
+      x: 13.5,
+      y: 2.5,
+      id: "28EF7580AC347C29",
+      tasks: [
+        {
+          id: "34C341D7C8F97E60",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_lightning",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "13E8DBEE25AEF48A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_lunar",
+        },
+      },
+      x: 15.0,
+      y: 2.5,
+      id: "786EF48570A615CB",
+      tasks: [
+        {
+          id: "3EAE0ED6AD7C843D",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_lunar",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "16E8AA2B2E4C932C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_samurai",
+        },
+      },
+      x: 16.5,
+      y: 2.5,
+      id: "03E54DF845F60F39",
+      tasks: [
+        {
+          id: "432912084BA8236D",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_samurai",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4C3DD8D4501178A0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_slipstream",
+        },
+      },
+      x: 18.0,
+      y: 2.5,
+      id: "2F63B38149552DC7",
+      tasks: [
+        {
+          id: "2312DA3B9B832BE6",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_slipstream",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1950D55A13117E88",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_solar",
+        },
+      },
+      x: 19.5,
+      y: 2.5,
+      id: "375A450BC994C025",
+      tasks: [
+        {
+          id: "6CC76C0033FD251A",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_solar",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "60FD266A1E983CDA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_splendor",
+        },
+      },
+      x: 21.0,
+      y: 2.5,
+      id: "283CD46E9E2AF11C",
+      tasks: [
+        {
+          id: "20FDE90DA93D10DE",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_splendor",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6B7164E46AE5FE9A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_tyrannical",
+        },
+      },
+      x: 22.5,
+      y: 2.5,
+      id: "1D61CBBBF7174946",
+      tasks: [
+        {
+          id: "2A4A8091E2BA97E3",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_tyrannical",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7E2F07CAA30CF724",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_core_warlord",
+        },
+      },
+      x: 24.0,
+      y: 2.5,
+      id: "49593BC3203064CB",
+      tasks: [
+        {
+          id: "4DC0DE621B4AEA5C",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_core_warlord",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "757B3E971589105A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_overworld_earth",
+        },
+      },
+      x: 25.5,
+      y: 2.5,
+      id: "03B4CB7D13B59622",
+      tasks: [
+        {
+          id: "79AF60EC8FF2F628",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_overworld_earth",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "10AB8CA392E5A33D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_overworld_royalty",
+        },
+      },
+      x: 27.0,
+      y: 2.5,
+      id: "764ADF15454CA8D3",
+      tasks: [
+        {
+          id: "731571585F89DE82",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_overworld_royalty",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5A496784096A6674",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_overworld_verdant_ruin",
+        },
+      },
+      x: 28.5,
+      y: 2.5,
+      id: "6197663A4A6F6726",
+      tasks: [
+        {
+          id: "6A729CE835224210",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_overworld_verdant_ruin",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "64799DB63B2EE8E4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_the_end_endersurge",
+        },
+      },
+      x: 30.0,
+      y: 2.5,
+      id: "35E0F971A9E28F17",
+      tasks: [
+        {
+          id: "5E437FF86C705FA1",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_the_end_endersurge",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6F534C5539487C43",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_the_end_mageslayer",
+        },
+      },
+      x: 31.5,
+      y: 2.5,
+      id: "0DEC35AC965AEE24",
+      tasks: [
+        {
+          id: "4234EC9E9496D0FC",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_the_end_mageslayer",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "370C2C2D8631DA0D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_the_nether_blood_lord",
+        },
+      },
+      x: 33.0,
+      y: 2.5,
+      id: "1C92C9AD2A683BE1",
+      tasks: [
+        {
+          id: "2B5A3DED298AD0A5",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_the_nether_blood_lord",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "350F3D6780AF5850",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_the_nether_inferno",
+        },
+      },
+      x: 34.5,
+      y: 2.5,
+      id: "5DE09B0A321A6FBE",
+      tasks: [
+        {
+          id: "3F7D8329776DCF92",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_the_nether_inferno",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2AD4A9C4876B6E7F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_the_nether_molten_breach",
+        },
+      },
+      x: 36.0,
+      y: 2.5,
+      id: "47BB1F0850EB4367",
+      tasks: [
+        {
+          id: "084EA730204C3548",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_the_nether_molten_breach",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4667C3E1A40AFF7D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_twilight_forest",
+        },
+      },
+      x: 37.5,
+      y: 2.5,
+      id: "237D91C2A406DE20",
+      tasks: [
+        {
+          id: "69370C519444B527",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_twilight_forest",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "16A884AB13E0EC6F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:gems_twilight_queen",
+        },
+      },
+      x: 39.0,
+      y: 2.5,
+      id: "07304B0003B6AE68",
+      tasks: [
+        {
+          id: "36981E28A6BD7A12",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:gems_twilight_queen",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7A743D7730D33E94",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_enhancement",
+        count: 1,
+      },
+      x: 0.0,
+      y: 5.0,
+      id: "52D6276BD14382A1",
+      tasks: [
+        {
+          id: "251505387C7811EB",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_enhancement",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "78E219A65E79A911",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_malice",
+        count: 1,
+      },
+      x: 1.5,
+      y: 5.0,
+      id: "5D05627C226A5A18",
+      tasks: [
+        {
+          id: "7DF7AB9729DAD431",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_malice",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "59E80CFDA38672F6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_rebirth",
+        count: 1,
+      },
+      x: 3.0,
+      y: 5.0,
+      id: "7FE7254AC9C185F6",
+      tasks: [
+        {
+          id: "31279451A6F6DC04",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_rebirth",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2AE4F608CC5EA1E8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_socketing",
+        count: 1,
+      },
+      x: 4.5,
+      y: 5.0,
+      id: "102127D91765F106",
+      tasks: [
+        {
+          id: "6400641A2FE865F0",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_socketing",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6093235B70C0966F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_supremacy",
+        count: 1,
+      },
+      x: 6.0,
+      y: 5.0,
+      id: "483B878C2A114725",
+      tasks: [
+        {
+          id: "18A66EBAD1C1A74B",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_supremacy",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "28C847EC2E6AA2E6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_unnaming",
+        count: 1,
+      },
+      x: 7.5,
+      y: 5.0,
+      id: "2A9D4BC829E0C352",
+      tasks: [
+        {
+          id: "4680A6E7B95F0F3D",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_unnaming",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0112D86CBF643BEA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:sigil_of_withdrawal",
+        count: 1,
+      },
+      x: 9.0,
+      y: 5.0,
+      id: "780F131F84594AE4",
+      tasks: [
+        {
+          id: "43BBB8EFE64ACBDF",
+          type: "item",
+          item: {
+            id: "apotheosis:sigil_of_withdrawal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "741E1B92E310BA19",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:vial_of_expulsion",
+        },
+      },
+      x: 10.5,
+      y: 5.0,
+      id: "751800626029AE68",
+      tasks: [
+        {
+          id: "534E6E6517019E1C",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:vial_of_expulsion",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "671FAF0FF2F348E2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:vial_of_extraction",
+        },
+      },
+      x: 12.0,
+      y: 5.0,
+      id: "596929456F55E368",
+      tasks: [
+        {
+          id: "170E139DCE36C9FE",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:vial_of_extraction",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "015EC20A1D491039",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:vial_of_unnaming",
+        },
+      },
+      x: 13.5,
+      y: 5.0,
+      id: "2EE50ED39C257A48",
+      tasks: [
+        {
+          id: "3EE086849392877B",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:vial_of_unnaming",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "00F6ADD3A44E4C04",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:ascent_spawner_upgrade_rune",
+        count: 1,
+      },
+      x: 0.0,
+      y: 7.5,
+      id: "77CA6A0550DC934E",
+      tasks: [
+        {
+          id: "214DF9916ED77156",
+          type: "item",
+          item: {
+            id: "apotheosis:ascent_spawner_upgrade_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0024EE2B6DE96238",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:burning_spawner_rune",
+        count: 1,
+      },
+      x: 1.5,
+      y: 7.5,
+      id: "591205E3E2DBECB6",
+      tasks: [
+        {
+          id: "7C00283BF535E398",
+          type: "item",
+          item: {
+            id: "apotheosis:burning_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3DB67A7F3D0F1617",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:echoing_spawner_rune",
+        count: 1,
+      },
+      x: 3.0,
+      y: 7.5,
+      id: "2DE4B6D798112FB6",
+      tasks: [
+        {
+          id: "5F82DA5E0EFBA742",
+          type: "item",
+          item: {
+            id: "apotheosis:echoing_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "34FB0043498573CC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:frontier_spawner_upgrade_rune",
+        count: 1,
+      },
+      x: 4.5,
+      y: 7.5,
+      id: "7A59470D7EBA7DEF",
+      tasks: [
+        {
+          id: "18E5D09CAACDE44B",
+          type: "item",
+          item: {
+            id: "apotheosis:frontier_spawner_upgrade_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "23D499B7119F601A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:ignore_conditions_spawner_rune",
+        count: 1,
+      },
+      x: 6.0,
+      y: 7.5,
+      id: "1CADD10E6A95B9FB",
+      tasks: [
+        {
+          id: "4B282ACCC364FBA1",
+          type: "item",
+          item: {
+            id: "apotheosis:ignore_conditions_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7A037AF745FA0E5F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:ignore_light_spawner_rune",
+        count: 1,
+      },
+      x: 7.5,
+      y: 7.5,
+      id: "1CD17234BC1BFE8B",
+      tasks: [
+        {
+          id: "6E69FCD54C60CE98",
+          type: "item",
+          item: {
+            id: "apotheosis:ignore_light_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3CD304D93AB30962",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:ignore_players_spawner_rune",
+        count: 1,
+      },
+      x: 9.0,
+      y: 7.5,
+      id: "3F3CEAFC0DEAEC44",
+      tasks: [
+        {
+          id: "794A92390DE1C9BC",
+          type: "item",
+          item: {
+            id: "apotheosis:ignore_players_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3C3D211DA41FBE51",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:infused_spawner_rune",
+        count: 1,
+      },
+      x: 10.5,
+      y: 7.5,
+      id: "018B735BB156972C",
+      tasks: [
+        {
+          id: "331CE40A0E0F5C35",
+          type: "item",
+          item: {
+            id: "apotheosis:infused_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "71F955805143CDE6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:initial_health_spawner_rune",
+        count: 1,
+      },
+      x: 12.0,
+      y: 7.5,
+      id: "701FD1EA872F0097",
+      tasks: [
+        {
+          id: "5C97FA120AB3FF67",
+          type: "item",
+          item: {
+            id: "apotheosis:initial_health_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "609C9626179F0291",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:no_ai_spawner_rune",
+        count: 1,
+      },
+      x: 13.5,
+      y: 7.5,
+      id: "6BD5A72597B6EB6B",
+      tasks: [
+        {
+          id: "1A4DAAA917EEF099",
+          type: "item",
+          item: {
+            id: "apotheosis:no_ai_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2E0E5D381FEEF7A2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:pinnacle_spawner_upgrade_rune",
+        count: 1,
+      },
+      x: 15.0,
+      y: 7.5,
+      id: "3732D17F63B9C9A5",
+      tasks: [
+        {
+          id: "0090B8B528CD64DF",
+          type: "item",
+          item: {
+            id: "apotheosis:pinnacle_spawner_upgrade_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3324AD37EB0D4B2E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:redstone_control_spawner_rune",
+        count: 1,
+      },
+      x: 16.5,
+      y: 7.5,
+      id: "62A981504ED7CBBF",
+      tasks: [
+        {
+          id: "0B4CC325BFA076D6",
+          type: "item",
+          item: {
+            id: "apotheosis:redstone_control_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5E8F2C56901FEE9B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:silent_spawner_rune",
+        count: 1,
+      },
+      x: 18.0,
+      y: 7.5,
+      id: "0929976561BDAA2E",
+      tasks: [
+        {
+          id: "65C8F9F9A25F1820",
+          type: "item",
+          item: {
+            id: "apotheosis:silent_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "45564C75101E9A20",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:spawn_range_spawner_rune",
+        count: 1,
+      },
+      x: 19.5,
+      y: 7.5,
+      id: "093657AEA5DC8F6A",
+      tasks: [
+        {
+          id: "5815DFC6F702456F",
+          type: "item",
+          item: {
+            id: "apotheosis:spawn_range_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "54A1FDB14B33E849",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:spawner_chain",
+        count: 1,
+      },
+      x: 21.0,
+      y: 7.5,
+      id: "48BF33EFBEF9BDB2",
+      tasks: [
+        {
+          id: "3B6F8CE7447EF478",
+          type: "item",
+          item: {
+            id: "apotheosis:spawner_chain",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "200961A626F166B5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:spawner_rune",
+        count: 1,
+      },
+      x: 22.5,
+      y: 7.5,
+      id: "6287C9D0F5FA2E5D",
+      tasks: [
+        {
+          id: "126B8A9B41286FDE",
+          type: "item",
+          item: {
+            id: "apotheosis:spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "533DDFD157BA393C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:summit_spawner_upgrade_rune",
+        count: 1,
+      },
+      x: 24.0,
+      y: 7.5,
+      id: "28EBD4762D3184A5",
+      tasks: [
+        {
+          id: "69466167940E55D6",
+          type: "item",
+          item: {
+            id: "apotheosis:summit_spawner_upgrade_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "03D645F23CAB2117",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:youthful_spawner_rune",
+        count: 1,
+      },
+      x: 25.5,
+      y: 7.5,
+      id: "1DCC8E0B434BFD8A",
+      tasks: [
+        {
+          id: "515C186520BC2861",
+          type: "item",
+          item: {
+            id: "apotheosis:youthful_spawner_rune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "572F9531C78E00DC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:arcane_sands",
+        count: 1,
+      },
+      x: 0.0,
+      y: 10.0,
+      id: "6BE099476D5F1505",
+      tasks: [
+        {
+          id: "4A2F443AEA15B4B6",
+          type: "item",
+          item: {
+            id: "apotheosis:arcane_sands",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D8DC4E6B58E0C52",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:book",
+        },
+      },
+      x: 1.5,
+      y: 10.0,
+      id: "14D693492E553008",
+      tasks: [
+        {
+          id: "4A650EA87C60FD93",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:book",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5FBB0CD6D09FE3FF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:boss_summoner",
+        count: 1,
+      },
+      x: 3.0,
+      y: 10.0,
+      id: "7099CA172701DF01",
+      tasks: [
+        {
+          id: "5BDB6C2196F3C317",
+          type: "item",
+          item: {
+            id: "apotheosis:boss_summoner",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5DE7922D52E7B3F0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:diamond_upgrade_smithing_template",
+        count: 1,
+      },
+      x: 4.5,
+      y: 10.0,
+      id: "0B1374F449FD0440",
+      tasks: [
+        {
+          id: "41BA8970FE6FE40E",
+          type: "item",
+          item: {
+            id: "apotheosis:diamond_upgrade_smithing_template",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "193246B8AD3ECF61",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:ender_lead",
+        },
+      },
+      x: 6.0,
+      y: 10.0,
+      id: "129BD80659853675",
+      tasks: [
+        {
+          id: "336849910B0C48FF",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:ender_lead",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2B0BE13B3B71E915",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:god_fused_pearl",
+        count: 1,
+      },
+      x: 7.5,
+      y: 10.0,
+      id: "49096CDBFAB931F7",
+      tasks: [
+        {
+          id: "7419DD5AC5D173F6",
+          type: "item",
+          item: {
+            id: "apotheosis:god_fused_pearl",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1597551D238D4924",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:godforged_pearl",
+        count: 1,
+      },
+      x: 9.0,
+      y: 10.0,
+      id: "63CC4B58ADC49D71",
+      tasks: [
+        {
+          id: "2D1D15EC349D8F1E",
+          type: "item",
+          item: {
+            id: "apotheosis:godforged_pearl",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "74528BADBFFB0D4F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:gold_upgrade_smithing_template",
+        count: 1,
+      },
+      x: 10.5,
+      y: 10.0,
+      id: "3DCE7530F88DD95D",
+      tasks: [
+        {
+          id: "3CBB8B65C962B70B",
+          type: "item",
+          item: {
+            id: "apotheosis:gold_upgrade_smithing_template",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5ECCE3E83AD3892A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:hammer",
+        },
+      },
+      x: 12.0,
+      y: 10.0,
+      id: "6CD454B5BB60C948",
+      tasks: [
+        {
+          id: "132CB14436D22D63",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:hammer",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7EB9C2E7A6BCEDE2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:iron_upgrade_smithing_template",
+        count: 1,
+      },
+      x: 13.5,
+      y: 10.0,
+      id: "163A21705CFD5839",
+      tasks: [
+        {
+          id: "06635D71C05211D0",
+          type: "item",
+          item: {
+            id: "apotheosis:iron_upgrade_smithing_template",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "32075ECC2F9D2AAA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:lucky_foot",
+        },
+      },
+      x: 15.0,
+      y: 10.0,
+      id: "6752994ED3F88AF1",
+      tasks: [
+        {
+          id: "03701F7C514C1DFC",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:lucky_foot",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1D3AAC671B02EEBB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:luminous_crystal_shard",
+        count: 1,
+      },
+      x: 16.5,
+      y: 10.0,
+      id: "7EF580DE419A5325",
+      tasks: [
+        {
+          id: "08147469A231231C",
+          type: "item",
+          item: {
+            id: "apotheosis:luminous_crystal_shard",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "284EE4F274B6AF4C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:music_disc_flash",
+        count: 1,
+      },
+      x: 18.0,
+      y: 10.0,
+      id: "48AA1A36B0715D56",
+      tasks: [
+        {
+          id: "49297084B548AF7B",
+          type: "item",
+          item: {
+            id: "apotheosis:music_disc_flash",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "11EB4354FAD9ECED",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:music_disc_glimmer",
+        count: 1,
+      },
+      x: 19.5,
+      y: 10.0,
+      id: "1D4A35FB48801D42",
+      tasks: [
+        {
+          id: "7881979E9F2846AC",
+          type: "item",
+          item: {
+            id: "apotheosis:music_disc_glimmer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7EB5C4A52F533820",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:music_disc_shimmer",
+        count: 1,
+      },
+      x: 21.0,
+      y: 10.0,
+      id: "218E731C465C632B",
+      tasks: [
+        {
+          id: "25FD8B8BC95B9B3D",
+          type: "item",
+          item: {
+            id: "apotheosis:music_disc_shimmer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6342356A433B113F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:mysterious_scrap_metal",
+        count: 1,
+      },
+      x: 22.5,
+      y: 10.0,
+      id: "247602686BA5FCF1",
+      tasks: [
+        {
+          id: "47B30588917B43C7",
+          type: "item",
+          item: {
+            id: "apotheosis:mysterious_scrap_metal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5967425681922229",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:potion_charm",
+        count: 1,
+      },
+      x: 24.0,
+      y: 10.0,
+      id: "2CF1CBC5783D0FB1",
+      tasks: [
+        {
+          id: "73513DD4E082A766",
+          type: "item",
+          item: {
+            id: "apotheosis:potion_charm",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6DD542DB9AB4A1FC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:potion_charm_broke",
+        },
+      },
+      x: 25.5,
+      y: 10.0,
+      id: "0B14620061751AF8",
+      tasks: [
+        {
+          id: "660380C9D7EA03E0",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:potion_charm_broke",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0A02F3EEE3CEBD37",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:potion_charm_glow",
+        },
+      },
+      x: 27.0,
+      y: 10.0,
+      id: "72390AA840AFCEAE",
+      tasks: [
+        {
+          id: "649DAA1AB81A20FA",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:potion_charm_glow",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "52A26514FC40B9CB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:star_cube",
+        },
+      },
+      x: 28.5,
+      y: 10.0,
+      id: "70E831171C7E6B3A",
+      tasks: [
+        {
+          id: "0CCE2AE50CD83F90",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "apotheosis:star_cube",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "24E182872F739DB1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:timeworn_fabric",
+        count: 1,
+      },
+      x: 30.0,
+      y: 10.0,
+      id: "4A5A6EC66DF1A404",
+      tasks: [
+        {
+          id: "73332E09378B5DE9",
+          type: "item",
+          item: {
+            id: "apotheosis:timeworn_fabric",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5493A3F71C9E5109",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

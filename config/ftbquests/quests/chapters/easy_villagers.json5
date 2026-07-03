@@ -1,0 +1,336 @@
+{
+  id: "213187AB7D5B77D2",
+  group: "",
+  order_index: 7,
+  icon: {
+    id: "easy_villagers:trader",
+    count: 1,
+  },
+  filename: "easy_villagers",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "easy_villagers:auto_trader",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "0C7461E734686856",
+      tasks: [
+        {
+          id: "3B3AB719988725C9",
+          type: "item",
+          item: {
+            id: "easy_villagers:auto_trader",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6E3BD5AFBE10EB5C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ftbquests:missing_item",
+        count: 1,
+        components: {
+          "ftbquests:missing_item": "easy_villagers:baby_villager",
+        },
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "06BBDC7CE33B286A",
+      tasks: [
+        {
+          id: "42C7987D0A49B44F",
+          type: "item",
+          item: {
+            id: "ftbquests:missing_item",
+            count: 1,
+            components: {
+              "ftbquests:missing_item": "easy_villagers:baby_villager",
+            },
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5F57EC9D925BAF1D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:breeder",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "23EF2B37EC4B1F9C",
+      tasks: [
+        {
+          id: "259270F842C66D32",
+          type: "item",
+          item: {
+            id: "easy_villagers:breeder",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "72206E41A2DCA83F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:converter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "41F3FF9466090C95",
+      tasks: [
+        {
+          id: "33E87714E6D64C53",
+          type: "item",
+          item: {
+            id: "easy_villagers:converter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "47FD1A0FA065BFBD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:farmer",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "5C1C2360D9A77729",
+      tasks: [
+        {
+          id: "6C61EA8543380488",
+          type: "item",
+          item: {
+            id: "easy_villagers:farmer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "70E53151A9A57D7A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:incubator",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "14AF719D11C684EE",
+      tasks: [
+        {
+          id: "1D3405CA91DB788F",
+          type: "item",
+          item: {
+            id: "easy_villagers:incubator",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "74A5F2EB0072EA95",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:inventory_viewer",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "535768FA01FE44C5",
+      tasks: [
+        {
+          id: "2AC91E1F8F4ED896",
+          type: "item",
+          item: {
+            id: "easy_villagers:inventory_viewer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "501CAB79DE223787",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:iron_farm",
+        count: 1,
+      },
+      x: 10.5,
+      y: 0.0,
+      id: "6169A87955075572",
+      tasks: [
+        {
+          id: "6C3868458D53BB0B",
+          type: "item",
+          item: {
+            id: "easy_villagers:iron_farm",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2BA66AA875FEB66B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:trader",
+        count: 1,
+      },
+      x: 12.0,
+      y: 0.0,
+      id: "2FAA048B5E998DAD",
+      tasks: [
+        {
+          id: "7EB1B60D2B21A009",
+          type: "item",
+          item: {
+            id: "easy_villagers:trader",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "40DEE58708ADA5A7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_villagers:villager",
+        count: 1,
+      },
+      x: 13.5,
+      y: 0.0,
+      id: "05F1AEB401CE12C2",
+      tasks: [
+        {
+          id: "488DAC370EC294A1",
+          type: "item",
+          item: {
+            id: "easy_villagers:villager",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "351B59502F41CAB4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_piglins:barterer",
+        count: 1,
+      },
+      x: 0.0,
+      y: 2.5,
+      id: "7509E58C7D5B9193",
+      tasks: [
+        {
+          id: "3A544C6B49843B2D",
+          type: "item",
+          item: {
+            id: "easy_piglins:barterer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3B78898521BD22A6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_piglins:piglin",
+        count: 1,
+      },
+      x: 1.5,
+      y: 2.5,
+      id: "4A6ECCE2C19D4FF7",
+      tasks: [
+        {
+          id: "0B2FEB287175A68B",
+          type: "item",
+          item: {
+            id: "easy_piglins:piglin",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "547B68A4DC8B7CE7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

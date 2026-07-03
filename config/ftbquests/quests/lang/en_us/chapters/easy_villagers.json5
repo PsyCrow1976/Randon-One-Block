@@ -1,0 +1,93 @@
+{
+  "chapter.213187AB7D5B77D2.title": "Easy Villagers & Piglins",
+  "quest.0C7461E734686856.title": "Auto Trader",
+  "quest.0C7461E734686856.quest_desc": [
+    "Auto Trader \u2014 automates trade execution with input/output slots.",
+    "",
+    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation."
+  ],
+  "task.845F14DDFD858972.title": "Obtain Auto Trader",
+  "quest.96B556B6C44E7609.title": "Baby Villager",
+  "quest.96B556B6C44E7609.quest_desc": [
+    "Baby Villager item \u2014 stores a juvenile villager for the Incubator and Breeder pipelines.",
+    "",
+    "Breed adults in the Breeder block, then move babies to Incubators for timed growth without chunk-loaded beds."
+  ],
+  "task.42C7987D0A49B44F.title": "Obtain Baby Villager",
+  "quest.23EF2B37EC4B1F9C.title": "Breeder",
+  "quest.23EF2B37EC4B1F9C.quest_desc": [
+    "Breeder block \u2014 auto-breeds two adult villagers with food you supply.",
+    "",
+    "Input food items, insert villagers, collect baby villagers from output. AFK villager cloning without manual carrot spam.",
+    "",
+    "Feed from random-block crop farms once you unlock wheat and carrots."
+  ],
+  "task.259270F842C66D32.title": "Obtain Breeder",
+  "quest.41F3FF9466090C95.title": "Converter",
+  "quest.41F3FF9466090C95.quest_desc": [
+    "Converter \u2014 cures zombie villagers with golden apples and weakness.",
+    "",
+    "Automates discount farming: zombie villager in, splash weakness applied, golden apple consumed, normal villager out."
+  ],
+  "task.85D2C041E9546C5C.title": "Obtain Converter",
+  "quest.5C1C2360D9A77729.title": "Farmer",
+  "quest.5C1C2360D9A77729.quest_desc": [
+    "Farmer block \u2014 villager farms crops on provided farmland layout (see block GUI).",
+    "",
+    "Compact crop farm for skyblock \u2014 villager harvests and deposits produce without entity pathing on your small island."
+  ],
+  "task.B54106208A2033E9.title": "Obtain Farmer",
+  "quest.14AF719D11C684EE.title": "Incubator",
+  "quest.14AF719D11C684EE.quest_desc": [
+    "Incubator \u2014 accelerates baby villager growth into adults.",
+    "",
+    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls."
+  ],
+  "task.BE17A923B7AD1A63.title": "Obtain Incubator",
+  "quest.535768FA01FE44C5.title": "Inventory Viewer",
+  "quest.535768FA01FE44C5.quest_desc": [
+    "Inventory Viewer \u2014 inspect villager inventories and equipment in GUI form.",
+    "",
+    "Debug and optimize farmer outfits, armor for iron farm, or food slots in breeder setups."
+  ],
+  "task.A59CCE0CA0F12BA9.title": "Obtain Inventory Viewer",
+  "quest.6169A87955075572.title": "Iron Farm",
+  "quest.6169A87955075572.quest_desc": [
+    "Iron Farm block \u2014 generates iron ingots using villager panic mechanics in a single block.",
+    "",
+    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint."
+  ],
+  "task.6C3868458D53BB0B.title": "Obtain Iron Farm",
+  "quest.2FAA048B5E998DAD.title": "Trader",
+  "quest.2FAA048B5E998DAD.quest_desc": [
+    "Trader block \u2014 access villager trades without placing a full trading hall.",
+    "",
+    "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them."
+  ],
+  "task.B859ACCFE6C5C1C6.title": "Obtain Trader",
+  "quest.FACE701A4C3C855D.title": "Villager",
+  "quest.FACE701A4C3C855D.quest_desc": [
+    "Villager item \u2014 pick up and place villagers in compact blocks. Shift-pick-up (configurable key) a villager to store it.",
+    "",
+    "Foundation item for the entire mod: every machine needs villagers inserted in the GUI.",
+    "",
+    "Cure zombie villagers in the Converter, then sort professions with Trader blocks."
+  ],
+  "task.488DAC370EC294A1.title": "Obtain Villager",
+  "quest.8A7A2B02E993FC8C.title": "Barterer",
+  "quest.8A7A2B02E993FC8C.quest_desc": [
+    "Barterer block \u2014 automated piglin bartering in one block.",
+    "",
+    "Insert a piglin and gold ingots; collect randomized barter drops (ender pearls, quartz, obsidian, etc.).",
+    "",
+    "Critical nether resource pipeline on skyblock when random block has not given consistent piglin access."
+  ],
+  "task.AEFF53F6844AE9A5.title": "Obtain Barterer",
+  "quest.A0589E039B22845A.title": "Piglin",
+  "quest.A0589E039B22845A.quest_desc": [
+    "Stored Piglin item \u2014 pick up piglins with the mod keybind and place them into machines.",
+    "",
+    "Cannot pick up aggressive or busy piglins (see in-game message). Bring one to a safe gold-trading area first."
+  ],
+  "task.0B2FEB287175A68B.title": "Obtain Piglin"
+}

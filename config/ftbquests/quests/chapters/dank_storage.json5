@@ -1,0 +1,408 @@
+{
+  id: "49B98278BD0E52D2",
+  group: "",
+  order_index: 8,
+  icon: {
+    id: "dankstorage:dank_1",
+    count: 1,
+  },
+  filename: "dank_storage",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "dankstorage:dank_1",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "1D7ED161138A7153",
+      tasks: [
+        {
+          id: "75FBB1A3D5EC83E0",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_1",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D1ED0C3DA35F805",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_2",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "62A57B8611699706",
+      tasks: [
+        {
+          id: "55261A4FA461EF97",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2E46F2EB2C6A6BDA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_3",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "101E2C0C27A74B5D",
+      tasks: [
+        {
+          id: "529D78DC47BDA881",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_3",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3839DA1D3D607402",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_4",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "43CC9DF18B286C46",
+      tasks: [
+        {
+          id: "729E5B174C923B5F",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_4",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "61F70E9DBBD61E54",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_5",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "2C0163E5458DD3A3",
+      tasks: [
+        {
+          id: "74570ACC6F17579A",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_5",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1B0ACE7C9C161915",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_6",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "4EA795AEDAC6262C",
+      tasks: [
+        {
+          id: "4735A4CF195BE28B",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_6",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "420DCC6F99D1E5ED",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dank_7",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "0E14BDC7C1FBDB93",
+      tasks: [
+        {
+          id: "4A48ED5FAA61F423",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_7",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0AF198B4FEC5B567",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:1_to_2",
+        count: 1,
+      },
+      x: 0.0,
+      y: 2.5,
+      id: "2EBBDDCD769AB514",
+      tasks: [
+        {
+          id: "52BF31E8F9188883",
+          type: "item",
+          item: {
+            id: "dankstorage:1_to_2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "763DEA5A0D684BF6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:2_to_3",
+        count: 1,
+      },
+      x: 1.5,
+      y: 2.5,
+      id: "19B244D10CA45E32",
+      tasks: [
+        {
+          id: "3F0C117A411248E5",
+          type: "item",
+          item: {
+            id: "dankstorage:2_to_3",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "243C67FD1107AFE4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:3_to_4",
+        count: 1,
+      },
+      x: 3.0,
+      y: 2.5,
+      id: "4D30A75EB6644C1B",
+      tasks: [
+        {
+          id: "2BAA095EB7916CE8",
+          type: "item",
+          item: {
+            id: "dankstorage:3_to_4",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "20ED5564B079E442",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:4_to_5",
+        count: 1,
+      },
+      x: 4.5,
+      y: 2.5,
+      id: "24A3DA31F238126B",
+      tasks: [
+        {
+          id: "0424F944B6CF28FF",
+          type: "item",
+          item: {
+            id: "dankstorage:4_to_5",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "48BB1E724AE26827",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:5_to_6",
+        count: 1,
+      },
+      x: 6.0,
+      y: 2.5,
+      id: "68B62B64C935E96D",
+      tasks: [
+        {
+          id: "395A75F2C070EBE5",
+          type: "item",
+          item: {
+            id: "dankstorage:5_to_6",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "06EEA337D4A1895D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:6_to_7",
+        count: 1,
+      },
+      x: 7.5,
+      y: 2.5,
+      id: "53B4E840D94B3786",
+      tasks: [
+        {
+          id: "48D304D07D7423C8",
+          type: "item",
+          item: {
+            id: "dankstorage:6_to_7",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2225F98F645DEAFC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:dock",
+        count: 1,
+      },
+      x: 0.0,
+      y: 5.0,
+      id: "0FC197DF7C5F42F6",
+      tasks: [
+        {
+          id: "6EED6D3B5AC2DAA0",
+          type: "item",
+          item: {
+            id: "dankstorage:dock",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3CC5A93E6B0E9B54",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:red_print",
+        count: 1,
+      },
+      x: 1.5,
+      y: 5.0,
+      id: "218B27E516AAD42D",
+      tasks: [
+        {
+          id: "5E9E4D007158DD54",
+          type: "item",
+          item: {
+            id: "dankstorage:red_print",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6D596C181F594566",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

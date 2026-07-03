@@ -1,0 +1,706 @@
+{
+  "chapter.5053B37E4642C6D9.title": "Apotheosis",
+  "quest.4F2FFDBB7BCC353B.title": "Augmenting Table",
+  "quest.4F2FFDBB7BCC353B.quest_desc": [
+    "Augmenting Table \u2014 improves existing affixes on an item using Sigils of Enhancement.",
+    "",
+    "Unlike rebirth (reroll), augmentation strengthens the stats you already rolled. Save your best base affix combo before augmenting.",
+    "",
+    "Pairs with salvaging and gem socketing for endgame gear crafting."
+  ],
+  "task.FA38E65906A258BD.title": "Obtain Augmenting Table",
+  "quest.0EB14389DD29B1C0.title": "Gem Case of House Faberg\u00e9",
+  "quest.0EB14389DD29B1C0.quest_desc": [
+    "Gem Case of House Faberg\u00e9 \u2014 premium gem storage with expanded upgrade options.",
+    "",
+    "End-game gem management for players running multiple socketed loadouts. Craft when your affix gear set is mature and gem types multiply."
+  ],
+  "task.45B59F8E89F26E8F.title": "Obtain Gem Case of House Faberg\u00e9",
+  "quest.71D6A64A2BBF6B7A.title": "Gem Case",
+  "quest.71D6A64A2BBF6B7A.quest_desc": [
+    "Gem Case \u2014 bulk storage and batch upgrade for Apothic Gems of the same type.",
+    "",
+    "Upgrade many gems at once when you have the materials, saving repetitive Gem Cutting Table clicks.",
+    "",
+    "Tooltip shows capacity and unique gem count \u2014 use before you overflow your inventory with flawed gems from loot."
+  ],
+  "task.E3E5CCE186801549.title": "Obtain Gem Case",
+  "quest.F147C9CF5FAEB077.title": "Gem Cutting Table",
+  "quest.F147C9CF5FAEB077.quest_desc": [
+    "Gem Cutting Table \u2014 upgrades Apothic Gem purity (Cracked \u2192 Chipped \u2192 Flawed \u2192 Flawless \u2192 Perfect).",
+    "",
+    "Costs Gem Dust plus rarity materials from salvaging. Perfect gems unlock the Infinity Stones advancement line.",
+    "",
+    "Central station for socketing build \u2014 cut gems before inserting with Sigil of Socketing."
+  ],
+  "task.6D1BE23249695502.title": "Obtain Gem Cutting Table",
+  "quest.2A8CCBC70DDEBC80.title": "Reforging Table",
+  "quest.2A8CCBC70DDEBC80.quest_desc": [
+    "Advanced Reforging Table \u2014 full affix rerolling with material costs shown in JEI.",
+    "",
+    "Core loop of Apotheosis gear progression: find affixed loot, spend Sigils of Rebirth, push items toward Rare, Epic, and Mythic tiers.",
+    "",
+    "Station-place near your mob farm so fresh drops get upgraded immediately."
+  ],
+  "task.C6024CB9A674F72E.title": "Obtain Reforging Table",
+  "quest.C87E129EF983807D.title": "Salvaging Table",
+  "quest.C87E129EF983807D.quest_desc": [
+    "Salvaging Table \u2014 breaks down affixed gear into rarity materials and Gem Dust.",
+    "",
+    "Recycle junk affix drops from mob farms instead of trashing them. Materials feed the Gem Cutting Table and high-tier sigil crafts.",
+    "",
+    "Check JEI for which rarity scraps each item tier returns."
+  ],
+  "task.46FDB78E27185716.title": "Obtain Salvaging Table",
+  "quest.7FA593FBD86EDF21.title": "Simple Reforging Table",
+  "quest.7FA593FBD86EDF21.quest_desc": [
+    "Entry-level Reforging Table for rerolling Apothic Affixes on equipment.",
+    "",
+    "Fuel with Sigils of Rebirth. Toss in swords, axes, bows, or armor from mob drops and random-block loot to chase better prefixes and suffixes.",
+    "",
+    "Upgrade to the full Reforging Table later for more control over reroll outcomes."
+  ],
+  "task.C0BA08AB8B48FB1E.title": "Obtain Simple Reforging Table",
+  "quest.4E06D12682EC262D.title": "Manifestation of Infinity",
+  "quest.4E06D12682EC262D.quest_desc": [
+    "Manifestation of Infinity \u2014 ultimate gem-cutting material for Perfect-tier gemstones.",
+    "",
+    "Required to push gems to Perfect purity at the Gem Cutting Table. Major endgame chase item for min-maxers."
+  ],
+  "task.BB82EF80CA9A4993.title": "Obtain Manifestation of Infinity",
+  "quest.D910EAF1DF9B0AA6.title": "Gem",
+  "quest.D910EAF1DF9B0AA6.quest_desc": [
+    "Base Apothic Gem item \u2014 any gem type or purity counts toward this quest.",
+    "",
+    "Gems socket into Affix Items via the Sigil of Socketing or Smithing Table recipes. Each gem type grants different bonuses (check JEI for Ballast, Samurai, Inferno, etc.).",
+    "",
+    "Loot from Apothic Invaders, chests, and random-block structures."
+  ],
+  "task.9B77A69CC6D5072D.title": "Obtain Gem",
+  "quest.23D4950FDF426BA9.title": "Gem Dust",
+  "quest.23D4950FDF426BA9.quest_desc": [
+    "Gem Dust \u2014 crushed gemstone powder from salvaging Apothic Gems or gear.",
+    "",
+    "Primary fuel for the Gem Cutting Table. Stockpile by salvaging flawed gems you will not socket."
+  ],
+  "task.0FE1598305495504.title": "Obtain Gem Dust",
+  "quest.2591808AA0B3FEF1.title": "Gem-Fused Slate",
+  "quest.2591808AA0B3FEF1.quest_desc": [
+    "Gem-Fused Slate \u2014 crafting component for high-tier Apotheosis recipes.",
+    "",
+    "Check JEI for exact uses in your pack version \u2014 typically bridges gems into advanced sigils and station upgrades."
+  ],
+  "task.77A4DCB12CF1B11A.title": "Obtain Gem-Fused Slate",
+  "quest.4662CE5DE687F2A2.title": "Ballast Gem",
+  "quest.4662CE5DE687F2A2.quest_desc": [
+    "Ballast Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.1B45E8CD8C2E1AC1.title": "Obtain Ballast Gem",
+  "quest.62C08CB5EB59984F.title": "Brawler's Gem",
+  "quest.62C08CB5EB59984F.quest_desc": [
+    "Brawler's Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.C4B00938E86911BD.title": "Obtain Brawler's Gem",
+  "quest.BAFB74B42C5DBCCB.title": "Breach Gem",
+  "quest.BAFB74B42C5DBCCB.quest_desc": [
+    "Breach Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.A186387BCAC1DDC3.title": "Obtain Breach Gem",
+  "quest.E7B277360467DBB1.title": "Gem of the Combatant",
+  "quest.E7B277360467DBB1.quest_desc": [
+    "Gem of the Combatant \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.B9BCE04E4A9080F5.title": "Obtain Gem of the Combatant",
+  "quest.9FC6F8A5279047C3.title": "Guardian Gem",
+  "quest.9FC6F8A5279047C3.quest_desc": [
+    "Guardian Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.2466F02AAF976091.title": "Obtain Guardian Gem",
+  "quest.81B77CE4CD41DE8B.title": "Lightning Gem",
+  "quest.81B77CE4CD41DE8B.quest_desc": [
+    "Lightning Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.34C341D7C8F97E60.title": "Obtain Lightning Gem",
+  "quest.786EF48570A615CB.title": "Lunar Gem",
+  "quest.786EF48570A615CB.quest_desc": [
+    "Lunar Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.8FF89EDD39598F9F.title": "Obtain Lunar Gem",
+  "quest.9240F30B112BCEE4.title": "Gem of the Samurai",
+  "quest.9240F30B112BCEE4.quest_desc": [
+    "Gem of the Samurai \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.FE0DA3E915D3F1BB.title": "Obtain Gem of the Samurai",
+  "quest.2F63B38149552DC7.title": "Slipstream Gem",
+  "quest.2F63B38149552DC7.quest_desc": [
+    "Slipstream Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.2312DA3B9B832BE6.title": "Obtain Slipstream Gem",
+  "quest.375A450BC994C025.title": "Solar Gem",
+  "quest.375A450BC994C025.quest_desc": [
+    "Solar Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.6CC76C0033FD251A.title": "Obtain Solar Gem",
+  "quest.8AF7E94C8A6EF2AA.title": "Splendor Gem",
+  "quest.8AF7E94C8A6EF2AA.quest_desc": [
+    "Splendor Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.20FDE90DA93D10DE.title": "Obtain Splendor Gem",
+  "quest.1D61CBBBF7174946.title": "Tyrannical Gem",
+  "quest.1D61CBBBF7174946.quest_desc": [
+    "Tyrannical Gem \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.2A4A8091E2BA97E3.title": "Obtain Tyrannical Gem",
+  "quest.49593BC3203064CB.title": "Gem of the Warlord",
+  "quest.49593BC3203064CB.quest_desc": [
+    "Gem of the Warlord \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: core. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.8EF49A82654BA591.title": "Obtain Gem of the Warlord",
+  "quest.03B4CB7D13B59622.title": "Gem of the Earth",
+  "quest.03B4CB7D13B59622.quest_desc": [
+    "Gem of the Earth \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: overworld-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.AC1342DB0890FC57.title": "Obtain Gem of the Earth",
+  "quest.E7BF3D72E422B6B0.title": "Gem of the Royal Family",
+  "quest.E7BF3D72E422B6B0.quest_desc": [
+    "Gem of the Royal Family \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: overworld-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.EB471782E1F40FE4.title": "Obtain Gem of the Royal Family",
+  "quest.C1E741F038145837.title": "Gem of the Verdant Ruin",
+  "quest.C1E741F038145837.quest_desc": [
+    "Gem of the Verdant Ruin \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: overworld-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.FF6D21843A7B3067.title": "Obtain Gem of the Verdant Ruin",
+  "quest.35E0F971A9E28F17.title": "Gems The End Endersurge",
+  "quest.35E0F971A9E28F17.quest_desc": [
+    "Gems The End Endersurge \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: End-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.5E437FF86C705FA1.title": "Obtain Gems The End Endersurge",
+  "quest.BA4881FA983E7C71.title": "Gems The End Mageslayer",
+  "quest.BA4881FA983E7C71.quest_desc": [
+    "Gems The End Mageslayer \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: End-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.4234EC9E9496D0FC.title": "Obtain Gems The End Mageslayer",
+  "quest.1C92C9AD2A683BE1.title": "Gems The Nether Blood Lord",
+  "quest.1C92C9AD2A683BE1.quest_desc": [
+    "Gems The Nether Blood Lord \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: Nether-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.2B5A3DED298AD0A5.title": "Obtain Gems The Nether Blood Lord",
+  "quest.98FCFAD971207B8B.title": "Gems The Nether Inferno",
+  "quest.98FCFAD971207B8B.quest_desc": [
+    "Gems The Nether Inferno \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: Nether-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.F7B57695B0BA3821.title": "Obtain Gems The Nether Inferno",
+  "quest.A86E935D85B72439.title": "Gems The Nether Molten Breach",
+  "quest.A86E935D85B72439.quest_desc": [
+    "Gems The Nether Molten Breach \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: Nether-themed. Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.9BDEDC4D9A4A980D.title": "Obtain Gems The Nether Molten Breach",
+  "quest.237D91C2A406DE20.title": "Gem of the Twilight Forest",
+  "quest.237D91C2A406DE20.quest_desc": [
+    "Gem of the Twilight Forest \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: Twilight Forest-themed (if dimension is unlocked). Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.FF303C403984101C.title": "Obtain Gem of the Twilight Forest",
+  "quest.AF642B18B677871F.title": "Gem of the Frozen Queen",
+  "quest.AF642B18B677871F.quest_desc": [
+    "Gem of the Frozen Queen \u2014 socketable Apothic Gemstone with affix bonuses tied to this gem line.",
+    "",
+    "Purity tiers (Cracked through Perfect) scale the stats. Cut upgrades at the Gem Cutting Table using Gem Dust and salvaged materials.",
+    "",
+    "Region: Twilight Forest-themed (if dimension is unlocked). Insert with Sigil of Socketing or unsocket with Vials at a Smithing Table (gems may be destroyed \u2014 read JEI carefully)."
+  ],
+  "task.36981E28A6BD7A12.title": "Obtain Gem of the Frozen Queen",
+  "quest.52D6276BD14382A1.title": "Sigil of Enhancement",
+  "quest.52D6276BD14382A1.quest_desc": [
+    "Sigil of Enhancement \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Used to fuel the Augmenting Table",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.251505387C7811EB.title": "Obtain Sigil of Enhancement",
+  "quest.D51C32B64CB21AC0.title": "Sigil of Malice",
+  "quest.D51C32B64CB21AC0.quest_desc": [
+    "Sigil of Malice \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Applies Touch of Malice to an Affix Item",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.7DF7AB9729DAD431.title": "Obtain Sigil of Malice",
+  "quest.7FE7254AC9C185F6.title": "Sigil of Rebirth",
+  "quest.7FE7254AC9C185F6.quest_desc": [
+    "Sigil of Rebirth \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Used to fuel the Reforging Table",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.F32C2BCF7715388E.title": "Obtain Sigil of Rebirth",
+  "quest.102127D91765F106.title": "Sigil of Socketing",
+  "quest.102127D91765F106.quest_desc": [
+    "Sigil of Socketing \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Adds one socket to an item",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.6400641A2FE865F0.title": "Obtain Sigil of Socketing",
+  "quest.483B878C2A114725.title": "Sigil of Supremacy",
+  "quest.483B878C2A114725.quest_desc": [
+    "Sigil of Supremacy \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Overcharges every Affix on an Affix Item",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.C4252665840EC0BE.title": "Obtain Sigil of Supremacy",
+  "quest.FD41D3764AF15F26.title": "Sigil of Unnaming",
+  "quest.FD41D3764AF15F26.quest_desc": [
+    "Sigil of Unnaming \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Removes the affixed name from an item",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.E06734980E250E5F.title": "Obtain Sigil of Unnaming",
+  "quest.CF994487B51777F5.title": "Sigil of Withdrawal",
+  "quest.CF994487B51777F5.quest_desc": [
+    "Sigil of Withdrawal \u2014 key consumable in the Apotheosis gear loop.",
+    "",
+    "Removes all socketed gems from an item",
+    "",
+    "Stock sigils near your Reforging and Augmenting tables so mob-farm loot gets processed immediately."
+  ],
+  "task.43BBB8EFE64ACBDF.title": "Obtain Sigil of Withdrawal",
+  "quest.AFC05CE340D49C17.title": "Vial of Searing Expulsion",
+  "quest.AFC05CE340D49C17.quest_desc": [
+    "Vial of Searing Expulsion \u2014 Smithing Table tool for gem management.",
+    "",
+    "Used in a Smithing Table to unsocket Apothic Gems. The gems will be destroyed in the process.",
+    "",
+    "Read JEI carefully: some vials destroy gems or the base item on use."
+  ],
+  "task.534E6E6517019E1C.title": "Obtain Vial of Searing Expulsion",
+  "quest.8718486D0440AEA0.title": "Vial of Arcane Extraction",
+  "quest.8718486D0440AEA0.quest_desc": [
+    "Vial of Arcane Extraction \u2014 Smithing Table tool for gem management.",
+    "",
+    "Used in a Smithing Table to unsocket Apothic Gems. The item will be destroyed in the process.",
+    "",
+    "Read JEI carefully: some vials destroy gems or the base item on use."
+  ],
+  "task.170E139DCE36C9FE.title": "Obtain Vial of Arcane Extraction",
+  "quest.2EE50ED39C257A48.title": "Vial of Unnaming",
+  "quest.2EE50ED39C257A48.quest_desc": [
+    "Vial of Unnaming \u2014 Smithing Table tool for gem management.",
+    "",
+    "Used at a Smithing Table to manipulate socketed gems or item names.",
+    "",
+    "Read JEI carefully: some vials destroy gems or the base item on use."
+  ],
+  "task.FEBFD5B5294B6305.title": "Obtain Vial of Unnaming",
+  "quest.77CA6A0550DC934E.title": "Wayfarer's Spawner Upgrade Rune",
+  "quest.77CA6A0550DC934E.quest_desc": [
+    "Wayfarer's Spawner Upgrade Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Improves a Mob Spawner",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.F00D5429DD1E8D5B.title": "Obtain Wayfarer's Spawner Upgrade Rune",
+  "quest.591205E3E2DBECB6.title": "Rune of Immolation",
+  "quest.591205E3E2DBECB6.quest_desc": [
+    "Rune of Immolation \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Spawned mobs are wreathed in flame",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.7C00283BF535E398.title": "Obtain Rune of Immolation",
+  "quest.2DE4B6D798112FB6.title": "Rune of Echoes",
+  "quest.2DE4B6D798112FB6.quest_desc": [
+    "Rune of Echoes \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Spawned mobs drop additional copies of their loot",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.CBAE189BAA33FCF4.title": "Obtain Rune of Echoes",
+  "quest.7A59470D7EBA7DEF.title": "Frontiersman's Spawner Upgrade Rune",
+  "quest.7A59470D7EBA7DEF.quest_desc": [
+    "Frontiersman's Spawner Upgrade Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Slightly improves a Mob Spawner",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.829BA39C77D00935.title": "Obtain Frontiersman's Spawner Upgrade Rune",
+  "quest.AB2705F3300C4709.title": "Rune of Defiance",
+  "quest.AB2705F3300C4709.quest_desc": [
+    "Rune of Defiance \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Forces a spawner to ignore all spawn rules",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.4B282ACCC364FBA1.title": "Obtain Rune of Defiance",
+  "quest.1CD17234BC1BFE8B.title": "Rune of Perpetual Twilight",
+  "quest.1CD17234BC1BFE8B.quest_desc": [
+    "Rune of Perpetual Twilight \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Forces a spawner to ignore light level requirements",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.6E69FCD54C60CE98.title": "Obtain Rune of Perpetual Twilight",
+  "quest.3F3CEAFC0DEAEC44.title": "Rune of Solitude",
+  "quest.3F3CEAFC0DEAEC44.quest_desc": [
+    "Rune of Solitude \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Allows a spawner to operate without a player nearby",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.794A92390DE1C9BC.title": "Obtain Rune of Solitude",
+  "quest.DE989AC3982A1F74.title": "Infused Spawner Rune",
+  "quest.DE989AC3982A1F74.quest_desc": [
+    "Infused Spawner Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Insert into spawner GUI to apply this rune effect.",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.331CE40A0E0F5C35.title": "Obtain Infused Spawner Rune",
+  "quest.701FD1EA872F0097.title": "Rune of Debilitation",
+  "quest.701FD1EA872F0097.quest_desc": [
+    "Rune of Debilitation \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Reduces the starting health of mobs spawned by the spawner",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.C3C43C04984FFE1B.title": "Obtain Rune of Debilitation",
+  "quest.6BD5A72597B6EB6B.title": "Rune of Stupor",
+  "quest.6BD5A72597B6EB6B.quest_desc": [
+    "Rune of Stupor \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Spawned mobs are stripped of their AI",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.96DA138F82F12070.title": "Obtain Rune of Stupor",
+  "quest.957724C764DF4FF1.title": "Thundering Spawner Upgrade Rune",
+  "quest.957724C764DF4FF1.quest_desc": [
+    "Thundering Spawner Upgrade Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Brings a Mob Spawner to its maximum potential",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.E38079689FFF756F.title": "Obtain Thundering Spawner Upgrade Rune",
+  "quest.62A981504ED7CBBF.title": "Rune of Control",
+  "quest.62A981504ED7CBBF.quest_desc": [
+    "Rune of Control \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Causes a spawner to only operate while powered by redstone",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.0B4CC325BFA076D6.title": "Obtain Rune of Control",
+  "quest.0929976561BDAA2E.title": "Rune of Silence",
+  "quest.0929976561BDAA2E.quest_desc": [
+    "Rune of Silence \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Spawned mobs will make no sound",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.65C8F9F9A25F1820.title": "Obtain Rune of Silence",
+  "quest.093657AEA5DC8F6A.title": "Rune of Spawning Range",
+  "quest.093657AEA5DC8F6A.quest_desc": [
+    "Rune of Spawning Range \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Increases the area in which a spawner spawns mobs",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.5815DFC6F702456F.title": "Obtain Rune of Spawning Range",
+  "quest.48BF33EFBEF9BDB2.title": "Spawner Chain",
+  "quest.48BF33EFBEF9BDB2.quest_desc": [
+    "Spawner Chain \u2014 links multiple spawners so they share activation or spawn logic (see in-game tooltip).",
+    "",
+    "Build consolidated mob farms on skyblock without duplicating player proximity checks for every spawner."
+  ],
+  "task.3B6F8CE7447EF478.title": "Obtain Spawner Chain",
+  "quest.B965E6035684C904.title": "Spawner Rune",
+  "quest.B965E6035684C904.quest_desc": [
+    "Spawner Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Insert into spawner GUI to apply this rune effect.",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.BB390DB6C8848551.title": "Obtain Spawner Rune",
+  "quest.28EBD4762D3184A5.title": "Mountaineer's Spawner Upgrade Rune",
+  "quest.28EBD4762D3184A5.quest_desc": [
+    "Mountaineer's Spawner Upgrade Rune \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Greatly improves a Mob Spawner",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.69466167940E55D6.title": "Obtain Mountaineer's Spawner Upgrade Rune",
+  "quest.E87590E36F41CAFF.title": "Rune of Youth",
+  "quest.E87590E36F41CAFF.quest_desc": [
+    "Rune of Youth \u2014 modifies vanilla or Apothic mob spawners.",
+    "",
+    "Spawned mobs will be babies",
+    "",
+    "Upgrade runes stack spawner quality; effect runes change mob behavior (AI, loot, light rules, redstone gating)."
+  ],
+  "task.EF25A46FF284E573.title": "Obtain Rune of Youth",
+  "quest.6BE099476D5F1505.title": "Arcane Sands",
+  "quest.6BE099476D5F1505.quest_desc": [
+    "Arcane Sands \u2014 brewing and crafting reagent for Apotheosis potion charms and related recipes.",
+    "",
+    "Farm ingredients from random-block desert loot or nether quartz lines, then craft charms for passive buffs."
+  ],
+  "task.4A2F443AEA15B4B6.title": "Obtain Arcane Sands",
+  "quest.14D693492E553008.title": "Book",
+  "quest.14D693492E553008.quest_desc": [
+    "Apothic Affix Tome \u2014 applies or stores affix knowledge on gear (see JEI for current recipe uses).",
+    "",
+    "Part of the affix crafting ecosystem alongside rebirth and augmentation. Keep one in your mob-farm sorting chest."
+  ],
+  "task.93CA487760D23E53.title": "Obtain Book",
+  "quest.7099CA172701DF01.title": "Apothic Invader Summoner",
+  "quest.7099CA172701DF01.quest_desc": [
+    "Apothic Invader Summoner \u2014 triggers Apothic Invader bosses for affix loot.",
+    "",
+    "Use when your gear is ready for elite fights. Invaders drop affixed equipment, gems, and sigil materials."
+  ],
+  "task.DD4F5A869D4BC447.title": "Obtain Apothic Invader Summoner",
+  "quest.0B1374F449FD0440.title": "Smithing Template",
+  "quest.0B1374F449FD0440.quest_desc": [
+    "Apotheosis Diamond Smithing Template \u2014 upgrades affix gear tiers at the smithing table.",
+    "",
+    "Duplicate with template recipes, then combine with affix gear and tier materials per JEI.",
+    "",
+    "Essential for pushing mob-drop swords and armor into higher material tiers without losing affixes."
+  ],
+  "task.AA7BDB1039120605.title": "Obtain Smithing Template",
+  "quest.129BD80659853675.title": "Ender Lead",
+  "quest.129BD80659853675.quest_desc": [
+    "Ender Lead \u2014 captures and relocates mobs for spawner and farm setup.",
+    "",
+    "Right-click mobs to leash them across distances. Invaluable on skyblock when moving spawner farm mobs into kill chambers without minecarts."
+  ],
+  "task.A3A2D6307F117BE3.title": "Obtain Ender Lead",
+  "quest.CFC6CE9133E975EE.title": "God-Fused Pearl",
+  "quest.CFC6CE9133E975EE.quest_desc": [
+    "God-Fused Pearl \u2014 upgraded pearl material for the deepest Apotheosis crafts.",
+    "",
+    "End-of-line reagent combining godforged materials. Plan usage before spending on lower-tier experiments."
+  ],
+  "task.EFAFBF7EE9E5F07E.title": "Obtain God-Fused Pearl",
+  "quest.F066E433E2B7E8BE.title": "Godforged Pearl",
+  "quest.F066E433E2B7E8BE.quest_desc": [
+    "Godforged Pearl \u2014 high-tier Apotheosis crafting reagent.",
+    "",
+    "Save for endgame sigil and gem recipes. Drops from elite Apothic content \u2014 see EMI for obtain methods."
+  ],
+  "task.EF6220048F608B08.title": "Obtain Godforged Pearl",
+  "quest.ECFD9B9CCFAB466B.title": "Smithing Template",
+  "quest.ECFD9B9CCFAB466B.quest_desc": [
+    "Apotheosis Gold Smithing Template \u2014 upgrades affix gear tiers at the smithing table.",
+    "",
+    "Duplicate with template recipes, then combine with affix gear and tier materials per JEI.",
+    "",
+    "Essential for pushing mob-drop swords and armor into higher material tiers without losing affixes."
+  ],
+  "task.BAE1168C3EA1CBF1.title": "Obtain Smithing Template",
+  "quest.6CD454B5BB60C948.title": "Hammer",
+  "quest.6CD454B5BB60C948.quest_desc": [
+    "Apothic Hammer \u2014 tool tied to Apotheosis world interaction and loot (see Apothic Chronicle in-game if Patchouli is loaded).",
+    "",
+    "Used in select crafting and structure interactions. Check EMI/JEI for every recipe \u2014 skyblock players often need it for gem or affix progression gates."
+  ],
+  "task.132CB14436D22D63.title": "Obtain Hammer",
+  "quest.163A21705CFD5839.title": "Smithing Template",
+  "quest.163A21705CFD5839.quest_desc": [
+    "Apotheosis Iron Smithing Template \u2014 upgrades affix gear tiers at the smithing table.",
+    "",
+    "Duplicate with template recipes, then combine with affix gear and tier materials per JEI.",
+    "",
+    "Essential for pushing mob-drop swords and armor into higher material tiers without losing affixes."
+  ],
+  "task.06635D71C05211D0.title": "Obtain Smithing Template",
+  "quest.EFAEC90B1325C910.title": "Lucky Rabbit's Foot",
+  "quest.EFAEC90B1325C910.quest_desc": [
+    "Lucky Rabbit's Foot \u2014 Apotheosis luck reagent.",
+    "",
+    "Used in charm infusion and affix-related crafts. Rabbit drops from random-block mob loot or pen farms."
+  ],
+  "task.03701F7C514C1DFC.title": "Obtain Lucky Rabbit's Foot",
+  "quest.7EF580DE419A5325.title": "Luminous Crystal Shard",
+  "quest.7EF580DE419A5325.quest_desc": [
+    "Luminous Crystal Shard \u2014 glowing crafting component for Apotheosis stations and charms.",
+    "",
+    "Check JEI sources \u2014 often structure loot or invader drops on skyblock packs."
+  ],
+  "task.08147469A231231C.title": "Obtain Luminous Crystal Shard",
+  "quest.48AA1A36B0715D56.title": "Music Disc",
+  "quest.48AA1A36B0715D56.quest_desc": [
+    "Apotheosis Music Disc (Flash) \u2014 collectible disc with Apotheosis soundtrack.",
+    "",
+    "Obtain from invader drops or chest loot. Purely cosmetic for jukeboxes \u2014 flex on your skyblock base."
+  ],
+  "task.49297084B548AF7B.title": "Obtain Music Disc",
+  "quest.80870E6540504BD0.title": "Music Disc",
+  "quest.80870E6540504BD0.quest_desc": [
+    "Apotheosis Music Disc (Glimmer) \u2014 collectible disc with Apotheosis soundtrack.",
+    "",
+    "Obtain from invader drops or chest loot. Purely cosmetic for jukeboxes \u2014 flex on your skyblock base."
+  ],
+  "task.7881979E9F2846AC.title": "Obtain Music Disc",
+  "quest.218E731C465C632B.title": "Music Disc",
+  "quest.218E731C465C632B.quest_desc": [
+    "Apotheosis Music Disc (Shimmer) \u2014 collectible disc with Apotheosis soundtrack.",
+    "",
+    "Obtain from invader drops or chest loot. Purely cosmetic for jukeboxes \u2014 flex on your skyblock base."
+  ],
+  "task.C3DBB2BA87FE1727.title": "Obtain Music Disc",
+  "quest.A12A7C4150E28352.title": "Mysterious Scrap Metal",
+  "quest.A12A7C4150E28352.quest_desc": [
+    "Mysterious Scrap Metal \u2014 salvaged oddity used in Apotheosis crafting chains.",
+    "",
+    "Obtain from salvaging specific affix items or loot tables (JEI lists sources). Do not trash unknown affix drops until you check recipes."
+  ],
+  "task.B20C4A6555DEBEBF.title": "Obtain Mysterious Scrap Metal",
+  "quest.2CF1CBC5783D0FB1.title": "Charm of %s",
+  "quest.2CF1CBC5783D0FB1.quest_desc": [
+    "Potion Charm \u2014 wearable charm granting a potion effect while in inventory or curio slot (per config).",
+    "",
+    "Craft via charm infusion with Arcane Sands and potion ingredients. Any effect variant counts.",
+    "",
+    "Huge QoL for permanent Haste, Regeneration, or custom brews without chugging potions."
+  ],
+  "task.F2CFF68DBF5824FC.title": "Obtain Charm of %s",
+  "quest.0B14620061751AF8.title": "Invalid Potion Charm",
+  "quest.0B14620061751AF8.quest_desc": [
+    "Depleted Potion Charm \u2014 out of duration or broken state.",
+    "",
+    "Refill or recraft per JEI rather than trashing \u2014 shows you have entered the charm system."
+  ],
+  "task.660380C9D7EA03E0.title": "Obtain Invalid Potion Charm",
+  "quest.FC81729F5BD358A8.title": "Potion Charm Glow",
+  "quest.FC81729F5BD358A8.quest_desc": [
+    "Glowing Potion Charm variant \u2014 enchanted glint visual on a charm.",
+    "",
+    "Same function as standard charms with a shiny appearance. Any glowing charm satisfies this quest."
+  ],
+  "task.649DAA1AB81A20FA.title": "Obtain Potion Charm Glow",
+  "quest.8C5B02C0493D8248.title": "Star Cube",
+  "quest.8C5B02C0493D8248.quest_desc": [
+    "Star Cube \u2014 special Apotheosis item (see JEI). Often tied to world events or high-tier crafting.",
+    "",
+    "Treat as a rare resource \u2014 confirm recipes before consuming."
+  ],
+  "task.E8BF6187ACA57E5C.title": "Obtain Star Cube",
+  "quest.CA1955D73944FA80.title": "Timeworn Fabric",
+  "quest.CA1955D73944FA80.quest_desc": [
+    "Timeworn Fabric \u2014 rare material for advanced Apotheosis crafts.",
+    "",
+    "Typically drops from high-tier invaders or special loot. Save for sigil and charm recipes before using in other mods."
+  ],
+  "task.AC64CD4445130991.title": "Obtain Timeworn Fabric"
+}

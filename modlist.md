@@ -1,8 +1,8 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 79
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 80
 
-*Last updated: 2026-06-30*
+*Last updated: 2026-07-03*
 
 Canonical source for installed mods in the CurseForge playtest instance. To refresh after adding, removing, or updating mods, run:
 
@@ -24,13 +24,12 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Baubley Heart Canisters | 26.1.2-1.7.3 | `baubley-heart-canisters-26.1.2-1.7.3.jar` |
 | BBL Core | 26.1.2-12.6.2 | `bblcore-26.1.2-12.6.2.jar` |
 | BBL Utility | 26.1.2-2.7.11 | `utility-26.1.2-2.7.11.jar` |
-| Bookshelf | 26.1.2.12 | `Bookshelf-neoforge-MC26.1.2-26.1.2.12.jar` |
+| Bookshelf | 26.1.2.14 | `Bookshelf-neoforge-MC26.1.2-26.1.2.14.jar` |
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
 | Clumps | 26.1.2.1 | `Clumps-neoforge-26.1.2-26.1.2.1.jar` |
 | Colorful Hearts | 26.1.2.0 | `colorfulhearts-neoforge-26.1.2-26.1.2.0.jar` |
 | Common Network | networking-neoforge-1.0.23-26.1.2 | `common-networking-neoforge-1.0.23-26.1.2.jar` |
 | Construction Sticks | 26.1.2-3.1.3 | `ConstructionSticks-26.1.2-3.1.3.jar` |
-| Construction Wand - KOTS | 26.1.2-2.17.5-fix | `constructionwand-kots-26.1.2-2.17.5-fix.jar` |
 | Controlling | 26.1.2.4 | `Controlling-neoforge-26.1.2-26.1.2.4.jar` |
 | Cooking for Blockheads | 26.1.2.2 | `cookingforblockheads-neoforge-26.1.2-26.1.2.2.jar` |
 | Crafting on a stick | 1.0 | `crafting_on_a_stick-neoforge-26.1-1.0.jar` |
@@ -39,8 +38,10 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Dank Storage | 0 | `dankstorage-neoforge-26.1-0.jar` |
 | Dark Utilities | 26.1.2.2 | `DarkUtilities-neoforge-MC26.1.2-26.1.2.2.jar` |
 | Day Count - a day counter HUD (Forge/NeoForge/Fabric) | 1.6.0-NeoForge-mc26.1 | `DayCount-1.6.0-NeoForge-mc26.1.jar` |
+| Easy Ore Generation | Easy Ore Generation v1.0.2 | `Easy Ore Generation v1.0.2.jar` |
 | Easy Piglins | neoforge-1.1.7+26.1.2 | `easy-piglins-neoforge-1.1.7+26.1.2.jar` |
 | Easy Villagers | neoforge-1.1.42+26.1.2 | `easy-villagers-neoforge-1.1.42+26.1.2.jar` |
+| Ender IO | 9.0.5-alpha | `enderio-9.0.5-alpha.jar` |
 | Ex Deorum | 4.0 | `exdeorum-4.0.jar` |
 | Farming for Blockheads | 26.1.2.1 | `farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar` |
 | Forgiving Void | 26.1.2.1 | `forgivingvoid-neoforge-26.1.2-26.1.2.1.jar` |
@@ -88,8 +89,8 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.8.12+mc26.1.2 | `sodium-neoforge-0.8.12+mc26.1.2.jar` |
 | Sophisticated Backpacks | 26.1.2-3.25.76.1956 | `sophisticatedbackpacks-26.1.2-3.25.76.1956.jar` |
-| Sophisticated Core | 26.1.2-1.4.75.2082 | `sophisticatedcore-26.1.2-1.4.75.2082.jar` |
-| Sophisticated Storage | 26.1.2-1.5.84.1898 | `sophisticatedstorage-26.1.2-1.5.84.1898.jar` |
+| Sophisticated Core | 26.1.2-1.4.76.2091 | `sophisticatedcore-26.1.2-1.4.76.2091.jar` |
+| Sophisticated Storage | 26.1.2-1.5.85.1918 | `sophisticatedstorage-26.1.2-1.5.85.1918.jar` |
 | The Uncrafting Table | 0.0.4 | `uncraftingtable-0.0.4.jar` |
 | Time in a Bottle | neoforge-7.1.0 | `tiab-neoforge-7.1.0.jar` |
 | Trade Cycling | neoforge-1.0.21+26.1.2 | `trade-cycling-neoforge-1.0.21+26.1.2.jar` |

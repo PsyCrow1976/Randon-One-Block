@@ -1,0 +1,1136 @@
+{
+  id: "6B3293A06C1AA785",
+  group: "",
+  order_index: 4,
+  icon: {
+    id: "ironfurnaces:iron_furnace",
+    count: 1,
+  },
+  filename: "iron_furnaces",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "ironfurnaces:iron_furnace",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "4A0F15D5841517B4",
+      tasks: [
+        {
+          id: "5994733C3BB63588",
+          type: "item",
+          item: {
+            id: "ironfurnaces:iron_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "35513670B5CF40D2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:copper_furnace",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "750C98658E184B97",
+      tasks: [
+        {
+          id: "211E878FC92F1926",
+          type: "item",
+          item: {
+            id: "ironfurnaces:copper_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4C9757F3EFEA32EC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:silver_furnace",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "24CC761D706F82D3",
+      tasks: [
+        {
+          id: "7147BA1B4AA20FB6",
+          type: "item",
+          item: {
+            id: "ironfurnaces:silver_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F7647E20824349D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:gold_furnace",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "752F9C0BDFC3A905",
+      tasks: [
+        {
+          id: "5E57FB6ED83B846A",
+          type: "item",
+          item: {
+            id: "ironfurnaces:gold_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "577FCB3E077B5C88",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:diamond_furnace",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "29BEA343E40E6C84",
+      tasks: [
+        {
+          id: "353A6ACF2BFD224D",
+          type: "item",
+          item: {
+            id: "ironfurnaces:diamond_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "31FBF5935C231966",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:emerald_furnace",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "299659E241E09B34",
+      tasks: [
+        {
+          id: "1AD9C3D589812366",
+          type: "item",
+          item: {
+            id: "ironfurnaces:emerald_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0E53BB35731A49C5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:crystal_furnace",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "4A88296E66EB4007",
+      tasks: [
+        {
+          id: "214DEFE071397B58",
+          type: "item",
+          item: {
+            id: "ironfurnaces:crystal_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "31DA5E35CF739B53",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:obsidian_furnace",
+        count: 1,
+      },
+      x: 10.5,
+      y: 0.0,
+      id: "4ACBA245D846438E",
+      tasks: [
+        {
+          id: "10DCDE974314A112",
+          type: "item",
+          item: {
+            id: "ironfurnaces:obsidian_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4151FA87CD670B28",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:netherite_furnace",
+        count: 1,
+      },
+      x: 12.0,
+      y: 0.0,
+      id: "0FE5682E5A114AE5",
+      tasks: [
+        {
+          id: "7DA56CE180719D35",
+          type: "item",
+          item: {
+            id: "ironfurnaces:netherite_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "615BE3E106EBF63D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:allthemodium_furnace",
+        count: 1,
+      },
+      x: 13.5,
+      y: 0.0,
+      id: "781458DADACDDBFC",
+      tasks: [
+        {
+          id: "284295229BE0D742",
+          type: "item",
+          item: {
+            id: "ironfurnaces:allthemodium_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5431C4812996B9B8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:vibranium_furnace",
+        count: 1,
+      },
+      x: 15.0,
+      y: 0.0,
+      id: "5538C7B1CEAC6D61",
+      tasks: [
+        {
+          id: "31A90C7A659880BC",
+          type: "item",
+          item: {
+            id: "ironfurnaces:vibranium_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5F3FE11DBEF3372C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:unobtainium_furnace",
+        count: 1,
+      },
+      x: 16.5,
+      y: 0.0,
+      id: "685A8434C6FCAF03",
+      tasks: [
+        {
+          id: "7F7519768AE65AE6",
+          type: "item",
+          item: {
+            id: "ironfurnaces:unobtainium_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "17EC18285D5DABE1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:million_furnace",
+        count: 1,
+      },
+      x: 18.0,
+      y: 0.0,
+      id: "7CACD1C1E508E229",
+      tasks: [
+        {
+          id: "25B3D6D80091C235",
+          type: "item",
+          item: {
+            id: "ironfurnaces:million_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "05DDCB590630126C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:heater",
+        count: 1,
+      },
+      x: 0.0,
+      y: 2.5,
+      id: "04D7C76007348E46",
+      tasks: [
+        {
+          id: "1182B91F490273BA",
+          type: "item",
+          item: {
+            id: "ironfurnaces:heater",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "44A31B1518945A76",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:item_heater",
+        count: 1,
+      },
+      x: 1.5,
+      y: 2.5,
+      id: "1C0C1985B88F543D",
+      tasks: [
+        {
+          id: "27D8B0DB1DE9DFD4",
+          type: "item",
+          item: {
+            id: "ironfurnaces:item_heater",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "354930894501115E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:item_copy",
+        count: 1,
+      },
+      x: 3.0,
+      y: 2.5,
+      id: "34101EE261895B47",
+      tasks: [
+        {
+          id: "5B89851A4620785E",
+          type: "item",
+          item: {
+            id: "ironfurnaces:item_copy",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "25B39CCC548D84B7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:item_spooky",
+        count: 1,
+      },
+      x: 4.5,
+      y: 2.5,
+      id: "432945B92901C276",
+      tasks: [
+        {
+          id: "1D9F496FD77EA9EC",
+          type: "item",
+          item: {
+            id: "ironfurnaces:item_spooky",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F7875BEE1FB75A4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:item_xmas",
+        count: 1,
+      },
+      x: 6.0,
+      y: 2.5,
+      id: "7C83318981ED790C",
+      tasks: [
+        {
+          id: "7CBF1B1F6D092C51",
+          type: "item",
+          item: {
+            id: "ironfurnaces:item_xmas",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "54AB440A86A95981",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:rainbow_core",
+        count: 1,
+      },
+      x: 7.5,
+      y: 2.5,
+      id: "4653A0BA8BB0AD09",
+      tasks: [
+        {
+          id: "1083444509AFFCF6",
+          type: "item",
+          item: {
+            id: "ironfurnaces:rainbow_core",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3E527F9D2375CC95",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:rainbow_plating",
+        count: 1,
+      },
+      x: 9.0,
+      y: 2.5,
+      id: "71044C01E9D99772",
+      tasks: [
+        {
+          id: "5C8CE2898540C857",
+          type: "item",
+          item: {
+            id: "ironfurnaces:rainbow_plating",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "422106ED588811C0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:rainbow_coal",
+        count: 1,
+      },
+      x: 10.5,
+      y: 2.5,
+      id: "0851D855184E741F",
+      tasks: [
+        {
+          id: "4FE94B36748C1B6C",
+          type: "item",
+          item: {
+            id: "ironfurnaces:rainbow_coal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "48ED0020149DB3EF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_blasting",
+        count: 1,
+      },
+      x: 0.0,
+      y: 5.0,
+      id: "00D6116991E6BD48",
+      tasks: [
+        {
+          id: "59480D4C92CEC584",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_blasting",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "520335DEABC15E22",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_factory",
+        count: 1,
+      },
+      x: 1.5,
+      y: 5.0,
+      id: "7A561DE76B26741B",
+      tasks: [
+        {
+          id: "3246D76D2DC5CDD2",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_factory",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6CCF2F5C85081E84",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_fuel",
+        count: 1,
+      },
+      x: 3.0,
+      y: 5.0,
+      id: "40983CB2F690AF03",
+      tasks: [
+        {
+          id: "60B8A07A946646D5",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_fuel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "730D11B9C8B51A0D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_generator",
+        count: 1,
+      },
+      x: 4.5,
+      y: 5.0,
+      id: "40CB57D348F204FB",
+      tasks: [
+        {
+          id: "2ADE0F7DDE44E698",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_generator",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6A2EC73DCBB6C84E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_smoking",
+        count: 1,
+      },
+      x: 6.0,
+      y: 5.0,
+      id: "21872D777913BE13",
+      tasks: [
+        {
+          id: "60EC321E2C148B08",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_smoking",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5F8B45ACAE46B757",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:augment_speed",
+        count: 1,
+      },
+      x: 7.5,
+      y: 5.0,
+      id: "42984C4FB5802407",
+      tasks: [
+        {
+          id: "22F99793F939EBA4",
+          type: "item",
+          item: {
+            id: "ironfurnaces:augment_speed",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6D03BAB8DF4B793A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_iron",
+        count: 1,
+      },
+      x: 0.0,
+      y: 7.5,
+      id: "3D4440032F9BAFC5",
+      tasks: [
+        {
+          id: "2ADCCCDED9A62214",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_iron",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7623706312DC99F8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_iron2",
+        count: 1,
+      },
+      x: 1.5,
+      y: 7.5,
+      id: "1B533C62C95B07BA",
+      tasks: [
+        {
+          id: "10D478B2C0FE0557",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_iron2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "33A8C562A9055F5A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_copper",
+        count: 1,
+      },
+      x: 3.0,
+      y: 7.5,
+      id: "390F1D21578C3B57",
+      tasks: [
+        {
+          id: "10C5EC7DDC86725B",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_copper",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6389DD47345D59A6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_silver",
+        count: 1,
+      },
+      x: 4.5,
+      y: 7.5,
+      id: "6B7037F278472C53",
+      tasks: [
+        {
+          id: "2E942CAF2EA07D06",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_silver",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "568E815913EFBAAF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_silver2",
+        count: 1,
+      },
+      x: 6.0,
+      y: 7.5,
+      id: "5F3843E22E0DDF4F",
+      tasks: [
+        {
+          id: "0FE430084120C16D",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_silver2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "74B99CB1F2AEB5EE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_gold",
+        count: 1,
+      },
+      x: 7.5,
+      y: 7.5,
+      id: "14476D72BE2C9327",
+      tasks: [
+        {
+          id: "366A7B49044D0F57",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_gold",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "793FAAE3627AEE7A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_gold2",
+        count: 1,
+      },
+      x: 9.0,
+      y: 7.5,
+      id: "7BE58B0CC0020CB9",
+      tasks: [
+        {
+          id: "17761E01062EC07E",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_gold2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5E1812096EF8886F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_diamond",
+        count: 1,
+      },
+      x: 10.5,
+      y: 7.5,
+      id: "24A7B0926B8A7E26",
+      tasks: [
+        {
+          id: "6C258735216B1353",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_diamond",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2B47CC2011DA9784",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_emerald",
+        count: 1,
+      },
+      x: 12.0,
+      y: 7.5,
+      id: "20C5811BEF1522F8",
+      tasks: [
+        {
+          id: "3D200CF4C6CBFABB",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_emerald",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "15B85960B3173570",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_crystal",
+        count: 1,
+      },
+      x: 13.5,
+      y: 7.5,
+      id: "354EE25BE0B4349B",
+      tasks: [
+        {
+          id: "44EBCAE6E01778C4",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_crystal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5750EF09553000AC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_obsidian",
+        count: 1,
+      },
+      x: 15.0,
+      y: 7.5,
+      id: "04C4DEE161F761C0",
+      tasks: [
+        {
+          id: "59ECB20974FC2769",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_obsidian",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3E74A0F87C18A1A8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_obsidian2",
+        count: 1,
+      },
+      x: 16.5,
+      y: 7.5,
+      id: "18510CC7E91B08E7",
+      tasks: [
+        {
+          id: "7E44FC87041F08C3",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_obsidian2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6552CB3327914B73",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_netherite",
+        count: 1,
+      },
+      x: 18.0,
+      y: 7.5,
+      id: "049F9D93E8DF26E3",
+      tasks: [
+        {
+          id: "32BEC6C6AAD643D3",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_netherite",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "350F0FFC13906C16",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_allthemodium",
+        count: 1,
+      },
+      x: 19.5,
+      y: 7.5,
+      id: "2263C741B70181D9",
+      tasks: [
+        {
+          id: "0379606DCC97ADC0",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_allthemodium",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1B993CF4D9039377",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_vibranium",
+        count: 1,
+      },
+      x: 21.0,
+      y: 7.5,
+      id: "4D4574197150F3BA",
+      tasks: [
+        {
+          id: "015E7D937C278BB6",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_vibranium",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "23720023D53D609B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:upgrade_unobtainium",
+        count: 1,
+      },
+      x: 22.5,
+      y: 7.5,
+      id: "03C6CCCE39478894",
+      tasks: [
+        {
+          id: "5F93AC81B0F3CBB9",
+          type: "item",
+          item: {
+            id: "ironfurnaces:upgrade_unobtainium",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "46164451EEAAC4BB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

@@ -8,6 +8,21 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.1] — 2026-07-03
+
+### FTB Quests
+
+- **Five new mod chapters** — Iron Furnaces, Animal Pens, Apotheosis, Easy Villagers & Piglins, and Dank Storage. Each item in those mods has its own quest (10 XP, no dependency links).
+- **Chapter tab titles** — Lang entries synced to in-game chapter IDs so tabs no longer show as "Unnamed".
+- **Getting Started** — Crafting Table on a Stick quest and text tweaks from playtest.
+- **Ex Deorum / Storage Options** — Quest book synced from in-game editor (layout and lang).
+
+### Mods
+
+- **`modlist.md` / `modlist.json`** — Refreshed from playtest (**80** mods). **Added:** Easy Ore Generation, Ender IO. **Removed:** Construction Wand - KOTS. **Updated:** Bookshelf, Sophisticated Core, Sophisticated Storage.
+
+---
+
 ## [1.0.3.0] — 2026-06-30
 
 **Milestone** — team **Randon Mined** counter and overlay (CurseForge release).

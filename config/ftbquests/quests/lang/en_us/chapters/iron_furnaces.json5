@@ -1,0 +1,390 @@
+{
+  "chapter.6B3293A06C1AA785.title": "Iron Furnaces",
+  "quest.4A0F15D5841517B4.title": "Iron Furnace",
+  "quest.4A0F15D5841517B4.quest_desc": [
+    "Your first step beyond the vanilla furnace. Craft with eight iron ingots around a regular furnace in a 3×3 ring.",
+    "",
+    "Smelts in 160 ticks (vanilla is 200) and can store Forge Energy for augments and generator mode. Tier 0 furnace — the foundation every higher tier builds on.",
+    "",
+    "Right-click to open the GUI. Sneak + right-click with an upgrade item to skip crafting the next tier in place."
+  ],
+  "task.5994733C3BB63588.title": "Obtain Iron Furnace",
+  "quest.750C98658E184B97.title": "Copper Furnace",
+  "quest.750C98658E184B97.quest_desc": [
+    "An early alternative to the Iron Furnace when copper is plentiful. Eight copper ingots around a vanilla furnace.",
+    "",
+    "Slightly slower than iron (180 ticks) but still faster than vanilla. Tier 0 — same energy buffer class as iron.",
+    "",
+    "Use the Stone to Copper upgrade on a placed furnace, or craft directly once you have the ingots from your random block pool."
+  ],
+  "task.B21B66E2C9449361.title": "Obtain Copper Furnace",
+  "quest.EA733A1E19082205.title": "Silver Furnace",
+  "quest.EA733A1E19082205.quest_desc": [
+    "Mid-tier smelter bridging copper/iron and gold. Recipe: silver ingots in the corners, glass on the sides, and an iron furnace in the center.",
+    "",
+    "140-tick cook time at tier 1 with 100 RF/tick generator output. Requires silver ingots (tag-dependent — check JEI if the recipe is hidden).",
+    "",
+    "Upgrade paths: Copper to Silver or Iron to Silver sneak-upgrade items avoid rebuilding from scratch."
+  ],
+  "task.7147BA1B4AA20FB6.title": "Obtain Silver Furnace",
+  "quest.C33C102A8052488E.title": "Golden Furnace",
+  "quest.C33C102A8052488E.quest_desc": [
+    "Tier 1 furnace with a serious speed bump. Surround an iron furnace with gold ingots and place a gold block underneath.",
+    "",
+    "120-tick smelts and 160 RF/tick generation. Holds more FE in its internal buffer than tier 0 furnaces.",
+    "",
+    "Also craftable via the Iron to Gold upgrade item on a placed iron furnace."
+  ],
+  "task.5E57FB6ED83B846A.title": "Obtain Golden Furnace",
+  "quest.29BEA343E40E6C84.title": "Diamond Furnace",
+  "quest.29BEA343E40E6C84.quest_desc": [
+    "High-tier smelting: diamonds in the corners, glass on the sides, gold furnace in the center.",
+    "",
+    "80-tick cook time, tier 2 energy storage, and 240 RF/tick when running as a generator. One of the best all-round furnaces before emerald specialization.",
+    "",
+    "Upgrade from gold with the Gold to Diamond upgrade, or craft fresh when your random block finally drops diamonds."
+  ],
+  "task.353A6ACF2BFD224D.title": "Obtain Diamond Furnace",
+  "quest.299659E241E09B34.title": "Emerald Furnace",
+  "quest.299659E241E09B34.quest_desc": [
+    "Speed-focused tier: eight emeralds around a diamond furnace.",
+    "",
+    "Blazing 40-tick smelts with 320 RF/tick output. Tier 2 internal energy buffer. Perfect when you need volume ore processing, not blast-furnace-only recipes.",
+    "",
+    "Pairs well with the Speed augment — watch your fuel consumption if you stack bonuses."
+  ],
+  "task.CA4ABD4C4447B483.title": "Obtain Emerald Furnace",
+  "quest.FCA6968BC32919C8.title": "Crystal Furnace",
+  "quest.FCA6968BC32919C8.quest_desc": [
+    "An alternate diamond-tier branch. Glass blocks in the corners, ender eye below the diamond furnace center.",
+    "",
+    "Matches emerald speed (40 ticks) but pushes generator output to 360 RF/tick. Choose crystal or emerald based on whether you value power export or simpler mats.",
+    "",
+    "Crystal to Obsidian and Diamond to Crystal upgrades let you pivot without breaking the block."
+  ],
+  "task.D38C97B3D942749F.title": "Obtain Crystal Furnace",
+  "quest.4ACBA245D846438E.title": "Obsidian Furnace",
+  "quest.4ACBA245D846438E.quest_desc": [
+    "End-game smelting before netherite. Obsidian frame with blaze rods on the sides and an emerald furnace in the center.",
+    "",
+    "20-tick smelts — ten times faster than vanilla — and 500 RF/tick generation. Tier 2 energy tier.",
+    "",
+    "Two upgrade routes: Emerald to Obsidian or Crystal to Obsidian. Stock blaze rods from mob drops or random-block loot."
+  ],
+  "task.9628CBEAEC25365C.title": "Obtain Obsidian Furnace",
+  "quest.0FE5682E5A114AE5.title": "Netherite Furnace",
+  "quest.0FE5682E5A114AE5.quest_desc": [
+    "The ultimate vanilla-progression furnace. Netherite ingots, magma cream, soul-fire base blocks, and an obsidian furnace core.",
+    "",
+    "5-tick smelts and 1000 RF/tick generator output. Absurd throughput for skyblock ore doubling.",
+    "",
+    "Also obtainable via the Obsidian to Netherite upgrade. Required component for crafting the Rainbow Core."
+  ],
+  "task.948284922A97B7D7.title": "Obtain Netherite Furnace",
+  "quest.D8F772AFB3983283.title": "Allthemodium Furnace",
+  "quest.D8F772AFB3983283.quest_desc": [
+    "Allthemodium-tier smelter for packs with Allthemodium installed. Allthemodium ingots plus special corner blocks around a netherite furnace.",
+    "",
+    "5-tick smelting with modded-tier RF generation. Recipe only appears when Allthemodium ingots exist in your pack.",
+    "",
+    "Upgrade in place from netherite with the Netherite to Allthemodium upgrade, or craft when you reach ATM materials."
+  ],
+  "task.284295229BE0D742.title": "Obtain Allthemodium Furnace",
+  "quest.5538C7B1CEAC6D61.title": "Vibranium Furnace",
+  "quest.5538C7B1CEAC6D61.quest_desc": [
+    "Next step on the Allthemodium progression line. Vibranium ingots and corner pieces around an Allthemodium furnace.",
+    "",
+    "Same 5-tick cook speed with even higher generator potential. Requires Vibranium from the ATM mod line.",
+    "",
+    "Use the Allthemodium to Vibranium upgrade on a placed furnace to preserve augments and side configuration."
+  ],
+  "task.CC41152BB3E719A4.title": "Obtain Vibranium Furnace",
+  "quest.DB2F696DAC73C529.title": "Unobtainium Furnace",
+  "quest.DB2F696DAC73C529.quest_desc": [
+    "Top of the modded furnace chain. Unobtainium ingots around a Vibranium furnace with unobtainium corner blocks.",
+    "",
+    "Maximum Iron Furnaces throughput for ATM-style packs. Recipe gated on unobtainium ingots being present.",
+    "",
+    "Vibranium to Unobtainium upgrade available for in-place tier jumps."
+  ],
+  "task.855145253D5C5708.title": "Obtain Unobtainium Furnace",
+  "quest.E27C9F925FB5A145.title": "Rainbow Furnace",
+  "quest.E27C9F925FB5A145.quest_desc": [
+    "The Rainbow Furnace — endgame prestige smelter and power plant. Craft with Rainbow Core surrounded by Rainbow Plating.",
+    "",
+    "20-tick smelting plus massive RF export when configured as a generator. Only one Rainbow Generator setup should be active per base.",
+    "",
+    "For peak power: every furnace tier must be an active generator with a non-full buffer. Outputs to configured sides, not the internal buffer."
+  ],
+  "task.E82F37363E78795E.title": "Obtain Rainbow Furnace",
+  "quest.04D7C76007348E46.title": "Wireless Heat Transmitter",
+  "quest.04D7C76007348E46.quest_desc": [
+    "Wireless Heat Transmitter — a central FE hub for remote furnace fueling. Stone, comparator, redstone block, and a furnace in the recipe.",
+    "",
+    "Place and supply with Forge Energy. Link Wireless Heat Receivers by inserting them into the transmitter GUI.",
+    "",
+    "Powers all bound receivers simultaneously — run long smelting lines without routing fuel pipes to every machine."
+  ],
+  "task.1182B91F490273BA.title": "Obtain Wireless Heat Transmitter",
+  "quest.DA14D821881483B4.title": "Wireless Heat Receiver",
+  "quest.DA14D821881483B4.quest_desc": [
+    "Wireless Heat Receiver — goes in the fuel slot of Iron-tier and higher furnaces.",
+    "",
+    "Craft with stone, redstone, and a comparator. Bind to a Wireless Heat Transmitter by placing the receiver inside the transmitter block.",
+    "",
+    "Once linked, the furnace draws heat from FE instead of burning coal. Essential for automated skyblock smelting arrays."
+  ],
+  "task.EC4CB658711B0B64.title": "Obtain Wireless Heat Receiver",
+  "quest.E4B0D2B89DF8CFCA.title": "Furnace Settings Linker",
+  "quest.E4B0D2B89DF8CFCA.quest_desc": [
+    "Furnace Settings Linker — copies GUI configuration between furnaces. Paper around a furnace in a plus shape.",
+    "",
+    "Shift + right-click a configured furnace to copy side assignments, redstone modes, and augment layout. Right-click another furnace to paste.",
+    "",
+    "Saves hours when you build identical furnace walls — no manual re-clicking every face."
+  ],
+  "task.CB48AC265A9FBB35.title": "Obtain Furnace Settings Linker",
+  "quest.432945B92901C276.title": "Furnace Spooka-lator",
+  "quest.432945B92901C276.quest_desc": [
+    "Furnace Spooka-lator — Halloween cosmetic fun. Shapeless recipe: carved pumpkin plus furnace.",
+    "",
+    "Right-click any Iron Furnaces block to spookalize it. Sneak + right-click with the Spooka-lator to cleanse the spookiness.",
+    "",
+    "Purely cosmetic — 3spooky5me. Does not affect smelting speed or augments."
+  ],
+  "task.E52ED18750F268D3.title": "Obtain Furnace Spooka-lator",
+  "quest.7C83318981ED790C.title": "Furnace Wrapping Papers",
+  "quest.7C83318981ED790C.quest_desc": [
+    "Furnace Wrapping Papers — holiday gift wrap for furnaces. Paper, red dye, yellow dye, and a furnace.",
+    "",
+    "Right-click a furnace to wrap it as a present. Sneak + right-click to unwrap.",
+    "",
+    "Cosmetic only — yes, the paper would catch fire in real life. Your skyblock base can still look festive."
+  ],
+  "task.C5C13E018BE82424.title": "Obtain Furnace Wrapping Papers",
+  "quest.4653A0BA8BB0AD09.title": "Rainbow Core",
+  "quest.4653A0BA8BB0AD09.quest_desc": [
+    "Heart of the Rainbow Furnace. Netherite furnace center surrounded by every stained-glass color in a 3×3 pattern.",
+    "",
+    "Expensive endgame craft — you need a netherite furnace plus full dye coverage. Plan your color glass stock before starting.",
+    "",
+    "Combine with Rainbow Plating to craft the Rainbow Furnace (million_furnace)."
+  ],
+  "task.1083444509AFFCF6.title": "Obtain Rainbow Core",
+  "quest.8B909FE8E3D6477B.title": "Rainbow Plating",
+  "quest.8B909FE8E3D6477B.quest_desc": [
+    "Shapeless recipe yielding eight plating: one of each furnace tier (iron, copper, silver, gold, diamond, emerald, obsidian, crystal) combined in a crafting grid.",
+    "",
+    "Requires silver to be available in your pack (recipe hidden otherwise). Effectively a trophy craft proving you built the whole furnace line.",
+    "",
+    "Used to surround the Rainbow Core when crafting the Rainbow Furnace."
+  ],
+  "task.5C8CE2898540C857.title": "Obtain Rainbow Plating",
+  "quest.0851D855184E741F.title": "Rainbow Coal",
+  "quest.0851D855184E741F.quest_desc": [
+    "Special fuel for the Rainbow Furnace line. Not craftable in a standard recipe — obtain through JEI and in-game sources.",
+    "",
+    "Feeds the rainbow generator ecosystem when you need dedicated rainbow fuel. Check EMI/JEI for how this pack sources it.",
+    "",
+    "Something is telling me to blow it up... (in-game tooltip — experiment at your own risk)."
+  ],
+  "task.4FE94B36748C1B6C.title": "Obtain Rainbow Coal",
+  "quest.C6136E9E3A41ACB6.title": "Augment: Blasting",
+  "quest.C6136E9E3A41ACB6.quest_desc": [
+    "Locks the furnace to blast-furnace recipes only. Craft: blast furnace center, paper, redstone dust, stone corners.",
+    "",
+    "Pro: processes ores at blast speed. Con: regular smelting recipes no longer work while installed.",
+    "",
+    "Right-click the furnace to insert. One augment per augment slot — combine thoughtfully with Factory or Generator modes."
+  ],
+  "task.BFDBD4363433009A.title": "Obtain Augment: Blasting",
+  "quest.7A561DE76B26741B.title": "Augment: Factory",
+  "quest.7A561DE76B26741B.quest_desc": [
+    "Converts the furnace into a multi-slot factory. Piston center with paper, redstone, and stone.",
+    "",
+    "Pro: parallel smelting lanes in one block. Con: uses power for heat instead of traditional fuel.",
+    "",
+    "Best on tier 1+ furnaces with wireless heat or a Generator augment feeding FE back into the network."
+  ],
+  "task.B4411C194F6C7DBB.title": "Obtain Augment: Factory",
+  "quest.91C04EC9D5187740.title": "Augment: Fuel Efficiency",
+  "quest.91C04EC9D5187740.quest_desc": [
+    "Fuel Efficiency augment — coal center recipe. Trade-off augment with two sides:",
+    "",
+    "Pro: each fuel item heats the furnace twice as much. Con: all recipes cook 25% slower.",
+    "",
+    "Excellent for long unattended runs when you have surplus charcoal from random-block wood drops."
+  ],
+  "task.BC034FD310344188.title": "Obtain Augment: Fuel Efficiency",
+  "quest.AD26B493F59FFBCA.title": "Augment: Generator",
+  "quest.AD26B493F59FFBCA.quest_desc": [
+    "Turns smelting heat into Forge Energy. Repeater center, paper, redstone, stone frame.",
+    "",
+    "Pro: furnace exports RF/tick while running (amount scales with furnace tier). Con: furnace can no longer smelt items.",
+    "",
+    "Dedicated power furnaces are a skyblock staple — park them beside your main smelters."
+  ],
+  "task.2ADE0F7DDE44E698.title": "Obtain Augment: Generator",
+  "quest.D36C7F0362032233.title": "Augment: Smoking",
+  "quest.D36C7F0362032233.quest_desc": [
+    "Restricts the furnace to smoker recipes. Smoker block in the center of the standard augment recipe.",
+    "",
+    "Pro: fast food cooking pipeline. Con: ores and stone recipes stop working.",
+    "",
+    "Slot this on a dedicated food furnace so your ore line keeps the default or blasting augment."
+  ],
+  "task.B3C4CCB16FA6C888.title": "Obtain Augment: Smoking",
+  "quest.42984C4FB5802407.title": "Augment: Speed",
+  "quest.42984C4FB5802407.quest_desc": [
+    "Sugar-centered augment that halves cook time for every recipe.",
+    "",
+    "Pro: doubles throughput. Con: burns twice the fuel per operation.",
+    "",
+    "Stacks with fast furnaces like Emerald or Netherite for absurd ore processing — keep fuel chests nearby."
+  ],
+  "task.DB2C0930001F4137.title": "Obtain Augment: Speed",
+  "quest.D21BEAF52A8711B5.title": "Stone to Iron Furnace Upgrade",
+  "quest.D21BEAF52A8711B5.quest_desc": [
+    "Stone to Iron Furnace Upgrade — eight iron ingots around any stone-tier placeable furnace material.",
+    "",
+    "Sneak + right-click a placed furnace to upgrade without breaking it. Preserves inventory and augments.",
+    "",
+    "Cheaper than crafting a fresh iron furnace when you only need to convert a vanilla furnace mid-base-build."
+  ],
+  "task.9B0688803049C6FE.title": "Obtain Stone to Iron Furnace Upgrade",
+  "quest.1B533C62C95B07BA.title": "Copper to Iron Furnace Upgrade",
+  "quest.1B533C62C95B07BA.quest_desc": [
+    "Copper to Iron Furnace Upgrade — jump from copper tier straight to iron on a placed copper furnace.",
+    "",
+    "Sneak + right-click to apply. Skips rebuilding the block and re-configuring sides.",
+    "",
+    "Use when your random block gave copper early but iron is now cheap."
+  ],
+  "task.A5A1481A9A8CDD2A.title": "Obtain Copper to Iron Furnace Upgrade",
+  "quest.9DADAEC5D92B4D24.title": "Stone to Copper Furnace Upgrade",
+  "quest.9DADAEC5D92B4D24.quest_desc": [
+    "Stone to Copper Furnace Upgrade — eight copper ingots around stone tool material.",
+    "",
+    "Sneak + right-click a vanilla furnace (or compatible base) to convert to copper tier in place.",
+    "",
+    "Handy when copper spawns before iron in your one-block loot table."
+  ],
+  "task.10C5EC7DDC86725B.title": "Obtain Stone to Copper Furnace Upgrade",
+  "quest.6B7037F278472C53.title": "Copper to Silver Furnace Upgrade",
+  "quest.6B7037F278472C53.quest_desc": [
+    "Copper to Silver Furnace Upgrade — silver ingots and glass in the recipe. Applied with sneak + right-click.",
+    "",
+    "Skips the manual silver furnace craft. Requires silver ingots to exist in your pack.",
+    "",
+    "Silver sits between copper/iron and gold — a good stepping stone for RF generation."
+  ],
+  "task.8A33C3F2FAAEABCF.title": "Obtain Copper to Silver Furnace Upgrade",
+  "quest.8666D2AE58025B49.title": "Iron to Silver Furnace Upgrade",
+  "quest.8666D2AE58025B49.quest_desc": [
+    "Iron to Silver Furnace Upgrade — alternate path from iron directly to silver tier.",
+    "",
+    "Sneak + right-click on a placed iron furnace. Choose silver over gold when you have silver stock but not enough gold blocks yet.",
+    "",
+    "Silver furnaces run at 140 ticks with tier 1 energy storage."
+  ],
+  "task.9E3484A3BC0FB004.title": "Obtain Iron to Silver Furnace Upgrade",
+  "quest.EBA592C338C4117F.title": "Iron to Gold Furnace Upgrade",
+  "quest.EBA592C338C4117F.quest_desc": [
+    "Iron to Gold Furnace Upgrade — gold ingots plus a gold block in the crafting recipe.",
+    "",
+    "Sneak + right-click an iron furnace to jump to 120-tick gold tier without replacing the block.",
+    "",
+    "The standard mid-game upgrade once iron furnaces feel too slow."
+  ],
+  "task.366A7B49044D0F57.title": "Obtain Iron to Gold Furnace Upgrade",
+  "quest.7BE58B0CC0020CB9.title": "Silver to Gold Furnace Upgrade",
+  "quest.7BE58B0CC0020CB9.quest_desc": [
+    "Silver to Gold Furnace Upgrade — for players who committed to the silver branch first.",
+    "",
+    "Sneak + right-click a silver furnace. Merges back into the main gold → diamond progression line.",
+    "",
+    "Same end result as the iron → gold upgrade, different input path."
+  ],
+  "task.17761E01062EC07E.title": "Obtain Silver to Gold Furnace Upgrade",
+  "quest.24A7B0926B8A7E26.title": "Gold to Diamond Furnace Upgrade",
+  "quest.24A7B0926B8A7E26.quest_desc": [
+    "Gold to Diamond Furnace Upgrade — diamonds and glass around a gold ingot core.",
+    "",
+    "Sneak + right-click a gold furnace. Lands you at 80-tick smelting with tier 2 energy.",
+    "",
+    "Major skyblock milestone — diamonds from sieving or random block finally pay off."
+  ],
+  "task.6C258735216B1353.title": "Obtain Gold to Diamond Furnace Upgrade",
+  "quest.20C5811BEF1522F8.title": "Diamond to Emerald Furnace Upgrade",
+  "quest.20C5811BEF1522F8.quest_desc": [
+    "Diamond to Emerald Furnace Upgrade — eight emeralds around a diamond-tier source.",
+    "",
+    "Sneak + right-click to reach 40-tick smelting. Prioritize when speed matters more than generator RF.",
+    "",
+    "Emeralds may come from villager trades or random-block loot depending on your pack stage."
+  ],
+  "task.3D200CF4C6CBFABB.title": "Obtain Diamond to Emerald Furnace Upgrade",
+  "quest.89CB2FD05BC4BDC8.title": "Diamond to Crystal Furnace Upgrade",
+  "quest.89CB2FD05BC4BDC8.quest_desc": [
+    "Diamond to Crystal Furnace Upgrade — glass and ender eye instead of emeralds.",
+    "",
+    "Sneak + right-click a diamond furnace. Crystal branch trades emerald cost for ender eyes.",
+    "",
+    "40-tick speed with higher RF/tick than emerald — pick based on which mats your island produces."
+  ],
+  "task.827875D265B040D3.title": "Obtain Diamond to Crystal Furnace Upgrade",
+  "quest.FE5426DFC8AA9A5C.title": "Emerald to Obsidian Furnace Upgrade",
+  "quest.FE5426DFC8AA9A5C.quest_desc": [
+    "Emerald to Obsidian Furnace Upgrade — obsidian and blaze rods in the recipe.",
+    "",
+    "Sneak + right-click an emerald furnace for 20-tick smelting. Requires blaze rods from mob farms or loot.",
+    "",
+    "One of two paths to obsidian tier (see also Crystal to Obsidian)."
+  ],
+  "task.FCDE29C4910406BD.title": "Obtain Emerald to Obsidian Furnace Upgrade",
+  "quest.AF8732831AE6920A.title": "Crystal to Obsidian Furnace Upgrade",
+  "quest.AF8732831AE6920A.quest_desc": [
+    "Crystal to Obsidian Furnace Upgrade — alternate obsidian route from the crystal branch.",
+    "",
+    "Sneak + right-click a crystal furnace. Same obsidian-tier stats, different prerequisite furnace.",
+    "",
+    "Lets crystal-line players merge into the netherite progression without backtracking to emerald."
+  ],
+  "task.7E44FC87041F08C3.title": "Obtain Crystal to Obsidian Furnace Upgrade",
+  "quest.C36DB24C0D03AB59.title": "Obsidian to Netherite Furnace Upgrade",
+  "quest.C36DB24C0D03AB59.quest_desc": [
+    "Obsidian to Netherite Furnace Upgrade — netherite ingots, magma cream, and soul-fire blocks.",
+    "",
+    "Sneak + right-click an obsidian furnace for 5-tick smelting and 1000 RF/tick.",
+    "",
+    "Endgame vanilla-material upgrade. Farm ancient debris from random block or nether loot before attempting."
+  ],
+  "task.90210D6F19B872E9.title": "Obtain Obsidian to Netherite Furnace Upgrade",
+  "quest.99969A3A5D890906.title": "Netherite to Allthemodium Furnace Upgrade",
+  "quest.99969A3A5D890906.quest_desc": [
+    "Netherite to Allthemodium Furnace Upgrade — for Allthemodium mod packs.",
+    "",
+    "Sneak + right-click a netherite furnace when Allthemodium ingots are available.",
+    "",
+    "Gateway into the ATM furnace trio (Allthemodium → Vibranium → Unobtainium)."
+  ],
+  "task.0379606DCC97ADC0.title": "Obtain Netherite to Allthemodium Furnace Upgrade",
+  "quest.4D4574197150F3BA.title": "Allthemodium to Vibranium Furnace Upgrade",
+  "quest.4D4574197150F3BA.quest_desc": [
+    "Allthemodium to Vibranium Furnace Upgrade — next ATM tier.",
+    "",
+    "Sneak + right-click an Allthemodium furnace. Requires Vibranium ingots in your instance.",
+    "",
+    "Maintains augment setup while climbing the modded furnace ladder."
+  ],
+  "task.015E7D937C278BB6.title": "Obtain Allthemodium to Vibranium Furnace Upgrade",
+  "quest.8571CBBFB9CFFC12.title": "Vibranium to Unobtainium Furnace Upgrade",
+  "quest.8571CBBFB9CFFC12.quest_desc": [
+    "Vibranium to Unobtainium Furnace Upgrade — final ATM furnace tier.",
+    "",
+    "Sneak + right-click a Vibranium furnace. Top throughput for modded skyblock ore processing.",
+    "",
+    "Pair with Generator augments on lower tiers to power the FE-hungry endgame factory line."
+  ],
+  "task.5F93AC81B0F3CBB9.title": "Obtain Vibranium to Unobtainium Furnace Upgrade"
+}
