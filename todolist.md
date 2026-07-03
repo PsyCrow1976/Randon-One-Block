@@ -6,7 +6,7 @@
 
 - [ ] Add a **quick book section** on getting a **bone block** (and using it) to obtain **seeds** — early-game farming tip for one-block skyblock
 - [ ] Add **Gateways to Eternity** quest chapter (full progression beyond the intro quest in *Good to Know Mods*)
-- [ ] Add **Ex Deorum** quest chapter
+- [X] Add **Ex Deorum** quest chapter
 - [ ] Add **Construction Wands** intro quest to *Good to Know Mods*
 - [ ] Add AnimalPens Chapter (trigger by creating Avian net)
 - [ ] Add Aphothious Chapter (triggered by Enchanting table)
