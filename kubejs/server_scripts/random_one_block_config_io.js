@@ -28,12 +28,19 @@ function robDefaultRuntimeConfig(filename) {
   return RANDOM_ONE_BLOCK_RUNTIME_CONFIG_FILES[name]
 }
 
+function robPathHasKubejsConfig(pathStr) {
+  return (
+    String(pathStr).indexOf('/kubejs/config/') >= 0 || String(pathStr).indexOf('\\kubejs\\config\\') >= 0
+  )
+}
+
 function robKubejsConfigPath(filename) {
   var name = String(filename)
   var $KubeJSPaths = null
   var candidates = []
   var i = 0
   var pathStr = ''
+  var configPath = ''
 
   try {
     $KubeJSPaths = Java.loadClass('dev.latvian.mods.kubejs.KubeJSPaths')
@@ -41,32 +48,47 @@ function robKubejsConfigPath(filename) {
     return null
   }
 
-  // KubeJS 8.x: CONFIG/DIRECTORY can resolve to the instance root on some builds.
-  // Always prefer an explicit kubejs/config path under GAMEDIR.
+  // KubeJS 8.x: CONFIG can resolve to the instance root on some builds — never use that for pack JSON.
   try {
-    candidates.push($KubeJSPaths.GAMEDIR.resolve('kubejs').resolve('config').resolve(name).toAbsolutePath())
+    candidates.push(String($KubeJSPaths.GAMEDIR.resolve('kubejs').resolve('config').resolve(name).toAbsolutePath()))
   } catch (ignored2) {}
 
   try {
-    if ($KubeJSPaths.CONFIG) {
-      candidates.push($KubeJSPaths.CONFIG.resolve(name).toAbsolutePath())
+    if ($KubeJSPaths.DIRECTORY) {
+      candidates.push(
+        String($KubeJSPaths.DIRECTORY.resolve('config').resolve(name).toAbsolutePath())
+      )
     }
   } catch (ignored3) {}
 
   try {
-    if ($KubeJSPaths.DIRECTORY) {
-      candidates.push($KubeJSPaths.DIRECTORY.resolve('config').resolve(name).toAbsolutePath())
+    if ($KubeJSPaths.CONFIG) {
+      configPath = String($KubeJSPaths.CONFIG.resolve(name).toAbsolutePath())
+      if (robPathHasKubejsConfig(configPath)) {
+        candidates.push(configPath)
+      }
     }
   } catch (ignored4) {}
 
   for (i = 0; i < candidates.length; i++) {
     pathStr = String(candidates[i])
-    if (pathStr.indexOf('/kubejs/config/') >= 0 || pathStr.indexOf('\\kubejs\\config\\') >= 0) {
+    if (robPathHasKubejsConfig(pathStr)) {
       return pathStr
     }
   }
 
-  if (candidates.length) return String(candidates[0])
+  try {
+    pathStr = String($KubeJSPaths.GAMEDIR.toAbsolutePath()) + '/kubejs/config/' + name
+    if (robPathHasKubejsConfig(pathStr)) {
+      return pathStr
+    }
+  } catch (ignored5) {}
+
+  console.error(
+    '[RandomOneBlock] Could not resolve kubejs/config path for ' +
+      name +
+      ' — remove stale copies from the instance root and run /reload'
+  )
   return null
 }
 

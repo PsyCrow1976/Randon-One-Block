@@ -8,6 +8,15 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.8] — 2026-07-04
+
+### Random One Block
+
+- **Config path fix** — `random_one_block_config_io.js` no longer falls back to instance-root JSON (stale `random_one_block_mod_pools.json` was shadowing `kubejs/config/` and dropped the ProjectE quest unlock). Run `./scripts/clean-stale-instance-config.sh` after linking an instance.
+- **ProjectE unlock belt-and-suspenders** — Philosopher's Stone quest also runs `randomblock poolenable projecte true` on completion.
+
+---
+
 ## [1.0.3.7] — 2026-07-04
 
 ### Random One Block
