@@ -22,6 +22,7 @@ Progression is light:
 
 - **FTB Quests** — chapters are also being written with AI help (Getting started, basics, mod intros).
 - **The Uncrafting Table** — a custom mod for **Minecraft 26.1.2**: reverse a crafting recipe and get ingredients back. Nothing like it existed for this version, so AI helped create it for the pack.
+- **ProjectE** — feed the ingredients you recover from the Uncrafting Table into ProjectE’s transmutation grid to build **EMC** (Energy-Matter Currency). Once items are learned, spend that EMC to duplicate what you actually need instead of hoping the center block rolls it.
 - Everything else is “mods I liked” thrown together on skyblock.
 
 ---
