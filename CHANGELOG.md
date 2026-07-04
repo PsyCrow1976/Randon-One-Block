@@ -4,7 +4,46 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.3.x`** — patch bumps during development; milestone **`1.0.3.0`** = team mine counter overlay (CurseForge). Previous milestone **`1.0.2.0`** = Ex Deorum quest book. Track **`1.0.1.x`** — **`1.0.1.0`** = mod-pool gating.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.0] — 2026-07-04
+
+**Milestone** — **ProjectE**, expanded quest book, and reliable mod-pool unlocks (CurseForge release).
+
+### Highlights
+
+- **81 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.76**
+- **ProjectE** (`projecte-1.2.0`) — full quest chapter with dependency tree; Philosopher's Stone in Getting Started unlocks the `projecte` random pool for your island team
+- **Six mod quest chapters** added in 1.0.3.x — Iron Furnaces, Animal Pens, Apotheosis, Easy Villagers & Piglins, Dank Storage, and ProjectE
+- **Mod pool gating** — catalog expanded for ProjectE, Ender IO, and Easy Ore Generation; KubeJS quest unlocks fixed (config path + handler re-registration after `/reload`)
+- **Randon Mined** team counter overlay (from 1.0.3.0) still included
+
+### FTB Quests
+
+- **Quest book sync** — Reward text and lang entries refreshed from in-game editor across Getting Started, Storage Options, Ex Deorum, ProjectE, Apotheosis, Iron Furnaces, Animal Pens, Dank Storage, Easy Villagers, and Good to Know Mods
+- **ProjectE** — Gated chapter (Philosopher's Stone entry → fuels → machines → matter tiers); *The Red Rock* unlocks ProjectE blocks in the random pool (same KubeJS path as Leather Backpack → Sophisticated Storage)
+- **Getting Started** — Philosopher's Stone quest, Crafting Table on a Stick, Uncrafting Table reward line
+
+### Random One Block
+
+- **`random_one_block_mod_pools.json`** — `projecte`, `enderio`, `easyoregeneration` added to `mods_with_minable_blocks`; quest unlock map for ProjectE, Ex Deorum, and Sophisticated Storage
+- **Config I/O** — Pack JSON always loads from `kubejs/config/`; stale instance-root copies cleaned via `clean-stale-instance-config.sh`
+
+### Mods (since 1.0.3.0)
+
+- **Added:** ProjectEE `1.2.0`, Easy Ore Generation, Ender IO
+- **Removed:** JourneyMap (1.0.3.0), Construction Wand - KOTS (1.0.3.1)
+- **Updated:** Balm, BBL Core, Bookshelf, Sophisticated Backpacks, Sophisticated Core, Sophisticated Storage
+
+---
+
+## [1.0.3.10] — 2026-07-04
+
+### FTB Quests
+
+- **Quest rewards sync** — Lang entries and reward labels updated from in-game editor across all quest chapters (Getting Started, Storage Options, Ex Deorum, ProjectE, Apotheosis, Iron Furnaces, Animal Pens, Dank Storage, Easy Villagers, Good to Know Mods). Philosopher's Stone quest rewards trimmed to XP only (pool unlock handled by KubeJS).
 
 ---
 
