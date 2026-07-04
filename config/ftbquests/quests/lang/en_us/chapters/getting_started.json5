@@ -52,6 +52,16 @@
     "The quest completes when a crafting table is in your inventory.",
   ],
   "quest.51521D28751E05D4.title": "Flying Items",
+  "quest.57BD1D73E42470EF.title": "The Red Rock",
+  "quest.57BD1D73E42470EF.quest_subtitle": "Unlocks ProjectE pool",
+  "quest.57BD1D73E42470EF.quest_desc": [
+    "ProjectE turns your random-block junk pile into a single currency called &eEMC&r (Energy-Matter Currency). The &6Philosopher's Stone&r is where that journey starts.",
+    "",
+    "Craft it from glowstone dust, redstone, and diamonds — ingredients you will eventually pull from your center block. Once you have it, open the transmutation grid (default keybind while holding the stone), &ateach&r it items, and spend EMC to duplicate anything you have learned.",
+    "",
+    "Completing this quest &aunlocks the ProjectE mod pool&r for your island team. Collectors, condensers, relays, matter blocks, and other full-cube ProjectE blocks can now roll from your random center block. Open the &eProjectE&r quest tab for the full crafting tree.",
+  ],
+  "task.6752A8FD5075C68D.title": "Craft a Philosopher's Stone",
   "quest.4A1F5EA13AF49DDA.quest_desc": [
     "Your random block spits out all kinds of crafted blocks — stairs, slabs, doors, machines, and more. The Uncrafting Table reverses normal crafting recipes so you can recover the ingredients.",
     "",

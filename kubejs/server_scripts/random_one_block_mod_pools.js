@@ -31,11 +31,13 @@ const DEFAULT_MOD_POOLS_CONFIG = {
   },
   quest_unlock_map: {
     '1D5A582F52D7CB30': 'sophisticatedstorage',
-    '5F76BA38891F3B07': 'exdeorum'
+    '5F76BA38891F3B07': 'exdeorum',
+    '57BD1D73E42470EF': 'projecte'
   },
   quest_task_fallback: {
     '1D5A582F52D7CB30': ['1A2B3C4D5E6F7081'],
-    '5F76BA38891F3B07': ['1A85CE9EB3CAAD93']
+    '5F76BA38891F3B07': ['1A85CE9EB3CAAD93'],
+    '57BD1D73E42470EF': ['6752A8FD5075C68D']
   }
 }
 

@@ -8,6 +8,18 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.7] — 2026-07-04
+
+### Random One Block
+
+- **ProjectE pool unlock** — Completing the Getting Started Philosopher's Stone quest (`57BD1D73E42470EF`) enables the `projecte` namespace for the island team via `quest_unlock_map` + `quest_task_fallback`.
+
+### FTB Quests
+
+- **Getting Started** — Philosopher's Stone quest text notes the ProjectE pool unlock on completion.
+
+---
+
 ## [1.0.3.6] — 2026-07-04
 
 ### Random One Block
