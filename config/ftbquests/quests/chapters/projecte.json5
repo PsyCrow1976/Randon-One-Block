@@ -1,0 +1,2219 @@
+{
+  id: "610B8D5D9768CD98",
+  group: "",
+  order_index: 9,
+  icon: {
+    id: "projecte:philosophers_stone",
+    count: 1,
+  },
+  filename: "projecte",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "projecte:transmutation_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      dependencies: [
+        "32DD7832C096CE0F",
+      ],
+      id: "5B2DEDAC3AEA1FBD",
+      tasks: [
+        {
+          id: "65193A5678C654D9",
+          type: "item",
+          item: {
+            id: "projecte:transmutation_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4DE26F530B536FCD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:transmutation_tablet",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      dependencies: [
+        "5B2DEDAC3AEA1FBD",
+      ],
+      id: "38059109610C34FC",
+      tasks: [
+        {
+          id: "1AE9688746BC8399",
+          type: "item",
+          item: {
+            id: "projecte:transmutation_tablet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F31798BB06D9A5F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:alchemical_chest",
+        count: 1,
+      },
+      x: 3.5,
+      y: -3.0,
+      dependencies: [
+        "1BB005CED6B32DDA",
+        "6E95B581E5B3EA40",
+        "2EAC0EEDE7A53E47",
+      ],
+      id: "5D92DDDC603C1C61",
+      tasks: [
+        {
+          id: "416A56C429631500",
+          type: "item",
+          item: {
+            id: "projecte:alchemical_chest",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "390D1E6E33BDA399",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:alchemical_coal",
+        count: 1,
+      },
+      x: -3.0,
+      y: 1.5,
+      dependencies: [
+        "32DD7832C096CE0F",
+      ],
+      id: "1578735DE6C552FF",
+      tasks: [
+        {
+          id: "1CD162176334D1BC",
+          type: "item",
+          item: {
+            id: "projecte:alchemical_coal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "051E4D3C101A9796",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:mobius_fuel",
+        count: 1,
+      },
+      x: -3.0,
+      y: 3.0,
+      dependencies: [
+        "1578735DE6C552FF",
+      ],
+      id: "75D2B341CCA2FC61",
+      tasks: [
+        {
+          id: "399A4C3CC1159D46",
+          type: "item",
+          item: {
+            id: "projecte:mobius_fuel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3B5305AD376A9DDC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:aeternalis_fuel",
+        count: 1,
+      },
+      x: -3.0,
+      y: 4.5,
+      dependencies: [
+        "75D2B341CCA2FC61",
+      ],
+      id: "40BE353C8F0FB52C",
+      tasks: [
+        {
+          id: "0B0DAE98FEB7A772",
+          type: "item",
+          item: {
+            id: "projecte:aeternalis_fuel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "34DEA7489202E471",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:low_covalence_dust",
+        count: 1,
+      },
+      x: 1.5,
+      y: -3.0,
+      id: "6E95B581E5B3EA40",
+      tasks: [
+        {
+          id: "7DF8D3621DE14D84",
+          type: "item",
+          item: {
+            id: "projecte:low_covalence_dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "70FD1ED89C2D7E68",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:medium_covalence_dust",
+        count: 1,
+      },
+      x: 1.5,
+      y: -4.5,
+      id: "1BB005CED6B32DDA",
+      tasks: [
+        {
+          id: "0AC7EFBE606C51EE",
+          type: "item",
+          item: {
+            id: "projecte:medium_covalence_dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7E5B76DEC332D88C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:high_covalence_dust",
+        count: 1,
+      },
+      x: 1.5,
+      y: -1.5,
+      dependencies: [
+        "32DD7832C096CE0F",
+      ],
+      id: "2EAC0EEDE7A53E47",
+      tasks: [
+        {
+          id: "077A8335DADBD560",
+          type: "item",
+          item: {
+            id: "projecte:high_covalence_dust",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "774B1E601D6CB84F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_ein",
+        count: 1,
+      },
+      x: 0.0,
+      y: 14.5,
+      id: "0F763E73C58EC60B",
+      tasks: [
+        {
+          id: "20615F5A27C961ED",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_ein",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6BC5630E4B424FBA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_zwei",
+        count: 1,
+      },
+      x: 2.0,
+      y: 14.5,
+      dependencies: [
+        "0F763E73C58EC60B",
+      ],
+      id: "1A67D1ED92985E62",
+      tasks: [
+        {
+          id: "0CF746F61657026C",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_zwei",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6DD243F92D2BDC18",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_drei",
+        count: 1,
+      },
+      x: 4.0,
+      y: 14.5,
+      dependencies: [
+        "1A67D1ED92985E62",
+      ],
+      id: "36175E27FDCA5480",
+      tasks: [
+        {
+          id: "6799BB9D83899740",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_drei",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "31B291BB769F126C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_vier",
+        count: 1,
+      },
+      x: 6.0,
+      y: 14.5,
+      dependencies: [
+        "36175E27FDCA5480",
+      ],
+      id: "2A77F795518F6D66",
+      tasks: [
+        {
+          id: "113ADC47D19367CB",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_vier",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1460D64097147716",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_sphere",
+        count: 1,
+      },
+      x: 8.0,
+      y: 14.5,
+      dependencies: [
+        "2A77F795518F6D66",
+      ],
+      id: "4BC846DB5ADCF26D",
+      tasks: [
+        {
+          id: "5BB1E7A931FFA066",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_sphere",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7425E63569A10B63",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:klein_star_omega",
+        count: 1,
+      },
+      x: 10.0,
+      y: 14.5,
+      dependencies: [
+        "4BC846DB5ADCF26D",
+      ],
+      id: "52BFDC9AE1041630",
+      tasks: [
+        {
+          id: "2BD2E8822B693E4F",
+          type: "item",
+          item: {
+            id: "projecte:klein_star_omega",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5CBE980F39353DC2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dark_matter",
+        count: 1,
+      },
+      x: -3.0,
+      y: 6.5,
+      dependencies: [
+        "40BE353C8F0FB52C",
+      ],
+      id: "0BB6C99AB03C8F2B",
+      tasks: [
+        {
+          id: "2CE80A9778B2FCCD",
+          type: "item",
+          item: {
+            id: "projecte:dark_matter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "547C1EB9A792D2E5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:red_matter",
+        count: 1,
+      },
+      x: -3.0,
+      y: 8.0,
+      dependencies: [
+        "0BB6C99AB03C8F2B",
+      ],
+      id: "6A44D37D229099D3",
+      tasks: [
+        {
+          id: "3699241BEDF4A03C",
+          type: "item",
+          item: {
+            id: "projecte:red_matter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6E071BDE6BB8B7A6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:collector_mk1",
+        count: 1,
+      },
+      x: -6.0,
+      y: 1.5,
+      id: "4C278DFDF318CB8A",
+      tasks: [
+        {
+          id: "0593151AD0BFB0BD",
+          type: "item",
+          item: {
+            id: "projecte:collector_mk1",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7147F2379D7DCFD0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:collector_mk2",
+        count: 1,
+      },
+      x: -6.0,
+      y: 6.5,
+      dependencies: [
+        "4C278DFDF318CB8A",
+        "0BB6C99AB03C8F2B",
+      ],
+      id: "0A2C1914FE5B55B6",
+      tasks: [
+        {
+          id: "696E8E16473DD2D7",
+          type: "item",
+          item: {
+            id: "projecte:collector_mk2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FF5FE88241BE060",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:collector_mk3",
+        count: 1,
+      },
+      x: -6.0,
+      y: 8.0,
+      dependencies: [
+        "6A44D37D229099D3",
+        "0A2C1914FE5B55B6",
+      ],
+      id: "147AAC10689EB63B",
+      tasks: [
+        {
+          id: "750B6B13788D5420",
+          type: "item",
+          item: {
+            id: "projecte:collector_mk3",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1B224783DFC3B273",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:relay_mk1",
+        count: 1,
+      },
+      x: -1.5,
+      y: 1.5,
+      id: "1BB1B5DBA267BB1F",
+      tasks: [
+        {
+          id: "2711AF5009C89E1F",
+          type: "item",
+          item: {
+            id: "projecte:relay_mk1",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "774A250DB09AE118",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:relay_mk2",
+        count: 1,
+      },
+      x: -1.5,
+      y: 6.5,
+      dependencies: [
+        "1BB1B5DBA267BB1F",
+        "0BB6C99AB03C8F2B",
+      ],
+      id: "0331316F80FFEA7E",
+      tasks: [
+        {
+          id: "3759958F0B0D7DE2",
+          type: "item",
+          item: {
+            id: "projecte:relay_mk2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4D430F1D5DC1692A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:relay_mk3",
+        count: 1,
+      },
+      x: -1.5,
+      y: 8.0,
+      dependencies: [
+        "0331316F80FFEA7E",
+        "6A44D37D229099D3",
+      ],
+      id: "37E77BEA1C4F0C96",
+      tasks: [
+        {
+          id: "7BA02CBEFF389F2C",
+          type: "item",
+          item: {
+            id: "projecte:relay_mk3",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3F3077F4885ABB5A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:condenser_mk1",
+        count: 1,
+      },
+      x: 5.5,
+      y: -3.0,
+      dependencies: [
+        "5D92DDDC603C1C61",
+      ],
+      id: "247B2E2E0A98AEE5",
+      tasks: [
+        {
+          id: "221AF3A3BEBCB985",
+          type: "item",
+          item: {
+            id: "projecte:condenser_mk1",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0DA9426143FF24D0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:condenser_mk2",
+        count: 1,
+      },
+      x: 7.5,
+      y: -3.0,
+      dependencies: [
+        "247B2E2E0A98AEE5",
+      ],
+      id: "70FCF598B4C52130",
+      tasks: [
+        {
+          id: "0FAA82A6ABBA7727",
+          type: "item",
+          item: {
+            id: "projecte:condenser_mk2",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FBA50EA3B68D357",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_pedestal",
+        count: 1,
+      },
+      x: -3.0,
+      y: 10.0,
+      dependencies: [
+        "31FEC6D40C12C544",
+        "6A44D37D229099D3",
+      ],
+      id: "3BAD4651B892CCA2",
+      tasks: [
+        {
+          id: "24E94C3607320C22",
+          type: "item",
+          item: {
+            id: "projecte:dm_pedestal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "23A4ACF057DECDFF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_furnace",
+        count: 1,
+      },
+      x: -4.5,
+      y: 11.5,
+      dependencies: [
+        "31FEC6D40C12C544",
+      ],
+      id: "486112E04CAA0F12",
+      tasks: [
+        {
+          id: "124098CC8B40A2D6",
+          type: "item",
+          item: {
+            id: "projecte:dm_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "43DB048379A3F8AD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_furnace",
+        count: 1,
+      },
+      x: -1.5,
+      y: 11.5,
+      dependencies: [
+        "486112E04CAA0F12",
+        "31AAA1F76D7FFF4F",
+      ],
+      id: "619F871CC4F20021",
+      tasks: [
+        {
+          id: "058D87142BF9FC07",
+          type: "item",
+          item: {
+            id: "projecte:rm_furnace",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1D5BA410B0A1B5D2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_pick",
+        count: 1,
+      },
+      x: 3.5,
+      y: 0.0,
+      id: "39541BC609272AE7",
+      tasks: [
+        {
+          id: "1D5C102AB733D449",
+          type: "item",
+          item: {
+            id: "projecte:dm_pick",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "738248EED1939ACE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_axe",
+        count: 1,
+      },
+      x: 3.5,
+      y: 7.5,
+      id: "00613B4D37BBBD71",
+      tasks: [
+        {
+          id: "0833001AB81800BE",
+          type: "item",
+          item: {
+            id: "projecte:dm_axe",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "096BD61DF3D75382",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_shovel",
+        count: 1,
+      },
+      x: 3.5,
+      y: -1.5,
+      id: "5B07137430E623F2",
+      tasks: [
+        {
+          id: "6C9A118F5FE9D167",
+          type: "item",
+          item: {
+            id: "projecte:dm_shovel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1E045D51A5301E4F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_sword",
+        count: 1,
+      },
+      x: 3.5,
+      y: 4.5,
+      id: "644184ABA4CE25F5",
+      tasks: [
+        {
+          id: "1AA3DD404957562B",
+          type: "item",
+          item: {
+            id: "projecte:dm_sword",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1E7A2109222C1F81",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_hoe",
+        count: 1,
+      },
+      x: 3.5,
+      y: 3.0,
+      id: "6349B1D9BB1FD4E0",
+      tasks: [
+        {
+          id: "6227D9599376134B",
+          type: "item",
+          item: {
+            id: "projecte:dm_hoe",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "34364B808EA13198",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_hammer",
+        count: 1,
+      },
+      x: 3.5,
+      y: 1.5,
+      id: "0A9DC8515D81541A",
+      tasks: [
+        {
+          id: "45089730E33659F2",
+          type: "item",
+          item: {
+            id: "projecte:dm_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "73D7A874E818DDB9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_shears",
+        count: 1,
+      },
+      x: 3.5,
+      y: 6.0,
+      id: "58532D484BFC3EFA",
+      tasks: [
+        {
+          id: "1E1F11B6CFA34027",
+          type: "item",
+          item: {
+            id: "projecte:dm_shears",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F5B1F2AB43ABD83",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_helmet",
+        count: 1,
+      },
+      x: 2.0,
+      y: 9.5,
+      id: "586A329705A476C6",
+      tasks: [
+        {
+          id: "382CF70490FF1006",
+          type: "item",
+          item: {
+            id: "projecte:dm_helmet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FC6A557A1DC7C04",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_chestplate",
+        count: 1,
+      },
+      x: 4.0,
+      y: 9.5,
+      id: "711CEA06F4F08822",
+      tasks: [
+        {
+          id: "5E622EDA64F5F836",
+          type: "item",
+          item: {
+            id: "projecte:dm_chestplate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3D165DF40EA5F57F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_leggings",
+        count: 1,
+      },
+      x: 6.0,
+      y: 9.5,
+      id: "3B90D2007ACD3BDF",
+      tasks: [
+        {
+          id: "709CE0787F3F153E",
+          type: "item",
+          item: {
+            id: "projecte:dm_leggings",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4421AC1C5DE6B897",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:dm_boots",
+        count: 1,
+      },
+      x: 8.0,
+      y: 9.5,
+      id: "0F8DEFA031253E54",
+      tasks: [
+        {
+          id: "72766377887038CC",
+          type: "item",
+          item: {
+            id: "projecte:dm_boots",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5963EE884BDA2765",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_pick",
+        count: 1,
+      },
+      x: 5.5,
+      y: 0.0,
+      dependencies: [
+        "39541BC609272AE7",
+      ],
+      id: "14623F79C1E6FF57",
+      tasks: [
+        {
+          id: "3BBECBF92B9BD4BE",
+          type: "item",
+          item: {
+            id: "projecte:rm_pick",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "455F681513E4DD5D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_axe",
+        count: 1,
+      },
+      x: 5.5,
+      y: 7.5,
+      dependencies: [
+        "00613B4D37BBBD71",
+      ],
+      id: "35A3F24600BC1FF2",
+      tasks: [
+        {
+          id: "5B79F78F8BE5520B",
+          type: "item",
+          item: {
+            id: "projecte:rm_axe",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "28BEA6061DFA8A91",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_shovel",
+        count: 1,
+      },
+      x: 5.5,
+      y: -1.5,
+      dependencies: [
+        "5B07137430E623F2",
+      ],
+      id: "7C1583C09C8AE8CB",
+      tasks: [
+        {
+          id: "3092BA51371D08E1",
+          type: "item",
+          item: {
+            id: "projecte:rm_shovel",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "52679B265990AB9E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_sword",
+        count: 1,
+      },
+      x: 5.5,
+      y: 4.5,
+      dependencies: [
+        "644184ABA4CE25F5",
+      ],
+      id: "38D38DAF2A29E56E",
+      tasks: [
+        {
+          id: "3F016F22F70B94BB",
+          type: "item",
+          item: {
+            id: "projecte:rm_sword",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3FE6B2CB7B931C5A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_hoe",
+        count: 1,
+      },
+      x: 5.5,
+      y: 3.0,
+      dependencies: [
+        "6349B1D9BB1FD4E0",
+      ],
+      id: "06981E75148C9216",
+      tasks: [
+        {
+          id: "0F825AF7593876C9",
+          type: "item",
+          item: {
+            id: "projecte:rm_hoe",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "197E9A896EA39052",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_hammer",
+        count: 1,
+      },
+      x: 5.5,
+      y: 1.5,
+      dependencies: [
+        "0A9DC8515D81541A",
+      ],
+      id: "1CF44D124BE6220B",
+      tasks: [
+        {
+          id: "7051B4C72F671CBC",
+          type: "item",
+          item: {
+            id: "projecte:rm_hammer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5298647D29E4D491",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_shears",
+        count: 1,
+      },
+      x: 5.5,
+      y: 6.0,
+      dependencies: [
+        "58532D484BFC3EFA",
+      ],
+      id: "07DBD53F8C5BD907",
+      tasks: [
+        {
+          id: "63F49A41E0D03EDC",
+          type: "item",
+          item: {
+            id: "projecte:rm_shears",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5BD3997506B36DAF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_katar",
+        count: 1,
+      },
+      x: 9.0,
+      y: 5.0,
+      dependencies: [
+        "07DBD53F8C5BD907",
+        "38D38DAF2A29E56E",
+        "06981E75148C9216",
+        "35A3F24600BC1FF2",
+      ],
+      id: "20519DB423ACF6DF",
+      tasks: [
+        {
+          id: "05F5A74C23EC0D1B",
+          type: "item",
+          item: {
+            id: "projecte:rm_katar",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "141D6C1F06E5A567",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_morning_star",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      dependencies: [
+        "1CF44D124BE6220B",
+        "14623F79C1E6FF57",
+        "7C1583C09C8AE8CB",
+      ],
+      id: "4500F56255671C84",
+      tasks: [
+        {
+          id: "396DDB8BE86EB935",
+          type: "item",
+          item: {
+            id: "projecte:rm_morning_star",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3FFBE181B2F4F3B9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_helmet",
+        count: 1,
+      },
+      x: 2.0,
+      y: 11.0,
+      id: "5854D44D91DF138C",
+      tasks: [
+        {
+          id: "6EB88B2F5BD67BF7",
+          type: "item",
+          item: {
+            id: "projecte:rm_helmet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1CBA298806ADCBDD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_chestplate",
+        count: 1,
+      },
+      x: 4.0,
+      y: 11.0,
+      id: "549242288A9E348A",
+      tasks: [
+        {
+          id: "1EE21A88187750C4",
+          type: "item",
+          item: {
+            id: "projecte:rm_chestplate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5134C86A33B4C0C1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_leggings",
+        count: 1,
+      },
+      x: 6.0,
+      y: 11.0,
+      id: "3E41DE7BE187075B",
+      tasks: [
+        {
+          id: "0D61576DB225D6BA",
+          type: "item",
+          item: {
+            id: "projecte:rm_leggings",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2CD394DE9DC4614A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:rm_boots",
+        count: 1,
+      },
+      x: 8.0,
+      y: 11.0,
+      id: "5B01563687A9D527",
+      tasks: [
+        {
+          id: "5529CAB38C291AA8",
+          type: "item",
+          item: {
+            id: "projecte:rm_boots",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "31CB2F70097570B4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:gem_helmet",
+        count: 1,
+      },
+      x: 2.0,
+      y: 12.5,
+      id: "56C0C9C6EA166CF6",
+      tasks: [
+        {
+          id: "3A21460059E349B2",
+          type: "item",
+          item: {
+            id: "projecte:gem_helmet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6436DCCA9AE07238",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:gem_chestplate",
+        count: 1,
+      },
+      x: 4.0,
+      y: 12.5,
+      id: "33125F0B98535E06",
+      tasks: [
+        {
+          id: "6421F0497DF51321",
+          type: "item",
+          item: {
+            id: "projecte:gem_chestplate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "65532223979E13D9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:gem_leggings",
+        count: 1,
+      },
+      x: 6.0,
+      y: 12.5,
+      id: "43E45CEFE5A2089A",
+      tasks: [
+        {
+          id: "121F85A3364F3C3A",
+          type: "item",
+          item: {
+            id: "projecte:gem_leggings",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "21D260C73AF63412",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:gem_boots",
+        count: 1,
+      },
+      x: 8.0,
+      y: 12.5,
+      id: "4998A17E3D92E7C5",
+      tasks: [
+        {
+          id: "1BA81550EA64766D",
+          type: "item",
+          item: {
+            id: "projecte:gem_boots",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2E0F7BAA3948FF9D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:iron_band",
+        count: 1,
+      },
+      x: 14.5,
+      y: -1.5,
+      id: "68F83866D02CF848",
+      tasks: [
+        {
+          id: "27B76D3A1D1CD717",
+          type: "item",
+          item: {
+            id: "projecte:iron_band",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "34B828DE2A54E291",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:black_hole_band",
+        count: 1,
+      },
+      x: 16.0,
+      y: -1.5,
+      id: "78FAE7593E02AE8C",
+      tasks: [
+        {
+          id: "7E873E5940631CCD",
+          type: "item",
+          item: {
+            id: "projecte:black_hole_band",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "58083A3CB763D0F8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:arcana_ring",
+        count: 1,
+      },
+      x: 17.5,
+      y: -1.5,
+      id: "2C1A26F68E672171",
+      tasks: [
+        {
+          id: "2925E3228FE8A032",
+          type: "item",
+          item: {
+            id: "projecte:arcana_ring",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0A8583D08357C75D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:void_ring",
+        count: 1,
+      },
+      x: 19.0,
+      y: -1.5,
+      id: "5BD52E9819E50563",
+      tasks: [
+        {
+          id: "7EB2A8C261380E8B",
+          type: "item",
+          item: {
+            id: "projecte:void_ring",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "03A285A4A421E8D2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:zero_ring",
+        count: 1,
+      },
+      x: 14.5,
+      y: 0.0,
+      id: "561C7F221F637DCA",
+      tasks: [
+        {
+          id: "551FC3DA3DD141A0",
+          type: "item",
+          item: {
+            id: "projecte:zero_ring",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "56981C1581C58B2D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:ignition_ring",
+        count: 1,
+      },
+      x: 16.0,
+      y: 0.0,
+      id: "74867E6C0359C5C2",
+      tasks: [
+        {
+          id: "298CFD5727DD3CE7",
+          type: "item",
+          item: {
+            id: "projecte:ignition_ring",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "41578CD49ACA1EAE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:harvest_goddess_band",
+        count: 1,
+      },
+      x: 17.5,
+      y: 0.0,
+      id: "37E59378B1EE2A4D",
+      tasks: [
+        {
+          id: "4794324AE5B2B1AE",
+          type: "item",
+          item: {
+            id: "projecte:harvest_goddess_band",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "060665713BC54972",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:evertide_amulet",
+        count: 1,
+      },
+      x: 19.0,
+      y: 3.0,
+      id: "7D250031AF54EE7E",
+      tasks: [
+        {
+          id: "748F86D0D3377B8D",
+          type: "item",
+          item: {
+            id: "projecte:evertide_amulet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3D055F6223F0156D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:volcanite_amulet",
+        count: 1,
+      },
+      x: 17.5,
+      y: 3.0,
+      id: "5B3F8B13AAFDE764",
+      tasks: [
+        {
+          id: "38B285BA41E0C3B6",
+          type: "item",
+          item: {
+            id: "projecte:volcanite_amulet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "56F77586DB03E35B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:watch_of_flowing_time",
+        count: 1,
+      },
+      x: -4.5,
+      y: 5.0,
+      dependencies: [
+        "0BB6C99AB03C8F2B",
+      ],
+      id: "3278E1A5897BFDD8",
+      tasks: [
+        {
+          id: "683ECB65F1C85A91",
+          type: "item",
+          item: {
+            id: "projecte:watch_of_flowing_time",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "43809192CFEEC11C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:catalytic_lens",
+        count: 1,
+      },
+      x: 20.5,
+      y: 3.0,
+      id: "1DB1D37D1E466224",
+      tasks: [
+        {
+          id: "1274467A884D4B40",
+          type: "item",
+          item: {
+            id: "projecte:catalytic_lens",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1C8427196F611A56",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:destruction_catalyst",
+        count: 1,
+      },
+      x: 20.5,
+      y: 0.0,
+      id: "480E47FAA48C0FED",
+      tasks: [
+        {
+          id: "10FF6611D71A1E23",
+          type: "item",
+          item: {
+            id: "projecte:destruction_catalyst",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1DC789DD104C40AE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:hyperkinetic_lens",
+        count: 1,
+      },
+      x: 20.5,
+      y: 1.5,
+      id: "15B3E0490D6D7FC7",
+      tasks: [
+        {
+          id: "5E220E2B54F51697",
+          type: "item",
+          item: {
+            id: "projecte:hyperkinetic_lens",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3FDDC0D993387AFE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:archangel_smite",
+        count: 1,
+      },
+      x: 19.0,
+      y: 0.0,
+      id: "5A3B153AC2711D32",
+      tasks: [
+        {
+          id: "674628C3D5598036",
+          type: "item",
+          item: {
+            id: "projecte:archangel_smite",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4ABC075AF8B6FE87",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:swiftwolf_rending_gale",
+        count: 1,
+      },
+      x: 20.5,
+      y: -1.5,
+      id: "2853F4A84BB4D2CC",
+      tasks: [
+        {
+          id: "3BDF022056B8797E",
+          type: "item",
+          item: {
+            id: "projecte:swiftwolf_rending_gale",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "59E95AD3BBE19B0E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:body_stone",
+        count: 1,
+      },
+      x: 19.0,
+      y: 1.5,
+      id: "4E8BD3639D7D1742",
+      tasks: [
+        {
+          id: "09B38DA656B652DA",
+          type: "item",
+          item: {
+            id: "projecte:body_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "52A34809940C7A90",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:soul_stone",
+        count: 1,
+      },
+      x: 17.5,
+      y: 1.5,
+      id: "5B3FE6BE0CB6C1BA",
+      tasks: [
+        {
+          id: "0F3C7B61068252F2",
+          type: "item",
+          item: {
+            id: "projecte:soul_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2C7D6F55D1FEE625",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:mind_stone",
+        count: 1,
+      },
+      x: 16.0,
+      y: 1.5,
+      id: "072B7EC603DF6FD9",
+      tasks: [
+        {
+          id: "4FD3ABFD7E4B887B",
+          type: "item",
+          item: {
+            id: "projecte:mind_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7C262DE34C761C54",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:life_stone",
+        count: 1,
+      },
+      x: 14.5,
+      y: 1.5,
+      id: "74963D75828863A5",
+      tasks: [
+        {
+          id: "0CC35605B2B2B6CC",
+          type: "item",
+          item: {
+            id: "projecte:life_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "254E5DF12AF94B36",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:repair_talisman",
+        count: 1,
+      },
+      x: -0.5,
+      y: -3.0,
+      dependencies: [
+        "6E95B581E5B3EA40",
+        "1BB005CED6B32DDA",
+        "2EAC0EEDE7A53E47",
+      ],
+      id: "1A3E52C871B511CF",
+      tasks: [
+        {
+          id: "5F39C80C7B204FC7",
+          type: "item",
+          item: {
+            id: "projecte:repair_talisman",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D3950652D9D6385",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:tome",
+        count: 1,
+      },
+      x: 14.5,
+      y: 3.0,
+      id: "76F9CF0907A5711B",
+      tasks: [
+        {
+          id: "3DF2F8D60AFA2F00",
+          type: "item",
+          item: {
+            id: "projecte:tome",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3D2C211B4D0B4914",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "projecte:white_alchemical_bag",
+        count: 1,
+      },
+      x: 5.5,
+      y: -4.5,
+      dependencies: [
+        "5D92DDDC603C1C61",
+      ],
+      id: "72437253CE6C6C0A",
+      tasks: [
+        {
+          id: "02D59E7BE3847C7F",
+          type: "item",
+          item: {
+            id: "projecte:white_alchemical_bag",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "605E16A4D6C7ECFC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      x: -3.0,
+      y: -0.5,
+      shape: "gear",
+      size: 2.0,
+      id: "32DD7832C096CE0F",
+      tasks: [
+        {
+          id: "67A98B325DEE2D1C",
+          type: "item",
+          item: {
+            id: "projecte:philosophers_stone",
+            count: 1,
+          },
+        },
+      ],
+    },
+    {
+      x: -1.5,
+      y: 10.0,
+      dependencies: [
+        "6A44D37D229099D3",
+      ],
+      id: "31AAA1F76D7FFF4F",
+      tasks: [
+        {
+          id: "0BA2623988C24918",
+          type: "item",
+          item: {
+            id: "projecte:red_matter_block",
+            count: 1,
+          },
+        },
+      ],
+    },
+    {
+      x: -4.5,
+      y: 10.0,
+      dependencies: [
+        "0BB6C99AB03C8F2B",
+      ],
+      id: "31FEC6D40C12C544",
+      tasks: [
+        {
+          id: "7AE9ABCF9E59C13B",
+          type: "item",
+          item: {
+            id: "projecte:dark_matter_block",
+            count: 1,
+          },
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}

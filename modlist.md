@@ -1,8 +1,8 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 80
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.76 · **Mods:** 81
 
-*Last updated: 2026-07-03*
+*Last updated: 2026-07-04*
 
 Canonical source for installed mods in the CurseForge playtest instance. To refresh after adding, removing, or updating mods, run:
 
@@ -20,9 +20,9 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Apothic Enchanting | 26.1.2-2.0.0 | `ApothicEnchanting-26.1.2-2.0.0.jar` |
 | Apothic Spawners | 26.1.2-2.0.0 | `ApothicSpawners-26.1.2-2.0.0.jar` |
 | AppleSkin | 3.0.9 | `appleskin-neoforge-mc26.1-3.0.9.jar` |
-| Balm | 26.1.2.7 | `balm-neoforge-26.1.2-26.1.2.7.jar` |
+| Balm | 26.1.2.8 | `balm-neoforge-26.1.2-26.1.2.8.jar` |
 | Baubley Heart Canisters | 26.1.2-1.7.3 | `baubley-heart-canisters-26.1.2-1.7.3.jar` |
-| BBL Core | 26.1.2-12.6.2 | `bblcore-26.1.2-12.6.2.jar` |
+| BBL Core | 26.1.2-12.6.3 | `bblcore-26.1.2-12.6.3.jar` |
 | BBL Utility | 26.1.2-2.7.11 | `utility-26.1.2-2.7.11.jar` |
 | Bookshelf | 26.1.2.14 | `Bookshelf-neoforge-MC26.1.2-26.1.2.14.jar` |
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
@@ -78,6 +78,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Pig Pen Cipher | 26.1.2.4 | `PigPen-neoforge-MC26.1.2-26.1.2.4.jar` |
 | Placebo | 26.1.2-10.0.1 | `Placebo-26.1.2-10.0.1.jar` |
 | Powah! (Rearchitected) | 7.0.4-alpha | `Powah-7.0.4-alpha.jar` |
+| ProjectEE | 1.2.0 | `projecte-1.2.0.jar` |
 | Puzzles Lib | v26.1.11-mc26.1.x-NeoForge | `PuzzlesLib-v26.1.11-mc26.1.x-NeoForge.jar` |
 | Reap Mod | neoforge-1.1.4+26.1.2 | `reap-neoforge-1.1.4+26.1.2.jar` |
 | Refined Storage | neoforge-3.2.1 | `refinedstorage-neoforge-3.2.1.jar` |
@@ -88,8 +89,8 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simple Voice Chat | neoforge-2.6.20+26.1.2 | `voicechat-neoforge-2.6.20+26.1.2.jar` |
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.8.12+mc26.1.2 | `sodium-neoforge-0.8.12+mc26.1.2.jar` |
-| Sophisticated Backpacks | 26.1.2-3.25.76.1956 | `sophisticatedbackpacks-26.1.2-3.25.76.1956.jar` |
-| Sophisticated Core | 26.1.2-1.4.76.2091 | `sophisticatedcore-26.1.2-1.4.76.2091.jar` |
+| Sophisticated Backpacks | 26.1.2-3.25.77.1961 | `sophisticatedbackpacks-26.1.2-3.25.77.1961.jar` |
+| Sophisticated Core | 26.1.2-1.4.77.2100 | `sophisticatedcore-26.1.2-1.4.77.2100.jar` |
 | Sophisticated Storage | 26.1.2-1.5.85.1918 | `sophisticatedstorage-26.1.2-1.5.85.1918.jar` |
 | The Uncrafting Table | 0.0.4 | `uncraftingtable-0.0.4.jar` |
 | Time in a Bottle | neoforge-7.1.0 | `tiab-neoforge-7.1.0.jar` |

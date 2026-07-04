@@ -183,6 +183,37 @@
     },
     {
       icon: {
+        id: "projecte:philosophers_stone",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      shape: "diamond",
+      dependencies: [
+        "4A1F5EA13AF49DDA",
+      ],
+      size: 1.25,
+      id: "57BD1D73E42470EF",
+      tasks: [
+        {
+          id: "6752A8FD5075C68D",
+          type: "item",
+          item: {
+            id: "projecte:philosophers_stone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FDA567557FBE0CC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
         id: "crafting_on_a_stick:crafting_table",
         count: 1,
       },

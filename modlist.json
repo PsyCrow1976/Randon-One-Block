@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-03",
+  "generated": "2026-07-04",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
-  "mod_count": 80,
+  "mod_count": 81,
   "mods": [
     {
       "name": "Animal Pens",
@@ -48,8 +48,8 @@
     },
     {
       "name": "Balm",
-      "version": "26.1.2.7",
-      "jar": "balm-neoforge-26.1.2-26.1.2.7.jar",
+      "version": "26.1.2.8",
+      "jar": "balm-neoforge-26.1.2-26.1.2.8.jar",
       "curseforge_id": 531761,
       "url": "https://www.curseforge.com/minecraft/mc-mods/balm"
     },
@@ -62,8 +62,8 @@
     },
     {
       "name": "BBL Core",
-      "version": "26.1.2-12.6.2",
-      "jar": "bblcore-26.1.2-12.6.2.jar",
+      "version": "26.1.2-12.6.3",
+      "jar": "bblcore-26.1.2-12.6.3.jar",
       "curseforge_id": 1135181,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-core"
     },
@@ -453,6 +453,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected"
     },
     {
+      "name": "ProjectEE",
+      "version": "1.2.0",
+      "jar": "projecte-1.2.0.jar",
+      "curseforge_id": 1597601,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/projectee"
+    },
+    {
       "name": "Puzzles Lib",
       "version": "v26.1.11-mc26.1.x-NeoForge",
       "jar": "PuzzlesLib-v26.1.11-mc26.1.x-NeoForge.jar",
@@ -524,15 +531,15 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.76.1956",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.76.1956.jar",
+      "version": "26.1.2-3.25.77.1961",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.77.1961.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.76.2091",
-      "jar": "sophisticatedcore-26.1.2-1.4.76.2091.jar",
+      "version": "26.1.2-1.4.77.2100",
+      "jar": "sophisticatedcore-26.1.2-1.4.77.2100.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },

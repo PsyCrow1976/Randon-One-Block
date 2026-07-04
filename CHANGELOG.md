@@ -8,6 +8,38 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.5] — 2026-07-04
+
+### FTB Quests
+
+- **ProjectE chapter** — Synced from in-game editor: quest layout repositioned, dependency chains added (Philosopher's Stone entry → fuels → machines → matter tiers), chapter ID updated. Lang file rebuilt to match current quest and task IDs.
+
+---
+
+## [1.0.3.4] — 2026-07-04
+
+### FTB Quests
+
+- **Getting Started** — Philosopher's Stone quest (*The Red Rock*) gated behind the crafting table; points players at the ProjectE chapter.
+
+---
+
+## [1.0.3.3] — 2026-07-04
+
+### FTB Quests
+
+- **ProjectE chapter** — New tab with **106** standalone quests (10 XP each, no dependency links) for every craftable item from `projecte-1.2.0.jar` recipes: fuels, Klein Stars, collectors, condensers, DM/RM tools and armor, rings, lenses, alchemical bags, and more. Informal titles and detailed descriptions per item.
+
+---
+
+## [1.0.3.2] — 2026-07-04
+
+### Mods
+
+- **`modlist.md` / `modlist.json`** — Refreshed from playtest (**81** mods). **Added:** ProjectEE `1.2.0`. **Updated:** Balm, BBL Core, Sophisticated Backpacks, Sophisticated Core.
+
+---
+
 ## [1.0.3.1] — 2026-07-03
 
 ### FTB Quests
