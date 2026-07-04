@@ -59,7 +59,7 @@
     "",
     "Craft it from glowstone dust, redstone, and diamonds — ingredients you will eventually pull from your center block. Once you have it, open the transmutation grid (default keybind while holding the stone), &ateach&r it items, and spend EMC to duplicate anything you have learned.",
     "",
-    "Completing this quest &aunlocks the ProjectE mod pool&r for your island team. Collectors, condensers, relays, matter blocks, and other full-cube ProjectE blocks can now roll from your random center block. Open the &eProjectE&r quest tab for the full crafting tree.",
+    "Completing this quest &aautomatically unlocks the ProjectE mod pool&r for your island team — same behind-the-scenes unlock as the Leather Backpack quest does for Sophisticated Storage. Collectors, condensers, relays, matter blocks, and other full-cube ProjectE blocks can start rolling from your random center block. Open the &eProjectE&r quest tab for the full crafting tree.",
   ],
   "task.6752A8FD5075C68D.title": "Craft a Philosopher's Stone",
   "quest.4A1F5EA13AF49DDA.quest_desc": [

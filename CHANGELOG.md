@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.9] — 2026-07-04
+
+### Random One Block
+
+- **ProjectE quest unlock** — Same KubeJS path as Leather Backpack → Sophisticated Storage: `FTBQuestsEvents.completed` on task `6752A8FD5075C68D` unlocks `projecte` for the island team. Removed the FTB command reward (`poolenable` needs a player; command rewards run as console). Fixed handler re-registration after `/reload` so unlock listeners are always re-bound.
+
+---
+
 ## [1.0.3.8] — 2026-07-04
 
 ### Random One Block

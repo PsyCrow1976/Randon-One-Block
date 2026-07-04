@@ -18,6 +18,9 @@ function registerRandomOneBlockQuestUnlocks() {
   var i = 0
   var registered = []
 
+  // Re-bind after /reload: FTB listeners are cleared but this Rhino map can persist.
+  RANDOM_ONE_BLOCK_REGISTERED_TASK_HANDLERS = {}
+
   if (!pools || !pools.unlockModPoolForQuestId) {
     console.warn('[RandomOneBlock] Quest unlock script loaded before mod pools — handlers not registered')
     return
