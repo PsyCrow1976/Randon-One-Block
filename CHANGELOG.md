@@ -8,6 +8,14 @@ The format is simple: newest release first, plain language, no mod jargon unless
 
 ---
 
+## [1.0.3.6] — 2026-07-04
+
+### Random One Block
+
+- **`random_one_block_mod_pools.json`** — Catalog (`mods_with_minable_blocks`) updated for newly added mods with full-collision mineable blocks: **ProjectE**, **Ender IO**, and **Easy Ore Generation**. Starter `enabled` pool unchanged (`elevatorid`, `kubejs`, `uncraftingtable`).
+
+---
+
 ## [1.0.3.5] — 2026-07-04
 
 ### FTB Quests

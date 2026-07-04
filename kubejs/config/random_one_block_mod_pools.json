@@ -20,7 +20,9 @@
       "cookingforblockheads",
       "darkutils",
       "easy_piglins",
+      "easyoregeneration",
       "elevatorid",
+      "enderio",
       "exdeorum",
       "ftbquests",
       "ironfurnaces",
@@ -30,6 +32,7 @@
       "mysticalagriculture",
       "mysticalautomation",
       "powah",
+      "projecte",
       "refinedstorage",
       "sophisticatedstorage",
       "uncraftingtable",
@@ -56,7 +59,10 @@
     "sophisticatedbackpacks": "Sophisticated Backpacks",
     "sophisticatedstorage": "Sophisticated Storage",
     "uncraftingtable": "The Uncrafting Table",
-    "exdeorum": "Ex Deorum"
+    "exdeorum": "Ex Deorum",
+    "easyoregeneration": "Easy Ore Generation",
+    "enderio": "Ender IO",
+    "projecte": "ProjectE"
   },
 
   "quest_unlock_map": {
