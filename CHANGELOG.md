@@ -4,7 +4,24 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.3] — 2026-07-05
+
+### FTB Quests — manual progression (2 chapters)
+
+Finished in the quest book editor: dependency lines, grid layout, and chapter titles synced from in-game saves.
+
+- **Cooking for Blockheads** — Kitchen progression wired (fridge, oven, cow jar, spice rack, cooking tables, and related craft line). Trimmed from the generated flat grid to a focused chapter layout with dependency chains.
+- **Baubly Slots** (Baubley Heart Canisters) — Curios heart-canister line laid out with tier dependencies (`dependency_requirement: one_completed` where needed), hearts → canisters → blade/relic rewards.
+
+### Quest book metadata
+
+- **`chapter.json5`** — Tab title **Baubly Slots** for the BHC chapter; Cooking for Blockheads chapter id/lang key updated after in-game editor save.
+
+Other generator mod chapters (Ender IO, Refined Storage, Mystical Agriculture, etc.) remain standalone until linked manually.
 
 ---
 
