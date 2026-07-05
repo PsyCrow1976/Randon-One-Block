@@ -15,8 +15,8 @@
         id: "animal_pen:animal_cage",
         count: 1,
       },
-      x: 0.0,
-      y: 0.0,
+      x: 6.5,
+      y: -5.5,
       id: "3EA62AD030A3C93F",
       tasks: [
         {
@@ -38,43 +38,11 @@
     },
     {
       icon: {
-        id: "ftbquests:missing_item",
-        count: 1,
-        components: {
-          "ftbquests:missing_item": "animal_pen:animal_cage_filled",
-        },
-      },
-      x: 1.5,
-      y: 0.0,
-      id: "2A24B6D9D7C6EE82",
-      tasks: [
-        {
-          id: "0ABD623049E2FD23",
-          type: "item",
-          item: {
-            id: "ftbquests:missing_item",
-            count: 1,
-            components: {
-              "ftbquests:missing_item": "animal_pen:animal_cage_filled",
-            },
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "220A53243BF048F9",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "animal_pen:bird_catcher",
         count: 1,
       },
-      x: 3.0,
-      y: 0.0,
+      x: 9.5,
+      y: -5.5,
       id: "7DB96AA7E220D755",
       tasks: [
         {
@@ -96,43 +64,11 @@
     },
     {
       icon: {
-        id: "ftbquests:missing_item",
-        count: 1,
-        components: {
-          "ftbquests:missing_item": "animal_pen:bird_catcher_filled",
-        },
-      },
-      x: 4.5,
-      y: 0.0,
-      id: "6D66C3FDF3145D56",
-      tasks: [
-        {
-          id: "4BF885A3BA427D81",
-          type: "item",
-          item: {
-            id: "ftbquests:missing_item",
-            count: 1,
-            components: {
-              "ftbquests:missing_item": "animal_pen:bird_catcher_filled",
-            },
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "21DD987B702A3A18",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "animal_pen:water_animal_container",
         count: 1,
       },
-      x: 6.0,
-      y: 0.0,
+      x: 11.5,
+      y: -5.5,
       id: "1C7FED3D2D265AC5",
       tasks: [
         {
@@ -154,43 +90,16 @@
     },
     {
       icon: {
-        id: "ftbquests:missing_item",
-        count: 1,
-        components: {
-          "ftbquests:missing_item": "animal_pen:water_animal_container_filled",
-        },
-      },
-      x: 7.5,
-      y: 0.0,
-      id: "5C7DE1E6C4E76098",
-      tasks: [
-        {
-          id: "5AF3BA2C0D56BF98",
-          type: "item",
-          item: {
-            id: "ftbquests:missing_item",
-            count: 1,
-            components: {
-              "ftbquests:missing_item": "animal_pen:water_animal_container_filled",
-            },
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "4FDC4DF872A90431",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "animal_pen:animal_pen_acacia",
         count: 1,
       },
-      x: 0.0,
-      y: 2.5,
+      x: 8.0,
+      y: -4.5,
+      dependencies: [
+        "7DB96AA7E220D755",
+        "3EA62AD030A3C93F",
+      ],
+      dependency_requirement: "one_completed",
       id: "6FD86CF67020148A",
       tasks: [
         {
@@ -212,323 +121,15 @@
     },
     {
       icon: {
-        id: "animal_pen:animal_pen_bamboo",
-        count: 1,
-      },
-      x: 1.5,
-      y: 2.5,
-      id: "7C9B3222261F7C3E",
-      tasks: [
-        {
-          id: "2AFE4C57F95C2AC3",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_bamboo",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "4CE94B33A6BF032A",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_birch",
-        count: 1,
-      },
-      x: 3.0,
-      y: 2.5,
-      id: "2FDD60322EA8BD71",
-      tasks: [
-        {
-          id: "5F6196A6FEEF1C99",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_birch",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "2ED2A84A671A11A4",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_cherry",
-        count: 1,
-      },
-      x: 4.5,
-      y: 2.5,
-      id: "23E25BEE3C4E5ACB",
-      tasks: [
-        {
-          id: "4911349F06402ACC",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_cherry",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "34CB024E6790695B",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_crimson",
-        count: 1,
-      },
-      x: 6.0,
-      y: 2.5,
-      id: "0AB71AD996FD8D72",
-      tasks: [
-        {
-          id: "6775B0FE98CDD5AE",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_crimson",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "67185659F5D8EC71",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_dark_oak",
-        count: 1,
-      },
-      x: 7.5,
-      y: 2.5,
-      id: "2FB6115C74DA886E",
-      tasks: [
-        {
-          id: "6C58A1098FE325DE",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_dark_oak",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "60CECCE745ABB0AF",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_jungle",
-        count: 1,
-      },
-      x: 9.0,
-      y: 2.5,
-      id: "24D47FEBA9B581EB",
-      tasks: [
-        {
-          id: "318EC271FB9184F4",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_jungle",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "6EE49DB85F0B4A4A",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_mangrove",
-        count: 1,
-      },
-      x: 10.5,
-      y: 2.5,
-      id: "6AA430ED8748481E",
-      tasks: [
-        {
-          id: "109B34A3AD9E2D48",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_mangrove",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7522C8D840A46F72",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_oak",
-        count: 1,
-      },
-      x: 12.0,
-      y: 2.5,
-      id: "30586043D91966D1",
-      tasks: [
-        {
-          id: "79E4BC30F41A2EE5",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_oak",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "125395B4354B65E2",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_pale_oak",
-        count: 1,
-      },
-      x: 13.5,
-      y: 2.5,
-      id: "679F84BD8C3FA10D",
-      tasks: [
-        {
-          id: "4DF3D9E79DB08879",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_pale_oak",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "654407B17EF046E2",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_spruce",
-        count: 1,
-      },
-      x: 15.0,
-      y: 2.5,
-      id: "412D94B9741BA402",
-      tasks: [
-        {
-          id: "096E966CB778A000",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_spruce",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "026C1937AD90B806",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:animal_pen_warped",
-        count: 1,
-      },
-      x: 16.5,
-      y: 2.5,
-      id: "4BF48E1881966C92",
-      tasks: [
-        {
-          id: "519E682A5BC8745D",
-          type: "item",
-          item: {
-            id: "animal_pen:animal_pen_warped",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "1E3FF2734FB50ACA",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:aquarium_block",
-        count: 1,
-      },
-      x: 0.0,
-      y: 5.0,
-      id: "0F28F8848E017312",
-      tasks: [
-        {
-          id: "4B4A3538C29416D2",
-          type: "item",
-          item: {
-            id: "animal_pen:aquarium_block",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "33B1D22C9364DAB2",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "animal_pen:aviary",
         count: 1,
       },
-      x: 1.5,
-      y: 5.0,
+      x: 8.0,
+      y: -6.5,
+      dependencies: [
+        "3EA62AD030A3C93F",
+        "7DB96AA7E220D755",
+      ],
       id: "2EF823FC5D7AD5C5",
       tasks: [
         {
@@ -549,236 +150,20 @@
       ],
     },
     {
-      icon: {
-        id: "animal_pen:copper_aviary",
-        count: 1,
-      },
-      x: 3.0,
-      y: 5.0,
-      id: "30AF1C11BB8F0F30",
-      tasks: [
-        {
-          id: "175883DDBF5DFE80",
-          type: "item",
-          item: {
-            id: "animal_pen:copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "3D5C06EAE3BC1A5F",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:exposed_copper_aviary",
-        count: 1,
-      },
-      x: 4.5,
-      y: 5.0,
-      id: "7ACB204FED63883B",
-      tasks: [
-        {
-          id: "4EA2412DDC3BB300",
-          type: "item",
-          item: {
-            id: "animal_pen:exposed_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "46AE771DE4FD9E2D",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:gold_aviary",
-        count: 1,
-      },
-      x: 6.0,
-      y: 5.0,
-      id: "33FFB0A38B117848",
-      tasks: [
-        {
-          id: "66AF1A303D63FC67",
-          type: "item",
-          item: {
-            id: "animal_pen:gold_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5C580C1E9B7EBEE3",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:oxidized_copper_aviary",
-        count: 1,
-      },
-      x: 7.5,
-      y: 5.0,
-      id: "1323F2D605F38F27",
-      tasks: [
-        {
-          id: "3F68C51B89666C73",
-          type: "item",
-          item: {
-            id: "animal_pen:oxidized_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "55134D12F71D8F48",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:waxed_copper_aviary",
-        count: 1,
-      },
-      x: 9.0,
-      y: 5.0,
-      id: "3B6AB70215FD9092",
-      tasks: [
-        {
-          id: "34A5D30945EC5747",
-          type: "item",
-          item: {
-            id: "animal_pen:waxed_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "056EF129B78AB695",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:waxed_exposed_copper_aviary",
-        count: 1,
-      },
-      x: 10.5,
-      y: 5.0,
-      id: "0A32D476B99D0380",
-      tasks: [
-        {
-          id: "28D7552C1B21340A",
-          type: "item",
-          item: {
-            id: "animal_pen:waxed_exposed_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "76A1A08779D2575A",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:waxed_oxidized_copper_aviary",
-        count: 1,
-      },
-      x: 12.0,
-      y: 5.0,
-      id: "338440AE7120A4CE",
-      tasks: [
-        {
-          id: "01FCDBA7A8255614",
-          type: "item",
-          item: {
-            id: "animal_pen:waxed_oxidized_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "497564AEC67D2186",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:waxed_weathered_copper_aviary",
-        count: 1,
-      },
       x: 13.5,
-      y: 5.0,
-      id: "35A63E0929406C31",
+      y: -5.5,
+      dependencies: [
+        "1C7FED3D2D265AC5",
+      ],
+      id: "10F3CE4BC42D3DF7",
       tasks: [
         {
-          id: "638EF3155DFC2036",
+          id: "20D82F09E4A505EF",
           type: "item",
           item: {
-            id: "animal_pen:waxed_weathered_copper_aviary",
+            id: "animal_pen:aquarium_block",
             count: 1,
           },
-        },
-      ],
-      rewards: [
-        {
-          id: "2526CB2C2FB1C68D",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "animal_pen:weathered_copper_aviary",
-        count: 1,
-      },
-      x: 15.0,
-      y: 5.0,
-      id: "6B5504339A14FF8C",
-      tasks: [
-        {
-          id: "70D62A43D54BF5B6",
-          type: "item",
-          item: {
-            id: "animal_pen:weathered_copper_aviary",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "564BBF500D555543",
-          type: "xp",
-          xp: 10,
         },
       ],
     },

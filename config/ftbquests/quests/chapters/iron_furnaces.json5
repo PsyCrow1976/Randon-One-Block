@@ -15,8 +15,14 @@
         id: "ironfurnaces:iron_furnace",
         count: 1,
       },
-      x: 0.0,
-      y: 0.0,
+      x: 1.5,
+      y: -5.0,
+      hide_dependency_lines: false,
+      dependencies: [
+        "750C98658E184B97",
+        "4AFA152134251B52",
+      ],
+      dependency_requirement: "one_started",
       id: "4A0F15D5841517B4",
       tasks: [
         {
@@ -41,8 +47,11 @@
         id: "ironfurnaces:copper_furnace",
         count: 1,
       },
-      x: 1.5,
-      y: 0.0,
+      x: 0.0,
+      y: -3.5,
+      dependencies: [
+        "390F1D21578C3B57",
+      ],
       id: "750C98658E184B97",
       tasks: [
         {
@@ -64,37 +73,14 @@
     },
     {
       icon: {
-        id: "ironfurnaces:silver_furnace",
-        count: 1,
-      },
-      x: 3.0,
-      y: 0.0,
-      id: "24CC761D706F82D3",
-      tasks: [
-        {
-          id: "7147BA1B4AA20FB6",
-          type: "item",
-          item: {
-            id: "ironfurnaces:silver_furnace",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "4F7647E20824349D",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "ironfurnaces:gold_furnace",
         count: 1,
       },
-      x: 4.5,
-      y: 0.0,
+      x: 3.5,
+      y: -5.0,
+      dependencies: [
+        "4A0F15D5841517B4",
+      ],
       id: "752F9C0BDFC3A905",
       tasks: [
         {
@@ -119,8 +105,11 @@
         id: "ironfurnaces:diamond_furnace",
         count: 1,
       },
-      x: 6.0,
-      y: 0.0,
+      x: 5.5,
+      y: -5.0,
+      dependencies: [
+        "752F9C0BDFC3A905",
+      ],
       id: "29BEA343E40E6C84",
       tasks: [
         {
@@ -146,7 +135,10 @@
         count: 1,
       },
       x: 7.5,
-      y: 0.0,
+      y: -5.0,
+      dependencies: [
+        "29BEA343E40E6C84",
+      ],
       id: "299659E241E09B34",
       tasks: [
         {
@@ -171,8 +163,13 @@
         id: "ironfurnaces:crystal_furnace",
         count: 1,
       },
-      x: 9.0,
-      y: 0.0,
+      x: 7.5,
+      y: -3.0,
+      dependencies: [
+        "29BEA343E40E6C84",
+        "354EE25BE0B4349B",
+      ],
+      dependency_requirement: "one_completed",
       id: "4A88296E66EB4007",
       tasks: [
         {
@@ -197,8 +194,15 @@
         id: "ironfurnaces:obsidian_furnace",
         count: 1,
       },
-      x: 10.5,
-      y: 0.0,
+      x: 9.5,
+      y: -5.0,
+      dependencies: [
+        "299659E241E09B34",
+        "4A88296E66EB4007",
+        "04C4DEE161F761C0",
+        "18510CC7E91B08E7",
+      ],
+      dependency_requirement: "one_completed",
       id: "4ACBA245D846438E",
       tasks: [
         {
@@ -224,7 +228,11 @@
         count: 1,
       },
       x: 12.0,
-      y: 0.0,
+      y: -5.0,
+      dependencies: [
+        "4ACBA245D846438E",
+        "049F9D93E8DF26E3",
+      ],
       id: "0FE5682E5A114AE5",
       tasks: [
         {
@@ -246,89 +254,15 @@
     },
     {
       icon: {
-        id: "ironfurnaces:allthemodium_furnace",
-        count: 1,
-      },
-      x: 13.5,
-      y: 0.0,
-      id: "781458DADACDDBFC",
-      tasks: [
-        {
-          id: "284295229BE0D742",
-          type: "item",
-          item: {
-            id: "ironfurnaces:allthemodium_furnace",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5431C4812996B9B8",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:vibranium_furnace",
-        count: 1,
-      },
-      x: 15.0,
-      y: 0.0,
-      id: "5538C7B1CEAC6D61",
-      tasks: [
-        {
-          id: "31A90C7A659880BC",
-          type: "item",
-          item: {
-            id: "ironfurnaces:vibranium_furnace",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5F3FE11DBEF3372C",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:unobtainium_furnace",
-        count: 1,
-      },
-      x: 16.5,
-      y: 0.0,
-      id: "685A8434C6FCAF03",
-      tasks: [
-        {
-          id: "7F7519768AE65AE6",
-          type: "item",
-          item: {
-            id: "ironfurnaces:unobtainium_furnace",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "17EC18285D5DABE1",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "ironfurnaces:million_furnace",
         count: 1,
       },
-      x: 18.0,
-      y: 0.0,
+      x: 17.0,
+      y: -5.0,
+      dependencies: [
+        "4653A0BA8BB0AD09",
+        "71044C01E9D99772",
+      ],
       id: "7CACD1C1E508E229",
       tasks: [
         {
@@ -483,8 +417,11 @@
         id: "ironfurnaces:rainbow_core",
         count: 1,
       },
-      x: 7.5,
-      y: 2.5,
+      x: 14.5,
+      y: -5.0,
+      dependencies: [
+        "0FE5682E5A114AE5",
+      ],
       id: "4653A0BA8BB0AD09",
       tasks: [
         {
@@ -509,8 +446,8 @@
         id: "ironfurnaces:rainbow_plating",
         count: 1,
       },
-      x: 9.0,
-      y: 2.5,
+      x: 16.0,
+      y: -3.0,
       id: "71044C01E9D99772",
       tasks: [
         {
@@ -525,32 +462,6 @@
       rewards: [
         {
           id: "422106ED588811C0",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:rainbow_coal",
-        count: 1,
-      },
-      x: 10.5,
-      y: 2.5,
-      id: "0851D855184E741F",
-      tasks: [
-        {
-          id: "4FE94B36748C1B6C",
-          type: "item",
-          item: {
-            id: "ironfurnaces:rainbow_coal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "48ED0020149DB3EF",
           type: "xp",
           xp: 10,
         },
@@ -717,8 +628,11 @@
         id: "ironfurnaces:upgrade_iron",
         count: 1,
       },
-      x: 0.0,
-      y: 7.5,
+      x: 1.5,
+      y: -7.0,
+      dependencies: [
+        "4A0F15D5841517B4",
+      ],
       id: "3D4440032F9BAFC5",
       tasks: [
         {
@@ -744,7 +658,11 @@
         count: 1,
       },
       x: 1.5,
-      y: 7.5,
+      y: -3.5,
+      dependencies: [
+        "4A0F15D5841517B4",
+        "750C98658E184B97",
+      ],
       id: "1B533C62C95B07BA",
       tasks: [
         {
@@ -769,8 +687,11 @@
         id: "ironfurnaces:upgrade_copper",
         count: 1,
       },
-      x: 3.0,
-      y: 7.5,
+      x: -2.0,
+      y: -3.5,
+      dependencies: [
+        "4AFA152134251B52",
+      ],
       id: "390F1D21578C3B57",
       tasks: [
         {
@@ -792,63 +713,15 @@
     },
     {
       icon: {
-        id: "ironfurnaces:upgrade_silver",
-        count: 1,
-      },
-      x: 4.5,
-      y: 7.5,
-      id: "6B7037F278472C53",
-      tasks: [
-        {
-          id: "2E942CAF2EA07D06",
-          type: "item",
-          item: {
-            id: "ironfurnaces:upgrade_silver",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "568E815913EFBAAF",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:upgrade_silver2",
-        count: 1,
-      },
-      x: 6.0,
-      y: 7.5,
-      id: "5F3843E22E0DDF4F",
-      tasks: [
-        {
-          id: "0FE430084120C16D",
-          type: "item",
-          item: {
-            id: "ironfurnaces:upgrade_silver2",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "74B99CB1F2AEB5EE",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "ironfurnaces:upgrade_gold",
         count: 1,
       },
-      x: 7.5,
-      y: 7.5,
+      x: 3.5,
+      y: -7.0,
+      dependencies: [
+        "752F9C0BDFC3A905",
+        "4A0F15D5841517B4",
+      ],
       id: "14476D72BE2C9327",
       tasks: [
         {
@@ -870,37 +743,14 @@
     },
     {
       icon: {
-        id: "ironfurnaces:upgrade_gold2",
-        count: 1,
-      },
-      x: 9.0,
-      y: 7.5,
-      id: "7BE58B0CC0020CB9",
-      tasks: [
-        {
-          id: "17761E01062EC07E",
-          type: "item",
-          item: {
-            id: "ironfurnaces:upgrade_gold2",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5E1812096EF8886F",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "ironfurnaces:upgrade_diamond",
         count: 1,
       },
-      x: 10.5,
-      y: 7.5,
+      x: 5.5,
+      y: -7.0,
+      dependencies: [
+        "29BEA343E40E6C84",
+      ],
       id: "24A7B0926B8A7E26",
       tasks: [
         {
@@ -925,8 +775,11 @@
         id: "ironfurnaces:upgrade_emerald",
         count: 1,
       },
-      x: 12.0,
-      y: 7.5,
+      x: 7.5,
+      y: -7.0,
+      dependencies: [
+        "299659E241E09B34",
+      ],
       id: "20C5811BEF1522F8",
       tasks: [
         {
@@ -951,8 +804,11 @@
         id: "ironfurnaces:upgrade_crystal",
         count: 1,
       },
-      x: 13.5,
-      y: 7.5,
+      x: 5.5,
+      y: -3.0,
+      dependencies: [
+        "29BEA343E40E6C84",
+      ],
       id: "354EE25BE0B4349B",
       tasks: [
         {
@@ -977,8 +833,11 @@
         id: "ironfurnaces:upgrade_obsidian",
         count: 1,
       },
-      x: 15.0,
-      y: 7.5,
+      x: 9.5,
+      y: -7.0,
+      dependencies: [
+        "20C5811BEF1522F8",
+      ],
       id: "04C4DEE161F761C0",
       tasks: [
         {
@@ -1003,8 +862,11 @@
         id: "ironfurnaces:upgrade_obsidian2",
         count: 1,
       },
-      x: 16.5,
-      y: 7.5,
+      x: 9.5,
+      y: -3.0,
+      dependencies: [
+        "4A88296E66EB4007",
+      ],
       id: "18510CC7E91B08E7",
       tasks: [
         {
@@ -1029,8 +891,8 @@
         id: "ironfurnaces:upgrade_netherite",
         count: 1,
       },
-      x: 18.0,
-      y: 7.5,
+      x: 12.0,
+      y: -7.0,
       id: "049F9D93E8DF26E3",
       tasks: [
         {
@@ -1051,80 +913,19 @@
       ],
     },
     {
-      icon: {
-        id: "ironfurnaces:upgrade_allthemodium",
-        count: 1,
-      },
-      x: 19.5,
-      y: 7.5,
-      id: "2263C741B70181D9",
+      x: -2.0,
+      y: -7.0,
+      shape: "gear",
+      size: 2.0,
+      id: "4AFA152134251B52",
       tasks: [
         {
-          id: "0379606DCC97ADC0",
+          id: "1FF0AE91F3D7BB24",
           type: "item",
           item: {
-            id: "ironfurnaces:upgrade_allthemodium",
+            id: "minecraft:furnace",
             count: 1,
           },
-        },
-      ],
-      rewards: [
-        {
-          id: "1B993CF4D9039377",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:upgrade_vibranium",
-        count: 1,
-      },
-      x: 21.0,
-      y: 7.5,
-      id: "4D4574197150F3BA",
-      tasks: [
-        {
-          id: "015E7D937C278BB6",
-          type: "item",
-          item: {
-            id: "ironfurnaces:upgrade_vibranium",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "23720023D53D609B",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "ironfurnaces:upgrade_unobtainium",
-        count: 1,
-      },
-      x: 22.5,
-      y: 7.5,
-      id: "03C6CCCE39478894",
-      tasks: [
-        {
-          id: "5F93AC81B0F3CBB9",
-          type: "item",
-          item: {
-            id: "ironfurnaces:upgrade_unobtainium",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "46164451EEAAC4BB",
-          type: "xp",
-          xp: 10,
         },
       ],
     },
