@@ -4,7 +4,41 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.2] — 2026-07-05
+
+### FTB Quests — 13 new mod chapters (2,505 quests)
+
+Recipe-based quest tabs for every craftable output from installed mod data. Each quest is **standalone** (no dependency links — wire progression manually). Funny titles, detailed `quest_desc`, item obtain task, 10 XP reward.
+
+| Chapter | Quests |
+|---------|--------|
+| Ender IO | 864 |
+| Mystical Agriculture | 713 |
+| Refined Storage | 380 |
+| Farming for Blockheads | 71 |
+| Cooking for Blockheads | 153 |
+| Powah | 133 |
+| Dark Utilities | 56 |
+| Baubley Heart Canisters | 31 |
+| BBL Utility | 32 |
+| Mystical Agradditions | 43 |
+| Construction Sticks | 11 |
+| Mystical Agriculture Tiered Crystals | 11 |
+| Mystical Automation | 7 |
+
+### Generators & docs
+
+- **`generate-ftb-quests.sh`** — Regenerate quest chapter + lang files from CurseForge instance mod JARs; runs stale-instance cleanup first.
+- **`scripts/generate_ftb_mod_quests.py`** — Python generator (`MODLIST_INSTANCE` / `--instance` supported).
+- **`moditemrecipy.md`** — Expanded pack generator guide: mod/item HTML **and** FTB quests, plus stale-instance troubleshooting.
+- **`generate-moditemlist.sh`** — Now runs stale-instance cleanup before building HTML.
+- **`scripts/clean-stale-instance-config.sh`** — Symlink checks (`config/`, `kubejs/`), `mods/` jar count, removes `random_one_block_mod_pools_debug.txt` and other stray instance-root pack configs.
+- **`link-instance.sh`** — Respects `MODLIST_INSTANCE`; cleans target instance after linking.
+- **`howtoquest.md`** — Link to bulk quest regeneration workflow.
 
 ---
 

@@ -1,0 +1,1472 @@
+{
+  id: "3CEC0859E4C0301A",
+  group: "",
+  order_index: 14,
+  icon: {
+    id: "darkutils:blank_plate",
+    count: 1,
+  },
+  filename: "dark_utilities",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "darkutils:alert_plate",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "72B50571F163FF01",
+      tasks: [
+        {
+          id: "C276715213952BFF",
+          type: "item",
+          item: {
+            id: "darkutils:alert_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1DF23AAFCC1A077A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:anchor_plate",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "49841CE7F9DDC9DA",
+      tasks: [
+        {
+          id: "D9A04234E131E0BA",
+          type: "item",
+          item: {
+            id: "darkutils:anchor_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C03481B2EFFFA7E2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:bane_plate",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "A483EF7A72BA1F11",
+      tasks: [
+        {
+          id: "D73DF2BF401D8A15",
+          type: "item",
+          item: {
+            id: "darkutils:bane_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CA9B7DAB7F6EBA95",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:blank_plate",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "397E7884824AF1D8",
+      tasks: [
+        {
+          id: "E3D77D7A1E8AB5B9",
+          type: "item",
+          item: {
+            id: "darkutils:blank_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B5AB9A38C5FDC33B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:charm_gluttony",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "D33E09AC2EBFEC24",
+      tasks: [
+        {
+          id: "1104D1B0E6B70C8C",
+          type: "item",
+          item: {
+            id: "darkutils:charm_gluttony",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5EDBDE4415945877",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:charm_pride",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "20624DF059BFD865",
+      tasks: [
+        {
+          id: "C3DB09C882AFEB22",
+          type: "item",
+          item: {
+            id: "darkutils:charm_pride",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0C342D414070CF20",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:charm_sloth",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "4F1180CEADE77292",
+      tasks: [
+        {
+          id: "F8D3A3308C2CF946",
+          type: "item",
+          item: {
+            id: "darkutils:charm_sloth",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9B6B795D1DB369F0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:damage_plate",
+        count: 1,
+      },
+      x: 10.5,
+      y: 0.0,
+      id: "30A6D10409B9335D",
+      tasks: [
+        {
+          id: "01B0171E41F9E169",
+          type: "item",
+          item: {
+            id: "darkutils:damage_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5D6775EA06A4B03B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:damage_plate_maim",
+        count: 1,
+      },
+      x: 0.0,
+      y: 1.5,
+      id: "E5AC4B1ED7932173",
+      tasks: [
+        {
+          id: "992862EF6D7D1023",
+          type: "item",
+          item: {
+            id: "darkutils:damage_plate_maim",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D671A12AACA13096",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:damage_plate_player",
+        count: 1,
+      },
+      x: 1.5,
+      y: 1.5,
+      id: "A8BE569F71312044",
+      tasks: [
+        {
+          id: "14233E4CA1923DE2",
+          type: "item",
+          item: {
+            id: "darkutils:damage_plate_player",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "943572AFCB068801",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:darkness_plate",
+        count: 1,
+      },
+      x: 3.0,
+      y: 1.5,
+      id: "E3E708249FA14B0D",
+      tasks: [
+        {
+          id: "DD138F558F599CA7",
+          type: "item",
+          item: {
+            id: "darkutils:darkness_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "20EF509E5092BD1E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:fatigue_plate",
+        count: 1,
+      },
+      x: 4.5,
+      y: 1.5,
+      id: "7B9443AF56F0B261",
+      tasks: [
+        {
+          id: "58E170E50166B818",
+          type: "item",
+          item: {
+            id: "darkutils:fatigue_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F7233A706E5D0868",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_animal",
+        count: 1,
+      },
+      x: 6.0,
+      y: 1.5,
+      id: "677053B34C8A8EA0",
+      tasks: [
+        {
+          id: "5CA2A000B0E441DB",
+          type: "item",
+          item: {
+            id: "darkutils:filter_animal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "91B7FBB2F90EE8BD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_arthropod",
+        count: 1,
+      },
+      x: 7.5,
+      y: 1.5,
+      id: "EE35D83C9D0B124C",
+      tasks: [
+        {
+          id: "CCA1B63D6B0950BB",
+          type: "item",
+          item: {
+            id: "darkutils:filter_arthropod",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "94530369EDDBA65C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_child",
+        count: 1,
+      },
+      x: 9.0,
+      y: 1.5,
+      id: "DF9F46FB0E56904F",
+      tasks: [
+        {
+          id: "D48D8B543DF0E745",
+          type: "item",
+          item: {
+            id: "darkutils:filter_child",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E381E5AF8F5F9E0E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_equipment",
+        count: 1,
+      },
+      x: 10.5,
+      y: 1.5,
+      id: "80CAF8C8FB344970",
+      tasks: [
+        {
+          id: "486B9698D5243FFA",
+          type: "item",
+          item: {
+            id: "darkutils:filter_equipment",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8CBC9FEB05703B95",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_fire_immune",
+        count: 1,
+      },
+      x: 0.0,
+      y: 3.0,
+      id: "563D27DD7DF79F73",
+      tasks: [
+        {
+          id: "62298429A7B92E42",
+          type: "item",
+          item: {
+            id: "darkutils:filter_fire_immune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0046A2A170043B82",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_freeze_immune",
+        count: 1,
+      },
+      x: 1.5,
+      y: 3.0,
+      id: "D8B57D9A5E843A0E",
+      tasks: [
+        {
+          id: "229E9921D33B8CE6",
+          type: "item",
+          item: {
+            id: "darkutils:filter_freeze_immune",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "084D28C08D856446",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_golem",
+        count: 1,
+      },
+      x: 3.0,
+      y: 3.0,
+      id: "9B382F711DF0F0AC",
+      tasks: [
+        {
+          id: "6E9341CAB001F45D",
+          type: "item",
+          item: {
+            id: "darkutils:filter_golem",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E46BA47B4C806CD6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_hostile",
+        count: 1,
+      },
+      x: 4.5,
+      y: 3.0,
+      id: "6D7E767DA09CC578",
+      tasks: [
+        {
+          id: "3E2CDDC2434A761D",
+          type: "item",
+          item: {
+            id: "darkutils:filter_hostile",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F714039967050B50",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_illager",
+        count: 1,
+      },
+      x: 6.0,
+      y: 3.0,
+      id: "8E09F9DF518B4CF8",
+      tasks: [
+        {
+          id: "115F1110B969D492",
+          type: "item",
+          item: {
+            id: "darkutils:filter_illager",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "504FF7C20F588CAD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_named",
+        count: 1,
+      },
+      x: 7.5,
+      y: 3.0,
+      id: "59999888B5D7C119",
+      tasks: [
+        {
+          id: "958562AC9E36BFCE",
+          type: "item",
+          item: {
+            id: "darkutils:filter_named",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C14577093F731C6E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_passenger",
+        count: 1,
+      },
+      x: 9.0,
+      y: 3.0,
+      id: "3B1B43EAB05340BD",
+      tasks: [
+        {
+          id: "76AAD43EB3CD0819",
+          type: "item",
+          item: {
+            id: "darkutils:filter_passenger",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "724D111151E36FC1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_pet",
+        count: 1,
+      },
+      x: 10.5,
+      y: 3.0,
+      id: "A2B27DA0DE8E1A05",
+      tasks: [
+        {
+          id: "A0034B4F285C05C2",
+          type: "item",
+          item: {
+            id: "darkutils:filter_pet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2E5CFE7CC8A96156",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_piglin",
+        count: 1,
+      },
+      x: 0.0,
+      y: 4.5,
+      id: "AAA4CF70C992F386",
+      tasks: [
+        {
+          id: "799A007D2C09647D",
+          type: "item",
+          item: {
+            id: "darkutils:filter_piglin",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F1D6AF36BD6DCC7F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_player",
+        count: 1,
+      },
+      x: 1.5,
+      y: 4.5,
+      id: "A3EF90B9584C7F1D",
+      tasks: [
+        {
+          id: "7E411BF8509D6000",
+          type: "item",
+          item: {
+            id: "darkutils:filter_player",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D73602BBF70F635F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_raider",
+        count: 1,
+      },
+      x: 3.0,
+      y: 4.5,
+      id: "9677EDA2144C0BA2",
+      tasks: [
+        {
+          id: "02BBC4367B8BCB18",
+          type: "item",
+          item: {
+            id: "darkutils:filter_raider",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F324417806F69BFD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_slime",
+        count: 1,
+      },
+      x: 4.5,
+      y: 4.5,
+      id: "14B6F8D9D3B97004",
+      tasks: [
+        {
+          id: "A2FE1E4E9D368252",
+          type: "item",
+          item: {
+            id: "darkutils:filter_slime",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "398B0CDFACEED18B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_undead",
+        count: 1,
+      },
+      x: 6.0,
+      y: 4.5,
+      id: "82B7F0710FA44225",
+      tasks: [
+        {
+          id: "580B3EFA61776790",
+          type: "item",
+          item: {
+            id: "darkutils:filter_undead",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5AB30870EE9727B8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_villager",
+        count: 1,
+      },
+      x: 7.5,
+      y: 4.5,
+      id: "5EDE6AAB27F3695D",
+      tasks: [
+        {
+          id: "3609426DE0E8ACA0",
+          type: "item",
+          item: {
+            id: "darkutils:filter_villager",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FAB926D3B1DC922B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_water",
+        count: 1,
+      },
+      x: 9.0,
+      y: 4.5,
+      id: "203E5DCB5003A151",
+      tasks: [
+        {
+          id: "6B930F146130CFCA",
+          type: "item",
+          item: {
+            id: "darkutils:filter_water",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "144902C2D6806707",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_zombie",
+        count: 1,
+      },
+      x: 10.5,
+      y: 4.5,
+      id: "9EE8F72B76718B4C",
+      tasks: [
+        {
+          id: "1742FF5507C1FBD2",
+          type: "item",
+          item: {
+            id: "darkutils:filter_zombie",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2A9DE6B94B07B4AF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:flame_plate",
+        count: 1,
+      },
+      x: 0.0,
+      y: 6.0,
+      id: "9BA496F514731D60",
+      tasks: [
+        {
+          id: "0079046EAFB7B821",
+          type: "item",
+          item: {
+            id: "darkutils:flame_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5CEAD1446C1321E3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:frost_plate",
+        count: 1,
+      },
+      x: 1.5,
+      y: 6.0,
+      id: "34D1C71C3030F1DD",
+      tasks: [
+        {
+          id: "A68066B59C9B49C2",
+          type: "item",
+          item: {
+            id: "darkutils:frost_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5DF632F4432CB669",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:hunger_plate",
+        count: 1,
+      },
+      x: 3.0,
+      y: 6.0,
+      id: "BB87E7CF3AB587ED",
+      tasks: [
+        {
+          id: "F01513271BA3E36C",
+          type: "item",
+          item: {
+            id: "darkutils:hunger_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C4E45C9C321E2A9D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:levitation_plate",
+        count: 1,
+      },
+      x: 4.5,
+      y: 6.0,
+      id: "E2D4949307195C64",
+      tasks: [
+        {
+          id: "F391409DE48B861F",
+          type: "item",
+          item: {
+            id: "darkutils:levitation_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7BF1489AA7A0D641",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:misfortune_plate",
+        count: 1,
+      },
+      x: 6.0,
+      y: 6.0,
+      id: "A14A6F8DA8C1D1FE",
+      tasks: [
+        {
+          id: "B3D6DDC7DCC1CAB7",
+          type: "item",
+          item: {
+            id: "darkutils:misfortune_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5861C758153CCC6B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:omen_plate",
+        count: 1,
+      },
+      x: 7.5,
+      y: 6.0,
+      id: "E216E319F7F79EE9",
+      tasks: [
+        {
+          id: "8723049A4307A12F",
+          type: "item",
+          item: {
+            id: "darkutils:omen_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ABA5723499BBEC20",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:poison_plate",
+        count: 1,
+      },
+      x: 9.0,
+      y: 6.0,
+      id: "E7392B9E11B7B68E",
+      tasks: [
+        {
+          id: "A04E3274F9BB2F02",
+          type: "item",
+          item: {
+            id: "darkutils:poison_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E1F2554C616657A1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:redstone_randomizer",
+        count: 1,
+      },
+      x: 10.5,
+      y: 6.0,
+      id: "1B045DB81E791D45",
+      tasks: [
+        {
+          id: "BC26FFD6C41CF5BA",
+          type: "item",
+          item: {
+            id: "darkutils:redstone_randomizer",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E86DA8C988ECEA85",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_builder",
+        count: 1,
+      },
+      x: 0.0,
+      y: 7.5,
+      id: "B20DF6E2FFFDF617",
+      tasks: [
+        {
+          id: "1CE58294E9BD1C2C",
+          type: "item",
+          item: {
+            id: "darkutils:rune_builder",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "925290718A312A3D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_galactic",
+        count: 1,
+      },
+      x: 1.5,
+      y: 7.5,
+      id: "DAC828D0668C79A1",
+      tasks: [
+        {
+          id: "F1D394CDC44DF86A",
+          type: "item",
+          item: {
+            id: "darkutils:rune_galactic",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9EA1CD0B9FA7E033",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_illager",
+        count: 1,
+      },
+      x: 3.0,
+      y: 7.5,
+      id: "DBFCC2DC85B7B6B8",
+      tasks: [
+        {
+          id: "9E28FEAA1C78DC9D",
+          type: "item",
+          item: {
+            id: "darkutils:rune_illager",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3388094B3C9182B0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_nyctography",
+        count: 1,
+      },
+      x: 4.5,
+      y: 7.5,
+      id: "D401EA603ECA4325",
+      tasks: [
+        {
+          id: "EFA09CCFF9224686",
+          type: "item",
+          item: {
+            id: "darkutils:rune_nyctography",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C32E2015015E0137",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_pigpen",
+        count: 1,
+      },
+      x: 6.0,
+      y: 7.5,
+      id: "1D34CB86345B73A1",
+      tasks: [
+        {
+          id: "97188E77206CC717",
+          type: "item",
+          item: {
+            id: "darkutils:rune_pigpen",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ED8133ADB00F88B7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:rune_runelic",
+        count: 1,
+      },
+      x: 7.5,
+      y: 7.5,
+      id: "1218ABB59E6CE495",
+      tasks: [
+        {
+          id: "BC08CCDD578EDD04",
+          type: "item",
+          item: {
+            id: "darkutils:rune_runelic",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "AB4D6BE80A9DF540",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:shielded_redstone",
+        count: 1,
+      },
+      x: 9.0,
+      y: 7.5,
+      id: "F9D655FEBF5A27FC",
+      tasks: [
+        {
+          id: "815DDA8A727F6BBE",
+          type: "item",
+          item: {
+            id: "darkutils:shielded_redstone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6FEF166C1BB1366E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:slowfall_plate",
+        count: 1,
+      },
+      x: 10.5,
+      y: 7.5,
+      id: "A76F49D18161A63A",
+      tasks: [
+        {
+          id: "EBED516BCED13E50",
+          type: "item",
+          item: {
+            id: "darkutils:slowfall_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FD76D0E173EB4E08",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:slowness_plate",
+        count: 1,
+      },
+      x: 0.0,
+      y: 9.0,
+      id: "87DB764571050E96",
+      tasks: [
+        {
+          id: "04F0EBD7418115E3",
+          type: "item",
+          item: {
+            id: "darkutils:slowness_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "13E998AF07B582A3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:smite_plate",
+        count: 1,
+      },
+      x: 1.5,
+      y: 9.0,
+      id: "4D633CC08D8A78D0",
+      tasks: [
+        {
+          id: "506ED23F2F3208A5",
+          type: "item",
+          item: {
+            id: "darkutils:smite_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "68F32D7AA774B2E9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:vector_plate",
+        count: 1,
+      },
+      x: 3.0,
+      y: 9.0,
+      id: "17227EB399D0C50A",
+      tasks: [
+        {
+          id: "15B6883E42285EC1",
+          type: "item",
+          item: {
+            id: "darkutils:vector_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "262AB7470320E892",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:vector_plate_extreme",
+        count: 1,
+      },
+      x: 4.5,
+      y: 9.0,
+      id: "E6A251C833CBB26F",
+      tasks: [
+        {
+          id: "00B58A62A33BE895",
+          type: "item",
+          item: {
+            id: "darkutils:vector_plate_extreme",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F0E0E1B82905D57E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:vector_plate_fast",
+        count: 1,
+      },
+      x: 6.0,
+      y: 9.0,
+      id: "BA6FBA35F7EAD94E",
+      tasks: [
+        {
+          id: "FB86BA5CAC8E41E6",
+          type: "item",
+          item: {
+            id: "darkutils:vector_plate_fast",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6EE5CF431B0BB10E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:vector_plate_ultra",
+        count: 1,
+      },
+      x: 7.5,
+      y: 9.0,
+      id: "A3E4A86BB0051F14",
+      tasks: [
+        {
+          id: "4C17D00B0CD2217B",
+          type: "item",
+          item: {
+            id: "darkutils:vector_plate_ultra",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B7BCB47EC58AD3E7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:weakness_plate",
+        count: 1,
+      },
+      x: 9.0,
+      y: 9.0,
+      id: "EB724784E03ABA30",
+      tasks: [
+        {
+          id: "DF3ACD8F1F9CF540",
+          type: "item",
+          item: {
+            id: "darkutils:weakness_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0EE6AEEB4C381C3C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:wither_plate",
+        count: 1,
+      },
+      x: 10.5,
+      y: 9.0,
+      id: "C4D3E724BFFFBC41",
+      tasks: [
+        {
+          id: "1F1651032356EE03",
+          type: "item",
+          item: {
+            id: "darkutils:wither_plate",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4216DD10BE2ADF2A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}

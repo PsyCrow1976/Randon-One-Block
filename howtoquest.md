@@ -4,6 +4,8 @@ Quick reference for adding and editing quests in this pack. Based on the **Stora
 
 Pack format: **JSON5** (not SNBT). Reload in-game with `/ftbquests reload` or restart the client.
 
+**Bulk recipe quests:** To regenerate mod chapters from installed JAR recipes (Ender IO, Refined Storage, Mystical Agriculture, etc.), see [`moditemrecipy.md`](moditemrecipy.md) — run `./generate-ftb-quests.sh` (checks stale instance files first).
+
 ---
 
 ## File layout

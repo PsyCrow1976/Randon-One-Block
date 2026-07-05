@@ -34,6 +34,9 @@ if [[ ! -d "$INSTANCE/mods" ]]; then
   exit 1
 fi
 
+echo "checking instance for stale pack configs and symlink setup..."
+MODLIST_INSTANCE="$INSTANCE" "$REPO/scripts/clean-stale-instance-config.sh" "$INSTANCE"
+
 if [[ "$UPDATE_MODS" -eq 1 ]]; then
   echo "refreshing modlist.json from instance..."
   MODLIST_INSTANCE="$INSTANCE" "$REPO/update-modlist.sh"

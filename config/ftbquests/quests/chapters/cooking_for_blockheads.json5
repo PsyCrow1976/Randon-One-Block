@@ -1,0 +1,3994 @@
+{
+  id: "D5457A9B2CD0D86F",
+  group: "",
+  order_index: 11,
+  icon: {
+    id: "cookingforblockheads:cow_jar",
+    count: 1,
+  },
+  filename: "cooking_for_blockheads",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "cookingforblockheads:black_chicken_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "872DD223E611FE65",
+      tasks: [
+        {
+          id: "E855970FB9016713",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BE4CA1B59BF0BA1D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_connector",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "AEE87A8064966BF5",
+      tasks: [
+        {
+          id: "C659CC68D0F1B5EE",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1F8D1995CE2FE3BD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_cooking_table",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "576F8B3D52902B24",
+      tasks: [
+        {
+          id: "D34C0B6A36F2E77C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BB416196E3985443",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_counter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "5E5A0759F5C0EE4D",
+      tasks: [
+        {
+          id: "EFE660A2C179FF70",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CC20813D765D786C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_fridge",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "81445E86002FBF20",
+      tasks: [
+        {
+          id: "D0535C1259D8AFF1",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "16DB264FC0B7AE7A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_kitchen_floor",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "E78A6B70E40959CE",
+      tasks: [
+        {
+          id: "0E2FE9B562ACA1DC",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8974EFAE5710D988",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_oven",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "3B8E9C04BD8DB7CA",
+      tasks: [
+        {
+          id: "2EA3CBA3E8166C3C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A0889D4599A360F3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:black_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 0.0,
+      id: "4C635CF16692755B",
+      tasks: [
+        {
+          id: "748FBA0BB43C0FCD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:black_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6E71B758DF16781F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_chicken_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 1.5,
+      id: "3CD096761A494E7A",
+      tasks: [
+        {
+          id: "8D1356F966C2B2E9",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7E814E7AAC016903",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_connector",
+        count: 1,
+      },
+      x: 1.5,
+      y: 1.5,
+      id: "7EC9B75FF23B05DD",
+      tasks: [
+        {
+          id: "45277F221CAB7BE8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E704FB32EBDAFED2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_cooking_table",
+        count: 1,
+      },
+      x: 3.0,
+      y: 1.5,
+      id: "C9301839039AADF7",
+      tasks: [
+        {
+          id: "E0FECEAA1AC05F29",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A551A486636438FB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_counter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 1.5,
+      id: "6E0C40F2A3CC2C9B",
+      tasks: [
+        {
+          id: "25E86C027A32DA70",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2A0227AE824B83B9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_fridge",
+        count: 1,
+      },
+      x: 6.0,
+      y: 1.5,
+      id: "CB9BF41070D5B169",
+      tasks: [
+        {
+          id: "54656B9859B15BB4",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "44466620281E4A4E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_kitchen_floor",
+        count: 1,
+      },
+      x: 7.5,
+      y: 1.5,
+      id: "39022EDA0002E60D",
+      tasks: [
+        {
+          id: "45591A011EA3640F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FE53788C09894FD5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_oven",
+        count: 1,
+      },
+      x: 9.0,
+      y: 1.5,
+      id: "C2CA468279F36726",
+      tasks: [
+        {
+          id: "298D16D12FD361C5",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B5D8E8B900AB9A4B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:blue_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 1.5,
+      id: "490F80378C233BEA",
+      tasks: [
+        {
+          id: "2051B15A84EDD69C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:blue_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5B5F2862EF0B7D87",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_chicken_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 3.0,
+      id: "4F20ECD8259ECC00",
+      tasks: [
+        {
+          id: "FB26C083EFC9DE10",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5E9CE9616211DEAC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_connector",
+        count: 1,
+      },
+      x: 1.5,
+      y: 3.0,
+      id: "8711D8BD7D4FB554",
+      tasks: [
+        {
+          id: "0BC86113983A023B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8F787F44CABBBF1D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_cooking_table",
+        count: 1,
+      },
+      x: 3.0,
+      y: 3.0,
+      id: "7A0CCAB45E4EF7B0",
+      tasks: [
+        {
+          id: "D34E27196882E900",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "00576056959979DC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_counter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 3.0,
+      id: "5BF3C91C88F3C073",
+      tasks: [
+        {
+          id: "35A7BF5178F0D61F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CD0A9C5A3417AB36",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_fridge",
+        count: 1,
+      },
+      x: 6.0,
+      y: 3.0,
+      id: "2BD9D64173112ADD",
+      tasks: [
+        {
+          id: "1AF65D924E81B081",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "80A39C7CC0300C9E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_kitchen_floor",
+        count: 1,
+      },
+      x: 7.5,
+      y: 3.0,
+      id: "A795889F8A118721",
+      tasks: [
+        {
+          id: "3A27B8EC5DC3DDD7",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2C3370E7224645EB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_oven",
+        count: 1,
+      },
+      x: 9.0,
+      y: 3.0,
+      id: "3F72C117971014D9",
+      tasks: [
+        {
+          id: "9BBA1FD5D4464404",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B58211D252111BD7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:brown_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 3.0,
+      id: "2BCA5FED2B0BA125",
+      tasks: [
+        {
+          id: "3F7EA7D919D45F2B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:brown_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "83816639C37916E5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cabinet",
+        count: 1,
+      },
+      x: 0.0,
+      y: 4.5,
+      id: "C0E147709EF87BD8",
+      tasks: [
+        {
+          id: "001C5DEFD481BFFF",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cabinet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5116DC63764E49FA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:chef_hat",
+        count: 1,
+      },
+      x: 1.5,
+      y: 4.5,
+      id: "A4BAF6B8D5324852",
+      tasks: [
+        {
+          id: "7BCC7A6E95A70829",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:chef_hat",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "35FC7914AFE9DF2A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:chicken_sink",
+        count: 1,
+      },
+      x: 3.0,
+      y: 4.5,
+      id: "9EA49BA7FFC7B717",
+      tasks: [
+        {
+          id: "4519340E6400623F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F60D1ED88C4867BD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:coffee_machine",
+        count: 1,
+      },
+      x: 4.5,
+      y: 4.5,
+      id: "C3A3022165F5F282",
+      tasks: [
+        {
+          id: "50D9A6D9463A74C8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:coffee_machine",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "46668C1B95133A6C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:connector",
+        count: 1,
+      },
+      x: 6.0,
+      y: 4.5,
+      id: "E06C428FDEFB0407",
+      tasks: [
+        {
+          id: "C9F6667FCCC26F83",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9A523A9A6218E9D1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cookie_jar",
+        count: 1,
+      },
+      x: 7.5,
+      y: 4.5,
+      id: "7EE44E5EC2B2923A",
+      tasks: [
+        {
+          id: "81C8B0661A1EE3F3",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cookie_jar",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E42B34CF4CBC11F4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cooking_table",
+        count: 1,
+      },
+      x: 9.0,
+      y: 4.5,
+      id: "EB6E107B76A91EB5",
+      tasks: [
+        {
+          id: "1C5F0E22CAEA5A15",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F021290147CE0344",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:counter",
+        count: 1,
+      },
+      x: 10.5,
+      y: 4.5,
+      id: "9C82085D83BF7943",
+      tasks: [
+        {
+          id: "48D5C80EDED76684",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8695FAD564186F61",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:crafting_book",
+        count: 1,
+      },
+      x: 0.0,
+      y: 6.0,
+      id: "805127A09BF1EEFE",
+      tasks: [
+        {
+          id: "6E48C038597E566E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:crafting_book",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FC70379AFD7D188",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cutting_board",
+        count: 1,
+      },
+      x: 1.5,
+      y: 6.0,
+      id: "52675C008DDA8702",
+      tasks: [
+        {
+          id: "2F7CBC2CF5A492DB",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cutting_board",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ADEC6AFE70CE8D72",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_chicken_sink",
+        count: 1,
+      },
+      x: 3.0,
+      y: 6.0,
+      id: "098C2C4F8F75B0F3",
+      tasks: [
+        {
+          id: "F384B318CFC7F24D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E3CAF4AA26FCE21E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_connector",
+        count: 1,
+      },
+      x: 4.5,
+      y: 6.0,
+      id: "F6F34205069A0451",
+      tasks: [
+        {
+          id: "AC6271E1C0F10C9A",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C985041D9207D471",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_cooking_table",
+        count: 1,
+      },
+      x: 6.0,
+      y: 6.0,
+      id: "80E4F2AF49A104E6",
+      tasks: [
+        {
+          id: "6475F7DF436A86F6",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0D575789B97AD755",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_counter",
+        count: 1,
+      },
+      x: 7.5,
+      y: 6.0,
+      id: "1FBACE26B055310B",
+      tasks: [
+        {
+          id: "B087C6FFE56BA6F9",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "911653055E174743",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_fridge",
+        count: 1,
+      },
+      x: 9.0,
+      y: 6.0,
+      id: "230DFA97822B281F",
+      tasks: [
+        {
+          id: "A078E4DC91FF4FCF",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8A1C6281491863EE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_kitchen_floor",
+        count: 1,
+      },
+      x: 10.5,
+      y: 6.0,
+      id: "77EF067308B1694A",
+      tasks: [
+        {
+          id: "C61DAD009765FFCB",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "64F2F5CA9596F045",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_oven",
+        count: 1,
+      },
+      x: 0.0,
+      y: 7.5,
+      id: "0CB36866743A772D",
+      tasks: [
+        {
+          id: "E65EE5052D6237BE",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1A6100283CC08C69",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:cyan_sink",
+        count: 1,
+      },
+      x: 1.5,
+      y: 7.5,
+      id: "64D2462297D167FE",
+      tasks: [
+        {
+          id: "D942C94B542E4214",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:cyan_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4902B70788CABCC5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:fruit_basket",
+        count: 1,
+      },
+      x: 3.0,
+      y: 7.5,
+      id: "E1B00E79909B8605",
+      tasks: [
+        {
+          id: "098BD2AC459548B8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:fruit_basket",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E4E15541A1223198",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_chicken_sink",
+        count: 1,
+      },
+      x: 4.5,
+      y: 7.5,
+      id: "9BE7980D5C40F50F",
+      tasks: [
+        {
+          id: "8825826FC42148D9",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8A79FA4ACDEF1C90",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_connector",
+        count: 1,
+      },
+      x: 6.0,
+      y: 7.5,
+      id: "6A922FE52783691E",
+      tasks: [
+        {
+          id: "1CC759FC09C2C301",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1E9B1EEDBCA1A394",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_cooking_table",
+        count: 1,
+      },
+      x: 7.5,
+      y: 7.5,
+      id: "FAC5568622A0A854",
+      tasks: [
+        {
+          id: "93539288AB258E67",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C9BFE51A652F451D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_counter",
+        count: 1,
+      },
+      x: 9.0,
+      y: 7.5,
+      id: "5847E7331064BC88",
+      tasks: [
+        {
+          id: "93F83968795EFC05",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A49F6497A540B8C2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_fridge",
+        count: 1,
+      },
+      x: 10.5,
+      y: 7.5,
+      id: "D4F931AD21FDCE03",
+      tasks: [
+        {
+          id: "353E6029D862289F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4E49DDA103205069",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_kitchen_floor",
+        count: 1,
+      },
+      x: 0.0,
+      y: 9.0,
+      id: "90B5ACE4CD7A1DA9",
+      tasks: [
+        {
+          id: "7CEC06A6037D1483",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9237B5E0BFA8627A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_oven",
+        count: 1,
+      },
+      x: 1.5,
+      y: 9.0,
+      id: "757418F7E31AE871",
+      tasks: [
+        {
+          id: "8F36B0F668EA3977",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2D695AB63CB56A6A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:gray_sink",
+        count: 1,
+      },
+      x: 3.0,
+      y: 9.0,
+      id: "2F9C116EE0AB56AF",
+      tasks: [
+        {
+          id: "14A878D96A8E50A2",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:gray_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7CCA79E3FB54A886",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_chicken_sink",
+        count: 1,
+      },
+      x: 4.5,
+      y: 9.0,
+      id: "2C6AB22BD0075BAF",
+      tasks: [
+        {
+          id: "C40DCEFE159BB7B6",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3FFE4D3DF11E3497",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_connector",
+        count: 1,
+      },
+      x: 6.0,
+      y: 9.0,
+      id: "82A59889F6A5B8CC",
+      tasks: [
+        {
+          id: "B54B7D13E581DCC7",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1BA5B283B3E44732",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_cooking_table",
+        count: 1,
+      },
+      x: 7.5,
+      y: 9.0,
+      id: "EC87F2222C9D1B2B",
+      tasks: [
+        {
+          id: "F77EC4C87713EBDD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FA6B2C2D4CEAB5B0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_counter",
+        count: 1,
+      },
+      x: 9.0,
+      y: 9.0,
+      id: "2F3AACEE5C58CF32",
+      tasks: [
+        {
+          id: "CB90428EF94D0348",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1833030D50C98887",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_fridge",
+        count: 1,
+      },
+      x: 10.5,
+      y: 9.0,
+      id: "4FD8DB1080475880",
+      tasks: [
+        {
+          id: "E68F1189EA7EB7C9",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BB16CF4FA38534E7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_kitchen_floor",
+        count: 1,
+      },
+      x: 0.0,
+      y: 10.5,
+      id: "8D4F6E56B9A72D94",
+      tasks: [
+        {
+          id: "4D844AFD667F8F11",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F4993DBD227F0984",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_oven",
+        count: 1,
+      },
+      x: 1.5,
+      y: 10.5,
+      id: "FE68B84ADB592431",
+      tasks: [
+        {
+          id: "3A8134C0B7173A87",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CC7BE5553B613EF1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:green_sink",
+        count: 1,
+      },
+      x: 3.0,
+      y: 10.5,
+      id: "2D0C7480791FE09B",
+      tasks: [
+        {
+          id: "19FCBAEE035638E9",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:green_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "96201411F25FD5A2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:heating_unit",
+        count: 1,
+      },
+      x: 4.5,
+      y: 10.5,
+      id: "27DFAEAE5F19CBD3",
+      tasks: [
+        {
+          id: "F8FCFC2909FC67E8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:heating_unit",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9545BB15C3576BB7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:ice_cubes",
+        count: 1,
+      },
+      x: 6.0,
+      y: 10.5,
+      id: "0BD989F4148797C4",
+      tasks: [
+        {
+          id: "487A946FBA31B86D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:ice_cubes",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "53A17DAA484C0093",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:ice_unit",
+        count: 1,
+      },
+      x: 7.5,
+      y: 10.5,
+      id: "5092D1F1E5649313",
+      tasks: [
+        {
+          id: "770492FBC3FEA167",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:ice_unit",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5100D7C911FA964A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_chicken_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 10.5,
+      id: "C52B9EA6DA5873B9",
+      tasks: [
+        {
+          id: "3B9709D8FEBF7A77",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E0AA7307F5248D9C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_connector",
+        count: 1,
+      },
+      x: 10.5,
+      y: 10.5,
+      id: "69D2184F6BDFB835",
+      tasks: [
+        {
+          id: "A4A70F51534C15ED",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E08C30DB0DB93113",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_cooking_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 12.0,
+      id: "5A859F5727C7E4B5",
+      tasks: [
+        {
+          id: "5462FC652E2EF19E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "192B0349304328D9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_counter",
+        count: 1,
+      },
+      x: 1.5,
+      y: 12.0,
+      id: "A119C2145AB40BA8",
+      tasks: [
+        {
+          id: "4D879EBA0A504ECC",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F8222E97D257CBD6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_fridge",
+        count: 1,
+      },
+      x: 3.0,
+      y: 12.0,
+      id: "82511D535732B1CF",
+      tasks: [
+        {
+          id: "0A41263FD4DE53F0",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DB46DF505F48DCD5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_kitchen_floor",
+        count: 1,
+      },
+      x: 4.5,
+      y: 12.0,
+      id: "A7E73ABFB1BAD755",
+      tasks: [
+        {
+          id: "5F8DF910C692A2C1",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DCF0986DF5B62EDC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_oven",
+        count: 1,
+      },
+      x: 6.0,
+      y: 12.0,
+      id: "0B6B8960212DD4FC",
+      tasks: [
+        {
+          id: "E92965698DFF1B4E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4E0D2EB260C258BF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_blue_sink",
+        count: 1,
+      },
+      x: 7.5,
+      y: 12.0,
+      id: "6C9C758E43E5D975",
+      tasks: [
+        {
+          id: "2D7B96FF34E229D8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_blue_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0FE60638E7456878",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_chicken_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 12.0,
+      id: "71BE2E3DBAD000E2",
+      tasks: [
+        {
+          id: "1981E1AF469D55F4",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "ED648C0263CAFA71",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_connector",
+        count: 1,
+      },
+      x: 10.5,
+      y: 12.0,
+      id: "EB7C9DEDCD47DC51",
+      tasks: [
+        {
+          id: "5A63ED577CD7DC8F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A41AFBB951604411",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_cooking_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 13.5,
+      id: "2B3BEA926E718953",
+      tasks: [
+        {
+          id: "85CC04B96FCC8513",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "AAED9BA5B662EF7D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_counter",
+        count: 1,
+      },
+      x: 1.5,
+      y: 13.5,
+      id: "06DD18EFF8A3D4EA",
+      tasks: [
+        {
+          id: "64AB6768E297F0C6",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "882021276C4EBA77",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_fridge",
+        count: 1,
+      },
+      x: 3.0,
+      y: 13.5,
+      id: "FC223C89E8BBA6C9",
+      tasks: [
+        {
+          id: "DDE919084B583B0D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6EE2328725971D32",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_kitchen_floor",
+        count: 1,
+      },
+      x: 4.5,
+      y: 13.5,
+      id: "A307609942067A73",
+      tasks: [
+        {
+          id: "DC2CD216856F82D5",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "19075B8A428C1AE9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_oven",
+        count: 1,
+      },
+      x: 6.0,
+      y: 13.5,
+      id: "F430F10138364D88",
+      tasks: [
+        {
+          id: "2254157F49F2BD1A",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C3DC3B1473EF3D2B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:light_gray_sink",
+        count: 1,
+      },
+      x: 7.5,
+      y: 13.5,
+      id: "79643D27B1D775A5",
+      tasks: [
+        {
+          id: "D80A4857751C1BE8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:light_gray_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "AED182248C63669D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_chicken_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 13.5,
+      id: "376C09DC6B82FC1B",
+      tasks: [
+        {
+          id: "BF36E8152C7F3D21",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E99F58B337BD402F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_connector",
+        count: 1,
+      },
+      x: 10.5,
+      y: 13.5,
+      id: "DCAD29B1C57E2C9B",
+      tasks: [
+        {
+          id: "F2457C02706901F1",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1FEA4EC6B5003177",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_cooking_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 15.0,
+      id: "E0093C4F85A3DDBE",
+      tasks: [
+        {
+          id: "6191001D25586F84",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C5394219BA277157",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_counter",
+        count: 1,
+      },
+      x: 1.5,
+      y: 15.0,
+      id: "08BD3E29BA8B4F67",
+      tasks: [
+        {
+          id: "F8295AE250A9CF47",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CAA38468EDCE9B2F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_fridge",
+        count: 1,
+      },
+      x: 3.0,
+      y: 15.0,
+      id: "AB3C06F69D15545A",
+      tasks: [
+        {
+          id: "CCE8EBF3353A7749",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "90B912F8AB28029B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_kitchen_floor",
+        count: 1,
+      },
+      x: 4.5,
+      y: 15.0,
+      id: "C023EC8CBF47BEE2",
+      tasks: [
+        {
+          id: "BB2E554783E64399",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3253BCF905A949A3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_oven",
+        count: 1,
+      },
+      x: 6.0,
+      y: 15.0,
+      id: "979B622AA1AC3162",
+      tasks: [
+        {
+          id: "094F0868605A9B4E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "10EDF8E917EB383F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:lime_sink",
+        count: 1,
+      },
+      x: 7.5,
+      y: 15.0,
+      id: "1AA0B051CAF91668",
+      tasks: [
+        {
+          id: "BAFD1AB30DB25FCC",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:lime_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D4FD1647164E7FA7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_chicken_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 15.0,
+      id: "4DEC5D3B6EF52E95",
+      tasks: [
+        {
+          id: "7C2C4DADE2B2900D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DBEC17362ECDB0D3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_connector",
+        count: 1,
+      },
+      x: 10.5,
+      y: 15.0,
+      id: "0ECF5675488CFB8A",
+      tasks: [
+        {
+          id: "24805A2663D6ECDC",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E22657D882C16B66",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_cooking_table",
+        count: 1,
+      },
+      x: 0.0,
+      y: 16.5,
+      id: "378BF935155FFA9B",
+      tasks: [
+        {
+          id: "CFBEBB16FEB17DCD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B407613203229A19",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_counter",
+        count: 1,
+      },
+      x: 1.5,
+      y: 16.5,
+      id: "531DBB1C652BD060",
+      tasks: [
+        {
+          id: "12020737D4516B00",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "153BA52021EC6141",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_fridge",
+        count: 1,
+      },
+      x: 3.0,
+      y: 16.5,
+      id: "F19C3CBE441AD12F",
+      tasks: [
+        {
+          id: "0A92C6CCBCFA574B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D9BA3FC8B7BEFAA2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_kitchen_floor",
+        count: 1,
+      },
+      x: 4.5,
+      y: 16.5,
+      id: "F5D2353C59496EF0",
+      tasks: [
+        {
+          id: "10A76FD4850DD949",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E35106E7CFAA7B1E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_oven",
+        count: 1,
+      },
+      x: 6.0,
+      y: 16.5,
+      id: "6F1009FB2D52A4F1",
+      tasks: [
+        {
+          id: "0BEE45BB9B640BB4",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "49499D700DE9487B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:magenta_sink",
+        count: 1,
+      },
+      x: 7.5,
+      y: 16.5,
+      id: "CE6C4ABF729E2CE1",
+      tasks: [
+        {
+          id: "279E5DE7A75AF44E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:magenta_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B8EEE2BEBEE19233",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:milk_jar",
+        count: 1,
+      },
+      x: 9.0,
+      y: 16.5,
+      id: "BD3EDE6AECE11AD5",
+      tasks: [
+        {
+          id: "43F2CFA9C28868AD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:milk_jar",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F9F20CB79641BAAB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:no_filter_edition",
+        count: 1,
+      },
+      x: 10.5,
+      y: 16.5,
+      id: "5C994565505C4A4A",
+      tasks: [
+        {
+          id: "7FF8040ABCC026F6",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:no_filter_edition",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "46D260BDCBD299EC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_chicken_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 18.0,
+      id: "F2F7C098793B0ED3",
+      tasks: [
+        {
+          id: "9E47FBA9519BB41C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CC3B28570AC02E77",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_connector",
+        count: 1,
+      },
+      x: 1.5,
+      y: 18.0,
+      id: "FA651717969BDEA4",
+      tasks: [
+        {
+          id: "16E200D2B7813955",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EB83074C454081CA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_cooking_table",
+        count: 1,
+      },
+      x: 3.0,
+      y: 18.0,
+      id: "7FA16E814CAEAE98",
+      tasks: [
+        {
+          id: "479B95B3CFEABA25",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "652FAB876F93E189",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_counter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 18.0,
+      id: "A722F76C2E60F268",
+      tasks: [
+        {
+          id: "F76731885A167729",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5808565146AC6BD0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_fridge",
+        count: 1,
+      },
+      x: 6.0,
+      y: 18.0,
+      id: "C540AC3BCE697D44",
+      tasks: [
+        {
+          id: "A71A31381CE04685",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F903ED738F28973F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_kitchen_floor",
+        count: 1,
+      },
+      x: 7.5,
+      y: 18.0,
+      id: "DD089C21DD39C982",
+      tasks: [
+        {
+          id: "E58D6D14234D1C15",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "9816DF6ADAABE98A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_oven",
+        count: 1,
+      },
+      x: 9.0,
+      y: 18.0,
+      id: "1A6BD284D8DD4876",
+      tasks: [
+        {
+          id: "53D5DFE3BD7345B7",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3D2E55508096FA17",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:orange_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 18.0,
+      id: "92E73AAB0FACEB76",
+      tasks: [
+        {
+          id: "791596B8A601867C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:orange_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "199E2DF5D87A0902",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_chicken_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 19.5,
+      id: "D848944DE2DF2558",
+      tasks: [
+        {
+          id: "593A72F51B287CB4",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8D8412C5B42E95A0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_connector",
+        count: 1,
+      },
+      x: 1.5,
+      y: 19.5,
+      id: "A789036CBEFB2B23",
+      tasks: [
+        {
+          id: "79BCCD0964C722C2",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3F7BC52531265E5D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_cooking_table",
+        count: 1,
+      },
+      x: 3.0,
+      y: 19.5,
+      id: "E268841B1B1AAED9",
+      tasks: [
+        {
+          id: "EFD06CDDCA7BE924",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DE952FCADFC8E775",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_counter",
+        count: 1,
+      },
+      x: 4.5,
+      y: 19.5,
+      id: "E05E9C0B530E54A6",
+      tasks: [
+        {
+          id: "C231017A305FAA2E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "505C0AC40ED9862D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_fridge",
+        count: 1,
+      },
+      x: 6.0,
+      y: 19.5,
+      id: "3B1AE17E3AF844CA",
+      tasks: [
+        {
+          id: "3FF56444EE204F8C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2B1947D5FBF2FA2F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_kitchen_floor",
+        count: 1,
+      },
+      x: 7.5,
+      y: 19.5,
+      id: "B64C7DF4A1A52EA7",
+      tasks: [
+        {
+          id: "B10211DB6F005732",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "85A3B91AAF63EC45",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_oven",
+        count: 1,
+      },
+      x: 9.0,
+      y: 19.5,
+      id: "66F73B74048751C3",
+      tasks: [
+        {
+          id: "88AE63E5FF199C4D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0E4D0634A3E65836",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:pink_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 19.5,
+      id: "BD85FF8C52E53500",
+      tasks: [
+        {
+          id: "AD1565C434716E3B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:pink_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "EF95DF13F8D50EBC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:preservation_chamber",
+        count: 1,
+      },
+      x: 0.0,
+      y: 21.0,
+      id: "AD87175636F22331",
+      tasks: [
+        {
+          id: "1F7A7362B9C928AE",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:preservation_chamber",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "71888A2A38231610",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_chicken_sink",
+        count: 1,
+      },
+      x: 1.5,
+      y: 21.0,
+      id: "D46C0F7AB4056533",
+      tasks: [
+        {
+          id: "D1086A73E666311D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "70618451E6539D4D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_connector",
+        count: 1,
+      },
+      x: 3.0,
+      y: 21.0,
+      id: "F76A7A9C80317AD2",
+      tasks: [
+        {
+          id: "411E61ABA4C05FE3",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "432D827966D65E3F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_cooking_table",
+        count: 1,
+      },
+      x: 4.5,
+      y: 21.0,
+      id: "F1AFB9BA50FC1B03",
+      tasks: [
+        {
+          id: "003497E986019F64",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F854B4E0D2333B6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_counter",
+        count: 1,
+      },
+      x: 6.0,
+      y: 21.0,
+      id: "83E8A335C5A93CBD",
+      tasks: [
+        {
+          id: "4E433F2DC1D72632",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D4EA6205285FD76D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_fridge",
+        count: 1,
+      },
+      x: 7.5,
+      y: 21.0,
+      id: "EE77F30C93AD3704",
+      tasks: [
+        {
+          id: "1F8F5C65C5975F8B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6DB7EA6E705F2CFF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_kitchen_floor",
+        count: 1,
+      },
+      x: 9.0,
+      y: 21.0,
+      id: "526D49AD1D1B1931",
+      tasks: [
+        {
+          id: "D3E33BCFB42BC836",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4F74FFC7005CAA0D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_oven",
+        count: 1,
+      },
+      x: 10.5,
+      y: 21.0,
+      id: "360296F352BA0AA4",
+      tasks: [
+        {
+          id: "2B58EA89FB5AFD85",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "993B5A731AA65E88",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:purple_sink",
+        count: 1,
+      },
+      x: 0.0,
+      y: 22.5,
+      id: "63D539A7BE9486F7",
+      tasks: [
+        {
+          id: "20E66F2CFDC75C18",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:purple_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C99487421122ADCD",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:recipe_book",
+        count: 1,
+      },
+      x: 1.5,
+      y: 22.5,
+      id: "1CE050098AF388B9",
+      tasks: [
+        {
+          id: "78F24EFC67EACE56",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:recipe_book",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "12D51954869C17C3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_chicken_sink",
+        count: 1,
+      },
+      x: 3.0,
+      y: 22.5,
+      id: "F1181F956D49DC5C",
+      tasks: [
+        {
+          id: "17CE50FED41C6CA8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BBCB8536BBF2ECB4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_connector",
+        count: 1,
+      },
+      x: 4.5,
+      y: 22.5,
+      id: "97864CDF41C71E1B",
+      tasks: [
+        {
+          id: "047F08DE463622DB",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1336F1CC4A8086F5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_cooking_table",
+        count: 1,
+      },
+      x: 6.0,
+      y: 22.5,
+      id: "349175433CB88A2E",
+      tasks: [
+        {
+          id: "426199889EFB7E39",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "903BF1CA554279C4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_counter",
+        count: 1,
+      },
+      x: 7.5,
+      y: 22.5,
+      id: "CBED91075005A943",
+      tasks: [
+        {
+          id: "E44180E88D3D655D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2A74D654B1B1BF1E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_fridge",
+        count: 1,
+      },
+      x: 9.0,
+      y: 22.5,
+      id: "60ADBE00AD95C3FE",
+      tasks: [
+        {
+          id: "7B85B4DD177D1DF0",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "50731FB7F88C7CE5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_kitchen_floor",
+        count: 1,
+      },
+      x: 10.5,
+      y: 22.5,
+      id: "C14F3202A8A21F2C",
+      tasks: [
+        {
+          id: "B406CC24BB4D2DD8",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C64E30DF8FC41F5C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_oven",
+        count: 1,
+      },
+      x: 0.0,
+      y: 24.0,
+      id: "23D3944742F6BA00",
+      tasks: [
+        {
+          id: "EAC04C797419C61C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "808BAD67F050D44D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:red_sink",
+        count: 1,
+      },
+      x: 1.5,
+      y: 24.0,
+      id: "DC93EEAFC116E565",
+      tasks: [
+        {
+          id: "7E5207A281738CFB",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:red_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "99674B2B206B7872",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:salt_filter",
+        count: 1,
+      },
+      x: 3.0,
+      y: 24.0,
+      id: "30746B2212F2EDBF",
+      tasks: [
+        {
+          id: "CD97020EB709B5CD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:salt_filter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E0E68F9BA78BEF8E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:sink",
+        count: 1,
+      },
+      x: 4.5,
+      y: 24.0,
+      id: "915D5BC11EF3807A",
+      tasks: [
+        {
+          id: "FFD62493FB57EF12",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "074FC0353B32E59B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:spice_rack",
+        count: 1,
+      },
+      x: 6.0,
+      y: 24.0,
+      id: "05C81560055409C1",
+      tasks: [
+        {
+          id: "907CC178F494DD64",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:spice_rack",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5F754523DFF0019E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:toaster",
+        count: 1,
+      },
+      x: 7.5,
+      y: 24.0,
+      id: "B70ECE020CE4DD00",
+      tasks: [
+        {
+          id: "E85A189631499A50",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:toaster",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F4F2DDD239D0C7E7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:tool_rack",
+        count: 1,
+      },
+      x: 9.0,
+      y: 24.0,
+      id: "3C75D07DCDE56645",
+      tasks: [
+        {
+          id: "CEA5C312AEB2A2E4",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:tool_rack",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "27D1962A2BDD91A6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_chicken_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 24.0,
+      id: "8BDDF4D5A5842D7A",
+      tasks: [
+        {
+          id: "5C8B9BD2D1E3C653",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "97F2264214E24E1C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_connector",
+        count: 1,
+      },
+      x: 0.0,
+      y: 25.5,
+      id: "385E68E5AE23EDA4",
+      tasks: [
+        {
+          id: "ACDE30EEBD19F391",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2D8068955458BA03",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_cooking_table",
+        count: 1,
+      },
+      x: 1.5,
+      y: 25.5,
+      id: "EE5CE73EFE51F1EE",
+      tasks: [
+        {
+          id: "741BB96A7E007CFD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "AC0E1399F7E3D5A1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_counter",
+        count: 1,
+      },
+      x: 3.0,
+      y: 25.5,
+      id: "346F133470885958",
+      tasks: [
+        {
+          id: "23FDD94828FEF69F",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "485268D279C5EE13",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_fridge",
+        count: 1,
+      },
+      x: 4.5,
+      y: 25.5,
+      id: "6A375487F5356F46",
+      tasks: [
+        {
+          id: "420D69B5AFD6B72E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "27F77E7D2525C0D4",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_kitchen_floor",
+        count: 1,
+      },
+      x: 6.0,
+      y: 25.5,
+      id: "4057F6D70091D864",
+      tasks: [
+        {
+          id: "6A24CACAC94D88A0",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "DEF44B663102FD24",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_oven",
+        count: 1,
+      },
+      x: 7.5,
+      y: 25.5,
+      id: "84BF3EE36517B4B3",
+      tasks: [
+        {
+          id: "BFDC4F7117B0B3FD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3E6CFB0F9007B7E9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 25.5,
+      id: "0A1CDC8701DB512E",
+      tasks: [
+        {
+          id: "FAACF2D007FC914D",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:white_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "58DCADD83C9A6440",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_chicken_sink",
+        count: 1,
+      },
+      x: 10.5,
+      y: 25.5,
+      id: "49AFACFC64303A1F",
+      tasks: [
+        {
+          id: "B019705CCBB929BD",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_chicken_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "BA9A8E06B0416138",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_connector",
+        count: 1,
+      },
+      x: 0.0,
+      y: 27.0,
+      id: "77D78F987C265E30",
+      tasks: [
+        {
+          id: "BC5FCAF3E412C78A",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_connector",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3CE0F35EE75704F7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_cooking_table",
+        count: 1,
+      },
+      x: 1.5,
+      y: 27.0,
+      id: "D65B2B7E000DB11F",
+      tasks: [
+        {
+          id: "F7550D798D68994C",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_cooking_table",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A61AE6D6A0747018",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_counter",
+        count: 1,
+      },
+      x: 3.0,
+      y: 27.0,
+      id: "F4544FBD7456EB9D",
+      tasks: [
+        {
+          id: "1B26D18003647710",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_counter",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E6F4AFBEE5AE00BA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_fridge",
+        count: 1,
+      },
+      x: 4.5,
+      y: 27.0,
+      id: "433282E578D68154",
+      tasks: [
+        {
+          id: "63F5EB5418A49A1B",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_fridge",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FA81BE8ED697F4DE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_kitchen_floor",
+        count: 1,
+      },
+      x: 6.0,
+      y: 27.0,
+      id: "1BDA98DA58F44B9D",
+      tasks: [
+        {
+          id: "F7F00BDBFE49BFB0",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_kitchen_floor",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CDE0A685D8C94309",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_oven",
+        count: 1,
+      },
+      x: 7.5,
+      y: 27.0,
+      id: "427406CA47DD6C28",
+      tasks: [
+        {
+          id: "DF96693239422ED0",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_oven",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D5D0AFC07ACD746A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:yellow_sink",
+        count: 1,
+      },
+      x: 9.0,
+      y: 27.0,
+      id: "1B71A9ED9E27B9C5",
+      tasks: [
+        {
+          id: "A9D7E1EA198A053E",
+          type: "item",
+          item: {
+            id: "cookingforblockheads:yellow_sink",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D338DCE921C65CE8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:ice",
+        count: 1,
+      },
+      x: 10.5,
+      y: 27.0,
+      id: "6AE45AFB8CFB602B",
+      tasks: [
+        {
+          id: "A0F21F266478E732",
+          type: "item",
+          item: {
+            id: "minecraft:ice",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "96711BA393248FD3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:snowball",
+        count: 1,
+      },
+      x: 0.0,
+      y: 28.5,
+      id: "D1DE39B8D6A19FE3",
+      tasks: [
+        {
+          id: "08D1A7367F242366",
+          type: "item",
+          item: {
+            id: "minecraft:snowball",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E830761593857452",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-INSTANCE="/home/christer/Documents/curseforge/minecraft/Instances/Modded Randon One Block"
+INSTANCE="${MODLIST_INSTANCE:-/home/christer/Documents/curseforge/minecraft/Instances/Modded Randon One Block}"
 
 link_dir() {
   local name="$1"
@@ -29,7 +29,7 @@ link_dir() {
 }
 
 clean_stale_pack_configs() {
-  "$REPO/scripts/clean-stale-instance-config.sh"
+  MODLIST_INSTANCE="$INSTANCE" "$REPO/scripts/clean-stale-instance-config.sh" "$INSTANCE"
 }
 
 if [[ ! -d "$INSTANCE" ]]; then

@@ -1,0 +1,822 @@
+{
+  id: "AFCB5F2F7EAB0648",
+  group: "",
+  order_index: 15,
+  icon: {
+    id: "bhc:red_heart_canister",
+    count: 1,
+  },
+  filename: "baubley_heart_canisters",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "bhc:blade_of_vitality",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      id: "F9A2D5D4A58AD78D",
+      tasks: [
+        {
+          id: "75F7F093B080398F",
+          type: "item",
+          item: {
+            id: "bhc:blade_of_vitality",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "FA4AC2F28FBF7AA5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:blue_heart",
+        count: 1,
+      },
+      x: 1.5,
+      y: 0.0,
+      id: "8A0F49789E39BE1D",
+      tasks: [
+        {
+          id: "5217873B3BC3420B",
+          type: "item",
+          item: {
+            id: "bhc:blue_heart",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2014763375E3CF97",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:blue_heart_canister",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      id: "2F2A49690581AECD",
+      tasks: [
+        {
+          id: "199EB68FA31655E7",
+          type: "item",
+          item: {
+            id: "bhc:blue_heart_canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C8A06BED18BC7159",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:blue_heart_melted",
+        count: 1,
+      },
+      x: 4.5,
+      y: 0.0,
+      id: "6351A1178C3FBB5D",
+      tasks: [
+        {
+          id: "65638F4741DC4AF5",
+          type: "item",
+          item: {
+            id: "bhc:blue_heart_melted",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F62CD50584791EC8",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:blue_heart_patch",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      id: "DBFCC128EFA54D2F",
+      tasks: [
+        {
+          id: "CFA2B4ADDB365516",
+          type: "item",
+          item: {
+            id: "bhc:blue_heart_patch",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3C67F5A0993C3BEF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:blue_heartpulse_belt",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      id: "F2E90ECF5E7179D8",
+      tasks: [
+        {
+          id: "07730A5F13656122",
+          type: "item",
+          item: {
+            id: "bhc:blue_heartpulse_belt",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B7CA1650BE41A083",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:canister",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      id: "C4038FAACBF6E111",
+      tasks: [
+        {
+          id: "BF20D0F85F7FBB18",
+          type: "item",
+          item: {
+            id: "bhc:canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "7D0BE2CFC868D49C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:green_heart",
+        count: 1,
+      },
+      x: 10.5,
+      y: 0.0,
+      id: "C9B4AB2880EE507F",
+      tasks: [
+        {
+          id: "4C8FC572E42F4C8D",
+          type: "item",
+          item: {
+            id: "bhc:green_heart",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "5948AC98C56D5C37",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:green_heart_canister",
+        count: 1,
+      },
+      x: 0.0,
+      y: 1.5,
+      id: "F5CBE1BB227BB43C",
+      tasks: [
+        {
+          id: "868C9B372B07B7D3",
+          type: "item",
+          item: {
+            id: "bhc:green_heart_canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D24AD76D092CDDD0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:green_heart_melted",
+        count: 1,
+      },
+      x: 1.5,
+      y: 1.5,
+      id: "6979B9749E45D8E4",
+      tasks: [
+        {
+          id: "2214BF795681A81E",
+          type: "item",
+          item: {
+            id: "bhc:green_heart_melted",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "4A04FF5DAD39BDA1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:green_heart_patch",
+        count: 1,
+      },
+      x: 3.0,
+      y: 1.5,
+      id: "3D988E3CBB8ACE5B",
+      tasks: [
+        {
+          id: "3CC8F345AEA3A5F6",
+          type: "item",
+          item: {
+            id: "bhc:green_heart_patch",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1261F7C2C4725629",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:green_heartpulse_belt",
+        count: 1,
+      },
+      x: 4.5,
+      y: 1.5,
+      id: "896C912C2D8919AD",
+      tasks: [
+        {
+          id: "C35A6E68A58A56FB",
+          type: "item",
+          item: {
+            id: "bhc:green_heartpulse_belt",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E8B51A2CCBAF88D6",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:heart_amulet",
+        count: 1,
+      },
+      x: 6.0,
+      y: 1.5,
+      id: "58F9D2E0B47FD904",
+      tasks: [
+        {
+          id: "8A56DBEBDA2ACF09",
+          type: "item",
+          item: {
+            id: "bhc:heart_amulet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "B4656CB848723E86",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:red_heart",
+        count: 1,
+      },
+      x: 7.5,
+      y: 1.5,
+      id: "5B02D1D4A0DAA430",
+      tasks: [
+        {
+          id: "8752AE5924757404",
+          type: "item",
+          item: {
+            id: "bhc:red_heart",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0E677A0F3E0F62DF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:red_heart_canister",
+        count: 1,
+      },
+      x: 9.0,
+      y: 1.5,
+      id: "F6C5BA37307010D6",
+      tasks: [
+        {
+          id: "E03695FFF3CCB31D",
+          type: "item",
+          item: {
+            id: "bhc:red_heart_canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "6F26F92FE9C28C0D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:red_heart_melted",
+        count: 1,
+      },
+      x: 10.5,
+      y: 1.5,
+      id: "2FEEF3D1F827B00B",
+      tasks: [
+        {
+          id: "418FDC52EE441D85",
+          type: "item",
+          item: {
+            id: "bhc:red_heart_melted",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "48D09BD004718DCE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:red_heart_patch",
+        count: 1,
+      },
+      x: 0.0,
+      y: 3.0,
+      id: "E1501007B7516731",
+      tasks: [
+        {
+          id: "4824C21E937451AE",
+          type: "item",
+          item: {
+            id: "bhc:red_heart_patch",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "40F9A5DE9A8F93DA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:red_heartpulse_belt",
+        count: 1,
+      },
+      x: 1.5,
+      y: 3.0,
+      id: "2790CDACFC1D27E9",
+      tasks: [
+        {
+          id: "2BE1AE816CE97CA6",
+          type: "item",
+          item: {
+            id: "bhc:red_heartpulse_belt",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "F572AA6FC82AFB4E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:relic_apple",
+        count: 1,
+      },
+      x: 3.0,
+      y: 3.0,
+      id: "01053F743A38162D",
+      tasks: [
+        {
+          id: "55CE405D8B43AE61",
+          type: "item",
+          item: {
+            id: "bhc:relic_apple",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8EA0A38E5FCDEB97",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:soul_heart_amulet",
+        count: 1,
+      },
+      x: 4.5,
+      y: 3.0,
+      id: "969AF011E76FB239",
+      tasks: [
+        {
+          id: "0AA5974996C26E7B",
+          type: "item",
+          item: {
+            id: "bhc:soul_heart_amulet",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "26DD2E228E71628E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:soul_heart_canister",
+        count: 1,
+      },
+      x: 6.0,
+      y: 3.0,
+      id: "4D1DC32E6EA7D7F8",
+      tasks: [
+        {
+          id: "B6E87AD427C822A5",
+          type: "item",
+          item: {
+            id: "bhc:soul_heart_canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "E010EC87C2F2669A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:soul_heart_crystal",
+        count: 1,
+      },
+      x: 7.5,
+      y: 3.0,
+      id: "A3679D9CCB4337C5",
+      tasks: [
+        {
+          id: "C3F8259950B3E34D",
+          type: "item",
+          item: {
+            id: "bhc:soul_heart_crystal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "3792391FB693123A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:vigor_bow",
+        count: 1,
+      },
+      x: 9.0,
+      y: 3.0,
+      id: "5E1F08B6D29861D4",
+      tasks: [
+        {
+          id: "A94DC0E51FCE517B",
+          type: "item",
+          item: {
+            id: "bhc:vigor_bow",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "50D13E7C37A5D3F0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:wither_bone",
+        count: 1,
+      },
+      x: 10.5,
+      y: 3.0,
+      id: "D2DA17E3C7DECE61",
+      tasks: [
+        {
+          id: "CB3AFD69D064395B",
+          type: "item",
+          item: {
+            id: "bhc:wither_bone",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A207B538D02E9294",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:yellow_heart",
+        count: 1,
+      },
+      x: 0.0,
+      y: 4.5,
+      id: "8A45EB379E1CCCB6",
+      tasks: [
+        {
+          id: "717C8FB55EBF30EE",
+          type: "item",
+          item: {
+            id: "bhc:yellow_heart",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "CAA3B6AD5F8E8F18",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:yellow_heart_canister",
+        count: 1,
+      },
+      x: 1.5,
+      y: 4.5,
+      id: "414FA4523BC5A3A3",
+      tasks: [
+        {
+          id: "C75BBD20972E8B53",
+          type: "item",
+          item: {
+            id: "bhc:yellow_heart_canister",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "C41DBD5E5C5A84B2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:yellow_heart_melted",
+        count: 1,
+      },
+      x: 3.0,
+      y: 4.5,
+      id: "48B99FAC3D0F4ABF",
+      tasks: [
+        {
+          id: "88495B9AD94C2C32",
+          type: "item",
+          item: {
+            id: "bhc:yellow_heart_melted",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "8EA12D1C667AD659",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:yellow_heart_patch",
+        count: 1,
+      },
+      x: 4.5,
+      y: 4.5,
+      id: "177B5EC32E8C5775",
+      tasks: [
+        {
+          id: "9016809A2DD310AD",
+          type: "item",
+          item: {
+            id: "bhc:yellow_heart_patch",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "D9F8DDF149B89332",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "bhc:yellow_heartpulse_belt",
+        count: 1,
+      },
+      x: 6.0,
+      y: 4.5,
+      id: "004EDA1791F3D841",
+      tasks: [
+        {
+          id: "9AEE453DD953EA6F",
+          type: "item",
+          item: {
+            id: "bhc:yellow_heartpulse_belt",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "A2361C59C44CD2F2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:bone_meal",
+        count: 1,
+      },
+      x: 7.5,
+      y: 4.5,
+      id: "DD51EF48846AE482",
+      tasks: [
+        {
+          id: "9C3F13250B9E4201",
+          type: "item",
+          item: {
+            id: "minecraft:bone_meal",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "0621739C8B8A6764",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:enchanted_golden_apple",
+        count: 1,
+      },
+      x: 9.0,
+      y: 4.5,
+      id: "84AD35578498B8A1",
+      tasks: [
+        {
+          id: "C9699985B1EC7F50",
+          type: "item",
+          item: {
+            id: "minecraft:enchanted_golden_apple",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "1502B7004128644A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}
