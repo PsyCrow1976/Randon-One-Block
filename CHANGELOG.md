@@ -4,7 +4,19 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.1] — 2026-07-05
+
+### Mod & item catalog
+
+- **`modlist.html`** — Browsable HTML list with **Mods** and **Items & Blocks** tabs (search, filters, pagination). Format: Modpack · Item · Item Type · Description; items also show mod source, craftable/uncraftable, and registry id.
+- **`modlist-items.json`** — Machine-readable cache (~4,300 mod items/blocks) extracted from installed mod JAR lang + recipe data and KubeJS pack recipes.
+- **`generate-moditemlist.sh`** — One-command regen from the CurseForge instance (`--update-mods` refreshes `modlist.json` first).
+- **`moditemrecipy.md`** — How-to for regenerating the catalog after pack changes.
+- **`scripts/generate-modlist-html.py`** / **`scripts/modpack_items.py`** — Generator and item extractor (`MODLIST_INSTANCE` / `--instance` supported).
 
 ---
 
