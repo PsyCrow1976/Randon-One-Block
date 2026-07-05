@@ -1,7 +1,7 @@
 {
   id: "213187AB7D5B77D2",
   group: "",
-  order_index: 7,
+  order_index: 6,
   icon: {
     id: "easy_villagers:trader",
     count: 1,
@@ -15,8 +15,8 @@
         id: "easy_villagers:auto_trader",
         count: 1,
       },
-      x: 0.0,
-      y: 0.0,
+      x: 9.0,
+      y: -4.5,
       id: "0C7461E734686856",
       tasks: [
         {
@@ -38,43 +38,14 @@
     },
     {
       icon: {
-        id: "ftbquests:missing_item",
-        count: 1,
-        components: {
-          "ftbquests:missing_item": "easy_villagers:baby_villager",
-        },
-      },
-      x: 1.5,
-      y: 0.0,
-      id: "06BBDC7CE33B286A",
-      tasks: [
-        {
-          id: "42C7987D0A49B44F",
-          type: "item",
-          item: {
-            id: "ftbquests:missing_item",
-            count: 1,
-            components: {
-              "ftbquests:missing_item": "easy_villagers:baby_villager",
-            },
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "5F57EC9D925BAF1D",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "easy_villagers:breeder",
         count: 1,
       },
-      x: 3.0,
-      y: 0.0,
+      x: -0.5,
+      y: -6.5,
+      dependencies: [
+        "05F1AEB401CE12C2",
+      ],
       id: "23EF2B37EC4B1F9C",
       tasks: [
         {
@@ -99,8 +70,11 @@
         id: "easy_villagers:converter",
         count: 1,
       },
-      x: 4.5,
-      y: 0.0,
+      x: 5.0,
+      y: -8.5,
+      dependencies: [
+        "14AF719D11C684EE",
+      ],
       id: "41F3FF9466090C95",
       tasks: [
         {
@@ -125,8 +99,11 @@
         id: "easy_villagers:farmer",
         count: 1,
       },
-      x: 6.0,
-      y: 0.0,
+      x: 5.0,
+      y: -4.5,
+      dependencies: [
+        "14AF719D11C684EE",
+      ],
       id: "5C1C2360D9A77729",
       tasks: [
         {
@@ -151,8 +128,11 @@
         id: "easy_villagers:incubator",
         count: 1,
       },
-      x: 7.5,
-      y: 0.0,
+      x: 5.0,
+      y: -6.5,
+      dependencies: [
+        "23EF2B37EC4B1F9C",
+      ],
       id: "14AF719D11C684EE",
       tasks: [
         {
@@ -177,8 +157,11 @@
         id: "easy_villagers:inventory_viewer",
         count: 1,
       },
-      x: 9.0,
-      y: 0.0,
+      x: 3.0,
+      y: -4.5,
+      dependencies: [
+        "14AF719D11C684EE",
+      ],
       id: "535768FA01FE44C5",
       tasks: [
         {
@@ -203,8 +186,11 @@
         id: "easy_villagers:iron_farm",
         count: 1,
       },
-      x: 10.5,
-      y: 0.0,
+      x: 7.0,
+      y: -6.5,
+      dependencies: [
+        "14AF719D11C684EE",
+      ],
       id: "6169A87955075572",
       tasks: [
         {
@@ -229,8 +215,12 @@
         id: "easy_villagers:trader",
         count: 1,
       },
-      x: 12.0,
-      y: 0.0,
+      x: 7.0,
+      y: -4.5,
+      dependencies: [
+        "14AF719D11C684EE",
+        "0C7461E734686856",
+      ],
       id: "2FAA048B5E998DAD",
       tasks: [
         {
@@ -254,9 +244,15 @@
       icon: {
         id: "easy_villagers:villager",
         count: 1,
+        components: {
+          "easy_villagers:villager": {
+          },
+        },
       },
-      x: 13.5,
-      y: 0.0,
+      x: -2.5,
+      y: -6.5,
+      shape: "gear",
+      size: 2.0,
       id: "05F1AEB401CE12C2",
       tasks: [
         {
@@ -281,8 +277,11 @@
         id: "easy_piglins:barterer",
         count: 1,
       },
-      x: 0.0,
-      y: 2.5,
+      x: -0.5,
+      y: -1.0,
+      dependencies: [
+        "4A6ECCE2C19D4FF7",
+      ],
       id: "7509E58C7D5B9193",
       tasks: [
         {
@@ -306,9 +305,15 @@
       icon: {
         id: "easy_piglins:piglin",
         count: 1,
+        components: {
+          "easy_piglins:piglin": {
+          },
+        },
       },
-      x: 1.5,
-      y: 2.5,
+      x: -2.5,
+      y: -1.0,
+      shape: "gear",
+      size: 2.0,
       id: "4A6ECCE2C19D4FF7",
       tasks: [
         {

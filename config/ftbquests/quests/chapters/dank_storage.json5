@@ -1,7 +1,7 @@
 {
   id: "49B98278BD0E52D2",
   group: "",
-  order_index: 8,
+  order_index: 7,
   icon: {
     id: "dankstorage:dank_1",
     count: 1,
@@ -15,8 +15,10 @@
         id: "dankstorage:dank_1",
         count: 1,
       },
-      x: 0.0,
-      y: 0.0,
+      x: -1.0,
+      y: -5.0,
+      shape: "gear",
+      size: 2.0,
       id: "1D7ED161138A7153",
       tasks: [
         {
@@ -42,7 +44,11 @@
         count: 1,
       },
       x: 1.5,
-      y: 0.0,
+      y: -5.0,
+      dependencies: [
+        "1D7ED161138A7153",
+        "2EBBDDCD769AB514",
+      ],
       id: "62A57B8611699706",
       tasks: [
         {
@@ -67,8 +73,11 @@
         id: "dankstorage:dank_3",
         count: 1,
       },
-      x: 3.0,
-      y: 0.0,
+      x: 3.5,
+      y: -5.0,
+      dependencies: [
+        "62A57B8611699706",
+      ],
       id: "101E2C0C27A74B5D",
       tasks: [
         {
@@ -93,8 +102,11 @@
         id: "dankstorage:dank_4",
         count: 1,
       },
-      x: 4.5,
-      y: 0.0,
+      x: 5.5,
+      y: -5.0,
+      dependencies: [
+        "101E2C0C27A74B5D",
+      ],
       id: "43CC9DF18B286C46",
       tasks: [
         {
@@ -119,8 +131,11 @@
         id: "dankstorage:dank_5",
         count: 1,
       },
-      x: 6.0,
-      y: 0.0,
+      x: 7.5,
+      y: -5.0,
+      dependencies: [
+        "43CC9DF18B286C46",
+      ],
       id: "2C0163E5458DD3A3",
       tasks: [
         {
@@ -145,8 +160,11 @@
         id: "dankstorage:dank_6",
         count: 1,
       },
-      x: 7.5,
-      y: 0.0,
+      x: 9.5,
+      y: -5.0,
+      dependencies: [
+        "2C0163E5458DD3A3",
+      ],
       id: "4EA795AEDAC6262C",
       tasks: [
         {
@@ -171,8 +189,11 @@
         id: "dankstorage:dank_7",
         count: 1,
       },
-      x: 9.0,
-      y: 0.0,
+      x: 11.5,
+      y: -5.0,
+      dependencies: [
+        "4EA795AEDAC6262C",
+      ],
       id: "0E14BDC7C1FBDB93",
       tasks: [
         {
@@ -197,8 +218,8 @@
         id: "dankstorage:1_to_2",
         count: 1,
       },
-      x: 0.0,
-      y: 2.5,
+      x: 1.5,
+      y: -3.0,
       id: "2EBBDDCD769AB514",
       tasks: [
         {
@@ -223,8 +244,11 @@
         id: "dankstorage:2_to_3",
         count: 1,
       },
-      x: 1.5,
-      y: 2.5,
+      x: 3.5,
+      y: -3.0,
+      dependencies: [
+        "101E2C0C27A74B5D",
+      ],
       id: "19B244D10CA45E32",
       tasks: [
         {
@@ -249,8 +273,11 @@
         id: "dankstorage:3_to_4",
         count: 1,
       },
-      x: 3.0,
-      y: 2.5,
+      x: 5.5,
+      y: -3.0,
+      dependencies: [
+        "43CC9DF18B286C46",
+      ],
       id: "4D30A75EB6644C1B",
       tasks: [
         {
@@ -275,8 +302,11 @@
         id: "dankstorage:4_to_5",
         count: 1,
       },
-      x: 4.5,
-      y: 2.5,
+      x: 7.5,
+      y: -3.0,
+      dependencies: [
+        "2C0163E5458DD3A3",
+      ],
       id: "24A3DA31F238126B",
       tasks: [
         {
@@ -301,8 +331,11 @@
         id: "dankstorage:5_to_6",
         count: 1,
       },
-      x: 6.0,
-      y: 2.5,
+      x: 9.5,
+      y: -3.0,
+      dependencies: [
+        "4EA795AEDAC6262C",
+      ],
       id: "68B62B64C935E96D",
       tasks: [
         {
@@ -324,37 +357,11 @@
     },
     {
       icon: {
-        id: "dankstorage:6_to_7",
-        count: 1,
-      },
-      x: 7.5,
-      y: 2.5,
-      id: "53B4E840D94B3786",
-      tasks: [
-        {
-          id: "48D304D07D7423C8",
-          type: "item",
-          item: {
-            id: "dankstorage:6_to_7",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "2225F98F645DEAFC",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "dankstorage:dock",
         count: 1,
       },
-      x: 0.0,
-      y: 5.0,
+      x: 3.5,
+      y: -1.0,
       id: "0FC197DF7C5F42F6",
       tasks: [
         {
@@ -379,8 +386,8 @@
         id: "dankstorage:red_print",
         count: 1,
       },
-      x: 1.5,
-      y: 5.0,
+      x: 5.5,
+      y: -1.0,
       id: "218B27E516AAD42D",
       tasks: [
         {
@@ -395,6 +402,35 @@
       rewards: [
         {
           id: "6D596C181F594566",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "dankstorage:6_to_7",
+        count: 1,
+      },
+      x: 11.5,
+      y: -3.0,
+      dependencies: [
+        "0E14BDC7C1FBDB93",
+      ],
+      id: "53B4E840D94B3786",
+      tasks: [
+        {
+          id: "48D304D07D7423C8",
+          type: "item",
+          item: {
+            id: "dankstorage:6_to_7",
+            count: 1,
+          },
+        },
+      ],
+      rewards: [
+        {
+          id: "2225F98F645DEAFC",
           type: "xp",
           xp: 10,
         },

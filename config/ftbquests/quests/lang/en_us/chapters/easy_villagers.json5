@@ -1,13 +1,15 @@
 {
-  "quest.14AF719D11C684EE.title": "Incubator",
-  "quest.6169A87955075572.quest_desc": [
-    "Iron Farm block — generates iron ingots using villager panic mechanics in a single block.",
+  "quest.2FAA048B5E998DAD.title": "Trader",
+  "quest.14AF719D11C684EE.quest_desc": [
+    "Incubator — accelerates baby villager growth into adults.",
     "",
-    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint.",
+    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls.",
   ],
-  "quest.41F3FF9466090C95.title": "Converter",
-  "task.0B2FEB287175A68B.title": "Obtain Piglin",
-  "quest.23EF2B37EC4B1F9C.title": "Breeder",
+  "quest.0C7461E734686856.quest_desc": [
+    "Auto Trader — automates trade execution with input/output slots.",
+    "",
+    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation.",
+  ],
   "quest.41F3FF9466090C95.quest_desc": [
     "Converter — cures zombie villagers with golden apples and weakness.",
     "",
@@ -32,26 +34,23 @@
     "",
     "Feed from random-block crop farms once you unlock wheat and carrots.",
   ],
-  "quest.2FAA048B5E998DAD.title": "Trader",
-  "quest.14AF719D11C684EE.quest_desc": [
-    "Incubator — accelerates baby villager growth into adults.",
+  "quest.14AF719D11C684EE.title": "Incubator",
+  "quest.6169A87955075572.quest_desc": [
+    "Iron Farm block — generates iron ingots using villager panic mechanics in a single block.",
     "",
-    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls.",
+    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint.",
   ],
+  "task.6C3868458D53BB0B.title": "Obtain Iron Farm",
+  "task.488DAC370EC294A1.title": "Obtain Villager",
+  "task.259270F842C66D32.title": "Obtain Breeder",
+  "quest.41F3FF9466090C95.title": "Converter",
+  "task.0B2FEB287175A68B.title": "Obtain Piglin",
+  "quest.23EF2B37EC4B1F9C.title": "Breeder",
   "quest.2FAA048B5E998DAD.quest_desc": [
     "Trader block — access villager trades without placing a full trading hall.",
     "",
     "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them.",
   ],
-  "task.6C3868458D53BB0B.title": "Obtain Iron Farm",
-  "task.42C7987D0A49B44F.title": "Obtain Baby Villager",
   "quest.5C1C2360D9A77729.title": "Farmer",
   "quest.535768FA01FE44C5.title": "Inventory Viewer",
-  "quest.0C7461E734686856.quest_desc": [
-    "Auto Trader — automates trade execution with input/output slots.",
-    "",
-    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation.",
-  ],
-  "task.488DAC370EC294A1.title": "Obtain Villager",
-  "task.259270F842C66D32.title": "Obtain Breeder",
 }

@@ -4,7 +4,18 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.5] — 2026-07-05
+
+### FTB Quests — manual progression (2 chapters)
+
+Finished in the quest book editor: dependency chains, trimmed layouts, and lang synced from in-game saves.
+
+- **Easy Villagers & Piglins** — Villager automation line wired (trader, breeder, converter, iron farm, and related blocks). Removed missing-item placeholder quests; grid positions and dependencies set for a clear setup path.
+- **Dank Storage** — Dank tier upgrade line laid out (Dank 1 → higher tiers). Starter quest highlighted with gear shape; each tier depends on the previous craft.
 
 ---
 
