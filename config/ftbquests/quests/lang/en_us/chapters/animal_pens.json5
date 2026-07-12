@@ -1,28 +1,50 @@
 {
+  "quest.3EA62AD030A3C93F.title": "Obtain Animal Cage",
+  "quest.3EA62AD030A3C93F.quest_subtitle": "Craft or obtain Animal Cage",
+  "quest.3EA62AD030A3C93F.quest_desc": [
+    "Obtain Animal Cage."
+  ],
+  "task.040D6E7BE4554820.title": "Obtain Animal Cage",
+  "quest.7DB96AA7E220D755.title": "Obtain Bird Catcher",
+  "quest.7DB96AA7E220D755.quest_subtitle": "Craft or obtain Bird Catcher",
+  "quest.7DB96AA7E220D755.quest_desc": [
+    "Obtain Bird Catcher."
+  ],
+  "task.4E7CCBE79AC1D5E6.title": "Obtain Bird Catcher",
   "quest.1C7FED3D2D265AC5.title": "Aquatic Jar",
-  "quest.2EF823FC5D7AD5C5.title": "Iron Aviary",
-  "quest.2EF823FC5D7AD5C5.quest_desc": [
-    "Iron Aviary — aerial counterpart to the Animal Pen. Accepts filled Avian Nets.",
-    "",
-    "Process flying mobs for honey bottles, honeycomb, feathers, and pollen in a compact skyblock-friendly building.",
-    "",
-    "Upgrade path continues through copper oxidation tiers for the same modpack prestige look as vanilla copper builds.",
-  ],
-  "quest.6FD86CF67020148A.quest_desc": [
-    "Acacia Animal Pen — placeable habitat for land animals stored in Animal Cages.",
-    "",
-    "Insert a filled Animal Cage, open the GUI, and interact with mobs for milk, wool, eggs, stew, and breeding — all without entity cramming on your platform.",
-    "",
-    "Wood type is acacia — pick the variant that matches your base aesthetic. Mechanics are identical across wood types.",
-  ],
-  "quest.6FD86CF67020148A.title": "Animal Pen",
+  "quest.1C7FED3D2D265AC5.quest_subtitle": "Craft or obtain Water Animal Container",
   "quest.1C7FED3D2D265AC5.quest_desc": [
     "Aquatic Jar for catching water mobs: fish, squid, dolphins, axolotls, turtles, and more.",
     "",
     "Right-click aquatic creatures, sneak + right-click to release, then place in an Aquarium block for bucket-style interactions without draining your island pond.",
     "",
-    "Pairs with the Aquarium multiblock — essential when your one-block island has limited water space.",
+    "Pairs with the Aquarium multiblock — essential when your one-block island has limited water space."
   ],
   "task.2A7F40E78B27E6F3.title": "Obtain Aquatic Jar",
-  "task.040D6E7BE4554820.title": "Obtain Animal Cage",
+  "quest.6FD86CF67020148A.title": "Animal Pen",
+  "quest.6FD86CF67020148A.quest_subtitle": "Craft or obtain Animal Pen Acacia",
+  "quest.6FD86CF67020148A.quest_desc": [
+    "Acacia Animal Pen — placeable habitat for land animals stored in Animal Cages.",
+    "",
+    "Insert a filled Animal Cage, open the GUI, and interact with mobs for milk, wool, eggs, stew, and breeding — all without entity cramming on your platform.",
+    "",
+    "Wood type is acacia — pick the variant that matches your base aesthetic. Mechanics are identical across wood types."
+  ],
+  "task.1F24ABA3BF268845.title": "Obtain Animal Pen Acacia",
+  "quest.2EF823FC5D7AD5C5.title": "Iron Aviary",
+  "quest.2EF823FC5D7AD5C5.quest_subtitle": "Craft or obtain Aviary",
+  "quest.2EF823FC5D7AD5C5.quest_desc": [
+    "Iron Aviary — aerial counterpart to the Animal Pen. Accepts filled Avian Nets.",
+    "",
+    "Process flying mobs for honey bottles, honeycomb, feathers, and pollen in a compact skyblock-friendly building.",
+    "",
+    "Upgrade path continues through copper oxidation tiers for the same modpack prestige look as vanilla copper builds."
+  ],
+  "task.0F046E526F0873D9.title": "Obtain Aviary",
+  "quest.10F3CE4BC42D3DF7.title": "Quest Step",
+  "quest.10F3CE4BC42D3DF7.quest_subtitle": "Complete this step",
+  "quest.10F3CE4BC42D3DF7.quest_desc": [
+    "Complete the checkmark to continue."
+  ],
+  "task.20D82F09E4A505EF.title": "Obtain Quest"
 }

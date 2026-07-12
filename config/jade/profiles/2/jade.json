@@ -111,6 +111,12 @@
       "entity": true,
       "entity_variant": true
     },
+    "enderio": {
+      "soul_bound": true
+    },
+    "ftbquests": {
+      "barrier": true
+    },
     "easy_villagers": {
       "villager": true,
       "converter": true,
@@ -135,6 +141,9 @@
     },
     "apotheosis": {
       "adventure": true
+    },
+    "gravestone": {
+      "grave": true
     },
     "mysticalagriculture": {
       "infused_farmland": true,

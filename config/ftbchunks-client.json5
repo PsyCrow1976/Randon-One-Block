@@ -150,7 +150,7 @@
     compass: true,
     /*
      * Enable minimap
-     * Default: false
+     * Default: true
      */
     enabled: true,
     /*
@@ -212,9 +212,14 @@
       entities: true,
       // Entity icons on minimap
       entity_icon: {
+        "minecraft:skeleton": true,
+        "minecraft:phantom": true,
         "minecraft:nautilus": true,
         "minecraft:silverfish": true,
         "minecraft:salmon": false,
+        "minecraft:zombie": true,
+        "minecraft:creeper": true,
+        "minecraft:squid": true,
       },
       /*
        * Make entity icons on the minimap larger

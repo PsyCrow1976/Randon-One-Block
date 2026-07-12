@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-04",
+  "generated": "2026-07-12",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
   "mod_count": 81,
@@ -62,15 +62,15 @@
     },
     {
       "name": "BBL Core",
-      "version": "26.1.2-12.6.3",
-      "jar": "bblcore-26.1.2-12.6.3.jar",
+      "version": "26.1.2-12.6.4",
+      "jar": "bblcore-26.1.2-12.6.4.jar",
       "curseforge_id": 1135181,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-core"
     },
     {
       "name": "BBL Utility",
-      "version": "26.1.2-2.7.11",
-      "jar": "utility-26.1.2-2.7.11.jar",
+      "version": "26.1.2-2.7.12",
+      "jar": "utility-26.1.2-2.7.12.jar",
       "curseforge_id": 649644,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-utility"
     },
@@ -125,15 +125,15 @@
     },
     {
       "name": "Cooking for Blockheads",
-      "version": "26.1.2.2",
-      "jar": "cookingforblockheads-neoforge-26.1.2-26.1.2.2.jar",
+      "version": "26.1.2.3",
+      "jar": "cookingforblockheads-neoforge-26.1.2-26.1.2.3.jar",
       "curseforge_id": 231484,
       "url": "https://www.curseforge.com/minecraft/mc-mods/cooking-for-blockheads"
     },
     {
       "name": "Crafting on a stick",
-      "version": "1.0",
-      "jar": "crafting_on_a_stick-neoforge-26.1-1.0.jar",
+      "version": "1.1",
+      "jar": "crafting_on_a_stick-neoforge-26.1-1.1.jar",
       "curseforge_id": 577850,
       "url": "https://www.curseforge.com/minecraft/mc-mods/crafting-on-a-stick"
     },
@@ -314,8 +314,8 @@
     },
     {
       "name": "Just Enough Items (JEI)",
-      "version": "26.1.2-neoforge-29.6.2.38",
-      "jar": "jei-26.1.2-neoforge-29.6.2.38.jar",
+      "version": "26.1.2-neoforge-29.16.0.46",
+      "jar": "jei-26.1.2-neoforge-29.16.0.46.jar",
       "curseforge_id": 238222,
       "url": "https://www.curseforge.com/minecraft/mc-mods/jei"
     },
@@ -454,8 +454,8 @@
     },
     {
       "name": "ProjectEE",
-      "version": "1.2.0",
-      "jar": "projecte-1.2.0.jar",
+      "version": "1.2.3",
+      "jar": "projectee-1.2.3.jar",
       "curseforge_id": 1597601,
       "url": "https://www.curseforge.com/minecraft/mc-mods/projectee"
     },
@@ -524,29 +524,29 @@
     },
     {
       "name": "Sodium",
-      "version": "neoforge-0.8.12+mc26.1.2",
-      "jar": "sodium-neoforge-0.8.12+mc26.1.2.jar",
+      "version": "neoforge-0.9.1+mc26.1.2",
+      "jar": "sodium-neoforge-0.9.1+mc26.1.2.jar",
       "curseforge_id": 394468,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sodium"
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.77.1961",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.77.1961.jar",
+      "version": "26.1.2-3.25.78.1969",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.78.1969.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.77.2100",
-      "jar": "sophisticatedcore-26.1.2-1.4.77.2100.jar",
+      "version": "26.1.2-1.4.84.2142",
+      "jar": "sophisticatedcore-26.1.2-1.4.84.2142.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.85.1918",
-      "jar": "sophisticatedstorage-26.1.2-1.5.85.1918.jar",
+      "version": "26.1.2-1.5.89.1952",
+      "jar": "sophisticatedstorage-26.1.2-1.5.89.1952.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },

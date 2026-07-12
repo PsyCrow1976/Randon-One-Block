@@ -1,82 +1,4 @@
 {
-  "quest.49B62C844FEA20D1.title": "§9Imperium Crystal? In This Economy?",
-  "quest.49B62C844FEA20D1.quest_subtitle": "Craft or obtain §9Imperium Crystal",
-  "quest.49B62C844FEA20D1.quest_desc": [
-    "§9Imperium Crystal — a item from the Mystical Agriculture Tiered Crystals mod.",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.A07F4E0FF4C0BF66.title": "Obtain §9Imperium Crystal",
-  "quest.D3DA8BBE2FF2F722.title": "Certified §eInferium Crystal Moment",
-  "quest.D3DA8BBE2FF2F722.quest_subtitle": "Craft or obtain §eInferium Crystal",
-  "quest.D3DA8BBE2FF2F722.quest_desc": [
-    "§eInferium Crystal — a item from the Mystical Agriculture Tiered Crystals mod.",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.DDC7F14D50C2219F.title": "Obtain §eInferium Crystal",
-  "quest.75CC20A307F199A5.title": "The §2Prudentium Crystal Situation",
-  "quest.75CC20A307F199A5.quest_subtitle": "Craft or obtain §2Prudentium Crystal",
-  "quest.75CC20A307F199A5.quest_desc": [
-    "§2Prudentium Crystal — a item from the Mystical Agriculture Tiered Crystals mod.",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.1FC1860F3EA8A752.title": "Obtain §2Prudentium Crystal",
-  "quest.0B0D70B0E3B91F6E.title": "The §cSupremium Crystal Situation",
-  "quest.0B0D70B0E3B91F6E.quest_subtitle": "Craft or obtain §cSupremium Crystal",
-  "quest.0B0D70B0E3B91F6E.quest_desc": [
-    "§cSupremium Crystal — a item from the Mystical Agriculture Tiered Crystals mod.",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.45FBE8B90FB9C6F6.title": "Obtain §cSupremium Crystal",
-  "quest.C8F52BFDE0669FD7.title": "§6Tertium Crystal? In This Economy?",
-  "quest.C8F52BFDE0669FD7.quest_subtitle": "Craft or obtain §6Tertium Crystal",
-  "quest.C8F52BFDE0669FD7.quest_desc": [
-    "§6Tertium Crystal — a item from the Mystical Agriculture Tiered Crystals mod.",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.09FE5248A34DC0EC.title": "Obtain §6Tertium Crystal",
-  "quest.820124D4CC15B4AD.title": "Seed Me the Details",
-  "quest.820124D4CC15B4AD.quest_subtitle": "Craft or obtain Insanium Essence",
-  "quest.820124D4CC15B4AD.quest_desc": [
-    "Insanium Essence — crafted or obtained through a Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence. recipe chain (registry id: mysticalagradditions:insanium_essence).",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.4A13D8801F132BC6.title": "Obtain Insanium Essence",
   "quest.61FC539D723AF7D0.title": "Crop Circles Anonymous",
   "quest.61FC539D723AF7D0.quest_subtitle": "Craft or obtain Imperium Essence",
   "quest.61FC539D723AF7D0.quest_desc": [
@@ -89,20 +11,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.F97C5802B4F71726.title": "Obtain Imperium Essence",
-  "quest.43AF258426C4B27C.title": "Island Approved Master Infusion Crystal",
-  "quest.43AF258426C4B27C.quest_subtitle": "Craft or obtain Master Infusion Crystal",
-  "quest.43AF258426C4B27C.quest_desc": [
-    "Master Infusion Crystal — crafted or obtained through a Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence. recipe chain (registry id: mysticalagriculture:master_infusion_crystal).",
-    "",
-    "Mystical Agriculture Tiered Crystals adds growth accelerators and crystals to speed up crop tiers — less waiting, more essence.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.F75DD66F1396CA1C.title": "Obtain Master Infusion Crystal",
+  "task.2A8B2F91141C2014.title": "Obtain Imperium Essence",
   "quest.5E31A083D9FB4461.title": "Essence of the Point",
   "quest.5E31A083D9FB4461.quest_subtitle": "Craft or obtain Prudentium Essence",
   "quest.5E31A083D9FB4461.quest_desc": [
@@ -115,7 +24,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.B1FF5EF1F29CD611.title": "Obtain Prudentium Essence",
+  "task.7FC81708B9028178.title": "Obtain Prudentium Essence",
   "quest.58A6C498C799B46A.title": "Essence of the Point",
   "quest.58A6C498C799B46A.quest_subtitle": "Craft or obtain Supremium Essence",
   "quest.58A6C498C799B46A.quest_desc": [
@@ -128,7 +37,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.F8D57FD320EA0B79.title": "Obtain Supremium Essence",
+  "task.0F84A28FB0E5EEA1.title": "Obtain Supremium Essence",
   "quest.081B8AF284A4F2F1.title": "Crop Circles Anonymous",
   "quest.081B8AF284A4F2F1.quest_subtitle": "Craft or obtain Tertium Essence",
   "quest.081B8AF284A4F2F1.quest_desc": [

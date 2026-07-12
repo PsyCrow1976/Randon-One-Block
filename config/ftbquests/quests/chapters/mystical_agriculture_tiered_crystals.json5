@@ -1,7 +1,7 @@
 {
   id: "57562D7A04624316",
   group: "",
-  order_index: 22,
+  order_index: 18,
   icon: {
     id: "matc:inferium_crystal",
     count: 1,
@@ -12,162 +12,6 @@
   quests: [
     {
       icon: {
-        id: "matc:imperium_crystal",
-        count: 1,
-      },
-      x: 0.0,
-      y: 0.0,
-      id: "49B62C844FEA20D1",
-      tasks: [
-        {
-          id: "A07F4E0FF4C0BF66",
-          type: "item",
-          item: {
-            id: "matc:imperium_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "CB72909E1557A1AC",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "matc:inferium_crystal",
-        count: 1,
-      },
-      x: 1.5,
-      y: 0.0,
-      id: "D3DA8BBE2FF2F722",
-      tasks: [
-        {
-          id: "DDC7F14D50C2219F",
-          type: "item",
-          item: {
-            id: "matc:inferium_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "267CFBD0620844BF",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "matc:prudentium_crystal",
-        count: 1,
-      },
-      x: 3.0,
-      y: 0.0,
-      id: "75CC20A307F199A5",
-      tasks: [
-        {
-          id: "1FC1860F3EA8A752",
-          type: "item",
-          item: {
-            id: "matc:prudentium_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "163D52C1C1E20C11",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "matc:supremium_crystal",
-        count: 1,
-      },
-      x: 4.5,
-      y: 0.0,
-      id: "0B0D70B0E3B91F6E",
-      tasks: [
-        {
-          id: "45FBE8B90FB9C6F6",
-          type: "item",
-          item: {
-            id: "matc:supremium_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "CEB7CF81CCA11035",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "matc:tertium_crystal",
-        count: 1,
-      },
-      x: 6.0,
-      y: 0.0,
-      id: "C8F52BFDE0669FD7",
-      tasks: [
-        {
-          id: "09FE5248A34DC0EC",
-          type: "item",
-          item: {
-            id: "matc:tertium_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "D503C4C208D92EC0",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "mysticalagradditions:insanium_essence",
-        count: 1,
-      },
-      x: 7.5,
-      y: 0.0,
-      id: "820124D4CC15B4AD",
-      tasks: [
-        {
-          id: "4A13D8801F132BC6",
-          type: "item",
-          item: {
-            id: "mysticalagradditions:insanium_essence",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "6542C92CC838C47C",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "mysticalagriculture:imperium_essence",
         count: 1,
       },
@@ -176,7 +20,7 @@
       id: "61FC539D723AF7D0",
       tasks: [
         {
-          id: "F97C5802B4F71726",
+          id: "2A8B2F91141C2014",
           type: "item",
           item: {
             id: "mysticalagriculture:imperium_essence",
@@ -186,33 +30,7 @@
       ],
       rewards: [
         {
-          id: "A244656A7725B0FF",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "mysticalagriculture:master_infusion_crystal",
-        count: 1,
-      },
-      x: 10.5,
-      y: 0.0,
-      id: "43AF258426C4B27C",
-      tasks: [
-        {
-          id: "F75DD66F1396CA1C",
-          type: "item",
-          item: {
-            id: "mysticalagriculture:master_infusion_crystal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "38BE10E0375B4D43",
+          id: "51C2DF106A063DB7",
           type: "xp",
           xp: 10,
         },
@@ -228,7 +46,7 @@
       id: "5E31A083D9FB4461",
       tasks: [
         {
-          id: "B1FF5EF1F29CD611",
+          id: "7FC81708B9028178",
           type: "item",
           item: {
             id: "mysticalagriculture:prudentium_essence",
@@ -238,7 +56,7 @@
       ],
       rewards: [
         {
-          id: "99B21466A37D4C23",
+          id: "33CD10A555A9D8CB",
           type: "xp",
           xp: 10,
         },
@@ -254,7 +72,7 @@
       id: "58A6C498C799B46A",
       tasks: [
         {
-          id: "F8D57FD320EA0B79",
+          id: "0F84A28FB0E5EEA1",
           type: "item",
           item: {
             id: "mysticalagriculture:supremium_essence",
@@ -264,7 +82,7 @@
       ],
       rewards: [
         {
-          id: "C8EC5ABB8ABEEED5",
+          id: "2F46B0107585395E",
           type: "xp",
           xp: 10,
         },
@@ -297,6 +115,8 @@
       ],
     },
   ],
-  quest_links: [],
-  images: [],
+  quest_links: [
+  ],
+  images: [
+  ],
 }

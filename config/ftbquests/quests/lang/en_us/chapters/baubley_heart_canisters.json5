@@ -1,9 +1,75 @@
 {
-  "quest.58F9D2E0B47FD904.quest_subtitle": "Craft or obtain Heart Amulet",
-  "quest.48B99FAC3D0F4ABF.title": "Heartware Update",
-  "task.3CC8F345AEA3A5F6.title": "Obtain Green Health Patch",
-  "quest.4D1DC32E6EA7D7F8.quest_subtitle": "Craft or obtain Soul Heart Canister",
-  "quest.177B5EC32E8C5775.quest_subtitle": "Craft or obtain Yellow Health Patch",
+  "quest.0654B0547BE381F5.title": "Obtain Blade Of Vitality",
+  "quest.0654B0547BE381F5.quest_subtitle": "Craft or obtain Blade Of Vitality",
+  "quest.0654B0547BE381F5.quest_desc": [
+    "Obtain Blade Of Vitality."
+  ],
+  "task.75F7F093B080398F.title": "Obtain Vitality Blade",
+  "quest.140868B6ED2CD829.title": "Obtain Blue Heart",
+  "quest.140868B6ED2CD829.quest_subtitle": "Craft or obtain Blue Heart",
+  "quest.140868B6ED2CD829.quest_desc": [
+    "Obtain Blue Heart."
+  ],
+  "task.5217873B3BC3420B.title": "Obtain Miniature Blue Heart",
+  "quest.2F2A49690581AECD.title": "Heartware Update",
+  "quest.2F2A49690581AECD.quest_subtitle": "Craft or obtain Blue Heart Canister",
+  "quest.2F2A49690581AECD.quest_desc": [
+    "Blue Heart Canister — a item from the Baubley Heart Canisters mod.",
+    "",
+    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
+    "",
+    "How to make it:",
+    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
+    "",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+  ],
+  "task.199EB68FA31655E7.title": "Obtain Blue Heart Canister",
+  "quest.6351A1178C3FBB5D.title": "Extra Life DLC",
+  "quest.6351A1178C3FBB5D.quest_subtitle": "Craft or obtain Melted Blue Heart",
+  "quest.6351A1178C3FBB5D.quest_desc": [
+    "Melted Blue Heart — a item from the Baubley Heart Canisters mod.",
+    "",
+    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
+    "",
+    "How to make it:",
+    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
+    "• Smelt the ingredients in a furnace or powered smelter.",
+    "",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+  ],
+  "task.65638F4741DC4AF5.title": "Obtain Melted Blue Heart",
+  "quest.0E7400426238D934.title": "Obtain Blue Heart Patch",
+  "quest.0E7400426238D934.quest_subtitle": "Craft or obtain Blue Heart Patch",
+  "quest.0E7400426238D934.quest_desc": [
+    "Obtain Blue Heart Patch."
+  ],
+  "task.79326CA01BE56BC5.title": "Obtain Blue Heart Patch",
+  "quest.7EB18FFBCABC67C8.title": "Obtain Blue Heartpulse Belt",
+  "quest.7EB18FFBCABC67C8.quest_subtitle": "Craft or obtain Blue Heartpulse Belt",
+  "quest.7EB18FFBCABC67C8.quest_desc": [
+    "Obtain Blue Heartpulse Belt."
+  ],
+  "task.07730A5F13656122.title": "Obtain Blue Heartpulse Belt",
+  "quest.1C28FE1763CED099.title": "Obtain Canister",
+  "quest.1C28FE1763CED099.quest_subtitle": "Craft or obtain Canister",
+  "quest.1C28FE1763CED099.quest_desc": [
+    "Obtain Canister."
+  ],
+  "task.5D8B59074012B3F2.title": "Obtain Canister",
+  "quest.399C61A23DA5D08C.title": "Obtain Green Heart",
+  "quest.399C61A23DA5D08C.quest_subtitle": "Craft or obtain Green Heart",
+  "quest.399C61A23DA5D08C.quest_desc": [
+    "Obtain Green Heart."
+  ],
+  "task.4C8FC572E42F4C8D.title": "Obtain Miniature Green Heart",
+  "quest.335DA5EB61E34CAD.title": "Obtain Green Heart Canister",
+  "quest.335DA5EB61E34CAD.quest_subtitle": "Craft or obtain Green Heart Canister",
+  "quest.335DA5EB61E34CAD.quest_desc": [
+    "Obtain Green Heart Canister."
+  ],
+  "task.302CEE1F96809704.title": "Obtain Green Heart Canister",
+  "quest.6979B9749E45D8E4.title": "Tank Your Healthbar",
+  "quest.6979B9749E45D8E4.quest_subtitle": "Craft or obtain Melted Green Heart",
   "quest.6979B9749E45D8E4.quest_desc": [
     "Melted Green Heart — a item from the Baubley Heart Canisters mod.",
     "",
@@ -14,23 +80,43 @@
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "• Smelt the ingredients in a furnace or powered smelter.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.0AA5974996C26E7B.title": "Obtain Soul Amulet",
-  "quest.6351A1178C3FBB5D.quest_desc": [
-    "Melted Blue Heart — a item from the Baubley Heart Canisters mod.",
+  "task.2214BF795681A81E.title": "Obtain Melted Green Heart",
+  "quest.3D988E3CBB8ACE5B.title": "Heartware Update",
+  "quest.3D988E3CBB8ACE5B.quest_subtitle": "Craft or obtain Green Health Patch",
+  "quest.3D988E3CBB8ACE5B.quest_desc": [
+    "Green Health Patch — a item from the Baubley Heart Canisters mod.",
     "",
     "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
     "",
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "• Smelt the ingredients in a furnace or powered smelter.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.4824C21E937451AE.title": "Obtain Red Health Patch",
+  "task.3CC8F345AEA3A5F6.title": "Obtain Green Health Patch",
+  "quest.3BE3C83B1CF7202D.title": "Obtain Green Heartpulse Belt",
+  "quest.3BE3C83B1CF7202D.quest_subtitle": "Craft or obtain Green Heartpulse Belt",
+  "quest.3BE3C83B1CF7202D.quest_desc": [
+    "Obtain Green Heartpulse Belt."
+  ],
+  "task.64507520CC494357.title": "Obtain Green Heartpulse Belt",
+  "quest.58F9D2E0B47FD904.title": "Heartware Update",
+  "quest.58F9D2E0B47FD904.quest_subtitle": "Craft or obtain Heart Amulet",
+  "quest.58F9D2E0B47FD904.quest_desc": [
+    "Heart Amulet — a item from the Baubley Heart Canisters mod.",
+    "",
+    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
+    "",
+    "How to make it:",
+    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
+    "",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+  ],
+  "task.5F6AC5014FB8D851.title": "Obtain Heart Amulet",
   "quest.5B02D1D4A0DAA430.title": "Heartware Update",
-  "quest.177B5EC32E8C5775.title": "Heartware Update",
+  "quest.5B02D1D4A0DAA430.quest_subtitle": "Craft or obtain Miniature Red Heart",
   "quest.5B02D1D4A0DAA430.quest_desc": [
     "Miniature Red Heart — a item from the Baubley Heart Canisters mod.",
     "",
@@ -39,11 +125,17 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.48B99FAC3D0F4ABF.quest_subtitle": "Craft or obtain Melted Yellow Heart",
-  "quest.4D1DC32E6EA7D7F8.title": "Heartware Update",
-  "quest.6351A1178C3FBB5D.quest_subtitle": "Craft or obtain Melted Blue Heart",
+  "task.410C240C958382F9.title": "Obtain Red Heart",
+  "quest.549769870366ED9E.title": "Obtain Red Heart Canister",
+  "quest.549769870366ED9E.quest_subtitle": "Craft or obtain Red Heart Canister",
+  "quest.549769870366ED9E.quest_desc": [
+    "Obtain Red Heart Canister."
+  ],
+  "task.77844AEB83469802.title": "Obtain Red Heart Canister",
+  "quest.2FEEF3D1F827B00B.title": "Extra Life DLC",
+  "quest.2FEEF3D1F827B00B.quest_subtitle": "Craft or obtain Melted Red Heart",
   "quest.2FEEF3D1F827B00B.quest_desc": [
     "Melted Red Heart — a item from the Baubley Heart Canisters mod.",
     "",
@@ -53,24 +145,17 @@
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "• Smelt the ingredients in a furnace or powered smelter.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.58F9D2E0B47FD904.title": "Heartware Update",
-  "quest.004EDA1791F3D841.quest_desc": [
-    "Yellow Heartpulse Belt — a item from the Baubley Heart Canisters mod.",
-    "",
-    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
-    "",
-    "How to make it:",
-    "• Open JEI, search this item, and follow the recipe shown for your setup.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
-  ],
-  "task.55CE405D8B43AE61.title": "Obtain Relic Apple",
   "task.418FDC52EE441D85.title": "Obtain Melted Red Heart",
+  "quest.740A37C49ADFBAB9.title": "Obtain Red Heart Patch",
+  "quest.740A37C49ADFBAB9.quest_subtitle": "Craft or obtain Red Heart Patch",
+  "quest.740A37C49ADFBAB9.quest_desc": [
+    "Obtain Red Heart Patch."
+  ],
+  "task.4824C21E937451AE.title": "Obtain Red Health Patch",
+  "quest.2790CDACFC1D27E9.title": "Tank Your Healthbar",
   "quest.2790CDACFC1D27E9.quest_subtitle": "Craft or obtain Red Heartpulse Belt",
-  "quest.2FEEF3D1F827B00B.title": "Extra Life DLC",
-  "quest.3D988E3CBB8ACE5B.title": "Heartware Update",
   "quest.2790CDACFC1D27E9.quest_desc": [
     "Red Heartpulse Belt — a item from the Baubley Heart Canisters mod.",
     "",
@@ -79,10 +164,11 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.6979B9749E45D8E4.quest_subtitle": "Craft or obtain Melted Green Heart",
-  "task.5217873B3BC3420B.title": "Obtain Miniature Blue Heart",
+  "task.2BE1AE816CE97CA6.title": "Obtain Red Heartpulse Belt",
+  "quest.01053F743A38162D.title": "The Relic Apple Situation",
+  "quest.01053F743A38162D.quest_subtitle": "Craft or obtain Relic Apple",
   "quest.01053F743A38162D.quest_desc": [
     "Relic Apple — a item from the Baubley Heart Canisters mod.",
     "",
@@ -91,35 +177,17 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.2214BF795681A81E.title": "Obtain Melted Green Heart",
-  "task.2BE1AE816CE97CA6.title": "Obtain Red Heartpulse Belt",
-  "quest.5E1F08B6D29861D4.quest_subtitle": "Craft or obtain Vigor Bow",
-  "quest.2F2A49690581AECD.title": "Heartware Update",
-  "quest.58F9D2E0B47FD904.quest_desc": [
-    "Heart Amulet — a item from the Baubley Heart Canisters mod.",
-    "",
-    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+  "task.55CE405D8B43AE61.title": "Obtain Relic Apple",
+  "quest.69C084F6B2461BBB.title": "Obtain Soul Heart Amulet",
+  "quest.69C084F6B2461BBB.quest_subtitle": "Craft or obtain Soul Heart Amulet",
+  "quest.69C084F6B2461BBB.quest_desc": [
+    "Obtain Soul Heart Amulet."
   ],
-  "quest.5B02D1D4A0DAA430.quest_subtitle": "Craft or obtain Miniature Red Heart",
-  "quest.2F2A49690581AECD.quest_subtitle": "Craft or obtain Blue Heart Canister",
-  "task.199EB68FA31655E7.title": "Obtain Blue Heart Canister",
-  "quest.5E1F08B6D29861D4.quest_desc": [
-    "Vigor Bow — a tool or weapon from the Baubley Heart Canisters mod.",
-    "",
-    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
-  ],
+  "task.0AA5974996C26E7B.title": "Obtain Soul Amulet",
+  "quest.4D1DC32E6EA7D7F8.title": "Heartware Update",
+  "quest.4D1DC32E6EA7D7F8.quest_subtitle": "Craft or obtain Soul Heart Canister",
   "quest.4D1DC32E6EA7D7F8.quest_desc": [
     "Soul Heart Canister — a item from the Baubley Heart Canisters mod.",
     "",
@@ -128,12 +196,42 @@
     "How to make it:",
     "• Open JEI, search this item, and follow the recipe shown for your setup.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.01053F743A38162D.quest_subtitle": "Craft or obtain Relic Apple",
-  "quest.2790CDACFC1D27E9.title": "Tank Your Healthbar",
+  "task.2B62A4B5C0CB87AD.title": "Obtain Soul Heart Canister",
+  "quest.12C76376C01665B9.title": "Obtain Soul Heart Crystal",
+  "quest.12C76376C01665B9.quest_subtitle": "Craft or obtain Soul Heart Crystal",
+  "quest.12C76376C01665B9.quest_desc": [
+    "Obtain Soul Heart Crystal."
+  ],
+  "task.626BB545844A7975.title": "Obtain Soul Heart Crystal",
   "quest.5E1F08B6D29861D4.title": "Vigor Bow Speedrun Any%",
-  "quest.01053F743A38162D.title": "The Relic Apple Situation",
+  "quest.5E1F08B6D29861D4.quest_subtitle": "Craft or obtain Vigor Bow",
+  "quest.5E1F08B6D29861D4.quest_desc": [
+    "Vigor Bow — a tool or weapon from the Baubley Heart Canisters mod.",
+    "",
+    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
+    "",
+    "How to make it:",
+    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
+    "",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+  ],
+  "task.5A6058A84E6CDCF4.title": "Obtain Vigor Bow",
+  "quest.089D2F0A2E68E21E.title": "Obtain Wither Bone",
+  "quest.089D2F0A2E68E21E.quest_subtitle": "Craft or obtain Wither Bone",
+  "quest.089D2F0A2E68E21E.quest_desc": [
+    "Obtain Wither Bone."
+  ],
+  "task.4FD21D1076B2F8DB.title": "Obtain Wither Bone",
+  "quest.3DC2D8F22F4BDB79.title": "Obtain Yellow Heart",
+  "quest.3DC2D8F22F4BDB79.quest_subtitle": "Craft or obtain Yellow Heart",
+  "quest.3DC2D8F22F4BDB79.quest_desc": [
+    "Obtain Yellow Heart."
+  ],
+  "task.717C8FB55EBF30EE.title": "Obtain Miniature Yellow Heart",
+  "quest.414FA4523BC5A3A3.title": "Heartware Update",
+  "quest.414FA4523BC5A3A3.quest_subtitle": "Craft or obtain Yellow Heart Canister",
   "quest.414FA4523BC5A3A3.quest_desc": [
     "Yellow Heart Canister — a item from the Baubley Heart Canisters mod.",
     "",
@@ -142,10 +240,11 @@
     "How to make it:",
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.004EDA1791F3D841.quest_subtitle": "Craft or obtain Yellow Heartpulse Belt",
-  "quest.414FA4523BC5A3A3.quest_subtitle": "Craft or obtain Yellow Heart Canister",
+  "task.5DFE133322E0D215.title": "Obtain Yellow Heart Canister",
+  "quest.48B99FAC3D0F4ABF.title": "Heartware Update",
+  "quest.48B99FAC3D0F4ABF.quest_subtitle": "Craft or obtain Melted Yellow Heart",
   "quest.48B99FAC3D0F4ABF.quest_desc": [
     "Melted Yellow Heart — a item from the Baubley Heart Canisters mod.",
     "",
@@ -156,27 +255,11 @@
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "• Smelt the ingredients in a furnace or powered smelter.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.3D988E3CBB8ACE5B.quest_subtitle": "Craft or obtain Green Health Patch",
-  "quest.004EDA1791F3D841.title": "Heartware Update",
-  "quest.6351A1178C3FBB5D.title": "Extra Life DLC",
-  "task.75F7F093B080398F.title": "Obtain Vitality Blade",
-  "task.07730A5F13656122.title": "Obtain Blue Heartpulse Belt",
-  "task.4C8FC572E42F4C8D.title": "Obtain Miniature Green Heart",
-  "task.65638F4741DC4AF5.title": "Obtain Melted Blue Heart",
-  "task.717C8FB55EBF30EE.title": "Obtain Miniature Yellow Heart",
-  "quest.2F2A49690581AECD.quest_desc": [
-    "Blue Heart Canister — a item from the Baubley Heart Canisters mod.",
-    "",
-    "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
-  ],
-  "quest.414FA4523BC5A3A3.title": "Heartware Update",
+  "task.6A27BDCFF1625F59.title": "Obtain Yellow Heart Melted",
+  "quest.177B5EC32E8C5775.title": "Heartware Update",
+  "quest.177B5EC32E8C5775.quest_subtitle": "Craft or obtain Yellow Health Patch",
   "quest.177B5EC32E8C5775.quest_desc": [
     "Yellow Health Patch — a item from the Baubley Heart Canisters mod.",
     "",
@@ -185,18 +268,20 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.6979B9749E45D8E4.title": "Tank Your Healthbar",
-  "quest.3D988E3CBB8ACE5B.quest_desc": [
-    "Green Health Patch — a item from the Baubley Heart Canisters mod.",
+  "task.180D891D9EC27377.title": "Obtain Yellow Heart Patch",
+  "quest.004EDA1791F3D841.title": "Heartware Update",
+  "quest.004EDA1791F3D841.quest_subtitle": "Craft or obtain Yellow Heartpulse Belt",
+  "quest.004EDA1791F3D841.quest_desc": [
+    "Yellow Heartpulse Belt — a item from the Baubley Heart Canisters mod.",
     "",
     "Baubley Heart Canisters permanently raise your max health when worn in Curios slots. More hearts = more forgiveness when you fall off the island.",
     "",
     "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
+    "• Open JEI, search this item, and follow the recipe shown for your setup.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "quest.2FEEF3D1F827B00B.quest_subtitle": "Craft or obtain Melted Red Heart",
+  "task.3B143E55DC2D4FAB.title": "Obtain Yellow Heartpulse Belt"
 }

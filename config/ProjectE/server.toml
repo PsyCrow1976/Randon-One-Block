@@ -105,8 +105,6 @@
 	pickaxeAoeVeinMining = false
 	#Allows the Harvest Goddess Band to passively grow things like tall grass, flowers, etc, on top of grass blocks and nylium. Also allows it to make moss spread.
 	harvBandIndirect = false
-	#When harvesting mature crops, only drops the crop product and resets the plant to its initial growth stage instead of breaking the block. Seed items are not dropped, so plants like Mystical Agriculture crops keep their planted seed.
-	harvBandPickHarvest = false
 	#If set to true, disables all radius-based mining functionality (right click of tools).
 	disableAllRadiusMining = false
 	#Enables the Watch of Flowing Time.

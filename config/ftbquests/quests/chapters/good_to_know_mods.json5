@@ -78,6 +78,36 @@
         },
       ],
     },
+    {
+      x: 0.0,
+      y: -2.0,
+      id: "0103FBABDD60A0E3",
+      tasks: [
+        {
+          id: "59160F22E07CF020",
+          type: "item",
+          item: {
+            id: "minecraft:furnace",
+            count: 1,
+          },
+        },
+      ],
+    },
+    {
+      x: 2.0,
+      y: -2.0,
+      id: "3D472FD52DDDDFEF",
+      tasks: [
+        {
+          id: "4CCE79FDB71E0B8D",
+          type: "item",
+          item: {
+            id: "dankstorage:dank_1",
+            count: 1,
+          },
+        },
+      ],
+    },
   ],
   quest_links: [
   ],

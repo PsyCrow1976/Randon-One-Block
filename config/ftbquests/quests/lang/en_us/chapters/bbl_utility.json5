@@ -1,157 +1,7 @@
 {
-  "quest.91BC895CD6328FE8.title": "The Charcoal Situation",
-  "quest.91BC895CD6328FE8.quest_subtitle": "Craft or obtain Charcoal",
-  "quest.91BC895CD6328FE8.quest_desc": [
-    "Charcoal — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:charcoal).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.D4B0671D18538F0B.title": "Obtain Charcoal",
-  "quest.626D7DF0E732155A.title": "Certified Chest Moment",
-  "quest.626D7DF0E732155A.quest_subtitle": "Craft or obtain Chest",
-  "quest.626D7DF0E732155A.quest_desc": [
-    "Chest — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:chest).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.1EB91ADAD039B168.title": "Obtain Chest",
-  "quest.5643EC3522C813A4.title": "Island Approved Coal",
-  "quest.5643EC3522C813A4.quest_subtitle": "Craft or obtain Coal",
-  "quest.5643EC3522C813A4.quest_desc": [
-    "Coal — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:coal).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.DE54420CA311040C.title": "Obtain Coal",
-  "quest.3E0E021F07663B2C.title": "Island Approved Diamond Horse Armor",
-  "quest.3E0E021F07663B2C.quest_subtitle": "Craft or obtain Diamond Horse Armor",
-  "quest.3E0E021F07663B2C.quest_desc": [
-    "Diamond Horse Armor — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:diamond_horse_armor).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.CACB0EB724A197C7.title": "Obtain Diamond Horse Armor",
-  "quest.CB226F56F79CBBE1.title": "Certified Ender Pearl Moment",
-  "quest.CB226F56F79CBBE1.quest_subtitle": "Craft or obtain Ender Pearl",
-  "quest.CB226F56F79CBBE1.quest_desc": [
-    "Ender Pearl — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:ender_pearl).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.BFBE608EDBE39727.title": "Obtain Ender Pearl",
-  "quest.B0D780D715657F8A.title": "Certified Golden Horse Armor Moment",
-  "quest.B0D780D715657F8A.quest_subtitle": "Craft or obtain Golden Horse Armor",
-  "quest.B0D780D715657F8A.quest_desc": [
-    "Golden Horse Armor — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:golden_horse_armor).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.EAFAF08E3C81F093.title": "Obtain Golden Horse Armor",
-  "quest.636563AEE2024853.title": "Certified Green Wool Moment",
-  "quest.636563AEE2024853.quest_subtitle": "Craft or obtain Green Wool",
-  "quest.636563AEE2024853.quest_desc": [
-    "Green Wool — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:green_wool).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.0F6600ED5F8F50C9.title": "Obtain Green Wool",
-  "quest.1AE1F3052D8A1B09.title": "Iron Horse Armor? In This Economy?",
-  "quest.1AE1F3052D8A1B09.quest_subtitle": "Craft or obtain Iron Horse Armor",
-  "quest.1AE1F3052D8A1B09.quest_desc": [
-    "Iron Horse Armor — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:iron_horse_armor).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.8EC10DFF59D6CF26.title": "Obtain Iron Horse Armor",
-  "quest.5B78C95AF756664F.title": "Certified Name Tag Moment",
-  "quest.5B78C95AF756664F.quest_subtitle": "Craft or obtain Name Tag",
-  "quest.5B78C95AF756664F.quest_desc": [
-    "Name Tag — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:name_tag).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.FB2A6AD3E7734E47.title": "Obtain Name Tag",
-  "quest.16015035C4A542F8.title": "Stick It to the Island",
-  "quest.16015035C4A542F8.quest_subtitle": "Craft or obtain Stick",
-  "quest.16015035C4A542F8.quest_desc": [
-    "Stick — crafted or obtained through a BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock. recipe chain (registry id: minecraft:stick).",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
-    "",
-    "Vanilla item — still counts because this mod's recipe or market entry is how skyblock players are expected to get it.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.7A912FDD79DB5132.title": "Obtain Stick",
-  "quest.9141035842EEEC39.title": "Animal Net? In This Economy?",
-  "quest.9141035842EEEC39.quest_subtitle": "Craft or obtain Animal Net",
-  "quest.9141035842EEEC39.quest_desc": [
+  "quest.507AD1A31283BF70.title": "Animal Net? In This Economy?",
+  "quest.507AD1A31283BF70.quest_subtitle": "Craft or obtain Animal Net",
+  "quest.507AD1A31283BF70.quest_desc": [
     "Animal Net — an item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -161,10 +11,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.B827DAF7161C9625.title": "Obtain Animal Net",
-  "quest.FAF39F1BB51A0DB2.title": "Block Breaker? In This Economy?",
-  "quest.FAF39F1BB51A0DB2.quest_subtitle": "Craft or obtain Block Breaker",
-  "quest.FAF39F1BB51A0DB2.quest_desc": [
+  "task.2F2EC9E9B2D474B2.title": "Obtain Animal Net",
+  "quest.500C30477600ABE2.title": "Block Breaker? In This Economy?",
+  "quest.500C30477600ABE2.quest_subtitle": "Craft or obtain Block Breaker",
+  "quest.500C30477600ABE2.quest_desc": [
     "Block Breaker — a building block from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -174,10 +24,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.D21045D2BC9941BB.title": "Obtain Block Breaker",
-  "quest.9F191C30D94467CA.title": "Block Placer? In This Economy?",
-  "quest.9F191C30D94467CA.quest_subtitle": "Craft or obtain Block Placer",
-  "quest.9F191C30D94467CA.quest_desc": [
+  "task.085BFF1E1BE6493F.title": "Obtain Block Breaker",
+  "quest.08DA76E31C12ACAD.title": "Block Placer? In This Economy?",
+  "quest.08DA76E31C12ACAD.quest_subtitle": "Craft or obtain Block Placer",
+  "quest.08DA76E31C12ACAD.quest_desc": [
     "Block Placer — a building block from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -187,7 +37,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.DEB755FCDF35779A.title": "Obtain Block Placer",
+  "task.3E6349186E31A600.title": "Obtain Block Placer",
   "quest.7B4C95D66B7893F3.title": "Compactor Speedrun Any%",
   "quest.7B4C95D66B7893F3.quest_subtitle": "Craft or obtain Compactor",
   "quest.7B4C95D66B7893F3.quest_desc": [
@@ -200,10 +50,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.D80ED3DC212FAA60.title": "Obtain Compactor",
-  "quest.F2E8AC09725BFFCB.title": "Crook? In This Economy?",
-  "quest.F2E8AC09725BFFCB.quest_subtitle": "Craft or obtain Crook",
-  "quest.F2E8AC09725BFFCB.quest_desc": [
+  "task.40B6E135286E9AAA.title": "Obtain Compactor",
+  "quest.0E750194F958B9CF.title": "Crook? In This Economy?",
+  "quest.0E750194F958B9CF.quest_subtitle": "Craft or obtain Crook",
+  "quest.0E750194F958B9CF.quest_desc": [
     "Crook — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -214,9 +64,9 @@
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "task.31F84B2BA3766E58.title": "Obtain Crook",
-  "quest.E8C2FF0D23EE2642.title": "The Drying Table Situation",
-  "quest.E8C2FF0D23EE2642.quest_subtitle": "Craft or obtain Drying Table",
-  "quest.E8C2FF0D23EE2642.quest_desc": [
+  "quest.4F3DC3EA87567C1F.title": "The Drying Table Situation",
+  "quest.4F3DC3EA87567C1F.quest_subtitle": "Craft or obtain Drying Table",
+  "quest.4F3DC3EA87567C1F.quest_desc": [
     "Drying Table — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -227,23 +77,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.9F51690E54CCEF0E.title": "Obtain Drying Table",
-  "quest.07657FBDCE394B8F.title": "Ender Pearl Fragment Speedrun Any%",
-  "quest.07657FBDCE394B8F.quest_subtitle": "Craft or obtain Ender Pearl Fragment",
-  "quest.07657FBDCE394B8F.quest_desc": [
-    "Ender Pearl Fragment — an item from the BBL Utility mod.",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.3241BDFDEC5A788D.title": "Obtain Ender Pearl Fragment",
-  "quest.F9A9DA7FBF306BC8.title": "Floater? In This Economy?",
-  "quest.F9A9DA7FBF306BC8.quest_subtitle": "Craft or obtain Floater",
-  "quest.F9A9DA7FBF306BC8.quest_desc": [
+  "task.35DB71F13D6D4B3B.title": "Obtain Drying Table",
+  "quest.261A4AE1A9ED9EC9.title": "Floater? In This Economy?",
+  "quest.261A4AE1A9ED9EC9.quest_subtitle": "Craft or obtain Floater",
+  "quest.261A4AE1A9ED9EC9.quest_desc": [
     "Floater — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -253,10 +90,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.C0236E065E8F18D8.title": "Obtain Floater",
-  "quest.E892348DA7099570.title": "The Fluid Collector Situation",
-  "quest.E892348DA7099570.quest_subtitle": "Craft or obtain Fluid Collector",
-  "quest.E892348DA7099570.quest_desc": [
+  "task.604685F5F9D6F6DB.title": "Obtain Floater",
+  "quest.55D99A5DC5A803A8.title": "The Fluid Collector Situation",
+  "quest.55D99A5DC5A803A8.quest_subtitle": "Craft or obtain Fluid Collector",
+  "quest.55D99A5DC5A803A8.quest_desc": [
     "Fluid Collector — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -282,9 +119,9 @@
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "task.4AE76A21C6F99571.title": "Obtain Fluid Generator",
-  "quest.DB56D20CFAA7B80A.title": "Island Approved Fluid Placer",
-  "quest.DB56D20CFAA7B80A.quest_subtitle": "Craft or obtain Fluid Placer",
-  "quest.DB56D20CFAA7B80A.quest_desc": [
+  "quest.58FF6908BF568D6D.title": "Island Approved Fluid Placer",
+  "quest.58FF6908BF568D6D.quest_subtitle": "Craft or obtain Fluid Placer",
+  "quest.58FF6908BF568D6D.quest_desc": [
     "Fluid Placer — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -295,7 +132,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.EEDA19A614808B35.title": "Obtain Fluid Placer",
+  "task.555A456CA7C1774D.title": "Obtain Fluid Placer",
   "quest.6BE62BA67051FFD6.title": "The Item Collector Situation",
   "quest.6BE62BA67051FFD6.quest_subtitle": "Craft or obtain Item Collector",
   "quest.6BE62BA67051FFD6.quest_desc": [
@@ -308,7 +145,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.AED19D3C13434A19.title": "Obtain Item Collector",
+  "task.41984A12AAF78579.title": "Obtain Item Collector",
   "quest.2B0F37577DEA0F50.title": "Certified Item Repairer Moment",
   "quest.2B0F37577DEA0F50.quest_subtitle": "Craft or obtain Item Repairer",
   "quest.2B0F37577DEA0F50.quest_desc": [
@@ -322,9 +159,9 @@
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "task.104137CB9785DCA5.title": "Obtain Item Repairer",
-  "quest.8ED7DDFE8A79CB7D.title": "Island Approved Leafy String",
-  "quest.8ED7DDFE8A79CB7D.quest_subtitle": "Craft or obtain Leafy String",
-  "quest.8ED7DDFE8A79CB7D.quest_desc": [
+  "quest.1ECD67D18C384585.title": "Island Approved Leafy String",
+  "quest.1ECD67D18C384585.quest_subtitle": "Craft or obtain Leafy String",
+  "quest.1ECD67D18C384585.quest_desc": [
     "Leafy String — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -335,9 +172,9 @@
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "task.732F93DB0003F4C3.title": "Obtain Leafy String",
-  "quest.93F632DB5C6A350A.title": "Log Sheet? In This Economy?",
-  "quest.93F632DB5C6A350A.quest_subtitle": "Craft or obtain Log Sheet",
-  "quest.93F632DB5C6A350A.quest_desc": [
+  "quest.6EF41216F87A812E.title": "Log Sheet? In This Economy?",
+  "quest.6EF41216F87A812E.quest_subtitle": "Craft or obtain Log Sheet",
+  "quest.6EF41216F87A812E.quest_desc": [
     "Log Sheet — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -347,36 +184,10 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.C586A5FA5911C26D.title": "Obtain Log Sheet",
-  "quest.5EF2BD2A4264E85F.title": "Mini Charcoal? In This Economy?",
-  "quest.5EF2BD2A4264E85F.quest_subtitle": "Craft or obtain Mini Charcoal",
-  "quest.5EF2BD2A4264E85F.quest_desc": [
-    "Mini Charcoal — a item from the BBL Utility mod.",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.BFFFC5DAA43F39B1.title": "Obtain Mini Charcoal",
-  "quest.D8A5BC0EDBAA4A04.title": "The Mini Coal Situation",
-  "quest.D8A5BC0EDBAA4A04.quest_subtitle": "Craft or obtain Mini Coal",
-  "quest.D8A5BC0EDBAA4A04.quest_desc": [
-    "Mini Coal — a item from the BBL Utility mod.",
-    "",
-    "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
-    "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
-    "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
-  ],
-  "task.84D44BD65B0ECCA2.title": "Obtain Mini Coal",
-  "quest.E9635742FBBE33CF.title": "Redstone Clock? In This Economy?",
-  "quest.E9635742FBBE33CF.quest_subtitle": "Craft or obtain Redstone Clock",
-  "quest.E9635742FBBE33CF.quest_desc": [
+  "task.347290CBF3B62535.title": "Obtain Log Sheet",
+  "quest.10E622B172A4ACA4.title": "Redstone Clock? In This Economy?",
+  "quest.10E622B172A4ACA4.quest_subtitle": "Craft or obtain Redstone Clock",
+  "quest.10E622B172A4ACA4.quest_desc": [
     "Redstone Clock — a item from the BBL Utility mod.",
     "",
     "BBL Utility adds practical helper items and blocks for pack builders and players who want tools that just work on skyblock.",
@@ -386,7 +197,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.E213F8E9FE38AFFA.title": "Obtain Redstone Clock",
+  "task.299BB0899E75CC0E.title": "Obtain Redstone Clock",
   "quest.56C1292371B71EBB.title": "Resource Generator Speedrun Any%",
   "quest.56C1292371B71EBB.quest_subtitle": "Craft or obtain Resource Generator",
   "quest.56C1292371B71EBB.quest_desc": [
@@ -413,7 +224,7 @@
     "",
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
-  "task.947002D6465C7825.title": "Obtain Sapling Grower",
+  "task.7F59DE3541AAB4BB.title": "Obtain Sapling Grower",
   "quest.6C0AE849839158FE.title": "Summoning Block Speedrun Any%",
   "quest.6C0AE849839158FE.quest_subtitle": "Craft or obtain Summoning Block",
   "quest.6C0AE849839158FE.quest_desc": [

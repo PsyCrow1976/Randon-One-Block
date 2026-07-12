@@ -1,0 +1,5 @@
+# Don't change this! Version used to track needed updates.
+version = 0
+max_rainbow_furnace_per_player = 1
+enable_per_kind_bonus = true
+enable_all_kind_bonus = true

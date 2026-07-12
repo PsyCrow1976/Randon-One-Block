@@ -1,14 +1,16 @@
 {
-  "task.05BB138E07F774FC.title": "Read about Sophisticated Storage",
-  "quest.330C599A54702742.title": "Sophisticated Storage",
+  "quest.1B88CD62B3AA33C6.title": "Gateway to Eternity",
+  "quest.1B88CD62B3AA33C6.quest_subtitle": "Craft or obtain Gate Pearl",
   "quest.1B88CD62B3AA33C6.quest_desc": [
     "Gateways to Eternity adds Gate Pearls that summon wave-based Gateways when used on a block.",
     "",
     "Defeat each wave before the timer runs out. Rewards spawn from the Gateway as you earn them. The gateway fails if mobs cannot spawn, wander too far away, or the wave timer expires.",
     "",
-    "Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity",
+    "Mod page: https://www.curseforge.com/minecraft/mc-mods/gateways-to-eternity"
   ],
   "task.7A242E28CD3A3800.title": "Read about Gateways to Eternity",
+  "quest.330C599A54702742.title": "Sophisticated Storage",
+  "quest.330C599A54702742.quest_subtitle": "Craft or obtain Chest",
   "quest.330C599A54702742.quest_desc": [
     "Sophisticated Storage upgrades vanilla-style storage into tiered chests, barrels, and shulker boxes with many more slots and upgrade slots than a normal chest.",
     "",
@@ -16,7 +18,19 @@
     "",
     "Pair placed storage with a leather backpack for items on the go. See the Storage Options chapter for full tier and upgrade paths.",
     "",
-    "Mod page: https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
+    "Mod page: https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
   ],
-  "quest.1B88CD62B3AA33C6.title": "Gateway to Eternity",
+  "task.05BB138E07F774FC.title": "Read about Sophisticated Storage",
+  "quest.0103FBABDD60A0E3.title": "Obtain Quest",
+  "quest.0103FBABDD60A0E3.quest_subtitle": "Complete this step",
+  "quest.0103FBABDD60A0E3.quest_desc": [
+    "Craft a furnace to unluck the Iron Furnace Quest Chapter"
+  ],
+  "task.59160F22E07CF020.title": "Obtain Quest",
+  "quest.3D472FD52DDDDFEF.title": "Quest Step",
+  "quest.3D472FD52DDDDFEF.quest_subtitle": "Complete this step",
+  "quest.3D472FD52DDDDFEF.quest_desc": [
+    "Complete the checkmark to continue."
+  ],
+  "task.4CCE79FDB71E0B8D.title": "Obtain Quest"
 }

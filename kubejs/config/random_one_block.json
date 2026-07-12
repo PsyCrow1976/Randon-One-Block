@@ -1,91 +1,71 @@
 {
-  "_readme": "Randon One Block — random block generator config. Edit while the server is stopped, or run /randomblock reload after changes.",
-
-  "_how_weights_work": "Every eligible block gets a weight. Default is default_weight (1). weight_overrides sets per-block weights. Higher weight = more likely. Example: crafting_table at 3 and default 1 means crafting_table is 3x as likely as a normal block. Set weight to 0 in overrides to exclude a block without using blacklist. Total chance for one block = its_weight / sum_of_all_weights.",
-
-  "_collision_filter": "When require_full_collision_cube is true, only blocks whose default collision box is a full 1x1x1 cube are added to the pool (crops, flowers, rails, pots, etc. are excluded). Set require_full_collision_cube to false to restore the old all-blocks behavior.",
-
-  "default_weight": 1,
-
-  "weight_overrides": {
-    "minecraft:crafting_table": 5,
-    "minecraft:dirt": 10,
-    "minecraft:cobblestone": 10,
-    "uncraftingtable:uncrafting_table": 3
-  },
-
-  "blacklist": [
-    "minecraft:air",
-    "minecraft:cave_air",
-    "minecraft:void_air",
-    "minecraft:water",
-    "minecraft:lava",
-    "minecraft:fire",
-    "minecraft:soul_fire",
-    "minecraft:moving_piston",
-    "minecraft:piston_head",
-    "minecraft:barrier",
-    "minecraft:structure_void",
-    "minecraft:light",
-    "minecraft:command_block",
-    "minecraft:chain_command_block",
-    "minecraft:repeating_command_block",
-    "minecraft:structure_block",
-    "minecraft:jigsaw"
-  ],
-
-  "initial_block": "minecraft:dirt",
-
-  "foundation_block": "minecraft:bedrock",
-
-  "mechanic_enabled": true,
-
-  "island_template_mode": true,
-
-  "auto_setbelow_on_island_create": true,
-
-  "auto_setbelow_templates": ["oneblock_island"],
-
-  "auto_setbelow_y_offset": 0,
-
-  "auto_setbelow_delay_ticks": 40,
-
-  "haven_island_distance": 8192,
-
-  "debug_logging": true,
-
-  "require_full_collision_cube": true,
-
-  "collision_min_aabb_size": 1,
-
-  "island_center_surround": "minecraft:grass_block",
-
-  "active_block": {
-    "enabled": false,
-    "dimension": "",
-    "x": 0,
-    "y": 0,
-    "z": 0
-  },
-
-  "_randon_counter_hud": "Team island counter shown as overlay text above the hotbar (Randon Mined : count). enabled=false hides it. Counter is per island team, not per player.",
-
-  "randon_counter_hud": {
-    "enabled": true
-  },
-
-  "_command_examples": [
-    "/randomblock",
-    "/randomblock setbelow",
-    "/randomblock set 100 70 0",
-    "/randomblock info",
-    "/randomblock revert",
-    "/randomblock reload",
-    "/randomblock counter",
-    "/randomblock poolenable refinedstorage true",
-    "/randomblock pools",
-    "/randomblock pools list",
-    "/randomblock pools debug (lists all mods in chat + logs/kubejs/server.log)",
-    "/randomblock pools debug complete (all mods + every block id in log; complete <mod> for chat)"
-  ]
+	"_readme": "Randon One Block — random block generator config. Edit while the server is stopped, or run /randomblock reload after changes.",
+	"_how_weights_work": "Every eligible block gets a weight. Default is default_weight (1). weight_overrides sets per-block weights. Higher weight = more likely. Example: crafting_table at 3 and default 1 means crafting_table is 3x as likely as a normal block. Set weight to 0 in overrides to exclude a block without using blacklist. Total chance for one block = its_weight / sum_of_all_weights.",
+	"_collision_filter": "When require_full_collision_cube is true, only blocks whose default collision box is a full 1x1x1 cube are added to the pool (crops, flowers, rails, pots, etc. are excluded). Set require_full_collision_cube to false to restore the old all-blocks behavior.",
+	"default_weight": 1,
+	"weight_overrides": {
+		"minecraft:crafting_table": 5,
+		"minecraft:dirt": 10,
+		"minecraft:cobblestone": 10,
+		"uncraftingtable:uncrafting_table": 3
+	},
+	"blacklist": [
+		"minecraft:air",
+		"minecraft:cave_air",
+		"minecraft:void_air",
+		"minecraft:water",
+		"minecraft:lava",
+		"minecraft:fire",
+		"minecraft:soul_fire",
+		"minecraft:moving_piston",
+		"minecraft:piston_head",
+		"minecraft:barrier",
+		"minecraft:structure_void",
+		"minecraft:light",
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block",
+		"minecraft:structure_block",
+		"minecraft:jigsaw"
+	],
+	"initial_block": "minecraft:dirt",
+	"foundation_block": "minecraft:bedrock",
+	"mechanic_enabled": true,
+	"island_template_mode": true,
+	"auto_setbelow_on_island_create": true,
+	"auto_setbelow_templates": [
+		"oneblock_island"
+	],
+	"auto_setbelow_y_offset": 0,
+	"auto_setbelow_delay_ticks": 40,
+	"haven_island_distance": 8192,
+	"debug_logging": true,
+	"require_full_collision_cube": true,
+	"collision_min_aabb_size": 1,
+	"island_center_surround": "minecraft:grass_block",
+	"active_block": {
+		"enabled": true,
+		"dimension": "minecraft:overworld",
+		"x": -8191,
+		"y": 71,
+		"z": -8191
+	},
+	"_randon_counter_hud": "Team island counter shown as overlay text above the hotbar (Randon Mined : count). enabled=false hides it. Counter is per island team, not per player.",
+	"randon_counter_hud": {
+		"enabled": true
+	},
+	"_command_examples": [
+		"/randomblock",
+		"/randomblock setbelow",
+		"/randomblock set 100 70 0",
+		"/randomblock info",
+		"/randomblock revert",
+		"/randomblock reload",
+		"/randomblock counter",
+		"/randomblock poolenable refinedstorage true",
+		"/randomblock pools",
+		"/randomblock pools list",
+		"/randomblock pools debug (lists all mods in chat + logs/kubejs/server.log)",
+		"/randomblock pools debug complete (all mods + every block id in log; complete <mod> for chat)"
+	]
 }

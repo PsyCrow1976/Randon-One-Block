@@ -647,8 +647,8 @@
         id: "exdeorum:dust",
         count: 1,
       },
-      x: -12.5,
-      y: 1.5,
+      x: -2.0,
+      y: 1.0,
       dependencies: [
         "21FC2BAED300401F",
       ],
@@ -676,8 +676,8 @@
         id: "exdeorum:crook",
         count: 1,
       },
-      x: -14.0,
-      y: 5.0,
+      x: -5.0,
+      y: 4.5,
       id: "43061CE98D8F779A",
       tasks: [
         {
@@ -702,7 +702,7 @@
         id: "exdeorum:bone_crook",
         count: 1,
       },
-      x: -14.0,
+      x: -5.0,
       y: 3.5,
       id: "2618BFD7249F2BB8",
       tasks: [
@@ -728,8 +728,8 @@
         id: "exdeorum:silkworm",
         count: 1,
       },
-      x: -12.5,
-      y: 4.5,
+      x: -3.5,
+      y: 4.0,
       dependencies: [
         "2618BFD7249F2BB8",
         "43061CE98D8F779A",
@@ -759,8 +759,8 @@
         id: "exdeorum:cooked_silkworm",
         count: 1,
       },
-      x: -11.0,
-      y: 4.5,
+      x: -2.0,
+      y: 4.0,
       dependencies: [
         "4ACF2F8593A2246D",
       ],
@@ -1794,7 +1794,7 @@
         id: "exdeorum:wooden_watering_can",
         count: 1,
       },
-      x: -14.0,
+      x: -11.0,
       y: 6.5,
       id: "1C1AE2C77CD283A8",
       tasks: [
@@ -1820,7 +1820,7 @@
         id: "exdeorum:stone_watering_can",
         count: 1,
       },
-      x: -12.5,
+      x: -9.5,
       y: 6.5,
       id: "4101B3D526BA095C",
       tasks: [
@@ -1846,7 +1846,7 @@
         id: "exdeorum:copper_watering_can",
         count: 1,
       },
-      x: -11.0,
+      x: -8.0,
       y: 6.5,
       id: "3AB3DC16A7BAA3BD",
       tasks: [
@@ -1872,7 +1872,7 @@
         id: "exdeorum:iron_watering_can",
         count: 1,
       },
-      x: -9.5,
+      x: -6.5,
       y: 6.5,
       id: "1926DA8208B275AE",
       tasks: [
@@ -1898,7 +1898,7 @@
         id: "exdeorum:golden_watering_can",
         count: 1,
       },
-      x: -8.0,
+      x: -5.0,
       y: 6.5,
       id: "3C158388E46634EB",
       tasks: [
@@ -1924,7 +1924,7 @@
         id: "exdeorum:diamond_watering_can",
         count: 1,
       },
-      x: -6.5,
+      x: -3.5,
       y: 6.5,
       id: "0AD067CE4FA05CB0",
       tasks: [
@@ -1950,7 +1950,7 @@
         id: "exdeorum:netherite_watering_can",
         count: 1,
       },
-      x: -5.0,
+      x: -2.0,
       y: 6.5,
       id: "1CE84112AA105327",
       tasks: [
@@ -1976,8 +1976,8 @@
         id: "exdeorum:oak_barrel",
         count: 1,
       },
-      x: -14.0,
-      y: 1.5,
+      x: -5.0,
+      y: 1.0,
       id: "21FC2BAED300401F",
       tasks: [
         {

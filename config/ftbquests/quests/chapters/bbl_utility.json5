@@ -1,7 +1,7 @@
 {
-  id: "ACCF0F5191713DDB",
+  id: "0649F2BF4D7E6F3B",
   group: "",
-  order_index: 16,
+  order_index: 14,
   icon: {
     id: "utility:block_breaker",
     count: 1,
@@ -12,275 +12,15 @@
   quests: [
     {
       icon: {
-        id: "minecraft:charcoal",
-        count: 1,
-      },
-      x: 0.0,
-      y: 0.0,
-      id: "91BC895CD6328FE8",
-      tasks: [
-        {
-          id: "D4B0671D18538F0B",
-          type: "item",
-          item: {
-            id: "minecraft:charcoal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "ABE8D762A472CCE8",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:chest",
-        count: 1,
-      },
-      x: 1.5,
-      y: 0.0,
-      id: "626D7DF0E732155A",
-      tasks: [
-        {
-          id: "1EB91ADAD039B168",
-          type: "item",
-          item: {
-            id: "minecraft:chest",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "39C602056395654B",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:coal",
-        count: 1,
-      },
-      x: 3.0,
-      y: 0.0,
-      id: "5643EC3522C813A4",
-      tasks: [
-        {
-          id: "DE54420CA311040C",
-          type: "item",
-          item: {
-            id: "minecraft:coal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "F7C49E9B67426032",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:diamond_horse_armor",
-        count: 1,
-      },
-      x: 4.5,
-      y: 0.0,
-      id: "3E0E021F07663B2C",
-      tasks: [
-        {
-          id: "CACB0EB724A197C7",
-          type: "item",
-          item: {
-            id: "minecraft:diamond_horse_armor",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "87FF52E53D35782C",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:ender_pearl",
-        count: 1,
-      },
-      x: 6.0,
-      y: 0.0,
-      id: "CB226F56F79CBBE1",
-      tasks: [
-        {
-          id: "BFBE608EDBE39727",
-          type: "item",
-          item: {
-            id: "minecraft:ender_pearl",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "84CC242E72984D31",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:golden_horse_armor",
-        count: 1,
-      },
-      x: 7.5,
-      y: 0.0,
-      id: "B0D780D715657F8A",
-      tasks: [
-        {
-          id: "EAFAF08E3C81F093",
-          type: "item",
-          item: {
-            id: "minecraft:golden_horse_armor",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7FEFBB987F5A1811",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:green_wool",
-        count: 1,
-      },
-      x: 9.0,
-      y: 0.0,
-      id: "636563AEE2024853",
-      tasks: [
-        {
-          id: "0F6600ED5F8F50C9",
-          type: "item",
-          item: {
-            id: "minecraft:green_wool",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7AF3CF02AEDD749B",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:iron_horse_armor",
-        count: 1,
-      },
-      x: 10.5,
-      y: 0.0,
-      id: "1AE1F3052D8A1B09",
-      tasks: [
-        {
-          id: "8EC10DFF59D6CF26",
-          type: "item",
-          item: {
-            id: "minecraft:iron_horse_armor",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "DB3B2F3BDAB557AF",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:name_tag",
-        count: 1,
-      },
-      x: 0.0,
-      y: 1.5,
-      id: "5B78C95AF756664F",
-      tasks: [
-        {
-          id: "FB2A6AD3E7734E47",
-          type: "item",
-          item: {
-            id: "minecraft:name_tag",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "EA6D015152E6C069",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "minecraft:stick",
-        count: 1,
-      },
-      x: 1.5,
-      y: 1.5,
-      id: "16015035C4A542F8",
-      tasks: [
-        {
-          id: "7A912FDD79DB5132",
-          type: "item",
-          item: {
-            id: "minecraft:stick",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "7BF88D71661A938E",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "utility:animal_net",
         count: 1,
       },
-      x: 3.0,
-      y: 1.5,
-      id: "9141035842EEEC39",
+      x: 5.0,
+      y: 1.0,
+      id: "507AD1A31283BF70",
       tasks: [
         {
-          id: "B827DAF7161C9625",
+          id: "2F2EC9E9B2D474B2",
           type: "item",
           item: {
             id: "utility:animal_net",
@@ -301,12 +41,12 @@
         id: "utility:block_breaker",
         count: 1,
       },
-      x: 4.5,
-      y: 1.5,
-      id: "FAF39F1BB51A0DB2",
+      x: 3.0,
+      y: 1.0,
+      id: "500C30477600ABE2",
       tasks: [
         {
-          id: "D21045D2BC9941BB",
+          id: "085BFF1E1BE6493F",
           type: "item",
           item: {
             id: "utility:block_breaker",
@@ -327,12 +67,12 @@
         id: "utility:block_placer",
         count: 1,
       },
-      x: 6.0,
-      y: 1.5,
-      id: "9F191C30D94467CA",
+      x: 5.0,
+      y: 5.0,
+      id: "08DA76E31C12ACAD",
       tasks: [
         {
-          id: "DEB755FCDF35779A",
+          id: "3E6349186E31A600",
           type: "item",
           item: {
             id: "utility:block_placer",
@@ -342,7 +82,7 @@
       ],
       rewards: [
         {
-          id: "DD31CA88B02F08A4",
+          id: "2E31F40E74EAE650",
           type: "xp",
           xp: 10,
         },
@@ -353,12 +93,12 @@
         id: "utility:compactor",
         count: 1,
       },
-      x: 7.5,
-      y: 1.5,
+      x: 7.0,
+      y: 1.0,
       id: "7B4C95D66B7893F3",
       tasks: [
         {
-          id: "D80ED3DC212FAA60",
+          id: "40B6E135286E9AAA",
           type: "item",
           item: {
             id: "utility:compactor",
@@ -379,9 +119,9 @@
         id: "utility:crook",
         count: 1,
       },
-      x: 9.0,
-      y: 1.5,
-      id: "F2E8AC09725BFFCB",
+      x: 7.0,
+      y: -1.0,
+      id: "0E750194F958B9CF",
       tasks: [
         {
           id: "31F84B2BA3766E58",
@@ -394,7 +134,7 @@
       ],
       rewards: [
         {
-          id: "D5F4CA80D39BC604",
+          id: "3442AD41E5A55E64",
           type: "xp",
           xp: 10,
         },
@@ -405,12 +145,12 @@
         id: "utility:drying_table",
         count: 1,
       },
-      x: 10.5,
-      y: 1.5,
-      id: "E8C2FF0D23EE2642",
+      x: 1.0,
+      y: 5.0,
+      id: "4F3DC3EA87567C1F",
       tasks: [
         {
-          id: "9F51690E54CCEF0E",
+          id: "35DB71F13D6D4B3B",
           type: "item",
           item: {
             id: "utility:drying_table",
@@ -420,33 +160,7 @@
       ],
       rewards: [
         {
-          id: "CABF861EC60B3B64",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "utility:ender_pearl_fragment",
-        count: 1,
-      },
-      x: 0.0,
-      y: 3.0,
-      id: "07657FBDCE394B8F",
-      tasks: [
-        {
-          id: "3241BDFDEC5A788D",
-          type: "item",
-          item: {
-            id: "utility:ender_pearl_fragment",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "346D632E106BD1AB",
+          id: "76C3DC45C40C99A3",
           type: "xp",
           xp: 10,
         },
@@ -457,12 +171,12 @@
         id: "utility:floater",
         count: 1,
       },
-      x: 1.5,
-      y: 3.0,
-      id: "F9A9DA7FBF306BC8",
+      x: 5.0,
+      y: -2.5,
+      id: "261A4AE1A9ED9EC9",
       tasks: [
         {
-          id: "C0236E065E8F18D8",
+          id: "604685F5F9D6F6DB",
           type: "item",
           item: {
             id: "utility:floater",
@@ -485,7 +199,7 @@
       },
       x: 3.0,
       y: 3.0,
-      id: "E892348DA7099570",
+      id: "55D99A5DC5A803A8",
       tasks: [
         {
           id: "6112585DE441C724",
@@ -509,7 +223,7 @@
         id: "utility:fluid_generator",
         count: 1,
       },
-      x: 4.5,
+      x: 5.0,
       y: 3.0,
       id: "4EA45D687D0B399B",
       tasks: [
@@ -535,12 +249,12 @@
         id: "utility:fluid_placer",
         count: 1,
       },
-      x: 6.0,
+      x: 7.0,
       y: 3.0,
-      id: "DB56D20CFAA7B80A",
+      id: "58FF6908BF568D6D",
       tasks: [
         {
-          id: "EEDA19A614808B35",
+          id: "555A456CA7C1774D",
           type: "item",
           item: {
             id: "utility:fluid_placer",
@@ -561,12 +275,12 @@
         id: "utility:item_collector",
         count: 1,
       },
-      x: 7.5,
-      y: 3.0,
+      x: 9.0,
+      y: 5.0,
       id: "6BE62BA67051FFD6",
       tasks: [
         {
-          id: "AED19D3C13434A19",
+          id: "41984A12AAF78579",
           type: "item",
           item: {
             id: "utility:item_collector",
@@ -576,7 +290,7 @@
       ],
       rewards: [
         {
-          id: "9B78C8EB1AA5AB4C",
+          id: "589AE9156262E87A",
           type: "xp",
           xp: 10,
         },
@@ -602,7 +316,7 @@
       ],
       rewards: [
         {
-          id: "8719902F9B013913",
+          id: "77B4DD54F032BB42",
           type: "xp",
           xp: 10,
         },
@@ -613,9 +327,9 @@
         id: "utility:leafy_string",
         count: 1,
       },
-      x: 10.5,
-      y: 3.0,
-      id: "8ED7DDFE8A79CB7D",
+      x: 3.0,
+      y: -1.0,
+      id: "1ECD67D18C384585",
       tasks: [
         {
           id: "732F93DB0003F4C3",
@@ -639,12 +353,12 @@
         id: "utility:log_sheet",
         count: 1,
       },
-      x: 0.0,
-      y: 4.5,
-      id: "93F632DB5C6A350A",
+      x: 5.0,
+      y: 9.0,
+      id: "6EF41216F87A812E",
       tasks: [
         {
-          id: "C586A5FA5911C26D",
+          id: "347290CBF3B62535",
           type: "item",
           item: {
             id: "utility:log_sheet",
@@ -662,67 +376,15 @@
     },
     {
       icon: {
-        id: "utility:mini_charcoal",
-        count: 1,
-      },
-      x: 1.5,
-      y: 4.5,
-      id: "5EF2BD2A4264E85F",
-      tasks: [
-        {
-          id: "BFFFC5DAA43F39B1",
-          type: "item",
-          item: {
-            id: "utility:mini_charcoal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "C950712D5B1C4B90",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
-        id: "utility:mini_coal",
-        count: 1,
-      },
-      x: 3.0,
-      y: 4.5,
-      id: "D8A5BC0EDBAA4A04",
-      tasks: [
-        {
-          id: "84D44BD65B0ECCA2",
-          type: "item",
-          item: {
-            id: "utility:mini_coal",
-            count: 1,
-          },
-        },
-      ],
-      rewards: [
-        {
-          id: "CFAE22F5BCA6CB07",
-          type: "xp",
-          xp: 10,
-        },
-      ],
-    },
-    {
-      icon: {
         id: "utility:redstone_clock",
         count: 1,
       },
-      x: 4.5,
-      y: 4.5,
-      id: "E9635742FBBE33CF",
+      x: 3.0,
+      y: 5.0,
+      id: "10E622B172A4ACA4",
       tasks: [
         {
-          id: "E213F8E9FE38AFFA",
+          id: "299BB0899E75CC0E",
           type: "item",
           item: {
             id: "utility:redstone_clock",
@@ -743,8 +405,8 @@
         id: "utility:resource_generator",
         count: 1,
       },
-      x: 6.0,
-      y: 4.5,
+      x: 7.0,
+      y: 5.0,
       id: "56C1292371B71EBB",
       tasks: [
         {
@@ -758,7 +420,7 @@
       ],
       rewards: [
         {
-          id: "FE8EFC2A761DCFA7",
+          id: "135B02672CF3A062",
           type: "xp",
           xp: 10,
         },
@@ -769,12 +431,12 @@
         id: "utility:sapling_grower",
         count: 1,
       },
-      x: 7.5,
-      y: 4.5,
+      x: 5.0,
+      y: 7.0,
       id: "00C70686FAAD0054",
       tasks: [
         {
-          id: "947002D6465C7825",
+          id: "7F59DE3541AAB4BB",
           type: "item",
           item: {
             id: "utility:sapling_grower",
@@ -784,7 +446,7 @@
       ],
       rewards: [
         {
-          id: "82232E689A89AA9B",
+          id: "581C60B266795F2B",
           type: "xp",
           xp: 10,
         },
@@ -795,8 +457,8 @@
         id: "utility:summoning_block",
         count: 1,
       },
-      x: 9.0,
-      y: 4.5,
+      x: 1.0,
+      y: 3.0,
       id: "6C0AE849839158FE",
       tasks: [
         {
@@ -821,8 +483,8 @@
         id: "utility:wooden_shears",
         count: 1,
       },
-      x: 10.5,
-      y: 4.5,
+      x: 5.0,
+      y: -1.0,
       id: "37E1F7049F09F5A8",
       tasks: [
         {
@@ -836,13 +498,15 @@
       ],
       rewards: [
         {
-          id: "D335CB6C17CD41D1",
+          id: "42894D6EA2FEAD6D",
           type: "xp",
           xp: 10,
         },
       ],
     },
   ],
-  quest_links: [],
-  images: [],
+  quest_links: [
+  ],
+  images: [
+  ],
 }

@@ -1,7 +1,7 @@
 {
-  id: "8BBC26FE9631994E",
+  id: "0D809C23BF8964E6",
   group: "",
-  order_index: 20,
+  order_index: 16,
   icon: {
     id: "mysticalagradditions:inferium_apple",
     count: 1,
@@ -17,7 +17,7 @@
       },
       x: 0.0,
       y: 0.0,
-      id: "80578DA75A93B3BF",
+      id: "347AF9628DD6255E",
       tasks: [
         {
           id: "6BD32EF14B84A8C2",
@@ -43,7 +43,7 @@
       },
       x: 1.5,
       y: 0.0,
-      id: "9949A2BFECAA84D6",
+      id: "6F5C7AF7FE843DB8",
       tasks: [
         {
           id: "380DFC59B5E539AF",
@@ -56,7 +56,7 @@
       ],
       rewards: [
         {
-          id: "D51B3CD28DB2273E",
+          id: "0F4D963B031AE225",
           type: "xp",
           xp: 10,
         },
@@ -69,10 +69,10 @@
       },
       x: 3.0,
       y: 0.0,
-      id: "E8E83FB0B32A3812",
+      id: "61A408A5A8F36D58",
       tasks: [
         {
-          id: "CD1B514017E621CD",
+          id: "78BA515C15FD269F",
           type: "item",
           item: {
             id: "minecraft:nether_star",
@@ -82,7 +82,7 @@
       ],
       rewards: [
         {
-          id: "AE64F09AB5146E2D",
+          id: "5272C2CAA2B112EA",
           type: "xp",
           xp: 10,
         },
@@ -95,7 +95,7 @@
       },
       x: 4.5,
       y: 0.0,
-      id: "A48BBD9E3E603E50",
+      id: "7AEB7B3956C7E4AD",
       tasks: [
         {
           id: "614CA6BC18E82691",
@@ -108,7 +108,7 @@
       ],
       rewards: [
         {
-          id: "8176EB838069C9C1",
+          id: "3FCDEA4877B9A183",
           type: "xp",
           xp: 10,
         },
@@ -121,10 +121,10 @@
       },
       x: 6.0,
       y: 0.0,
-      id: "FAE0014D6AE0A72A",
+      id: "5BD1FC3FEFBDCEA4",
       tasks: [
         {
-          id: "F952AD96643C851A",
+          id: "407609DBA45C7DB6",
           type: "item",
           item: {
             id: "mysticalagradditions:awakened_supremium_paxel",
@@ -160,7 +160,7 @@
       ],
       rewards: [
         {
-          id: "85459754D70439A2",
+          id: "79C7CBC7C9D13D0F",
           type: "xp",
           xp: 10,
         },
@@ -186,7 +186,7 @@
       ],
       rewards: [
         {
-          id: "B643647969AE1C3D",
+          id: "6B3FCE1FAC7AC7BF",
           type: "xp",
           xp: 10,
         },
@@ -199,7 +199,7 @@
       },
       x: 10.5,
       y: 0.0,
-      id: "C56E659A8D9D5283",
+      id: "1D362EB316F42789",
       tasks: [
         {
           id: "4356965CAE360122",
@@ -225,10 +225,10 @@
       },
       x: 0.0,
       y: 1.5,
-      id: "FCDCD4ED0E022B5E",
+      id: "1CA047FA34A285C1",
       tasks: [
         {
-          id: "9A11A565D0D3B8EB",
+          id: "0DCAE6DA0295958B",
           type: "item",
           item: {
             id: "mysticalagradditions:imperium_coal",
@@ -251,7 +251,7 @@
       },
       x: 1.5,
       y: 1.5,
-      id: "CB756F1A77DFCF27",
+      id: "70C40A8CF5FDA3C3",
       tasks: [
         {
           id: "56325A26139941EA",
@@ -264,7 +264,7 @@
       ],
       rewards: [
         {
-          id: "D7E982F5BF61CA82",
+          id: "49110A4BA6C683B8",
           type: "xp",
           xp: 10,
         },
@@ -277,7 +277,7 @@
       },
       x: 3.0,
       y: 1.5,
-      id: "9FBED6B99A257CE6",
+      id: "4224A6CCFE87DFE4",
       tasks: [
         {
           id: "4B6F8C9D544FD300",
@@ -329,7 +329,7 @@
       },
       x: 6.0,
       y: 1.5,
-      id: "FBE665C2B948DCC0",
+      id: "5380B6C6AC11CF29",
       tasks: [
         {
           id: "7DEEE77DF1D436DE",
@@ -342,7 +342,7 @@
       ],
       rewards: [
         {
-          id: "C776805E992C97C3",
+          id: "18C91CBE8ED8C621",
           type: "xp",
           xp: 10,
         },
@@ -358,7 +358,7 @@
       id: "08969025E2AB2288",
       tasks: [
         {
-          id: "91E51B12B84F9E91",
+          id: "7F568E5212661B65",
           type: "item",
           item: {
             id: "mysticalagradditions:inferium_coal_block",
@@ -368,7 +368,7 @@
       ],
       rewards: [
         {
-          id: "A219C0FC372A4928",
+          id: "67FB7CD249B3EA78",
           type: "xp",
           xp: 10,
         },
@@ -384,7 +384,7 @@
       id: "5091BFE6D6B48B2C",
       tasks: [
         {
-          id: "D61D9EC76952925E",
+          id: "6399F650ABC090EC",
           type: "item",
           item: {
             id: "mysticalagradditions:inferium_paxel",
@@ -394,7 +394,7 @@
       ],
       rewards: [
         {
-          id: "E3EF2A5C32A7EB2B",
+          id: "1F7B362E0774CBC6",
           type: "xp",
           xp: 10,
         },
@@ -407,7 +407,7 @@
       },
       x: 10.5,
       y: 1.5,
-      id: "85E201679DDB0005",
+      id: "0913A3AC804F5E1F",
       tasks: [
         {
           id: "7FB740E30E9E0F1A",
@@ -420,7 +420,7 @@
       ],
       rewards: [
         {
-          id: "B68FCF0C792C17B1",
+          id: "46AC0DC64212CBE4",
           type: "xp",
           xp: 10,
         },
@@ -433,7 +433,7 @@
       },
       x: 0.0,
       y: 3.0,
-      id: "CC7AEDDFDCF9D0F2",
+      id: "176AADDA4F4974AF",
       tasks: [
         {
           id: "7337667F4EFAB82A",
@@ -446,7 +446,7 @@
       ],
       rewards: [
         {
-          id: "E0B3876D0517B1B1",
+          id: "3D8E05DF9CB8F283",
           type: "xp",
           xp: 10,
         },
@@ -472,7 +472,7 @@
       ],
       rewards: [
         {
-          id: "94280B1A3F1DDFEC",
+          id: "7AC31D041F3D6DFF",
           type: "xp",
           xp: 10,
         },
@@ -514,7 +514,7 @@
       id: "503F83DC0338FA38",
       tasks: [
         {
-          id: "BFDB5E4B1D06F520",
+          id: "5594901B97CB2C50",
           type: "item",
           item: {
             id: "mysticalagradditions:insanium_essence",
@@ -524,7 +524,7 @@
       ],
       rewards: [
         {
-          id: "AF1F6EFB67B11FA7",
+          id: "3324C59F8A4C542B",
           type: "xp",
           xp: 10,
         },
@@ -550,7 +550,7 @@
       ],
       rewards: [
         {
-          id: "F814B62C4E719E44",
+          id: "2FB794DAD21D4095",
           type: "xp",
           xp: 10,
         },
@@ -566,7 +566,7 @@
       id: "4910A5DF0DF988CA",
       tasks: [
         {
-          id: "9C3D0EC465E5EF22",
+          id: "127BF8619D226AAA",
           type: "item",
           item: {
             id: "mysticalagradditions:insanium_gemstone",
@@ -602,7 +602,7 @@
       ],
       rewards: [
         {
-          id: "81818C17DF7AB147",
+          id: "09EABE8E2D22F97E",
           type: "xp",
           xp: 10,
         },
@@ -615,10 +615,10 @@
       },
       x: 10.5,
       y: 3.0,
-      id: "D8F4B73F9280497B",
+      id: "450D9BF91A28BF92",
       tasks: [
         {
-          id: "C5D9441DBCDDDD22",
+          id: "24CAF7641DC17F6E",
           type: "item",
           item: {
             id: "mysticalagradditions:insanium_ingot",
@@ -628,7 +628,7 @@
       ],
       rewards: [
         {
-          id: "F6A751E4602F374C",
+          id: "3A3F0B60F5CE4D5E",
           type: "xp",
           xp: 10,
         },
@@ -641,10 +641,10 @@
       },
       x: 0.0,
       y: 4.5,
-      id: "8E2476965CB6C475",
+      id: "7BC7E1B9FB1FDA68",
       tasks: [
         {
-          id: "97B05BA060F46A19",
+          id: "7832FA8B5B650B0F",
           type: "item",
           item: {
             id: "mysticalagradditions:insanium_ingot_block",
@@ -654,7 +654,7 @@
       ],
       rewards: [
         {
-          id: "934B500FD41C816C",
+          id: "0387E3D253B3A5B0",
           type: "xp",
           xp: 10,
         },
@@ -667,10 +667,10 @@
       },
       x: 1.5,
       y: 4.5,
-      id: "FD58FAFB7F59721F",
+      id: "5CC981C729E993DA",
       tasks: [
         {
-          id: "BD749EEE19B8CA18",
+          id: "622B453C9A0D264F",
           type: "item",
           item: {
             id: "mysticalagradditions:insanium_nugget",
@@ -745,10 +745,10 @@
       },
       x: 6.0,
       y: 4.5,
-      id: "9FB24CB50D84F56C",
+      id: "76E17EB39036BAD9",
       tasks: [
         {
-          id: "D254FEDA38819E32",
+          id: "3B36375032C22FDF",
           type: "item",
           item: {
             id: "mysticalagradditions:nitro_crystal_crux",
@@ -771,10 +771,10 @@
       },
       x: 7.5,
       y: 4.5,
-      id: "A4A6B1927C613E4A",
+      id: "0AE91CB1D6C5C8A2",
       tasks: [
         {
-          id: "FB27E4D63406E820",
+          id: "4B236DC3B8DD199E",
           type: "item",
           item: {
             id: "mysticalagradditions:prudentium_apple",
@@ -784,7 +784,7 @@
       ],
       rewards: [
         {
-          id: "C869559545D426BA",
+          id: "0D4265154BC99320",
           type: "xp",
           xp: 10,
         },
@@ -797,7 +797,7 @@
       },
       x: 9.0,
       y: 4.5,
-      id: "8C377031BF381E06",
+      id: "2614E0C3B4B09DD5",
       tasks: [
         {
           id: "7FA544E6F86829A4",
@@ -810,7 +810,7 @@
       ],
       rewards: [
         {
-          id: "F7FA5EDBD15C48FE",
+          id: "348DF6F0A13F2884",
           type: "xp",
           xp: 10,
         },
@@ -823,7 +823,7 @@
       },
       x: 10.5,
       y: 4.5,
-      id: "FABAB50623ED3201",
+      id: "51FCCD51F0688399",
       tasks: [
         {
           id: "09BC545CCF4D052D",
@@ -836,7 +836,7 @@
       ],
       rewards: [
         {
-          id: "CD0E81851CAA63F9",
+          id: "574B3D9A1690E7E2",
           type: "xp",
           xp: 10,
         },
@@ -849,10 +849,10 @@
       },
       x: 0.0,
       y: 6.0,
-      id: "E3413C42B6AB5229",
+      id: "7C508DE9A3B9B65D",
       tasks: [
         {
-          id: "873CD4EB4052B9A6",
+          id: "1AA90623860E71F3",
           type: "item",
           item: {
             id: "mysticalagradditions:prudentium_paxel",
@@ -875,7 +875,7 @@
       },
       x: 1.5,
       y: 6.0,
-      id: "A6E8F45DA14ED664",
+      id: "76CFB316A41FDD10",
       tasks: [
         {
           id: "15F9105C841F530B",
@@ -888,7 +888,7 @@
       ],
       rewards: [
         {
-          id: "C394412D59F89BEF",
+          id: "74AEBF000A04584F",
           type: "xp",
           xp: 10,
         },
@@ -982,7 +982,7 @@
       id: "22AFF134593E0CC4",
       tasks: [
         {
-          id: "D4F16B7E1442F068",
+          id: "2ABA252035DDA118",
           type: "item",
           item: {
             id: "mysticalagradditions:tertium_apple",
@@ -992,7 +992,7 @@
       ],
       rewards: [
         {
-          id: "CF1174ED5D27FDF2",
+          id: "555BDC05C49983D7",
           type: "xp",
           xp: 10,
         },
@@ -1005,10 +1005,10 @@
       },
       x: 9.0,
       y: 6.0,
-      id: "DA008B2D25561D1A",
+      id: "3129EE998E87286F",
       tasks: [
         {
-          id: "CC79CF42C3505319",
+          id: "60EDA4AC2D712139",
           type: "item",
           item: {
             id: "mysticalagradditions:tertium_coal",
@@ -1018,7 +1018,7 @@
       ],
       rewards: [
         {
-          id: "8235A2922BFFC0F9",
+          id: "17695188C03309DE",
           type: "xp",
           xp: 10,
         },
@@ -1057,10 +1057,10 @@
       },
       x: 0.0,
       y: 7.5,
-      id: "92826C5741D85E87",
+      id: "26DDDDDBCE104845",
       tasks: [
         {
-          id: "958AA6B69702DDAB",
+          id: "7A099D0013132182",
           type: "item",
           item: {
             id: "mysticalagradditions:tertium_paxel",
@@ -1070,7 +1070,7 @@
       ],
       rewards: [
         {
-          id: "D0ADE8900AB58D88",
+          id: "7054941038520EA4",
           type: "xp",
           xp: 10,
         },
@@ -1083,10 +1083,10 @@
       },
       x: 1.5,
       y: 7.5,
-      id: "97D007F419F6DB1D",
+      id: "4F8D25C0779E7F07",
       tasks: [
         {
-          id: "BF3D5A5A9175FDA1",
+          id: "677FAA462396F48A",
           type: "item",
           item: {
             id: "mysticalagriculture:supremium_essence",
@@ -1109,10 +1109,10 @@
       },
       x: 3.0,
       y: 7.5,
-      id: "B8F7AC718F8F09A7",
+      id: "2DFDCEC1B1E3C0A1",
       tasks: [
         {
-          id: "D32CFBEAFAB4CFBD",
+          id: "5721046560964843",
           type: "item",
           item: {
             id: "powah:crystal_nitro",
@@ -1122,13 +1122,15 @@
       ],
       rewards: [
         {
-          id: "C2EF41E73069C63E",
+          id: "1D4034FC45FC55B3",
           type: "xp",
           xp: 10,
         },
       ],
     },
   ],
-  quest_links: [],
-  images: [],
+  quest_links: [
+  ],
+  images: [
+  ],
 }

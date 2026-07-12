@@ -1,0 +1,19 @@
+[general]
+	#Whether the Uncrafting Table crafting recipe is enabled.
+	craftable = true
+	#When true, the crafting recipe is built from customCraftingPattern and customCraftingKeys.
+	useCustomCraftingRecipe = true
+	#Shaped crafting pattern rows (1-3 rows, 1-3 characters each). Use spaces for empty cells.
+	customCraftingPattern = ["CCC", "CDC", "CCC"]
+	#Pattern key to ingredient mappings (e.g. P=minecraft:oak_planks). Item IDs or #tags.
+	customCraftingKeys = ["C=minecraft:crafting_table", "D=minecraft:diamond"]
+	#Item IDs that cannot be placed in the input slot (e.g. minecraft:oak_sapling).
+	blockedInputItems = []
+	#When true, tools and weapons with any durability loss cannot be placed in the input slot.
+	blockDamagedToolsAndWeapons = true
+
+[Debugging]
+	#Write detailed recipe lookup and input-slot logs to latest.log.
+	debug = true
+	#When true, only minecraft:bookshelf can be placed in the input slot (troubleshooting).
+	testModeOnlyBookshelf = false
