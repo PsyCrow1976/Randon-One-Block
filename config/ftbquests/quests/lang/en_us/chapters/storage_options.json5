@@ -1,201 +1,13 @@
 {
-  "quest.1D5A582F52D7CB30.title": "Leather Backpack",
-  "quest.1D5A582F52D7CB30.quest_subtitle": "Your first portable chest",
-  "quest.1D5A582F52D7CB30.quest_desc": [
-    "Craft a Sophisticated Backpack — any dye color counts.",
-    "",
-    "Recipe: leather, string, and a wooden chest. Right-click to open; shift-right-click to wear it on your back."
-  ],
-  "task.1A2B3C4D5E6F7081.title": "Craft a Leather Backpack",
-  "quest.58C53A19F1C804A9.title": "Copper Backpack",
-  "quest.58C53A19F1C804A9.quest_subtitle": "Optional upgrade path",
-  "quest.58C53A19F1C804A9.quest_desc": [
-    "Surround your leather backpack with copper ingots in a 3×3 ring.",
-    "",
-    "This detour costs less iron when you reach the next tier."
-  ],
-  "task.3C4D5E6F708192A3.title": "Craft a Copper Backpack",
-  "quest.4485085C6BFD2FC6.title": "Iron Backpack",
-  "quest.4485085C6BFD2FC6.quest_subtitle": "Bigger pockets",
-  "quest.4485085C6BFD2FC6.quest_desc": [
-    "Upgrade to iron tier for more slots and upgrade capacity.",
-    "",
-    "Direct: 8 iron in a ring around a leather backpack.",
-    "Via copper: 4 iron in a plus around a copper backpack."
-  ],
-  "task.6F708192A3B4C5D6.title": "Craft an Iron Backpack",
-  "quest.08E47E11A1D8C0DB.title": "Gold Backpack",
-  "quest.08E47E11A1D8C0DB.quest_subtitle": "Mid-game storage",
-  "quest.08E47E11A1D8C0DB.quest_desc": [
-    "Surround your iron backpack with gold ingots in a 3×3 ring."
-  ],
-  "task.11202051FD5F87D1.title": "Craft a Gold Backpack",
-  "quest.0EF32096EC1AA836.title": "Diamond Backpack",
-  "quest.0EF32096EC1AA836.quest_subtitle": "Serious storage",
-  "quest.0EF32096EC1AA836.quest_desc": [
-    "Surround your gold backpack with diamonds in a 3×3 ring."
-  ],
-  "task.2D3C11B7F00E1F72.title": "Craft a Diamond Backpack",
-  "quest.391C5E29148EC181.title": "Netherite Backpack",
-  "quest.391C5E29148EC181.quest_subtitle": "Top tier",
-  "quest.391C5E29148EC181.quest_desc": [
-    "Smith a diamond backpack with a netherite upgrade template and netherite ingot.",
-    "",
-    "Maximum slots and upgrade slots — the final backpack tier."
-  ],
-  "task.2B3C4D5E6F7089AB.title": "Craft a Netherite Backpack",
-  "quest.038F98D454194789.title": "Upgrade Base",
-  "quest.038F98D454194789.quest_subtitle": "Unlock backpack modules",
-  "quest.038F98D454194789.quest_desc": [
-    "Craft an Upgrade Base — the blank plate every backpack module needs.",
-    "",
-    "Recipe: iron, leather, and string. Insert upgrades in the backpack UI."
-  ],
-  "task.09425A93660A2F43.title": "Craft an Upgrade Base",
-  "quest.3168079474CE3930.title": "Pickup Upgrade",
-  "quest.3168079474CE3930.quest_subtitle": "Vacuum on the go",
-  "quest.3168079474CE3930.quest_desc": [
-    "Items you walk over can route straight into your backpack.",
-    "",
-    "A staple first upgrade — pairs well with Magnet later."
-  ],
-  "task.3B79A1593BCB483D.title": "Craft a Pickup Upgrade",
-  "quest.7568008105FC11BE.title": "Advanced Pickup Upgrade",
-  "quest.7568008105FC11BE.quest_subtitle": "Smarter vacuum",
-  "quest.7568008105FC11BE.quest_desc": [
-    "Upgrade your Pickup module for wider range and finer control over what gets collected."
-  ],
-  "task.0129F1F24875C5EF.title": "Craft an Advanced Pickup Upgrade",
-  "quest.015958C3FF5F62DC.title": "Feeding Upgrade",
-  "quest.015958C3FF5F62DC.quest_subtitle": "Never go hungry",
-  "quest.015958C3FF5F62DC.quest_desc": [
-    "Automatically eats food stored in your backpack when your hunger drops."
-  ],
-  "task.6E4E537FE2D26E7D.title": "Craft a Feeding Upgrade",
   "quest.6690CF7F76D55993.title": "Advanced Feeding Upgrade",
-  "quest.6690CF7F76D55993.quest_subtitle": "Fine-tuned meals",
-  "quest.6690CF7F76D55993.quest_desc": [
-    "Choose which foods to eat and when — upgrade from the basic Feeding module."
-  ],
-  "task.3F9C06BF1E429916.title": "Craft an Advanced Feeding Upgrade",
-  "quest.08D30836535B73A3.title": "Compacting Upgrade",
-  "quest.08D30836535B73A3.quest_subtitle": "Compress stacks",
-  "quest.08D30836535B73A3.quest_desc": [
-    "Automatically crafts items into blocks when your backpack has the ingredients."
-  ],
-  "task.0EC3FF21E24B401A.title": "Craft a Compacting Upgrade",
-  "quest.5D5A9E5F13DA56F1.title": "Advanced Compacting Upgrade",
-  "quest.5D5A9E5F13DA56F1.quest_subtitle": "Bulk crafting",
-  "quest.5D5A9E5F13DA56F1.quest_desc": [
-    "Advanced rules for which recipes to run and when to compact."
-  ],
-  "task.0F080E3A56808364.title": "Craft an Advanced Compacting Upgrade",
-  "quest.1CC5EB2FA2002B10.title": "Void Upgrade",
-  "quest.1CC5EB2FA2002B10.quest_subtitle": "Trash the extras",
-  "quest.1CC5EB2FA2002B10.quest_desc": [
-    "Delete overflow items that match a filter — great for farms dumping junk."
-  ],
-  "task.0EDA955DB52367D9.title": "Craft a Void Upgrade",
-  "quest.093E9B19F14A9D7A.title": "Advanced Void Upgrade",
-  "quest.093E9B19F14A9D7A.quest_subtitle": "Precision trash",
-  "quest.093E9B19F14A9D7A.quest_desc": [
-    "More filter slots and controls for what your backpack voids."
-  ],
-  "task.3D087113454AFE0D.title": "Craft an Advanced Void Upgrade",
-  "quest.3B5A6B96B887FD91.title": "Magnet Upgrade",
-  "quest.3B5A6B96B887FD91.quest_subtitle": "Pull from afar",
-  "quest.3B5A6B96B887FD91.quest_desc": [
-    "Attract nearby items into your backpack — requires a Pickup Upgrade first."
-  ],
-  "task.14BD014E09D7E834.title": "Craft a Magnet Upgrade",
-  "quest.4D56F4F9B559DB21.title": "Advanced Magnet Upgrade",
-  "quest.4D56F4F9B559DB21.quest_subtitle": "Long-range loot",
-  "quest.4D56F4F9B559DB21.quest_desc": [
-    "Stronger magnet with more options. Upgrade from Magnet or Advanced Pickup."
-  ],
-  "task.0EB252D0098C22E3.title": "Craft an Advanced Magnet Upgrade",
-  "quest.2C1EC7A7081A11B3.title": "Smelting Upgrade",
-  "quest.2C1EC7A7081A11B3.quest_subtitle": "Portable furnace",
-  "quest.2C1EC7A7081A11B3.quest_desc": [
-    "Smelt items inside your backpack using fuel you store alongside them."
-  ],
-  "task.4B6E99C79C852C2C.title": "Craft a Smelting Upgrade",
-  "quest.4ED71BFE25C5ED21.title": "Smoking Upgrade",
-  "quest.4ED71BFE25C5ED21.quest_subtitle": "Campfire cooking",
-  "quest.4ED71BFE25C5ED21.quest_desc": [
-    "Cook food faster — craft fresh or convert a Smelting Upgrade with logs."
-  ],
-  "task.776F1AB4BBFC3EF3.title": "Craft a Smoking Upgrade",
-  "quest.4039A8DF1D2ED4F6.title": "Blasting Upgrade",
-  "quest.4039A8DF1D2ED4F6.quest_subtitle": "Blast furnace pocket",
-  "quest.4039A8DF1D2ED4F6.quest_desc": [
-    "Smelt ores at blast speed — craft fresh or upgrade from a Smelting module."
-  ],
-  "task.0AF1763A1096D34A.title": "Craft a Blasting Upgrade",
-  "quest.74D5EFA0CE52AC1A.title": "Auto Smelting Upgrade",
-  "quest.74D5EFA0CE52AC1A.quest_subtitle": "Hands-free smelt",
-  "quest.74D5EFA0CE52AC1A.quest_desc": [
-    "Automatically feeds fuel and input — smelting without babysitting."
-  ],
-  "task.6E919944A692D177.title": "Craft an Auto Smelting Upgrade",
-  "quest.1D34F555F013F974.title": "Auto Smoking Upgrade",
-  "quest.1D34F555F013F974.quest_subtitle": "Hands-free kitchen",
-  "quest.1D34F555F013F974.quest_desc": [
-    "Automated smoking — upgrade from Auto Smelting or convert via logs."
-  ],
-  "task.78F13E9F44205DDA.title": "Craft an Auto Smoking Upgrade",
-  "quest.52553480C164F806.title": "Auto Blasting Upgrade",
-  "quest.52553480C164F806.quest_subtitle": "Hands-free blast",
-  "quest.52553480C164F806.quest_desc": [
-    "Automated blast furnace processing in your backpack."
-  ],
-  "task.27F732BADA2A97D0.title": "Craft an Auto Blasting Upgrade",
-  "quest.7E343AB276F2D584.title": "Stack Upgrade I",
-  "quest.7E343AB276F2D584.quest_subtitle": "Bigger stacks",
-  "quest.7E343AB276F2D584.quest_desc": [
-    "Multiply how many items fit per slot — first tier of stack upgrades."
-  ],
-  "task.3D3FA40E661ADB3F.title": "Craft Stack Upgrade (Tier 1)",
-  "quest.06324BDB1F1A57B1.title": "Stack Upgrade II",
-  "quest.06324BDB1F1A57B1.quest_subtitle": "Even bigger stacks",
+  "quest.391C5E29148EC181.title": "Netherite Backpack",
+  "task.09425A93660A2F43.title": "Craft an Upgrade Base",
+  "task.46D22566F38004C9.title": "Obtain Netherite Shulker Box",
+  "quest.01293E78CA10AB32.title": "Netherite Chest",
   "quest.06324BDB1F1A57B1.quest_desc": [
-    "Second stack tier — keep upgrading for larger multipliers."
+    "Second stack tier — keep upgrading for larger multipliers.",
   ],
-  "task.2262D116B7AC7F45.title": "Craft Stack Upgrade (Tier 2)",
-  "quest.2351E11B89D38557.title": "Stack Upgrade III",
-  "quest.2351E11B89D38557.quest_subtitle": "Warehouse stacks",
-  "quest.2351E11B89D38557.quest_desc": [
-    "Third stack tier — serious bulk storage in each slot."
-  ],
-  "task.2CB8366B71D5F413.title": "Craft Stack Upgrade (Tier 3)",
-  "quest.13C26C8EC324EA4A.title": "Stack Upgrade IV",
-  "quest.13C26C8EC324EA4A.quest_subtitle": "Absurd stacks",
-  "quest.13C26C8EC324EA4A.quest_desc": [
-    "Fourth stack tier — one slot holds a mountain of items."
-  ],
-  "task.67368D902DE574C5.title": "Craft Stack Upgrade (Tier 4)",
-  "quest.0BEC7982C24E3A67.title": "Stack Upgrade Omega",
-  "quest.0BEC7982C24E3A67.quest_subtitle": "Maximum multiplier",
-  "quest.0BEC7982C24E3A67.quest_desc": [
-    "The ultimate stack upgrade — as big as stacks get."
-  ],
-  "task.63337F19F2C16D7A.title": "Craft Stack Upgrade (Omega)",
-  "quest.2E32375A2D5A152F.title": "Obtain Chest",
-  "quest.2E32375A2D5A152F.quest_subtitle": "Craft or obtain Chest",
-  "quest.2E32375A2D5A152F.quest_desc": [
-    "Obtain Chest."
-  ],
-  "task.15B68D72A4FDF522.title": "Obtain Chest",
-  "quest.38E68E5A8AC67417.title": "Copper Chest",
-  "quest.38E68E5A8AC67417.quest_subtitle": "Optional tier skip",
-  "quest.38E68E5A8AC67417.quest_desc": [
-    "Upgrade a basic chest with a copper ingot ring (3×3).",
-    "",
-    "Double-chest shortcut: when two basic chests are combined, use copper ingots plus a copper block in the bottom row instead."
-  ],
-  "task.168A735320C85E61.title": "Obtain Copper Chest",
-  "quest.551C30829E0EFBA0.title": "Iron Chest",
-  "quest.551C30829E0EFBA0.quest_subtitle": "Two paths, one tier",
+  "quest.240917DB78DCE9C7.quest_subtitle": "Craft or obtain Netherite Shulker Box",
   "quest.551C30829E0EFBA0.quest_desc": [
     "Reach iron tier using any of these recipes:",
     "",
@@ -203,65 +15,253 @@
     "• 4 iron plus around a copper chest",
     "",
     "• Double-chest upgrade: two merged basic chests + iron ingots + iron block (bottom row)",
-    "• Double-chest from copper: 8 iron ring around a copper chest"
+    "• Double-chest from copper: 8 iron ring around a copper chest",
   ],
-  "task.67A726F5091168D8.title": "Obtain Iron Chest",
+  "quest.2E32375A2D5A152F.quest_desc": [
+    "Obtain Chest.",
+  ],
+  "quest.08E47E11A1D8C0DB.quest_subtitle": "Mid-game storage",
+  "quest.4039A8DF1D2ED4F6.title": "Blasting Upgrade",
+  "task.63337F19F2C16D7A.title": "Craft Stack Upgrade (Omega)",
+  "task.2262D116B7AC7F45.title": "Craft Stack Upgrade (Tier 2)",
   "quest.4DCEBF5B4E326628.title": "Obtain Gold Chest",
-  "quest.4DCEBF5B4E326628.quest_subtitle": "Craft or obtain Gold Chest",
-  "quest.4DCEBF5B4E326628.quest_desc": [
-    "Obtain Gold Chest."
+  "quest.5D5A9E5F13DA56F1.quest_subtitle": "Bulk crafting",
+  "quest.3168079474CE3930.quest_desc": [
+    "Items you walk over can route straight into your backpack.",
+    "",
+    "A staple first upgrade — pairs well with Magnet later.",
   ],
-  "task.285B39C2DD601082.title": "Obtain Gold Chest",
-  "quest.4E56E0E9637E513F.title": "Obtain Diamond Chest",
-  "quest.4E56E0E9637E513F.quest_subtitle": "Craft or obtain Diamond Chest",
-  "quest.4E56E0E9637E513F.quest_desc": [
-    "Obtain Diamond Chest."
-  ],
-  "task.7BC412534CFEC429.title": "Craft a Diamond Chest",
-  "quest.01293E78CA10AB32.title": "Netherite Chest",
+  "task.168A735320C85E61.title": "Obtain Copper Chest",
+  "task.14BD014E09D7E834.title": "Craft a Magnet Upgrade",
+  "quest.2C1EC7A7081A11B3.title": "Smelting Upgrade",
   "quest.01293E78CA10AB32.quest_subtitle": "Top tier",
+  "quest.58C53A19F1C804A9.quest_desc": [
+    "Surround your leather backpack with copper ingots in a 3×3 ring.",
+    "",
+    "This detour costs less iron when you reach the next tier.",
+  ],
+  "quest.038F98D454194789.quest_subtitle": "Unlock backpack modules",
+  "quest.0BEC7982C24E3A67.quest_desc": [
+    "The ultimate stack upgrade — as big as stacks get.",
+  ],
+  "quest.13C26C8EC324EA4A.title": "Stack Upgrade IV",
+  "quest.4485085C6BFD2FC6.title": "Iron Backpack",
+  "task.7BC412534CFEC429.title": "Craft a Diamond Chest",
+  "quest.240917DB78DCE9C7.quest_desc": [
+    "Obtain Netherite Shulker Box.",
+  ],
+  "quest.10BBC2953FB66D76.title": "Obtain Diamond Shulker Box",
+  "task.57D3583825F85ECE.title": "Obtain Iron Shulker Box",
+  "quest.2C1EC7A7081A11B3.quest_subtitle": "Portable furnace",
+  "quest.74D5EFA0CE52AC1A.title": "Auto Smelting Upgrade",
+  "quest.3168079474CE3930.quest_subtitle": "Vacuum on the go",
+  "task.0129F1F24875C5EF.title": "Craft an Advanced Pickup Upgrade",
+  "quest.0BEC7982C24E3A67.quest_subtitle": "Maximum multiplier",
+  "quest.6690CF7F76D55993.quest_subtitle": "Fine-tuned meals",
+  "task.6E4E537FE2D26E7D.title": "Craft a Feeding Upgrade",
+  "task.776F1AB4BBFC3EF3.title": "Craft a Smoking Upgrade",
+  "quest.76CC1DA68BD390DF.quest_subtitle": "Portable base tier",
+  "task.3B79A1593BCB483D.title": "Craft a Pickup Upgrade",
+  "task.5FA7FEE4D9F0EE40.title": "Craft a Netherite Chest",
+  "quest.0EF32096EC1AA836.quest_subtitle": "Serious storage",
+  "task.3F9C06BF1E429916.title": "Craft an Advanced Feeding Upgrade",
+  "task.6F708192A3B4C5D6.title": "Craft an Iron Backpack",
+  "quest.4039A8DF1D2ED4F6.quest_desc": [
+    "Smelt ores at blast speed — craft fresh or upgrade from a Smelting module.",
+  ],
+  "quest.3B5A6B96B887FD91.title": "Magnet Upgrade",
+  "quest.015958C3FF5F62DC.title": "Feeding Upgrade",
+  "quest.5D5A9E5F13DA56F1.title": "Advanced Compacting Upgrade",
+  "quest.4E56E0E9637E513F.title": "Obtain Diamond Chest",
+  "task.0EDA955DB52367D9.title": "Craft a Void Upgrade",
+  "task.67A726F5091168D8.title": "Obtain Iron Chest",
+  "quest.2C1EC7A7081A11B3.quest_desc": [
+    "Smelt items inside your backpack using fuel you store alongside them.",
+  ],
+  "quest.4ED71BFE25C5ED21.quest_subtitle": "Campfire cooking",
+  "quest.10BBC2953FB66D76.quest_subtitle": "Craft or obtain Diamond Shulker Box",
+  "task.2CB8366B71D5F413.title": "Craft Stack Upgrade (Tier 3)",
+  "task.6E919944A692D177.title": "Craft an Auto Smelting Upgrade",
+  "quest.52553480C164F806.quest_subtitle": "Hands-free blast",
+  "quest.1CC5EB2FA2002B10.quest_desc": [
+    "Delete overflow items that match a filter — great for farms dumping junk.",
+  ],
+  "quest.1CC5EB2FA2002B10.quest_subtitle": "Trash the extras",
+  "task.285B39C2DD601082.title": "Obtain Gold Chest",
+  "task.2D3C11B7F00E1F72.title": "Craft a Diamond Backpack",
+  "quest.4ED71BFE25C5ED21.quest_desc": [
+    "Cook food faster — craft fresh or convert a Smelting Upgrade with logs.",
+  ],
+  "quest.06324BDB1F1A57B1.title": "Stack Upgrade II",
+  "quest.2E32375A2D5A152F.title": "Obtain Chest",
+  "task.55F9C11A3897D6D4.title": "Obtain Diamond Shulker Box",
+  "quest.0BEC7982C24E3A67.title": "Stack Upgrade Omega",
+  "quest.1D34F555F013F974.quest_desc": [
+    "Automated smoking — upgrade from Auto Smelting or convert via logs.",
+  ],
+  "quest.38E68E5A8AC67417.quest_desc": [
+    "Upgrade a basic chest with a copper ingot ring (3×3).",
+    "",
+    "Double-chest shortcut: when two basic chests are combined, use copper ingots plus a copper block in the bottom row instead.",
+  ],
+  "quest.4AEA232E613A6FF0.quest_subtitle": "Craft or obtain Iron Shulker Box",
+  "task.2B3C4D5E6F7089AB.title": "Craft a Netherite Backpack",
+  "quest.3B5A6B96B887FD91.quest_subtitle": "Pull from afar",
+  "task.1A2B3C4D5E6F7081.title": "Craft a Leather Backpack",
+  "quest.4E56E0E9637E513F.quest_desc": [
+    "Obtain Diamond Chest.",
+  ],
+  "quest.52553480C164F806.title": "Auto Blasting Upgrade",
+  "quest.1CC5EB2FA2002B10.title": "Void Upgrade",
+  "quest.4AEA232E613A6FF0.title": "Obtain Iron Shulker Box",
+  "quest.08D30836535B73A3.title": "Compacting Upgrade",
+  "quest.7706E16703E02B57.quest_desc": [
+    "Obtain Copper Shulker Box.",
+  ],
+  "quest.4D56F4F9B559DB21.title": "Advanced Magnet Upgrade",
+  "quest.1D34F555F013F974.quest_subtitle": "Hands-free kitchen",
+  "task.0F080E3A56808364.title": "Craft an Advanced Compacting Upgrade",
   "quest.01293E78CA10AB32.quest_desc": [
     "Upgrade a diamond chest with netherite ingot (shapeless).",
     "",
-    "Double-chest upgrade: merged diamond chests + two netherite ingots."
+    "Double-chest upgrade: merged diamond chests + two netherite ingots.",
   ],
-  "task.5FA7FEE4D9F0EE40.title": "Craft a Netherite Chest",
-  "quest.76CC1DA68BD390DF.title": "Shulker Chest",
-  "quest.76CC1DA68BD390DF.quest_subtitle": "Portable base tier",
+  "task.0AF1763A1096D34A.title": "Craft a Blasting Upgrade",
+  "quest.4485085C6BFD2FC6.quest_subtitle": "Bigger pockets",
+  "quest.4DCEBF5B4E326628.quest_subtitle": "Craft or obtain Gold Chest",
+  "task.71FCFA6F7DF6F77F.title": "Craft a Shulker Chest",
+  "quest.4AEA232E613A6FF0.quest_desc": [
+    "Obtain Iron Shulker Box.",
+  ],
+  "quest.1D5A582F52D7CB30.quest_desc": [
+    "Craft a Sophisticated Backpack — any dye color counts.",
+    "",
+    "Recipe: leather, string, and a wooden chest. Right-click to open; shift-right-click to wear it on your back.",
+  ],
+  "quest.4485085C6BFD2FC6.quest_desc": [
+    "Upgrade to iron tier for more slots and upgrade capacity.",
+    "",
+    "Direct: 8 iron in a ring around a leather backpack.",
+    "Via copper: 4 iron in a plus around a copper backpack.",
+  ],
+  "task.11202051FD5F87D1.title": "Craft a Gold Backpack",
+  "quest.2351E11B89D38557.quest_subtitle": "Warehouse stacks",
+  "quest.07319B24500B1902.quest_subtitle": "Portable gold tier",
+  "quest.7568008105FC11BE.title": "Advanced Pickup Upgrade",
+  "quest.6690CF7F76D55993.quest_desc": [
+    "Choose which foods to eat and when — upgrade from the basic Feeding module.",
+  ],
+  "quest.08D30836535B73A3.quest_subtitle": "Compress stacks",
+  "quest.13C26C8EC324EA4A.quest_subtitle": "Absurd stacks",
+  "task.28C267232911C19C.title": "Obtain Gold Shulker Box",
+  "quest.4D56F4F9B559DB21.quest_desc": [
+    "Stronger magnet with more options. Upgrade from Magnet or Advanced Pickup.",
+  ],
+  "quest.038F98D454194789.title": "Upgrade Base",
+  "quest.391C5E29148EC181.quest_desc": [
+    "Smith a diamond backpack with a netherite upgrade template and netherite ingot.",
+    "",
+    "Maximum slots and upgrade slots — the final backpack tier.",
+  ],
+  "quest.07319B24500B1902.quest_desc": [
+    "Add shulker shells above and below a gold chest.",
+  ],
+  "quest.551C30829E0EFBA0.quest_subtitle": "Two paths, one tier",
+  "quest.038F98D454194789.quest_desc": [
+    "Craft an Upgrade Base — the blank plate every backpack module needs.",
+    "",
+    "Recipe: iron, leather, and string. Insert upgrades in the backpack UI.",
+  ],
+  "quest.1D5A582F52D7CB30.quest_subtitle": "Your first portable chest",
+  "quest.08D30836535B73A3.quest_desc": [
+    "Automatically crafts items into blocks when your backpack has the ingredients.",
+  ],
+  "task.3D087113454AFE0D.title": "Craft an Advanced Void Upgrade",
+  "task.3D3FA40E661ADB3F.title": "Craft Stack Upgrade (Tier 1)",
+  "quest.38E68E5A8AC67417.quest_subtitle": "Optional tier skip",
+  "quest.3B5A6B96B887FD91.quest_desc": [
+    "Attract nearby items into your backpack — requires a Pickup Upgrade first.",
+  ],
+  "quest.7E343AB276F2D584.quest_desc": [
+    "Multiply how many items fit per slot — first tier of stack upgrades.",
+  ],
+  "quest.06324BDB1F1A57B1.quest_subtitle": "Even bigger stacks",
+  "quest.2351E11B89D38557.title": "Stack Upgrade III",
+  "quest.093E9B19F14A9D7A.quest_desc": [
+    "More filter slots and controls for what your backpack voids.",
+  ],
   "quest.76CC1DA68BD390DF.quest_desc": [
     "Convert a basic chest into a portable shulker-style chest: chest with a shulker shell above and below.",
     "",
-    "Keeps your wood type — works with any Sophisticated Chest variant."
+    "Keeps your wood type — works with any Sophisticated Chest variant.",
   ],
-  "task.71FCFA6F7DF6F77F.title": "Craft a Shulker Chest",
-  "quest.7706E16703E02B57.title": "Obtain Copper Shulker Box",
-  "quest.7706E16703E02B57.quest_subtitle": "Craft or obtain Copper Shulker Box",
-  "quest.7706E16703E02B57.quest_desc": [
-    "Obtain Copper Shulker Box."
+  "task.3C4D5E6F708192A3.title": "Craft a Copper Backpack",
+  "quest.7568008105FC11BE.quest_subtitle": "Smarter vacuum",
+  "quest.3168079474CE3930.title": "Pickup Upgrade",
+  "quest.52553480C164F806.quest_desc": [
+    "Automated blast furnace processing in your backpack.",
   ],
-  "task.1CFDF45067F18E98.title": "Obtain Copper Shulker Box",
-  "quest.4AEA232E613A6FF0.title": "Obtain Iron Shulker Box",
-  "quest.4AEA232E613A6FF0.quest_subtitle": "Craft or obtain Iron Shulker Box",
-  "quest.4AEA232E613A6FF0.quest_desc": [
-    "Obtain Iron Shulker Box."
+  "quest.08E47E11A1D8C0DB.title": "Gold Backpack",
+  "quest.5D5A9E5F13DA56F1.quest_desc": [
+    "Advanced rules for which recipes to run and when to compact.",
   ],
-  "task.57D3583825F85ECE.title": "Obtain Iron Shulker Box",
+  "quest.015958C3FF5F62DC.quest_subtitle": "Never go hungry",
+  "quest.4D56F4F9B559DB21.quest_subtitle": "Long-range loot",
+  "task.27F732BADA2A97D0.title": "Craft an Auto Blasting Upgrade",
+  "quest.551C30829E0EFBA0.title": "Iron Chest",
+  "task.67368D902DE574C5.title": "Craft Stack Upgrade (Tier 4)",
+  "quest.38E68E5A8AC67417.title": "Copper Chest",
+  "quest.015958C3FF5F62DC.quest_desc": [
+    "Automatically eats food stored in your backpack when your hunger drops.",
+  ],
+  "quest.4039A8DF1D2ED4F6.quest_subtitle": "Blast furnace pocket",
   "quest.07319B24500B1902.title": "Gold Shulker Chest",
-  "quest.07319B24500B1902.quest_subtitle": "Portable gold tier",
-  "quest.07319B24500B1902.quest_desc": [
-    "Add shulker shells above and below a gold chest."
+  "task.0EB252D0098C22E3.title": "Craft an Advanced Magnet Upgrade",
+  "quest.08E47E11A1D8C0DB.quest_desc": [
+    "Surround your iron backpack with gold ingots in a 3×3 ring.",
   ],
-  "task.28C267232911C19C.title": "Obtain Gold Shulker Box",
-  "quest.10BBC2953FB66D76.title": "Obtain Diamond Shulker Box",
-  "quest.10BBC2953FB66D76.quest_subtitle": "Craft or obtain Diamond Shulker Box",
-  "quest.10BBC2953FB66D76.quest_desc": [
-    "Obtain Diamond Shulker Box."
+  "quest.2E32375A2D5A152F.quest_subtitle": "Craft or obtain Chest",
+  "quest.76CC1DA68BD390DF.title": "Shulker Chest",
+  "quest.74D5EFA0CE52AC1A.quest_desc": [
+    "Automatically feeds fuel and input — smelting without babysitting.",
   ],
-  "task.55F9C11A3897D6D4.title": "Obtain Diamond Shulker Box",
+  "quest.7E343AB276F2D584.quest_subtitle": "Bigger stacks",
+  "task.4B6E99C79C852C2C.title": "Craft a Smelting Upgrade",
+  "task.1CFDF45067F18E98.title": "Obtain Copper Shulker Box",
+  "quest.4DCEBF5B4E326628.quest_desc": [
+    "Obtain Gold Chest.",
+  ],
   "quest.240917DB78DCE9C7.title": "Obtain Netherite Shulker Box",
-  "quest.240917DB78DCE9C7.quest_subtitle": "Craft or obtain Netherite Shulker Box",
-  "quest.240917DB78DCE9C7.quest_desc": [
-    "Obtain Netherite Shulker Box."
+  "quest.7568008105FC11BE.quest_desc": [
+    "Upgrade your Pickup module for wider range and finer control over what gets collected.",
   ],
-  "task.46D22566F38004C9.title": "Obtain Netherite Shulker Box"
+  "task.15B68D72A4FDF522.title": "Obtain Chest",
+  "quest.4E56E0E9637E513F.quest_subtitle": "Craft or obtain Diamond Chest",
+  "quest.093E9B19F14A9D7A.title": "Advanced Void Upgrade",
+  "quest.1D5A582F52D7CB30.title": "Leather Backpack",
+  "quest.7706E16703E02B57.title": "Obtain Copper Shulker Box",
+  "quest.58C53A19F1C804A9.title": "Copper Backpack",
+  "quest.0EF32096EC1AA836.title": "Diamond Backpack",
+  "quest.391C5E29148EC181.quest_subtitle": "Top tier",
+  "quest.0EF32096EC1AA836.quest_desc": [
+    "Surround your gold backpack with diamonds in a 3×3 ring.",
+  ],
+  "quest.4ED71BFE25C5ED21.title": "Smoking Upgrade",
+  "quest.74D5EFA0CE52AC1A.quest_subtitle": "Hands-free smelt",
+  "task.0EC3FF21E24B401A.title": "Craft a Compacting Upgrade",
+  "quest.58C53A19F1C804A9.quest_subtitle": "Optional upgrade path",
+  "quest.7E343AB276F2D584.title": "Stack Upgrade I",
+  "quest.1D34F555F013F974.title": "Auto Smoking Upgrade",
+  "quest.2351E11B89D38557.quest_desc": [
+    "Third stack tier — serious bulk storage in each slot.",
+  ],
+  "quest.7706E16703E02B57.quest_subtitle": "Craft or obtain Copper Shulker Box",
+  "quest.093E9B19F14A9D7A.quest_subtitle": "Precision trash",
+  "quest.13C26C8EC324EA4A.quest_desc": [
+    "Fourth stack tier — one slot holds a mountain of items.",
+  ],
+  "quest.10BBC2953FB66D76.quest_desc": [
+    "Obtain Diamond Shulker Box.",
+  ],
+  "task.78F13E9F44205DDA.title": "Craft an Auto Smoking Upgrade",
 }

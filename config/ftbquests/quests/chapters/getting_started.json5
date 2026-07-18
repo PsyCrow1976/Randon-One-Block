@@ -183,7 +183,7 @@
     },
     {
       icon: {
-        id: "projecte:philosophers_stone",
+        id: "equivox:philosophers_stone",
         count: 1,
       },
       x: 7.5,
@@ -199,7 +199,7 @@
           id: "6752A8FD5075C68D",
           type: "item",
           item: {
-            id: "projecte:philosophers_stone",
+            id: "equivox:philosophers_stone",
             count: 1,
           },
         },

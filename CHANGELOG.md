@@ -4,7 +4,41 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. **`1.0.4.6`** = ProjectE → Equivox rename (mod namespace + quests). **`1.0.4.7`** = quest unlock map docs in mod pools config. **`1.0.4.8`** = first finished quest book iteration (synced from editor). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.8] — 2026-07-18
+
+### FTB Quests — first finished iteration
+
+Synced the full quest book from the in-game editor after the first complete pass: dependency chains, layouts, lang, and chapter set.
+
+- **16 chapters · ~888 quests** — Getting Started, Good to Know Mods, Storage Options, Ex Deorum, Equivox, Iron Furnaces, Animal Pens, Easy Villagers & Piglins, Dank Storage, Cooking for Blockheads, Baubly Slots, BBL, EnderIO, Refined Storage, Powah, Mystical Agriculture
+- **Mystical Agriculture** — Expanded progression (dependencies wired); separate **Mystical Agradditions**, **Mystical Automation**, and **Tiered Crystals** chapter files removed (content consolidated / dropped from the book)
+- **Equivox** — Chapter and lang committed as `equivox` (replaces old ProjectE chapter files)
+- **Lang sync** — `chapter.json5` and per-chapter `en_us` files refreshed from the editor; orphan lang files for removed chapters cleaned up
+
+---
+
+## [1.0.4.7] — 2026-07-18
+
+### Docs — quest unlock map in mod pools config
+
+- **`random_one_block_mod_pools.json`** — Added comments (`_quest_unlocks_readme` + `_quest_unlock_map_entries`) listing which FTB Quests unlock which minable mod pools, including chapter, quest title, item id, task id, and unlocked namespace (Leather Backpack → Sophisticated Storage, Compressed Dirt → Ex Deorum, Philosopher’s Stone → Equivox).
+
+---
+
+## [1.0.4.6] — 2026-07-18
+
+### ProjectE renamed to Equivox
+
+The EMC / Equivalent Exchange mod in the pack was renamed for copyright reasons. Instance now ships **`equivox-1.0.0.jar`** (`modId` **`equivox`**) instead of ProjectE / ProjectEE.
+
+- **Random One Block pools** — Namespace catalog, display name, and quest unlock map use `equivox` (Philosopher’s Stone quest still unlocks the pool for the island team). Existing team unlock records migrated from `projecte` → `equivox`.
+- **FTB Quests** — Chapter retitled **Equivox**; all item/task IDs updated from `projecte:…` to `equivox:…` (Getting Started entry quest + full Equivox chapter). Chapter files renamed `projecte` → `equivox`.
+
+After updating, run `/reload` (or restart) and `/randomblock reload` so the master pool picks up the new namespace.
 
 ---
 

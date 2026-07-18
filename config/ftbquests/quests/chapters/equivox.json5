@@ -3,16 +3,16 @@
   group: "",
   order_index: 8,
   icon: {
-    id: "projecte:philosophers_stone",
+    id: "equivox:philosophers_stone",
     count: 1,
   },
-  filename: "projecte",
+  filename: "equivox",
   default_quest_shape: "",
   default_hide_dependency_lines: false,
   quests: [
     {
       icon: {
-        id: "projecte:transmutation_table",
+        id: "equivox:transmutation_table",
         count: 1,
       },
       x: 0.0,
@@ -26,7 +26,7 @@
           id: "65193A5678C654D9",
           type: "item",
           item: {
-            id: "projecte:transmutation_table",
+            id: "equivox:transmutation_table",
             count: 1,
           },
         },
@@ -41,7 +41,7 @@
     },
     {
       icon: {
-        id: "projecte:transmutation_tablet",
+        id: "equivox:transmutation_tablet",
         count: 1,
       },
       x: 1.5,
@@ -55,7 +55,7 @@
           id: "1AE9688746BC8399",
           type: "item",
           item: {
-            id: "projecte:transmutation_tablet",
+            id: "equivox:transmutation_tablet",
             count: 1,
           },
         },
@@ -70,7 +70,7 @@
     },
     {
       icon: {
-        id: "projecte:alchemical_chest",
+        id: "equivox:alchemical_chest",
         count: 1,
       },
       x: 3.5,
@@ -86,7 +86,7 @@
           id: "416A56C429631500",
           type: "item",
           item: {
-            id: "projecte:alchemical_chest",
+            id: "equivox:alchemical_chest",
             count: 1,
           },
         },
@@ -101,7 +101,7 @@
     },
     {
       icon: {
-        id: "projecte:alchemical_coal",
+        id: "equivox:alchemical_coal",
         count: 1,
       },
       x: -3.0,
@@ -115,7 +115,7 @@
           id: "1CD162176334D1BC",
           type: "item",
           item: {
-            id: "projecte:alchemical_coal",
+            id: "equivox:alchemical_coal",
             count: 1,
           },
         },
@@ -130,7 +130,7 @@
     },
     {
       icon: {
-        id: "projecte:mobius_fuel",
+        id: "equivox:mobius_fuel",
         count: 1,
       },
       x: -3.0,
@@ -144,7 +144,7 @@
           id: "399A4C3CC1159D46",
           type: "item",
           item: {
-            id: "projecte:mobius_fuel",
+            id: "equivox:mobius_fuel",
             count: 1,
           },
         },
@@ -159,7 +159,7 @@
     },
     {
       icon: {
-        id: "projecte:aeternalis_fuel",
+        id: "equivox:aeternalis_fuel",
         count: 1,
       },
       x: -3.0,
@@ -173,7 +173,7 @@
           id: "0B0DAE98FEB7A772",
           type: "item",
           item: {
-            id: "projecte:aeternalis_fuel",
+            id: "equivox:aeternalis_fuel",
             count: 1,
           },
         },
@@ -188,7 +188,7 @@
     },
     {
       icon: {
-        id: "projecte:low_covalence_dust",
+        id: "equivox:low_covalence_dust",
         count: 1,
       },
       x: 1.5,
@@ -199,7 +199,7 @@
           id: "7DF8D3621DE14D84",
           type: "item",
           item: {
-            id: "projecte:low_covalence_dust",
+            id: "equivox:low_covalence_dust",
             count: 1,
           },
         },
@@ -214,7 +214,7 @@
     },
     {
       icon: {
-        id: "projecte:medium_covalence_dust",
+        id: "equivox:medium_covalence_dust",
         count: 1,
       },
       x: 1.5,
@@ -225,7 +225,7 @@
           id: "0AC7EFBE606C51EE",
           type: "item",
           item: {
-            id: "projecte:medium_covalence_dust",
+            id: "equivox:medium_covalence_dust",
             count: 1,
           },
         },
@@ -240,7 +240,7 @@
     },
     {
       icon: {
-        id: "projecte:high_covalence_dust",
+        id: "equivox:high_covalence_dust",
         count: 1,
       },
       x: 1.5,
@@ -254,7 +254,7 @@
           id: "077A8335DADBD560",
           type: "item",
           item: {
-            id: "projecte:high_covalence_dust",
+            id: "equivox:high_covalence_dust",
             count: 1,
           },
         },
@@ -269,7 +269,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_ein",
+        id: "equivox:klein_star_ein",
         count: 1,
       },
       x: 0.0,
@@ -280,7 +280,7 @@
           id: "20615F5A27C961ED",
           type: "item",
           item: {
-            id: "projecte:klein_star_ein",
+            id: "equivox:klein_star_ein",
             count: 1,
           },
         },
@@ -295,7 +295,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_zwei",
+        id: "equivox:klein_star_zwei",
         count: 1,
       },
       x: 2.0,
@@ -309,7 +309,7 @@
           id: "0CF746F61657026C",
           type: "item",
           item: {
-            id: "projecte:klein_star_zwei",
+            id: "equivox:klein_star_zwei",
             count: 1,
           },
         },
@@ -324,7 +324,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_drei",
+        id: "equivox:klein_star_drei",
         count: 1,
       },
       x: 4.0,
@@ -338,7 +338,7 @@
           id: "6799BB9D83899740",
           type: "item",
           item: {
-            id: "projecte:klein_star_drei",
+            id: "equivox:klein_star_drei",
             count: 1,
           },
         },
@@ -353,7 +353,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_vier",
+        id: "equivox:klein_star_vier",
         count: 1,
       },
       x: 6.0,
@@ -367,7 +367,7 @@
           id: "113ADC47D19367CB",
           type: "item",
           item: {
-            id: "projecte:klein_star_vier",
+            id: "equivox:klein_star_vier",
             count: 1,
           },
         },
@@ -382,7 +382,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_sphere",
+        id: "equivox:klein_star_sphere",
         count: 1,
       },
       x: 8.0,
@@ -396,7 +396,7 @@
           id: "5BB1E7A931FFA066",
           type: "item",
           item: {
-            id: "projecte:klein_star_sphere",
+            id: "equivox:klein_star_sphere",
             count: 1,
           },
         },
@@ -411,7 +411,7 @@
     },
     {
       icon: {
-        id: "projecte:klein_star_omega",
+        id: "equivox:klein_star_omega",
         count: 1,
       },
       x: 10.0,
@@ -425,7 +425,7 @@
           id: "2BD2E8822B693E4F",
           type: "item",
           item: {
-            id: "projecte:klein_star_omega",
+            id: "equivox:klein_star_omega",
             count: 1,
           },
         },
@@ -440,7 +440,7 @@
     },
     {
       icon: {
-        id: "projecte:dark_matter",
+        id: "equivox:dark_matter",
         count: 1,
       },
       x: -3.0,
@@ -454,7 +454,7 @@
           id: "2CE80A9778B2FCCD",
           type: "item",
           item: {
-            id: "projecte:dark_matter",
+            id: "equivox:dark_matter",
             count: 1,
           },
         },
@@ -469,7 +469,7 @@
     },
     {
       icon: {
-        id: "projecte:red_matter",
+        id: "equivox:red_matter",
         count: 1,
       },
       x: -3.0,
@@ -483,7 +483,7 @@
           id: "3699241BEDF4A03C",
           type: "item",
           item: {
-            id: "projecte:red_matter",
+            id: "equivox:red_matter",
             count: 1,
           },
         },
@@ -498,7 +498,7 @@
     },
     {
       icon: {
-        id: "projecte:collector_mk1",
+        id: "equivox:collector_mk1",
         count: 1,
       },
       x: -6.0,
@@ -509,7 +509,7 @@
           id: "0593151AD0BFB0BD",
           type: "item",
           item: {
-            id: "projecte:collector_mk1",
+            id: "equivox:collector_mk1",
             count: 1,
           },
         },
@@ -524,7 +524,7 @@
     },
     {
       icon: {
-        id: "projecte:collector_mk2",
+        id: "equivox:collector_mk2",
         count: 1,
       },
       x: -6.0,
@@ -539,7 +539,7 @@
           id: "696E8E16473DD2D7",
           type: "item",
           item: {
-            id: "projecte:collector_mk2",
+            id: "equivox:collector_mk2",
             count: 1,
           },
         },
@@ -554,7 +554,7 @@
     },
     {
       icon: {
-        id: "projecte:collector_mk3",
+        id: "equivox:collector_mk3",
         count: 1,
       },
       x: -6.0,
@@ -569,7 +569,7 @@
           id: "750B6B13788D5420",
           type: "item",
           item: {
-            id: "projecte:collector_mk3",
+            id: "equivox:collector_mk3",
             count: 1,
           },
         },
@@ -584,7 +584,7 @@
     },
     {
       icon: {
-        id: "projecte:relay_mk1",
+        id: "equivox:relay_mk1",
         count: 1,
       },
       x: -1.5,
@@ -595,7 +595,7 @@
           id: "2711AF5009C89E1F",
           type: "item",
           item: {
-            id: "projecte:relay_mk1",
+            id: "equivox:relay_mk1",
             count: 1,
           },
         },
@@ -610,7 +610,7 @@
     },
     {
       icon: {
-        id: "projecte:relay_mk2",
+        id: "equivox:relay_mk2",
         count: 1,
       },
       x: -1.5,
@@ -625,7 +625,7 @@
           id: "3759958F0B0D7DE2",
           type: "item",
           item: {
-            id: "projecte:relay_mk2",
+            id: "equivox:relay_mk2",
             count: 1,
           },
         },
@@ -640,7 +640,7 @@
     },
     {
       icon: {
-        id: "projecte:relay_mk3",
+        id: "equivox:relay_mk3",
         count: 1,
       },
       x: -1.5,
@@ -655,7 +655,7 @@
           id: "7BA02CBEFF389F2C",
           type: "item",
           item: {
-            id: "projecte:relay_mk3",
+            id: "equivox:relay_mk3",
             count: 1,
           },
         },
@@ -670,7 +670,7 @@
     },
     {
       icon: {
-        id: "projecte:condenser_mk1",
+        id: "equivox:condenser_mk1",
         count: 1,
       },
       x: 5.5,
@@ -684,7 +684,7 @@
           id: "221AF3A3BEBCB985",
           type: "item",
           item: {
-            id: "projecte:condenser_mk1",
+            id: "equivox:condenser_mk1",
             count: 1,
           },
         },
@@ -699,7 +699,7 @@
     },
     {
       icon: {
-        id: "projecte:condenser_mk2",
+        id: "equivox:condenser_mk2",
         count: 1,
       },
       x: 7.5,
@@ -713,7 +713,7 @@
           id: "0FAA82A6ABBA7727",
           type: "item",
           item: {
-            id: "projecte:condenser_mk2",
+            id: "equivox:condenser_mk2",
             count: 1,
           },
         },
@@ -728,7 +728,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_pedestal",
+        id: "equivox:dm_pedestal",
         count: 1,
       },
       x: -3.0,
@@ -743,7 +743,7 @@
           id: "24E94C3607320C22",
           type: "item",
           item: {
-            id: "projecte:dm_pedestal",
+            id: "equivox:dm_pedestal",
             count: 1,
           },
         },
@@ -758,7 +758,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_furnace",
+        id: "equivox:dm_furnace",
         count: 1,
       },
       x: -4.5,
@@ -772,7 +772,7 @@
           id: "124098CC8B40A2D6",
           type: "item",
           item: {
-            id: "projecte:dm_furnace",
+            id: "equivox:dm_furnace",
             count: 1,
           },
         },
@@ -787,7 +787,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_furnace",
+        id: "equivox:rm_furnace",
         count: 1,
       },
       x: -1.5,
@@ -802,7 +802,7 @@
           id: "058D87142BF9FC07",
           type: "item",
           item: {
-            id: "projecte:rm_furnace",
+            id: "equivox:rm_furnace",
             count: 1,
           },
         },
@@ -817,7 +817,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_pick",
+        id: "equivox:dm_pick",
         count: 1,
       },
       x: 3.5,
@@ -828,7 +828,7 @@
           id: "1D5C102AB733D449",
           type: "item",
           item: {
-            id: "projecte:dm_pick",
+            id: "equivox:dm_pick",
             count: 1,
           },
         },
@@ -843,7 +843,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_axe",
+        id: "equivox:dm_axe",
         count: 1,
       },
       x: 3.5,
@@ -854,7 +854,7 @@
           id: "0833001AB81800BE",
           type: "item",
           item: {
-            id: "projecte:dm_axe",
+            id: "equivox:dm_axe",
             count: 1,
           },
         },
@@ -869,7 +869,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_shovel",
+        id: "equivox:dm_shovel",
         count: 1,
       },
       x: 3.5,
@@ -880,7 +880,7 @@
           id: "6C9A118F5FE9D167",
           type: "item",
           item: {
-            id: "projecte:dm_shovel",
+            id: "equivox:dm_shovel",
             count: 1,
           },
         },
@@ -895,7 +895,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_sword",
+        id: "equivox:dm_sword",
         count: 1,
       },
       x: 3.5,
@@ -906,7 +906,7 @@
           id: "1AA3DD404957562B",
           type: "item",
           item: {
-            id: "projecte:dm_sword",
+            id: "equivox:dm_sword",
             count: 1,
           },
         },
@@ -921,7 +921,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_hoe",
+        id: "equivox:dm_hoe",
         count: 1,
       },
       x: 3.5,
@@ -932,7 +932,7 @@
           id: "6227D9599376134B",
           type: "item",
           item: {
-            id: "projecte:dm_hoe",
+            id: "equivox:dm_hoe",
             count: 1,
           },
         },
@@ -947,7 +947,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_hammer",
+        id: "equivox:dm_hammer",
         count: 1,
       },
       x: 3.5,
@@ -958,7 +958,7 @@
           id: "45089730E33659F2",
           type: "item",
           item: {
-            id: "projecte:dm_hammer",
+            id: "equivox:dm_hammer",
             count: 1,
           },
         },
@@ -973,7 +973,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_shears",
+        id: "equivox:dm_shears",
         count: 1,
       },
       x: 3.5,
@@ -984,7 +984,7 @@
           id: "1E1F11B6CFA34027",
           type: "item",
           item: {
-            id: "projecte:dm_shears",
+            id: "equivox:dm_shears",
             count: 1,
           },
         },
@@ -999,7 +999,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_helmet",
+        id: "equivox:dm_helmet",
         count: 1,
       },
       x: 2.0,
@@ -1010,7 +1010,7 @@
           id: "382CF70490FF1006",
           type: "item",
           item: {
-            id: "projecte:dm_helmet",
+            id: "equivox:dm_helmet",
             count: 1,
           },
         },
@@ -1025,7 +1025,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_chestplate",
+        id: "equivox:dm_chestplate",
         count: 1,
       },
       x: 4.0,
@@ -1036,7 +1036,7 @@
           id: "5E622EDA64F5F836",
           type: "item",
           item: {
-            id: "projecte:dm_chestplate",
+            id: "equivox:dm_chestplate",
             count: 1,
           },
         },
@@ -1051,7 +1051,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_leggings",
+        id: "equivox:dm_leggings",
         count: 1,
       },
       x: 6.0,
@@ -1062,7 +1062,7 @@
           id: "709CE0787F3F153E",
           type: "item",
           item: {
-            id: "projecte:dm_leggings",
+            id: "equivox:dm_leggings",
             count: 1,
           },
         },
@@ -1077,7 +1077,7 @@
     },
     {
       icon: {
-        id: "projecte:dm_boots",
+        id: "equivox:dm_boots",
         count: 1,
       },
       x: 8.0,
@@ -1088,7 +1088,7 @@
           id: "72766377887038CC",
           type: "item",
           item: {
-            id: "projecte:dm_boots",
+            id: "equivox:dm_boots",
             count: 1,
           },
         },
@@ -1103,7 +1103,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_pick",
+        id: "equivox:rm_pick",
         count: 1,
       },
       x: 5.5,
@@ -1117,7 +1117,7 @@
           id: "3BBECBF92B9BD4BE",
           type: "item",
           item: {
-            id: "projecte:rm_pick",
+            id: "equivox:rm_pick",
             count: 1,
           },
         },
@@ -1132,7 +1132,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_axe",
+        id: "equivox:rm_axe",
         count: 1,
       },
       x: 5.5,
@@ -1146,7 +1146,7 @@
           id: "5B79F78F8BE5520B",
           type: "item",
           item: {
-            id: "projecte:rm_axe",
+            id: "equivox:rm_axe",
             count: 1,
           },
         },
@@ -1161,7 +1161,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_shovel",
+        id: "equivox:rm_shovel",
         count: 1,
       },
       x: 5.5,
@@ -1175,7 +1175,7 @@
           id: "3092BA51371D08E1",
           type: "item",
           item: {
-            id: "projecte:rm_shovel",
+            id: "equivox:rm_shovel",
             count: 1,
           },
         },
@@ -1190,7 +1190,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_sword",
+        id: "equivox:rm_sword",
         count: 1,
       },
       x: 5.5,
@@ -1204,7 +1204,7 @@
           id: "3F016F22F70B94BB",
           type: "item",
           item: {
-            id: "projecte:rm_sword",
+            id: "equivox:rm_sword",
             count: 1,
           },
         },
@@ -1219,7 +1219,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_hoe",
+        id: "equivox:rm_hoe",
         count: 1,
       },
       x: 5.5,
@@ -1233,7 +1233,7 @@
           id: "0F825AF7593876C9",
           type: "item",
           item: {
-            id: "projecte:rm_hoe",
+            id: "equivox:rm_hoe",
             count: 1,
           },
         },
@@ -1248,7 +1248,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_hammer",
+        id: "equivox:rm_hammer",
         count: 1,
       },
       x: 5.5,
@@ -1262,7 +1262,7 @@
           id: "7051B4C72F671CBC",
           type: "item",
           item: {
-            id: "projecte:rm_hammer",
+            id: "equivox:rm_hammer",
             count: 1,
           },
         },
@@ -1277,7 +1277,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_shears",
+        id: "equivox:rm_shears",
         count: 1,
       },
       x: 5.5,
@@ -1291,7 +1291,7 @@
           id: "63F49A41E0D03EDC",
           type: "item",
           item: {
-            id: "projecte:rm_shears",
+            id: "equivox:rm_shears",
             count: 1,
           },
         },
@@ -1306,7 +1306,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_katar",
+        id: "equivox:rm_katar",
         count: 1,
       },
       x: 9.0,
@@ -1323,7 +1323,7 @@
           id: "05F5A74C23EC0D1B",
           type: "item",
           item: {
-            id: "projecte:rm_katar",
+            id: "equivox:rm_katar",
             count: 1,
           },
         },
@@ -1338,7 +1338,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_morning_star",
+        id: "equivox:rm_morning_star",
         count: 1,
       },
       x: 9.0,
@@ -1354,7 +1354,7 @@
           id: "396DDB8BE86EB935",
           type: "item",
           item: {
-            id: "projecte:rm_morning_star",
+            id: "equivox:rm_morning_star",
             count: 1,
           },
         },
@@ -1369,7 +1369,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_helmet",
+        id: "equivox:rm_helmet",
         count: 1,
       },
       x: 2.0,
@@ -1380,7 +1380,7 @@
           id: "6EB88B2F5BD67BF7",
           type: "item",
           item: {
-            id: "projecte:rm_helmet",
+            id: "equivox:rm_helmet",
             count: 1,
           },
         },
@@ -1395,7 +1395,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_chestplate",
+        id: "equivox:rm_chestplate",
         count: 1,
       },
       x: 4.0,
@@ -1406,7 +1406,7 @@
           id: "1EE21A88187750C4",
           type: "item",
           item: {
-            id: "projecte:rm_chestplate",
+            id: "equivox:rm_chestplate",
             count: 1,
           },
         },
@@ -1421,7 +1421,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_leggings",
+        id: "equivox:rm_leggings",
         count: 1,
       },
       x: 6.0,
@@ -1432,7 +1432,7 @@
           id: "0D61576DB225D6BA",
           type: "item",
           item: {
-            id: "projecte:rm_leggings",
+            id: "equivox:rm_leggings",
             count: 1,
           },
         },
@@ -1447,7 +1447,7 @@
     },
     {
       icon: {
-        id: "projecte:rm_boots",
+        id: "equivox:rm_boots",
         count: 1,
       },
       x: 8.0,
@@ -1458,7 +1458,7 @@
           id: "5529CAB38C291AA8",
           type: "item",
           item: {
-            id: "projecte:rm_boots",
+            id: "equivox:rm_boots",
             count: 1,
           },
         },
@@ -1473,7 +1473,7 @@
     },
     {
       icon: {
-        id: "projecte:gem_helmet",
+        id: "equivox:gem_helmet",
         count: 1,
       },
       x: 2.0,
@@ -1484,7 +1484,7 @@
           id: "3A21460059E349B2",
           type: "item",
           item: {
-            id: "projecte:gem_helmet",
+            id: "equivox:gem_helmet",
             count: 1,
           },
         },
@@ -1499,7 +1499,7 @@
     },
     {
       icon: {
-        id: "projecte:gem_chestplate",
+        id: "equivox:gem_chestplate",
         count: 1,
       },
       x: 4.0,
@@ -1510,7 +1510,7 @@
           id: "6421F0497DF51321",
           type: "item",
           item: {
-            id: "projecte:gem_chestplate",
+            id: "equivox:gem_chestplate",
             count: 1,
           },
         },
@@ -1525,7 +1525,7 @@
     },
     {
       icon: {
-        id: "projecte:gem_leggings",
+        id: "equivox:gem_leggings",
         count: 1,
       },
       x: 6.0,
@@ -1536,7 +1536,7 @@
           id: "121F85A3364F3C3A",
           type: "item",
           item: {
-            id: "projecte:gem_leggings",
+            id: "equivox:gem_leggings",
             count: 1,
           },
         },
@@ -1551,7 +1551,7 @@
     },
     {
       icon: {
-        id: "projecte:gem_boots",
+        id: "equivox:gem_boots",
         count: 1,
       },
       x: 8.0,
@@ -1562,7 +1562,7 @@
           id: "1BA81550EA64766D",
           type: "item",
           item: {
-            id: "projecte:gem_boots",
+            id: "equivox:gem_boots",
             count: 1,
           },
         },
@@ -1577,7 +1577,7 @@
     },
     {
       icon: {
-        id: "projecte:iron_band",
+        id: "equivox:iron_band",
         count: 1,
       },
       x: 14.5,
@@ -1588,7 +1588,7 @@
           id: "27B76D3A1D1CD717",
           type: "item",
           item: {
-            id: "projecte:iron_band",
+            id: "equivox:iron_band",
             count: 1,
           },
         },
@@ -1603,7 +1603,7 @@
     },
     {
       icon: {
-        id: "projecte:black_hole_band",
+        id: "equivox:black_hole_band",
         count: 1,
       },
       x: 16.0,
@@ -1614,7 +1614,7 @@
           id: "7E873E5940631CCD",
           type: "item",
           item: {
-            id: "projecte:black_hole_band",
+            id: "equivox:black_hole_band",
             count: 1,
           },
         },
@@ -1629,7 +1629,7 @@
     },
     {
       icon: {
-        id: "projecte:arcana_ring",
+        id: "equivox:arcana_ring",
         count: 1,
       },
       x: 17.5,
@@ -1640,7 +1640,7 @@
           id: "2925E3228FE8A032",
           type: "item",
           item: {
-            id: "projecte:arcana_ring",
+            id: "equivox:arcana_ring",
             count: 1,
           },
         },
@@ -1655,7 +1655,7 @@
     },
     {
       icon: {
-        id: "projecte:void_ring",
+        id: "equivox:void_ring",
         count: 1,
       },
       x: 19.0,
@@ -1666,7 +1666,7 @@
           id: "7EB2A8C261380E8B",
           type: "item",
           item: {
-            id: "projecte:void_ring",
+            id: "equivox:void_ring",
             count: 1,
           },
         },
@@ -1681,7 +1681,7 @@
     },
     {
       icon: {
-        id: "projecte:zero_ring",
+        id: "equivox:zero_ring",
         count: 1,
       },
       x: 14.5,
@@ -1692,7 +1692,7 @@
           id: "551FC3DA3DD141A0",
           type: "item",
           item: {
-            id: "projecte:zero_ring",
+            id: "equivox:zero_ring",
             count: 1,
           },
         },
@@ -1707,7 +1707,7 @@
     },
     {
       icon: {
-        id: "projecte:ignition_ring",
+        id: "equivox:ignition_ring",
         count: 1,
       },
       x: 16.0,
@@ -1718,7 +1718,7 @@
           id: "298CFD5727DD3CE7",
           type: "item",
           item: {
-            id: "projecte:ignition_ring",
+            id: "equivox:ignition_ring",
             count: 1,
           },
         },
@@ -1733,7 +1733,7 @@
     },
     {
       icon: {
-        id: "projecte:harvest_goddess_band",
+        id: "equivox:harvest_goddess_band",
         count: 1,
       },
       x: 17.5,
@@ -1744,7 +1744,7 @@
           id: "4794324AE5B2B1AE",
           type: "item",
           item: {
-            id: "projecte:harvest_goddess_band",
+            id: "equivox:harvest_goddess_band",
             count: 1,
           },
         },
@@ -1759,7 +1759,7 @@
     },
     {
       icon: {
-        id: "projecte:evertide_amulet",
+        id: "equivox:evertide_amulet",
         count: 1,
       },
       x: 19.0,
@@ -1770,7 +1770,7 @@
           id: "748F86D0D3377B8D",
           type: "item",
           item: {
-            id: "projecte:evertide_amulet",
+            id: "equivox:evertide_amulet",
             count: 1,
           },
         },
@@ -1785,7 +1785,7 @@
     },
     {
       icon: {
-        id: "projecte:volcanite_amulet",
+        id: "equivox:volcanite_amulet",
         count: 1,
       },
       x: 17.5,
@@ -1796,7 +1796,7 @@
           id: "38B285BA41E0C3B6",
           type: "item",
           item: {
-            id: "projecte:volcanite_amulet",
+            id: "equivox:volcanite_amulet",
             count: 1,
           },
         },
@@ -1811,7 +1811,7 @@
     },
     {
       icon: {
-        id: "projecte:watch_of_flowing_time",
+        id: "equivox:watch_of_flowing_time",
         count: 1,
       },
       x: -4.5,
@@ -1825,7 +1825,7 @@
           id: "683ECB65F1C85A91",
           type: "item",
           item: {
-            id: "projecte:watch_of_flowing_time",
+            id: "equivox:watch_of_flowing_time",
             count: 1,
           },
         },
@@ -1840,7 +1840,7 @@
     },
     {
       icon: {
-        id: "projecte:catalytic_lens",
+        id: "equivox:catalytic_lens",
         count: 1,
       },
       x: 20.5,
@@ -1851,7 +1851,7 @@
           id: "1274467A884D4B40",
           type: "item",
           item: {
-            id: "projecte:catalytic_lens",
+            id: "equivox:catalytic_lens",
             count: 1,
           },
         },
@@ -1866,7 +1866,7 @@
     },
     {
       icon: {
-        id: "projecte:destruction_catalyst",
+        id: "equivox:destruction_catalyst",
         count: 1,
       },
       x: 20.5,
@@ -1877,7 +1877,7 @@
           id: "10FF6611D71A1E23",
           type: "item",
           item: {
-            id: "projecte:destruction_catalyst",
+            id: "equivox:destruction_catalyst",
             count: 1,
           },
         },
@@ -1892,7 +1892,7 @@
     },
     {
       icon: {
-        id: "projecte:hyperkinetic_lens",
+        id: "equivox:hyperkinetic_lens",
         count: 1,
       },
       x: 20.5,
@@ -1903,7 +1903,7 @@
           id: "5E220E2B54F51697",
           type: "item",
           item: {
-            id: "projecte:hyperkinetic_lens",
+            id: "equivox:hyperkinetic_lens",
             count: 1,
           },
         },
@@ -1918,7 +1918,7 @@
     },
     {
       icon: {
-        id: "projecte:archangel_smite",
+        id: "equivox:archangel_smite",
         count: 1,
       },
       x: 19.0,
@@ -1929,7 +1929,7 @@
           id: "674628C3D5598036",
           type: "item",
           item: {
-            id: "projecte:archangel_smite",
+            id: "equivox:archangel_smite",
             count: 1,
           },
         },
@@ -1944,7 +1944,7 @@
     },
     {
       icon: {
-        id: "projecte:swiftwolf_rending_gale",
+        id: "equivox:swiftwolf_rending_gale",
         count: 1,
       },
       x: 20.5,
@@ -1955,7 +1955,7 @@
           id: "3BDF022056B8797E",
           type: "item",
           item: {
-            id: "projecte:swiftwolf_rending_gale",
+            id: "equivox:swiftwolf_rending_gale",
             count: 1,
           },
         },
@@ -1970,7 +1970,7 @@
     },
     {
       icon: {
-        id: "projecte:body_stone",
+        id: "equivox:body_stone",
         count: 1,
       },
       x: 19.0,
@@ -1981,7 +1981,7 @@
           id: "09B38DA656B652DA",
           type: "item",
           item: {
-            id: "projecte:body_stone",
+            id: "equivox:body_stone",
             count: 1,
           },
         },
@@ -1996,7 +1996,7 @@
     },
     {
       icon: {
-        id: "projecte:soul_stone",
+        id: "equivox:soul_stone",
         count: 1,
       },
       x: 17.5,
@@ -2007,7 +2007,7 @@
           id: "0F3C7B61068252F2",
           type: "item",
           item: {
-            id: "projecte:soul_stone",
+            id: "equivox:soul_stone",
             count: 1,
           },
         },
@@ -2022,7 +2022,7 @@
     },
     {
       icon: {
-        id: "projecte:mind_stone",
+        id: "equivox:mind_stone",
         count: 1,
       },
       x: 16.0,
@@ -2033,7 +2033,7 @@
           id: "4FD3ABFD7E4B887B",
           type: "item",
           item: {
-            id: "projecte:mind_stone",
+            id: "equivox:mind_stone",
             count: 1,
           },
         },
@@ -2048,7 +2048,7 @@
     },
     {
       icon: {
-        id: "projecte:life_stone",
+        id: "equivox:life_stone",
         count: 1,
       },
       x: 14.5,
@@ -2059,7 +2059,7 @@
           id: "0CC35605B2B2B6CC",
           type: "item",
           item: {
-            id: "projecte:life_stone",
+            id: "equivox:life_stone",
             count: 1,
           },
         },
@@ -2074,7 +2074,7 @@
     },
     {
       icon: {
-        id: "projecte:repair_talisman",
+        id: "equivox:repair_talisman",
         count: 1,
       },
       x: -0.5,
@@ -2090,7 +2090,7 @@
           id: "5F39C80C7B204FC7",
           type: "item",
           item: {
-            id: "projecte:repair_talisman",
+            id: "equivox:repair_talisman",
             count: 1,
           },
         },
@@ -2105,7 +2105,7 @@
     },
     {
       icon: {
-        id: "projecte:tome",
+        id: "equivox:tome",
         count: 1,
       },
       x: 14.5,
@@ -2116,7 +2116,7 @@
           id: "3DF2F8D60AFA2F00",
           type: "item",
           item: {
-            id: "projecte:tome",
+            id: "equivox:tome",
             count: 1,
           },
         },
@@ -2131,7 +2131,7 @@
     },
     {
       icon: {
-        id: "projecte:white_alchemical_bag",
+        id: "equivox:white_alchemical_bag",
         count: 1,
       },
       x: 5.5,
@@ -2145,7 +2145,7 @@
           id: "02D59E7BE3847C7F",
           type: "item",
           item: {
-            id: "projecte:white_alchemical_bag",
+            id: "equivox:white_alchemical_bag",
             count: 1,
           },
         },
@@ -2169,7 +2169,7 @@
           id: "67A98B325DEE2D1C",
           type: "item",
           item: {
-            id: "projecte:philosophers_stone",
+            id: "equivox:philosophers_stone",
             count: 1,
           },
         },
@@ -2187,7 +2187,7 @@
           id: "0BA2623988C24918",
           type: "item",
           item: {
-            id: "projecte:red_matter_block",
+            id: "equivox:red_matter_block",
             count: 1,
           },
         },
@@ -2205,7 +2205,7 @@
           id: "7AE9ABCF9E59C13B",
           type: "item",
           item: {
-            id: "projecte:dark_matter_block",
+            id: "equivox:dark_matter_block",
             count: 1,
           },
         },

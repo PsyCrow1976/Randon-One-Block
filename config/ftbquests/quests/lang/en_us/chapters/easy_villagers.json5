@@ -1,86 +1,86 @@
 {
-  "quest.0C7461E734686856.title": "Auto Trader",
+  "quest.4A6ECCE2C19D4FF7.quest_subtitle": "Craft or obtain Piglin",
+  "quest.7509E58C7D5B9193.quest_desc": [
+    "Obtain Barterer.",
+  ],
+  "quest.2FAA048B5E998DAD.title": "Trader",
+  "quest.14AF719D11C684EE.quest_desc": [
+    "Incubator — accelerates baby villager growth into adults.",
+    "",
+    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls.",
+  ],
   "quest.0C7461E734686856.quest_subtitle": "Craft or obtain Auto Trader",
+  "task.6C61EA8543380488.title": "Obtain Farmer",
+  "quest.41F3FF9466090C95.quest_subtitle": "Craft or obtain Converter",
   "quest.0C7461E734686856.quest_desc": [
     "Auto Trader — automates trade execution with input/output slots.",
     "",
-    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation."
+    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation.",
+  ],
+  "quest.535768FA01FE44C5.quest_subtitle": "Craft or obtain Inventory Viewer",
+  "quest.41F3FF9466090C95.quest_desc": [
+    "Converter — cures zombie villagers with golden apples and weakness.",
+    "",
+    "Automates discount farming: zombie villager in, splash weakness applied, golden apple consumed, normal villager out.",
+  ],
+  "quest.0C7461E734686856.title": "Auto Trader",
+  "quest.6169A87955075572.title": "Iron Farm",
+  "quest.6169A87955075572.quest_subtitle": "Craft or obtain Iron Farm",
+  "quest.5C1C2360D9A77729.quest_desc": [
+    "Farmer block — villager farms crops on provided farmland layout (see block GUI).",
+    "",
+    "Compact crop farm for skyblock — villager harvests and deposits produce without entity pathing on your small island.",
+  ],
+  "quest.535768FA01FE44C5.quest_desc": [
+    "Inventory Viewer — inspect villager inventories and equipment in GUI form.",
+    "",
+    "Debug and optimize farmer outfits, armor for iron farm, or food slots in breeder setups.",
   ],
   "task.3B3AB719988725C9.title": "Obtain Auto Trader",
-  "quest.23EF2B37EC4B1F9C.title": "Breeder",
-  "quest.23EF2B37EC4B1F9C.quest_subtitle": "Craft or obtain Breeder",
+  "quest.2FAA048B5E998DAD.quest_subtitle": "Craft or obtain Trader",
   "quest.23EF2B37EC4B1F9C.quest_desc": [
     "Breeder block — auto-breeds two adult villagers with food you supply.",
     "",
     "Input food items, insert villagers, collect baby villagers from output. AFK villager cloning without manual carrot spam.",
     "",
-    "Feed from random-block crop farms once you unlock wheat and carrots."
-  ],
-  "task.259270F842C66D32.title": "Obtain Breeder",
-  "quest.41F3FF9466090C95.title": "Converter",
-  "quest.41F3FF9466090C95.quest_subtitle": "Craft or obtain Converter",
-  "quest.41F3FF9466090C95.quest_desc": [
-    "Converter — cures zombie villagers with golden apples and weakness.",
-    "",
-    "Automates discount farming: zombie villager in, splash weakness applied, golden apple consumed, normal villager out."
+    "Feed from random-block crop farms once you unlock wheat and carrots.",
   ],
   "task.33E87714E6D64C53.title": "Obtain Converter",
-  "quest.5C1C2360D9A77729.title": "Farmer",
-  "quest.5C1C2360D9A77729.quest_subtitle": "Craft or obtain Farmer",
-  "quest.5C1C2360D9A77729.quest_desc": [
-    "Farmer block — villager farms crops on provided farmland layout (see block GUI).",
-    "",
-    "Compact crop farm for skyblock — villager harvests and deposits produce without entity pathing on your small island."
-  ],
-  "task.6C61EA8543380488.title": "Obtain Farmer",
+  "quest.4A6ECCE2C19D4FF7.title": "Obtain Piglin",
   "quest.14AF719D11C684EE.title": "Incubator",
-  "quest.14AF719D11C684EE.quest_subtitle": "Craft or obtain Incubator",
-  "quest.14AF719D11C684EE.quest_desc": [
-    "Incubator — accelerates baby villager growth into adults.",
-    "",
-    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls."
-  ],
-  "task.1D3405CA91DB788F.title": "Obtain Incubator",
-  "quest.535768FA01FE44C5.title": "Inventory Viewer",
-  "quest.535768FA01FE44C5.quest_subtitle": "Craft or obtain Inventory Viewer",
-  "quest.535768FA01FE44C5.quest_desc": [
-    "Inventory Viewer — inspect villager inventories and equipment in GUI form.",
-    "",
-    "Debug and optimize farmer outfits, armor for iron farm, or food slots in breeder setups."
-  ],
-  "task.2AC91E1F8F4ED896.title": "Obtain Inventory Viewer",
-  "quest.6169A87955075572.title": "Iron Farm",
-  "quest.6169A87955075572.quest_subtitle": "Craft or obtain Iron Farm",
   "quest.6169A87955075572.quest_desc": [
     "Iron Farm block — generates iron ingots using villager panic mechanics in a single block.",
     "",
-    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint."
+    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint.",
   ],
+  "quest.7509E58C7D5B9193.quest_subtitle": "Craft or obtain Barterer",
   "task.6C3868458D53BB0B.title": "Obtain Iron Farm",
-  "quest.2FAA048B5E998DAD.title": "Trader",
-  "quest.2FAA048B5E998DAD.quest_subtitle": "Craft or obtain Trader",
+  "quest.7509E58C7D5B9193.title": "Obtain Barterer",
+  "quest.5C1C2360D9A77729.quest_subtitle": "Craft or obtain Farmer",
+  "quest.23EF2B37EC4B1F9C.quest_subtitle": "Craft or obtain Breeder",
+  "task.3A544C6B49843B2D.title": "Obtain Barterer",
+  "task.488DAC370EC294A1.title": "Obtain Villager",
+  "quest.05F1AEB401CE12C2.title": "Obtain Villager",
+  "task.259270F842C66D32.title": "Obtain Breeder",
+  "task.1D3405CA91DB788F.title": "Obtain Incubator",
+  "quest.41F3FF9466090C95.title": "Converter",
+  "task.0B2FEB287175A68B.title": "Obtain Piglin",
+  "quest.23EF2B37EC4B1F9C.title": "Breeder",
+  "task.2AC91E1F8F4ED896.title": "Obtain Inventory Viewer",
   "quest.2FAA048B5E998DAD.quest_desc": [
     "Trader block — access villager trades without placing a full trading hall.",
     "",
-    "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them."
+    "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them.",
   ],
   "task.7EB1B60D2B21A009.title": "Obtain Trader",
-  "quest.05F1AEB401CE12C2.title": "Obtain Villager",
-  "quest.05F1AEB401CE12C2.quest_subtitle": "Craft or obtain Villager",
-  "quest.05F1AEB401CE12C2.quest_desc": [
-    "Obtain Villager."
-  ],
-  "task.488DAC370EC294A1.title": "Obtain Villager",
-  "quest.7509E58C7D5B9193.title": "Obtain Barterer",
-  "quest.7509E58C7D5B9193.quest_subtitle": "Craft or obtain Barterer",
-  "quest.7509E58C7D5B9193.quest_desc": [
-    "Obtain Barterer."
-  ],
-  "task.3A544C6B49843B2D.title": "Obtain Barterer",
-  "quest.4A6ECCE2C19D4FF7.title": "Obtain Piglin",
-  "quest.4A6ECCE2C19D4FF7.quest_subtitle": "Craft or obtain Piglin",
   "quest.4A6ECCE2C19D4FF7.quest_desc": [
-    "Obtain Piglin."
+    "Obtain Piglin.",
   ],
-  "task.0B2FEB287175A68B.title": "Obtain Piglin"
+  "quest.5C1C2360D9A77729.title": "Farmer",
+  "quest.05F1AEB401CE12C2.quest_desc": [
+    "Obtain Villager.",
+  ],
+  "quest.05F1AEB401CE12C2.quest_subtitle": "Craft or obtain Villager",
+  "quest.535768FA01FE44C5.title": "Inventory Viewer",
+  "quest.14AF719D11C684EE.quest_subtitle": "Craft or obtain Incubator",
 }

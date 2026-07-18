@@ -1,118 +1,118 @@
 {
-  "quest.1D7ED161138A7153.title": "Obtain Dank 1",
-  "quest.1D7ED161138A7153.quest_subtitle": "Craft or obtain Dank 1",
-  "quest.1D7ED161138A7153.quest_desc": [
-    "Obtain Dank 1."
-  ],
-  "task.75FBB1A3D5EC83E0.title": "Obtain Dank 1",
-  "quest.62A57B8611699706.title": "Obtain Dank 2",
-  "quest.62A57B8611699706.quest_subtitle": "Craft or obtain Dank 2",
-  "quest.62A57B8611699706.quest_desc": [
-    "Obtain Dank 2."
-  ],
-  "task.55261A4FA461EF97.title": "Obtain Dank 2",
   "quest.101E2C0C27A74B5D.title": "Dank 3",
-  "quest.101E2C0C27A74B5D.quest_subtitle": "Craft or obtain Dank 3",
-  "quest.101E2C0C27A74B5D.quest_desc": [
-    "Dank 3 — portable multidimensional storage bag tier 3.",
-    "",
-    "Stores massive stacks per slot with frequency linking. Toggle pickup modes (all, filtered, void) with keybinds.",
-    "",
-    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready."
-  ],
-  "task.529D78DC47BDA881.title": "Obtain Dank 3",
-  "quest.43CC9DF18B286C46.title": "Obtain Dank 4",
-  "quest.43CC9DF18B286C46.quest_subtitle": "Craft or obtain Dank 4",
-  "quest.43CC9DF18B286C46.quest_desc": [
-    "Obtain Dank 4."
-  ],
-  "task.729E5B174C923B5F.title": "Obtain Dank 4",
-  "quest.2C0163E5458DD3A3.title": "Obtain Dank 5",
-  "quest.2C0163E5458DD3A3.quest_subtitle": "Craft or obtain Dank 5",
-  "quest.2C0163E5458DD3A3.quest_desc": [
-    "Obtain Dank 5."
-  ],
-  "task.74570ACC6F17579A.title": "Obtain Dank 5",
-  "quest.4EA795AEDAC6262C.title": "Dank 6",
-  "quest.4EA795AEDAC6262C.quest_subtitle": "Craft or obtain Dank 6",
-  "quest.4EA795AEDAC6262C.quest_desc": [
-    "Dank 6 — portable multidimensional storage bag tier 6.",
-    "",
-    "Stores massive stacks per slot with frequency linking. Toggle pickup modes (all, filtered, void) with keybinds.",
-    "",
-    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready."
-  ],
-  "task.4735A4CF195BE28B.title": "Obtain Dank 6",
-  "quest.0E14BDC7C1FBDB93.title": "Dank 7",
+  "task.4A48ED5FAA61F423.title": "Obtain Dank 7",
+  "quest.53B4E840D94B3786.title": "6 to 7",
+  "quest.0FC197DF7C5F42F6.quest_subtitle": "Craft or obtain Dock",
   "quest.0E14BDC7C1FBDB93.quest_subtitle": "Craft or obtain Dank 7",
+  "quest.4EA795AEDAC6262C.quest_subtitle": "Craft or obtain Dank 6",
+  "quest.2EBBDDCD769AB514.quest_desc": [
+    "Obtain 1 To 2.",
+  ],
+  "quest.2EBBDDCD769AB514.title": "Obtain 1 To 2",
+  "task.5E9E4D007158DD54.title": "Obtain Red Print",
+  "quest.43CC9DF18B286C46.quest_subtitle": "Craft or obtain Dank 4",
+  "task.6EED6D3B5AC2DAA0.title": "Obtain Dock",
+  "task.48D304D07D7423C8.title": "Obtain 6 To 7",
+  "quest.2C0163E5458DD3A3.quest_subtitle": "Craft or obtain Dank 5",
+  "task.729E5B174C923B5F.title": "Obtain Dank 4",
+  "quest.24A3DA31F238126B.title": "Obtain 4 To 5",
   "quest.0E14BDC7C1FBDB93.quest_desc": [
     "Dank 7 — portable multidimensional storage bag tier 7.",
     "",
     "Stores massive stacks per slot with frequency linking. Toggle pickup modes (all, filtered, void) with keybinds.",
     "",
-    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready."
+    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready.",
   ],
-  "task.4A48ED5FAA61F423.title": "Obtain Dank 7",
-  "quest.2EBBDDCD769AB514.title": "Obtain 1 To 2",
+  "quest.62A57B8611699706.quest_desc": [
+    "Obtain Dank 2.",
+  ],
+  "task.2BAA095EB7916CE8.title": "Obtain 3 to 4",
+  "quest.1D7ED161138A7153.quest_subtitle": "Craft or obtain Dank 1",
+  "quest.43CC9DF18B286C46.title": "Obtain Dank 4",
+  "quest.43CC9DF18B286C46.quest_desc": [
+    "Obtain Dank 4.",
+  ],
+  "quest.1D7ED161138A7153.quest_desc": [
+    "Obtain Dank 1.",
+  ],
   "quest.2EBBDDCD769AB514.quest_subtitle": "Craft or obtain 1 To 2",
-  "quest.2EBBDDCD769AB514.quest_desc": [
-    "Obtain 1 To 2."
-  ],
   "task.52BF31E8F9188883.title": "Obtain 1 to 2",
-  "quest.19B244D10CA45E32.title": "2 to 3",
-  "quest.19B244D10CA45E32.quest_subtitle": "Craft or obtain 2 To 3",
+  "quest.68B62B64C935E96D.quest_subtitle": "Craft or obtain 5 To 6",
   "quest.19B244D10CA45E32.quest_desc": [
     "Dank upgrade item — upgrades a Dank 2 into a Dank 3.",
     "",
     "Use in crafting or upgrade GUI per JEI. Preserves frequency when upgrading if configured.",
     "",
-    "Plan your frequency naming before upgrading so linked danks stay synchronized across your base."
+    "Plan your frequency naming before upgrading so linked danks stay synchronized across your base.",
   ],
-  "task.3F0C117A411248E5.title": "Obtain 2 To 3",
-  "quest.4D30A75EB6644C1B.title": "Obtain 3 To 4",
-  "quest.4D30A75EB6644C1B.quest_subtitle": "Craft or obtain 3 To 4",
-  "quest.4D30A75EB6644C1B.quest_desc": [
-    "Obtain 3 To 4."
-  ],
-  "task.2BAA095EB7916CE8.title": "Obtain 3 to 4",
-  "quest.24A3DA31F238126B.title": "Obtain 4 To 5",
-  "quest.24A3DA31F238126B.quest_subtitle": "Craft or obtain 4 To 5",
-  "quest.24A3DA31F238126B.quest_desc": [
-    "Obtain 4 To 5."
-  ],
-  "task.0424F944B6CF28FF.title": "Obtain 4 To 5",
-  "quest.68B62B64C935E96D.title": "Obtain 5 To 6",
-  "quest.68B62B64C935E96D.quest_subtitle": "Craft or obtain 5 To 6",
-  "quest.68B62B64C935E96D.quest_desc": [
-    "Obtain 5 To 6."
-  ],
-  "task.395A75F2C070EBE5.title": "Obtain 5 To 6",
-  "quest.0FC197DF7C5F42F6.title": "Dock",
-  "quest.0FC197DF7C5F42F6.quest_subtitle": "Craft or obtain Dock",
-  "quest.0FC197DF7C5F42F6.quest_desc": [
-    "Dock block — charging and access station for Dank Storage bags.",
+  "quest.101E2C0C27A74B5D.quest_desc": [
+    "Dank 3 — portable multidimensional storage bag tier 3.",
     "",
-    "Place danks in the dock for easier sorting, construction mode access, and redstone-controlled I/O on some setups."
+    "Stores massive stacks per slot with frequency linking. Toggle pickup modes (all, filtered, void) with keybinds.",
+    "",
+    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready.",
   ],
-  "task.6EED6D3B5AC2DAA0.title": "Obtain Dock",
-  "quest.218B27E516AAD42D.title": "Red Print",
-  "quest.218B27E516AAD42D.quest_subtitle": "Craft or obtain Red Print",
+  "quest.19B244D10CA45E32.quest_subtitle": "Craft or obtain 2 To 3",
+  "quest.68B62B64C935E96D.title": "Obtain 5 To 6",
+  "task.55261A4FA461EF97.title": "Obtain Dank 2",
+  "quest.19B244D10CA45E32.title": "2 to 3",
+  "quest.62A57B8611699706.quest_subtitle": "Craft or obtain Dank 2",
   "quest.218B27E516AAD42D.quest_desc": [
     "Red Print — copies a dank frequency to another bag of the same tier.",
     "",
     "Sneak-use on source dank, then target dank to sync frequencies. Only works within matching tiers.",
     "",
-    "Essential for linking input, void, and construction danks in a skyblock storage wall."
+    "Essential for linking input, void, and construction danks in a skyblock storage wall.",
   ],
-  "task.5E9E4D007158DD54.title": "Obtain Red Print",
-  "quest.53B4E840D94B3786.title": "6 to 7",
-  "quest.53B4E840D94B3786.quest_subtitle": "Craft or obtain 6 To 7",
+  "quest.2C0163E5458DD3A3.title": "Obtain Dank 5",
+  "quest.68B62B64C935E96D.quest_desc": [
+    "Obtain 5 To 6.",
+  ],
   "quest.53B4E840D94B3786.quest_desc": [
     "Dank upgrade item — upgrades a Dank 6 into a Dank 7.",
     "",
     "Use in crafting or upgrade GUI per JEI. Preserves frequency when upgrading if configured.",
     "",
-    "Plan your frequency naming before upgrading so linked danks stay synchronized across your base."
+    "Plan your frequency naming before upgrading so linked danks stay synchronized across your base.",
   ],
-  "task.48D304D07D7423C8.title": "Obtain 6 To 7"
+  "task.0424F944B6CF28FF.title": "Obtain 4 To 5",
+  "quest.0FC197DF7C5F42F6.title": "Dock",
+  "quest.4D30A75EB6644C1B.title": "Obtain 3 To 4",
+  "quest.0E14BDC7C1FBDB93.title": "Dank 7",
+  "quest.2C0163E5458DD3A3.quest_desc": [
+    "Obtain Dank 5.",
+  ],
+  "quest.4D30A75EB6644C1B.quest_desc": [
+    "Obtain 3 To 4.",
+  ],
+  "quest.53B4E840D94B3786.quest_subtitle": "Craft or obtain 6 To 7",
+  "quest.101E2C0C27A74B5D.quest_subtitle": "Craft or obtain Dank 3",
+  "quest.1D7ED161138A7153.title": "Obtain Dank 1",
+  "quest.62A57B8611699706.title": "Obtain Dank 2",
+  "task.395A75F2C070EBE5.title": "Obtain 5 To 6",
+  "quest.218B27E516AAD42D.title": "Red Print",
+  "quest.0FC197DF7C5F42F6.quest_desc": [
+    "Dock block — charging and access station for Dank Storage bags.",
+    "",
+    "Place danks in the dock for easier sorting, construction mode access, and redstone-controlled I/O on some setups.",
+  ],
+  "task.4735A4CF195BE28B.title": "Obtain Dank 6",
+  "task.3F0C117A411248E5.title": "Obtain 2 To 3",
+  "quest.4EA795AEDAC6262C.title": "Dank 6",
+  "quest.4D30A75EB6644C1B.quest_subtitle": "Craft or obtain 3 To 4",
+  "quest.24A3DA31F238126B.quest_subtitle": "Craft or obtain 4 To 5",
+  "task.529D78DC47BDA881.title": "Obtain Dank 3",
+  "task.75FBB1A3D5EC83E0.title": "Obtain Dank 1",
+  "quest.4EA795AEDAC6262C.quest_desc": [
+    "Dank 6 — portable multidimensional storage bag tier 6.",
+    "",
+    "Stores massive stacks per slot with frequency linking. Toggle pickup modes (all, filtered, void) with keybinds.",
+    "",
+    "Higher tiers raise stack limits and unlock more features — upgrade with the next tier item when ready.",
+  ],
+  "task.74570ACC6F17579A.title": "Obtain Dank 5",
+  "quest.24A3DA31F238126B.quest_desc": [
+    "Obtain 4 To 5.",
+  ],
+  "quest.218B27E516AAD42D.quest_subtitle": "Craft or obtain Red Print",
 }
