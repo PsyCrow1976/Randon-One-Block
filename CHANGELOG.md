@@ -4,7 +4,70 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. **`1.0.4.6`** = ProjectE → Equivox rename (mod namespace + quests). **`1.0.4.7`** = quest unlock map docs in mod pools config. **`1.0.4.8`** = first finished quest book iteration (synced from editor). **`1.0.4.9`** = quest descriptions filled in (quirky + helpful). **`1.0.4.10`** = modlist refresh from playtest instance. **`1.0.4.11`** = Equivox pool unlock (dual Red Rock quests). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under that milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.0] — 2026-07-18
+
+**Milestone** — First finished quest-book pass, **Equivox** (copyright rename from ProjectE/ProjectEE), full quest text, modlist refresh, and confirmed random-pool unlocks (CurseForge-ready).
+
+Summarizes development track **`1.0.4.0` → `1.0.4.11`**.
+
+### Highlights
+
+- **16 quest chapters · ~888 quests** with dependency chains, layouts, and lang synced from the in-game editor
+- **Every quest** has a real description (quirky + useful tips) — 151 stubs/empty texts filled in **1.0.4.9**
+- **ProjectE → Equivox** — mod, quest chapter, item IDs (`equivox:…`), and random pool namespace renamed for copyright; dual “The Red Rock” quests both unlock the Equivox minable pool (**confirmed working**)
+- **81 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.76** — modlist refreshed 2026-07-18
+- **Mod & item catalog** (from **1.0.4.1**) — browsable `modlist.html` + `modlist-items.json` generators still in the pack tooling
+- **Recipe-based chapter generator** (from **1.0.4.2**) — scripts/docs for regenerating quest tabs from mod JARs
+- **Randon Mined** team counter overlay and per-team mod-pool gating remain core pack features
+
+### FTB Quests (first finished iteration)
+
+| Area | What shipped |
+|------|----------------|
+| **Chapter set** | Getting Started, Good to Know Mods, Storage Options, Ex Deorum, **Equivox**, Iron Furnaces, Animal Pens, Easy Villagers & Piglins, Dank Storage, Cooking for Blockheads, Baubly Slots, BBL, EnderIO, Refined Storage, Powah, Mystical Agriculture |
+| **Manual progression** | Dependency-wired lines for Cooking for Blockheads, Baubly Slots, Iron Furnaces, Animal Pens, Easy Villagers, Dank Storage, plus expanded Mystical Agriculture |
+| **Cleanup** | Apotheosis quest tab removed earlier in 1.0.4.x; separate Mystical Agradditions / Automation / Tiered Crystals tabs dropped in favor of the main Mystical Agriculture chapter |
+| **Descriptions** | Full `quest_desc` coverage across the book |
+| **Pool unlocks** | Leather Backpack → Sophisticated Storage; Compressed Dirt → Ex Deorum; Philosopher’s Stone / The Red Rock (Getting Started **or** Equivox tab) → Equivox |
+
+### Random One Block / KubeJS
+
+- Namespace catalog and unlocks use **`equivox`** (not `projecte`)
+- Quest unlock map documents which quests open which minable pools (`_quest_unlocks_readme` / `_quest_unlock_map_entries`)
+- **Fix (1.0.4.11):** both Red Rock quest IDs unlock Equivox so completing either tab enables the pool
+
+### Mods (vs earlier 1.0.4.0 milestone)
+
+- **Replaced:** ProjectEE → **Equivox** `1.0.0` (`equivox-1.0.0.jar`)
+- **Updated (playtest 2026-07-18):** Balm, BBL Utility, Cucumber Library, Farming for Blockheads, Haven Skyblock Builder, JEI, Puzzles Lib, Sophisticated Backpacks / Core / Storage
+- Pack still includes Ender IO, Easy Ore Generation, and the rest of the 81-mod list — see `modlist.md`
+
+### Tooling & branding
+
+- Quest/modlist generators and stale-instance cleanup scripts
+- CurseForge branding/description updated for Equivox
+- Pack config for Equivox under `config/Equivox/`
+
+### Patch trail (1.0.4.x)
+
+| Patch | Summary |
+|-------|---------|
+| **1.0.4.0** | Milestone: ProjectE chapter + pool unlocks, expanded quest book |
+| **1.0.4.1** | Browsable mod + item HTML catalog |
+| **1.0.4.2** | Recipe-based FTB chapters + generators |
+| **1.0.4.3** | Cooking for Blockheads + Baubly Slots manual lines |
+| **1.0.4.4** | Iron Furnaces + Animal Pens; Apotheosis tab removed |
+| **1.0.4.5** | Easy Villagers + Dank Storage |
+| **1.0.4.6** | ProjectE → Equivox rename |
+| **1.0.4.7** | Unlock-map docs in mod pools config |
+| **1.0.4.8** | First finished quest-book editor sync |
+| **1.0.4.9** | 151 quest descriptions filled |
+| **1.0.4.10** | Modlist refresh (Equivox + updates) |
+| **1.0.4.11** | Dual Red Rock → Equivox pool unlock (playtest confirmed) |
 
 ---
 
