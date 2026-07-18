@@ -3,8 +3,8 @@
   "slug": "randon-one-block",
   "version": "1.0.5.0",
   "author": "PsyCrow1976",
-  "tagline": "Experimental AI-built NeoForge skyblock — random center block, FTB Quests, Uncrafting Table",
-  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2. The author does not hand-write mods or KubeJS — Grok Composer 2.5 fast implements features from descriptions. Core loop: mine one skyblock center block, get a random modpack block back (KubeJS, inspired by Chaos OneBlock). Quest book and pack wiring are AI-assisted too. The Uncrafting Table mod reverses crafting for 26.1.2 where no similar mod existed. No fixed endgame — a sandbox to see how far AI can go on the latest Minecraft.",
+  "tagline": "Experimental AI-built NeoForge skyblock — random center block, finished FTB quest book, Equivox EMC",
+  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2 (1.0.5.0 milestone). The author does not hand-write mods or KubeJS — Grok Composer 2.5 fast implements features from descriptions. Core loop: mine one skyblock center block, get a random modpack block back (KubeJS, inspired by Chaos OneBlock). First finished FTB quest-book pass (~888 quests), Equivox EMC (ProjectE renamed), Uncrafting Table, and quest-gated mod pools. No fixed endgame — a sandbox to see how far AI can go on the latest Minecraft.",
   "minecraft": "26.1.2",
   "modloader": {
     "id": "neoforge",
@@ -23,7 +23,7 @@
     "class": "modpack",
     "main_category": "Skyblock",
     "additional_categories": ["Quests", "Adventure", "Multiplayer"],
-    "tags": ["skyblock", "oneblock", "ai", "experimental", "kubejs", "ftb quests", "neoforge", "haven", "uncrafting"],
+    "tags": ["skyblock", "oneblock", "ai", "experimental", "kubejs", "ftb quests", "neoforge", "haven", "uncrafting", "equivox", "emc"],
     "publish_script": "scripts/publish-curseforge.sh"
   },
   "inspiration": {

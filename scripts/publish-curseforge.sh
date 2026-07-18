@@ -133,10 +133,16 @@ if [[ "${CF_SKIP_UPLOAD:-0}" == "1" ]]; then
   exit 0
 fi
 
+# Prefer branding/curseforge-file-changelog-<version>.md when present (player-facing file notes)
 CHANGELOG="$(python3 - "$REPO" "$VERSION" <<'PY'
 import pathlib, sys
-text = pathlib.Path(sys.argv[1], "CHANGELOG.md").read_text()
+repo = pathlib.Path(sys.argv[1])
 version = sys.argv[2]
+branded = repo / f"branding/curseforge-file-changelog-{version}.md"
+if branded.is_file():
+    print(branded.read_text().strip())
+    raise SystemExit(0)
+text = (repo / "CHANGELOG.md").read_text()
 lines = text.splitlines()
 out = []
 capture = False

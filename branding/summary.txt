@@ -1,1 +1,1 @@
-Randon One Block — AI-built NeoForge skyblock: mine one block for random loot, team Randon Mined counter, tiered mod pools (quest unlocks), FTB Quests, Uncrafting Table — inspired by Chaos OneBlock.
+Randon One Block 1.0.5 — AI-built NeoForge skyblock: random center block, finished FTB quest book (~888 quests), Equivox EMC, team Randon Mined counter, quest-gated mod pools — inspired by Chaos OneBlock.

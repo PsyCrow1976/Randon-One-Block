@@ -25,7 +25,7 @@ The script:
 2. Writes `manifest.json` (NeoForge 26.1.2.76, 73 mods)
 3. Zips repo `config/` and `kubejs/` under `overrides/` (excludes `voicechat/`, `*.bak`)
 4. Calls `update-project` — summary, description, source, issues, license from `branding/`
-5. Calls `upload-file` — beta release with changelog from `CHANGELOG.md`
+5. Calls `upload-file` — release type from `CF_RELEASE_TYPE` (default beta); file changelog from `branding/curseforge-file-changelog-<version>.md` if present, else `CHANGELOG.md`
 
 Output: `dist/Randon-One-Block-<version>.zip` (gitignored).
 

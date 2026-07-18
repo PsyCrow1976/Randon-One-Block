@@ -8,6 +8,7 @@ Copy-paste assets and metadata for publishing **Randon One Block** on CurseForge
 |------|-------------------|
 | [`summary.txt`](summary.txt) | Project **Summary** (one line) |
 | [`description.md`](description.md) | Project **Description** (Markdown tab) |
+| [`curseforge-file-changelog-1.0.5.0.md`](curseforge-file-changelog-1.0.5.0.md) | **File** changelog for the 1.0.5.0 upload (also used if set in publish flow) |
 | [`curseforge-profile.md`](curseforge-profile.md) | Name, categories, license, tags, links |
 | [`project-metadata.json`](project-metadata.json) | Machine-readable pack identity (version, tags) |
 | [`export-checklist.md`](export-checklist.md) | Verify zip + upload steps |
@@ -63,5 +64,5 @@ The upload API **cannot** set logo, categories, or delete files. After each publ
 | Name note | Typo for “Random” when creating the GitHub repo — explained in [`description.md`](description.md) |
 | Minecraft | 26.1.2 |
 | Mod loader | NeoForge 26.1.2.76 |
-| Mod count | 73 (see [`modlist.md`](../modlist.md)) |
+| Mod count | 81 (see [`modlist.md`](../modlist.md)) |
 | Source repo | https://github.com/PsyCrow1976/Randon-One-Block |

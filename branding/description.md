@@ -4,6 +4,8 @@
 
 This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Randon One Block** is that experiment made playable.
 
+**1.0.5.0** is the first “finished first pass” milestone: a complete FTB Quest book, Equivox (EMC / Equivalent Exchange fork), full quest descriptions, and confirmed random-block pool unlocks.
+
 There is no deep endgame vision here — it is a sandbox to learn what AI can ship on the latest Minecraft version.
 
 ### Why “Randon”?
@@ -18,11 +20,14 @@ You start on a **simple Haven skyblock island**. In the middle sits **one block*
 
 That loop was built with **KubeJS**, with heavy inspiration from **[Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)**. Huge shout-out to that pack’s creator — the random one-block idea is theirs; this is a separate mod list, Haven islands, and our own scripts.
 
-Progression is light:
+Early rolls stay mostly **vanilla + a few starter mods**. Completing certain quests **unlocks whole mod namespaces** into your team’s random pool (storage, Ex Deorum, Equivox, and more as the book grows).
 
-- **FTB Quests** — chapters are also being written with AI help (Getting started, basics, mod intros).
+Progression highlights:
+
+- **FTB Quests** — **16 chapters · ~888 quests** with dependency lines and full descriptions (Getting Started, Storage, Ex Deorum, Equivox, Iron Furnaces, Mystical Agriculture, Ender IO, Refined Storage, Powah, and more).
 - **The Uncrafting Table** — a custom mod for **Minecraft 26.1.2**: reverse a crafting recipe and get ingredients back. Nothing like it existed for this version, so AI helped create it for the pack.
-- **Equivox** — feed the ingredients you recover from the Uncrafting Table into Equivox’s transmutation grid to build **EMC** (Energy-Matter Currency). Once items are learned, spend that EMC to duplicate what you actually need instead of hoping the center block rolls it.
+- **Equivox** — feed the ingredients you recover from the Uncrafting Table into Equivox’s transmutation grid to build **EMC** (Energy-Matter Currency). Craft the Philosopher’s Stone (*The Red Rock*) to unlock Equivox blocks in your random pool. (ProjectE was renamed Equivox for copyright reasons.)
+- **Randon Mined** — team counter above the hotbar for center blocks broken.
 - Everything else is “mods I liked” thrown together on skyblock.
 
 ---
@@ -48,6 +53,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 | Skyblock islands | Haven Skyblock Builder + `oneblock_island` template |
 | Quest book | FTB Quests JSON5 in `config/ftbquests/` — AI-assisted authoring |
 | Uncrafting Table | Dedicated mod (reverse crafting) — no existing 26.1.2 option |
+| Equivox | EMC / transmutation (ProjectE fork renamed for copyright) |
 | Repo & docs | GitHub: [PsyCrow1976/Randon-One-Block](https://github.com/PsyCrow1976/Randon-One-Block) |
 
 **Inspired by:** [Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)
@@ -58,16 +64,17 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | | |
 |--|--|
+| Pack version | **1.0.5.0** |
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.76 |
-| Mods | 79 |
+| Mods | 81 |
 
 ---
 
 ## Expectations
 
-- This is a **work-in-progress experiment**, not a polished expert pack.
-- Balance and quest coverage will grow as the AI-assisted workflow improves.
+- This is an **experimental AI-assisted pack**, not a polished expert pack — but **1.0.5.0** is a real playable milestone with a finished first quest-book pass.
+- Balance and content will keep growing as the AI-assisted workflow continues.
 - Bug reports and ideas welcome on [GitHub Issues](https://github.com/PsyCrow1976/Randon-One-Block/issues).
 
 If you want a polished one-block experience, play **[Chaos OneBlock](https://www.curseforge.com/minecraft/modpacks/chaos-oneblock)** too — and thank its creator for the concept that started this rabbit hole.

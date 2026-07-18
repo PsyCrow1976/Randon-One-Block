@@ -40,13 +40,13 @@ The upload API token can push **name**, summary, description, and links (`update
 | **Main category** | Skyblock |
 | **Additional categories** | Quests, Adventure, Multiplayer |
 | **Allow comments** | Yes |
-| **Experimental** | Consider **Beta** release type on first upload |
+| **Experimental** | **1.0.5.0** can use **Release** (or Beta if you prefer soft launch) |
 | **Description editor** | Markdown — paste from [`description.md`](description.md) |
 | **License** | MIT (match GitHub) |
 
 ## Suggested tags
 
-`skyblock`, `oneblock`, `ai`, `experimental`, `kubejs`, `ftb quests`, `neoforge`, `haven skyblock`, `uncrafting`
+`skyblock`, `oneblock`, `ai`, `experimental`, `kubejs`, `ftb quests`, `neoforge`, `haven skyblock`, `uncrafting`, `equivox`, `emc`
 
 ## After the project is created
 
