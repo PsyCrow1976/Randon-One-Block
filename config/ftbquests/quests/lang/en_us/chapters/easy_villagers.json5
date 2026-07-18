@@ -1,13 +1,15 @@
 {
   "quest.4A6ECCE2C19D4FF7.quest_subtitle": "Craft or obtain Piglin",
   "quest.7509E58C7D5B9193.quest_desc": [
-    "Obtain Barterer.",
+    "The &eBarterer&r is a piglin vending machine that accepts gold and disappointment.",
+    "",
+    "Insert gold, receive barter loot on a timer. Automated Nether economics for people who refuse to build a gold farm the hard way."
   ],
   "quest.2FAA048B5E998DAD.title": "Trader",
   "quest.14AF719D11C684EE.quest_desc": [
     "Incubator — accelerates baby villager growth into adults.",
     "",
-    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls.",
+    "Pipe in baby villagers from a Breeder, wait for timers, output working adults for trading halls."
   ],
   "quest.0C7461E734686856.quest_subtitle": "Craft or obtain Auto Trader",
   "task.6C61EA8543380488.title": "Obtain Farmer",
@@ -15,13 +17,13 @@
   "quest.0C7461E734686856.quest_desc": [
     "Auto Trader — automates trade execution with input/output slots.",
     "",
-    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation.",
+    "Hook to hoppers or pipes: dump emeralds and trade goods in, collect purchased items out. Endgame villager automation."
   ],
   "quest.535768FA01FE44C5.quest_subtitle": "Craft or obtain Inventory Viewer",
   "quest.41F3FF9466090C95.quest_desc": [
     "Converter — cures zombie villagers with golden apples and weakness.",
     "",
-    "Automates discount farming: zombie villager in, splash weakness applied, golden apple consumed, normal villager out.",
+    "Automates discount farming: zombie villager in, splash weakness applied, golden apple consumed, normal villager out."
   ],
   "quest.0C7461E734686856.title": "Auto Trader",
   "quest.6169A87955075572.title": "Iron Farm",
@@ -29,12 +31,12 @@
   "quest.5C1C2360D9A77729.quest_desc": [
     "Farmer block — villager farms crops on provided farmland layout (see block GUI).",
     "",
-    "Compact crop farm for skyblock — villager harvests and deposits produce without entity pathing on your small island.",
+    "Compact crop farm for skyblock — villager harvests and deposits produce without entity pathing on your small island."
   ],
   "quest.535768FA01FE44C5.quest_desc": [
     "Inventory Viewer — inspect villager inventories and equipment in GUI form.",
     "",
-    "Debug and optimize farmer outfits, armor for iron farm, or food slots in breeder setups.",
+    "Debug and optimize farmer outfits, armor for iron farm, or food slots in breeder setups."
   ],
   "task.3B3AB719988725C9.title": "Obtain Auto Trader",
   "quest.2FAA048B5E998DAD.quest_subtitle": "Craft or obtain Trader",
@@ -43,7 +45,7 @@
     "",
     "Input food items, insert villagers, collect baby villagers from output. AFK villager cloning without manual carrot spam.",
     "",
-    "Feed from random-block crop farms once you unlock wheat and carrots.",
+    "Feed from random-block crop farms once you unlock wheat and carrots."
   ],
   "task.33E87714E6D64C53.title": "Obtain Converter",
   "quest.4A6ECCE2C19D4FF7.title": "Obtain Piglin",
@@ -51,7 +53,7 @@
   "quest.6169A87955075572.quest_desc": [
     "Iron Farm block — generates iron ingots using villager panic mechanics in a single block.",
     "",
-    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint.",
+    "Classic skyblock iron source once you have villagers. No need for a full vanilla iron farm footprint."
   ],
   "quest.7509E58C7D5B9193.quest_subtitle": "Craft or obtain Barterer",
   "task.6C3868458D53BB0B.title": "Obtain Iron Farm",
@@ -70,17 +72,21 @@
   "quest.2FAA048B5E998DAD.quest_desc": [
     "Trader block — access villager trades without placing a full trading hall.",
     "",
-    "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them.",
+    "Cycle trades with the configured keybind. Lock good deals before restock RNG ruins them."
   ],
   "task.7EB1B60D2B21A009.title": "Obtain Trader",
   "quest.4A6ECCE2C19D4FF7.quest_desc": [
-    "Obtain Piglin.",
+    "A bottled &ePiglin&r. Do not give it a lighter.",
+    "",
+    "Easy Piglins packs mobs for bartering automation. Drop into the right machine to gold-for-loot without standing in fire."
   ],
   "quest.5C1C2360D9A77729.title": "Farmer",
   "quest.05F1AEB401CE12C2.quest_desc": [
-    "Obtain Villager.",
+    "A portable &eVillager&r — humanity's most passive-aggressive trading partner, now in to-go form.",
+    "",
+    "Easy Villagers lets you pick up villagers as items. Place them into breeders, traders, and farms without boat Olympics across the void."
   ],
   "quest.05F1AEB401CE12C2.quest_subtitle": "Craft or obtain Villager",
   "quest.535768FA01FE44C5.title": "Inventory Viewer",
-  "quest.14AF719D11C684EE.quest_subtitle": "Craft or obtain Incubator",
+  "quest.14AF719D11C684EE.quest_subtitle": "Craft or obtain Incubator"
 }

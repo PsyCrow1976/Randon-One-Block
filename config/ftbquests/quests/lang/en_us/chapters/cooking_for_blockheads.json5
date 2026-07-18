@@ -10,7 +10,7 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.3C75D07DCDE56645.title": "Tool Rack Speedrun Any%",
   "quest.16F57EDA66E89BF8.title": "Obtain Fruit Basket",
@@ -22,19 +22,25 @@
   "quest.30746B2212F2EDBF.title": "Salt Filter Speedrun Any%",
   "quest.1CE050098AF388B9.quest_subtitle": "Craft or obtain Cooking for Blockheads I",
   "quest.11AF1EDA1DFFFEA8.quest_desc": [
-    "Obtain Coffee Machine.",
+    "The &eCoffee Machine&r produces liquid motivation. Scientists hate this one trick.",
+    "",
+    "Brew coffee for buffs / kitchen vibes in Cooking for Blockheads. Place it in your kitchen line like a responsible adult who mines random blocks for caffeine."
   ],
   "task.6BAA330FB48898D6.title": "Obtain Spice Rack",
   "quest.6D7F2D3CBEB88750.title": "Obtain Chicken Sink",
   "quest.7405D9706BA3C24C.quest_desc": [
-    "Obtain Connector.",
+    "The &eConnector&r bridges kitchen blocks that refuse to sit next to each other.",
+    "",
+    "Use it to link Cooking for Blockheads components across awkward layouts. Because your island grew like a lasagna, not a floor plan."
   ],
   "task.1F7A7362B9C928AE.title": "Obtain Preservation Chamber",
   "task.1C5F0E22CAEA5A15.title": "Obtain Cooking Table",
   "quest.14A59EDD442F6876.quest_subtitle": "Craft or obtain Chef Hat",
   "quest.05C81560055409C1.title": "Bold Move: Spice Rack",
   "quest.53BCA908AD32307B.quest_desc": [
-    "Obtain Crafting Book.",
+    "The &eCrafting Book&r (recipe book) lists every meal you can make from stuff you already own.",
+    "",
+    "Open it near a Cooking for Blockheads kitchen to see craftable foods and one-click cook using connected storage. The opposite of guessing cake recipes from memory."
   ],
   "task.48D5C80EDED76684.title": "Obtain Kitchen Counter",
   "quest.7EE44E5EC2B2923A.title": "Well Done",
@@ -50,7 +56,7 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.11AF1EDA1DFFFEA8.title": "Obtain Coffee Machine",
   "task.001C5DEFD481BFFF.title": "Obtain Kitchen Cabinet",
@@ -64,24 +70,32 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.209978E6BC410C50.title": "Obtain Sink",
   "quest.687F4DF2F92CD955.quest_desc": [
-    "Obtain Milk Jar.",
+    "The &eMilk Jar&r holds milk without requiring a cow roommate in your bedroom.",
+    "",
+    "Kitchen fluid/ingredient storage for recipes that need milk. Pair with a cow jar or dairy setup for infinite cereal energy."
   ],
   "quest.4057F6D70091D864.title": "Kitchen Sync",
   "quest.11AF1EDA1DFFFEA8.quest_subtitle": "Craft or obtain Coffee Machine",
   "quest.35226098A71FD825.quest_desc": [
-    "Obtain Cabinet.",
+    "A &eCabinet&r is a chest that cosplays as furniture.",
+    "",
+    "Stores ingredients for Cooking for Blockheads. When connected to a kitchen, the cooking table can pull from it automatically — JEI-powered meal prep."
   ],
   "quest.52675C008DDA8702.quest_subtitle": "Craft or obtain Cutting Board",
   "task.6E48C038597E566E.title": "Obtain Cooking for Blockheads II",
   "quest.209978E6BC410C50.quest_desc": [
-    "Obtain Sink.",
+    "The &eSink&r is infinite water with better PR than a water bucket.",
+    "",
+    "Place in your kitchen multiblock for endless water access — cooking, farming refills, and washing the existential dread off your hands."
   ],
   "quest.02FA627326752FAE.quest_desc": [
-    "Obtain Preservation Chamber.",
+    "The &ePreservation Chamber&r is a fridge that went to culinary school.",
+    "",
+    "Stores food and keeps kitchen multiblock inventories happy. Part of Cooking for Blockheads' connected kitchen — ingredients in cabinets become auto-available at the cooking table."
   ],
   "quest.687F4DF2F92CD955.quest_subtitle": "Craft or obtain Milk Jar",
   "quest.5C994565505C4A4A.quest_desc": [
@@ -92,22 +106,28 @@
     "How to make it:",
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.3C75D07DCDE56645.quest_subtitle": "Craft or obtain Tool Rack",
   "quest.53BCA908AD32307B.title": "Obtain Crafting Book",
   "quest.7EE44E5EC2B2923A.quest_subtitle": "Craft or obtain Cookie Jar",
   "quest.209978E6BC410C50.quest_subtitle": "Craft or obtain Sink",
   "quest.6D7F2D3CBEB88750.quest_desc": [
-    "Obtain Chicken Sink.",
+    "The &eChicken Sink&r: where chickens go to… contribute. Do not ask how the water stays clear.",
+    "",
+    "A silly/special sink variant in Cooking for Blockheads. Still functions as kitchen water access with extra poultry chaos energy."
   ],
   "quest.35226098A71FD825.quest_subtitle": "Craft or obtain Cabinet",
   "task.7327E873A8309FC6.title": "Obtain White Oven",
   "quest.16F57EDA66E89BF8.quest_desc": [
-    "Obtain Fruit Basket.",
+    "The &eFruit Basket&r stores fruit so it does not roll into the void (a real skyblock hazard).",
+    "",
+    "Kitchen storage piece that plugs into the Cooking for Blockheads network. Fresh ingredients, fewer inventory Tetris sessions."
   ],
   "quest.146AFF138731046F.quest_desc": [
-    "Obtain Toaster.",
+    "The &eToaster&r toasts bread. Also toasts your sense of \"I only need a furnace.\"",
+    "",
+    "A kitchen appliance for Cooking for Blockheads. Drop bread in, get toast out, feel civilized on a floating dirt pyramid."
   ],
   "task.1DF596AFBE380612.title": "Obtain Cookie Jar",
   "task.4519340E6400623F.title": "Obtain Chicken Sink",
@@ -119,13 +139,15 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.02FA627326752FAE.title": "Obtain Preservation Chamber",
   "quest.146AFF138731046F.quest_subtitle": "Craft or obtain Toaster",
   "quest.7405D9706BA3C24C.title": "Obtain Connector",
   "quest.63D1DD2E2D57051D.quest_desc": [
-    "Obtain Cooking Table.",
+    "The &eCooking Table&r is the brain of the kitchen multiblock.",
+    "",
+    "Connect counters, cabinets, fridges, and sinks around it. Then use the recipe book to auto-craft food from everything in range. Gordon Ramsay, but make it skyblock."
   ],
   "quest.0CCC9B6344A84763.title": "Obtain Counter",
   "quest.5C994565505C4A4A.quest_subtitle": "Craft or obtain Cooking for Blockheads",
@@ -139,7 +161,7 @@
     "How to make it:",
     "• Smelt the ingredients in a furnace or powered smelter.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.30746B2212F2EDBF.quest_desc": [
     "Salt Filter — a item from the Cooking for Blockheads mod.",
@@ -149,7 +171,7 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.6A375487F5356F46.quest_desc": [
     "Fridge — a item from the Cooking for Blockheads mod.",
@@ -159,7 +181,7 @@
     "How to make it:",
     "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "task.420D69B5AFD6B72E.title": "Obtain Fridge",
   "quest.687F4DF2F92CD955.title": "Obtain Milk Jar",
@@ -172,13 +194,17 @@
   "quest.05C81560055409C1.quest_subtitle": "Craft or obtain Spice Rack",
   "quest.35226098A71FD825.title": "Obtain Cabinet",
   "quest.14A59EDD442F6876.quest_desc": [
-    "Obtain Chef Hat.",
+    "The &eChef Hat&r: +10 cooking authority, +0 actual skill (skill sold separately).",
+    "",
+    "Cosmetic / kitchen flair for the Cooking for Blockheads life. Wear it while your multiblock kitchen crafts better meals than you deserve."
   ],
   "task.7BCC7A6E95A70829.title": "Obtain Chef Hat",
   "task.50D9A6D9463A74C8.title": "Obtain Coffee Machine",
   "quest.16F57EDA66E89BF8.quest_subtitle": "Craft or obtain Fruit Basket",
   "quest.0CCC9B6344A84763.quest_desc": [
-    "Obtain Counter.",
+    "A &eCounter&r is counter space. Revolutionary, we know.",
+    "",
+    "Connects into the Cooking for Blockheads kitchen multiblock so nearby cabinets, fridges, and the cooking table share ingredients. Build a real kitchen instead of crafting bread on the dirt."
   ],
   "task.6614B6BE8F361B5A.title": "Obtain Toaster",
   "task.48D25A38C630F241.title": "Obtain Tool Rack",
@@ -186,7 +212,9 @@
   "task.7FF8040ABCC026F6.title": "Obtain Cooking for Blockheads",
   "task.6A24CACAC94D88A0.title": "Obtain Kitchen Floor",
   "quest.6C31C330720B82F1.quest_desc": [
-    "Obtain White Oven.",
+    "The &eOven&r smelts/cooks food with more dignity than a campfire on dirt.",
+    "",
+    "Cooking for Blockheads appliance — process raw food as part of your kitchen line. Also looks like you pay rent on this island."
   ],
   "quest.30746B2212F2EDBF.quest_subtitle": "Craft or obtain Salt Filter",
   "task.43F2CFA9C28868AD.title": "Obtain Milk Jar",
@@ -198,6 +226,6 @@
     "How to make it:",
     "• Craft it in a shaped pattern — open JEI and search the item for the exact grid layout.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
-  ],
+    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+  ]
 }

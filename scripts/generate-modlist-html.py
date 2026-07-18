@@ -87,7 +87,7 @@ MOD_META = {
     "Pig Pen Cipher": ("Library", "Text obfuscation library used by Darkhax and related mods."),
     "Placebo": ("Library", "Core Shadowfacts library underpinning Apotheosis and related mods."),
     "Powah! (Rearchitected)": ("Automation", "Energy generation, storage, and transfer for powering machines and bases."),
-    "ProjectEE": ("Content", "Equivalent Exchange remake with EMC transmutation, collectors, and power items."),
+    "Equivox": ("Content", "Equivalent Exchange / EMC transmutation (ProjectE fork renamed Equivox), collectors, and power items."),
     "Puzzles Lib": ("Library", "Shared library for Fuzs mods such as Leaves Be Gone and Easy Villagers."),
     "Reap Mod": ("Utility", "Harvests mature crops and replants seeds in one action."),
     "Refined Storage": ("Storage", "Digital storage network with autocrafting, disks, and wireless access."),

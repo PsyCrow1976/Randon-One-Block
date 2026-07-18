@@ -4,7 +4,47 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. **`1.0.4.6`** = ProjectE → Equivox rename (mod namespace + quests). **`1.0.4.7`** = quest unlock map docs in mod pools config. **`1.0.4.8`** = first finished quest book iteration (synced from editor). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.4.x`** — patch bumps during development; milestone **`1.0.4.0`** = ProjectE quest book + pool unlocks (CurseForge). **`1.0.4.1`** = browsable mod + item catalog (HTML). **`1.0.4.2`** = recipe-based FTB quest chapters + generator docs. **`1.0.4.3`** = manual quest-line layout for Cooking for Blockheads and Baubly Slots. **`1.0.4.4`** = Iron Furnaces + Animal Pens quest chapters; Apotheosis tab removed. **`1.0.4.5`** = Easy Villagers and Dank Storage quest chapters. **`1.0.4.6`** = ProjectE → Equivox rename (mod namespace + quests). **`1.0.4.7`** = quest unlock map docs in mod pools config. **`1.0.4.8`** = first finished quest book iteration (synced from editor). **`1.0.4.9`** = quest descriptions filled in (quirky + helpful). **`1.0.4.10`** = modlist refresh from playtest instance. **`1.0.4.11`** = Equivox pool unlock (dual Red Rock quests). Previous milestone **`1.0.3.0`** = team Randon Mined counter. Track **`1.0.3.x`** — quest chapters, ProjectE, mod-pool catalog. **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.4.11] — 2026-07-18
+
+### Fix — Equivox minable pool unlock
+
+Philosopher’s Stone could complete without enabling the Equivox random-block pool.
+
+- **Cause** — Two “The Red Rock” quests exist (Getting Started + Equivox chapter). The unlock map only listened to Getting Started; finishing the Equivox-tab quest never fired the pool unlock.
+- **Fix** — Map **both** quest/task IDs to `equivox` in `random_one_block_mod_pools.json` (and pack defaults in `random_one_block_mod_pools.js`).
+- **Also in this repo sync** — Quest description pass (1.0.4.9), modlist refresh with Equivox (1.0.4.10), branding text, and related kubejs/modlist files.
+
+After updating: `/reload`, then log out/in (or `/randomblock poolenable equivox true` once).
+
+---
+
+## [1.0.4.10] — 2026-07-18
+
+### Modlist refresh
+
+Refreshed **`modlist.json`** / **`modlist.md`** from the CurseForge playtest instance (**81** mods, 2026-07-18).
+
+- **Replaced:** ProjectEE → **Equivox** `1.0.0` (`equivox-1.0.0.jar`)
+- **Updated:** Balm `26.1.2.9`, BBL Utility `26.1.2-2.7.13`, Cucumber Library `26.1.2-9.0.5`, Farming for Blockheads `26.1.2.2`, Haven Skyblock Builder `26.1.2-0.2.1`, JEI `29.16.0.47`, Puzzles Lib `v26.1.12`, Sophisticated Backpacks `3.25.80.1992`, Sophisticated Core `1.4.89.2165`, Sophisticated Storage `1.5.96.1988`
+
+---
+
+## [1.0.4.9] — 2026-07-18
+
+### FTB Quests — descriptions pass
+
+Filled in missing and stub quest text across the book so every quest has a real description.
+
+- **151 descriptions** written or replaced (stubs like “Obtain X.” and empty entries)
+- **Tone** — short quirky lines plus practical tips (what the item does, skyblock / random-block context, JEI or tier hints where useful)
+- **Chapters covered** — Mystical Agriculture (84), Iron Furnaces (17), Baubley Heart Canisters (14), Cooking for Blockheads (14), Dank Storage (8), Storage Options (7), Easy Villagers & Piglins (3), Animal Pens (2), Getting Started (2)
+- **Book status** — all **~888** quests now have non-stub `quest_desc` text in `config/ftbquests/quests/lang/en_us/chapters/`
+
+Reload the quest book (or restart) after updating to see the new text in-game.
 
 ---
 

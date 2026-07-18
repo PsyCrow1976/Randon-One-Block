@@ -32,7 +32,7 @@
       "mysticalagriculture",
       "mysticalautomation",
       "powah",
-      "projecte",
+      "equivox",
       "refinedstorage",
       "sophisticatedstorage",
       "uncraftingtable",
@@ -62,18 +62,74 @@
     "exdeorum": "Ex Deorum",
     "easyoregeneration": "Easy Ore Generation",
     "enderio": "Ender IO",
-    "projecte": "ProjectE"
+    "equivox": "Equivox"
+  },
+
+  "_quest_unlocks_readme": [
+    "=== QUEST BOOK → MINABLE POOL UNLOCKS ===",
+    "The two maps below (quest_unlock_map + quest_task_fallback) are what enable additional",
+    "mod namespaces in the random one-block pool when a team completes FTB Quests.",
+    "",
+    "quest_unlock_map   = quest hex id → mod namespace unlocked for the island team",
+    "quest_task_fallback = same quest hex id → task hex id(s) KubeJS listens on (required)",
+    "",
+    "Complete the quest → that mod's full-cube mineable blocks can roll from the center block.",
+    "Manual override: /randomblock poolenable <mod> true",
+    "When adding a new unlock: add BOTH map entries. See howtoquest.md § Random block mod unlocks."
+  ],
+
+  "_quest_unlock_map_entries": {
+    "1D5A582F52D7CB30": {
+      "chapter": "Storage Options (storage_options.json5)",
+      "quest_title": "Leather Backpack",
+      "item": "sophisticatedbackpacks:backpack",
+      "task_id": "1A2B3C4D5E6F7081",
+      "task_title": "Craft a Leather Backpack",
+      "unlocks_mod": "sophisticatedstorage",
+      "unlocks_display_name": "Sophisticated Storage"
+    },
+    "5F76BA38891F3B07": {
+      "chapter": "Ex Deorum (ex_deorum.json5)",
+      "quest_title": "Compressed Dirt",
+      "item": "exdeorum:compressed_dirt",
+      "task_id": "1A85CE9EB3CAAD93",
+      "task_title": "Obtain Compressed Dirt",
+      "unlocks_mod": "exdeorum",
+      "unlocks_display_name": "Ex Deorum"
+    },
+    "57BD1D73E42470EF": {
+      "chapter": "Getting Started (getting_started.json5)",
+      "quest_title": "The Red Rock",
+      "item": "equivox:philosophers_stone",
+      "task_id": "6752A8FD5075C68D",
+      "task_title": "Craft a Philosopher's Stone",
+      "unlocks_mod": "equivox",
+      "unlocks_display_name": "Equivox",
+      "note": "Getting Started entry — keep mapped even if players finish the Equivox-tab twin first"
+    },
+    "32DD7832C096CE0F": {
+      "chapter": "Equivox (equivox.json5)",
+      "quest_title": "The Red Rock",
+      "item": "equivox:philosophers_stone",
+      "task_id": "67A98B325DEE2D1C",
+      "task_title": "Obtain The Red Rock",
+      "unlocks_mod": "equivox",
+      "unlocks_display_name": "Equivox",
+      "note": "Equivox chapter twin of Getting Started Red Rock — same item; either quest unlocks the pool"
+    }
   },
 
   "quest_unlock_map": {
     "1D5A582F52D7CB30": "sophisticatedstorage",
     "5F76BA38891F3B07": "exdeorum",
-    "57BD1D73E42470EF": "projecte"
+    "57BD1D73E42470EF": "equivox",
+    "32DD7832C096CE0F": "equivox"
   },
 
   "quest_task_fallback": {
     "1D5A582F52D7CB30": ["1A2B3C4D5E6F7081"],
     "5F76BA38891F3B07": ["1A85CE9EB3CAAD93"],
-    "57BD1D73E42470EF": ["6752A8FD5075C68D"]
+    "57BD1D73E42470EF": ["6752A8FD5075C68D"],
+    "32DD7832C096CE0F": ["67A98B325DEE2D1C"]
   }
 }

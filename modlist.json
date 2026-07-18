@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-12",
+  "generated": "2026-07-18",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.76",
   "mod_count": 81,
@@ -48,8 +48,8 @@
     },
     {
       "name": "Balm",
-      "version": "26.1.2.8",
-      "jar": "balm-neoforge-26.1.2-26.1.2.8.jar",
+      "version": "26.1.2.9",
+      "jar": "balm-neoforge-26.1.2-26.1.2.9.jar",
       "curseforge_id": 531761,
       "url": "https://www.curseforge.com/minecraft/mc-mods/balm"
     },
@@ -69,8 +69,8 @@
     },
     {
       "name": "BBL Utility",
-      "version": "26.1.2-2.7.12",
-      "jar": "utility-26.1.2-2.7.12.jar",
+      "version": "26.1.2-2.7.13",
+      "jar": "utility-26.1.2-2.7.13.jar",
       "curseforge_id": 649644,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-utility"
     },
@@ -139,8 +139,8 @@
     },
     {
       "name": "Cucumber Library",
-      "version": "26.1.2-9.0.4",
-      "jar": "Cucumber-26.1.2-9.0.4.jar",
+      "version": "26.1.2-9.0.5",
+      "jar": "Cucumber-26.1.2-9.0.5.jar",
       "curseforge_id": 272335,
       "url": "https://www.curseforge.com/minecraft/mc-mods/cucumber"
     },
@@ -201,6 +201,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/ender-io"
     },
     {
+      "name": "Equivox",
+      "version": "1.0.0",
+      "jar": "equivox-1.0.0.jar",
+      "curseforge_id": 1597601,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/equivox"
+    },
+    {
       "name": "Ex Deorum",
       "version": "4.0",
       "jar": "exdeorum-4.0.jar",
@@ -209,8 +216,8 @@
     },
     {
       "name": "Farming for Blockheads",
-      "version": "26.1.2.1",
-      "jar": "farmingforblockheads-neoforge-26.1.2-26.1.2.1.jar",
+      "version": "26.1.2.2",
+      "jar": "farmingforblockheads-neoforge-26.1.2-26.1.2.2.jar",
       "curseforge_id": 261924,
       "url": "https://www.curseforge.com/minecraft/mc-mods/farming-for-blockheads"
     },
@@ -293,8 +300,8 @@
     },
     {
       "name": "Haven Skyblock Builder",
-      "version": "26.1.2-0.2.0",
-      "jar": "HavenSkyblockBuilder-26.1.2-0.2.0.jar",
+      "version": "26.1.2-0.2.1",
+      "jar": "HavenSkyblockBuilder-26.1.2-0.2.1.jar",
       "curseforge_id": 1179600,
       "url": "https://www.curseforge.com/minecraft/mc-mods/haven-skyblock-builder"
     },
@@ -314,8 +321,8 @@
     },
     {
       "name": "Just Enough Items (JEI)",
-      "version": "26.1.2-neoforge-29.16.0.46",
-      "jar": "jei-26.1.2-neoforge-29.16.0.46.jar",
+      "version": "26.1.2-neoforge-29.16.0.47",
+      "jar": "jei-26.1.2-neoforge-29.16.0.47.jar",
       "curseforge_id": 238222,
       "url": "https://www.curseforge.com/minecraft/mc-mods/jei"
     },
@@ -453,16 +460,9 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected"
     },
     {
-      "name": "ProjectEE",
-      "version": "1.2.3",
-      "jar": "projectee-1.2.3.jar",
-      "curseforge_id": 1597601,
-      "url": "https://www.curseforge.com/minecraft/mc-mods/projectee"
-    },
-    {
       "name": "Puzzles Lib",
-      "version": "v26.1.11-mc26.1.x-NeoForge",
-      "jar": "PuzzlesLib-v26.1.11-mc26.1.x-NeoForge.jar",
+      "version": "v26.1.12-mc26.1.x-NeoForge",
+      "jar": "PuzzlesLib-v26.1.12-mc26.1.x-NeoForge.jar",
       "curseforge_id": 495476,
       "url": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib"
     },
@@ -531,22 +531,22 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.78.1969",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.78.1969.jar",
+      "version": "26.1.2-3.25.80.1992",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.80.1992.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.84.2142",
-      "jar": "sophisticatedcore-26.1.2-1.4.84.2142.jar",
+      "version": "26.1.2-1.4.89.2165",
+      "jar": "sophisticatedcore-26.1.2-1.4.89.2165.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.89.1952",
-      "jar": "sophisticatedstorage-26.1.2-1.5.89.1952.jar",
+      "version": "26.1.2-1.5.96.1988",
+      "jar": "sophisticatedstorage-26.1.2-1.5.96.1988.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },
