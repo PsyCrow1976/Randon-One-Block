@@ -4,7 +4,22 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.2] — 2026-07-21
+
+### Docs — endgame plan (design only)
+
+Checked in **[`theatlasplan.md`](theatlasplan.md)** — detailed design for the pack’s true end goal, to implement **after** remaining quest → mod pool unlocks are finished.
+
+- **Randon Atlas** — team tracks unique blocks rolled from the center block; curated endgame set is the collection win
+- **Echo (100,000 Randon Mined)** — guaranteed trophy break / climax on the team mine counter
+- **Hybrid pool unlocks** — quest-only, milestone-only, quest + milestone, and **player-selectable** unlocks at mine thresholds (e.g. 1,000 and 5,000)
+- **Final win (recommended)** — complete both Atlas and Echo; prestige / “stabilize the block” stays pinned for a future pack version
+
+No gameplay scripts changed in this release — plan and version docs only.
 
 ---
 
