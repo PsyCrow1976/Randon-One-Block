@@ -4,7 +4,20 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under that milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.1] — 2026-07-21
+
+### Known issue — Equivox Philosopher’s Stone crash
+
+Using the **Philosopher’s Stone** on a world-transmutable block (dirt, sand, cobble, etc.) crashes the game on **NeoForge 26.1.2.76**.
+
+- **Cause** — Equivox `1.0.0` calls an old `CommonHooks.fireBlockBreak` signature (`ServerPlayer` → `BlockEvent.BreakEvent`). NeoForge **26.1.2.21-beta+** (including **.76**) uses `Player` → `BreakBlockEvent` instead, which raises `NoSuchMethodError`.
+- **Not a pack bug** — Random One Block / KubeJS are not involved; the crash is entirely inside Equivox when the stone tries to replace a block.
+- **Workaround** — Do not use Philosopher’s Stone world-transmutation until a rebuilt Equivox JAR is available.
+- **Upstream** — Reported to the Equivox maintainer: [Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5). Draft text for that request lives in [`request.md`](request.md).
 
 ---
 
