@@ -4,7 +4,73 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.3] — 2026-08-03
+
+### NeoForge + loader bump
+
+- **NeoForge** **26.1.2.76** → **26.1.2.94** (required by several updated mods)
+- Minecraft stays **26.1.2**
+
+### Fix — game crash on launch after NeoForge update
+
+Updating NeoForge caused an immediate **bootstrap crash** (never reached the main menu):
+
+```
+Critical injection failure: bat$getTooltipLines
+betteradvancedtooltips.mixins.json:ItemStackMixin
+(0/1) succeeded — Scanned 0 target(s)
+```
+
+- **Cause** — **Better Advanced Tooltips** `2601.1.0-build.8` is jar-in-jar’d inside **KubeJS 8.0.4**. Its mixin still targeted the old `ItemStack.addDetailsToTooltip` path (`PatchedDataComponentMap.size()`). NeoForge reworked advanced tooltips into Head/Middle/Tail/Components, so the injection found **0 targets** and hard-crashed.
+- **Fix** — Ship standalone **Better Advanced Tooltips `2601.1.0-build.9`**, which retargets the mixin to `addDetailsToTooltipTail`. The standalone jar overrides the older jar-in-jar from KubeJS.
+- **Also logged (non-fatal)** — BBL Utility `2.8.0` has an empty `[[mixins]]` entry (`Missing "config"`); does not block launch.
+
+### Mods
+
+**Added (4):**
+
+| Mod | Version |
+|-----|---------|
+| Better Advanced Tooltips | `2601.1.0-build.9` (crash-fix override) |
+| Patchouli | `26.1-94` |
+| Refined Cooking | `26.1.2-7.3.1` |
+| The Ultimate Poop Mod | `1.2.0` |
+
+**Updated (21):**
+
+| Mod | From → To |
+|-----|-----------|
+| Apotheosis | 9.0.2 → 9.0.3 |
+| Apothic Spawners | 2.0.0 → 2.0.1 |
+| Balm | 26.1.2.9 → 26.1.2.11 |
+| Bookshelf | 26.1.2.14 → 26.1.2.15 |
+| Curios | 15.0.0-beta.2 → 15.0.0 |
+| Easy Ore Generation | v1.0.2 → v1.0.3 |
+| Farming for Blockheads | 26.1.2.2 → 26.1.2.3 |
+| FTB XMod Compat | 26.1.2.1 → 26.1.2.2 |
+| Gateways to Eternity | 6.0.1 → 6.0.2 |
+| GraveStone | 1.0.37 → 1.0.38 |
+| JEI | 29.16.0.47 → 29.21.0.66 |
+| Just Enough Resources | 1.10.0.35 → 1.10.1.40 |
+| KubeJS | 8.0.3 → 8.0.4 |
+| Mystical Agradditions | 9.0.1 → 9.0.2 |
+| Placebo | 10.0.1 → 10.0.2 |
+| Rhino | 2101.2.7-build.85 → 2101.2.8-build.91 |
+| Sophisticated Backpacks | 3.25.80.1992 → 3.25.83.2019 |
+| Sophisticated Core | 1.4.89.2165 → 1.4.93.2195 |
+| Sophisticated Storage | 1.5.96.1988 → 1.5.101.2030 |
+| BBL Utility | 2.7.13 → 2.8.0 |
+| Simple Voice Chat | 2.6.20 → 2.6.21 |
+
+**Mod count:** 81 → **85** (`modlist.md` / instance refresh; includes the standalone BAT override jar).
+
+### Still known
+
+- **Equivox Philosopher’s Stone** world-transmutation crash (see **1.0.5.1** / [Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) is unchanged by this NeoForge bump until upstream rebuilds Equivox.
 
 ---
 

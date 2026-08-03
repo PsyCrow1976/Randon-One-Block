@@ -38,7 +38,7 @@ If you enjoy this pack, play the original too — [Chaos OneBlock](https://www.c
 | Component | Version |
 |-----------|---------|
 | Minecraft | 26.1.2 |
-| NeoForge | 26.1.2.76 |
+| NeoForge | 26.1.2.94 |
 | KubeJS | 26.1.2-8.0.3 |
 
 ## Quick start (Random One Block)
@@ -495,7 +495,7 @@ MODLIST_INSTANCE="/path/to/instance" ./update-modlist.sh
 3. Paste the printed mod bullets into `CHANGELOG.md` under a new version heading.
 4. Commit `modlist.md`, `modlist.json`, and `CHANGELOG.md` together.
 
-Current inventory: see [`modlist.md`](modlist.md) (73 mods, Minecraft 26.1.2 / NeoForge 26.1.2.76 as of last refresh).
+Current inventory: see [`modlist.md`](modlist.md) (85 mods, Minecraft 26.1.2 / NeoForge 26.1.2.94 as of last refresh).
 
 ## Status
 

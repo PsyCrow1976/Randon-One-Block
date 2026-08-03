@@ -34,7 +34,7 @@ modlist_json = os.path.join(repo, "modlist.json")
 modlist_md = os.path.join(repo, "modlist.md")
 
 MC_VERSION = "26.1.2"
-NEOFORGE = "26.1.2.76"
+NEOFORGE = "26.1.2.76"  # overridden from minecraftinstance.json when present
 
 LOADER_PREFIX_RE = re.compile(
     r"^(?:neoforge(?:-mc)?|forge|fabric)-(?:mc)?[\d.]+(?:\+[\d.]+)?-|^mc[\d.]+-|^config-",
@@ -80,8 +80,31 @@ def load_previous():
         data = json.load(f)
     return {m["jar"]: m for m in data.get("mods", [])}
 
+def loader_versions():
+    """Minecraft + NeoForge from the CurseForge instance when available."""
+    mc, nf = MC_VERSION, NEOFORGE
+    if os.path.isfile(instance_json):
+        with open(instance_json) as f:
+            data = json.load(f)
+        base = data.get("baseModLoader") or {}
+        if base.get("forgeVersion"):
+            nf = str(base["forgeVersion"])
+        # inheritsFrom is the Minecraft version id for NeoForge installs
+        vj = base.get("versionJson")
+        if isinstance(vj, str):
+            try:
+                vj = json.loads(vj)
+            except json.JSONDecodeError:
+                vj = None
+        if isinstance(vj, dict) and vj.get("inheritsFrom"):
+            mc = str(vj["inheritsFrom"])
+        elif data.get("gameVersion"):
+            mc = str(data["gameVersion"])
+    return mc, nf
+
 def scan_mods():
     mods = []
+    seen = set()
     if os.path.isfile(instance_json):
         with open(instance_json) as f:
             data = json.load(f)
@@ -100,22 +123,35 @@ def scan_mods():
             if m.get("webSiteURL"):
                 entry["url"] = m["webSiteURL"]
             mods.append(entry)
-    elif os.path.isdir(mods_dir):
+            seen.add(jar)
+    # Also pick up jars present on disk but not in CurseForge's installedAddons
+    # (e.g. manual crash-fix overrides like Better Advanced Tooltips).
+    if os.path.isdir(mods_dir):
         for jar in sorted(os.listdir(mods_dir)):
-            if not jar.endswith(".jar"):
+            if not jar.endswith(".jar") or jar in seen:
                 continue
             stem = jar[:-4]
-            mods.append({"name": stem, "version": stem, "jar": jar})
-    else:
+            # Friendly names for known manual jars
+            if jar.startswith("better-advanced-tooltips-"):
+                name = "Better Advanced Tooltips"
+            else:
+                name = stem
+            mods.append({
+                "name": name,
+                "version": version_from_jar(name, jar),
+                "jar": jar,
+            })
+            seen.add(jar)
+    if not mods:
         raise SystemExit(f"error: no mods found in {instance}")
     mods.sort(key=lambda x: x["name"].lower())
     return mods
 
-def write_outputs(mods):
+def write_outputs(mods, mc_version, neoforge):
     payload = {
         "generated": str(date.today()),
-        "minecraft": MC_VERSION,
-        "neoforge": NEOFORGE,
+        "minecraft": mc_version,
+        "neoforge": neoforge,
         "mod_count": len(mods),
         "mods": mods,
     }
@@ -126,7 +162,7 @@ def write_outputs(mods):
     lines = [
         "# Mod list",
         "",
-        f"**Minecraft:** {MC_VERSION} · **NeoForge:** {NEOFORGE} · **Mods:** {len(mods)}",
+        f"**Minecraft:** {mc_version} · **NeoForge:** {neoforge} · **Mods:** {len(mods)}",
         "",
         f"*Last updated: {payload['generated']}*",
         "",
@@ -160,8 +196,9 @@ def diff_mods(previous, current):
     return added, removed, changed
 
 previous = load_previous()
+mc_version, neoforge = loader_versions()
 mods = scan_mods()
-payload = write_outputs(mods)
+payload = write_outputs(mods, mc_version, neoforge)
 added, removed, changed = diff_mods(previous, mods)
 
 print(f"updated modlist ({len(mods)} mods) -> {modlist_json}")

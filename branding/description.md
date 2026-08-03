@@ -48,7 +48,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | Part | How |
 |------|-----|
-| Mod selection & versions | Picked for MC 26.1.2 / NeoForge 26.1.2.76 |
+| Mod selection & versions | Picked for MC 26.1.2 / NeoForge 26.1.2.94 |
 | Random center block | KubeJS (`kubejs/server_scripts/random_one_block.js`) |
 | Skyblock islands | Haven Skyblock Builder + `oneblock_island` template |
 | Quest book | FTB Quests JSON5 in `config/ftbquests/` — AI-assisted authoring |
@@ -66,7 +66,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 |--|--|
 | Pack version | **1.0.5.0** |
 | Minecraft | 26.1.2 |
-| NeoForge | 26.1.2.76 |
+| NeoForge | 26.1.2.94 |
 | Mods | 81 |
 
 ---
