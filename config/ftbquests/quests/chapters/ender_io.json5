@@ -2440,8 +2440,14 @@
       ],
     },
     {
+      icon: {
+        id: "enderio:grains_of_infinity",
+        count: 1,
+      },
       x: -1.0,
       y: -7.5,
+      shape: "gear",
+      size: 1.5,
       id: "518552CB092F4771",
       tasks: [
         {
@@ -2451,6 +2457,13 @@
             id: "enderio:grains_of_infinity",
             count: 1,
           },
+        },
+      ],
+      rewards: [
+        {
+          id: "2C8E1A9F4B6D7053",
+          type: "xp",
+          xp: 10,
         },
       ],
     },

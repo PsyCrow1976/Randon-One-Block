@@ -39,21 +39,48 @@ if not instance_json.is_file():
 with open(instance_json) as f:
     inst = json.load(f)
 
-files = [
-    {
+# NeoForge version from the playtest instance (fallback if missing)
+neoforge = "26.1.2.94"
+base = inst.get("baseModLoader") or {}
+if base.get("forgeVersion"):
+    neoforge = str(base["forgeVersion"])
+mc_version = "26.1.2"
+vj = base.get("versionJson")
+if isinstance(vj, str):
+    try:
+        vj = json.loads(vj)
+    except json.JSONDecodeError:
+        vj = None
+if isinstance(vj, dict) and vj.get("inheritsFrom"):
+    mc_version = str(vj["inheritsFrom"])
+
+files = []
+manifest_jars = set()
+for a in inst.get("installedAddons", []):
+    if not (a.get("addonID") and a.get("installedFile", {}).get("id")):
+        continue
+    jar = a.get("fileNameOnDisk") or ""
+    if jar:
+        manifest_jars.add(jar)
+    files.append({
         "projectID": a["addonID"],
         "fileID": a["installedFile"]["id"],
         "required": True,
-    }
-    for a in inst.get("installedAddons", [])
-    if a.get("addonID") and a.get("installedFile", {}).get("id")
-]
+    })
 files.sort(key=lambda x: (x["projectID"], x["fileID"]))
+
+# Jars present on disk but not on CurseForge (manual overrides, e.g. BAT crash fix)
+mods_dir = instance / "mods"
+override_jars = []
+if mods_dir.is_dir():
+    for jar_path in sorted(mods_dir.glob("*.jar")):
+        if jar_path.name not in manifest_jars:
+            override_jars.append(jar_path)
 
 manifest = {
     "minecraft": {
-        "version": "26.1.2",
-        "modLoaders": [{"id": "neoforge-26.1.2.76", "primary": True}],
+        "version": mc_version,
+        "modLoaders": [{"id": f"neoforge-{neoforge}", "primary": True}],
     },
     "manifestType": "minecraftModpack",
     "manifestVersion": 1,
@@ -78,6 +105,12 @@ try:
     if dc.is_dir() and any(dc.iterdir()):
         shutil.copytree(dc, overrides / "defaultconfigs")
 
+    if override_jars:
+        omods = overrides / "mods"
+        omods.mkdir(parents=True, exist_ok=True)
+        for jp in override_jars:
+            shutil.copy2(jp, omods / jp.name)
+
     (build_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
     dist.parent.mkdir(parents=True, exist_ok=True)
@@ -98,7 +131,11 @@ try:
 finally:
     shutil.rmtree(build_dir, ignore_errors=True)
 
-print(f"built {dist} ({len(files)} mods, {dist.stat().st_size} bytes)")
+extra = f", {len(override_jars)} override jar(s)" if override_jars else ""
+print(f"built {dist} ({len(files)} CF mods{extra}, NeoForge {neoforge}, {dist.stat().st_size} bytes)")
+if override_jars:
+    for jp in override_jars:
+        print(f"  overrides/mods/{jp.name}")
 PY
 
 if [[ "${CF_SKIP_METADATA:-0}" == "1" ]]; then

@@ -20,7 +20,7 @@
   "task.7FC7F7ACB3A4DF19.title": "Obtain Salt Filter",
   "quest.53BCA908AD32307B.quest_subtitle": "Craft or obtain Crafting Book",
   "quest.30746B2212F2EDBF.title": "Salt Filter Speedrun Any%",
-  "quest.1CE050098AF388B9.quest_subtitle": "Craft or obtain Cooking for Blockheads I",
+  "quest.1CE050098AF388B9.quest_subtitle": "Unlocks Cooking for Blockheads pool",
   "quest.11AF1EDA1DFFFEA8.quest_desc": [
     "The &eCoffee Machine&r produces liquid motivation. Scientists hate this one trick.",
     "",
@@ -154,14 +154,13 @@
   "quest.6D7F2D3CBEB88750.quest_subtitle": "Craft or obtain Chicken Sink",
   "task.2F7CBC2CF5A492DB.title": "Obtain Cutting Board",
   "quest.1CE050098AF388B9.quest_desc": [
-    "Cooking for Blockheads I — a item from the Cooking for Blockheads mod.",
+    "The &eCooking for Blockheads&r recipe book (tier I) is your kitchen remote control — open it next to a cooking table network and stop hand-crafting every meal like a medieval peasant.",
     "",
-    "Cooking for Blockheads lets you build a real kitchen instead of starving next to a dirt cube. Fridges, ovens, and cow jars are your friends.",
+    "This is the entry book for the Cooking for Blockheads chapter. Craft or obtain &fcookingforblockheads:recipe_book&r (check JEI for the exact grid on this pack).",
     "",
-    "How to make it:",
-    "• Smelt the ingredients in a furnace or powered smelter.",
+    "Once you have it, place a cooking table, surround it with counters/cabinets/fridges, and right-click the book to pull ingredients from the whole kitchen multiblock.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+    "&aCompleting this quest unlocks Cooking for Blockheads blocks in the random one-block pool for your team.&r"
   ],
   "quest.30746B2212F2EDBF.quest_desc": [
     "Salt Filter — a item from the Cooking for Blockheads mod.",

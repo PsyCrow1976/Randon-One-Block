@@ -35,7 +35,7 @@
     "",
     "Pair it with Animal Pens so eggs, feathers, and clucks become a renewable farm instead of a one-time random-block miracle."
   ],
-  "quest.3EA62AD030A3C93F.quest_subtitle": "Craft or obtain Animal Cage",
+  "quest.3EA62AD030A3C93F.quest_subtitle": "Unlocks Animal Pens pool",
   "quest.7DB96AA7E220D755.quest_subtitle": "Craft or obtain Bird Catcher",
   "task.0F046E526F0873D9.title": "Obtain Aviary",
   "quest.1C7FED3D2D265AC5.quest_subtitle": "Craft or obtain Water Animal Container",
@@ -48,7 +48,9 @@
   "quest.3EA62AD030A3C93F.quest_desc": [
     "The &eAnimal Cage&r is Pokémon for cows — capture, transport, and rehome livestock without the \"how do I boat a pig through the void?\" speedrun.",
     "",
-    "Use it to catch animals and move them into pens. On skyblock, every sheep you do not lose to the void is a moral victory."
+    "Use it to catch animals and move them into pens. On skyblock, every sheep you do not lose to the void is a moral victory.",
+    "",
+    "&aCompleting this quest unlocks Animal Pens blocks in the random one-block pool for your team.&r"
   ],
   "task.040D6E7BE4554820.title": "Obtain Animal Cage"
 }

@@ -88,7 +88,11 @@
   ],
   "quest.14476D72BE2C9327.quest_subtitle": "Craft or obtain Upgrade Gold",
   "quest.4AFA152134251B52.quest_desc": [
-    "Complete the checkmark to continue."
+    "Congratulations: you have reinvented fire in a stone box.",
+    "",
+    "The humble &evanilla furnace&r is the entry ticket to the Iron Furnaces chapter. Craft one with eight cobblestone around a hole in a crafting grid (or fish one from random-block luck).",
+    "",
+    "It smelts ore, cooks food, and quietly judges every other machine you will ever build. Place it, feed it fuel, and prepare to outgrow it almost immediately — that is the whole point of this tab."
   ],
   "quest.7A561DE76B26741B.title": "Augment: Factory",
   "quest.049F9D93E8DF26E3.quest_desc": [
@@ -103,7 +107,9 @@
     "",
     "Smelts in 160 ticks (vanilla is 200) and can store Forge Energy for augments and generator mode. Tier 0 furnace — the foundation every higher tier builds on.",
     "",
-    "Right-click to open the GUI. Sneak + right-click with an upgrade item to skip crafting the next tier in place."
+    "Right-click to open the GUI. Sneak + right-click with an upgrade item to skip crafting the next tier in place.",
+    "",
+    "&aCompleting this quest unlocks Iron Furnaces blocks in the random one-block pool for your team.&r"
   ],
   "task.1D9F496FD77EA9EC.title": "Obtain Item Spooky",
   "quest.40983CB2F690AF03.quest_subtitle": "Craft or obtain Augment Fuel",
@@ -138,7 +144,7 @@
   "task.7CBF1B1F6D092C51.title": "Obtain Item Xmas",
   "quest.21872D777913BE13.title": "Obtain Augment Smoking",
   "quest.1C0C1985B88F543D.quest_subtitle": "Craft or obtain Item Heater",
-  "quest.4AFA152134251B52.quest_subtitle": "Complete this step",
+  "quest.4AFA152134251B52.quest_subtitle": "Stone box, big dreams",
   "quest.7C83318981ED790C.quest_subtitle": "Craft or obtain Item Xmas",
   "quest.04D7C76007348E46.quest_subtitle": "Craft or obtain Heater",
   "quest.3D4440032F9BAFC5.quest_subtitle": "Craft or obtain Upgrade Iron",
@@ -167,7 +173,7 @@
   ],
   "quest.1B533C62C95B07BA.title": "Copper to Iron Furnace Upgrade",
   "quest.354EE25BE0B4349B.title": "Obtain Upgrade Crystal",
-  "quest.4AFA152134251B52.title": "Quest Step",
+  "quest.4AFA152134251B52.title": "A Proper Furnace",
   "quest.20C5811BEF1522F8.title": "Diamond to Emerald Furnace Upgrade",
   "quest.42984C4FB5802407.title": "Augment: Speed",
   "quest.1C0C1985B88F543D.title": "Obtain Item Heater",
@@ -260,7 +266,7 @@
   "quest.42984C4FB5802407.quest_subtitle": "Craft or obtain Augment Speed",
   "quest.00D6116991E6BD48.quest_subtitle": "Craft or obtain Augment Blasting",
   "quest.40CB57D348F204FB.title": "Obtain Augment Generator",
-  "quest.4A0F15D5841517B4.quest_subtitle": "Craft or obtain Iron Furnace",
+  "quest.4A0F15D5841517B4.quest_subtitle": "Unlocks Iron Furnaces pool",
   "task.5E57FB6ED83B846A.title": "Obtain Golden Furnace",
   "task.5C8CE2898540C857.title": "Obtain Rainbow Plating",
   "quest.18510CC7E91B08E7.quest_desc": [
@@ -288,7 +294,7 @@
     "Utility block in Iron Furnaces for keeping smelting lines fed with heat without babysitting each furnace."
   ],
   "quest.750C98658E184B97.title": "Copper Furnace",
-  "task.1FF0AE91F3D7BB24.title": "Obtain Quest",
+  "task.1FF0AE91F3D7BB24.title": "Obtain a Furnace",
   "quest.432945B92901C276.quest_subtitle": "Craft or obtain Item Spooky",
   "task.25B3D6D80091C235.title": "Obtain Million Furnace"
 }

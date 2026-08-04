@@ -635,7 +635,7 @@
   "task.39DC5BF01BB4D77B.title": "Obtain Soulium Dagger",
   "quest.2B1F2CFDBA0FA525.title": "Certified Tertium Ingot Moment",
   "quest.20F62E8ED3C4B1AC.quest_subtitle": "Craft or obtain Awakened Supremium Leggings",
-  "quest.64992D4C546E810C.quest_subtitle": "Craft or obtain Prosperity Shard",
+  "quest.64992D4C546E810C.quest_subtitle": "Unlocks Mystical Agriculture pools",
   "quest.6FF337FA81EA82B5.title": "Island Approved Supremium Boots",
   "task.3CE628C4F99395A0.title": "Obtain Imperium Gemstone",
   "quest.61C69D1D80AB3B1F.quest_desc": [
@@ -1090,14 +1090,13 @@
     "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
   ],
   "quest.64992D4C546E810C.quest_desc": [
-    "Prosperity Shard — a item from the Mystical Agriculture mod.",
+    "&eProsperity Shards&r are the glittery backbone of Mystical Agriculture — infusion crystals, seed bases, gemstones, and half the \"grow your resources\" tech tree start here.",
     "",
-    "Mystical Agriculture lets you grow resources from seeds. Plant inferium, escalate through tiers, and turn crops into crafting materials.",
+    "This is the entry material for the Mystical Agriculture chapter. Check JEI for &fmysticalagriculture:prosperity_shard&r (often from prosperity ore / essence crafting on this pack) and stockpile early.",
     "",
-    "How to make it:",
-    "• Open JEI, search this item, and follow the recipe shown for your setup.",
+    "From here: prosperity seed base → resource seeds, infusion crystals, farmland tiers, and the whole crop-to-ingot pipeline — plus Agradditions extras and Mystical Automation machines.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe."
+    "&aCompleting this quest unlocks three minable pools for your team: Mystical Agriculture, Mystical Agradditions, and Mystical Automation.&r"
   ],
   "quest.78EEEA118ABFD1B9.title": "The Diamond Sickle Situation",
   "task.13D132E77DB9CD4B.title": "Obtain Awakened Supremium Bow",

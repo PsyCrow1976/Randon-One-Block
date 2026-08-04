@@ -244,14 +244,13 @@
   "quest.6DACA6DB25080CAE.quest_subtitle": "Craft or obtain Disk Interface",
   "quest.21A3C749A9304A12.title": "Disk Jockey",
   "quest.17B9DD11F1594D60.quest_desc": [
-    "Silicon — a item from the Refined Storage mod.",
+    "&eSilicon&r is the sand-to-circuits miracle that every Refined Storage processor and disk starts with.",
     "",
-    "Refined Storage is digital hoarding done right — disks, grids, and autocrafting for when your random block vomits ingredients faster than you can sort them.",
+    "This is the entry material for the Refined Storage chapter. Smelt quartz (or follow JEI for &frefinedstorage:silicon&r on this pack) and stockpile it — you will burn through stacks once processors and storage parts unlock.",
     "",
-    "How to make it:",
-    "• Smelt the ingredients in a furnace or powered smelter.",
+    "From here: raw processors → processors → quartz-enriched iron/copper → controller, cables, disks, and the grid that ends inventory Tetris forever.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "&aCompleting this quest unlocks Refined Storage blocks in the random one-block pool for your team.&r"
   ],
   "quest.4A9AED0EF928102F.quest_desc": [
     "Raw Improved Processor — a item from the Refined Storage mod.",
@@ -326,7 +325,7 @@
   "quest.39C8296067DE3836.quest_subtitle": "Craft or obtain 64k Storage Block",
   "quest.7010EFD8C8DBE822.quest_subtitle": "Craft or obtain Constructor",
   "task.6537E08043374B85.title": "Obtain Silicon",
-  "quest.17B9DD11F1594D60.quest_subtitle": "Craft or obtain Silicon",
+  "quest.17B9DD11F1594D60.quest_subtitle": "Unlocks Refined Storage pool",
   "task.260C0F458651225A.title": "Obtain Stack Upgrade",
   "quest.1B9A8F5316263C41.quest_desc": [
     "Security Card — a item from the Refined Storage mod.",

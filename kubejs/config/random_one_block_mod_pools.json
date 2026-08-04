@@ -20,6 +20,7 @@
       "cookingforblockheads",
       "darkutils",
       "easy_piglins",
+      "easy_villagers",
       "easyoregeneration",
       "elevatorid",
       "enderio",
@@ -62,7 +63,16 @@
     "exdeorum": "Ex Deorum",
     "easyoregeneration": "Easy Ore Generation",
     "enderio": "Ender IO",
-    "equivox": "Equivox"
+    "equivox": "Equivox",
+    "ironfurnaces": "Iron Furnaces",
+    "animal_pen": "Animal Pens",
+    "easy_villagers": "Easy Villagers",
+    "easy_piglins": "Easy Piglins",
+    "cookingforblockheads": "Cooking for Blockheads",
+    "powah": "Powah",
+    "mysticalagriculture": "Mystical Agriculture",
+    "mysticalagradditions": "Mystical Agradditions",
+    "mysticalautomation": "Mystical Automation"
   },
 
   "_quest_unlocks_readme": [
@@ -70,10 +80,11 @@
     "The two maps below (quest_unlock_map + quest_task_fallback) are what enable additional",
     "mod namespaces in the random one-block pool when a team completes FTB Quests.",
     "",
-    "quest_unlock_map   = quest hex id → mod namespace unlocked for the island team",
+    "quest_unlock_map   = quest hex id → mod namespace (string) OR array of namespaces",
+    "                    (one quest may unlock multiple pools, e.g. Mystical Agriculture trio)",
     "quest_task_fallback = same quest hex id → task hex id(s) KubeJS listens on (required)",
     "",
-    "Complete the quest → that mod's full-cube mineable blocks can roll from the center block.",
+    "Complete the quest → those mods' full-cube mineable blocks can roll from the center block.",
     "Manual override: /randomblock poolenable <mod> true",
     "When adding a new unlock: add BOTH map entries. See howtoquest.md § Random block mod unlocks."
   ],
@@ -116,6 +127,88 @@
       "unlocks_mod": "equivox",
       "unlocks_display_name": "Equivox",
       "note": "Equivox chapter twin of Getting Started Red Rock — same item; either quest unlocks the pool"
+    },
+    "4A0F15D5841517B4": {
+      "chapter": "Iron Furnaces (iron_furnaces.json5)",
+      "quest_title": "Iron Furnace",
+      "item": "ironfurnaces:iron_furnace",
+      "task_id": "5994733C3BB63588",
+      "task_title": "Obtain Iron Furnace",
+      "unlocks_mod": "ironfurnaces",
+      "unlocks_display_name": "Iron Furnaces"
+    },
+    "3EA62AD030A3C93F": {
+      "chapter": "Animal Pens (animal_pens.json5)",
+      "quest_title": "Obtain Animal Cage",
+      "item": "animal_pen:animal_cage",
+      "task_id": "040D6E7BE4554820",
+      "task_title": "Obtain Animal Cage",
+      "unlocks_mod": "animal_pen",
+      "unlocks_display_name": "Animal Pens"
+    },
+    "05F1AEB401CE12C2": {
+      "chapter": "Easy Villagers (easy_villagers.json5)",
+      "quest_title": "Obtain Villager",
+      "item": "easy_villagers:villager",
+      "task_id": "488DAC370EC294A1",
+      "task_title": "Obtain Villager",
+      "unlocks_mod": "easy_villagers",
+      "unlocks_display_name": "Easy Villagers"
+    },
+    "4A6ECCE2C19D4FF7": {
+      "chapter": "Easy Villagers (easy_villagers.json5)",
+      "quest_title": "Obtain Piglin",
+      "item": "easy_piglins:piglin",
+      "task_id": "0B2FEB287175A68B",
+      "task_title": "Obtain Piglin",
+      "unlocks_mod": "easy_piglins",
+      "unlocks_display_name": "Easy Piglins"
+    },
+    "518552CB092F4771": {
+      "chapter": "Ender IO (ender_io.json5)",
+      "quest_title": "Grains of Infinity",
+      "item": "enderio:grains_of_infinity",
+      "task_id": "1FED7A48A3A1EB97",
+      "task_title": "Obtain Grains of Infinity",
+      "unlocks_mod": "enderio",
+      "unlocks_display_name": "Ender IO"
+    },
+    "1CE050098AF388B9": {
+      "chapter": "Cooking for Blockheads (cooking_for_blockheads.json5)",
+      "quest_title": "The Cooking for Blockheads Situation",
+      "item": "cookingforblockheads:recipe_book",
+      "task_id": "78F24EFC67EACE56",
+      "task_title": "Obtain Cooking for Blockheads I",
+      "unlocks_mod": "cookingforblockheads",
+      "unlocks_display_name": "Cooking for Blockheads"
+    },
+    "17B9DD11F1594D60": {
+      "chapter": "Refined Storage (refined_storage.json5)",
+      "quest_title": "Island Approved Silicon",
+      "item": "refinedstorage:silicon",
+      "task_id": "6537E08043374B85",
+      "task_title": "Obtain Silicon",
+      "unlocks_mod": "refinedstorage",
+      "unlocks_display_name": "Refined Storage"
+    },
+    "0C4DAD640F4FA430": {
+      "chapter": "Powah (powah.json5)",
+      "quest_title": "Dielectric Paste Speedrun Any%",
+      "item": "powah:dielectric_paste",
+      "task_id": "32A76EA57E8C2783",
+      "task_title": "Obtain Dielectric Paste",
+      "unlocks_mod": "powah",
+      "unlocks_display_name": "Powah"
+    },
+    "64992D4C546E810C": {
+      "chapter": "Mystical Agriculture (mystical_agriculture.json5)",
+      "quest_title": "Prosperity Shard Speedrun Any%",
+      "item": "mysticalagriculture:prosperity_shard",
+      "task_id": "75E1D69E409B055C",
+      "task_title": "Obtain Prosperity Shard",
+      "unlocks_mod": ["mysticalagriculture", "mysticalagradditions", "mysticalautomation"],
+      "unlocks_display_name": "Mystical Agriculture + Agradditions + Automation",
+      "note": "One quest unlocks all three related minable pools"
     }
   },
 
@@ -123,13 +216,31 @@
     "1D5A582F52D7CB30": "sophisticatedstorage",
     "5F76BA38891F3B07": "exdeorum",
     "57BD1D73E42470EF": "equivox",
-    "32DD7832C096CE0F": "equivox"
+    "32DD7832C096CE0F": "equivox",
+    "4A0F15D5841517B4": "ironfurnaces",
+    "3EA62AD030A3C93F": "animal_pen",
+    "05F1AEB401CE12C2": "easy_villagers",
+    "4A6ECCE2C19D4FF7": "easy_piglins",
+    "518552CB092F4771": "enderio",
+    "1CE050098AF388B9": "cookingforblockheads",
+    "17B9DD11F1594D60": "refinedstorage",
+    "0C4DAD640F4FA430": "powah",
+    "64992D4C546E810C": ["mysticalagriculture", "mysticalagradditions", "mysticalautomation"]
   },
 
   "quest_task_fallback": {
     "1D5A582F52D7CB30": ["1A2B3C4D5E6F7081"],
     "5F76BA38891F3B07": ["1A85CE9EB3CAAD93"],
     "57BD1D73E42470EF": ["6752A8FD5075C68D"],
-    "32DD7832C096CE0F": ["67A98B325DEE2D1C"]
+    "32DD7832C096CE0F": ["67A98B325DEE2D1C"],
+    "4A0F15D5841517B4": ["5994733C3BB63588"],
+    "3EA62AD030A3C93F": ["040D6E7BE4554820"],
+    "05F1AEB401CE12C2": ["488DAC370EC294A1"],
+    "4A6ECCE2C19D4FF7": ["0B2FEB287175A68B"],
+    "518552CB092F4771": ["1FED7A48A3A1EB97"],
+    "1CE050098AF388B9": ["78F24EFC67EACE56"],
+    "17B9DD11F1594D60": ["6537E08043374B85"],
+    "0C4DAD640F4FA430": ["32A76EA57E8C2783"],
+    "64992D4C546E810C": ["75E1D69E409B055C"]
   }
 }

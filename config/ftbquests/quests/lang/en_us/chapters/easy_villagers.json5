@@ -1,5 +1,5 @@
 {
-  "quest.4A6ECCE2C19D4FF7.quest_subtitle": "Craft or obtain Piglin",
+  "quest.4A6ECCE2C19D4FF7.quest_subtitle": "Unlocks Easy Piglins pool",
   "quest.7509E58C7D5B9193.quest_desc": [
     "The &eBarterer&r is a piglin vending machine that accepts gold and disappointment.",
     "",
@@ -78,15 +78,19 @@
   "quest.4A6ECCE2C19D4FF7.quest_desc": [
     "A bottled &ePiglin&r. Do not give it a lighter.",
     "",
-    "Easy Piglins packs mobs for bartering automation. Drop into the right machine to gold-for-loot without standing in fire."
+    "Easy Piglins packs mobs for bartering automation. Drop into the right machine to gold-for-loot without standing in fire.",
+    "",
+    "&aCompleting this quest unlocks Easy Piglins blocks in the random one-block pool for your team.&r"
   ],
   "quest.5C1C2360D9A77729.title": "Farmer",
   "quest.05F1AEB401CE12C2.quest_desc": [
     "A portable &eVillager&r — humanity's most passive-aggressive trading partner, now in to-go form.",
     "",
-    "Easy Villagers lets you pick up villagers as items. Place them into breeders, traders, and farms without boat Olympics across the void."
+    "Easy Villagers lets you pick up villagers as items. Place them into breeders, traders, and farms without boat Olympics across the void.",
+    "",
+    "&aCompleting this quest unlocks Easy Villagers blocks in the random one-block pool for your team.&r"
   ],
-  "quest.05F1AEB401CE12C2.quest_subtitle": "Craft or obtain Villager",
+  "quest.05F1AEB401CE12C2.quest_subtitle": "Unlocks Easy Villagers pool",
   "quest.535768FA01FE44C5.title": "Inventory Viewer",
   "quest.14AF719D11C684EE.quest_subtitle": "Craft or obtain Incubator"
 }

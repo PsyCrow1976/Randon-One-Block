@@ -8,14 +8,14 @@
 - [ ] Add **Gateways to Eternity** quest chapter (full progression beyond the intro quest in *Good to Know Mods*)
 - [X] Add **Ex Deorum** quest chapter
 - [ ] Add **Construction Wands** intro quest to *Good to Know Mods*
-- [ ] Add AnimalPens Chapter (trigger by creating Avian net)
+- [x] Add AnimalPens Chapter (Animal Cage unlocks `animal_pen` pool)
 - [ ] Add Aphothious Chapter (triggered by Enchanting table)
 - [ ] Add Bauble Heart Containers (triggered by getting minirature heart)
 - [ ] Add Constructions Sticks in a common chapter (exa good to knwo mods)
 - [ ] Add Dank Storage in common chaptr (ex good to know mods)
-- [ ] Add Easy Villiage/piglongs Chaptor (trigger by picking up villager)
+- [x] Add Easy Villagers/Piglins Chapter (Villager → `easy_villagers` pool; Piglin → `easy_piglins` pool)
 - [ ] Add Market in good to know mods
-- [ ] Add Iron Furnaces Chapter (triggered by Furnace)
+- [x] Add Iron Furnaces Chapter (triggered by Furnace; Iron Furnace unlocks `ironfurnaces` pool)
 - [ ] Add Mystical Agriculter (triggered by inferiums essens)
 - [ ] Catagories the modlist.md to core/lib mods, helper mods and dedicatde mods
 

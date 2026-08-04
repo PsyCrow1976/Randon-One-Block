@@ -517,7 +517,7 @@
   "quest.660AE5823B094AA8.title": "Stored Thunder",
   "task.727A5FBDF7848546.title": "Obtain Energizing Rod (Basic)",
   "quest.6034C5760E79C1CC.quest_subtitle": "Craft or obtain Ender Gate (Starter)",
-  "quest.0C4DAD640F4FA430.quest_subtitle": "Craft or obtain Dielectric Paste",
+  "quest.0C4DAD640F4FA430.quest_subtitle": "Unlocks Powah pool",
   "quest.40127A756CE98E46.quest_subtitle": "Craft or obtain Player Transmitter (Blazing)",
   "task.6AA41989D120925E.title": "Obtain Ender Cell (Niotic)",
   "task.062A819B3DFC0C41.title": "Obtain Dielectric Casing",
@@ -1123,14 +1123,13 @@
   "quest.55C8E48F20A36939.title": "Bold Move: Thermo Generator (Nitro)",
   "quest.5A610FD857156280.quest_subtitle": "Craft or obtain Uraninite",
   "quest.0C4DAD640F4FA430.quest_desc": [
-    "Dielectric Paste — a item from the Powah mod.",
+    "&eDielectric Paste&r is Powah's sticky starter goop — the clay/silicon/coal mash that turns into rods, casings, capacitors, and every machine that makes FE less theoretical.",
     "",
-    "Powah generates and stores FE for everything else on the island. Start small, dream of nitro cells, pretend you planned the cable route.",
+    "This is the entry material for the Powah chapter. Craft it shapeless (check JEI for &fpowah:dielectric_paste&r) and make a stack; almost every early recipe eats it.",
     "",
-    "How to make it:",
-    "• Shapeless crafting recipe — ingredients can sit anywhere in the grid.",
+    "From here: dielectric rods → casings → energizing orb/rod, furnators, solar panels, energy cells, and cables that actually move power across your island.",
     "",
-    "Skyblock tip: your random center block may eventually roll the parts — stash duplicates in storage until you have the full recipe.",
+    "&aCompleting this quest unlocks Powah blocks in the random one-block pool for your team.&r"
   ],
   "task.142D74F09D256B41.title": "Obtain Furnator (Blazing)",
   "quest.5AB5EE5D365B05BD.quest_desc": [

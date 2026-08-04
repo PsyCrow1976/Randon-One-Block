@@ -27,20 +27,57 @@ const DEFAULT_MOD_POOLS_CONFIG = {
   ],
   mod_display_names: {
     exdeorum: 'Ex Deorum',
-    sophisticatedstorage: 'Sophisticated Storage'
+    sophisticatedstorage: 'Sophisticated Storage',
+    ironfurnaces: 'Iron Furnaces',
+    animal_pen: 'Animal Pens',
+    easy_villagers: 'Easy Villagers',
+    easy_piglins: 'Easy Piglins',
+    enderio: 'Ender IO',
+    cookingforblockheads: 'Cooking for Blockheads',
+    refinedstorage: 'Refined Storage',
+    powah: 'Powah',
+    mysticalagriculture: 'Mystical Agriculture',
+    mysticalagradditions: 'Mystical Agradditions',
+    mysticalautomation: 'Mystical Automation'
   },
   quest_unlock_map: {
     '1D5A582F52D7CB30': 'sophisticatedstorage',
     '5F76BA38891F3B07': 'exdeorum',
     // Getting Started "The Red Rock" + Equivox-tab twin (same stone; either path unlocks)
     '57BD1D73E42470EF': 'equivox',
-    '32DD7832C096CE0F': 'equivox'
+    '32DD7832C096CE0F': 'equivox',
+    // Iron Furnaces chapter — first Iron Furnace unlocks ironfurnaces pool
+    '4A0F15D5841517B4': 'ironfurnaces',
+    // Animal Pens chapter — Animal Cage unlocks animal_pen pool
+    '3EA62AD030A3C93F': 'animal_pen',
+    // Easy Villagers / Piglins chapter
+    '05F1AEB401CE12C2': 'easy_villagers',
+    '4A6ECCE2C19D4FF7': 'easy_piglins',
+    // Ender IO chapter — Grains of Infinity unlocks enderio pool
+    '518552CB092F4771': 'enderio',
+    // Cooking for Blockheads — recipe book unlocks cookingforblockheads pool
+    '1CE050098AF388B9': 'cookingforblockheads',
+    // Refined Storage — Silicon unlocks refinedstorage pool
+    '17B9DD11F1594D60': 'refinedstorage',
+    // Powah — Dielectric Paste unlocks powah pool
+    '0C4DAD640F4FA430': 'powah',
+    // Mystical Agriculture — Prosperity Shard unlocks MA + Agradditions + Automation
+    '64992D4C546E810C': ['mysticalagriculture', 'mysticalagradditions', 'mysticalautomation']
   },
   quest_task_fallback: {
     '1D5A582F52D7CB30': ['1A2B3C4D5E6F7081'],
     '5F76BA38891F3B07': ['1A85CE9EB3CAAD93'],
     '57BD1D73E42470EF': ['6752A8FD5075C68D'],
-    '32DD7832C096CE0F': ['67A98B325DEE2D1C']
+    '32DD7832C096CE0F': ['67A98B325DEE2D1C'],
+    '4A0F15D5841517B4': ['5994733C3BB63588'],
+    '3EA62AD030A3C93F': ['040D6E7BE4554820'],
+    '05F1AEB401CE12C2': ['488DAC370EC294A1'],
+    '4A6ECCE2C19D4FF7': ['0B2FEB287175A68B'],
+    '518552CB092F4771': ['1FED7A48A3A1EB97'],
+    '1CE050098AF388B9': ['78F24EFC67EACE56'],
+    '17B9DD11F1594D60': ['6537E08043374B85'],
+    '0C4DAD640F4FA430': ['32A76EA57E8C2783'],
+    '64992D4C546E810C': ['75E1D69E409B055C']
   }
 }
 
@@ -157,6 +194,148 @@ function coerceConfigStringMapValue(raw) {
   } catch (ignored3) {}
 
   return out
+}
+
+/**
+ * quest_unlock_map values may be a single mod string or an array of mod namespaces
+ * (one quest can unlock multiple minable pools).
+ */
+function coerceQuestUnlockMapValue(raw) {
+  var out = {}
+  var cloned = null
+  var k = null
+  var v = null
+  var list = null
+  var i = 0
+  var iter = null
+  var entry = null
+
+  if (!raw) return out
+
+  function normalizeUnlockValue(value) {
+    var mods = []
+    var j = 0
+    var part = null
+    var seen = {}
+
+    if (value == null || value === undefined) return null
+
+    if (Array.isArray(value)) {
+      for (j = 0; j < value.length; j++) {
+        if (value[j] == null || value[j] === undefined) continue
+        part = String(value[j]).trim()
+        if (part && !seen[part]) {
+          seen[part] = true
+          mods.push(part)
+        }
+      }
+      if (!mods.length) return null
+      return mods.length === 1 ? mods[0] : mods
+    }
+
+    try {
+      if (typeof value.size === 'function' && typeof value.get === 'function') {
+        for (j = 0; j < value.size(); j++) {
+          if (value.get(j) == null) continue
+          part = String(value.get(j)).trim()
+          if (part && !seen[part]) {
+            seen[part] = true
+            mods.push(part)
+          }
+        }
+        if (mods.length) return mods.length === 1 ? mods[0] : mods
+      }
+    } catch (ignoredArr) {}
+
+    part = String(value).trim()
+    if (!part || part === '[object Object]') return null
+
+    // Support accidental comma-joined strings from legacy String(array) coercion
+    if (part.indexOf(',') >= 0) {
+      list = part.split(',')
+      for (j = 0; j < list.length; j++) {
+        part = String(list[j]).trim()
+        if (part && !seen[part]) {
+          seen[part] = true
+          mods.push(part)
+        }
+      }
+      if (mods.length) return mods.length === 1 ? mods[0] : mods
+    }
+
+    return part
+  }
+
+  try {
+    cloned = modPoolsCloneConfig(raw)
+    for (k in cloned) {
+      if (!Object.prototype.hasOwnProperty.call(cloned, k)) continue
+      v = normalizeUnlockValue(cloned[k])
+      if (v != null) out[String(k)] = v
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored) {}
+
+  try {
+    for (k in raw) {
+      if (!Object.prototype.hasOwnProperty.call(raw, k)) continue
+      v = normalizeUnlockValue(raw[k])
+      if (v != null) out[String(k)] = v
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored2) {}
+
+  try {
+    if (raw.entrySet && typeof raw.entrySet === 'function') {
+      iter = raw.entrySet().iterator()
+      while (iter.hasNext()) {
+        entry = iter.next()
+        v = normalizeUnlockValue(entry.getValue())
+        if (v != null) out[String(entry.getKey())] = v
+      }
+    }
+  } catch (ignored3) {}
+
+  return out
+}
+
+function normalizeQuestUnlockMods(value) {
+  var mods = []
+  var i = 0
+  var part = null
+  var seen = {}
+
+  if (value == null || value === undefined) return mods
+
+  if (Array.isArray(value)) {
+    for (i = 0; i < value.length; i++) {
+      if (value[i] == null || value[i] === undefined) continue
+      part = String(value[i]).trim()
+      if (part && !seen[part]) {
+        seen[part] = true
+        mods.push(part)
+      }
+    }
+    return mods
+  }
+
+  part = String(value).trim()
+  if (!part) return mods
+
+  if (part.indexOf(',') >= 0) {
+    var parts = part.split(',')
+    for (i = 0; i < parts.length; i++) {
+      part = String(parts[i]).trim()
+      if (part && !seen[part]) {
+        seen[part] = true
+        mods.push(part)
+      }
+    }
+    return mods
+  }
+
+  mods.push(part)
+  return mods
 }
 
 function coerceConfigStringList(value) {
@@ -539,7 +718,7 @@ function resolveUnlockScopeId(player, server) {
 }
 
 function getQuestUnlockMap() {
-  return coerceConfigStringMapValue(readConfigObjectField(ensureModPoolsConfig(), 'quest_unlock_map'))
+  return coerceQuestUnlockMapValue(readConfigObjectField(ensureModPoolsConfig(), 'quest_unlock_map'))
 }
 
 function loadAllTeamUnlocks() {
@@ -1320,20 +1499,29 @@ function resolveProgressEventServer(progressData, player) {
   return resolvePlayerServer(player, null)
 }
 
-function lookupQuestUnlockMod(questId) {
+function lookupQuestUnlockMods(questId) {
   var map = getQuestUnlockMap()
   var normalized = parseFtbQuestIdHex(questId)
   var key = null
+  var value = null
 
-  if (!normalized) return null
-  if (map[normalized]) return map[normalized]
+  if (!normalized) return []
+  if (map[normalized] != null) return normalizeQuestUnlockMods(map[normalized])
 
   for (key in map) {
     if (!map.hasOwnProperty(key)) continue
-    if (parseFtbQuestIdHex(key) === normalized) return map[key]
+    if (parseFtbQuestIdHex(key) === normalized) {
+      return normalizeQuestUnlockMods(map[key])
+    }
   }
 
-  return null
+  return []
+}
+
+/** @deprecated prefer lookupQuestUnlockMods — returns first mod or null for single-mod callers */
+function lookupQuestUnlockMod(questId) {
+  var mods = lookupQuestUnlockMods(questId)
+  return mods.length ? mods[0] : null
 }
 
 function readConfigMapEntry(raw, key) {
@@ -1577,22 +1765,32 @@ function isModUnlockedForPlayer(player, modNamespace, server) {
 function buildQuestUnlockDebugReport(player, server) {
   var map = getQuestUnlockMap()
   var questId = null
-  var mod = null
+  var mods = null
   var rows = []
   var taskRows = []
   var i = 0
+  var allUnlocked = true
+  var anyUnlocked = false
 
   for (questId in map) {
     if (!map.hasOwnProperty(questId)) continue
-    mod = map[questId]
+    mods = normalizeQuestUnlockMods(map[questId])
     taskRows = getQuestTaskProgressRows(player, questId)
+    allUnlocked = true
+    anyUnlocked = false
+    for (i = 0; i < mods.length; i++) {
+      if (isModUnlockedForPlayer(player, mods[i], server)) anyUnlocked = true
+      else allUnlocked = false
+    }
     rows.push({
       quest_id: parseFtbQuestIdHex(questId),
-      mod: mod,
+      mod: mods.length === 1 ? mods[0] : mods.join(','),
+      mods: mods,
       task_ids: discoverQuestTaskHexIds(questId),
       quest_completed: isQuestCompletedForPlayer(player, questId),
       quest_ready: isQuestReadyForUnlock(player, questId),
-      mod_unlocked: isModUnlockedForPlayer(player, mod, server),
+      mod_unlocked: allUnlocked && mods.length > 0,
+      mod_unlocked_any: anyUnlocked,
       tasks: taskRows
     })
   }
@@ -1652,28 +1850,75 @@ function dumpQuestUnlockDebug(player, server) {
 }
 
 function unlockModPoolForQuestId(player, questId, announce, server) {
-  var mod = lookupQuestUnlockMod(questId)
+  var mods = lookupQuestUnlockMods(questId)
+  var i = 0
+  var mod = null
+  var anySuccess = false
+  var allAlready = true
+  var unlockedNow = []
+  var shouldAnnounce = announce !== false
 
-  if (!mod || !player) return false
+  if (!mods.length || !player) return false
 
-  if (isModUnlockedForPlayer(player, mod, server)) {
-    logQuestUnlockTrace('already_unlocked', {
-      quest: parseFtbQuestIdHex(questId),
-      mod: mod
-    })
-    return true
+  for (i = 0; i < mods.length; i++) {
+    mod = mods[i]
+    if (isModUnlockedForPlayer(player, mod, server)) {
+      logQuestUnlockTrace('already_unlocked', {
+        quest: parseFtbQuestIdHex(questId),
+        mod: mod
+      })
+      anySuccess = true
+      continue
+    }
+
+    allAlready = false
+    console.info(
+      '[RandomOneBlock] Quest completed unlock: ' + parseFtbQuestIdHex(questId) + ' -> ' + mod
+    )
+    if (enableModForTeam(player, mod, false, server)) {
+      anySuccess = true
+      unlockedNow.push(mod)
+    }
   }
 
-  console.info('[RandomOneBlock] Quest completed unlock: ' + parseFtbQuestIdHex(questId) + ' -> ' + mod)
-  return enableModForTeam(player, mod, announce !== false, server)
+  if (shouldAnnounce && unlockedNow.length && player && player.tell) {
+    if (unlockedNow.length === 1) {
+      player.tell(
+        Text.of(
+          '§aUnlocked minable pool: §f' +
+            getModDisplayName(unlockedNow[0]) +
+            ' §7(§f' +
+            unlockedNow[0] +
+            '§7)'
+        )
+      )
+    } else {
+      player.tell(
+        Text.of(
+          '§aUnlocked minable pools: §f' +
+            unlockedNow
+              .map(function (m) {
+                return getModDisplayName(m) + ' (' + m + ')'
+              })
+              .join('§7, §f')
+        )
+      )
+    }
+  }
+
+  return anySuccess || allAlready
 }
 
 function tryUnlockQuestForPlayer(player, questId, announce, server, reason) {
-  var mod = lookupQuestUnlockMod(questId)
+  var mods = lookupQuestUnlockMods(questId)
   var questHex = parseFtbQuestIdHex(questId)
 
-  if (!player || !mod) {
-    logQuestUnlockTrace('try_skip_missing', { reason: reason, quest: questHex, mod: mod || 'none' })
+  if (!player || !mods.length) {
+    logQuestUnlockTrace('try_skip_missing', {
+      reason: reason,
+      quest: questHex,
+      mod: mods.length ? mods.join(',') : 'none'
+    })
     return false
   }
 
@@ -1686,7 +1931,7 @@ function tryUnlockQuestForPlayer(player, questId, announce, server, reason) {
     return false
   }
 
-  logQuestUnlockTrace('try_unlock', { reason: reason, quest: questHex, mod: mod })
+  logQuestUnlockTrace('try_unlock', { reason: reason, quest: questHex, mod: mods.join(',') })
   return unlockModPoolForQuestId(player, questId, announce, server)
 }
 
@@ -1760,6 +2005,7 @@ var RandonOneBlockPools = {
   getModsWithMinableBlocks: getModsWithMinableBlocks,
   getQuestUnlockMap: getQuestUnlockMap,
   lookupQuestUnlockMod: lookupQuestUnlockMod,
+  lookupQuestUnlockMods: lookupQuestUnlockMods,
   unlockModPoolForQuestId: unlockModPoolForQuestId,
   discoverQuestTaskHexIds: discoverQuestTaskHexIds,
   isQuestCompletedForPlayer: isQuestCompletedForPlayer,

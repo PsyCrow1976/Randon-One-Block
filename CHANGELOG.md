@@ -4,7 +4,45 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.4] — 2026-08-04
+
+### Quest → minable pool unlocks (playtest confirmed)
+
+Completing the right FTB Quest now enables that mod’s full-cube blocks in your team’s random one-block pool. After updating: **`/reload`**, then finish the quest (or re-login for backfill). Check with **`/randomblock pools list`** and **`/randomblock pools debug quests`**.
+
+| Quest (chapter) | Item | Unlocks pool(s) |
+|-----------------|------|-----------------|
+| **Iron Furnace** (Iron Furnaces) | `ironfurnaces:iron_furnace` | `ironfurnaces` |
+| **Obtain Animal Cage** (Animal Pens) | `animal_pen:animal_cage` | `animal_pen` |
+| **Obtain Villager** (Easy Villagers) | `easy_villagers:villager` | `easy_villagers` |
+| **Obtain Piglin** (Easy Villagers) | `easy_piglins:piglin` | `easy_piglins` |
+| **Grains of Infinity** (Ender IO) | `enderio:grains_of_infinity` | `enderio` |
+| **Cooking for Blockheads I** (Cooking for Blockheads) | `cookingforblockheads:recipe_book` | `cookingforblockheads` |
+| **Island Approved Silicon** (Refined Storage) | `refinedstorage:silicon` | `refinedstorage` |
+| **Dielectric Paste** (Powah) | `powah:dielectric_paste` | `powah` |
+| **Prosperity Shard** (Mystical Agriculture) | `mysticalagriculture:prosperity_shard` | `mysticalagriculture` + `mysticalagradditions` + `mysticalautomation` |
+
+**Already in the pack (unchanged this release):** Leather Backpack → Sophisticated Storage; Compressed Dirt → Ex Deorum; The Red Rock (Getting Started **or** Equivox) → Equivox.
+
+### KubeJS / config
+
+- **`quest_unlock_map`** can map one quest to **multiple** mod namespaces (array) — used for the Mystical Agriculture trio
+- Unlock handlers, task fallbacks, and `_quest_unlock_map_entries` docs updated in `kubejs/config/random_one_block_mod_pools.json` and pack defaults
+- Quest book text/subtitles for entry quests note pool unlocks (and clearer starter text for vanilla furnace / Grains of Infinity where needed)
+
+### Mods
+
+- **No jar add/remove/version changes** vs **1.0.5.3**
+- Still **85 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.94**
+
+### Still known
+
+- **Equivox Philosopher’s Stone** world-transmutation crash until upstream rebuild (see **1.0.5.1** / [Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5))
+- Some unlocked namespaces may show on `/randomblock pools list` only when they have **full-cube** blocks in the master pool (e.g. Easy Villagers / Ender IO may be unlocked but empty of rolls until pool content exists)
 
 ---
 
