@@ -534,12 +534,20 @@ function countersApi() {
   return typeof RandonOneBlockCounters !== 'undefined' ? RandonOneBlockCounters : null
 }
 
+function milestonesApi() {
+  return typeof RandonOneBlockMilestones !== 'undefined' ? RandonOneBlockMilestones : null
+}
+
 function reloadAll() {
   STATE.config = loadConfig()
   syncActiveFromConfig()
   var modPoolsReload = modPoolsApi()
   if (modPoolsReload && modPoolsReload.reloadModPoolsConfig) {
     modPoolsReload.reloadModPoolsConfig()
+  }
+  var milestones = milestonesApi()
+  if (milestones && milestones.reloadMilestonesConfig) {
+    milestones.reloadMilestonesConfig()
   }
   var counters = countersApi()
   if (counters && counters.invalidateTeamCounterCache) {
@@ -1860,11 +1868,13 @@ function cmdReload(source) {
 
 function cmdCounter(source) {
   var counters = countersApi()
+  var milestones = milestonesApi()
   var player = requirePlayer(source)
   var server = resolvePlayerServer(player, source.server)
   var scopeId = ''
   var count = 0
   var hud = null
+  var record = null
 
   if (!counters || !player) {
     tell(source, '§cRandon counter is not loaded.')
@@ -1880,8 +1890,89 @@ function cmdCounter(source) {
     source,
     `§7Overlay: ${hud.enabled ? '§aenabled' : '§cdisabled'} §7— edit §frandon_counter_hud.enabled §7in §fkubejs/config/random_one_block.json`
   )
+
+  if (milestones && counters.loadTeamCounter) {
+    record = counters.loadTeamCounter(scopeId)
+    if (record && record.unspent_choice_tokens && record.unspent_choice_tokens.length) {
+      tell(
+        source,
+        '§dUnspent unlock tokens: §f' +
+          record.unspent_choice_tokens.join(', ') +
+          ' §7— §f/randomblock unlock list'
+      )
+    } else {
+      tell(source, '§7Milestones: §f/randomblock milestones §7| unlock: §f/randomblock unlock list')
+    }
+  }
+
   counters.syncCounterForPlayer(player, server)
   return 1
+}
+
+function cmdMilestones(source) {
+  var milestones = milestonesApi()
+  var player = requirePlayer(source)
+  var server = resolvePlayerServer(player, source.server)
+  var status = null
+  var i = 0
+
+  if (!milestones || !milestones.buildMilestonesStatus) {
+    tell(source, '§cMilestones system is not loaded.')
+    return 0
+  }
+  if (!player) return 0
+
+  // Quiet backfill so high counters grant pending tokens without re-mining
+  if (milestones.backfillMilestonesForPlayer) {
+    milestones.backfillMilestonesForPlayer(player, server)
+  }
+
+  status = milestones.buildMilestonesStatus(player, server)
+  for (i = 0; i < status.lines.length; i++) {
+    tell(source, status.lines[i])
+  }
+  return 1
+}
+
+function cmdUnlock(source, args) {
+  var milestones = milestonesApi()
+  var player = requirePlayer(source)
+  var server = resolvePlayerServer(player, source.server)
+  var sub = args.length ? String(args[0]).toLowerCase() : ''
+  var status = null
+  var result = null
+  var i = 0
+
+  if (!milestones) {
+    tell(source, '§cMilestones / unlock system is not loaded.')
+    return 0
+  }
+  if (!player) return 0
+
+  if (!sub || sub === 'list' || sub === 'status') {
+    if (milestones.backfillMilestonesForPlayer) {
+      milestones.backfillMilestonesForPlayer(player, server)
+    }
+    status = milestones.buildUnlockListStatus(player, server)
+    for (i = 0; i < status.lines.length; i++) {
+      tell(source, status.lines[i])
+    }
+    return 1
+  }
+
+  if (sub === 'choose' || sub === 'pick') {
+    if (args.length < 2) {
+      tell(source, '§cUsage: §f/randomblock unlock choose <mod>')
+      tell(source, '§7Example: §f/randomblock unlock choose darkutils')
+      return 0
+    }
+    result = milestones.chooseUnlock(player, args[1], server)
+    tell(source, result.message)
+    return result.ok ? 1 : 0
+  }
+
+  tell(source, '§cUsage: §f/randomblock unlock list §7| §f/randomblock unlock choose <mod>')
+  return 0
 }
 
 function cmdInfo(source) {
@@ -2198,7 +2289,11 @@ function cmdHelp(source) {
   )
   tell(
     source,
-    '§e/randomblock counter §7| §e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
+    '§e/randomblock counter §7| §e/randomblock milestones §7| §e/randomblock unlock list §7| §e/randomblock unlock choose <mod>'
+  )
+  tell(
+    source,
+    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
   )
   return 1
 }
@@ -2230,6 +2325,11 @@ function cmdDispatch(source, input) {
       return cmdReload(source)
     case 'counter':
       return cmdCounter(source)
+    case 'milestones':
+    case 'milestone':
+      return cmdMilestones(source)
+    case 'unlock':
+      return cmdUnlock(source, parsed.args)
     case 'poolenable':
       return cmdPoolEnable(source, parsed.args)
     case 'pools':

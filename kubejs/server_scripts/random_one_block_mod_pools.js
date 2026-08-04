@@ -38,7 +38,12 @@ const DEFAULT_MOD_POOLS_CONFIG = {
     powah: 'Powah',
     mysticalagriculture: 'Mystical Agriculture',
     mysticalagradditions: 'Mystical Agradditions',
-    mysticalautomation: 'Mystical Automation'
+    mysticalautomation: 'Mystical Automation',
+    apotheosis: 'Apotheosis',
+    apothic_enchanting: 'Apothic Enchanting',
+    darkutils: 'Dark Utilities',
+    utility: 'BBL Utility',
+    easyoregeneration: 'Easy Ore Generation'
   },
   quest_unlock_map: {
     '1D5A582F52D7CB30': 'sophisticatedstorage',
@@ -1025,68 +1030,129 @@ function resolveKnownModNamespace(mod) {
   return normalized
 }
 
-function enableModForTeam(player, modNamespace, announce, server) {
-  var scopeId = resolveUnlockScopeId(player, server)
+/**
+ * Enable a mod namespace for a team scope (no player required).
+ * Returns: { ok, already, mod, displayName, poolSize } or { ok: false, reason }
+ */
+function enableModForScope(scopeId, modNamespace, options) {
+  var opts = options || {}
   var resolvedMod = resolveKnownModNamespace(modNamespace)
-  var unlocks = loadTeamUnlocks(scopeId)
-  var displayName = getModDisplayName(resolvedMod)
+  var unlocks = null
+  var displayName = null
+  var already = false
+  var effective = null
+
+  if (!scopeId) {
+    return { ok: false, reason: 'missing_scope' }
+  }
 
   if (!resolvedMod) {
-    console.warn(`[RandomOneBlock] poolenable ignored — unknown mod namespace: ${modNamespace}`)
+    console.warn('[RandomOneBlock] enableModForScope ignored — unknown mod namespace: ' + modNamespace)
+    return { ok: false, reason: 'unknown_mod', mod: modNamespace }
+  }
+
+  displayName = getModDisplayName(resolvedMod)
+
+  if (resolvedMod === VANILLA_NAMESPACE) {
+    return { ok: true, already: true, mod: resolvedMod, displayName: displayName, poolSize: 0 }
+  }
+
+  if (modPoolsListIncludes(getStarterExceptions(), resolvedMod)) {
+    effective = buildEffectivePool(scopeId)
+    return {
+      ok: true,
+      already: true,
+      mod: resolvedMod,
+      displayName: displayName,
+      poolSize: effective.pool.length,
+      starter: true
+    }
+  }
+
+  if (isForceDisabledMod(resolvedMod)) {
+    console.warn('[RandomOneBlock] enableModForScope rejected force-disabled mod: ' + resolvedMod)
+    return { ok: false, reason: 'force_disabled', mod: resolvedMod, displayName: displayName }
+  }
+
+  unlocks = loadTeamUnlocks(scopeId)
+  if (modPoolsListIncludes(unlocks.enabled_mods, resolvedMod)) {
+    already = true
+  } else {
+    unlocks.enabled_mods.push(resolvedMod)
+    unlocks.enabled_mods.sort()
+    saveTeamUnlocks(scopeId, unlocks)
+    console.info('[RandomOneBlock] Unlocked mod pool for ' + scopeId + ': ' + resolvedMod)
+  }
+
+  effective = buildEffectivePool(scopeId)
+  return {
+    ok: true,
+    already: already,
+    mod: resolvedMod,
+    displayName: displayName,
+    poolSize: effective.pool.length
+  }
+}
+
+function enableModForTeam(player, modNamespace, announce, server) {
+  var scopeId = resolveUnlockScopeId(player, server)
+  var result = enableModForScope(scopeId, modNamespace, {})
+
+  if (!result.ok) {
+    if (announce && player && player.tell) {
+      if (result.reason === 'force_disabled') {
+        player.tell(Text.of('§cThat mod cannot be enabled in the random pool.'))
+      } else {
+        player.tell(Text.of('§cCould not enable mod pool: §f' + String(modNamespace)))
+      }
+    }
     return false
   }
 
-  if (resolvedMod === VANILLA_NAMESPACE) {
+  if (result.starter && announce && player && player.tell) {
+    player.tell(
+      Text.of(
+        '§7Starter exception mod §f' +
+          result.displayName +
+          ' §7(§f' +
+          result.mod +
+          '§7) is already enabled. Effective pool: §f' +
+          result.poolSize +
+          '§7 blocks.'
+      )
+    )
+    return true
+  }
+
+  if (result.mod === VANILLA_NAMESPACE) {
     if (announce && player && player.tell) {
       player.tell(Text.of('§7Vanilla blocks are always enabled in the random pool.'))
     }
     return true
   }
 
-  if (modPoolsListIncludes(getStarterExceptions(), resolvedMod)) {
-    if (announce && player && player.tell) {
-      var starterPool = buildEffectivePool(scopeId)
-      player.tell(
-        Text.of(
-          '§7Starter exception mod §f' +
-            displayName +
-            ' §7(§f' +
-            resolvedMod +
-            '§7) is already enabled. Effective pool: §f' +
-            starterPool.pool.length +
-            '§7 blocks.'
-        )
-      )
-    }
-    return true
-  }
-
-  if (isForceDisabledMod(resolvedMod)) {
-    console.warn(`[RandomOneBlock] poolenable rejected force-disabled mod: ${resolvedMod}`)
-    if (announce && player && player.tell) {
-      player.tell(Text.of('§cThat mod cannot be enabled in the random pool.'))
-    }
-    return false
-  }
-
-  if (!modPoolsListIncludes(unlocks.enabled_mods, resolvedMod)) {
-    unlocks.enabled_mods.push(resolvedMod)
-    unlocks.enabled_mods.sort()
-    saveTeamUnlocks(scopeId, unlocks)
-    console.info(`[RandomOneBlock] Unlocked mod pool for ${scopeId}: ${resolvedMod}`)
-  }
-
-  if (announce && player && player.tell) {
-    var effective = buildEffectivePool(scopeId)
+  if (announce && player && player.tell && !result.already) {
     player.tell(
       Text.of(
         '§aRandom block pool unlocked: §f' +
-          displayName +
+          result.displayName +
           '§a (§f' +
-          resolvedMod +
+          result.mod +
           '§a). Effective pool: §f' +
-          effective.pool.length +
+          result.poolSize +
           '§a blocks.'
+      )
+    )
+  } else if (announce && player && player.tell && result.already) {
+    player.tell(
+      Text.of(
+        '§7Mod pool already unlocked: §f' +
+          result.displayName +
+          ' §7(§f' +
+          result.mod +
+          '§7). Effective pool: §f' +
+          result.poolSize +
+          '§7 blocks.'
       )
     )
   }
@@ -1991,8 +2057,15 @@ var RandonOneBlockPools = {
   updateMasterCatalogFromPool: updateMasterCatalogFromPool,
   getUnlockScopeId: getUnlockScopeId,
   resolveUnlockScopeId: resolveUnlockScopeId,
+  enableModForScope: enableModForScope,
   enableModForTeam: enableModForTeam,
   disableModForTeam: disableModForTeam,
+  isModUnlockedForScope: function (scopeId, modNamespace) {
+    var unlocks = loadTeamUnlocks(scopeId)
+    return modPoolsListIncludes(unlocks.enabled_mods, modNamespace)
+  },
+  getModDisplayName: getModDisplayName,
+  loadTeamUnlocks: loadTeamUnlocks,
   pickRandomBlockIdForPlayer: pickRandomBlockIdForPlayer,
   getEffectivePoolSummaryForPlayer: getEffectivePoolSummaryForPlayer,
   dumpModPoolsDebug: dumpModPoolsDebug,

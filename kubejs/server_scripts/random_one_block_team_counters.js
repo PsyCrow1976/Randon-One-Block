@@ -69,24 +69,144 @@ function loadAllTeamCounters() {
   return data
 }
 
+function coerceNumberList(value) {
+  var out = []
+  var i = 0
+  var n = 0
+  var seen = {}
+  var list = []
+
+  if (!value) return out
+
+  if (Array.isArray(value)) {
+    list = value
+  } else {
+    try {
+      if (typeof value.size === 'function' && typeof value.get === 'function') {
+        for (i = 0; i < value.size(); i++) list.push(value.get(i))
+      }
+    } catch (ignored) {}
+  }
+
+  for (i = 0; i < list.length; i++) {
+    n = Math.floor(Number(list[i]))
+    if (!(n > 0) || seen[n]) continue
+    seen[n] = true
+    out.push(n)
+  }
+
+  out.sort(function (a, b) {
+    return a - b
+  })
+  return out
+}
+
+function coerceStringList(value) {
+  var out = []
+  var i = 0
+  var part = null
+  var seen = {}
+  var list = []
+
+  if (!value) return out
+
+  if (Array.isArray(value)) {
+    list = value
+  } else {
+    try {
+      if (typeof value.size === 'function' && typeof value.get === 'function') {
+        for (i = 0; i < value.size(); i++) list.push(value.get(i))
+      }
+    } catch (ignored) {}
+  }
+
+  for (i = 0; i < list.length; i++) {
+    if (list[i] == null || list[i] === undefined) continue
+    part = String(list[i]).trim()
+    if (!part || seen[part]) continue
+    seen[part] = true
+    out.push(part)
+  }
+
+  return out
+}
+
+function coerceStringMap(value) {
+  var out = {}
+  var k = null
+  var cloned = null
+  var iter = null
+  var entry = null
+
+  if (!value) return out
+
+  try {
+    cloned = cloneCounterData(value)
+    for (k in cloned) {
+      if (Object.prototype.hasOwnProperty.call(cloned, k)) {
+        out[String(k)] = String(cloned[k])
+      }
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored) {}
+
+  try {
+    for (k in value) {
+      if (Object.prototype.hasOwnProperty.call(value, k)) {
+        out[String(k)] = String(value[k])
+      }
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored2) {}
+
+  try {
+    if (value.entrySet && typeof value.entrySet === 'function') {
+      iter = value.entrySet().iterator()
+      while (iter.hasNext()) {
+        entry = iter.next()
+        out[String(entry.getKey())] = String(entry.getValue())
+      }
+    }
+  } catch (ignored3) {}
+
+  return out
+}
+
 function defaultTeamCounterData(scopeId) {
   return {
     scope_id: String(scopeId),
     blocks_mined: 0,
+    milestones_reached: [],
+    unspent_choice_tokens: [],
+    spent_choice_tokens: {},
+    echo_granted: false,
     updated_at: new Date().toISOString()
   }
 }
 
 function normalizeTeamCounterRecord(scopeId, data) {
   var mined = 0
+  var milestones = []
+  var unspent = []
+  var spent = {}
+  var echoGranted = false
 
   if (data && data.blocks_mined != null) {
     mined = Math.max(0, Math.floor(Number(data.blocks_mined) || 0))
   }
 
+  milestones = coerceNumberList(data && data.milestones_reached)
+  unspent = coerceStringList(data && data.unspent_choice_tokens)
+  spent = coerceStringMap(data && data.spent_choice_tokens)
+  echoGranted = !!(data && (data.echo_granted === true || data.echo_granted === 'true'))
+
   return {
     scope_id: String(scopeId),
     blocks_mined: mined,
+    milestones_reached: milestones,
+    unspent_choice_tokens: unspent,
+    spent_choice_tokens: spent,
+    echo_granted: echoGranted,
     updated_at: new Date().toISOString()
   }
 }
@@ -131,6 +251,15 @@ function incrementTeamCounter(scopeId) {
   record.blocks_mined = record.blocks_mined + 1
   saveTeamCounter(scopeId, record)
   return record.blocks_mined
+}
+
+/**
+ * Persist extended milestone fields on an existing counter record.
+ * Callers must pass a full record (from loadTeamCounter) with fields already set.
+ */
+function saveTeamCounterRecord(scopeId, record) {
+  if (!scopeId || !record) return
+  saveTeamCounter(scopeId, record)
 }
 
 function invalidateTeamCounterCache() {
@@ -208,6 +337,16 @@ function onRandomBlockMined(player, server) {
   var scopeId = resolveScopeId(player, server)
   var count = incrementTeamCounter(scopeId)
   syncCounterForScope(server, scopeId)
+
+  // Milestone engine (auto unlocks + choice tokens) — optional if script not loaded
+  try {
+    if (typeof RandonOneBlockMilestones !== 'undefined' && RandonOneBlockMilestones.processAfterMine) {
+      RandonOneBlockMilestones.processAfterMine(scopeId, count, player, server)
+    }
+  } catch (milestoneErr) {
+    console.warn('[RandomOneBlock] Milestone process failed: ' + String(milestoneErr))
+  }
+
   return count
 }
 
@@ -216,6 +355,8 @@ var RandonOneBlockCounters = {
   getTeamBlocksMined: getTeamBlocksMined,
   incrementTeamCounter: incrementTeamCounter,
   loadTeamCounter: loadTeamCounter,
+  saveTeamCounter: saveTeamCounter,
+  saveTeamCounterRecord: saveTeamCounterRecord,
   invalidateTeamCounterCache: invalidateTeamCounterCache,
   readHudConfigFromMainConfig: readHudConfigFromMainConfig,
   syncCounterForPlayer: syncCounterForPlayer,

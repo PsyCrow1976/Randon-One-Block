@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** Design only — implement **after** remaining mod pool unlocks via quests/achievements are finished.  
+**Status:** **Phase 1 in progress** — quest-book → minable pool unlocks are done; milestone engine + non-questbook pool unlocks next.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
@@ -158,19 +158,75 @@ isPoolUnlocked(team, mod) =
 | Mines | Type | Suggested effect |
 |------:|------|------------------|
 | 100 | Auto / quest toast | Cosmetic + small reward; intro to counter |
-| 1,000 | **Choice token** | Pick 1 from early/support list |
-| 5,000 | **Choice token** | Pick 1 from mid tech list |
-| 10,000 | Auto or choice | Larger reward + optional second-tier choice |
-| 25,000 | Quest-tied / choice | Late pools or Atlas boosts |
+| **500** | **Auto unlock** | **BBL Utility** (`utility`) joins the minable pool |
+| 1,000 | **Choice token** | Pick **Dark Utils** *or* **Apotheosis** (package — see §5.4.1) |
+| **2,500** | **Auto unlock** | **Easy Ore Generation** (`easyoregeneration`) joins the pool |
+| 5,000 | **Choice token** | Pick whichever of Dark Utils / Apotheosis package remains locked |
+| 10,000 | Auto or choice | Larger reward + optional second-tier choice (reserved) |
+| 25,000 | Quest-tied / choice | Late pools or Atlas boosts (reserved) |
 | 50,000 | Pre-Echo | Guaranteed rare Atlas help **or** big item reward (not prestige) |
 | **100,000** | **Echo** | Guaranteed trophy block + final quest complete |
 
-Exact mod lists for each choice tier should be filled **after** all quest→pool mappings exist, so choice lists don’t steal mods that already have a strong quest-only story (or deliberately offer a **shortcut** for players who skip that chapter).
+#### 5.4.1 Frozen list — non-questbook minable pools (milestone path)
+
+Quest-book chapters already map their signature quests → minable namespaces (Sophisticated Storage, Ex Deorum, Equivox, Iron Furnaces, Animal Pens, Easy Villagers/Piglins, Ender IO, Cooking for Blockheads, Refined Storage, Powah, Mystical Agriculture trio). **These mods have full-cube pool content but no quest-book unlock path** — they unlock only via milestones (or op `poolenable`):
+
+| Namespace | Display name | Mode | Details |
+|-----------|--------------|------|---------|
+| `utility` | BBL Utility | **`milestone` (auto)** | Auto-unlock at **500** Randon Mined |
+| `easyoregeneration` | Easy Ore Generation | **`milestone` (auto)** | Auto-unlock at **2,500** Randon Mined |
+| `darkutils` | Dark Utilities | **`milestone_choice`** | Eligible at **choice_1k** (1,000) and **choice_5k** (5,000) |
+| `apotheosis` | Apotheosis | **`milestone_choice`** | Eligible at **choice_1k** and **choice_5k** |
+| `apothic_enchanting` | Apothic Enchanting | **package with `apotheosis`** | Not a separate pick — choosing `apotheosis` unlocks **both** `apotheosis` + `apothic_enchanting` |
+
+**Config intent (v1):**
+
+```json
+"milestone_auto_unlocks": [
+  {
+    "threshold": 500,
+    "mods": ["utility"],
+    "message": "BBL Utility blocks can now roll from the center block."
+  },
+  {
+    "threshold": 2500,
+    "mods": ["easyoregeneration"],
+    "message": "Easy Ore Generation blocks join the random pool."
+  }
+],
+"milestone_choices": [
+  {
+    "threshold": 1000,
+    "token_id": "choice_1k",
+    "eligible_mods": ["darkutils", "apotheosis"],
+    "mod_packages": {
+      "apotheosis": ["apotheosis", "apothic_enchanting"]
+    },
+    "description": "First crack in the void — pick Dark Utils or Apotheosis (includes Enchanting)"
+  },
+  {
+    "threshold": 5000,
+    "token_id": "choice_5k",
+    "eligible_mods": ["darkutils", "apotheosis"],
+    "mod_packages": {
+      "apotheosis": ["apotheosis", "apothic_enchanting"]
+    },
+    "description": "The tear widens — unlock the remaining support pool (Dark Utils or Apotheosis)"
+  }
+]
+```
+
+**Rules:**
+
+- Choice tokens only offer mods that are still locked for the team (already-unlocked options are hidden).
+- Spending a token runs the same team unlock path as `/randomblock poolenable <mod> true` (packages enable every listed namespace).
+- Quest-mapped mods stay **quest-only** for v1 (not on choice lists) so the quest book remains the story path for those chapters.
+- Op `/randomblock poolenable` still works as a debug/manual override for any gated mod.
 
 **Design rule for packing lists later:**
 
 - Mods with a **full chapter + signature unlock quest** → prefer `quest` or `quest_and_milestone`.
-- Mods that are **nice-to-have early** → `milestone_choice` at 1k/5k.
+- Mods that are **nice-to-have early** with **no chapter** → `milestone` auto or `milestone_choice` at 500/1k/2.5k/5k (this section).
 - “Must feel earned” endgame mods → `quest_and_milestone` with high N **or** only via Atlas chapter, not free choice.
 
 ### 5.5 Commands (player + op)
@@ -450,25 +506,26 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 
 ### Prerequisite (your work before this plan)
 
-- [ ] Finish remaining **quest → mod pool** unlocks for major chapters (map + `quest_task_fallback` per `howtoquest.md`).
-- [ ] Playtest: each unlock shows pool ON for team; `/randomblock pools debug quests` clean.
-- [ ] Freeze list of **gated mod namespaces** for choice tiers vs quest-only vs quest_and_milestone.
+- [x] Finish remaining **quest → mod pool** unlocks for major chapters (map + `quest_task_fallback` per `howtoquest.md`).
+- [x] Playtest: each unlock shows pool ON for team; `/randomblock pools debug quests` clean.
+- [x] Freeze list of **gated mod namespaces** for choice tiers vs quest-only vs quest_and_milestone (§5.4.1).
 
 ### Phase 0 — Design freeze (short, no code)
 
-- [ ] Fill tables: each gated mod → unlock mode + threshold/token eligibility.
+- [x] Fill tables: each gated mod → unlock mode + threshold/token eligibility (§5.4.1 non-questbook; quest mods remain quest-only).
 - [ ] Draft Atlas endgame set (~48–96 ids) from real pool (`/randomblock pools debug complete` dumps).
-- [ ] Confirm default choice thresholds: **1000** and **5000** (plus any extras).
+- [x] Confirm default choice thresholds: **1000** and **5000** (+ auto **500** utility, **2500** easyoregeneration).
 - [ ] Write player-facing names: Echo block, chapter title, seal items.
 
 ### Phase 1 — Milestone engine + selectable unlocks
 
-- [ ] Add `random_one_block_milestones.json` + team counter field extensions.
-- [ ] Detect threshold crossings on increment; grant tokens; chat notify.
-- [ ] Commands: `milestones`, `unlock list`, `unlock choose`.
-- [ ] Wire choice → same persistence as `poolenable`.
-- [ ] Support `quest_and_milestone` in pool eligibility.
-- [ ] Tests: hit 1000 in creative test world; choose mod; see rolls from that namespace.
+- [x] Add `random_one_block_milestones.json` + team counter field extensions.
+- [x] Detect threshold crossings on increment; grant tokens; chat notify.
+- [x] Commands: `milestones`, `unlock list`, `unlock choose`.
+- [x] Wire choice → same persistence as `poolenable` (incl. `apotheosis` package → `apothic_enchanting`).
+- [x] Auto-unlock `utility` @ 500 and `easyoregeneration` @ 2500.
+- [ ] Support `quest_and_milestone` in pool eligibility (engine ready; no quest mods use it yet).
+- [ ] Tests: hit 500 / 1000 / 2500 / 5000 in creative; choose mod; see rolls from that namespace.
 
 ### Phase 2 — Atlas tracking
 
@@ -503,10 +560,137 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 
 ## 12. Playtest / acceptance checklist
 
-### Unlocks
+### 12.0 Resume tomorrow — Phase 1 milestone unlocks (do this first)
 
-- [ ] Quest-only mod still unlocks on quest complete with mines = 0.
-- [ ] `quest_and_milestone` mod stays locked after quest until N mines, then unlocks without re-completing quest (login backfill / live check).
+**What shipped in code (not fully playtested yet):**
+
+| Piece | Path |
+|-------|------|
+| Config | `kubejs/config/random_one_block_milestones.json` |
+| Engine | `kubejs/server_scripts/random_one_block_milestones.js` |
+| Counters + fields | `random_one_block_team_counters.js` (`milestones_reached`, tokens, etc.) |
+| Commands | `/randomblock milestones`, `unlock list`, `unlock choose` in `random_one_block.js` |
+| Plan freeze | §5.4.1 (utility / easyoregen / darkutils / apotheosis package) |
+
+**Before testing:**
+
+1. Pull latest `main` (or open this repo after the push).
+2. Link / launch the instance as usual; run **`/reload`** once in-game (or restart).
+3. Confirm log on load/reload contains something like:  
+   `Milestones config loaded: 2 auto, 2 choice token(s)`  
+   and still: `Registered N FTB task unlock handler(s)` with N > 0.
+4. Prefer a **fresh creative island** or a team whose counter is known (`/randomblock counter`).  
+   Runtime data lives in `kubejs/config/random_one_block_team_counters.json` and `…_team_unlocks.json` (gitignored).
+
+**Commands cheat sheet:**
+
+```text
+/randomblock counter
+/randomblock milestones
+/randomblock unlock list
+/randomblock unlock choose darkutils
+/randomblock unlock choose apotheosis
+/randomblock pools list
+/randomblock pools debug
+/randomblock poolenable <mod> true|false    # op debug only
+/randomblock reload
+```
+
+**Expected thresholds (team Randon Mined):**
+
+| At | Expected chat / effect |
+|---:|------------------------|
+| **100** | Message: void notices / 100 Randon Mined |
+| **500** | Auto unlock **BBL Utility** (`utility`) — pool ON; rolls can include `utility:…` |
+| **1,000** | Choice token **`choice_1k`** — pick `darkutils` **or** `apotheosis` |
+| **2,500** | Auto unlock **Easy Ore Generation** (`easyoregeneration`) |
+| **5,000** | Choice token **`choice_5k`** — pick whichever of darkutils / apotheosis is still locked |
+
+Choosing **`apotheosis`** must unlock **both** `apotheosis` and `apothic_enchanting`.
+
+---
+
+#### A. Boot / smoke (5 min)
+
+- [ ] `/reload` succeeds (no KubeJS red errors for milestone/pool scripts).
+- [ ] `/randomblock help` lists `milestones` and `unlock`.
+- [ ] `/randomblock counter` shows scope + mine count; mentions milestones/unlock if relevant.
+- [ ] `/randomblock milestones` prints auto + choice lines without error.
+- [ ] `/randomblock unlock list` shows utility, easyoregeneration, darkutils, apotheosis as OFF (unless already unlocked on that team).
+
+#### B. Auto unlocks (mine or skip ahead)
+
+**Tip:** You only need **center-block** breaks (Randon One Block position). Creative + efficiency / spam-click is fine.  
+If your counter is already past a threshold, run `/randomblock milestones` or re-login — **backfill** should grant missed auto unlocks/tokens without re-mining every block (quiet on login; commands re-run process).
+
+- [ ] Cross **500** (or backfill if already ≥500):  
+  - Chat mentions BBL Utility / utility unlock.  
+  - `/randomblock pools list` → **utility** unlocked / ON.  
+  - Optional: keep mining until a `utility:…` block rolls (or `/randomblock pools debug complete utility`).
+- [ ] Cross **2500** (or backfill):  
+  - Easy Ore Generation unlock message.  
+  - **easyoregeneration** ON in pools list.
+
+#### C. Choice token @ 1,000
+
+- [ ] Cross **1000** (or backfill): chat says unlock **choice** + eligible mods; token **choice_1k** unspent.
+- [ ] `/randomblock unlock list` shows you can choose now: `darkutils` and/or `apotheosis`.
+- [ ] **Fail cases:**  
+  - [ ] `/randomblock unlock choose notamod` → clean error.  
+  - [ ] `/randomblock unlock choose ironfurnaces` (quest-only) → rejected (not on choice list).
+- [ ] **Success path A:** `/randomblock unlock choose darkutils`  
+  - [ ] Success message; **darkutils** ON.  
+  - [ ] Token spent; cannot choose darkutils again with same token.  
+  - [ ] `apotheosis` still OFF (unless already unlocked).
+- [ ] **Or success path B** (new team / other world): `/randomblock unlock choose apotheosis`  
+  - [ ] **apotheosis** AND **apothic_enchanting** both ON.  
+  - [ ] Token spent.
+
+#### D. Second choice @ 5,000
+
+- [ ] Cross **5000** (or backfill): **choice_5k** granted if the other choice mod is still locked.
+- [ ] `/randomblock unlock choose <remaining>` unlocks the other of darkutils / apotheosis package.
+- [ ] If both already unlocked (e.g. via `poolenable`), token should **not** be granted (or list says nothing left) — no stuck token required.
+
+#### E. Persistence
+
+- [ ] After unlocks, **log out and back in** (or `/reload`): same pools still ON; unspent tokens still listed; spent tokens not duplicated.
+- [ ] Second player on **same island/team** (if available): same counter + same unlocks (shared Haven scope).
+
+#### F. Regression (quest path still works)
+
+- [ ] Quest-only unlock still works (e.g. Leather Backpack → Sophisticated Storage, or any known map entry) with mines = 0 on a fresh team if possible.
+- [ ] `/randomblock pools debug quests` still healthy.
+- [ ] `/randomblock poolenable darkutils true` still works as op override.
+- [ ] Counter HUD still updates on center breaks.
+- [ ] Island create / auto setbelow still works if you touch a new island.
+
+#### G. Log checks (`logs/kubejs/server.log`)
+
+- [ ] Milestone grant lines: auto-unlock / choice token for the correct `scope_id`.
+- [ ] Choice spend line when you run `unlock choose`.
+- [ ] No spam of duplicate tokens on every break after a threshold.
+
+#### H. Done for Phase 1 / notes for next session
+
+- [ ] Tick Phase 1 “Tests: hit 500 / 1000 / …” in §11 when all of A–G pass.
+- [ ] Note any bugs below (or in `todolist.md`).
+- [ ] Next implement work after Phase 1 green: **Phase 2 Atlas** (not required to re-test for tomorrow’s milestone pass).
+
+**Quick “I only have 15 minutes” path:**
+
+1. `/reload` + commands smoke (A).  
+2. If counter already high: `/randomblock milestones` + `/randomblock unlock list` (backfill).  
+3. Spend one choice if unspent.  
+4. Confirm auto mods ON if mined ≥500 / ≥2500.  
+5. One quest unlock smoke (F).  
+
+---
+
+### Unlocks (full endgame — later phases)
+
+- [ ] Quest-only mod still unlocks on quest complete with mines = 0. *(also in §12.0 F)*
+- [ ] `quest_and_milestone` mod stays locked after quest until N mines, then unlocks without re-completing quest (login backfill / live check). *(not used yet)*
 - [ ] At 1000 mines, token granted once; reconnect does not duplicate token.
 - [ ] `unlock choose <mod>` unlocks pool; rolls include that mod; token spent; cannot choose twice.
 - [ ] Choosing invalid / already unlocked mod fails cleanly.
@@ -547,13 +731,12 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 
 These do **not** block the plan shape; decide before coding Phase 1:
 
-1. **Choice vs auto at 1k/5k** — confirmed **player choice** for at least 1000 and 5000; any auto-only mods?
+1. **Choice vs auto at 1k/5k** — **decided:** player **choice** at 1,000 and 5,000 for Dark Utils / Apotheosis package; **auto** at 500 (`utility`) and 2,500 (`easyoregeneration`). See §5.4.1.
 2. **Can choice unlock a mod that also has a quest path?**  
-   - **Recommended:** Yes — choice is an alternate on-ramp; quest can still grant items/XP without being the only pool key.  
-   - Or: quest-only mods excluded from choice lists (stricter story).
-3. **Atlas end size** — 48 vs 96?
-4. **Final win = Atlas only / Echo only / both?** — plan recommends **both** for “The Randon Ending,” with each seal feeling like a win alone.
-5. **Should milestone choice require a small quest click** (“Confirm unlock”) for discoverability, or pure command? — recommend **command + quest checklist** that completes when token spent.
+   - **Decided for v1:** **No** — quest-book mods stay quest-only; choice lists only hold non-questbook namespaces (§5.4.1). Revisit later if we want shortcuts.
+3. **Atlas end size** — 48 vs 96? (still open for Phase 2)
+4. **Final win = Atlas only / Echo only / both?** — plan recommends **both** for “The Randon Ending,” with each seal feeling like a win alone. (still open for Phase 3–4)
+5. **Should milestone choice require a small quest click** (“Confirm unlock”) for discoverability, or pure command? — **v1: command first** (`/randomblock unlock choose <mod>`); quest checklist when endgame chapter ships.
 
 ---
 
@@ -570,12 +753,10 @@ Not: “We crafted a star.”
 
 ---
 
-## 16. Execution note for future session
+## 16. Execution note
 
-When ready to implement:
-
-1. Confirm prerequisite pool unlocks are done and list of mods/modes is filled (§11 Phase 0).
-2. Start **Phase 1** only (milestones + selectable unlocks) — shippable value even before Atlas/Echo art.
+1. Prerequisite quest → pool unlocks and §5.4.1 freeze are done.
+2. **Implement Phase 1 now** (milestones + selectable unlocks for §5.4.1 mods) — shippable before Atlas/Echo art.
 3. Then Atlas, Echo, quest chapter, docs.
 
 Do not implement prestige. Do not expand scope into new combat mods for the finale; Gateways remain optional side content unless you later re-open that design.

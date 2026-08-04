@@ -1,0 +1,53 @@
+{
+  "_readme": "Mine milestones for Random One Block. Team Randon Mined counter crossings grant auto pool unlocks and/or choice tokens. Choice: /randomblock unlock choose <mod>. Status: /randomblock milestones. See theatlasplan.md §5.4.1.",
+
+  "enabled": true,
+
+  "milestone_auto_unlocks": [
+    {
+      "threshold": 500,
+      "mods": ["utility"],
+      "message": "BBL Utility blocks can now roll from the center block."
+    },
+    {
+      "threshold": 2500,
+      "mods": ["easyoregeneration"],
+      "message": "Easy Ore Generation blocks join the random pool."
+    }
+  ],
+
+  "milestone_choices": [
+    {
+      "threshold": 1000,
+      "token_id": "choice_1k",
+      "eligible_mods": ["darkutils", "apotheosis"],
+      "mod_packages": {
+        "apotheosis": ["apotheosis", "apothic_enchanting"]
+      },
+      "description": "First crack in the void — pick Dark Utils or Apotheosis (includes Enchanting)"
+    },
+    {
+      "threshold": 5000,
+      "token_id": "choice_5k",
+      "eligible_mods": ["darkutils", "apotheosis"],
+      "mod_packages": {
+        "apotheosis": ["apotheosis", "apothic_enchanting"]
+      },
+      "description": "The tear widens — unlock the remaining support pool (Dark Utils or Apotheosis)"
+    }
+  ],
+
+  "milestone_messages": [
+    {
+      "threshold": 100,
+      "message": "The void notices your island — 100 Randon Mined."
+    }
+  ],
+
+  "echo": {
+    "enabled": false,
+    "threshold": 100000,
+    "block_id": "kubejs:echo_block",
+    "force_on_break": true
+  }
+}

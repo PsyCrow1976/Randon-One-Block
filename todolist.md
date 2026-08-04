@@ -32,16 +32,20 @@ Add shaped 3×3 compression recipes so blocks that only exist as “crafted” i
 - [ ] Audit other **craft-only storage/decorative blocks** and add recipes where missing
 - [x] Document custom block workflow in **`howtocustomblocks.md`**
 
-## Random One Block — mine counter rewards
+## Random One Block — mine counter rewards / milestone pool unlocks
 
-Team-scoped milestones (not per-player) when the **Randon Mined** counter hits:
+Team-scoped milestones (not per-player) when the **Randon Mined** counter hits. Design: [`theatlasplan.md`](theatlasplan.md) §5.4.1.
 
-- [ ] **100** blocks mined — reward TBD
-- [ ] **1,000** blocks mined — reward TBD
-- [ ] **5,000** blocks mined — reward TBD
-- [ ] **10,000** blocks mined — reward TBD
-- [ ] **50,000** blocks mined — reward TBD
-- [ ] **100,000** blocks mined — reward TBD
+- [x] **100** — chat message (“void notices”)
+- [x] **500** — auto unlock **BBL Utility** (`utility`) pool
+- [x] **1,000** — choice token: **Dark Utils** *or* **Apotheosis** (+ `apothic_enchanting`)
+- [x] **2,500** — auto unlock **Easy Ore Generation** pool
+- [x] **5,000** — choice token: remaining Dark Utils / Apotheosis package
+- [ ] **10,000** — reserved
+- [ ] **50,000** — reserved (pre-Echo)
+- [ ] **100,000** — Echo trophy (Phase 3)
+
+Commands: `/randomblock milestones`, `/randomblock unlock list`, `/randomblock unlock choose <mod>`
 
 ## Random block tiers (progression gating)
 
