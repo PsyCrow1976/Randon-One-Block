@@ -62,9 +62,9 @@
   "quest.3406FF862E0E55FB.quest_desc": [
     "Available after &eFirst Crack in the Void&r (1,000 mined).",
     "",
-    "Spend your &d1,000&r token on &6Dark Utilities&r. &aCheck the box&r to claim (needs an unspent token).",
+    "Spend your &d1,000&r token on &6Dark Utilities&r. &aCheck the box&r to claim.",
     "",
-    "If you already spent it on Apotheosis, this will fail — that is expected."
+    "&cOnly one pick&r at this tier. After you claim Dark Utils &ror&r Apotheosis, the other claim is locked and any extra check is undone."
   ],
   "task.70C16F9FB9166093.title": "Choose Dark Utilities",
 
@@ -75,7 +75,7 @@
     "",
     "Spend your &d1,000&r token on &6Apotheosis&r + &eapothic_enchanting&r. &aCheck the box&r to claim.",
     "",
-    "One token only — if you already claimed Dark Utils, this fails."
+    "&cOnly one pick&r at this tier. Claiming this locks Dark Utils for the 1k token (and undoes a second check)."
   ],
   "task.2F21027BA89D32B8.title": "Choose Apotheosis package",
 

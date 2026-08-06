@@ -78,6 +78,12 @@ const DEFAULT_MILESTONES_CONFIG = {
     '16688F671F62C49F': 'darkutils',
     '29C704D46039E1FC': 'apotheosis'
   },
+  ftb_choice_task_to_quest: {
+    '70C16F9FB9166093': '3406FF862E0E55FB',
+    '2F21027BA89D32B8': '32BD86CB337AB9F0',
+    '16688F671F62C49F': '5C61885CB786A9FA',
+    '29C704D46039E1FC': '39A188E8418C47B7'
+  },
   echo: {
     enabled: false,
     threshold: 100000,
@@ -347,6 +353,14 @@ function sanitizeMilestonesConfig(raw) {
   next.ftb_choice_tasks = milestonesStringMap(milestonesReadField(next, 'ftb_choice_tasks'))
   if (!Object.keys(next.ftb_choice_tasks).length) {
     next.ftb_choice_tasks = milestonesStringMap(DEFAULT_MILESTONES_CONFIG.ftb_choice_tasks)
+  }
+  next.ftb_choice_task_to_quest = milestonesStringMap(
+    milestonesReadField(next, 'ftb_choice_task_to_quest')
+  )
+  if (!Object.keys(next.ftb_choice_task_to_quest).length) {
+    next.ftb_choice_task_to_quest = milestonesStringMap(
+      DEFAULT_MILESTONES_CONFIG.ftb_choice_task_to_quest
+    )
   }
 
   return next
@@ -619,16 +633,20 @@ function getPlayerCommandName(player) {
  * Complete an FTB quest for a player (Randon Mined chapter milestones).
  * Uses ftbquests change_progress — best-effort across versions.
  */
-function completeFtbQuestForPlayer(player, questId, server) {
+function runFtbProgressCommand(player, action, questId, server) {
   var name = getPlayerCommandName(player)
   var qid = String(questId || '')
     .trim()
     .toUpperCase()
+  var act = String(action || 'complete')
+    .trim()
+    .toLowerCase()
   var cmds = []
   var i = 0
   var cmd = null
 
   if (!player || !qid) return
+  if (act !== 'complete' && act !== 'reset') act = 'complete'
   if (!server || !server.runCommandSilent) {
     try {
       if (player.server && player.server.runCommandSilent) server = player.server
@@ -638,8 +656,8 @@ function completeFtbQuestForPlayer(player, questId, server) {
   if (!name) return
 
   cmds = [
-    'ftbquests change_progress ' + name + ' complete ' + qid,
-    'execute as ' + name + ' run ftbquests change_progress @s complete ' + qid
+    'ftbquests change_progress ' + name + ' ' + act + ' ' + qid,
+    'execute as ' + name + ' run ftbquests change_progress @s ' + act + ' ' + qid
   ]
 
   for (i = 0; i < cmds.length; i++) {
@@ -650,10 +668,56 @@ function completeFtbQuestForPlayer(player, questId, server) {
   }
 }
 
+function completeFtbQuestForPlayer(player, questId, server) {
+  runFtbProgressCommand(player, 'complete', questId, server)
+}
+
+function resetFtbQuestForPlayer(player, questId, server) {
+  runFtbProgressCommand(player, 'reset', questId, server)
+}
+
 function completeFtbQuestForScope(server, scopeId, questId) {
   forEachPlayerInScope(server, scopeId, function (player) {
     completeFtbQuestForPlayer(player, questId, server)
   })
+}
+
+function resetFtbQuestForScope(server, scopeId, questId) {
+  forEachPlayerInScope(server, scopeId, function (player) {
+    resetFtbQuestForPlayer(player, questId, server)
+  })
+}
+
+/**
+ * After spending a token, complete the chosen claim quest and reset the sibling
+ * so only one of the two options stays completed in the quest book.
+ */
+function applyExclusiveChoiceQuests(scopeId, tokenId, chosenMod, server) {
+  var config = ensureMilestonesConfig()
+  var byToken = config.ftb_choice_quest_by_token || {}
+  var tokenMap = byToken[tokenId] || byToken[String(tokenId).toLowerCase()] || {}
+  var mod = null
+  var questId = null
+  var chosen = String(chosenMod || '')
+    .trim()
+    .toLowerCase()
+
+  if (!tokenMap || !chosen) return
+
+  for (mod in tokenMap) {
+    if (!Object.prototype.hasOwnProperty.call(tokenMap, mod)) continue
+    questId = tokenMap[mod]
+    if (!questId) continue
+    if (
+      String(mod)
+        .trim()
+        .toLowerCase() === chosen
+    ) {
+      completeFtbQuestForScope(server, scopeId, questId)
+    } else {
+      resetFtbQuestForScope(server, scopeId, questId)
+    }
+  }
 }
 
 function syncFtbMilestoneQuests(scopeId, blocksMined, server) {
@@ -668,7 +732,6 @@ function syncFtbMilestoneQuests(scopeId, blocksMined, server) {
   var spent = record.spent_choice_tokens || {}
   var tokenId = null
   var mod = null
-  var tokenMap = null
 
   for (key in hooks) {
     if (!Object.prototype.hasOwnProperty.call(hooks, key)) continue
@@ -678,16 +741,14 @@ function syncFtbMilestoneQuests(scopeId, blocksMined, server) {
     if (questId) completeFtbQuestForScope(server, scopeId, questId)
   }
 
-  // Mark only the claim quest for that token+mod (not every tier)
+  // One claim quest completed, siblings reset (exclusive pick per token)
   for (tokenId in spent) {
     if (!Object.prototype.hasOwnProperty.call(spent, tokenId)) continue
     mod = String(spent[tokenId] || '')
       .trim()
       .toLowerCase()
-    tokenMap = byToken[tokenId] || byToken[String(tokenId).toLowerCase()]
-    if (!tokenMap || !mod) continue
-    questId = tokenMap[mod]
-    if (questId) completeFtbQuestForScope(server, scopeId, questId)
+    if (!mod) continue
+    applyExclusiveChoiceQuests(scopeId, tokenId, mod, server)
   }
 }
 
@@ -1091,9 +1152,10 @@ function chooseUnlock(player, mod, server) {
       displayParts.join('§7, §f')
   )
 
-  // Mark matching FTB claim quests (skip re-entrant choose from task events)
+  // Complete chosen claim quest; reset sibling so only one check stays
   try {
     MILESTONE_STATE.choiceInProgress = true
+    applyExclusiveChoiceQuests(scopeId, pick.token_id, needle, server)
     syncFtbMilestoneQuests(scopeId, record.blocks_mined, server)
   } catch (ignoredSync) {
   } finally {
@@ -1107,7 +1169,7 @@ function chooseUnlock(player, mod, server) {
       displayParts.join('§7, §f') +
       ' §7(token §f' +
       pick.token_id +
-      '§7)',
+      '§7). §eOnly one choice per milestone — the other claim was locked.',
     mods: packageMods,
     token_id: pick.token_id
   }
