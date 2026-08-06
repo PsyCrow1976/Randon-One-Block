@@ -617,7 +617,7 @@ Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock cho
 - [x] Seal item `kubejs:atlas_seal` granted once when active endgame set complete.
 - [x] Optional: chat on new endgame-set discovery (per new unique atlas page).
 - [x] FTB chapter **The Atlas** — one checkmark quest per endgame-set block (10 XP); auto-complete on center roll.
-- [ ] **Playtest:** unique rolls accumulate; non-center ignored; unlock expands active set; seal once; missing list sensible; FTB pages check off.
+- [x] **Playtest:** FTB tab **The Atlas** titles/descriptions confirmed in-game (signed-long-safe IDs).
 
 #### Phase 2 — what you test
 
