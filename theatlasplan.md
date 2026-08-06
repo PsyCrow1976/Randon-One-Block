@@ -220,6 +220,7 @@ Quest-book chapters already map their signature quests → minable namespaces (S
 
 - Choice tokens only offer mods that are still locked for the team (already-unlocked options are hidden).
 - Spending a token runs the same team unlock path as `/randomblock poolenable <mod> true` (packages enable every listed namespace).
+- One claim per token in the quest book (sibling claim is reset if a second check is attempted).
 - Quest-mapped mods stay **quest-only** for v1 (not on choice lists) so the quest book remains the story path for those chapters.
 - Op `/randomblock poolenable` still works as a debug/manual override for any gated mod.
 
@@ -228,6 +229,23 @@ Quest-book chapters already map their signature quests → minable namespaces (S
 - Mods with a **full chapter + signature unlock quest** → prefer `quest` or `quest_and_milestone`.
 - Mods that are **nice-to-have early** with **no chapter** → `milestone` auto or `milestone_choice` at 500/1k/2.5k/5k (this section).
 - “Must feel earned” endgame mods → `quest_and_milestone` with high N **or** only via Atlas chapter, not free choice.
+
+#### 5.4.3 Future note — linear unlocks vs player choice (leave for later)
+
+**Status (playtest):** **Player choice at 1k/5k is confirmed working** and is **nice to have** for now — keep it.
+
+**Future option (not v1 work):** switch non-questbook pools to a **linear** milestone schedule instead of (or as an alternate mode to) choice tokens, e.g.:
+
+| Mines | Linear example |
+|------:|----------------|
+| 500 | `utility` (already auto) |
+| 1,000 | `darkutils` auto (no pick) |
+| 2,500 | `easyoregeneration` (already auto) |
+| 5,000 | `apotheosis` + `apothic_enchanting` auto |
+
+**Why consider later:** simpler quest book (no exclusive claim pair), less “I checked both” confusion, clearer progression.  
+**Why keep choice for now:** agency, replayability, players who want Apotheosis early vs Dark Utils.  
+**Decision:** **leave choice as-is**; revisit linear only if feedback asks for simpler progression.
 
 #### 5.4.2 Suggestion — player-facing unlock broadcasts (polish)
 
@@ -571,11 +589,12 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 - [x] Commands: `milestones`, `unlock list`, `unlock choose`.
 - [x] Wire choice → same persistence as `poolenable` (incl. `apotheosis` package → `apothic_enchanting`).
 - [x] Auto-unlock `utility` @ 500 and `easyoregeneration` @ 2500.
-- [x] Tests: auto unlock @ 500 confirmed (live + backfill after parse fix).
-- [ ] Support `quest_and_milestone` in pool eligibility — **defer** (no mod uses this mode yet).
-- [ ] Polish: player-specific unlock broadcasts (§5.4.2) — optional; chat works today.
-- [x] **FTB Quests chapter “Randon Mined”** — milestone track + book checkmark choices (see below).
-- [ ] **Your playtest remaining:** 1,000 choice · 2,500 auto easyoregen · 5,000 choice · book claims · persistence.
+- [x] **FTB Quests chapter “Randon Mined”** — counter-gated custom tasks + book claim choices (exclusive sibling reset).
+- [x] Tests: **100** auto · **500** Utility · **1,000** choice (book claim confirmed working).
+- [ ] Tests remaining: **2,500** Easy Ore Gen auto · **5,000** second choice · optional logout persistence smoke.
+- [ ] Support `quest_and_milestone` in pool eligibility — **defer** (no mod uses this mode yet; not required to close Phase 1).
+- [ ] Polish: player-specific unlock broadcasts (§5.4.2) — **optional**, not a Phase 1 gate.
+- [ ] Future only: linear unlock schedule instead of choice (§5.4.3) — **not now**.
 
 #### Phase 1 — FTB chapter **Randon Mined** (implemented)
 
@@ -583,21 +602,21 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 |-------|----------|
 | Chapter | `config/ftbquests/quests/chapters/randon_mined.json5` (tab after Getting Started) |
 | Lang | `config/ftbquests/quests/lang/en_us/chapter.json5` + `…/chapters/randon_mined.json5` |
-| Hooks | `kubejs/config/random_one_block_milestones.json` → `ftb_quest_hooks` / `ftb_choice_tasks` |
-| Engine | `random_one_block_milestones.js` completes threshold quests; book checkmark runs `chooseUnlock` |
+| Hooks | `kubejs/config/random_one_block_milestones.json` → `ftb_quest_hooks` / mine-count custom tasks / choice tasks |
+| Engine | `random_one_block_milestones.js` — counter-gated custom tasks; claim checkmarks run `chooseUnlock` (one per token) |
 
-**Player flow:** mine center block → threshold quests auto-complete → at 1k/5k open side quests → **check the box** to spend the token (or still use `/randomblock unlock choose`).
+**Player flow:** Getting Started → Randon Mined intro → mine → thresholds auto-complete from counter → at 1k/5k **claim exactly one** side quest (or `/randomblock unlock choose`).
 
-#### Phase 1 — what you test next
+#### Phase 1 — next steps (what’s left)
 
-Use a **fresh island** (or continue past 500). After `/reload`, log must show `Milestones config loaded: 2 auto, 2 choice token(s)` and choice task handlers registered. `/ftbquests reload` if the new tab is missing.
-
-| Mines | Check |
-|------:|--------|
-| **1,000** | Token granted; **Randon Mined** quest “First Crack…” completes; side quests Claim Dark Utils / Claim Apotheosis available; **checkmark one** in the book unlocks the pool (apotheosis → both namespaces) |
-| **2,500** | Auto **easyoregeneration** ON; chapter quest completes |
-| **5,000** | Second choice; book claim for the remaining mod |
-| Any | Chat choose still works; log out/in persists; other quest chapters still OK |
+| Priority | Item | Who |
+|----------|------|-----|
+| **1 — finish playtest** | Bump to ~2490 → confirm **2,500** Easy Ore Gen auto unlock + quest | You (I can set counter) |
+| **2 — finish playtest** | Bump to ~4990 → **5,000** token + claim remaining mod | You |
+| **3 — optional** | Logout/login once; unlocks + spent token still correct | You |
+| **4 — close Phase 1** | Mark Phase 1 complete in plan when 2.5k/5k green | Us |
+| **5 — next phase** | **Phase 2 — Atlas tracking** (unique center rolls, endgame set, `/randomblock atlas`) | Us when you say go |
+| Skip for now | Broadcast polish, `quest_and_milestone`, linear unlocks | Later |
 
 Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock choose <mod>` · `pools list`
 
