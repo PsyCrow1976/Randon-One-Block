@@ -1,9 +1,10 @@
 {
-  "_readme": "Phase 0 draft — Randon Atlas endgame set (True Atlas). Not wired in code until Phase 2. Entries with requires_mod are inactive until that pool is unlocked for the team. Refresh IDs after /randomblock pools debug complete if the master pool changes. See theatlasplan.md §6.2.1.",
+  "_readme": "Phase 0 APPROVED — Randon Atlas endgame set (True Atlas). Not wired in code until Phase 2. Entries with requires_mod are inactive until that pool is unlocked for the team. Adjust ids later as needed. See theatlasplan.md §6.0 + §6.2.1.",
 
   "endgame_set_id": "randon_atlas_v1",
+  "phase0_approved": true,
   "require_mod_unlocked": true,
-  "target_size_note": "v1 draft aims ~64 entries; trim or expand after live pool dump refresh",
+  "target_size_note": "~64 entries approved; trim or expand later if pool content changes",
 
   "player_facing": {
     "chapter_title": "Randon Atlas & Echo",
