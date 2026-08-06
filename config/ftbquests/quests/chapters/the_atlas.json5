@@ -1,5 +1,5 @@
 {
-  id: "F35A30FF1AB15B2D",
+  id: "6A61B8EADA248285",
   group: "",
   order_index: 2,
   icon: {
@@ -12,7 +12,7 @@
   quests: [
     {
       icon: {
-        id: "minecraft:book",
+        id: "minecraft:writable_book",
         count: 1,
       },
       x: 0.0,
@@ -22,16 +22,16 @@
       dependencies: [
         "1E7624ECE0EA67D4",
       ],
-      id: "1887BB9F14E9CCAC",
+      id: "73B3ADDEEBEF97B0",
       tasks: [
         {
-          id: "FB7E20A4D86609A3",
+          id: "3E8A97F7E9DD75C1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "974B8BA001680AAA",
+          id: "25A6B220CF9AB2D7",
           type: "xp",
           xp: 10,
         },
@@ -45,18 +45,18 @@
       x: 2.0,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "54FF31DEE2709B24",
+      id: "5E61A8111F91E184",
       tasks: [
         {
-          id: "666BE3FF01A9E6FE",
+          id: "351A28592AC49122",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "83F6FD06AF5AC8EA",
+          id: "40311A7C71F889F1",
           type: "xp",
           xp: 10,
         },
@@ -70,18 +70,18 @@
       x: 3.5,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "FC21C580D011AF8A",
+      id: "57E130B07FA73066",
       tasks: [
         {
-          id: "BC39C68D6916D7CF",
+          id: "55FF6AB49CDA4F40",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "33DD5703B933559C",
+          id: "30A1590E2F31923D",
           type: "xp",
           xp: 10,
         },
@@ -95,18 +95,18 @@
       x: 5.0,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "A5629A752D750951",
+      id: "64B4A7C28AC7E0CD",
       tasks: [
         {
-          id: "5BD3504016CB88F3",
+          id: "0FE09467F7977E38",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "AE555ECBE64CB326",
+          id: "1C22D7444A991AA9",
           type: "xp",
           xp: 10,
         },
@@ -120,18 +120,18 @@
       x: 6.5,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "4F0713A85CC191E6",
+      id: "01C44CC7C6EF36CC",
       tasks: [
         {
-          id: "FC1D4D1E19008887",
+          id: "39A6280A49854720",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "483B24E83794FC8B",
+          id: "63BB4399FE7160BE",
           type: "xp",
           xp: 10,
         },
@@ -145,18 +145,18 @@
       x: 8.0,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "E44F9C60C8DBBDED",
+      id: "0968293DE1CC664F",
       tasks: [
         {
-          id: "59AD8AFD89BAA9C0",
+          id: "6FA5A4A7C3B3DF59",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "5DF1BE6797ADD347",
+          id: "51865FA86D74B5F6",
           type: "xp",
           xp: 10,
         },
@@ -170,18 +170,18 @@
       x: 9.5,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "7F69B3679CDE4DC3",
+      id: "52318DBA0A2375B5",
       tasks: [
         {
-          id: "9DD63EDB782FC609",
+          id: "568CFB33C4B766C2",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "36DA801826DBD6AE",
+          id: "0B1E3958B45F9ABF",
           type: "xp",
           xp: 10,
         },
@@ -195,18 +195,18 @@
       x: 11.0,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "46EC2C97FDB0E74C",
+      id: "524D66518D515876",
       tasks: [
         {
-          id: "5104C1254B06ABBC",
+          id: "2040D4663928D5B1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "9B001D95B8813269",
+          id: "200FE478F15186B8",
           type: "xp",
           xp: 10,
         },
@@ -220,18 +220,18 @@
       x: 12.5,
       y: -1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "FF07D1B7B7DDD845",
+      id: "7A52B80523E8B198",
       tasks: [
         {
-          id: "3790D8D36463A1FC",
+          id: "503F6DC36F25E83D",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "5AD1DA438835EB43",
+          id: "114ED742E586F4FE",
           type: "xp",
           xp: 10,
         },
@@ -245,18 +245,18 @@
       x: 2.0,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "A8CB61EC68476AC7",
+      id: "1320DF0B723B4A21",
       tasks: [
         {
-          id: "ED4D05E95C46E949",
+          id: "5CE8ED264A97F653",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "55CC4D586CFDDBEB",
+          id: "74723AD7D9CB5060",
           type: "xp",
           xp: 10,
         },
@@ -270,18 +270,18 @@
       x: 3.5,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B6DF68EF0897BE2A",
+      id: "3459A3922D8E6457",
       tasks: [
         {
-          id: "0F4288F85A543389",
+          id: "430F2B2EBBE1A2DC",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "175CB0E0489CFEE2",
+          id: "3287FBA42A42BD97",
           type: "xp",
           xp: 10,
         },
@@ -295,18 +295,18 @@
       x: 5.0,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "F278DDBE42B25D51",
+      id: "419B74A79C9FA149",
       tasks: [
         {
-          id: "DFC30BA706409E4A",
+          id: "6B5A3DD4F4E2388A",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "0789DBCB54D55302",
+          id: "3327128D4E8100EE",
           type: "xp",
           xp: 10,
         },
@@ -320,18 +320,18 @@
       x: 6.5,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "00E53D39D2F18C58",
+      id: "26E25C84CB7F516A",
       tasks: [
         {
-          id: "4F35DE64D93B904D",
+          id: "30BC18EAE79668FA",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "33C3F8BE925106C7",
+          id: "1567CB0A7BF24CF0",
           type: "xp",
           xp: 10,
         },
@@ -345,18 +345,18 @@
       x: 8.0,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "F522E0CFB4C87DAB",
+      id: "572952E648C75AAA",
       tasks: [
         {
-          id: "5FE2585D6627F06D",
+          id: "2DD0A3EF7E882469",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "92387494F5AA0ED1",
+          id: "0630D7B548582B2B",
           type: "xp",
           xp: 10,
         },
@@ -370,18 +370,18 @@
       x: 9.5,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "3CA0B1129B6671A6",
+      id: "456F79A02DDF4686",
       tasks: [
         {
-          id: "4EEA11B9E0C83C69",
+          id: "7C45204235781B58",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "308D3F417E4B1F0B",
+          id: "6AEABC90A113C9BD",
           type: "xp",
           xp: 10,
         },
@@ -395,18 +395,18 @@
       x: 11.0,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "8419AEC4D73A51B4",
+      id: "5F2A0EAC3E86B03C",
       tasks: [
         {
-          id: "2538939AAFCFDA70",
+          id: "5636A1336AED830C",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "BECABE0AE7FD54DC",
+          id: "5A245FE424B804B4",
           type: "xp",
           xp: 10,
         },
@@ -420,18 +420,18 @@
       x: 12.5,
       y: 0.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "31B19959664F3A6E",
+      id: "5F1C7CC025D17502",
       tasks: [
         {
-          id: "A85BA5D318EF4F68",
+          id: "5FBD6BFA35E1BA21",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8C7A1DDF032B9559",
+          id: "24C22EFD16737E7F",
           type: "xp",
           xp: 10,
         },
@@ -445,18 +445,18 @@
       x: 2.0,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "90AECB0CD129CD8B",
+      id: "3F6A232562ABD992",
       tasks: [
         {
-          id: "08FDD056DB734CC1",
+          id: "77ABF82A598D137D",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C7ECBD8CF5579A5E",
+          id: "213DFE6BB2087F05",
           type: "xp",
           xp: 10,
         },
@@ -470,18 +470,18 @@
       x: 3.5,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6AFF4A059F900188",
+      id: "02A86A29A8E9F114",
       tasks: [
         {
-          id: "8FA935DFDD2138C2",
+          id: "1FE88A823C668641",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "D00D7DE3D9E0A7A5",
+          id: "1F6F0A4CB114398B",
           type: "xp",
           xp: 10,
         },
@@ -495,18 +495,18 @@
       x: 5.0,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "2A0C92AC161E3594",
+      id: "65BEC8F8B1E7A6C5",
       tasks: [
         {
-          id: "AFD2DF29FC81BF4D",
+          id: "3875E6060C638903",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "3AFBAE300AF16B94",
+          id: "3319424AE77B36C9",
           type: "xp",
           xp: 10,
         },
@@ -520,18 +520,18 @@
       x: 6.5,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "BD5D145F192E84D5",
+      id: "36965AE4523059D5",
       tasks: [
         {
-          id: "C93160D4E81A154C",
+          id: "3DDE9FDF067EA527",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "E2D42AC046D92AB1",
+          id: "4FD6F8FAA28954BF",
           type: "xp",
           xp: 10,
         },
@@ -545,18 +545,18 @@
       x: 8.0,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "3D4FE14CC29098A4",
+      id: "247A05BF0E0C3411",
       tasks: [
         {
-          id: "7CE2FD311C5ACF45",
+          id: "45B4C0F9A0E5FC34",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "778E265DDF6D430E",
+          id: "6E9DFF04B02A80D2",
           type: "xp",
           xp: 10,
         },
@@ -570,18 +570,18 @@
       x: 9.5,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "859C6F9265B01D36",
+      id: "72AB540C642CC7CF",
       tasks: [
         {
-          id: "6E1751520ADB19F4",
+          id: "2B0B962F73E74798",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "0F19D76984C7C2A0",
+          id: "5D6BA7853471FC00",
           type: "xp",
           xp: 10,
         },
@@ -595,18 +595,18 @@
       x: 11.0,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "0A6A35E635C1867D",
+      id: "608F7AE80F5D624E",
       tasks: [
         {
-          id: "FBB2F37AE5D04CF2",
+          id: "5C175129120A9520",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8527CA9AD8A161EB",
+          id: "2A60F9983C5BBCFE",
           type: "xp",
           xp: 10,
         },
@@ -620,18 +620,18 @@
       x: 12.5,
       y: 1.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "BD4FA81275269B50",
+      id: "2E758310636D7D7E",
       tasks: [
         {
-          id: "6668E1337551F1D6",
+          id: "5B9010030007E186",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "58D80EADC160A264",
+          id: "58A941E25DB8BD5B",
           type: "xp",
           xp: 10,
         },
@@ -645,18 +645,18 @@
       x: 2.0,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "0C98C29D352300FF",
+      id: "17366EB7C46C91D3",
       tasks: [
         {
-          id: "3283589AFD7E983F",
+          id: "7E30A548436AB864",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "2972AAEB8C60F4B1",
+          id: "70D5AF8D9FC08F2B",
           type: "xp",
           xp: 10,
         },
@@ -670,18 +670,18 @@
       x: 3.5,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6D5864602E68B757",
+      id: "4893DBB8F9B7F072",
       tasks: [
         {
-          id: "915E0948B3DDC47E",
+          id: "6BD20532B380C6A5",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "B105FD40E077D514",
+          id: "0544041E6637CDC3",
           type: "xp",
           xp: 10,
         },
@@ -695,18 +695,18 @@
       x: 5.0,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "2055621963DCD7E8",
+      id: "336A020ACB49263C",
       tasks: [
         {
-          id: "F60B78CBC6F3E38E",
+          id: "36428A349B3F8477",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "5FAEDD42EF5F457B",
+          id: "6A9C00189BB4C8C7",
           type: "xp",
           xp: 10,
         },
@@ -720,18 +720,18 @@
       x: 6.5,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "993CAFD19E70A030",
+      id: "11E451656D6384C1",
       tasks: [
         {
-          id: "1C912E485D123FA6",
+          id: "565C2EAD25F1C658",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C1B40680E64C4652",
+          id: "3103E94FC308FDC8",
           type: "xp",
           xp: 10,
         },
@@ -745,18 +745,18 @@
       x: 8.0,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "2256C74C80F11063",
+      id: "7632B82EB7C175F4",
       tasks: [
         {
-          id: "055D00375A00DAEC",
+          id: "689B8067C0A8C7AD",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "1BB70D9CB2CA2F87",
+          id: "73BE14C91B51A157",
           type: "xp",
           xp: 10,
         },
@@ -770,18 +770,18 @@
       x: 9.5,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "FCF2C463DAB89F4E",
+      id: "73A86DFF71583FC3",
       tasks: [
         {
-          id: "F3AE521B30DC0F5D",
+          id: "11C278C88EEEC302",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C7AA83603BD016B3",
+          id: "5798A4C259F56A58",
           type: "xp",
           xp: 10,
         },
@@ -795,18 +795,18 @@
       x: 11.0,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "990D65C900E6B4C0",
+      id: "63707FF8C4309E38",
       tasks: [
         {
-          id: "4DFF3548B15D3921",
+          id: "182185A4438478C0",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8C7435807D299FEE",
+          id: "005F8B90EEAE0B4B",
           type: "xp",
           xp: 10,
         },
@@ -820,18 +820,18 @@
       x: 12.5,
       y: 3.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "2B816E771FEAC81E",
+      id: "1C8BC778DEE1A00A",
       tasks: [
         {
-          id: "E6A5381A6B1B944C",
+          id: "7DF2E28AF790410D",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "816AE3BACB6F93A5",
+          id: "0E54795BB94C9BEE",
           type: "xp",
           xp: 10,
         },
@@ -845,18 +845,18 @@
       x: 2.0,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "824F997B37B873C5",
+      id: "15E40BCE8E74EB77",
       tasks: [
         {
-          id: "0129154B2609C4A0",
+          id: "3BF4D1969AF50E8A",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "BB287D73C0A7BA0C",
+          id: "506E5A1CAC8EBC35",
           type: "xp",
           xp: 10,
         },
@@ -870,18 +870,18 @@
       x: 3.5,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "71EC0789C05031AC",
+      id: "3E43277E0672B4AC",
       tasks: [
         {
-          id: "ABF036A64A3A271A",
+          id: "246BA63B4C5EE0D6",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "655CA77073E11885",
+          id: "65B700693429766C",
           type: "xp",
           xp: 10,
         },
@@ -895,18 +895,18 @@
       x: 5.0,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B24B34189AF36133",
+      id: "7E6AC79D8496CEA2",
       tasks: [
         {
-          id: "502677A40F61CA82",
+          id: "6940B51ED3CA297A",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "50E48558417BE0CF",
+          id: "74B8FAB928C81D62",
           type: "xp",
           xp: 10,
         },
@@ -920,18 +920,18 @@
       x: 6.5,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B97B563F14F436BA",
+      id: "05821094EFD06133",
       tasks: [
         {
-          id: "C85816E177248CFC",
+          id: "53BB7C7715C6BE18",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "6602D1BA2DB0E49D",
+          id: "13BDD0E385182388",
           type: "xp",
           xp: 10,
         },
@@ -945,18 +945,18 @@
       x: 8.0,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B5DF895E208F3E69",
+      id: "1CB74161FCD6A8E6",
       tasks: [
         {
-          id: "9A68A07C31F22A56",
+          id: "07311FC1990E092B",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "E3CA84B04ED7867E",
+          id: "2936543ED97DBE4E",
           type: "xp",
           xp: 10,
         },
@@ -970,18 +970,18 @@
       x: 9.5,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B81274122D9F38D4",
+      id: "69BAC76F141C19D5",
       tasks: [
         {
-          id: "FA00B210F1F36E46",
+          id: "65CA5B14F7F9B7F8",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "FA484057610CB734",
+          id: "68B8C452FC656BC6",
           type: "xp",
           xp: 10,
         },
@@ -995,18 +995,18 @@
       x: 11.0,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "2169120AF6CA0283",
+      id: "08BD4A758F08B88E",
       tasks: [
         {
-          id: "69C803B21998D4DB",
+          id: "071D8919844CADEC",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "0371E7701B6C5DD1",
+          id: "2FB071B38D9DAF61",
           type: "xp",
           xp: 10,
         },
@@ -1020,18 +1020,18 @@
       x: 12.5,
       y: 4.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "912A4CC93BF3B0B7",
+      id: "60C12D4D05FA06DB",
       tasks: [
         {
-          id: "A402A3CD17EB691B",
+          id: "270E96E00B72D0CA",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "273456038C16F61C",
+          id: "0CA76C09A2439636",
           type: "xp",
           xp: 10,
         },
@@ -1045,18 +1045,18 @@
       x: 2.0,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "A7763F71121BE60E",
+      id: "00F6F43BBD3593BB",
       tasks: [
         {
-          id: "9BAA78FB19FF273E",
+          id: "4827292AF7C59768",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "919D288116CD20D3",
+          id: "5784BBBF48EF034C",
           type: "xp",
           xp: 10,
         },
@@ -1070,18 +1070,18 @@
       x: 3.5,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "BB04276EC3B5DBF4",
+      id: "56C2364E97B1765D",
       tasks: [
         {
-          id: "868DDC5B3A97F331",
+          id: "33DD3B3650F47810",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "2E07AC4FF44F082C",
+          id: "0A7A61F7EC6D9E18",
           type: "xp",
           xp: 10,
         },
@@ -1095,18 +1095,18 @@
       x: 5.0,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "14A1C8E67C6CDDAA",
+      id: "35384CEE0E35E70A",
       tasks: [
         {
-          id: "32BD24BBF62FD17A",
+          id: "2908B055967B63D1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "A567EB9FB0342109",
+          id: "5A867DAFD0468BDE",
           type: "xp",
           xp: 10,
         },
@@ -1120,18 +1120,18 @@
       x: 6.5,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "E26DB74767E2ED03",
+      id: "45A2BBE00735F244",
       tasks: [
         {
-          id: "26C3D8B5B801DF7E",
+          id: "3B19A920BF4CCB82",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "62DCB3C92984E4BF",
+          id: "16BF268F7A657F49",
           type: "xp",
           xp: 10,
         },
@@ -1145,18 +1145,18 @@
       x: 8.0,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "52219418DDBDFF1C",
+      id: "1F23B6D40CE50BE7",
       tasks: [
         {
-          id: "0037992380CE24D0",
+          id: "4AE206D9E90CD58E",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C05F87282CD5FB4A",
+          id: "3EF235522DCA098C",
           type: "xp",
           xp: 10,
         },
@@ -1170,18 +1170,18 @@
       x: 9.5,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "4AFCD426E172936F",
+      id: "59B67F56825DCE35",
       tasks: [
         {
-          id: "6E9451828A04DA8D",
+          id: "5523409765C035CA",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C1570F1B8182DC62",
+          id: "7DC86CA2FAB0303B",
           type: "xp",
           xp: 10,
         },
@@ -1195,18 +1195,18 @@
       x: 11.0,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "01317C4E9AE92C52",
+      id: "31BF3D8EAC289F70",
       tasks: [
         {
-          id: "474984562EDD14B3",
+          id: "40C627BD11878FE2",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8A01F211362CA9D9",
+          id: "30A2567EE7A672C8",
           type: "xp",
           xp: 10,
         },
@@ -1220,18 +1220,18 @@
       x: 12.5,
       y: 6.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "5044B5433E8B7F6E",
+      id: "31D022452BCBD3F5",
       tasks: [
         {
-          id: "7506E886FEA540E2",
+          id: "7A3831DBDBEAA112",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "34E9510AAC3AB946",
+          id: "45A674C0163D3827",
           type: "xp",
           xp: 10,
         },
@@ -1245,18 +1245,18 @@
       x: 2.0,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "D6D627B9F5AF7334",
+      id: "584D8C20DDC0D7FE",
       tasks: [
         {
-          id: "2368A178A9ABC232",
+          id: "4B9B2B65F28C05D1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "BF975C3F7719B4BB",
+          id: "1563DDEA0B880EC5",
           type: "xp",
           xp: 10,
         },
@@ -1270,18 +1270,18 @@
       x: 3.5,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "0D4EB662F57C9402",
+      id: "5820297294665747",
       tasks: [
         {
-          id: "BB4E2A5BF7ECC429",
+          id: "1D95D194BD015CF4",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "1DB2E5A1BFE822C1",
+          id: "336BC015F102A239",
           type: "xp",
           xp: 10,
         },
@@ -1295,18 +1295,18 @@
       x: 5.0,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6D17E26941AF016E",
+      id: "0D1DBDEE1716E3C8",
       tasks: [
         {
-          id: "7102DBBA98DFDC4A",
+          id: "2AC7A25015BB9682",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "DFA101926EF16885",
+          id: "22BF1770AB7310BD",
           type: "xp",
           xp: 10,
         },
@@ -1320,18 +1320,18 @@
       x: 6.5,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "658D4691039E1967",
+      id: "4DAAA929C61D5430",
       tasks: [
         {
-          id: "9889B376E4E54092",
+          id: "4B764952F0D39618",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "5560F92807424FE5",
+          id: "0606DE46488E7B75",
           type: "xp",
           xp: 10,
         },
@@ -1345,18 +1345,18 @@
       x: 8.0,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6C70517F989F2ACF",
+      id: "712B4BA6FCD10018",
       tasks: [
         {
-          id: "436DE4256DD59370",
+          id: "22F311186A260FB3",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "CEF232872A2BBA7D",
+          id: "2CCED4201E24222A",
           type: "xp",
           xp: 10,
         },
@@ -1370,18 +1370,18 @@
       x: 9.5,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "9D5A166A7D2FB75B",
+      id: "0EE8A57DB6470D93",
       tasks: [
         {
-          id: "EF277A801E11D40B",
+          id: "39A79A6FBF652E90",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F83D2A1F73487B0",
+          id: "2AB2F6E01215759C",
           type: "xp",
           xp: 10,
         },
@@ -1395,18 +1395,18 @@
       x: 11.0,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "B65EDF43B6C50FB6",
+      id: "0F495E67B5DE7403",
       tasks: [
         {
-          id: "E2485BD85AD8EB11",
+          id: "5B47CDA5DC7CEA74",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "776CB8135860CD2B",
+          id: "13D65176D4F05F53",
           type: "xp",
           xp: 10,
         },
@@ -1420,18 +1420,18 @@
       x: 12.5,
       y: 7.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6F44F675CF115097",
+      id: "0089DD33DD6CD180",
       tasks: [
         {
-          id: "86FE1024C04E03B3",
+          id: "28998EC6043F560B",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "EB99E0E7C7C5B64E",
+          id: "2D548A28D3B194B2",
           type: "xp",
           xp: 10,
         },
@@ -1445,18 +1445,18 @@
       x: 2.0,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "F8D2191E0C3DE615",
+      id: "7F1FCF6D50C773D1",
       tasks: [
         {
-          id: "DA8CC7B6EC066D5D",
+          id: "5C00C9373CBABDCD",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "7485496FA7E74651",
+          id: "3E3702DDE990E8EE",
           type: "xp",
           xp: 10,
         },
@@ -1470,18 +1470,18 @@
       x: 3.5,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "25F39ADDA4208543",
+      id: "7F4096D588EDD909",
       tasks: [
         {
-          id: "241C31881EB7A899",
+          id: "57D0AA51DE3DCF37",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "32C6739DDBB97C70",
+          id: "6A7D4BE9FC7243F7",
           type: "xp",
           xp: 10,
         },
@@ -1495,18 +1495,18 @@
       x: 5.0,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "6F290F8B174C206B",
+      id: "433B8458B2E9F194",
       tasks: [
         {
-          id: "D177DE74F4D451A1",
+          id: "1FFBB54471A1BDCF",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "D3238FA4F54F0B03",
+          id: "61E881FD6F5E0CB6",
           type: "xp",
           xp: 10,
         },
@@ -1520,18 +1520,18 @@
       x: 6.5,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "CEF73482259FDAA2",
+      id: "03CA813BA3F177E1",
       tasks: [
         {
-          id: "64F07788256A69A0",
+          id: "2CEF0E9E590FF39E",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "A0B2D111CF2E9E05",
+          id: "604DF102F440CD48",
           type: "xp",
           xp: 10,
         },
@@ -1545,18 +1545,18 @@
       x: 8.0,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "92F71A52A1EA9422",
+      id: "0F2B4AB3E6D236FE",
       tasks: [
         {
-          id: "596DFE81325E8B2E",
+          id: "48A5929CBC3A783A",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "E2C946952CFA6304",
+          id: "37D8D4AD6DA1A01A",
           type: "xp",
           xp: 10,
         },
@@ -1570,18 +1570,18 @@
       x: 9.5,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "E4139FCD385155BC",
+      id: "47D53BD180B3A7DF",
       tasks: [
         {
-          id: "D815404F5DE2C156",
+          id: "07D4EA26982B6730",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C102060F4EA250E5",
+          id: "3B60127C033FA85D",
           type: "xp",
           xp: 10,
         },
@@ -1595,18 +1595,18 @@
       x: 11.0,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "F7AD11DE68590032",
+      id: "60A100C89E0912BD",
       tasks: [
         {
-          id: "35046EA3B33FF63E",
+          id: "4A6FBD66786F37A1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C4409B046F77D43B",
+          id: "27E4693C18C57E15",
           type: "xp",
           xp: 10,
         },
@@ -1620,18 +1620,18 @@
       x: 12.5,
       y: 9.0,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "DC4C56597BAC4FC3",
+      id: "41CC03C92E9D6687",
       tasks: [
         {
-          id: "95353A09BD8E046C",
+          id: "2D80B0B94EB39977",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "C2367B45B5935297",
+          id: "6B4A0C07CE7FA3CD",
           type: "xp",
           xp: 10,
         },
@@ -1645,18 +1645,18 @@
       x: 2.0,
       y: 10.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "4DA512D81C02EDE2",
+      id: "128D85EA71A479FC",
       tasks: [
         {
-          id: "E57D8229F98ADC4C",
+          id: "15C89B925C2DF472",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "292DFFA4C9A7ACF2",
+          id: "5A85D9A0CC89E79F",
           type: "xp",
           xp: 10,
         },
@@ -1670,24 +1670,26 @@
       x: 3.5,
       y: 10.5,
       dependencies: [
-        "1887BB9F14E9CCAC",
+        "73B3ADDEEBEF97B0",
       ],
-      id: "57B18C9EEADE8AD5",
+      id: "4A484D2018A32307",
       tasks: [
         {
-          id: "654E77DF3F8A3D28",
+          id: "6B7593177EA79EB3",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "DFB28ECA70831890",
+          id: "1ABEAB8A2DE0F6B8",
           type: "xp",
           xp: 10,
         },
       ],
     },
   ],
-  quest_links: [],
-  images: [],
+  quest_links: [
+  ],
+  images: [
+  ],
 }

@@ -72,6 +72,21 @@ In `lang/en_us/chapter.json5`:
 
 The hex string **must exactly match** the chapter `id` in the chapter JSON5 file. If the in-game editor saves the chapter, it may regenerate this ID — update the lang entry to match.
 
+**Quest titles/descriptions** live in `lang/en_us/chapters/<filename>.json5` as:
+
+- `quest.<QUEST_HEX>.title`
+- `quest.<QUEST_HEX>.quest_subtitle`
+- `quest.<QUEST_HEX>.quest_desc` (array of lines)
+- `task.<TASK_HEX>.title`
+
+If a new chapter shows **Unnamed** and blank quests on first load:
+
+1. Confirm `filename` matches the lang file name (`the_atlas` → `chapters/the_atlas.json5`).
+2. Confirm every quest/task id in the chapter file has matching lang keys (exact hex, same case).
+3. Prefer **signed-long-safe** ids (high bit clear: first hex digit `0`–`7`) so FTB does not reassign ids.
+4. Run **`/ftbquests reload`** and **restart the client** once (lang is client-side).
+5. Do **not** save the chapter in the FTB editor unless you re-export lang keys afterward.
+
 ---
 
 ## Quest skeleton
