@@ -52,6 +52,14 @@
     "5000": "461A129540477F54"
   },
 
+  "ftb_mine_count_tasks": {
+    "4F0A96F8B052E85E": 100,
+    "036077D54B54F1F1": 500,
+    "284BB242E685CD86": 1000,
+    "6FCA2BE21E690252": 2500,
+    "7F7295BF1DFDA590": 5000
+  },
+
   "ftb_choice_quest_by_token": {
     "choice_1k": {
       "darkutils": "3406FF862E0E55FB",

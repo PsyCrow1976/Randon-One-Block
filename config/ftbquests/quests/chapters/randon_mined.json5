@@ -51,7 +51,7 @@
       tasks: [
         {
           id: "4F0A96F8B052E85E",
-          type: "checkmark",
+          type: "custom",
         },
       ],
       rewards: [
@@ -78,7 +78,7 @@
       tasks: [
         {
           id: "036077D54B54F1F1",
-          type: "checkmark",
+          type: "custom",
         },
       ],
       rewards: [
@@ -105,7 +105,7 @@
       tasks: [
         {
           id: "284BB242E685CD86",
-          type: "checkmark",
+          type: "custom",
         },
       ],
       rewards: [
@@ -182,7 +182,7 @@
       tasks: [
         {
           id: "6FCA2BE21E690252",
-          type: "checkmark",
+          type: "custom",
         },
       ],
       rewards: [
@@ -209,7 +209,7 @@
       tasks: [
         {
           id: "7F7295BF1DFDA590",
-          type: "checkmark",
+          type: "custom",
         },
       ],
       rewards: [
@@ -271,8 +271,6 @@
       ],
     },
   ],
-  quest_links: [
-  ],
-  images: [
-  ],
+  quest_links: [],
+  images: [],
 }

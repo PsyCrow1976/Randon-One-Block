@@ -54,6 +54,14 @@ const DEFAULT_MILESTONES_CONFIG = {
     2500: '052F6E722C91858A',
     5000: '461A129540477F54'
   },
+  // Custom tasks (not checkmarks) — progress only when team Randon Mined >= threshold
+  ftb_mine_count_tasks: {
+    '4F0A96F8B052E85E': 100,
+    '036077D54B54F1F1': 500,
+    '284BB242E685CD86': 1000,
+    '6FCA2BE21E690252': 2500,
+    '7F7295BF1DFDA590': 5000
+  },
   ftb_choice_quest_by_token: {
     choice_1k: {
       darkutils: '3406FF862E0E55FB',
@@ -320,6 +328,14 @@ function sanitizeMilestonesConfig(raw) {
   if (!Object.keys(next.ftb_quest_hooks).length) {
     next.ftb_quest_hooks = milestonesStringMap(DEFAULT_MILESTONES_CONFIG.ftb_quest_hooks)
   }
+  next.ftb_mine_count_tasks = milestonesThresholdTaskMap(
+    milestonesReadField(next, 'ftb_mine_count_tasks')
+  )
+  if (!Object.keys(next.ftb_mine_count_tasks).length) {
+    next.ftb_mine_count_tasks = milestonesThresholdTaskMap(
+      DEFAULT_MILESTONES_CONFIG.ftb_mine_count_tasks
+    )
+  }
   next.ftb_choice_quest_by_token = milestonesNestedStringMap(
     milestonesReadField(next, 'ftb_choice_quest_by_token')
   )
@@ -334,6 +350,21 @@ function sanitizeMilestonesConfig(raw) {
   }
 
   return next
+}
+
+/** taskId -> mine threshold number */
+function milestonesThresholdTaskMap(value) {
+  var out = {}
+  var k = null
+  var n = 0
+  var raw = milestonesStringMap(value)
+
+  for (k in raw) {
+    if (!Object.prototype.hasOwnProperty.call(raw, k)) continue
+    n = Math.floor(Number(raw[k]))
+    if (n > 0) out[String(k)] = n
+  }
+  return out
 }
 
 /** token_id -> { mod -> questId } */
@@ -1082,6 +1113,87 @@ function chooseUnlock(player, mod, server) {
   }
 }
 
+function getTeamMinedForPlayer(player, server) {
+  var pools = poolsApi()
+  var counters = countersApi()
+  var scopeId = null
+
+  if (!player) return 0
+  try {
+    if (pools && pools.resolveUnlockScopeId) {
+      scopeId = pools.resolveUnlockScopeId(player, server || player.server)
+    } else if (counters && counters.resolveScopeId) {
+      scopeId = counters.resolveScopeId(player, server || player.server)
+    }
+  } catch (ignored) {}
+  if (!scopeId || !counters || !counters.getTeamBlocksMined) return 0
+  return counters.getTeamBlocksMined(scopeId)
+}
+
+/**
+ * Custom FTB tasks for mine thresholds — players cannot check them off.
+ * Progress completes when team Randon Mined >= threshold.
+ */
+function registerFtbMineCountCustomTasks() {
+  var config = ensureMilestonesConfig()
+  var tasks = config.ftb_mine_count_tasks || {}
+  var taskId = null
+  var threshold = 0
+  var count = 0
+
+  if (typeof FTBQuestsEvents === 'undefined' || !FTBQuestsEvents.customTask) {
+    console.warn(
+      '[RandomOneBlock] FTBQuestsEvents.customTask unavailable — mine-count quests use change_progress only'
+    )
+    return 0
+  }
+
+  for (taskId in tasks) {
+    if (!Object.prototype.hasOwnProperty.call(tasks, taskId)) continue
+    threshold = Math.floor(Number(tasks[taskId]))
+    if (!(threshold > 0)) continue
+    ;(function (tid, needMined) {
+      FTBQuestsEvents.customTask(tid, function (event) {
+        try {
+          event.maxProgress = 1
+        } catch (ignored) {}
+        try {
+          if (event.setCheckTimer) event.setCheckTimer(20)
+          else event.checkTimer = 20
+        } catch (ignored2) {}
+
+        var checker = function (task, player) {
+          var mined = 0
+          if (!player || !task) return
+          mined = getTeamMinedForPlayer(player, null)
+          if (mined >= needMined) {
+            try {
+              task.progress = 1
+            } catch (ignored3) {
+              try {
+                if (task.setProgress) task.setProgress(1)
+              } catch (ignored4) {}
+            }
+          }
+        }
+
+        try {
+          if (event.setCheck) event.setCheck(checker)
+          else event.check = checker
+        } catch (ignored5) {
+          event.check = checker
+        }
+      })
+    })(String(taskId), threshold)
+    count++
+  }
+
+  console.info(
+    '[RandomOneBlock] Registered ' + count + ' FTB Randon Mined mine-count custom task(s)'
+  )
+  return count
+}
+
 function registerFtbChoiceTaskHandlers() {
   var config = ensureMilestonesConfig()
   var tasks = config.ftb_choice_tasks || {}
@@ -1370,13 +1482,14 @@ var RandonOneBlockMilestones = {
   syncFtbMilestoneQuests: syncFtbMilestoneQuests
 }
 
-// Register choice task handlers at script load (FTB requires this timing)
+// Register FTB handlers at script load (FTB requires this timing — not after /reload only)
 try {
   ensureMilestonesConfig()
+  registerFtbMineCountCustomTasks()
   registerFtbChoiceTaskHandlers()
   MILESTONE_STATE.choiceHandlersRegistered = true
 } catch (regErr) {
-  console.warn('[RandomOneBlock] FTB choice handler registration failed: ' + String(regErr))
+  console.warn('[RandomOneBlock] FTB Randon Mined handler registration failed: ' + String(regErr))
 }
 
 PlayerEvents.loggedIn(function (event) {
