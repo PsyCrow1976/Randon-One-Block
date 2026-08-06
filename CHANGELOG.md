@@ -90,7 +90,7 @@ Your team’s **Randon Mined** counter (center-block breaks) now **unlocks more 
 ### Still known
 
 - **Equivox Philosopher’s Stone** world-transmutation crash until upstream rebuild (see **1.0.5.1** / [Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5))
-- Atlas endgame set + Echo (100k trophy) are **designed but not implemented** yet (Phase 2–3)
+- Atlas / Echo were still design-only in this build (shipped in **1.0.6.0** / later)
 
 ---
 
