@@ -1,0 +1,106 @@
+{
+  "_readme": "Phase 0 draft — Randon Atlas endgame set (True Atlas). Not wired in code until Phase 2. Entries with requires_mod are inactive until that pool is unlocked for the team. Refresh IDs after /randomblock pools debug complete if the master pool changes. See theatlasplan.md §6.2.1.",
+
+  "endgame_set_id": "randon_atlas_v1",
+  "require_mod_unlocked": true,
+  "target_size_note": "v1 draft aims ~64 entries; trim or expand after live pool dump refresh",
+
+  "player_facing": {
+    "chapter_title": "Randon Atlas & Echo",
+    "chapter_subtitle": "The Tear",
+    "atlas_seal_name": "Atlas Seal",
+    "atlas_seal_id": "kubejs:atlas_seal",
+    "echo_block_name": "The Echo",
+    "echo_block_id": "kubejs:echo_block",
+    "echo_seal_name": "Echo Seal",
+    "echo_seal_id": "kubejs:echo_seal",
+    "ending_quest_title": "The Randon Ending"
+  },
+
+  "entries": [
+    { "id": "minecraft:diamond_block", "group": "vanilla_value" },
+    { "id": "minecraft:emerald_block", "group": "vanilla_value" },
+    { "id": "minecraft:netherite_block", "group": "vanilla_value" },
+    { "id": "minecraft:gold_block", "group": "vanilla_value" },
+    { "id": "minecraft:iron_block", "group": "vanilla_value" },
+    { "id": "minecraft:copper_block", "group": "vanilla_value" },
+    { "id": "minecraft:lapis_block", "group": "vanilla_value" },
+    { "id": "minecraft:redstone_block", "group": "vanilla_value" },
+    { "id": "minecraft:amethyst_block", "group": "vanilla_value" },
+    { "id": "minecraft:quartz_block", "group": "vanilla_value" },
+    { "id": "minecraft:diamond_ore", "group": "vanilla_ore" },
+    { "id": "minecraft:ancient_debris", "group": "vanilla_nether" },
+    { "id": "minecraft:obsidian", "group": "vanilla_nether" },
+    { "id": "minecraft:crying_obsidian", "group": "vanilla_nether" },
+    { "id": "minecraft:gilded_blackstone", "group": "vanilla_nether" },
+    { "id": "minecraft:beacon", "group": "vanilla_endgame" },
+    { "id": "minecraft:spawner", "group": "vanilla_endgame" },
+    { "id": "minecraft:end_stone", "group": "vanilla_end" },
+    { "id": "minecraft:purpur_block", "group": "vanilla_end" },
+    { "id": "minecraft:sculk", "group": "vanilla_deep" },
+    { "id": "minecraft:calcite", "group": "vanilla_geo" },
+
+    { "id": "elevatorid:elevator_white", "group": "starter", "requires_mod": "elevatorid" },
+    { "id": "uncraftingtable:uncrafting_table", "group": "starter", "requires_mod": "uncraftingtable" },
+    { "id": "kubejs:leather_block", "group": "starter", "requires_mod": "kubejs", "note": "pack custom; confirm in live pool dump" },
+    { "id": "kubejs:torch_block", "group": "starter", "requires_mod": "kubejs", "note": "pack custom; confirm in live pool dump" },
+
+    { "id": "exdeorum:compressed_dirt", "group": "exdeorum", "requires_mod": "exdeorum" },
+    { "id": "exdeorum:compressed_cobblestone", "group": "exdeorum", "requires_mod": "exdeorum" },
+    { "id": "exdeorum:compressed_netherrack", "group": "exdeorum", "requires_mod": "exdeorum" },
+
+    { "id": "sophisticatedstorage:controller", "group": "storage", "requires_mod": "sophisticatedstorage" },
+    { "id": "sophisticatedstorage:iron_barrel", "group": "storage", "requires_mod": "sophisticatedstorage" },
+    { "id": "sophisticatedstorage:diamond_barrel", "group": "storage", "requires_mod": "sophisticatedstorage" },
+
+    { "id": "ironfurnaces:iron_furnace", "group": "smelting", "requires_mod": "ironfurnaces" },
+    { "id": "ironfurnaces:diamond_furnace", "group": "smelting", "requires_mod": "ironfurnaces" },
+    { "id": "ironfurnaces:netherite_furnace", "group": "smelting", "requires_mod": "ironfurnaces" },
+
+    { "id": "animal_pen:aviary", "group": "animals", "requires_mod": "animal_pen" },
+    { "id": "animal_pen:aquarium_block", "group": "animals", "requires_mod": "animal_pen" },
+    { "id": "easy_piglins:barterer", "group": "villagers", "requires_mod": "easy_piglins" },
+
+    { "id": "cookingforblockheads:white_kitchen_floor", "group": "kitchen", "requires_mod": "cookingforblockheads" },
+
+    { "id": "refinedstorage:machine_casing", "group": "rs", "requires_mod": "refinedstorage" },
+    { "id": "refinedstorage:controller", "group": "rs", "requires_mod": "refinedstorage" },
+    { "id": "refinedstorage:1k_storage_block", "group": "rs", "requires_mod": "refinedstorage" },
+    { "id": "refinedstorage:64k_storage_block", "group": "rs", "requires_mod": "refinedstorage" },
+    { "id": "refinedstorage:autocrafter", "group": "rs", "requires_mod": "refinedstorage" },
+
+    { "id": "powah:uraninite_block", "group": "powah", "requires_mod": "powah" },
+    { "id": "powah:nitro_crystal_block", "group": "powah", "requires_mod": "powah" },
+    { "id": "powah:energy_cell_nitro", "group": "powah", "requires_mod": "powah" },
+    { "id": "powah:thermo_generator_nitro", "group": "powah", "requires_mod": "powah" },
+
+    { "id": "mysticalagriculture:prosperity_ore", "group": "ma", "requires_mod": "mysticalagriculture" },
+    { "id": "mysticalagriculture:inferium_ore", "group": "ma", "requires_mod": "mysticalagriculture" },
+    { "id": "mysticalagriculture:prosperity_block", "group": "ma", "requires_mod": "mysticalagriculture" },
+    { "id": "mysticalagriculture:inferium_block", "group": "ma", "requires_mod": "mysticalagriculture" },
+    { "id": "mysticalagriculture:awakened_supremium_block", "group": "ma", "requires_mod": "mysticalagriculture" },
+    { "id": "mysticalagradditions:insanium_block", "group": "ma", "requires_mod": "mysticalagradditions" },
+    { "id": "mysticalagradditions:nether_star_crux", "group": "ma", "requires_mod": "mysticalagradditions" },
+    { "id": "mysticalautomation:infuser", "group": "ma", "requires_mod": "mysticalautomation" },
+    { "id": "mysticalautomation:farmer", "group": "ma", "requires_mod": "mysticalautomation" },
+
+    { "id": "utility:resource_generator", "group": "milestone", "requires_mod": "utility" },
+    { "id": "utility:block_breaker", "group": "milestone", "requires_mod": "utility" },
+    { "id": "utility:summoning_block", "group": "milestone", "requires_mod": "utility" },
+    { "id": "darkutils:filter_hostile", "group": "milestone", "requires_mod": "darkutils" },
+    { "id": "darkutils:redstone_randomizer", "group": "milestone", "requires_mod": "darkutils" },
+    { "id": "apotheosis:salvaging_table", "group": "milestone", "requires_mod": "apotheosis" },
+    { "id": "apotheosis:boss_spawner", "group": "milestone", "requires_mod": "apotheosis" },
+    { "id": "apothic_enchanting:library", "group": "milestone", "requires_mod": "apothic_enchanting" },
+    { "id": "apothic_enchanting:ender_library", "group": "milestone", "requires_mod": "apothic_enchanting" },
+    { "id": "apothic_enchanting:treasure_shelf", "group": "milestone", "requires_mod": "apothic_enchanting" }
+  ],
+
+  "_pending_player_refresh": [
+    "equivox — dump had 0 full-cube blocks; add 1–2 signature blocks after live /randomblock pools debug complete equivox",
+    "enderio — same; only if full-cube rolls exist",
+    "easyoregeneration — add 1–2 after milestone unlock if present in master pool",
+    "easy_villagers — may have 0 full cubes; skip if empty",
+    "kubejs custom blocks — confirm leather_block / torch_block in live pool"
+  ]
+}
