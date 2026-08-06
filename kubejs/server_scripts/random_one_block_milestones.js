@@ -87,24 +87,51 @@ function milestonesReadField(obj, key) {
   return null
 }
 
+/**
+ * Coerce JS arrays or Java Lists (JsonIO) into a plain JS array of elements.
+ * Array.isArray is false for KubeJS/Java lists — never rely on it alone.
+ */
+function milestonesToArray(value) {
+  var out = []
+  var i = 0
+  var size = 0
+
+  if (value == null || value === undefined) return out
+
+  if (Array.isArray(value)) {
+    for (i = 0; i < value.length; i++) {
+      if (value[i] != null && value[i] !== undefined) out.push(value[i])
+    }
+    return out
+  }
+
+  try {
+    if (typeof value.size === 'function' && typeof value.get === 'function') {
+      size = value.size()
+      for (i = 0; i < size; i++) {
+        if (value.get(i) != null) out.push(value.get(i))
+      }
+      return out
+    }
+  } catch (ignored) {}
+
+  try {
+    if (value.length != null && typeof value !== 'string') {
+      for (i = 0; i < value.length; i++) {
+        if (value[i] != null && value[i] !== undefined) out.push(value[i])
+      }
+    }
+  } catch (ignored2) {}
+
+  return out
+}
+
 function milestonesStringList(value) {
   var out = []
   var i = 0
   var part = null
   var seen = {}
-  var list = []
-
-  if (!value) return out
-
-  if (Array.isArray(value)) {
-    list = value
-  } else {
-    try {
-      if (typeof value.size === 'function' && typeof value.get === 'function') {
-        for (i = 0; i < value.size(); i++) list.push(value.get(i))
-      }
-    } catch (ignored) {}
-  }
+  var list = milestonesToArray(value)
 
   for (i = 0; i < list.length; i++) {
     if (list[i] == null || list[i] === undefined) continue
@@ -185,7 +212,7 @@ function milestonesNormalizeMessage(entry) {
 }
 
 function sanitizeMilestonesConfig(raw) {
-  var next = milestonesClone(raw || DEFAULT_MILESTONES_CONFIG)
+  var next = raw ? milestonesClone(raw) : milestonesClone(DEFAULT_MILESTONES_CONFIG)
   var autos = []
   var choices = []
   var messages = []
@@ -193,42 +220,73 @@ function sanitizeMilestonesConfig(raw) {
   var i = 0
   var item = null
   var echo = null
+  var defaults = null
 
   next.enabled = next.enabled !== false
 
-  list = milestonesReadField(next, 'milestone_auto_unlocks')
-  if (Array.isArray(list)) {
+  // JsonIO returns Java Lists — Array.isArray is false; use milestonesToArray
+  list = milestonesToArray(milestonesReadField(next, 'milestone_auto_unlocks'))
+  for (i = 0; i < list.length; i++) {
+    item = milestonesNormalizeAutoUnlock(list[i])
+    if (item) autos.push(item)
+  }
+  next.milestone_auto_unlocks = autos
+
+  list = milestonesToArray(milestonesReadField(next, 'milestone_choices'))
+  for (i = 0; i < list.length; i++) {
+    item = milestonesNormalizeChoice(list[i])
+    if (item) choices.push(item)
+  }
+  next.milestone_choices = choices
+
+  list = milestonesToArray(milestonesReadField(next, 'milestone_messages'))
+  for (i = 0; i < list.length; i++) {
+    item = milestonesNormalizeMessage(list[i])
+    if (item) messages.push(item)
+  }
+  next.milestone_messages = messages
+
+  // Safety: file present but lists failed to parse → fall back to pack defaults
+  if (!autos.length && !choices.length) {
+    defaults = DEFAULT_MILESTONES_CONFIG
+    list = milestonesToArray(defaults.milestone_auto_unlocks)
     for (i = 0; i < list.length; i++) {
       item = milestonesNormalizeAutoUnlock(list[i])
       if (item) autos.push(item)
     }
-  }
-  next.milestone_auto_unlocks = autos
-
-  list = milestonesReadField(next, 'milestone_choices')
-  if (Array.isArray(list)) {
+    list = milestonesToArray(defaults.milestone_choices)
     for (i = 0; i < list.length; i++) {
       item = milestonesNormalizeChoice(list[i])
       if (item) choices.push(item)
     }
-  }
-  next.milestone_choices = choices
-
-  list = milestonesReadField(next, 'milestone_messages')
-  if (Array.isArray(list)) {
+    list = milestonesToArray(defaults.milestone_messages)
     for (i = 0; i < list.length; i++) {
       item = milestonesNormalizeMessage(list[i])
       if (item) messages.push(item)
     }
+    next.milestone_auto_unlocks = autos
+    next.milestone_choices = choices
+    next.milestone_messages = messages
+    console.warn(
+      '[RandomOneBlock] Milestones config lists empty after parse — using built-in defaults (' +
+        autos.length +
+        ' auto, ' +
+        choices.length +
+        ' choice). Check ' +
+        MILESTONES_CONFIG_FILE
+    )
   }
-  next.milestone_messages = messages
 
   echo = milestonesReadField(next, 'echo') || {}
+  var echoThreshold = milestonesReadField(echo, 'threshold')
+  var echoBlockId = milestonesReadField(echo, 'block_id')
+  var echoForce = milestonesReadField(echo, 'force_on_break')
+  var echoEnabled = milestonesReadField(echo, 'enabled')
   next.echo = {
-    enabled: !!(echo.enabled === true || echo.enabled === 'true'),
-    threshold: Math.max(1, Math.floor(Number(echo.threshold) || 100000)),
-    block_id: echo.block_id != null ? String(echo.block_id) : 'kubejs:echo_block',
-    force_on_break: echo.force_on_break !== false
+    enabled: !!(echoEnabled === true || echoEnabled === 'true'),
+    threshold: Math.max(1, Math.floor(Number(echoThreshold != null ? echoThreshold : 100000) || 100000)),
+    block_id: echoBlockId != null ? String(echoBlockId) : 'kubejs:echo_block',
+    force_on_break: !(echoForce === false || echoForce === 'false')
   }
 
   return next

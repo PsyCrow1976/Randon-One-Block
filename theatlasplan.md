@@ -578,7 +578,9 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 2. Link / launch the instance as usual; run **`/reload`** once in-game (or restart).
 3. Confirm log on load/reload contains something like:  
    `Milestones config loaded: 2 auto, 2 choice token(s)`  
+   (**must not** say `0 auto, 0 choice` — that was a JsonIO list-parse bug; fixed).  
    and still: `Registered N FTB task unlock handler(s)` with N > 0.
+4. If you already mined past a threshold before the fix (`milestones_reached` empty, pool still OFF): run **`/randomblock milestones`** once — backfill grants missed auto unlocks/tokens without re-mining.
 4. Prefer a **fresh creative island** or a team whose counter is known (`/randomblock counter`).  
    Runtime data lives in `kubejs/config/random_one_block_team_counters.json` and `…_team_unlocks.json` (gitignored).
 
