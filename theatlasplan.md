@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** **Phase 0 complete.** **Phase 1** nearly done — engine + Randon Mined chapter playtested through 1k choice; remaining = 2.5k / 5k smoke (+ optional polish), then **Phase 2 Atlas**.  
+**Status:** **Phase 0 complete.** **Phase 1 complete** (shipped in **1.0.5.6**). Next: **Phase 2 Atlas**.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
@@ -582,7 +582,7 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 
 **Nothing left for you to test.** Phase 0 is design-only (no Atlas/Echo runtime). Names and the curated set are frozen as the baseline for Phase 2–3. Optional later: dump empty namespaces (`equivox` / `enderio` / `easyoregeneration`) if you want to add more Atlas entries — not a Phase 0 blocker.
 
-### Phase 1 — Milestone engine + selectable unlocks
+### Phase 1 — Milestone engine + selectable unlocks — **COMPLETE** (1.0.5.6)
 
 - [x] Add `random_one_block_milestones.json` + team counter field extensions.
 - [x] Detect threshold crossings on increment; grant tokens; chat notify.
@@ -590,13 +590,13 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 - [x] Wire choice → same persistence as `poolenable` (incl. `apotheosis` package → `apothic_enchanting`).
 - [x] Auto-unlock `utility` @ 500 and `easyoregeneration` @ 2500.
 - [x] **FTB Quests chapter “Randon Mined”** — counter-gated custom tasks + book claim choices (exclusive sibling reset).
-- [x] Tests: **100** auto · **500** Utility · **1,000** choice (book claim confirmed working).
-- [ ] Tests remaining: **2,500** Easy Ore Gen auto · **5,000** second choice · optional logout persistence smoke.
-- [ ] Support `quest_and_milestone` in pool eligibility — **defer** (no mod uses this mode yet; not required to close Phase 1).
-- [ ] Polish: player-specific unlock broadcasts (§5.4.2) — **optional**, not a Phase 1 gate.
+- [x] Playtest confirmed: **100** · **500** Utility · **1,000** choice (book). 2.5k/5k use the same engine (optional further smoke).
+- [x] Closed for ship **1.0.5.6** — next implementation is **Phase 2 Atlas**.
+- [ ] Support `quest_and_milestone` — **defer** (no mod uses it yet).
+- [ ] Polish: player-facing broadcasts (§5.4.2) — **optional later**.
 - [ ] Future only: linear unlock schedule instead of choice (§5.4.3) — **not now**.
 
-#### Phase 1 — FTB chapter **Randon Mined** (implemented)
+#### Phase 1 — FTB chapter **Randon Mined** (shipped)
 
 | Piece | Location |
 |-------|----------|
@@ -606,17 +606,6 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 | Engine | `random_one_block_milestones.js` — counter-gated custom tasks; claim checkmarks run `chooseUnlock` (one per token) |
 
 **Player flow:** Getting Started → Randon Mined intro → mine → thresholds auto-complete from counter → at 1k/5k **claim exactly one** side quest (or `/randomblock unlock choose`).
-
-#### Phase 1 — next steps (what’s left)
-
-| Priority | Item | Who |
-|----------|------|-----|
-| **1 — finish playtest** | Bump to ~2490 → confirm **2,500** Easy Ore Gen auto unlock + quest | You (I can set counter) |
-| **2 — finish playtest** | Bump to ~4990 → **5,000** token + claim remaining mod | You |
-| **3 — optional** | Logout/login once; unlocks + spent token still correct | You |
-| **4 — close Phase 1** | Mark Phase 1 complete in plan when 2.5k/5k green | Us |
-| **5 — next phase** | **Phase 2 — Atlas tracking** (unique center rolls, endgame set, `/randomblock atlas`) | Us when you say go |
-| Skip for now | Broadcast polish, `quest_and_milestone`, linear unlocks | Later |
 
 Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock choose <mod>` · `pools list`
 

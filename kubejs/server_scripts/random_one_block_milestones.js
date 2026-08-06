@@ -1259,6 +1259,7 @@ function registerFtbMineCountCustomTasks() {
 function registerFtbChoiceTaskHandlers() {
   var config = ensureMilestonesConfig()
   var tasks = config.ftb_choice_tasks || {}
+  var taskToQuest = config.ftb_choice_task_to_quest || {}
   var taskId = null
   var mod = null
   var count = 0
@@ -1276,11 +1277,13 @@ function registerFtbChoiceTaskHandlers() {
       .trim()
       .toLowerCase()
     if (!mod) continue
-    ;(function (tid, modNamespace) {
+    ;(function (tid, modNamespace, claimQuestId) {
       FTBQuestsEvents.completed(tid, function (event) {
         var player = null
         var server = null
         var result = null
+        var pools = poolsApi()
+        var scopeId = null
 
         if (MILESTONE_STATE.choiceInProgress) return
 
@@ -1314,22 +1317,41 @@ function registerFtbChoiceTaskHandlers() {
             player.tell(Text.of(result.message))
           }
           if (result && !result.ok) {
+            // Undo the checkmark — no token left / invalid pick
+            if (claimQuestId) {
+              resetFtbQuestForPlayer(player, claimQuestId, server)
+            }
             console.info(
               '[RandomOneBlock] FTB choice task ' +
                 tid +
                 ' -> ' +
                 modNamespace +
-                ' failed: ' +
+                ' failed (quest reset): ' +
                 result.message
             )
+          } else if (result && result.ok) {
+            // chooseUnlock already applied exclusive complete/reset for the team
+            try {
+              if (pools && pools.resolveUnlockScopeId) {
+                scopeId = pools.resolveUnlockScopeId(player, server)
+              }
+            } catch (ignored5) {}
+            if (scopeId && result.token_id) {
+              applyExclusiveChoiceQuests(scopeId, result.token_id, modNamespace, server)
+            }
           }
         } catch (err) {
           console.warn('[RandomOneBlock] FTB choice task handler error: ' + String(err))
+          if (claimQuestId) {
+            try {
+              resetFtbQuestForPlayer(player, claimQuestId, server)
+            } catch (ignored6) {}
+          }
         } finally {
           MILESTONE_STATE.choiceInProgress = false
         }
       })
-    })(String(taskId), mod)
+    })(String(taskId), mod, taskToQuest[taskId] || taskToQuest[String(taskId).toUpperCase()] || null)
     count++
   }
 

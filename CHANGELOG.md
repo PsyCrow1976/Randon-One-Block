@@ -4,7 +4,50 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.5.6] — 2026-08-06
+
+### Headline feature — mine milestones unlock minable pools
+
+Your team’s **Randon Mined** counter (center-block breaks) now **unlocks more mods into the random one-block pool** — not only FTB quest completions.
+
+| Team mines | What happens |
+|-----------:|--------------|
+| **100** | Story beat / quest progress |
+| **500** | **Auto:** **BBL Utility** (`utility`) joins the pool |
+| **1,000** | **Choice:** pick **Dark Utils** *or* **Apotheosis** (+ Apothic Enchanting) |
+| **2,500** | **Auto:** **Easy Ore Generation** joins the pool |
+| **5,000** | **Choice:** pick whichever of Dark Utils / Apotheosis is still locked |
+
+- Choices are **one per token** (quest book claim or `/randomblock unlock choose <mod>`). Checking a second claim without a token is undone.
+- Quest-book chapters still unlock their own mods as before (storage, Ex Deorum, Equivox, tech, Mystical Agriculture, etc.).
+- Config: `kubejs/config/random_one_block_milestones.json` · commands: `/randomblock milestones`, `/randomblock unlock list`, `/randomblock unlock choose <mod>`
+
+### FTB Quests — new **Randon Mined** chapter
+
+- New quest tab after **Getting Started** (unlocked by the Getting Started **Randon Mined** read quest).
+- Milestone quests use **custom tasks** tied to the real counter — you cannot skip by checkmark-spamming.
+- At 1k / 5k, **claim** side-quests spend the unlock choice in the book.
+- Design notes / future linear-vs-choice option: [`theatlasplan.md`](theatlasplan.md) (Phase 1 complete; Atlas Phase 2 next).
+
+### KubeJS / tech notes
+
+- Team counter records extended (`milestones_reached`, choice tokens, etc.).
+- Milestone config parse fixed for JsonIO Java lists (empty auto/choice lists bug).
+- Choice exclusivity: complete chosen claim quest, reset sibling claim.
+
+### Mods
+
+- **No jar add/remove/version changes** vs **1.0.5.4**
+- Still **85 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.94**
+
+### Still known
+
+- **Equivox Philosopher’s Stone** world-transmutation crash until upstream rebuild (see **1.0.5.1** / [Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5))
+- Atlas endgame set + Echo (100k trophy) are **designed but not implemented** yet (Phase 2–3)
 
 ---
 

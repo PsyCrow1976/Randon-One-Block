@@ -266,6 +266,31 @@
         },
       ],
     },
+    {
+      icon: {
+        id: "minecraft:dirt",
+        count: 1,
+      },
+      x: 2.0,
+      y: -2.0,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "1E7624ECE0EA67D4",
+      tasks: [
+        {
+          id: "6E3148CE17BB7770",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "630FEBB654E8940F",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
   ],
   quest_links: [
   ],
