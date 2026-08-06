@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** **Phase 0 complete** (design freeze approved). **Phase 1** — milestone engine shipped; remaining = playtest 1k / 2.5k / 5k (+ optional broadcast polish).  
+**Status:** **Phase 0 complete.** **Phase 1** nearly done — engine + Randon Mined chapter playtested through 1k choice; remaining = 2.5k / 5k smoke (+ optional polish), then **Phase 2 Atlas**.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
