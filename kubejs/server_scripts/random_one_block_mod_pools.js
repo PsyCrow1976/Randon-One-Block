@@ -2064,6 +2064,7 @@ var RandonOneBlockPools = {
     var unlocks = loadTeamUnlocks(scopeId)
     return modPoolsListIncludes(unlocks.enabled_mods, modNamespace)
   },
+  isNamespaceEffective: isNamespaceEffective,
   getModDisplayName: getModDisplayName,
   loadTeamUnlocks: loadTeamUnlocks,
   pickRandomBlockIdForPlayer: pickRandomBlockIdForPlayer,

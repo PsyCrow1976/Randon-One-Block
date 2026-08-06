@@ -538,6 +538,10 @@ function milestonesApi() {
   return typeof RandonOneBlockMilestones !== 'undefined' ? RandonOneBlockMilestones : null
 }
 
+function atlasApi() {
+  return typeof RandonOneBlockAtlas !== 'undefined' ? RandonOneBlockAtlas : null
+}
+
 function reloadAll() {
   STATE.config = loadConfig()
   syncActiveFromConfig()
@@ -548,6 +552,13 @@ function reloadAll() {
   var milestones = milestonesApi()
   if (milestones && milestones.reloadMilestonesConfig) {
     milestones.reloadMilestonesConfig()
+  }
+  var atlas = atlasApi()
+  if (atlas && atlas.reloadAtlasConfig) {
+    atlas.reloadAtlasConfig()
+  }
+  if (atlas && atlas.invalidateAtlasCache) {
+    atlas.invalidateAtlasCache()
   }
   var counters = countersApi()
   if (counters && counters.invalidateTeamCounterCache) {
@@ -2282,6 +2293,49 @@ function cmdPools(source, args) {
   return 1
 }
 
+function cmdAtlas(source, args) {
+  var atlas = atlasApi()
+  var player = requirePlayer(source)
+  var server = resolvePlayerServer(player, source.server)
+  var sub = args.length ? String(args[0]).toLowerCase() : ''
+  var lines = []
+  var i = 0
+  var modFilter = null
+  var limit = 12
+
+  if (!atlas) {
+    tell(source, '§cAtlas system is not loaded.')
+    return 0
+  }
+  if (!player) return 0
+
+  if (!sub || sub === 'status' || sub === 'progress') {
+    lines = atlas.buildAtlasStatusLines(player, server)
+    for (i = 0; i < lines.length; i++) tell(source, lines[i])
+    return 1
+  }
+
+  if (sub === 'missing') {
+    if (args.length >= 2) {
+      // /randomblock atlas missing [mod] [limit]
+      if (/^\d+$/.test(String(args[1]))) {
+        limit = Math.max(1, Math.min(50, Math.floor(Number(args[1]))))
+      } else {
+        modFilter = args[1]
+        if (args.length >= 3 && /^\d+$/.test(String(args[2]))) {
+          limit = Math.max(1, Math.min(50, Math.floor(Number(args[2]))))
+        }
+      }
+    }
+    lines = atlas.buildAtlasMissingLines(player, server, modFilter, limit)
+    for (i = 0; i < lines.length; i++) tell(source, lines[i])
+    return 1
+  }
+
+  tell(source, '§cUsage: §f/randomblock atlas §7| §f/randomblock atlas missing [mod] [limit]')
+  return 0
+}
+
 function cmdHelp(source) {
   tell(
     source,
@@ -2293,7 +2347,7 @@ function cmdHelp(source) {
   )
   tell(
     source,
-    '§e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools §7| §e/randomblock pools debug quests'
+    '§e/randomblock atlas §7| §e/randomblock atlas missing [mod] §7| §e/randomblock poolenable <mod> <true|false> §7| §e/randomblock pools'
   )
   return 1
 }
@@ -2330,6 +2384,8 @@ function cmdDispatch(source, input) {
       return cmdMilestones(source)
     case 'unlock':
       return cmdUnlock(source, parsed.args)
+    case 'atlas':
+      return cmdAtlas(source, parsed.args)
     case 'poolenable':
       return cmdPoolEnable(source, parsed.args)
     case 'pools':
@@ -2420,6 +2476,16 @@ BlockEvents.broken(event => {
     console.info(
       `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}/${totalWeight}, w=${pickedWeight}, chance=${chancePct}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
     )
+
+    // Randon Atlas — unique center rolls (same successful replace path)
+    try {
+      var atlas = atlasApi()
+      if (atlas && atlas.onRandomBlockRolled && breaker) {
+        atlas.onRandomBlockRolled(breaker, event.server, nextId)
+      }
+    } catch (atlasErr) {
+      console.warn('[RandomOneBlock] Atlas record failed: ' + String(atlasErr))
+    }
 
     if (isFallingBlockId(nextId)) {
       scheduleGravityRecovery(event.server, level, coords)

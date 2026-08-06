@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** **Phase 0 complete.** **Phase 1 complete** (shipped in **1.0.5.6**). Next: **Phase 2 Atlas**.  
+**Status:** **Phase 0–1 complete** (1.0.5.6). **Phase 2 Atlas tracking implemented** — playtest next.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
@@ -609,13 +609,26 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 
 Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock choose <mod>` · `pools list`
 
-### Phase 2 — Atlas tracking
+### Phase 2 — Atlas tracking — **IMPLEMENTED** (playtest)
 
-- [ ] Team atlas persistence + record on ROB replace.
-- [ ] Config endgame set; progress math with `requires_mod`.
-- [ ] Commands: `atlas`, `atlas missing`.
-- [ ] Seal item / quest completion hook when set complete.
-- [ ] Optional: per-mod first discovery message (rate-limited).
+- [x] Team atlas persistence + record on ROB replace (`random_one_block_team_atlas.json`, debounced writes).
+- [x] Config endgame set; progress math with `requires_mod` / inactive until unlock (`random_one_block_atlas.json` + `random_one_block_atlas.js`).
+- [x] Commands: `/randomblock atlas`, `/randomblock atlas missing [mod] [limit]`.
+- [x] Seal item `kubejs:atlas_seal` granted once when active endgame set complete.
+- [x] Optional: chat on new endgame-set discovery (per new unique atlas page).
+- [ ] **Playtest:** unique rolls accumulate; non-center ignored; unlock expands active set; seal once; missing list sensible.
+
+#### Phase 2 — what you test
+
+| Check | How |
+|-------|-----|
+| Load | `/reload` — log `Atlas config loaded: set=randon_atlas_v1, entries=…` |
+| Track | Mine center block — unique count rises on new ids |
+| Status | `/randomblock atlas` → `owned/active (%%) · unique center rolls` |
+| Missing | `/randomblock atlas missing` / `… missing refinedstorage` |
+| Page toast | Rolling an endgame-set block first time → `[Atlas] New page: …` |
+| Seal | When active set complete → receive **Atlas Seal** once |
+| Scope | Same island team shares atlas |
 
 ### Phase 3 — Echo
 

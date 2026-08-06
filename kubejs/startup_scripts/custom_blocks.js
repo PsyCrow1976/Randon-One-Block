@@ -72,3 +72,9 @@ StartupEvents.registry('block', event => {
     console.info('[RandonOneBlock] Registered custom block kubejs:' + entry.id)
   }
 })
+
+// Endgame seals / trophy markers (items only — not in random pool)
+StartupEvents.registry('item', event => {
+  event.create('atlas_seal').displayName('Atlas Seal').maxStackSize(1)
+  console.info('[RandonOneBlock] Registered custom item kubejs:atlas_seal')
+})

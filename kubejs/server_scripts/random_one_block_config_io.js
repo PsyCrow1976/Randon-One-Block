@@ -5,8 +5,10 @@ var RANDOM_ONE_BLOCK_CONFIG_FILES = [
   'random_one_block.json',
   'random_one_block_mod_pools.json',
   'random_one_block_milestones.json',
+  'random_one_block_atlas.json',
   'random_one_block_team_unlocks.json',
   'random_one_block_team_counters.json',
+  'random_one_block_team_atlas.json',
   'random_one_block_mod_pools_debug.json',
   'random_one_block_pool.json',
   'random_one_block_pool.txt'
@@ -15,6 +17,7 @@ var RANDOM_ONE_BLOCK_CONFIG_FILES = [
 var RANDOM_ONE_BLOCK_RUNTIME_CONFIG_FILES = {
   'random_one_block_team_unlocks.json': {},
   'random_one_block_team_counters.json': {},
+  'random_one_block_team_atlas.json': {},
   'random_one_block_mod_pools_debug.json': {},
   'random_one_block_pool.json': {}
 }

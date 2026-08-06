@@ -6,6 +6,12 @@
   "require_mod_unlocked": true,
   "target_size_note": "~64 entries approved; trim or expand later if pool content changes",
 
+  "seal": {
+    "enabled": true,
+    "item_id": "kubejs:atlas_seal",
+    "announce": true
+  },
+
   "player_facing": {
     "chapter_title": "Randon Atlas & Echo",
     "chapter_subtitle": "The Tear",
