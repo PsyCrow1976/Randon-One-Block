@@ -885,7 +885,7 @@ function processMilestonesForScope(scopeId, blocksMined, server, announce) {
         notifyScopePlayers(
           server,
           scopeId,
-          '§7Use §f/randomblock unlock list §7and §f/randomblock unlock choose <mod>'
+          '§7Open quest book tab §eRandon Mined§7 and check a claim quest — or §f/randomblock unlock choose <mod>'
         )
       }
     }
