@@ -574,18 +574,30 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 - [x] Tests: auto unlock @ 500 confirmed (live + backfill after parse fix).
 - [ ] Support `quest_and_milestone` in pool eligibility — **defer** (no mod uses this mode yet).
 - [ ] Polish: player-specific unlock broadcasts (§5.4.2) — optional; chat works today.
-- [ ] **Your playtest remaining:** 1,000 choice · 2,500 auto easyoregen · 5,000 choice · spend tokens · persistence.
+- [x] **FTB Quests chapter “Randon Mined”** — milestone track + book checkmark choices (see below).
+- [ ] **Your playtest remaining:** 1,000 choice · 2,500 auto easyoregen · 5,000 choice · book claims · persistence.
 
-#### Phase 1 — what you test next (code already in pack)
+#### Phase 1 — FTB chapter **Randon Mined** (implemented)
 
-Use a **fresh island** (or continue past 500). After `/reload`, log must show `Milestones config loaded: 2 auto, 2 choice token(s)`.
+| Piece | Location |
+|-------|----------|
+| Chapter | `config/ftbquests/quests/chapters/randon_mined.json5` (tab after Getting Started) |
+| Lang | `config/ftbquests/quests/lang/en_us/chapter.json5` + `…/chapters/randon_mined.json5` |
+| Hooks | `kubejs/config/random_one_block_milestones.json` → `ftb_quest_hooks` / `ftb_choice_tasks` |
+| Engine | `random_one_block_milestones.js` completes threshold quests; book checkmark runs `chooseUnlock` |
+
+**Player flow:** mine center block → threshold quests auto-complete → at 1k/5k open side quests → **check the box** to spend the token (or still use `/randomblock unlock choose`).
+
+#### Phase 1 — what you test next
+
+Use a **fresh island** (or continue past 500). After `/reload`, log must show `Milestones config loaded: 2 auto, 2 choice token(s)` and choice task handlers registered. `/ftbquests reload` if the new tab is missing.
 
 | Mines | Check |
 |------:|--------|
-| **1,000** | Choice token `choice_1k`; chat + `/randomblock unlock list` shows darkutils / apotheosis; `/randomblock unlock choose <mod>` unlocks pool (apotheosis → both + enchanting) |
-| **2,500** | Auto **easyoregeneration** ON |
-| **5,000** | Token `choice_5k` for whichever of darkutils/apotheosis remains; spend it |
-| Any | Log out/in: unlocks + unspent tokens persist; quest unlocks still work |
+| **1,000** | Token granted; **Randon Mined** quest “First Crack…” completes; side quests Claim Dark Utils / Claim Apotheosis available; **checkmark one** in the book unlocks the pool (apotheosis → both namespaces) |
+| **2,500** | Auto **easyoregeneration** ON; chapter quest completes |
+| **5,000** | Second choice; book claim for the remaining mod |
+| Any | Chat choose still works; log out/in persists; other quest chapters still OK |
 
 Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock choose <mod>` · `pools list`
 

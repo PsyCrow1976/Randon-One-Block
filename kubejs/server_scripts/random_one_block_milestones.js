@@ -46,6 +46,29 @@ const DEFAULT_MILESTONES_CONFIG = {
       message: 'The void notices your island — 100 Randon Mined.'
     }
   ],
+  ftb_quest_hooks: {
+    100: '8F3A1C2E9B0D4E02',
+    500: '8F3A1C2E9B0D4E03',
+    1000: '8F3A1C2E9B0D4E04',
+    2500: '8F3A1C2E9B0D4E07',
+    5000: '8F3A1C2E9B0D4E08'
+  },
+  ftb_choice_quest_by_token: {
+    choice_1k: {
+      darkutils: '8F3A1C2E9B0D4E05',
+      apotheosis: '8F3A1C2E9B0D4E06'
+    },
+    choice_5k: {
+      darkutils: '8F3A1C2E9B0D4E09',
+      apotheosis: '8F3A1C2E9B0D4E0A'
+    }
+  },
+  ftb_choice_tasks: {
+    '8F3A1C2E9B0D4T05': 'darkutils',
+    '8F3A1C2E9B0D4T06': 'apotheosis',
+    '8F3A1C2E9B0D4T09': 'darkutils',
+    '8F3A1C2E9B0D4T0A': 'apotheosis'
+  },
   echo: {
     enabled: false,
     threshold: 100000,
@@ -55,7 +78,9 @@ const DEFAULT_MILESTONES_CONFIG = {
 }
 
 const MILESTONE_STATE = {
-  config: null
+  config: null,
+  choiceHandlersRegistered: false,
+  choiceInProgress: false
 }
 
 function milestonesClone(obj) {
@@ -289,7 +314,95 @@ function sanitizeMilestonesConfig(raw) {
     force_on_break: !(echoForce === false || echoForce === 'false')
   }
 
+  // FTB Quests chapter hooks (Randon Mined tab)
+  next.ftb_quest_hooks = milestonesStringMap(milestonesReadField(next, 'ftb_quest_hooks'))
+  if (!Object.keys(next.ftb_quest_hooks).length) {
+    next.ftb_quest_hooks = milestonesStringMap(DEFAULT_MILESTONES_CONFIG.ftb_quest_hooks)
+  }
+  next.ftb_choice_quest_by_token = milestonesNestedStringMap(
+    milestonesReadField(next, 'ftb_choice_quest_by_token')
+  )
+  if (!Object.keys(next.ftb_choice_quest_by_token).length) {
+    next.ftb_choice_quest_by_token = milestonesNestedStringMap(
+      DEFAULT_MILESTONES_CONFIG.ftb_choice_quest_by_token
+    )
+  }
+  next.ftb_choice_tasks = milestonesStringMap(milestonesReadField(next, 'ftb_choice_tasks'))
+  if (!Object.keys(next.ftb_choice_tasks).length) {
+    next.ftb_choice_tasks = milestonesStringMap(DEFAULT_MILESTONES_CONFIG.ftb_choice_tasks)
+  }
+
   return next
+}
+
+/** token_id -> { mod -> questId } */
+function milestonesNestedStringMap(value) {
+  var out = {}
+  var k = null
+  var inner = null
+  var cloned = null
+
+  if (!value) return out
+
+  try {
+    cloned = milestonesClone(value)
+    for (k in cloned) {
+      if (!Object.prototype.hasOwnProperty.call(cloned, k)) continue
+      inner = milestonesStringMap(cloned[k])
+      if (Object.keys(inner).length) out[String(k)] = inner
+    }
+  } catch (ignored) {
+    try {
+      for (k in value) {
+        if (!Object.prototype.hasOwnProperty.call(value, k)) continue
+        inner = milestonesStringMap(value[k])
+        if (Object.keys(inner).length) out[String(k)] = inner
+      }
+    } catch (ignored2) {}
+  }
+
+  return out
+}
+
+function milestonesStringMap(value) {
+  var out = {}
+  var k = null
+  var cloned = null
+  var iter = null
+  var entry = null
+
+  if (!value) return out
+
+  try {
+    cloned = milestonesClone(value)
+    for (k in cloned) {
+      if (!Object.prototype.hasOwnProperty.call(cloned, k)) continue
+      if (cloned[k] == null || cloned[k] === undefined) continue
+      out[String(k)] = String(cloned[k]).trim()
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored) {}
+
+  try {
+    for (k in value) {
+      if (!Object.prototype.hasOwnProperty.call(value, k)) continue
+      if (value[k] == null || value[k] === undefined) continue
+      out[String(k)] = String(value[k]).trim()
+    }
+    if (Object.keys(out).length) return out
+  } catch (ignored2) {}
+
+  try {
+    if (value.entrySet && typeof value.entrySet === 'function') {
+      iter = value.entrySet().iterator()
+      while (iter.hasNext()) {
+        entry = iter.next()
+        out[String(entry.getKey())] = String(entry.getValue()).trim()
+      }
+    }
+  } catch (ignored3) {}
+
+  return out
 }
 
 function loadMilestonesConfig() {
@@ -409,7 +522,7 @@ function numberListIncludes(list, n) {
   return false
 }
 
-function notifyScopePlayers(server, scopeId, message) {
+function forEachPlayerInScope(server, scopeId, callback) {
   var players = null
   var i = 0
   var player = null
@@ -417,7 +530,7 @@ function notifyScopePlayers(server, scopeId, message) {
   var pools = poolsApi()
   var counters = countersApi()
 
-  if (!server || !message) return
+  if (!server || !callback) return
 
   try {
     players = server.players
@@ -436,9 +549,113 @@ function notifyScopePlayers(server, scopeId, message) {
       }
     } catch (ignored2) {}
 
-    if (playerScope === scopeId && player && player.tell) {
-      player.tell(Text.of(message))
+    if (playerScope === scopeId) {
+      callback(player)
     }
+  }
+}
+
+function notifyScopePlayers(server, scopeId, message) {
+  if (!message) return
+  forEachPlayerInScope(server, scopeId, function (player) {
+    if (player && player.tell) player.tell(Text.of(message))
+  })
+}
+
+function getPlayerCommandName(player) {
+  if (!player) return null
+  try {
+    if (player.username != null) return String(player.username)
+  } catch (ignored) {}
+  try {
+    if (player.name && player.name.string) return String(player.name.string)
+  } catch (ignored2) {}
+  try {
+    if (player.getGameProfile) return String(player.getGameProfile().getName())
+  } catch (ignored3) {}
+  try {
+    if (player.getName) {
+      var n = player.getName()
+      if (n && n.getString) return String(n.getString())
+      return String(n)
+    }
+  } catch (ignored4) {}
+  return null
+}
+
+/**
+ * Complete an FTB quest for a player (Randon Mined chapter milestones).
+ * Uses ftbquests change_progress — best-effort across versions.
+ */
+function completeFtbQuestForPlayer(player, questId, server) {
+  var name = getPlayerCommandName(player)
+  var qid = String(questId || '')
+    .trim()
+    .toUpperCase()
+  var cmds = []
+  var i = 0
+  var cmd = null
+
+  if (!player || !qid) return
+  if (!server || !server.runCommandSilent) {
+    try {
+      if (player.server && player.server.runCommandSilent) server = player.server
+    } catch (ignored) {}
+  }
+  if (!server || !server.runCommandSilent) return
+  if (!name) return
+
+  cmds = [
+    'ftbquests change_progress ' + name + ' complete ' + qid,
+    'execute as ' + name + ' run ftbquests change_progress @s complete ' + qid
+  ]
+
+  for (i = 0; i < cmds.length; i++) {
+    cmd = cmds[i]
+    try {
+      server.runCommandSilent(cmd)
+    } catch (ignored2) {}
+  }
+}
+
+function completeFtbQuestForScope(server, scopeId, questId) {
+  forEachPlayerInScope(server, scopeId, function (player) {
+    completeFtbQuestForPlayer(player, questId, server)
+  })
+}
+
+function syncFtbMilestoneQuests(scopeId, blocksMined, server) {
+  var config = ensureMilestonesConfig()
+  var hooks = config.ftb_quest_hooks || {}
+  var byToken = config.ftb_choice_quest_by_token || {}
+  var record = loadCounterRecord(scopeId)
+  var mined = Math.max(0, Math.floor(Number(blocksMined) || 0))
+  var key = null
+  var threshold = 0
+  var questId = null
+  var spent = record.spent_choice_tokens || {}
+  var tokenId = null
+  var mod = null
+  var tokenMap = null
+
+  for (key in hooks) {
+    if (!Object.prototype.hasOwnProperty.call(hooks, key)) continue
+    threshold = Math.floor(Number(key))
+    if (!(threshold > 0) || mined < threshold) continue
+    questId = hooks[key]
+    if (questId) completeFtbQuestForScope(server, scopeId, questId)
+  }
+
+  // Mark only the claim quest for that token+mod (not every tier)
+  for (tokenId in spent) {
+    if (!Object.prototype.hasOwnProperty.call(spent, tokenId)) continue
+    mod = String(spent[tokenId] || '')
+      .trim()
+      .toLowerCase()
+    tokenMap = byToken[tokenId] || byToken[String(tokenId).toLowerCase()]
+    if (!tokenMap || !mod) continue
+    questId = tokenMap[mod]
+    if (questId) completeFtbQuestForScope(server, scopeId, questId)
   }
 }
 
@@ -678,6 +895,13 @@ function processMilestonesForScope(scopeId, blocksMined, server, announce) {
     saveCounterRecord(scopeId, record)
   }
 
+  // Always sync FTB "Randon Mined" chapter for current progress (incl. already-reached thresholds)
+  try {
+    syncFtbMilestoneQuests(scopeId, mined, server)
+  } catch (ftbErr) {
+    console.warn('[RandomOneBlock] FTB milestone quest sync failed: ' + String(ftbErr))
+  }
+
   return { crossed: crossed, record: record }
 }
 
@@ -835,6 +1059,15 @@ function chooseUnlock(player, mod, server) {
       displayParts.join('§7, §f')
   )
 
+  // Mark matching FTB claim quests (skip re-entrant choose from task events)
+  try {
+    MILESTONE_STATE.choiceInProgress = true
+    syncFtbMilestoneQuests(scopeId, record.blocks_mined, server)
+  } catch (ignoredSync) {
+  } finally {
+    MILESTONE_STATE.choiceInProgress = false
+  }
+
   return {
     ok: true,
     message:
@@ -846,6 +1079,87 @@ function chooseUnlock(player, mod, server) {
     mods: packageMods,
     token_id: pick.token_id
   }
+}
+
+function registerFtbChoiceTaskHandlers() {
+  var config = ensureMilestonesConfig()
+  var tasks = config.ftb_choice_tasks || {}
+  var taskId = null
+  var mod = null
+  var count = 0
+
+  if (typeof FTBQuestsEvents === 'undefined' || !FTBQuestsEvents.completed) {
+    console.warn(
+      '[RandomOneBlock] FTBQuestsEvents unavailable — Randon Mined book choices will not auto-unlock pools'
+    )
+    return 0
+  }
+
+  for (taskId in tasks) {
+    if (!Object.prototype.hasOwnProperty.call(tasks, taskId)) continue
+    mod = String(tasks[taskId] || '')
+      .trim()
+      .toLowerCase()
+    if (!mod) continue
+    ;(function (tid, modNamespace) {
+      FTBQuestsEvents.completed(tid, function (event) {
+        var player = null
+        var server = null
+        var result = null
+
+        if (MILESTONE_STATE.choiceInProgress) return
+
+        try {
+          if (typeof RandonOneBlockPools !== 'undefined' && RandonOneBlockPools.resolveQuestEventPlayer) {
+            player = RandonOneBlockPools.resolveQuestEventPlayer(event)
+          }
+        } catch (ignored) {}
+        if (!player) {
+          try {
+            player = event.player
+          } catch (ignored2) {}
+        }
+        try {
+          if (typeof RandonOneBlockPools !== 'undefined' && RandonOneBlockPools.resolveQuestEventServer) {
+            server = RandonOneBlockPools.resolveQuestEventServer(event)
+          }
+        } catch (ignored3) {}
+        if (!server && player) {
+          try {
+            server = player.server
+          } catch (ignored4) {}
+        }
+
+        if (!player) return
+
+        MILESTONE_STATE.choiceInProgress = true
+        try {
+          result = chooseUnlock(player, modNamespace, server)
+          if (result && result.message && player.tell) {
+            player.tell(Text.of(result.message))
+          }
+          if (result && !result.ok) {
+            console.info(
+              '[RandomOneBlock] FTB choice task ' +
+                tid +
+                ' -> ' +
+                modNamespace +
+                ' failed: ' +
+                result.message
+            )
+          }
+        } catch (err) {
+          console.warn('[RandomOneBlock] FTB choice task handler error: ' + String(err))
+        } finally {
+          MILESTONE_STATE.choiceInProgress = false
+        }
+      })
+    })(String(taskId), mod)
+    count++
+  }
+
+  console.info('[RandomOneBlock] Registered ' + count + ' FTB Randon Mined choice task handler(s)')
+  return count
 }
 
 function buildMilestonesStatus(player, server) {
@@ -1051,7 +1365,17 @@ var RandonOneBlockMilestones = {
   chooseUnlock: chooseUnlock,
   buildMilestonesStatus: buildMilestonesStatus,
   buildUnlockListStatus: buildUnlockListStatus,
-  getEligibleLockedMods: getEligibleLockedMods
+  getEligibleLockedMods: getEligibleLockedMods,
+  syncFtbMilestoneQuests: syncFtbMilestoneQuests
+}
+
+// Register choice task handlers at script load (FTB requires this timing)
+try {
+  ensureMilestonesConfig()
+  registerFtbChoiceTaskHandlers()
+  MILESTONE_STATE.choiceHandlersRegistered = true
+} catch (regErr) {
+  console.warn('[RandomOneBlock] FTB choice handler registration failed: ' + String(regErr))
 }
 
 PlayerEvents.loggedIn(function (event) {

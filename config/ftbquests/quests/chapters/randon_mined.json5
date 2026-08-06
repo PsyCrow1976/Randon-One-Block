@@ -1,0 +1,276 @@
+{
+  id: "8F3A1C2E9B0D4E7A",
+  group: "",
+  order_index: 1,
+  icon: {
+    id: "minecraft:bedrock",
+    count: 1,
+  },
+  filename: "randon_mined",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "minecraft:dirt",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      shape: "gear",
+      size: 1.5,
+      dependencies: [
+        "54426B5BBE263DB4",
+      ],
+      id: "8F3A1C2E9B0D4E01",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T01",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R01",
+          type: "xp",
+          xp: 5,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:cobblestone",
+        count: 1,
+      },
+      x: 2.5,
+      y: 0.0,
+      dependencies: [
+        "8F3A1C2E9B0D4E01",
+      ],
+      id: "8F3A1C2E9B0D4E02",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T02",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R02",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "utility:resource_generator",
+        count: 1,
+      },
+      x: 5.0,
+      y: 0.0,
+      shape: "hexagon",
+      size: 1.25,
+      dependencies: [
+        "8F3A1C2E9B0D4E02",
+      ],
+      id: "8F3A1C2E9B0D4E03",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T03",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R03",
+          type: "xp",
+          xp: 25,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:chest",
+        count: 1,
+      },
+      x: 7.5,
+      y: 0.0,
+      shape: "hexagon",
+      size: 1.25,
+      dependencies: [
+        "8F3A1C2E9B0D4E03",
+      ],
+      id: "8F3A1C2E9B0D4E04",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T04",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R04",
+          type: "xp",
+          xp: 25,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_hostile",
+        count: 1,
+      },
+      x: 7.5,
+      y: -2.5,
+      dependencies: [
+        "8F3A1C2E9B0D4E04",
+      ],
+      id: "8F3A1C2E9B0D4E05",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T05",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R15",
+          type: "xp",
+          xp: 50,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:salvaging_table",
+        count: 1,
+      },
+      x: 7.5,
+      y: 2.5,
+      dependencies: [
+        "8F3A1C2E9B0D4E04",
+      ],
+      id: "8F3A1C2E9B0D4E06",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T06",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R16",
+          type: "xp",
+          xp: 50,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:iron_ore",
+        count: 1,
+      },
+      x: 10.0,
+      y: 0.0,
+      shape: "hexagon",
+      size: 1.25,
+      dependencies: [
+        "8F3A1C2E9B0D4E04",
+      ],
+      id: "8F3A1C2E9B0D4E07",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T07",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R07",
+          type: "xp",
+          xp: 50,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:diamond_ore",
+        count: 1,
+      },
+      x: 12.5,
+      y: 0.0,
+      shape: "hexagon",
+      size: 1.25,
+      dependencies: [
+        "8F3A1C2E9B0D4E07",
+      ],
+      id: "8F3A1C2E9B0D4E08",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T08",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R08",
+          type: "xp",
+          xp: 50,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:redstone_randomizer",
+        count: 1,
+      },
+      x: 12.5,
+      y: -2.5,
+      dependencies: [
+        "8F3A1C2E9B0D4E08",
+      ],
+      id: "8F3A1C2E9B0D4E09",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T09",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R19",
+          type: "xp",
+          xp: 75,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:boss_spawner",
+        count: 1,
+      },
+      x: 12.5,
+      y: 2.5,
+      dependencies: [
+        "8F3A1C2E9B0D4E08",
+      ],
+      id: "8F3A1C2E9B0D4E0A",
+      tasks: [
+        {
+          id: "8F3A1C2E9B0D4T0A",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F3A1C2E9B0D4R1A",
+          type: "xp",
+          xp: 75,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}

@@ -41,11 +41,13 @@ Team-scoped milestones (not per-player) when the **Randon Mined** counter hits. 
 - [x] **1,000** — choice token: **Dark Utils** *or* **Apotheosis** (+ `apothic_enchanting`)
 - [x] **2,500** — auto unlock **Easy Ore Generation** pool
 - [x] **5,000** — choice token: remaining Dark Utils / Apotheosis package
+- [x] **FTB chapter “Randon Mined”** — milestone track + book checkmark to spend choices
+- [ ] Playtest remaining milestones (1k book claim, 2.5k, 5k)
 - [ ] **10,000** — reserved
 - [ ] **50,000** — reserved (pre-Echo)
 - [ ] **100,000** — Echo trophy (Phase 3)
 
-Commands: `/randomblock milestones`, `/randomblock unlock list`, `/randomblock unlock choose <mod>`
+Commands: `/randomblock milestones`, `/randomblock unlock list`, `/randomblock unlock choose <mod>` · Quest book tab **Randon Mined**
 
 ## Random block tiers (progression gating)
 

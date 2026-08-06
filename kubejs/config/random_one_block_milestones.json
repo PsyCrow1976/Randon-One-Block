@@ -1,5 +1,5 @@
 {
-  "_readme": "Mine milestones for Random One Block. Team Randon Mined counter crossings grant auto pool unlocks and/or choice tokens. Choice: /randomblock unlock choose <mod>. Status: /randomblock milestones. See theatlasplan.md §5.4.1.",
+  "_readme": "Mine milestones for Random One Block. Team Randon Mined counter crossings grant auto pool unlocks and/or choice tokens. Choice: quest book (Randon Mined chapter) or /randomblock unlock choose <mod>. See theatlasplan.md §5.4.1.",
 
   "enabled": true,
 
@@ -43,6 +43,32 @@
       "message": "The void notices your island — 100 Randon Mined."
     }
   ],
+
+  "ftb_quest_hooks": {
+    "100": "8F3A1C2E9B0D4E02",
+    "500": "8F3A1C2E9B0D4E03",
+    "1000": "8F3A1C2E9B0D4E04",
+    "2500": "8F3A1C2E9B0D4E07",
+    "5000": "8F3A1C2E9B0D4E08"
+  },
+
+  "ftb_choice_quest_by_token": {
+    "choice_1k": {
+      "darkutils": "8F3A1C2E9B0D4E05",
+      "apotheosis": "8F3A1C2E9B0D4E06"
+    },
+    "choice_5k": {
+      "darkutils": "8F3A1C2E9B0D4E09",
+      "apotheosis": "8F3A1C2E9B0D4E0A"
+    }
+  },
+
+  "ftb_choice_tasks": {
+    "8F3A1C2E9B0D4T05": "darkutils",
+    "8F3A1C2E9B0D4T06": "apotheosis",
+    "8F3A1C2E9B0D4T09": "darkutils",
+    "8F3A1C2E9B0D4T0A": "apotheosis"
+  },
 
   "echo": {
     "enabled": false,
