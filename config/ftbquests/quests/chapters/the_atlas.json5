@@ -18,10 +18,10 @@
       x: 0.0,
       y: 0.0,
       shape: "gear",
-      size: 1.5,
       dependencies: [
         "1E7624ECE0EA67D4",
       ],
+      size: 1.5,
       id: "73B3ADDEEBEF97B0",
       tasks: [
         {
@@ -1589,8 +1589,12 @@
     },
     {
       icon: {
-        id: "apotheosis:boss_spawner",
+        id: "ftbquests:missing_item",
         count: 1,
+        components: {
+          "ftbquests:missing_item": "apotheosis:boss_spawner",
+          "ftbquests:missing_item_count": 1,
+        },
       },
       x: 11.0,
       y: 9.0,

@@ -1,10 +1,10 @@
 {
   "name": "Randon One Block",
   "slug": "randon-one-block",
-  "version": "1.0.5.6",
+  "version": "1.0.6.0",
   "author": "PsyCrow1976",
-  "tagline": "Experimental AI-built NeoForge skyblock — random center block, FTB quests, mine-milestone pool unlocks",
-  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2 (1.0.5.6). The author does not hand-write mods or KubeJS — Grok Composer 2.5 fast implements features from descriptions. Core loop: mine one skyblock center block, get a random modpack block back (KubeJS, inspired by Chaos OneBlock). FTB quest book with quest-gated minable pools plus NEW mine milestones: team Randon Mined unlocks BBL Utility @ 500, Easy Ore Gen @ 2500, and player choice tokens at 1k/5k (Dark Utils or Apotheosis package) via the Randon Mined quest chapter. NeoForge 26.1.2.94. Endgame Atlas + 100k Echo designed in theatlasplan.md (Phase 1 shipped; Atlas Phase 2 next). Known issue: Equivox Philosopher’s Stone world-transmutation crashes until upstream rebuild (github.com/Yaskulsky/Equivox/issues/5).",
+  "tagline": "Experimental AI-built NeoForge skyblock — random center block, FTB quests, milestones, Randon Atlas",
+  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2 (1.0.6.0). Core loop: mine one skyblock center block, get a random pack block back. NEW Randon Atlas: unique center rolls tracked per team, curated endgame set, FTB The Atlas chapter (66 pages, 10 XP), /randomblock atlas commands, Atlas Seal on completion. Also mine milestones (Utility @ 500, choice @ 1k/5k, Easy Ore Gen @ 2500) and quest-gated minable pools. NeoForge 26.1.2.94. Echo at 100k still planned. Known: Equivox Philosopher’s Stone world-transmutation crash until upstream (github.com/Yaskulsky/Equivox/issues/5).",
   "minecraft": "26.1.2",
   "modloader": {
     "id": "neoforge",

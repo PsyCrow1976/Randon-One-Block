@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** **Phase 0–1 complete** (1.0.5.6). **Phase 2 Atlas tracking implemented** — playtest next.  
+**Status:** **Phase 0–2 complete** — shipped in **1.0.5.6** (milestones) and **1.0.6.0** (Atlas). Next: **Phase 3 Echo**.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
