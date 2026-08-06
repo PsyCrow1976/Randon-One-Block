@@ -229,6 +229,30 @@ Quest-book chapters already map their signature quests → minable namespaces (S
 - Mods that are **nice-to-have early** with **no chapter** → `milestone` auto or `milestone_choice` at 500/1k/2.5k/5k (this section).
 - “Must feel earned” endgame mods → `quest_and_milestone` with high N **or** only via Atlas chapter, not free choice.
 
+#### 5.4.2 Suggestion — player-facing unlock broadcasts (polish)
+
+**Status:** Playtest confirmed auto unlock works (e.g. BBL Utility @ 500). Chat notify exists today via team-scope messages; make announcements **harder to miss**.
+
+**Suggestion:** When a milestone grants a pool (auto or choice spend), send a **clear player-specific broadcast** to each online member of the island team — not only a quiet chat line that scrolls past while mining.
+
+| Event | Suggested player broadcast |
+|-------|----------------------------|
+| Auto @ **500** | “**BBL Utility** blocks unlocked in the random pool” (`utility`) |
+| Auto @ **2,500** | “**Easy Ore Generation** unlocked in the random pool” |
+| Choice token @ **1,000** / **5,000** | “You earned an unlock choice — use `/randomblock unlock list`” + eligible mod names |
+| After **`unlock choose`** | “Unlocked **\<display name\>** for your team’s random pool” (and package peers, e.g. Apotheosis + Enchanting) |
+| Story beat @ **100** | Keep short void/story toast (optional) |
+
+**Implementation ideas (pick when polishing Phase 1 / quest chapter):**
+
+1. **Title / subtitle** once per threshold (e.g. title “Milestone 500”, subtitle “BBL Utility unlocked”) — very visible while mining.
+2. **Action bar** or **system chat** (`tellraw` style) with clickable hint to `/randomblock unlock list` for choice tokens.
+3. Keep current **team-scope chat** for teammates offline later; on **login backfill**, show a one-time summary if any unlocks/tokens were applied while offline (“While you were away: BBL Utility unlocked”).
+4. Config-driven copy: reuse `message` / `description` fields in `random_one_block_milestones.json` so authors can tune text without code.
+
+**Do not:** spam every break; only fire once per threshold/token spend (same as milestone engine rules).  
+**Out of scope for first ship if needed:** sound / particles / advancement toast — nice-to-have after title+chat are solid.
+
 ### 5.5 Commands (player + op)
 
 | Command | Who | Purpose |
@@ -246,7 +270,7 @@ Validation for `unlock choose`:
 - Mod not already unlocked.
 - Prefer **lowest unspent threshold token** that allows that mod (or require `token_id` arg if ambiguous).
 
-Chat feedback on first cross of a threshold (team-wide once):
+Chat feedback on first cross of a threshold (team-wide once) — **baseline today**. Prefer stronger player-facing broadcasts later (see **§5.4.2**):
 
 ```text
 [Randon] Milestone 1,000 — you earned an unlock choice!
