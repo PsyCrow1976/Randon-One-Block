@@ -1,116 +1,123 @@
 {
-  "quest.8F3A1C2E9B0D4E01.title": "The Void Counter",
-  "quest.8F3A1C2E9B0D4E01.quest_subtitle": "Randon Mined basics",
-  "quest.8F3A1C2E9B0D4E01.quest_desc": [
+  "quest.298C76D8B303A1D7.title": "The Void Counter",
+  "quest.298C76D8B303A1D7.quest_subtitle": "How Randon Mined works",
+  "quest.298C76D8B303A1D7.quest_desc": [
     "Every time you break your island's &6center random block&r, your team gains one &eRandon Mined&r.",
     "",
     "That count is &ashared for the whole island team&r (not per player). Watch the HUD above the hotbar, or run &f/randomblock counter&r.",
     "",
-    "This chapter tracks &emine milestones&r: auto pool unlocks, &echoice tokens&r for mods without a full quest line, and tips for &f/randomblock milestones&r / &f/randomblock unlock list&r.",
+    "This chapter tracks &emine milestones&r:",
+    "• &aAuto unlocks&r — some mods join the random pool when you hit a number (no choice).",
+    "• &dChoice tokens&r — at 1,000 and 5,000 you pick a mod that has no full quest line.",
     "",
-    "Check the box when you have found the counter. Keep mining — the void is counting."
+    "Commands if you need them: &f/randomblock milestones&r · &f/randomblock unlock list&r · &f/randomblock unlock choose <mod>&r.",
+    "",
+    "Check the box when you understand the counter, then keep mining."
   ],
-  "task.8F3A1C2E9B0D4T01.title": "Read about Randon Mined",
+  "task.40481E72B44FC263.title": "I found the Randon Mined counter",
 
-  "quest.8F3A1C2E9B0D4E02.title": "First Hundred",
-  "quest.8F3A1C2E9B0D4E02.quest_subtitle": "100 Randon Mined",
-  "quest.8F3A1C2E9B0D4E02.quest_desc": [
+  "quest.70A74D8F9AE4A94A.title": "First Hundred",
+  "quest.70A74D8F9AE4A94A.quest_subtitle": "100 Randon Mined",
+  "quest.70A74D8F9AE4A94A.quest_desc": [
     "Reach &e100&r team Randon Mined by breaking the center block.",
     "",
-    "This quest &acompletes automatically&r when your island hits the milestone (or when you open this tab after backfill).",
+    "This quest &acompletes automatically&r when your island hits the milestone (or on login/backfill if you already passed it).",
     "",
     "The void notices. Bigger unlocks come later."
   ],
-  "task.8F3A1C2E9B0D4T02.title": "Reach 100 Randon Mined",
+  "task.4F0A96F8B052E85E.title": "Reach 100 Randon Mined",
 
-  "quest.8F3A1C2E9B0D4E03.title": "Utility Crack",
-  "quest.8F3A1C2E9B0D4E03.quest_subtitle": "500 — BBL Utility pool",
-  "quest.8F3A1C2E9B0D4E03.quest_desc": [
+  "quest.354911A44E0FE192.title": "Utility Crack",
+  "quest.354911A44E0FE192.quest_subtitle": "500 — BBL Utility joins the pool",
+  "quest.354911A44E0FE192.quest_desc": [
     "At &e500&r Randon Mined, &6BBL Utility&r (&futility&r) blocks &aautomatically join&r your team's random pool.",
     "",
-    "No choice required — generators, breakers, placers, and related full-cube blocks can start rolling from the center block.",
+    "No choice required — resource generators, block breakers/placers, and related full-cube blocks can start rolling from the center block.",
     "",
     "Completes automatically when the milestone fires."
   ],
-  "task.8F3A1C2E9B0D4T03.title": "Unlock BBL Utility @ 500",
+  "task.036077D54B54F1F1.title": "Unlock BBL Utility @ 500",
 
-  "quest.8F3A1C2E9B0D4E04.title": "First Crack in the Void",
-  "quest.8F3A1C2E9B0D4E04.quest_subtitle": "1,000 — unlock choice",
-  "quest.8F3A1C2E9B0D4E04.quest_desc": [
+  "quest.4F8ACEF07DC37A1F.title": "First Crack in the Void",
+  "quest.4F8ACEF07DC37A1F.quest_subtitle": "1,000 — pick a support mod",
+  "quest.4F8ACEF07DC37A1F.quest_desc": [
     "At &e1,000&r Randon Mined you earn an &dunlock choice token&r (&fchoice_1k&r).",
     "",
-    "Pick &6one&r still-locked pool for your team:",
-    "• &eDark Utilities&r (&fdarkutils&r)",
-    "• &eApotheosis&r (&fapotheosis&r + &fapothic_enchanting&r)",
+    "Pick &6one&r still-locked pool for your team using the side quests:",
+    "• &eClaim Dark Utils&r — Dark Utilities filters and gadgets",
+    "• &eClaim Apotheosis&r — Apotheosis + Apothic Enchanting (both namespaces)",
     "",
-    "Open the side quests in this chapter and &echeck the box&r on the pool you want — that spends the token in the book.",
-    "Or use chat: &f/randomblock unlock list&r then &f/randomblock unlock choose <mod>&r.",
+    "Open a claim quest and &acheck the box&r to spend the token. You only get &eone&r pick at this tier.",
     "",
-    "This quest completes automatically when the token is granted."
+    "Or use chat: &f/randomblock unlock choose darkutils&r / &fapotheosis&r.",
+    "",
+    "This milestone quest completes automatically when the token is granted."
   ],
-  "task.8F3A1C2E9B0D4T04.title": "Reach 1,000 Randon Mined",
+  "task.284BB242E685CD86.title": "Reach 1,000 Randon Mined",
 
-  "quest.8F3A1C2E9B0D4E05.title": "Claim Dark Utils (1k)",
-  "quest.8F3A1C2E9B0D4E05.quest_subtitle": "Spend choice on darkutils",
-  "quest.8F3A1C2E9B0D4E05.quest_desc": [
+  "quest.3406FF862E0E55FB.title": "Claim Dark Utils (1k)",
+  "quest.3406FF862E0E55FB.quest_subtitle": "Spend choice on darkutils",
+  "quest.3406FF862E0E55FB.quest_desc": [
     "Spend your &d1,000&r choice token on &6Dark Utilities&r.",
     "",
-    "&aCheck the box&r in the quest book to claim (same as &f/randomblock unlock choose darkutils&r).",
+    "&aCheck the box&r to claim — same as running &f/randomblock unlock choose darkutils&r.",
     "",
-    "You only have &eone&r token at this tier — if you already spent it on Apotheosis, this claim will fail (expected)."
+    "Dark Utils blocks can then roll from the center random block for your team.",
+    "",
+    "If you already spent the token on Apotheosis, this claim will fail (expected — one token only)."
   ],
-  "task.8F3A1C2E9B0D4T05.title": "Choose Dark Utilities",
+  "task.70C16F9FB9166093.title": "Choose Dark Utilities",
 
-  "quest.8F3A1C2E9B0D4E06.title": "Claim Apotheosis (1k)",
-  "quest.8F3A1C2E9B0D4E06.quest_subtitle": "Spend choice on apotheosis package",
-  "quest.8F3A1C2E9B0D4E06.quest_desc": [
+  "quest.32BD86CB337AB9F0.title": "Claim Apotheosis (1k)",
+  "quest.32BD86CB337AB9F0.quest_subtitle": "Spend choice on Apotheosis package",
+  "quest.32BD86CB337AB9F0.quest_desc": [
     "Spend your &d1,000&r choice token on &6Apotheosis&r.",
     "",
-    "This unlocks &fboth&r &eapotheosis&r and &eapothic_enchanting&r in the minable pool.",
+    "This unlocks &fboth&r &eapotheosis&r and &eapothic_enchanting&r in the minable pool (shelves, salvaging table, and related full cubes).",
     "",
-    "&aCheck the box&r to claim (same as &f/randomblock unlock choose apotheosis&r).",
+    "&aCheck the box&r to claim — same as &f/randomblock unlock choose apotheosis&r.",
     "",
-    "One token only — if you already spent it on Dark Utils, this claim will fail (expected)."
+    "If you already spent the token on Dark Utils, this claim will fail (expected)."
   ],
-  "task.8F3A1C2E9B0D4T06.title": "Choose Apotheosis package",
+  "task.2F21027BA89D32B8.title": "Choose Apotheosis package",
 
-  "quest.8F3A1C2E9B0D4E07.title": "Ore in the Tear",
-  "quest.8F3A1C2E9B0D4E07.quest_subtitle": "2,500 — Easy Ore Generation",
-  "quest.8F3A1C2E9B0D4E07.quest_desc": [
+  "quest.052F6E722C91858A.title": "Ore in the Tear",
+  "quest.052F6E722C91858A.quest_subtitle": "2,500 — Easy Ore Generation",
+  "quest.052F6E722C91858A.quest_desc": [
     "At &e2,500&r Randon Mined, &6Easy Ore Generation&r (&feasyoregeneration&r) &aautomatically joins&r the random pool.",
     "",
-    "Completes automatically when the milestone fires."
+    "No choice required. Completes automatically when the milestone fires."
   ],
-  "task.8F3A1C2E9B0D4T07.title": "Unlock Easy Ore Generation @ 2,500",
+  "task.6FCA2BE21E690252.title": "Unlock Easy Ore Generation @ 2,500",
 
-  "quest.8F3A1C2E9B0D4E08.title": "The Tear Widens",
-  "quest.8F3A1C2E9B0D4E08.quest_subtitle": "5,000 — second unlock choice",
-  "quest.8F3A1C2E9B0D4E08.quest_desc": [
-    "At &e5,000&r Randon Mined you earn &dchoice_5k&r — pick whichever of &6Dark Utils&r / &6Apotheosis&r is still locked.",
+  "quest.461A129540477F54.title": "The Tear Widens",
+  "quest.461A129540477F54.quest_subtitle": "5,000 — second unlock choice",
+  "quest.461A129540477F54.quest_desc": [
+    "At &e5,000&r Randon Mined you earn &dchoice_5k&r.",
     "",
-    "Use the side quests or &f/randomblock unlock choose <mod>&r.",
+    "Pick whichever of &6Dark Utils&r or &6Apotheosis&r is still locked, using the side claim quests (or chat).",
     "",
-    "If both pools are already unlocked, no token is granted (nothing left to choose).",
+    "If both pools are already unlocked, no token is granted.",
     "",
-    "Completes automatically when the 5k milestone is recorded."
+    "This quest completes automatically when the 5k milestone is recorded."
   ],
-  "task.8F3A1C2E9B0D4T08.title": "Reach 5,000 Randon Mined",
+  "task.7F7295BF1DFDA590.title": "Reach 5,000 Randon Mined",
 
-  "quest.8F3A1C2E9B0D4E09.title": "Claim Dark Utils (5k)",
-  "quest.8F3A1C2E9B0D4E09.quest_subtitle": "Spend 5k choice on darkutils",
-  "quest.8F3A1C2E9B0D4E09.quest_desc": [
+  "quest.5C61885CB786A9FA.title": "Claim Dark Utils (5k)",
+  "quest.5C61885CB786A9FA.quest_subtitle": "Spend 5k choice on darkutils",
+  "quest.5C61885CB786A9FA.quest_desc": [
     "Spend &dchoice_5k&r on &6Dark Utilities&r if it is still locked.",
     "",
     "&aCheck the box&r in the quest book, or use &f/randomblock unlock choose darkutils&r."
   ],
-  "task.8F3A1C2E9B0D4T09.title": "Choose Dark Utilities (5k)",
+  "task.16688F671F62C49F.title": "Choose Dark Utilities (5k)",
 
-  "quest.8F3A1C2E9B0D4E0A.title": "Claim Apotheosis (5k)",
-  "quest.8F3A1C2E9B0D4E0A.quest_subtitle": "Spend 5k choice on apotheosis package",
-  "quest.8F3A1C2E9B0D4E0A.quest_desc": [
-    "Spend &dchoice_5k&r on &6Apotheosis&r (+ Enchanting) if still locked.",
+  "quest.39A188E8418C47B7.title": "Claim Apotheosis (5k)",
+  "quest.39A188E8418C47B7.quest_subtitle": "Spend 5k choice on Apotheosis package",
+  "quest.39A188E8418C47B7.quest_desc": [
+    "Spend &dchoice_5k&r on &6Apotheosis&r (+ Enchanting) if it is still locked.",
     "",
     "&aCheck the box&r in the quest book, or use &f/randomblock unlock choose apotheosis&r."
   ],
-  "task.8F3A1C2E9B0D4T0A.title": "Choose Apotheosis package (5k)",
+  "task.29C704D46039E1FC.title": "Choose Apotheosis package (5k)",
 }

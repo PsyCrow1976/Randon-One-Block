@@ -46,28 +46,29 @@ const DEFAULT_MILESTONES_CONFIG = {
       message: 'The void notices your island — 100 Randon Mined.'
     }
   ],
+  // IDs must match config/ftbquests/quests/chapters/randon_mined.json5 (FTB may regenerate)
   ftb_quest_hooks: {
-    100: '8F3A1C2E9B0D4E02',
-    500: '8F3A1C2E9B0D4E03',
-    1000: '8F3A1C2E9B0D4E04',
-    2500: '8F3A1C2E9B0D4E07',
-    5000: '8F3A1C2E9B0D4E08'
+    100: '70A74D8F9AE4A94A',
+    500: '354911A44E0FE192',
+    1000: '4F8ACEF07DC37A1F',
+    2500: '052F6E722C91858A',
+    5000: '461A129540477F54'
   },
   ftb_choice_quest_by_token: {
     choice_1k: {
-      darkutils: '8F3A1C2E9B0D4E05',
-      apotheosis: '8F3A1C2E9B0D4E06'
+      darkutils: '3406FF862E0E55FB',
+      apotheosis: '32BD86CB337AB9F0'
     },
     choice_5k: {
-      darkutils: '8F3A1C2E9B0D4E09',
-      apotheosis: '8F3A1C2E9B0D4E0A'
+      darkutils: '5C61885CB786A9FA',
+      apotheosis: '39A188E8418C47B7'
     }
   },
   ftb_choice_tasks: {
-    '8F3A1C2E9B0D4T05': 'darkutils',
-    '8F3A1C2E9B0D4T06': 'apotheosis',
-    '8F3A1C2E9B0D4T09': 'darkutils',
-    '8F3A1C2E9B0D4T0A': 'apotheosis'
+    '70C16F9FB9166093': 'darkutils',
+    '2F21027BA89D32B8': 'apotheosis',
+    '16688F671F62C49F': 'darkutils',
+    '29C704D46039E1FC': 'apotheosis'
   },
   echo: {
     enabled: false,

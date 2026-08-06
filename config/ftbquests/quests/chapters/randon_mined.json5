@@ -1,5 +1,5 @@
 {
-  id: "8F3A1C2E9B0D4E7A",
+  id: "3B3BD6F88A0427D2",
   group: "",
   order_index: 1,
   icon: {
@@ -18,20 +18,20 @@
       x: 0.0,
       y: 0.0,
       shape: "gear",
-      size: 1.5,
       dependencies: [
         "54426B5BBE263DB4",
       ],
-      id: "8F3A1C2E9B0D4E01",
+      size: 1.5,
+      id: "298C76D8B303A1D7",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T01",
+          id: "40481E72B44FC263",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R01",
+          id: "2125BC8E88EFAFE1",
           type: "xp",
           xp: 5,
         },
@@ -45,18 +45,18 @@
       x: 2.5,
       y: 0.0,
       dependencies: [
-        "8F3A1C2E9B0D4E01",
+        "298C76D8B303A1D7",
       ],
-      id: "8F3A1C2E9B0D4E02",
+      id: "70A74D8F9AE4A94A",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T02",
+          id: "4F0A96F8B052E85E",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R02",
+          id: "5D4B9249D78EFE1A",
           type: "xp",
           xp: 10,
         },
@@ -70,20 +70,20 @@
       x: 5.0,
       y: 0.0,
       shape: "hexagon",
-      size: 1.25,
       dependencies: [
-        "8F3A1C2E9B0D4E02",
+        "70A74D8F9AE4A94A",
       ],
-      id: "8F3A1C2E9B0D4E03",
+      size: 1.25,
+      id: "354911A44E0FE192",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T03",
+          id: "036077D54B54F1F1",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R03",
+          id: "158737682E6374B5",
           type: "xp",
           xp: 25,
         },
@@ -97,20 +97,20 @@
       x: 7.5,
       y: 0.0,
       shape: "hexagon",
-      size: 1.25,
       dependencies: [
-        "8F3A1C2E9B0D4E03",
+        "354911A44E0FE192",
       ],
-      id: "8F3A1C2E9B0D4E04",
+      size: 1.25,
+      id: "4F8ACEF07DC37A1F",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T04",
+          id: "284BB242E685CD86",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R04",
+          id: "63E710FCBED3F4E6",
           type: "xp",
           xp: 25,
         },
@@ -124,18 +124,18 @@
       x: 7.5,
       y: -2.5,
       dependencies: [
-        "8F3A1C2E9B0D4E04",
+        "4F8ACEF07DC37A1F",
       ],
-      id: "8F3A1C2E9B0D4E05",
+      id: "3406FF862E0E55FB",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T05",
+          id: "70C16F9FB9166093",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R15",
+          id: "22BA3B9F2328ACDB",
           type: "xp",
           xp: 50,
         },
@@ -149,18 +149,18 @@
       x: 7.5,
       y: 2.5,
       dependencies: [
-        "8F3A1C2E9B0D4E04",
+        "4F8ACEF07DC37A1F",
       ],
-      id: "8F3A1C2E9B0D4E06",
+      id: "32BD86CB337AB9F0",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T06",
+          id: "2F21027BA89D32B8",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R16",
+          id: "71FEDFC3D80328C7",
           type: "xp",
           xp: 50,
         },
@@ -174,20 +174,20 @@
       x: 10.0,
       y: 0.0,
       shape: "hexagon",
-      size: 1.25,
       dependencies: [
-        "8F3A1C2E9B0D4E04",
+        "4F8ACEF07DC37A1F",
       ],
-      id: "8F3A1C2E9B0D4E07",
+      size: 1.25,
+      id: "052F6E722C91858A",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T07",
+          id: "6FCA2BE21E690252",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R07",
+          id: "09A9E9415A7C3DA3",
           type: "xp",
           xp: 50,
         },
@@ -201,20 +201,20 @@
       x: 12.5,
       y: 0.0,
       shape: "hexagon",
-      size: 1.25,
       dependencies: [
-        "8F3A1C2E9B0D4E07",
+        "052F6E722C91858A",
       ],
-      id: "8F3A1C2E9B0D4E08",
+      size: 1.25,
+      id: "461A129540477F54",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T08",
+          id: "7F7295BF1DFDA590",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R08",
+          id: "47B57F7DCDEC36AE",
           type: "xp",
           xp: 50,
         },
@@ -228,18 +228,18 @@
       x: 12.5,
       y: -2.5,
       dependencies: [
-        "8F3A1C2E9B0D4E08",
+        "461A129540477F54",
       ],
-      id: "8F3A1C2E9B0D4E09",
+      id: "5C61885CB786A9FA",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T09",
+          id: "16688F671F62C49F",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R19",
+          id: "23DDA383644B3EF5",
           type: "xp",
           xp: 75,
         },
@@ -247,24 +247,24 @@
     },
     {
       icon: {
-        id: "apotheosis:boss_spawner",
+        id: "apotheosis:salvaging_table",
         count: 1,
       },
       x: 12.5,
       y: 2.5,
       dependencies: [
-        "8F3A1C2E9B0D4E08",
+        "461A129540477F54",
       ],
-      id: "8F3A1C2E9B0D4E0A",
+      id: "39A188E8418C47B7",
       tasks: [
         {
-          id: "8F3A1C2E9B0D4T0A",
+          id: "29C704D46039E1FC",
           type: "checkmark",
         },
       ],
       rewards: [
         {
-          id: "8F3A1C2E9B0D4R1A",
+          id: "639D20B3E96501E9",
           type: "xp",
           xp: 75,
         },
