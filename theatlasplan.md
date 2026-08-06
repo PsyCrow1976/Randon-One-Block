@@ -310,7 +310,7 @@ Milestone detection: on each `incrementTeamCounter`, if `blocks_mined` crosses a
 
 ## 6. System B — Randon Atlas
 
-### 6.0 Player-facing names (Phase 0 freeze — recommended)
+### 6.0 Player-facing names (Phase 0 freeze — **approved**)
 
 | Thing | Display name | Internal id (when implemented) | Notes |
 |-------|--------------|--------------------------------|-------|
@@ -324,7 +324,7 @@ Milestone detection: on each `incrementTeamCounter`, if `blocks_mined` crosses a
 
 > Every break is a page in the **Randon Atlas**. At one hundred thousand, the void answers once: **The Echo**.
 
-**Your call:** keep these names, or reply with replacements (e.g. “Void Echo”, “Tearstone”, “Cartographer’s Seal”). No code depends on them until Phase 2–3.
+**Approved** by design freeze; later renames are fine without reopening Phase 0.
 
 ### 6.1 What counts as an Atlas entry
 
@@ -349,10 +349,10 @@ Do **not** count:
 
 **v1 true end = Endgame set**, not full registry.
 
-#### 6.2.1 Draft endgame set (Phase 0 — checked in)
+#### 6.2.1 Endgame set (Phase 0 — **approved**, checked in)
 
 **File:** [`kubejs/config/random_one_block_atlas.json`](kubejs/config/random_one_block_atlas.json)  
-**Set id:** `randon_atlas_v1` · **Size:** ~**64** entries · **Source:** `config/random_one_block_pool.json` dump (~1100 full-cube ids) + pack knowledge.
+**Set id:** `randon_atlas_v1` · **Size:** ~**64** entries · **Source:** pool dump + pack knowledge · **Player approved** (adjust later as needed).
 
 | Group | Example entries | Active when |
 |-------|-----------------|-------------|
@@ -552,35 +552,17 @@ Prefer **sibling configs** over stuffing everything into `mod_pools.json` so que
 - [x] Playtest: each unlock shows pool ON for team; `/randomblock pools debug quests` clean.
 - [x] Freeze list of **gated mod namespaces** for choice tiers vs quest-only vs quest_and_milestone (§5.4.1).
 
-### Phase 0 — Design freeze (short, no code)
+### Phase 0 — Design freeze — **COMPLETE**
 
 - [x] Fill tables: each gated mod → unlock mode + threshold/token eligibility (§5.4.1 non-questbook; quest mods remain quest-only).
-- [x] Draft Atlas endgame set (~64 ids) — **`kubejs/config/random_one_block_atlas.json`** + §6.2.1 (from pool dump; pending live refresh for empty namespaces).
+- [x] Draft Atlas endgame set (~64 ids) — **`kubejs/config/random_one_block_atlas.json`** + §6.2.1.
 - [x] Confirm default choice thresholds: **1000** and **5000** (+ auto **500** utility, **2500** easyoregeneration).
-- [x] Write player-facing names: Echo block, chapter title, seal items — **§6.0** (recommended defaults; confirm in-game when Phase 2–3 ships).
+- [x] Write player-facing names — **§6.0** (chapter, Echo, seals, final quest).
+- [x] **Player approval** — list + names accepted; adjustments allowed later without reopening Phase 0.
 
-#### Phase 0 how to test / validate (you — design review, not code yet)
+#### Phase 0 testing
 
-These items are **design freezes**. No Atlas/Echo engine is wired yet; you are approving copy + the curated block list before Phase 2 coding.
-
-| Item | What “done” means | How you test / check | What we need from you |
-|------|-------------------|----------------------|------------------------|
-| **Atlas endgame set** | ~48–96 **real** pool block ids, spread across vanilla + gated mods; gated entries use `requires_mod` | 1) Open `kubejs/config/random_one_block_atlas.json` and skim groups. 2) In-game: `/randomblock pools debug complete` (or per mod) and confirm each `id` can appear in the master pool. 3) Optional: paste a fresh dump so we can fill **equivox / enderio / easyoregeneration** slots. | **Approve list**, or mark ids to swap/remove. Run dump commands if those mods are empty in your world. |
-| **Player-facing names** | Fixed strings for chapter + seals + Echo trophy | Read the table in **§6.0**. Say if you want different flavor (more serious / sillier / shorter). | **Yes / change to …** for chapter title, Echo block name, seal names. No assets required until Phase 2–3. |
-
-**In-game dump commands (for Atlas refresh):**
-
-```text
-/randomblock pools debug complete
-/randomblock pools debug complete equivox
-/randomblock pools debug complete enderio
-/randomblock pools debug complete easyoregeneration
-/randomblock pools debug complete kubejs
-```
-
-Copy chat/log output or the generated dump file if the pack writes one; we can merge new ids into `random_one_block_atlas.json`.
-
-**Not required from you for Phase 0:** textures for Echo/seals, quest JSON, or mining 100k.
+**Nothing left for you to test.** Phase 0 is design-only (no Atlas/Echo runtime). Names and the curated set are frozen as the baseline for Phase 2–3. Optional later: dump empty namespaces (`equivox` / `enderio` / `easyoregeneration`) if you want to add more Atlas entries — not a Phase 0 blocker.
 
 ### Phase 1 — Milestone engine + selectable unlocks
 
@@ -590,9 +572,22 @@ Copy chat/log output or the generated dump file if the pack writes one; we can m
 - [x] Wire choice → same persistence as `poolenable` (incl. `apotheosis` package → `apothic_enchanting`).
 - [x] Auto-unlock `utility` @ 500 and `easyoregeneration` @ 2500.
 - [x] Tests: auto unlock @ 500 confirmed (live + backfill after parse fix).
-- [ ] Support `quest_and_milestone` in pool eligibility (engine ready; no quest mods use it yet).
-- [ ] Polish: player-specific unlock broadcasts for all milestones (§5.4.2) — title/subtitle or action bar, not only chat.
-- [ ] Tests: hit 1000 / 2500 / 5000 choice + remaining autos; choose mod; see rolls from that namespace.
+- [ ] Support `quest_and_milestone` in pool eligibility — **defer** (no mod uses this mode yet).
+- [ ] Polish: player-specific unlock broadcasts (§5.4.2) — optional; chat works today.
+- [ ] **Your playtest remaining:** 1,000 choice · 2,500 auto easyoregen · 5,000 choice · spend tokens · persistence.
+
+#### Phase 1 — what you test next (code already in pack)
+
+Use a **fresh island** (or continue past 500). After `/reload`, log must show `Milestones config loaded: 2 auto, 2 choice token(s)`.
+
+| Mines | Check |
+|------:|--------|
+| **1,000** | Choice token `choice_1k`; chat + `/randomblock unlock list` shows darkutils / apotheosis; `/randomblock unlock choose <mod>` unlocks pool (apotheosis → both + enchanting) |
+| **2,500** | Auto **easyoregeneration** ON |
+| **5,000** | Token `choice_5k` for whichever of darkutils/apotheosis remains; spend it |
+| Any | Log out/in: unlocks + unspent tokens persist; quest unlocks still work |
+
+Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock choose <mod>` · `pools list`
 
 ### Phase 2 — Atlas tracking
 
