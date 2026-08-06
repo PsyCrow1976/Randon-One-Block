@@ -1,0 +1,1693 @@
+{
+  id: "F35A30FF1AB15B2D",
+  group: "",
+  order_index: 2,
+  icon: {
+    id: "minecraft:writable_book",
+    count: 1,
+  },
+  filename: "the_atlas",
+  default_quest_shape: "",
+  default_hide_dependency_lines: true,
+  quests: [
+    {
+      icon: {
+        id: "minecraft:book",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      shape: "gear",
+      size: 1.5,
+      dependencies: [
+        "1E7624ECE0EA67D4",
+      ],
+      id: "1887BB9F14E9CCAC",
+      tasks: [
+        {
+          id: "FB7E20A4D86609A3",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "974B8BA001680AAA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:diamond_block",
+        count: 1,
+      },
+      x: 2.0,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "54FF31DEE2709B24",
+      tasks: [
+        {
+          id: "666BE3FF01A9E6FE",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "83F6FD06AF5AC8EA",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:emerald_block",
+        count: 1,
+      },
+      x: 3.5,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "FC21C580D011AF8A",
+      tasks: [
+        {
+          id: "BC39C68D6916D7CF",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "33DD5703B933559C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:netherite_block",
+        count: 1,
+      },
+      x: 5.0,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "A5629A752D750951",
+      tasks: [
+        {
+          id: "5BD3504016CB88F3",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "AE555ECBE64CB326",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:gold_block",
+        count: 1,
+      },
+      x: 6.5,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "4F0713A85CC191E6",
+      tasks: [
+        {
+          id: "FC1D4D1E19008887",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "483B24E83794FC8B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:iron_block",
+        count: 1,
+      },
+      x: 8.0,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "E44F9C60C8DBBDED",
+      tasks: [
+        {
+          id: "59AD8AFD89BAA9C0",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5DF1BE6797ADD347",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:copper_block",
+        count: 1,
+      },
+      x: 9.5,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "7F69B3679CDE4DC3",
+      tasks: [
+        {
+          id: "9DD63EDB782FC609",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "36DA801826DBD6AE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:lapis_block",
+        count: 1,
+      },
+      x: 11.0,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "46EC2C97FDB0E74C",
+      tasks: [
+        {
+          id: "5104C1254B06ABBC",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "9B001D95B8813269",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:redstone_block",
+        count: 1,
+      },
+      x: 12.5,
+      y: -1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "FF07D1B7B7DDD845",
+      tasks: [
+        {
+          id: "3790D8D36463A1FC",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5AD1DA438835EB43",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:amethyst_block",
+        count: 1,
+      },
+      x: 2.0,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "A8CB61EC68476AC7",
+      tasks: [
+        {
+          id: "ED4D05E95C46E949",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "55CC4D586CFDDBEB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:quartz_block",
+        count: 1,
+      },
+      x: 3.5,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B6DF68EF0897BE2A",
+      tasks: [
+        {
+          id: "0F4288F85A543389",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "175CB0E0489CFEE2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:diamond_ore",
+        count: 1,
+      },
+      x: 5.0,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "F278DDBE42B25D51",
+      tasks: [
+        {
+          id: "DFC30BA706409E4A",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "0789DBCB54D55302",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:ancient_debris",
+        count: 1,
+      },
+      x: 6.5,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "00E53D39D2F18C58",
+      tasks: [
+        {
+          id: "4F35DE64D93B904D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "33C3F8BE925106C7",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:obsidian",
+        count: 1,
+      },
+      x: 8.0,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "F522E0CFB4C87DAB",
+      tasks: [
+        {
+          id: "5FE2585D6627F06D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "92387494F5AA0ED1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:crying_obsidian",
+        count: 1,
+      },
+      x: 9.5,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "3CA0B1129B6671A6",
+      tasks: [
+        {
+          id: "4EEA11B9E0C83C69",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "308D3F417E4B1F0B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:gilded_blackstone",
+        count: 1,
+      },
+      x: 11.0,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "8419AEC4D73A51B4",
+      tasks: [
+        {
+          id: "2538939AAFCFDA70",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "BECABE0AE7FD54DC",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:beacon",
+        count: 1,
+      },
+      x: 12.5,
+      y: 0.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "31B19959664F3A6E",
+      tasks: [
+        {
+          id: "A85BA5D318EF4F68",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8C7A1DDF032B9559",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:spawner",
+        count: 1,
+      },
+      x: 2.0,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "90AECB0CD129CD8B",
+      tasks: [
+        {
+          id: "08FDD056DB734CC1",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C7ECBD8CF5579A5E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:end_stone",
+        count: 1,
+      },
+      x: 3.5,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6AFF4A059F900188",
+      tasks: [
+        {
+          id: "8FA935DFDD2138C2",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "D00D7DE3D9E0A7A5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:purpur_block",
+        count: 1,
+      },
+      x: 5.0,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "2A0C92AC161E3594",
+      tasks: [
+        {
+          id: "AFD2DF29FC81BF4D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "3AFBAE300AF16B94",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:sculk",
+        count: 1,
+      },
+      x: 6.5,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "BD5D145F192E84D5",
+      tasks: [
+        {
+          id: "C93160D4E81A154C",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "E2D42AC046D92AB1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:calcite",
+        count: 1,
+      },
+      x: 8.0,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "3D4FE14CC29098A4",
+      tasks: [
+        {
+          id: "7CE2FD311C5ACF45",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "778E265DDF6D430E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "elevatorid:elevator_white",
+        count: 1,
+      },
+      x: 9.5,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "859C6F9265B01D36",
+      tasks: [
+        {
+          id: "6E1751520ADB19F4",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "0F19D76984C7C2A0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "uncraftingtable:uncrafting_table",
+        count: 1,
+      },
+      x: 11.0,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "0A6A35E635C1867D",
+      tasks: [
+        {
+          id: "FBB2F37AE5D04CF2",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8527CA9AD8A161EB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "kubejs:leather_block",
+        count: 1,
+      },
+      x: 12.5,
+      y: 1.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "BD4FA81275269B50",
+      tasks: [
+        {
+          id: "6668E1337551F1D6",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "58D80EADC160A264",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "kubejs:torch_block",
+        count: 1,
+      },
+      x: 2.0,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "0C98C29D352300FF",
+      tasks: [
+        {
+          id: "3283589AFD7E983F",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "2972AAEB8C60F4B1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_dirt",
+        count: 1,
+      },
+      x: 3.5,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6D5864602E68B757",
+      tasks: [
+        {
+          id: "915E0948B3DDC47E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "B105FD40E077D514",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_cobblestone",
+        count: 1,
+      },
+      x: 5.0,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "2055621963DCD7E8",
+      tasks: [
+        {
+          id: "F60B78CBC6F3E38E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5FAEDD42EF5F457B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "exdeorum:compressed_netherrack",
+        count: 1,
+      },
+      x: 6.5,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "993CAFD19E70A030",
+      tasks: [
+        {
+          id: "1C912E485D123FA6",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C1B40680E64C4652",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "sophisticatedstorage:controller",
+        count: 1,
+      },
+      x: 8.0,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "2256C74C80F11063",
+      tasks: [
+        {
+          id: "055D00375A00DAEC",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "1BB70D9CB2CA2F87",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "sophisticatedstorage:iron_barrel",
+        count: 1,
+      },
+      x: 9.5,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "FCF2C463DAB89F4E",
+      tasks: [
+        {
+          id: "F3AE521B30DC0F5D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C7AA83603BD016B3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "sophisticatedstorage:diamond_barrel",
+        count: 1,
+      },
+      x: 11.0,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "990D65C900E6B4C0",
+      tasks: [
+        {
+          id: "4DFF3548B15D3921",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8C7435807D299FEE",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:iron_furnace",
+        count: 1,
+      },
+      x: 12.5,
+      y: 3.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "2B816E771FEAC81E",
+      tasks: [
+        {
+          id: "E6A5381A6B1B944C",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "816AE3BACB6F93A5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:diamond_furnace",
+        count: 1,
+      },
+      x: 2.0,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "824F997B37B873C5",
+      tasks: [
+        {
+          id: "0129154B2609C4A0",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "BB287D73C0A7BA0C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "ironfurnaces:netherite_furnace",
+        count: 1,
+      },
+      x: 3.5,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "71EC0789C05031AC",
+      tasks: [
+        {
+          id: "ABF036A64A3A271A",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "655CA77073E11885",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "animal_pen:aviary",
+        count: 1,
+      },
+      x: 5.0,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B24B34189AF36133",
+      tasks: [
+        {
+          id: "502677A40F61CA82",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "50E48558417BE0CF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "animal_pen:aquarium_block",
+        count: 1,
+      },
+      x: 6.5,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B97B563F14F436BA",
+      tasks: [
+        {
+          id: "C85816E177248CFC",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "6602D1BA2DB0E49D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "easy_piglins:barterer",
+        count: 1,
+      },
+      x: 8.0,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B5DF895E208F3E69",
+      tasks: [
+        {
+          id: "9A68A07C31F22A56",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "E3CA84B04ED7867E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "cookingforblockheads:white_kitchen_floor",
+        count: 1,
+      },
+      x: 9.5,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B81274122D9F38D4",
+      tasks: [
+        {
+          id: "FA00B210F1F36E46",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "FA484057610CB734",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:machine_casing",
+        count: 1,
+      },
+      x: 11.0,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "2169120AF6CA0283",
+      tasks: [
+        {
+          id: "69C803B21998D4DB",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "0371E7701B6C5DD1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:controller",
+        count: 1,
+      },
+      x: 12.5,
+      y: 4.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "912A4CC93BF3B0B7",
+      tasks: [
+        {
+          id: "A402A3CD17EB691B",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "273456038C16F61C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:1k_storage_block",
+        count: 1,
+      },
+      x: 2.0,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "A7763F71121BE60E",
+      tasks: [
+        {
+          id: "9BAA78FB19FF273E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "919D288116CD20D3",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:64k_storage_block",
+        count: 1,
+      },
+      x: 3.5,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "BB04276EC3B5DBF4",
+      tasks: [
+        {
+          id: "868DDC5B3A97F331",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "2E07AC4FF44F082C",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "refinedstorage:autocrafter",
+        count: 1,
+      },
+      x: 5.0,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "14A1C8E67C6CDDAA",
+      tasks: [
+        {
+          id: "32BD24BBF62FD17A",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "A567EB9FB0342109",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "powah:uraninite_block",
+        count: 1,
+      },
+      x: 6.5,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "E26DB74767E2ED03",
+      tasks: [
+        {
+          id: "26C3D8B5B801DF7E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "62DCB3C92984E4BF",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "powah:nitro_crystal_block",
+        count: 1,
+      },
+      x: 8.0,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "52219418DDBDFF1C",
+      tasks: [
+        {
+          id: "0037992380CE24D0",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C05F87282CD5FB4A",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "powah:energy_cell_nitro",
+        count: 1,
+      },
+      x: 9.5,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "4AFCD426E172936F",
+      tasks: [
+        {
+          id: "6E9451828A04DA8D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C1570F1B8182DC62",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "powah:thermo_generator_nitro",
+        count: 1,
+      },
+      x: 11.0,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "01317C4E9AE92C52",
+      tasks: [
+        {
+          id: "474984562EDD14B3",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8A01F211362CA9D9",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagriculture:prosperity_ore",
+        count: 1,
+      },
+      x: 12.5,
+      y: 6.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "5044B5433E8B7F6E",
+      tasks: [
+        {
+          id: "7506E886FEA540E2",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "34E9510AAC3AB946",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagriculture:inferium_ore",
+        count: 1,
+      },
+      x: 2.0,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "D6D627B9F5AF7334",
+      tasks: [
+        {
+          id: "2368A178A9ABC232",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "BF975C3F7719B4BB",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagriculture:prosperity_block",
+        count: 1,
+      },
+      x: 3.5,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "0D4EB662F57C9402",
+      tasks: [
+        {
+          id: "BB4E2A5BF7ECC429",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "1DB2E5A1BFE822C1",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagriculture:inferium_block",
+        count: 1,
+      },
+      x: 5.0,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6D17E26941AF016E",
+      tasks: [
+        {
+          id: "7102DBBA98DFDC4A",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "DFA101926EF16885",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagriculture:awakened_supremium_block",
+        count: 1,
+      },
+      x: 6.5,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "658D4691039E1967",
+      tasks: [
+        {
+          id: "9889B376E4E54092",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5560F92807424FE5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagradditions:insanium_block",
+        count: 1,
+      },
+      x: 8.0,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6C70517F989F2ACF",
+      tasks: [
+        {
+          id: "436DE4256DD59370",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "CEF232872A2BBA7D",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalagradditions:nether_star_crux",
+        count: 1,
+      },
+      x: 9.5,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "9D5A166A7D2FB75B",
+      tasks: [
+        {
+          id: "EF277A801E11D40B",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "8F83D2A1F73487B0",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalautomation:infuser",
+        count: 1,
+      },
+      x: 11.0,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "B65EDF43B6C50FB6",
+      tasks: [
+        {
+          id: "E2485BD85AD8EB11",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "776CB8135860CD2B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "mysticalautomation:farmer",
+        count: 1,
+      },
+      x: 12.5,
+      y: 7.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6F44F675CF115097",
+      tasks: [
+        {
+          id: "86FE1024C04E03B3",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "EB99E0E7C7C5B64E",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "utility:resource_generator",
+        count: 1,
+      },
+      x: 2.0,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "F8D2191E0C3DE615",
+      tasks: [
+        {
+          id: "DA8CC7B6EC066D5D",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "7485496FA7E74651",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "utility:block_breaker",
+        count: 1,
+      },
+      x: 3.5,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "25F39ADDA4208543",
+      tasks: [
+        {
+          id: "241C31881EB7A899",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "32C6739DDBB97C70",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "utility:summoning_block",
+        count: 1,
+      },
+      x: 5.0,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "6F290F8B174C206B",
+      tasks: [
+        {
+          id: "D177DE74F4D451A1",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "D3238FA4F54F0B03",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:filter_hostile",
+        count: 1,
+      },
+      x: 6.5,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "CEF73482259FDAA2",
+      tasks: [
+        {
+          id: "64F07788256A69A0",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "A0B2D111CF2E9E05",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "darkutils:redstone_randomizer",
+        count: 1,
+      },
+      x: 8.0,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "92F71A52A1EA9422",
+      tasks: [
+        {
+          id: "596DFE81325E8B2E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "E2C946952CFA6304",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:salvaging_table",
+        count: 1,
+      },
+      x: 9.5,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "E4139FCD385155BC",
+      tasks: [
+        {
+          id: "D815404F5DE2C156",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C102060F4EA250E5",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apotheosis:boss_spawner",
+        count: 1,
+      },
+      x: 11.0,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "F7AD11DE68590032",
+      tasks: [
+        {
+          id: "35046EA3B33FF63E",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C4409B046F77D43B",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apothic_enchanting:library",
+        count: 1,
+      },
+      x: 12.5,
+      y: 9.0,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "DC4C56597BAC4FC3",
+      tasks: [
+        {
+          id: "95353A09BD8E046C",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "C2367B45B5935297",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apothic_enchanting:ender_library",
+        count: 1,
+      },
+      x: 2.0,
+      y: 10.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "4DA512D81C02EDE2",
+      tasks: [
+        {
+          id: "E57D8229F98ADC4C",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "292DFFA4C9A7ACF2",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "apothic_enchanting:treasure_shelf",
+        count: 1,
+      },
+      x: 3.5,
+      y: 10.5,
+      dependencies: [
+        "1887BB9F14E9CCAC",
+      ],
+      id: "57B18C9EEADE8AD5",
+      tasks: [
+        {
+          id: "654E77DF3F8A3D28",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "DFB28ECA70831890",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+  ],
+  quest_links: [],
+  images: [],
+}

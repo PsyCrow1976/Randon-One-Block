@@ -3,6 +3,7 @@
 // Loads after mod pools (3). Called from break handler after pick.
 
 const ATLAS_CONFIG_FILE = 'random_one_block_atlas.json'
+const ATLAS_QUESTS_FILE = 'random_one_block_atlas_quests.json'
 const TEAM_ATLAS_FILE = 'random_one_block_team_atlas.json'
 const ATLAS_WRITE_EVERY_NEW = 25
 const ATLAS_WRITE_EVERY_BREAKS = 100
@@ -21,6 +22,7 @@ const DEFAULT_ATLAS_CONFIG = {
 
 const ATLAS_STATE = {
   config: null,
+  questMap: null,
   allTeamAtlas: null,
   teamCache: {},
   dirtyScopes: {},
@@ -165,15 +167,164 @@ function ensureAtlasConfig() {
   return ATLAS_STATE.config
 }
 
+function loadAtlasQuestMap() {
+  var raw = atlasRead(ATLAS_QUESTS_FILE)
+  var map = {}
+  var qbb = null
+  var k = null
+
+  if (!raw) {
+    ATLAS_STATE.questMap = { quest_by_block: {} }
+    return ATLAS_STATE.questMap
+  }
+
+  try {
+    qbb = atlasReadField(raw, 'quest_by_block') || raw.quest_by_block
+    if (qbb) {
+      var cloned = atlasClone(qbb)
+      for (k in cloned) {
+        if (Object.prototype.hasOwnProperty.call(cloned, k) && cloned[k] != null) {
+          map[String(k)] = String(cloned[k]).trim().toUpperCase()
+        }
+      }
+    }
+  } catch (ignored) {}
+
+  ATLAS_STATE.questMap = {
+    chapter_id: atlasReadField(raw, 'chapter_id') != null ? String(atlasReadField(raw, 'chapter_id')) : '',
+    intro_quest_id:
+      atlasReadField(raw, 'intro_quest_id') != null ? String(atlasReadField(raw, 'intro_quest_id')) : '',
+    quest_by_block: map
+  }
+  return ATLAS_STATE.questMap
+}
+
+function ensureAtlasQuestMap() {
+  if (!ATLAS_STATE.questMap) loadAtlasQuestMap()
+  return ATLAS_STATE.questMap
+}
+
 function reloadAtlasConfig() {
   ATLAS_STATE.config = loadAtlasConfig()
+  loadAtlasQuestMap()
   console.info(
     '[RandomOneBlock] Atlas config loaded: set=' +
       ATLAS_STATE.config.endgame_set_id +
       ', entries=' +
-      (ATLAS_STATE.config.entries || []).length
+      (ATLAS_STATE.config.entries || []).length +
+      ', ftb_pages=' +
+      Object.keys((ATLAS_STATE.questMap && ATLAS_STATE.questMap.quest_by_block) || {}).length
   )
   return ATLAS_STATE.config
+}
+
+function getPlayerCommandName(player) {
+  if (!player) return null
+  try {
+    if (player.username != null) return String(player.username)
+  } catch (ignored) {}
+  try {
+    if (player.name && player.name.string) return String(player.name.string)
+  } catch (ignored2) {}
+  try {
+    if (player.getGameProfile) return String(player.getGameProfile().getName())
+  } catch (ignored3) {}
+  return null
+}
+
+function completeFtbQuestForPlayer(player, questId, server) {
+  var name = getPlayerCommandName(player)
+  var qid = String(questId || '')
+    .trim()
+    .toUpperCase()
+  var cmds = []
+  var i = 0
+
+  if (!player || !qid) return
+  if (!server || !server.runCommandSilent) {
+    try {
+      if (player.server && player.server.runCommandSilent) server = player.server
+    } catch (ignored) {}
+  }
+  if (!server || !server.runCommandSilent || !name) return
+
+  cmds = [
+    'ftbquests change_progress ' + name + ' complete ' + qid,
+    'execute as ' + name + ' run ftbquests change_progress @s complete ' + qid
+  ]
+  for (i = 0; i < cmds.length; i++) {
+    try {
+      server.runCommandSilent(cmds[i])
+    } catch (ignored2) {}
+  }
+}
+
+function completeFtbQuestForScope(server, scopeId, questId) {
+  var players = null
+  var i = 0
+  var player = null
+  var pools = poolsApi()
+  var playerScope = null
+
+  if (!server || !questId) return
+  try {
+    players = server.players
+  } catch (ignored) {}
+  if (!players || !players.size) return
+
+  for (i = 0; i < players.size(); i++) {
+    player = players.get(i)
+    playerScope = null
+    try {
+      if (pools && pools.resolveUnlockScopeId) {
+        playerScope = pools.resolveUnlockScopeId(player, server)
+      }
+    } catch (ignored2) {}
+    if (playerScope === scopeId) {
+      completeFtbQuestForPlayer(player, questId, server)
+    }
+  }
+}
+
+function completeAtlasPageQuest(scopeId, blockId, player, server) {
+  var map = ensureAtlasQuestMap()
+  var qid = null
+  var id = String(blockId || '').trim()
+
+  if (!map || !map.quest_by_block) return
+  qid = map.quest_by_block[id]
+  if (!qid) return
+
+  if (player) {
+    completeFtbQuestForPlayer(player, qid, server)
+  } else {
+    completeFtbQuestForScope(server, scopeId, qid)
+  }
+}
+
+/** Backfill: complete FTB page quests for blocks already in team atlas */
+function syncAtlasQuestsForScope(scopeId, server) {
+  var record = loadTeamAtlas(scopeId)
+  var map = ensureAtlasQuestMap()
+  var id = null
+  var n = 0
+
+  if (!record || !record.blocks || !map || !map.quest_by_block) return 0
+
+  for (id in record.blocks) {
+    if (!Object.prototype.hasOwnProperty.call(record.blocks, id)) continue
+    if (!record.blocks[id]) continue
+    if (!map.quest_by_block[id]) continue
+    completeFtbQuestForScope(server, scopeId, map.quest_by_block[id])
+    n++
+  }
+  return n
+}
+
+function syncAtlasQuestsForPlayer(player, server) {
+  var scopeId = resolveScopeForPlayer(player, server)
+  if (!scopeId) return 0
+  return syncAtlasQuestsForScope(scopeId, server)
 }
 
 function loadAllTeamAtlas() {
@@ -499,6 +650,15 @@ function recordAtlasBlock(scopeId, blockId, player, server) {
       }
     }
 
+    // FTB "The Atlas" chapter — complete matching page quest for the team
+    if (isEndgameEntryId(id)) {
+      try {
+        completeAtlasPageQuest(scopeId, id, player, server)
+      } catch (ftbErr) {
+        console.warn('[RandomOneBlock] Atlas FTB page complete failed: ' + String(ftbErr))
+      }
+    }
+
     if (progress && progress.complete) {
       flushAtlasIfNeeded(scopeId, true, record.unique_count)
       grantAtlasSealIfNeeded(scopeId, player, server)
@@ -654,7 +814,9 @@ var RandonOneBlockAtlas = {
   getActiveEndgameEntries: getActiveEndgameEntries,
   grantAtlasSealIfNeeded: grantAtlasSealIfNeeded,
   flushAllDirtyAtlas: flushAllDirtyAtlas,
-  invalidateAtlasCache: invalidateAtlasCache
+  invalidateAtlasCache: invalidateAtlasCache,
+  syncAtlasQuestsForPlayer: syncAtlasQuestsForPlayer,
+  syncAtlasQuestsForScope: syncAtlasQuestsForScope
 }
 
 ServerEvents.loaded(function () {
@@ -670,4 +832,13 @@ PlayerEvents.loggedOut(function (event) {
   try {
     flushAllDirtyAtlas()
   } catch (ignored) {}
+})
+
+// Backfill FTB Atlas page quests for rolls already in team data
+PlayerEvents.loggedIn(function (event) {
+  event.server.scheduleInTicks(60, function () {
+    try {
+      syncAtlasQuestsForPlayer(event.player, event.server)
+    } catch (ignored) {}
+  })
 })

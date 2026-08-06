@@ -6,6 +6,7 @@ var RANDOM_ONE_BLOCK_CONFIG_FILES = [
   'random_one_block_mod_pools.json',
   'random_one_block_milestones.json',
   'random_one_block_atlas.json',
+  'random_one_block_atlas_quests.json',
   'random_one_block_team_unlocks.json',
   'random_one_block_team_counters.json',
   'random_one_block_team_atlas.json',

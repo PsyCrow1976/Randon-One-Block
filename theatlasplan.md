@@ -616,16 +616,18 @@ Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock cho
 - [x] Commands: `/randomblock atlas`, `/randomblock atlas missing [mod] [limit]`.
 - [x] Seal item `kubejs:atlas_seal` granted once when active endgame set complete.
 - [x] Optional: chat on new endgame-set discovery (per new unique atlas page).
-- [ ] **Playtest:** unique rolls accumulate; non-center ignored; unlock expands active set; seal once; missing list sensible.
+- [x] FTB chapter **The Atlas** — one checkmark quest per endgame-set block (10 XP); auto-complete on center roll.
+- [ ] **Playtest:** unique rolls accumulate; non-center ignored; unlock expands active set; seal once; missing list sensible; FTB pages check off.
 
 #### Phase 2 — what you test
 
 | Check | How |
 |-------|-----|
-| Load | `/reload` — log `Atlas config loaded: set=randon_atlas_v1, entries=…` |
+| Load | `/reload` — log `Atlas config loaded: set=randon_atlas_v1, entries=…, ftb_pages=66` |
 | Track | Mine center block — unique count rises on new ids |
 | Status | `/randomblock atlas` → `owned/active (%%) · unique center rolls` |
 | Missing | `/randomblock atlas missing` / `… missing refinedstorage` |
+| Quest book | Tab **The Atlas** — pages check off when that block rolls (10 XP each) |
 | Page toast | Rolling an endgame-set block first time → `[Atlas] New page: …` |
 | Seal | When active set complete → receive **Atlas Seal** once |
 | Scope | Same island team shares atlas |

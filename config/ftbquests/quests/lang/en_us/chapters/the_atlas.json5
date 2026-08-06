@@ -1,0 +1,674 @@
+{
+  "quest.1887BB9F14E9CCAC.title": "The Atlas",
+  "quest.1887BB9F14E9CCAC.quest_subtitle": "Center-block discovery list",
+  "quest.1887BB9F14E9CCAC.quest_desc": [
+    "This chapter is the &6Randon Atlas&r checklist — the curated &eendgame set&r of blocks that only count when they roll from your island &acenter random block&r.",
+    "",
+    "Each quest below is one Atlas page. It completes when that block is rolled for your team (or you can check it for &e10 XP&r if you already have it).",
+    "",
+    "Progress also shows in chat: &f/randomblock atlas&r and &f/randomblock atlas missing&r.",
+    "",
+    "Unlocking mod pools can &aexpand&r which pages are required for full completion. Check the box when you are ready to hunt pages."
+  ],
+  "task.FB7E20A4D86609A3.title": "Open the Atlas checklist",
+  "quest.54FF31DEE2709B24.title": "Diamond Block",
+  "quest.54FF31DEE2709B24.quest_subtitle": "minecraft:diamond_block",
+  "quest.54FF31DEE2709B24.quest_desc": [
+    "Roll &fminecraft:diamond_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.666BE3FF01A9E6FE.title": "Obtain minecraft:diamond_block via center block",
+  "quest.FC21C580D011AF8A.title": "Emerald Block",
+  "quest.FC21C580D011AF8A.quest_subtitle": "minecraft:emerald_block",
+  "quest.FC21C580D011AF8A.quest_desc": [
+    "Roll &fminecraft:emerald_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.BC39C68D6916D7CF.title": "Obtain minecraft:emerald_block via center block",
+  "quest.A5629A752D750951.title": "Netherite Block",
+  "quest.A5629A752D750951.quest_subtitle": "minecraft:netherite_block",
+  "quest.A5629A752D750951.quest_desc": [
+    "Roll &fminecraft:netherite_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.5BD3504016CB88F3.title": "Obtain minecraft:netherite_block via center block",
+  "quest.4F0713A85CC191E6.title": "Gold Block",
+  "quest.4F0713A85CC191E6.quest_subtitle": "minecraft:gold_block",
+  "quest.4F0713A85CC191E6.quest_desc": [
+    "Roll &fminecraft:gold_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.FC1D4D1E19008887.title": "Obtain minecraft:gold_block via center block",
+  "quest.E44F9C60C8DBBDED.title": "Iron Block",
+  "quest.E44F9C60C8DBBDED.quest_subtitle": "minecraft:iron_block",
+  "quest.E44F9C60C8DBBDED.quest_desc": [
+    "Roll &fminecraft:iron_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.59AD8AFD89BAA9C0.title": "Obtain minecraft:iron_block via center block",
+  "quest.7F69B3679CDE4DC3.title": "Copper Block",
+  "quest.7F69B3679CDE4DC3.quest_subtitle": "minecraft:copper_block",
+  "quest.7F69B3679CDE4DC3.quest_desc": [
+    "Roll &fminecraft:copper_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.9DD63EDB782FC609.title": "Obtain minecraft:copper_block via center block",
+  "quest.46EC2C97FDB0E74C.title": "Lapis Block",
+  "quest.46EC2C97FDB0E74C.quest_subtitle": "minecraft:lapis_block",
+  "quest.46EC2C97FDB0E74C.quest_desc": [
+    "Roll &fminecraft:lapis_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.5104C1254B06ABBC.title": "Obtain minecraft:lapis_block via center block",
+  "quest.FF07D1B7B7DDD845.title": "Redstone Block",
+  "quest.FF07D1B7B7DDD845.quest_subtitle": "minecraft:redstone_block",
+  "quest.FF07D1B7B7DDD845.quest_desc": [
+    "Roll &fminecraft:redstone_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.3790D8D36463A1FC.title": "Obtain minecraft:redstone_block via center block",
+  "quest.A8CB61EC68476AC7.title": "Amethyst Block",
+  "quest.A8CB61EC68476AC7.quest_subtitle": "minecraft:amethyst_block",
+  "quest.A8CB61EC68476AC7.quest_desc": [
+    "Roll &fminecraft:amethyst_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.ED4D05E95C46E949.title": "Obtain minecraft:amethyst_block via center block",
+  "quest.B6DF68EF0897BE2A.title": "Quartz Block",
+  "quest.B6DF68EF0897BE2A.quest_subtitle": "minecraft:quartz_block",
+  "quest.B6DF68EF0897BE2A.quest_desc": [
+    "Roll &fminecraft:quartz_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_value&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.0F4288F85A543389.title": "Obtain minecraft:quartz_block via center block",
+  "quest.F278DDBE42B25D51.title": "Diamond Ore",
+  "quest.F278DDBE42B25D51.quest_subtitle": "minecraft:diamond_ore",
+  "quest.F278DDBE42B25D51.quest_desc": [
+    "Roll &fminecraft:diamond_ore&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_ore&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.DFC30BA706409E4A.title": "Obtain minecraft:diamond_ore via center block",
+  "quest.00E53D39D2F18C58.title": "Ancient Debris",
+  "quest.00E53D39D2F18C58.quest_subtitle": "minecraft:ancient_debris",
+  "quest.00E53D39D2F18C58.quest_desc": [
+    "Roll &fminecraft:ancient_debris&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_nether&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.4F35DE64D93B904D.title": "Obtain minecraft:ancient_debris via center block",
+  "quest.F522E0CFB4C87DAB.title": "Obsidian",
+  "quest.F522E0CFB4C87DAB.quest_subtitle": "minecraft:obsidian",
+  "quest.F522E0CFB4C87DAB.quest_desc": [
+    "Roll &fminecraft:obsidian&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_nether&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.5FE2585D6627F06D.title": "Obtain minecraft:obsidian via center block",
+  "quest.3CA0B1129B6671A6.title": "Crying Obsidian",
+  "quest.3CA0B1129B6671A6.quest_subtitle": "minecraft:crying_obsidian",
+  "quest.3CA0B1129B6671A6.quest_desc": [
+    "Roll &fminecraft:crying_obsidian&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_nether&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.4EEA11B9E0C83C69.title": "Obtain minecraft:crying_obsidian via center block",
+  "quest.8419AEC4D73A51B4.title": "Gilded Blackstone",
+  "quest.8419AEC4D73A51B4.quest_subtitle": "minecraft:gilded_blackstone",
+  "quest.8419AEC4D73A51B4.quest_desc": [
+    "Roll &fminecraft:gilded_blackstone&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_nether&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.2538939AAFCFDA70.title": "Obtain minecraft:gilded_blackstone via center block",
+  "quest.31B19959664F3A6E.title": "Beacon",
+  "quest.31B19959664F3A6E.quest_subtitle": "minecraft:beacon",
+  "quest.31B19959664F3A6E.quest_desc": [
+    "Roll &fminecraft:beacon&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_endgame&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.A85BA5D318EF4F68.title": "Obtain minecraft:beacon via center block",
+  "quest.90AECB0CD129CD8B.title": "Spawner",
+  "quest.90AECB0CD129CD8B.quest_subtitle": "minecraft:spawner",
+  "quest.90AECB0CD129CD8B.quest_desc": [
+    "Roll &fminecraft:spawner&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_endgame&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.08FDD056DB734CC1.title": "Obtain minecraft:spawner via center block",
+  "quest.6AFF4A059F900188.title": "End Stone",
+  "quest.6AFF4A059F900188.quest_subtitle": "minecraft:end_stone",
+  "quest.6AFF4A059F900188.quest_desc": [
+    "Roll &fminecraft:end_stone&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_end&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.8FA935DFDD2138C2.title": "Obtain minecraft:end_stone via center block",
+  "quest.2A0C92AC161E3594.title": "Purpur Block",
+  "quest.2A0C92AC161E3594.quest_subtitle": "minecraft:purpur_block",
+  "quest.2A0C92AC161E3594.quest_desc": [
+    "Roll &fminecraft:purpur_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_end&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.AFD2DF29FC81BF4D.title": "Obtain minecraft:purpur_block via center block",
+  "quest.BD5D145F192E84D5.title": "Sculk",
+  "quest.BD5D145F192E84D5.quest_subtitle": "minecraft:sculk",
+  "quest.BD5D145F192E84D5.quest_desc": [
+    "Roll &fminecraft:sculk&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_deep&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.C93160D4E81A154C.title": "Obtain minecraft:sculk via center block",
+  "quest.3D4FE14CC29098A4.title": "Calcite",
+  "quest.3D4FE14CC29098A4.quest_subtitle": "minecraft:calcite",
+  "quest.3D4FE14CC29098A4.quest_desc": [
+    "Roll &fminecraft:calcite&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evanilla_geo&r · always active",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.7CE2FD311C5ACF45.title": "Obtain minecraft:calcite via center block",
+  "quest.859C6F9265B01D36.title": "Elevator White",
+  "quest.859C6F9265B01D36.quest_subtitle": "elevatorid:elevator_white",
+  "quest.859C6F9265B01D36.quest_desc": [
+    "Roll &felevatorid:elevator_white&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estarter&r · needs pool &felevatorid&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.6E1751520ADB19F4.title": "Obtain elevatorid:elevator_white via center block",
+  "quest.0A6A35E635C1867D.title": "Uncrafting Table",
+  "quest.0A6A35E635C1867D.quest_subtitle": "uncraftingtable:uncrafting_table",
+  "quest.0A6A35E635C1867D.quest_desc": [
+    "Roll &funcraftingtable:uncrafting_table&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estarter&r · needs pool &funcraftingtable&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.FBB2F37AE5D04CF2.title": "Obtain uncraftingtable:uncrafting_table via center block",
+  "quest.BD4FA81275269B50.title": "Leather Block",
+  "quest.BD4FA81275269B50.quest_subtitle": "kubejs:leather_block",
+  "quest.BD4FA81275269B50.quest_desc": [
+    "Roll &fkubejs:leather_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estarter&r · needs pool &fkubejs&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.6668E1337551F1D6.title": "Obtain kubejs:leather_block via center block",
+  "quest.0C98C29D352300FF.title": "Torch Block",
+  "quest.0C98C29D352300FF.quest_subtitle": "kubejs:torch_block",
+  "quest.0C98C29D352300FF.quest_desc": [
+    "Roll &fkubejs:torch_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estarter&r · needs pool &fkubejs&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.3283589AFD7E983F.title": "Obtain kubejs:torch_block via center block",
+  "quest.6D5864602E68B757.title": "Compressed Dirt",
+  "quest.6D5864602E68B757.quest_subtitle": "exdeorum:compressed_dirt",
+  "quest.6D5864602E68B757.quest_desc": [
+    "Roll &fexdeorum:compressed_dirt&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &eexdeorum&r · needs pool &fexdeorum&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.915E0948B3DDC47E.title": "Obtain exdeorum:compressed_dirt via center block",
+  "quest.2055621963DCD7E8.title": "Compressed Cobblestone",
+  "quest.2055621963DCD7E8.quest_subtitle": "exdeorum:compressed_cobblestone",
+  "quest.2055621963DCD7E8.quest_desc": [
+    "Roll &fexdeorum:compressed_cobblestone&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &eexdeorum&r · needs pool &fexdeorum&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.F60B78CBC6F3E38E.title": "Obtain exdeorum:compressed_cobblestone via center block",
+  "quest.993CAFD19E70A030.title": "Compressed Netherrack",
+  "quest.993CAFD19E70A030.quest_subtitle": "exdeorum:compressed_netherrack",
+  "quest.993CAFD19E70A030.quest_desc": [
+    "Roll &fexdeorum:compressed_netherrack&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &eexdeorum&r · needs pool &fexdeorum&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.1C912E485D123FA6.title": "Obtain exdeorum:compressed_netherrack via center block",
+  "quest.2256C74C80F11063.title": "Controller",
+  "quest.2256C74C80F11063.quest_subtitle": "sophisticatedstorage:controller",
+  "quest.2256C74C80F11063.quest_desc": [
+    "Roll &fsophisticatedstorage:controller&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estorage&r · needs pool &fsophisticatedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.055D00375A00DAEC.title": "Obtain sophisticatedstorage:controller via center block",
+  "quest.FCF2C463DAB89F4E.title": "Iron Barrel",
+  "quest.FCF2C463DAB89F4E.quest_subtitle": "sophisticatedstorage:iron_barrel",
+  "quest.FCF2C463DAB89F4E.quest_desc": [
+    "Roll &fsophisticatedstorage:iron_barrel&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estorage&r · needs pool &fsophisticatedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.F3AE521B30DC0F5D.title": "Obtain sophisticatedstorage:iron_barrel via center block",
+  "quest.990D65C900E6B4C0.title": "Diamond Barrel",
+  "quest.990D65C900E6B4C0.quest_subtitle": "sophisticatedstorage:diamond_barrel",
+  "quest.990D65C900E6B4C0.quest_desc": [
+    "Roll &fsophisticatedstorage:diamond_barrel&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &estorage&r · needs pool &fsophisticatedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.4DFF3548B15D3921.title": "Obtain sophisticatedstorage:diamond_barrel via center block",
+  "quest.2B816E771FEAC81E.title": "Iron Furnace",
+  "quest.2B816E771FEAC81E.quest_subtitle": "ironfurnaces:iron_furnace",
+  "quest.2B816E771FEAC81E.quest_desc": [
+    "Roll &fironfurnaces:iron_furnace&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &esmelting&r · needs pool &fironfurnaces&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.E6A5381A6B1B944C.title": "Obtain ironfurnaces:iron_furnace via center block",
+  "quest.824F997B37B873C5.title": "Diamond Furnace",
+  "quest.824F997B37B873C5.quest_subtitle": "ironfurnaces:diamond_furnace",
+  "quest.824F997B37B873C5.quest_desc": [
+    "Roll &fironfurnaces:diamond_furnace&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &esmelting&r · needs pool &fironfurnaces&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.0129154B2609C4A0.title": "Obtain ironfurnaces:diamond_furnace via center block",
+  "quest.71EC0789C05031AC.title": "Netherite Furnace",
+  "quest.71EC0789C05031AC.quest_subtitle": "ironfurnaces:netherite_furnace",
+  "quest.71EC0789C05031AC.quest_desc": [
+    "Roll &fironfurnaces:netherite_furnace&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &esmelting&r · needs pool &fironfurnaces&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.ABF036A64A3A271A.title": "Obtain ironfurnaces:netherite_furnace via center block",
+  "quest.B24B34189AF36133.title": "Aviary",
+  "quest.B24B34189AF36133.quest_subtitle": "animal_pen:aviary",
+  "quest.B24B34189AF36133.quest_desc": [
+    "Roll &fanimal_pen:aviary&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &eanimals&r · needs pool &fanimal_pen&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.502677A40F61CA82.title": "Obtain animal_pen:aviary via center block",
+  "quest.B97B563F14F436BA.title": "Aquarium Block",
+  "quest.B97B563F14F436BA.quest_subtitle": "animal_pen:aquarium_block",
+  "quest.B97B563F14F436BA.quest_desc": [
+    "Roll &fanimal_pen:aquarium_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &eanimals&r · needs pool &fanimal_pen&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.C85816E177248CFC.title": "Obtain animal_pen:aquarium_block via center block",
+  "quest.B5DF895E208F3E69.title": "Barterer",
+  "quest.B5DF895E208F3E69.quest_subtitle": "easy_piglins:barterer",
+  "quest.B5DF895E208F3E69.quest_desc": [
+    "Roll &feasy_piglins:barterer&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &evillagers&r · needs pool &feasy_piglins&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.9A68A07C31F22A56.title": "Obtain easy_piglins:barterer via center block",
+  "quest.B81274122D9F38D4.title": "White Kitchen Floor",
+  "quest.B81274122D9F38D4.quest_subtitle": "cookingforblockheads:white_kitchen_floor",
+  "quest.B81274122D9F38D4.quest_desc": [
+    "Roll &fcookingforblockheads:white_kitchen_floor&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ekitchen&r · needs pool &fcookingforblockheads&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.FA00B210F1F36E46.title": "Obtain cookingforblockheads:white_kitchen_floor via center block",
+  "quest.2169120AF6CA0283.title": "Machine Casing",
+  "quest.2169120AF6CA0283.quest_subtitle": "refinedstorage:machine_casing",
+  "quest.2169120AF6CA0283.quest_desc": [
+    "Roll &frefinedstorage:machine_casing&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ers&r · needs pool &frefinedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.69C803B21998D4DB.title": "Obtain refinedstorage:machine_casing via center block",
+  "quest.912A4CC93BF3B0B7.title": "Controller",
+  "quest.912A4CC93BF3B0B7.quest_subtitle": "refinedstorage:controller",
+  "quest.912A4CC93BF3B0B7.quest_desc": [
+    "Roll &frefinedstorage:controller&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ers&r · needs pool &frefinedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.A402A3CD17EB691B.title": "Obtain refinedstorage:controller via center block",
+  "quest.A7763F71121BE60E.title": "1K Storage Block",
+  "quest.A7763F71121BE60E.quest_subtitle": "refinedstorage:1k_storage_block",
+  "quest.A7763F71121BE60E.quest_desc": [
+    "Roll &frefinedstorage:1k_storage_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ers&r · needs pool &frefinedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.9BAA78FB19FF273E.title": "Obtain refinedstorage:1k_storage_block via center block",
+  "quest.BB04276EC3B5DBF4.title": "64K Storage Block",
+  "quest.BB04276EC3B5DBF4.quest_subtitle": "refinedstorage:64k_storage_block",
+  "quest.BB04276EC3B5DBF4.quest_desc": [
+    "Roll &frefinedstorage:64k_storage_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ers&r · needs pool &frefinedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.868DDC5B3A97F331.title": "Obtain refinedstorage:64k_storage_block via center block",
+  "quest.14A1C8E67C6CDDAA.title": "Autocrafter",
+  "quest.14A1C8E67C6CDDAA.quest_subtitle": "refinedstorage:autocrafter",
+  "quest.14A1C8E67C6CDDAA.quest_desc": [
+    "Roll &frefinedstorage:autocrafter&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ers&r · needs pool &frefinedstorage&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.32BD24BBF62FD17A.title": "Obtain refinedstorage:autocrafter via center block",
+  "quest.E26DB74767E2ED03.title": "Uraninite Block",
+  "quest.E26DB74767E2ED03.quest_subtitle": "powah:uraninite_block",
+  "quest.E26DB74767E2ED03.quest_desc": [
+    "Roll &fpowah:uraninite_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &epowah&r · needs pool &fpowah&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.26C3D8B5B801DF7E.title": "Obtain powah:uraninite_block via center block",
+  "quest.52219418DDBDFF1C.title": "Nitro Crystal Block",
+  "quest.52219418DDBDFF1C.quest_subtitle": "powah:nitro_crystal_block",
+  "quest.52219418DDBDFF1C.quest_desc": [
+    "Roll &fpowah:nitro_crystal_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &epowah&r · needs pool &fpowah&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.0037992380CE24D0.title": "Obtain powah:nitro_crystal_block via center block",
+  "quest.4AFCD426E172936F.title": "Energy Cell Nitro",
+  "quest.4AFCD426E172936F.quest_subtitle": "powah:energy_cell_nitro",
+  "quest.4AFCD426E172936F.quest_desc": [
+    "Roll &fpowah:energy_cell_nitro&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &epowah&r · needs pool &fpowah&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.6E9451828A04DA8D.title": "Obtain powah:energy_cell_nitro via center block",
+  "quest.01317C4E9AE92C52.title": "Thermo Generator Nitro",
+  "quest.01317C4E9AE92C52.quest_subtitle": "powah:thermo_generator_nitro",
+  "quest.01317C4E9AE92C52.quest_desc": [
+    "Roll &fpowah:thermo_generator_nitro&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &epowah&r · needs pool &fpowah&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.474984562EDD14B3.title": "Obtain powah:thermo_generator_nitro via center block",
+  "quest.5044B5433E8B7F6E.title": "Prosperity Ore",
+  "quest.5044B5433E8B7F6E.quest_subtitle": "mysticalagriculture:prosperity_ore",
+  "quest.5044B5433E8B7F6E.quest_desc": [
+    "Roll &fmysticalagriculture:prosperity_ore&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagriculture&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.7506E886FEA540E2.title": "Obtain mysticalagriculture:prosperity_ore via center block",
+  "quest.D6D627B9F5AF7334.title": "Inferium Ore",
+  "quest.D6D627B9F5AF7334.quest_subtitle": "mysticalagriculture:inferium_ore",
+  "quest.D6D627B9F5AF7334.quest_desc": [
+    "Roll &fmysticalagriculture:inferium_ore&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagriculture&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.2368A178A9ABC232.title": "Obtain mysticalagriculture:inferium_ore via center block",
+  "quest.0D4EB662F57C9402.title": "Prosperity Block",
+  "quest.0D4EB662F57C9402.quest_subtitle": "mysticalagriculture:prosperity_block",
+  "quest.0D4EB662F57C9402.quest_desc": [
+    "Roll &fmysticalagriculture:prosperity_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagriculture&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.BB4E2A5BF7ECC429.title": "Obtain mysticalagriculture:prosperity_block via center block",
+  "quest.6D17E26941AF016E.title": "Inferium Block",
+  "quest.6D17E26941AF016E.quest_subtitle": "mysticalagriculture:inferium_block",
+  "quest.6D17E26941AF016E.quest_desc": [
+    "Roll &fmysticalagriculture:inferium_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagriculture&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.7102DBBA98DFDC4A.title": "Obtain mysticalagriculture:inferium_block via center block",
+  "quest.658D4691039E1967.title": "Awakened Supremium Block",
+  "quest.658D4691039E1967.quest_subtitle": "mysticalagriculture:awakened_supremium_block",
+  "quest.658D4691039E1967.quest_desc": [
+    "Roll &fmysticalagriculture:awakened_supremium_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagriculture&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.9889B376E4E54092.title": "Obtain mysticalagriculture:awakened_supremium_block via center block",
+  "quest.6C70517F989F2ACF.title": "Insanium Block",
+  "quest.6C70517F989F2ACF.quest_subtitle": "mysticalagradditions:insanium_block",
+  "quest.6C70517F989F2ACF.quest_desc": [
+    "Roll &fmysticalagradditions:insanium_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagradditions&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.436DE4256DD59370.title": "Obtain mysticalagradditions:insanium_block via center block",
+  "quest.9D5A166A7D2FB75B.title": "Nether Star Crux",
+  "quest.9D5A166A7D2FB75B.quest_subtitle": "mysticalagradditions:nether_star_crux",
+  "quest.9D5A166A7D2FB75B.quest_desc": [
+    "Roll &fmysticalagradditions:nether_star_crux&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalagradditions&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.EF277A801E11D40B.title": "Obtain mysticalagradditions:nether_star_crux via center block",
+  "quest.B65EDF43B6C50FB6.title": "Infuser",
+  "quest.B65EDF43B6C50FB6.quest_subtitle": "mysticalautomation:infuser",
+  "quest.B65EDF43B6C50FB6.quest_desc": [
+    "Roll &fmysticalautomation:infuser&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalautomation&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.E2485BD85AD8EB11.title": "Obtain mysticalautomation:infuser via center block",
+  "quest.6F44F675CF115097.title": "Farmer",
+  "quest.6F44F675CF115097.quest_subtitle": "mysticalautomation:farmer",
+  "quest.6F44F675CF115097.quest_desc": [
+    "Roll &fmysticalautomation:farmer&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &ema&r · needs pool &fmysticalautomation&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.86FE1024C04E03B3.title": "Obtain mysticalautomation:farmer via center block",
+  "quest.F8D2191E0C3DE615.title": "Resource Generator",
+  "quest.F8D2191E0C3DE615.quest_subtitle": "utility:resource_generator",
+  "quest.F8D2191E0C3DE615.quest_desc": [
+    "Roll &futility:resource_generator&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &futility&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.DA8CC7B6EC066D5D.title": "Obtain utility:resource_generator via center block",
+  "quest.25F39ADDA4208543.title": "Block Breaker",
+  "quest.25F39ADDA4208543.quest_subtitle": "utility:block_breaker",
+  "quest.25F39ADDA4208543.quest_desc": [
+    "Roll &futility:block_breaker&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &futility&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.241C31881EB7A899.title": "Obtain utility:block_breaker via center block",
+  "quest.6F290F8B174C206B.title": "Summoning Block",
+  "quest.6F290F8B174C206B.quest_subtitle": "utility:summoning_block",
+  "quest.6F290F8B174C206B.quest_desc": [
+    "Roll &futility:summoning_block&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &futility&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.D177DE74F4D451A1.title": "Obtain utility:summoning_block via center block",
+  "quest.CEF73482259FDAA2.title": "Filter Hostile",
+  "quest.CEF73482259FDAA2.quest_subtitle": "darkutils:filter_hostile",
+  "quest.CEF73482259FDAA2.quest_desc": [
+    "Roll &fdarkutils:filter_hostile&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fdarkutils&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.64F07788256A69A0.title": "Obtain darkutils:filter_hostile via center block",
+  "quest.92F71A52A1EA9422.title": "Redstone Randomizer",
+  "quest.92F71A52A1EA9422.quest_subtitle": "darkutils:redstone_randomizer",
+  "quest.92F71A52A1EA9422.quest_desc": [
+    "Roll &fdarkutils:redstone_randomizer&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fdarkutils&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.596DFE81325E8B2E.title": "Obtain darkutils:redstone_randomizer via center block",
+  "quest.E4139FCD385155BC.title": "Salvaging Table",
+  "quest.E4139FCD385155BC.quest_subtitle": "apotheosis:salvaging_table",
+  "quest.E4139FCD385155BC.quest_desc": [
+    "Roll &fapotheosis:salvaging_table&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fapotheosis&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.D815404F5DE2C156.title": "Obtain apotheosis:salvaging_table via center block",
+  "quest.F7AD11DE68590032.title": "Boss Spawner",
+  "quest.F7AD11DE68590032.quest_subtitle": "apotheosis:boss_spawner",
+  "quest.F7AD11DE68590032.quest_desc": [
+    "Roll &fapotheosis:boss_spawner&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fapotheosis&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.35046EA3B33FF63E.title": "Obtain apotheosis:boss_spawner via center block",
+  "quest.DC4C56597BAC4FC3.title": "Library",
+  "quest.DC4C56597BAC4FC3.quest_subtitle": "apothic_enchanting:library",
+  "quest.DC4C56597BAC4FC3.quest_desc": [
+    "Roll &fapothic_enchanting:library&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fapothic_enchanting&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.95353A09BD8E046C.title": "Obtain apothic_enchanting:library via center block",
+  "quest.4DA512D81C02EDE2.title": "Ender Library",
+  "quest.4DA512D81C02EDE2.quest_subtitle": "apothic_enchanting:ender_library",
+  "quest.4DA512D81C02EDE2.quest_desc": [
+    "Roll &fapothic_enchanting:ender_library&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fapothic_enchanting&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.E57D8229F98ADC4C.title": "Obtain apothic_enchanting:ender_library via center block",
+  "quest.57B18C9EEADE8AD5.title": "Treasure Shelf",
+  "quest.57B18C9EEADE8AD5.quest_subtitle": "apothic_enchanting:treasure_shelf",
+  "quest.57B18C9EEADE8AD5.quest_desc": [
+    "Roll &fapothic_enchanting:treasure_shelf&r from the &6center random block&r to mark this Atlas page.",
+    "",
+    "Group: &emilestone&r · needs pool &fapothic_enchanting&r",
+    "",
+    "Reward: &e10 XP&r. Completes automatically when the team records this roll."
+  ],
+  "task.654E77DF3F8A3D28.title": "Obtain apothic_enchanting:treasure_shelf via center block"
+}
