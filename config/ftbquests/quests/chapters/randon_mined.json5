@@ -19,7 +19,7 @@
       y: 0.0,
       shape: "gear",
       dependencies: [
-        "54426B5BBE263DB4",
+        "1E7624ECE0EA67D4",
       ],
       size: 1.5,
       id: "298C76D8B303A1D7",
@@ -271,6 +271,8 @@
       ],
     },
   ],
-  quest_links: [],
-  images: [],
+  quest_links: [
+  ],
+  images: [
+  ],
 }

@@ -5,7 +5,7 @@
     "",
     "Craft or grab a &eStone Paxel&r (pickaxe + axe + shovel in one tool). It is your Swiss Army knife for the early island: mine the center block, chop wood rolls, shovel dirt platforms, and look slightly more prepared than you feel.",
     "",
-    "Open the quest book often. Chapters unlock gear, storage, farms, and eventually the mods that make the random pool less vanilla and more \"why is there a machine on my dirt pyramid?\""
+    "Open the quest book often. Chapters unlock gear, storage, farms, and eventually the mods that make the random pool less vanilla and more \"why is there a machine on my dirt pyramid?\"",
   ],
   "task.7B73F034EBE58ADA.title": "Read about flying items",
   "quest.54426B5BBE263DB4.quest_subtitle": "Craft or obtain Stone Paxel",
@@ -15,6 +15,25 @@
   "quest.7A5DE9240428A708.quest_subtitle": "Craft or obtain Bedrock",
   "task.6752A8FD5075C68D.title": "Craft a Philosopher's Stone",
   "quest.57BD1D73E42470EF.quest_subtitle": "Unlocks Equivox pool",
+  "quest.1E7624ECE0EA67D4.title": "Randon Mined",
+  "quest.1E7624ECE0EA67D4.quest_subtitle": "Opens the Randon Mined chapter",
+  "quest.1E7624ECE0EA67D4.quest_desc": [
+    "Your island team has a shared counter: &eRandon Mined&r. Each time you break the &6center random block&r, that count goes up by one.",
+    "",
+    "Watch it on the HUD above the hotbar, or run &f/randomblock counter&r. It is &ateam-scoped&r — everyone on the same island shares progress.",
+    "",
+    "Open the quest book tab &6Randon Mined&r for the full track:",
+    "• &e100&r — story beat when the void notices you",
+    "• &e500&r — &aBBL Utility&r blocks auto-join the random pool",
+    "• &e1,000&r — &dchoice token&r: pick &fDark Utils&r or &fApotheosis&r (+ Enchanting) in the book",
+    "• &e2,500&r — &aEasy Ore Generation&r auto-joins the pool",
+    "• &e5,000&r — second choice for whichever of those two is still locked",
+    "",
+    "Milestone quests complete automatically when you hit the number. At choice tiers, use the &eclaim side-quests&r in that chapter (checkmark) or &f/randomblock unlock choose <mod>&r.",
+    "",
+    "This Getting Started quest unlocks the &6Randon Mined&r chapter. Check the box when you are ready to follow the counter."
+  ],
+  "task.6E3148CE17BB7770.title": "Read about Randon Mined milestones",
   "quest.2B9686474CA8C9C3.quest_desc": [
     "Every time you mine the center block on your island, it is replaced by a random block from your team's &6effective pool&r — not every block in the entire modpack at once.",
     "",
@@ -24,20 +43,20 @@
     "",
     "This is by design: early skyblock is about simple materials and crafting; later game brings the full pack. Keep mining the same center block — the pool grows with you, you do not need a new generator.",
     "",
-    "Tip: later chapters explain specific unlocks. Operators can inspect the pool with &f/randomblock pools list&r."
+    "Tip: later chapters explain specific unlocks. Operators can inspect the pool with &f/randomblock pools list&r.",
   ],
   "quest.6639B6CEC400B59F.quest_subtitle": "Craft or obtain Custom Icon",
   "quest.51521D28751E05D4.quest_desc": [
     "Gather items fast and build out your platform. Creative Controllers and Netherite Furnaces from your random block are huge wins — loot can easily fall off the island before you pick it up.",
     "",
-    "Expand your island early so items have somewhere to land. Smelt on-site with furnaces and stash bulk resources in storage as soon as you can."
+    "Expand your island early so items have somewhere to land. Smelt on-site with furnaces and stash bulk resources in storage as soon as you can.",
   ],
   "quest.57BD1D73E42470EF.quest_desc": [
     "Equivox turns your random-block junk pile into a single currency called &eEMC&r (Energy-Matter Currency). The &6Philosopher's Stone&r is where that journey starts.",
     "",
     "Craft it from glowstone dust, redstone, and diamonds — ingredients you will eventually pull from your center block. Once you have it, open the transmutation grid (default keybind while holding the stone), &ateach&r it items, and spend EMC to duplicate anything you have learned.",
     "",
-    "Completing this quest &aautomatically unlocks the Equivox mod pool&r for your island team — same behind-the-scenes unlock as the Leather Backpack quest does for Sophisticated Storage. Collectors, condensers, relays, matter blocks, and other full-cube Equivox blocks can start rolling from your random center block. Open the &eEquivox&r quest tab for the full crafting tree."
+    "Completing this quest &aautomatically unlocks the Equivox mod pool&r for your island team — same behind-the-scenes unlock as the Leather Backpack quest does for Sophisticated Storage. Collectors, condensers, relays, matter blocks, and other full-cube Equivox blocks can start rolling from your random center block. Open the &eEquivox&r quest tab for the full crafting tree.",
   ],
   "quest.4A1F5EA13AF49DDA.quest_desc": [
     "Your random block spits out all kinds of crafted blocks — stairs, slabs, doors, machines, and more. The Uncrafting Table reverses normal crafting recipes so you can recover the ingredients.",
@@ -46,7 +65,7 @@
     "",
     "The Uncrafting Table can also spawn from your random block — keep mining and you might get one before you craft it.",
     "",
-    "Craft one early and keep it next to your crafting table."
+    "Craft one early and keep it next to your crafting table.",
   ],
   "quest.4137D6CD3FC01F40.quest_subtitle": "Your first workbench",
   "task.68102B3B6DBD2C07.title": "cant mine the block in front of you.. remove it with this chapter reward",
@@ -56,7 +75,7 @@
     "",
     "This quest rewards a chunk of &fbedrock&r (or related help) so you can clear an immovable annoyance and keep mining the &acenter random block&r. Bedrock is the bouncer of Minecraft — it does not move unless the quest book bribes it.",
     "",
-    "Tip: expand your platform first so broken loot has somewhere to land besides the void."
+    "Tip: expand your platform first so broken loot has somewhere to land besides the void.",
   ],
   "quest.54426B5BBE263DB4.title": "Welcome to Randon One Block",
   "quest.4A1F5EA13AF49DDA.quest_subtitle": "Turn loot back into ingredients",
@@ -69,12 +88,12 @@
     "",
     "Craft a &6Crafting Table on a Stick&r (same recipe shape as a normal crafting table, using the mod's item). Hold it, use it like a tool, and open a full 3×3 crafting grid on the spot — perfect while you are mining the center block, sorting random loot, or working at the edge of your platform.",
     "",
-    "Pair it with your normal crafting table at base: keep the stick for field crafting and the placed table for bigger projects. It saves space and stops you from losing crafting access when inventory is full of odd blocks from the random pool."
+    "Pair it with your normal crafting table at base: keep the stick for field crafting and the placed table for bigger projects. It saves space and stops you from losing crafting access when inventory is full of odd blocks from the random pool.",
   ],
   "quest.6639B6CEC400B59F.quest_desc": [
     "The Good to Know Mods chapter introduces key mods in this pack. Each quest is a quick read — and many hand out rewards that can help you early.",
     "",
-    "Open the Good to Know Mods tab in your quest book and complete the checkmark quests. Gateways, Sophisticated Storage, and more are explained there with free items waiting when you finish."
+    "Open the Good to Know Mods tab in your quest book and complete the checkmark quests. Gateways, Sophisticated Storage, and more are explained there with free items waiting when you finish.",
   ],
   "task.26A14924618FB8F1.title": "Craft a Crafting Table on a Stick",
   "quest.4137D6CD3FC01F40.title": "Craft a Crafting Table",
@@ -87,6 +106,6 @@
   "quest.4137D6CD3FC01F40.quest_desc": [
     "Gather wood from your random blocks and craft a crafting table.",
     "",
-    "The quest completes when a crafting table is in your inventory."
-  ]
+    "The quest completes when a crafting table is in your inventory.",
+  ],
 }
