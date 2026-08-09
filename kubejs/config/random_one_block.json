@@ -46,9 +46,9 @@
 	"active_block": {
 		"enabled": true,
 		"dimension": "minecraft:overworld",
-		"x": -8191,
+		"x": 1,
 		"y": 71,
-		"z": -8191
+		"z": 8193
 	},
 	"_randon_counter_hud": "Team island counter shown as overlay text above the hotbar (Randon Mined : count). enabled=false hides it. Counter is per island team, not per player.",
 	"randon_counter_hud": {

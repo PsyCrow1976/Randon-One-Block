@@ -1,5 +1,5 @@
 ["Easy Ore Generation Config"]
-	#Controls the speed of the Precise Ore Generator (in ticks)
+	#Controls the speed of the Generators (in ticks)
 	# Default: 20
 	# Range: 1 ~ 100
 	generationSpeed = 20

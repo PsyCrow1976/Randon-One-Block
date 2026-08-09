@@ -220,6 +220,7 @@
         "minecraft:zombie": true,
         "minecraft:creeper": true,
         "minecraft:squid": true,
+        "minecraft:skeleton_horse": true,
       },
       /*
        * Make entity icons on the minimap larger

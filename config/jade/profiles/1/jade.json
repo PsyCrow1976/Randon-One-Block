@@ -111,19 +111,8 @@
       "entity": true,
       "entity_variant": true
     },
-    "enderio": {
-      "soul_bound": true
-    },
     "ftbquests": {
       "barrier": true
-    },
-    "easy_villagers": {
-      "villager": true,
-      "converter": true,
-      "breeder": true
-    },
-    "mysticalagradditions": {
-      "infused_farmland": true
     },
     "jade": {
       "coordinates.rel": false,
@@ -142,6 +131,27 @@
     "apotheosis": {
       "adventure": true
     },
+    "refinedcooking": {
+      "kitchen_access_point": true,
+      "kitchen_station": true
+    },
+    "balm": {
+      "jade": true
+    },
+    "apothic_enchanting": {
+      "ench": true
+    },
+    "enderio": {
+      "soul_bound": true
+    },
+    "easy_villagers": {
+      "villager": true,
+      "converter": true,
+      "breeder": true
+    },
+    "mysticalagradditions": {
+      "infused_farmland": true
+    },
     "gravestone": {
       "grave": true
     },
@@ -149,12 +159,6 @@
       "infused_farmland": true,
       "crop": true,
       "inferium_crop": true
-    },
-    "balm": {
-      "jade": true
-    },
-    "apothic_enchanting": {
-      "ench": true
     }
   }
 }

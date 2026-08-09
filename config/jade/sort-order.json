@@ -77,5 +77,7 @@
   "mysticalagradditions:infused_farmland": null,
   "mysticalagriculture:crop": null,
   "mysticalagriculture:inferium_crop": null,
-  "mysticalagriculture:infused_farmland": null
+  "mysticalagriculture:infused_farmland": null,
+  "refinedcooking:kitchen_access_point": null,
+  "refinedcooking:kitchen_station": null
 }

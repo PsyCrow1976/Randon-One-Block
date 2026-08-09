@@ -8,14 +8,14 @@
     "",
     "Process flying mobs for honey bottles, honeycomb, feathers, and pollen in a compact skyblock-friendly building.",
     "",
-    "Upgrade path continues through copper oxidation tiers for the same modpack prestige look as vanilla copper builds."
+    "Upgrade path continues through copper oxidation tiers for the same modpack prestige look as vanilla copper builds.",
   ],
   "quest.6FD86CF67020148A.quest_desc": [
     "Acacia Animal Pen — placeable habitat for land animals stored in Animal Cages.",
     "",
     "Insert a filled Animal Cage, open the GUI, and interact with mobs for milk, wool, eggs, stew, and breeding — all without entity cramming on your platform.",
     "",
-    "Wood type is acacia — pick the variant that matches your base aesthetic. Mechanics are identical across wood types."
+    "Wood type is acacia — pick the variant that matches your base aesthetic. Mechanics are identical across wood types.",
   ],
   "quest.10F3CE4BC42D3DF7.title": "Quest Step",
   "quest.6FD86CF67020148A.title": "Animal Pen",
@@ -24,7 +24,7 @@
     "",
     "Right-click aquatic creatures, sneak + right-click to release, then place in an Aquarium block for bucket-style interactions without draining your island pond.",
     "",
-    "Pairs with the Aquarium multiblock — essential when your one-block island has limited water space."
+    "Pairs with the Aquarium multiblock — essential when your one-block island has limited water space.",
   ],
   "quest.10F3CE4BC42D3DF7.quest_subtitle": "Complete this step",
   "quest.6FD86CF67020148A.quest_subtitle": "Craft or obtain Animal Pen Acacia",
@@ -33,7 +33,7 @@
   "quest.7DB96AA7E220D755.quest_desc": [
     "The &eBird Catcher&r is a net with ambition. Scoop up chickens, parrots, and other feathered freeloaders.",
     "",
-    "Pair it with Animal Pens so eggs, feathers, and clucks become a renewable farm instead of a one-time random-block miracle."
+    "Pair it with Animal Pens so eggs, feathers, and clucks become a renewable farm instead of a one-time random-block miracle.",
   ],
   "quest.3EA62AD030A3C93F.quest_subtitle": "Unlocks Animal Pens pool",
   "quest.7DB96AA7E220D755.quest_subtitle": "Craft or obtain Bird Catcher",
@@ -43,14 +43,14 @@
   "task.2A7F40E78B27E6F3.title": "Obtain Aquatic Jar",
   "task.20D82F09E4A505EF.title": "Obtain Quest",
   "quest.10F3CE4BC42D3DF7.quest_desc": [
-    "Complete the checkmark to continue."
+    "Complete the checkmark to continue.",
   ],
   "quest.3EA62AD030A3C93F.quest_desc": [
     "The &eAnimal Cage&r is Pokémon for cows — capture, transport, and rehome livestock without the \"how do I boat a pig through the void?\" speedrun.",
     "",
     "Use it to catch animals and move them into pens. On skyblock, every sheep you do not lose to the void is a moral victory.",
     "",
-    "&aCompleting this quest unlocks Animal Pens blocks in the random one-block pool for your team.&r"
+    "&aCompleting this quest unlocks Animal Pens blocks in the random one-block pool for your team.&r",
   ],
-  "task.040D6E7BE4554820.title": "Obtain Animal Cage"
+  "task.040D6E7BE4554820.title": "Obtain Animal Cage",
 }

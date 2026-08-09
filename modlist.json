@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03",
+  "generated": "2026-08-09",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.94",
   "mod_count": 85,
@@ -77,7 +77,9 @@
     {
       "name": "Better Advanced Tooltips",
       "version": "2601.1.0-build.9",
-      "jar": "better-advanced-tooltips-2601.1.0-build.9.jar"
+      "jar": "better-advanced-tooltips-2601.1.0-build.9.jar",
+      "curseforge_id": 1637623,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/better-advanced-tooltips"
     },
     {
       "name": "Bookshelf",
@@ -207,8 +209,8 @@
     },
     {
       "name": "Equivox",
-      "version": "1.0.0",
-      "jar": "equivox-1.0.0.jar",
+      "version": "26.1.2-1.2.1",
+      "jar": "equivox-26.1.2-1.2.1.jar",
       "curseforge_id": 1597601,
       "url": "https://www.curseforge.com/minecraft/mc-mods/equivox"
     },
@@ -235,8 +237,8 @@
     },
     {
       "name": "FTB Chunks (NeoForge)",
-      "version": "chunks-neoforge-26.1.2.6",
-      "jar": "ftb-chunks-neoforge-26.1.2.6.jar",
+      "version": "chunks-neoforge-26.1.2.7",
+      "jar": "ftb-chunks-neoforge-26.1.2.7.jar",
       "curseforge_id": 314906,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge"
     },
@@ -249,15 +251,15 @@
     },
     {
       "name": "FTB Library (NeoForge)",
-      "version": "library-neoforge-26.1.2.6",
-      "jar": "ftb-library-neoforge-26.1.2.6.jar",
+      "version": "library-neoforge-26.1.2.7",
+      "jar": "ftb-library-neoforge-26.1.2.7.jar",
       "curseforge_id": 404465,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge"
     },
     {
       "name": "FTB Quests (NeoForge)",
-      "version": "quests-neoforge-26.1.2.2",
-      "jar": "ftb-quests-neoforge-26.1.2.2.jar",
+      "version": "quests-neoforge-26.1.2.3",
+      "jar": "ftb-quests-neoforge-26.1.2.3.jar",
       "curseforge_id": 289412,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge"
     },
@@ -270,8 +272,8 @@
     },
     {
       "name": "FTB XMod Compat",
-      "version": "neoforge-26.1.2.2",
-      "jar": "ftb-xmod-compat-neoforge-26.1.2.2.jar",
+      "version": "neoforge-26.1.2.3",
+      "jar": "ftb-xmod-compat-neoforge-26.1.2.3.jar",
       "curseforge_id": 889915,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat"
     },
@@ -312,8 +314,8 @@
     },
     {
       "name": "Iron Furnaces (Fabric & NeoForge)",
-      "version": "26.1-1.1.0",
-      "jar": "ironfurnacesneoforge-26.1-1.1.0.jar",
+      "version": "26.1-1.2.0",
+      "jar": "ironfurnacesneoforge-26.1-1.2.0.jar",
       "curseforge_id": 1506700,
       "url": "https://www.curseforge.com/minecraft/mc-mods/iron-furnaces-fabric-neoforge"
     },
@@ -396,8 +398,8 @@
     },
     {
       "name": "Mystical Agriculture",
-      "version": "26.1.2-9.0.4",
-      "jar": "MysticalAgriculture-26.1.2-9.0.4.jar",
+      "version": "26.1.2-9.0.5",
+      "jar": "MysticalAgriculture-26.1.2-9.0.5.jar",
       "curseforge_id": 246640,
       "url": "https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture"
     },
@@ -473,8 +475,8 @@
     },
     {
       "name": "Puzzles Lib",
-      "version": "v26.1.12-mc26.1.x-NeoForge",
-      "jar": "PuzzlesLib-v26.1.12-mc26.1.x-NeoForge.jar",
+      "version": "v26.1.14-mc26.1.x-NeoForge",
+      "jar": "PuzzlesLib-v26.1.14-mc26.1.x-NeoForge.jar",
       "curseforge_id": 495476,
       "url": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib"
     },
@@ -550,22 +552,22 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.25.83.2019",
-      "jar": "sophisticatedbackpacks-26.1.2-3.25.83.2019.jar",
+      "version": "26.1.2-3.25.84.2039",
+      "jar": "sophisticatedbackpacks-26.1.2-3.25.84.2039.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.4.93.2195",
-      "jar": "sophisticatedcore-26.1.2-1.4.93.2195.jar",
+      "version": "26.1.2-1.4.94.2204",
+      "jar": "sophisticatedcore-26.1.2-1.4.94.2204.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.101.2030",
-      "jar": "sophisticatedstorage-26.1.2-1.5.101.2030.jar",
+      "version": "26.1.2-1.5.105.2051",
+      "jar": "sophisticatedstorage-26.1.2-1.5.105.2051.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },
