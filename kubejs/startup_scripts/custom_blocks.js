@@ -71,10 +71,28 @@ StartupEvents.registry('block', event => {
 
     console.info('[RandonOneBlock] Registered custom block kubejs:' + entry.id)
   }
+
+  // Trophy only — placed by the 100k Echo, blacklisted from the weighted pool. No recipe.
+  event
+    .create('echo_block')
+    .displayName('The Echo')
+    .mapColor('color_purple')
+    .soundType('amethyst')
+    .hardness(2.5)
+    .resistance(6)
+    .fullBlock(true)
+    .lightLevel(0.5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .item(item => {
+      item.displayName('The Echo')
+    })
+  console.info('[RandonOneBlock] Registered custom block kubejs:echo_block')
 })
 
-// Endgame seals / trophy markers (items only — not in random pool)
+// Endgame seals (items only — not in the random pool)
 StartupEvents.registry('item', event => {
   event.create('atlas_seal').displayName('Atlas Seal').maxStackSize(1)
   console.info('[RandonOneBlock] Registered custom item kubejs:atlas_seal')
+  event.create('echo_seal').displayName('Echo Seal').maxStackSize(1)
+  console.info('[RandonOneBlock] Registered custom item kubejs:echo_seal')
 })

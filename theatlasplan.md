@@ -1,6 +1,6 @@
 # Plan: Randon Atlas + Echo Endgame (v1)
 
-**Status:** **Phase 0–2 complete** — shipped in **1.0.5.6** (milestones) and **1.0.6.0** (Atlas). Next: **Phase 3 Echo**.  
+**Status:** **Phase 0–3 implemented** — shipped in **1.0.5.6** (milestones) and **1.0.6.0** (Atlas). **Phase 3 Echo** is in the pack as of **1.1.0.0** (playtest still open). Next: playtest Echo, then docs polish.  
 **Combines:** Suggestion **1 (Randon Atlas)** + **3 (100k Echo / mine milestones)**.  
 **Deferred (v2 pin):** Prestige / “Quiet the Block” stabilize / second seed / dual random block.
 
@@ -632,18 +632,21 @@ Commands: `/randomblock counter` · `milestones` · `unlock list` · `unlock cho
 | Seal | When active set complete → receive **Atlas Seal** once |
 | Scope | Same island team shares atlas |
 
-### Phase 3 — Echo
+### Phase 3 — Echo — **IMPLEMENTED** (playtest open)
 
-- [ ] Register `kubejs:echo_block` (full cube, recipes none, blacklisted from weighted pool).
-- [ ] Force place at 100k; `echo_granted`; seal + quest.
-- [ ] Intermediate milestone messages/rewards config-driven.
+- [x] Register `kubejs:echo_block` (full cube, no recipe, blacklisted from the weighted pool) and `kubejs:echo_seal`.
+- [x] Force place on the break that reaches 100k (`echo_granted` once); Echo Seal to online teammates; FTB **The Echo** + **The Randon Ending** (Atlas Seal and Echo Seal, either order).
+- [x] Intermediate messages at **10,000** and **50,000** (50k also completes **Echo Approaches**). No new pool unlocks at those thresholds.
+- [ ] Playtest: set a team counter to 99999, mine the center once, confirm `echo=forced` in `logs/kubejs/server.log`, seal in inventory, quests complete, and the following break is a normal roll. Full restart required so `kubejs:echo_block` registers.
 
-### Phase 4 — Quest book chapter
+### Phase 4 — Quest book chapter — **Echo chapter shipped with Phase 3**
 
-- [ ] Create endgame chapter JSON5 + lang.
-- [ ] Wire dependency to Getting Started / optional.
-- [ ] Tasks for seals and key milestones (not every atlas id as separate quest unless desired).
-- [ ] Final quest: Atlas + Echo.
+The mine track and Atlas pages were already **Randon Mined** and **The Atlas**. Phase 3 added the missing climax chapter instead of copying those quests.
+
+- [x] Chapter **The Echo** (`config/ftbquests/quests/chapters/the_echo.json5`) plus lang.
+- [x] Opens from Getting Started → **Randon Mined** (same check that opens the milestone and Atlas tabs).
+- [x] Tasks: read the intro, **50,000**, **The Echo**, **The Randon Ending** (Atlas Seal and Echo Seal). Atlas page quests stay in **The Atlas**.
+- [ ] Playtest the tab after a full client restart (new block + quest icons).
 
 ### Phase 5 — Docs, changelog, ship
 

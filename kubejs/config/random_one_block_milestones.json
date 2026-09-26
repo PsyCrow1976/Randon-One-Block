@@ -41,6 +41,14 @@
     {
       "threshold": 100,
       "message": "The void notices your island — 100 Randon Mined."
+    },
+    {
+      "threshold": 10000,
+      "message": "Ten thousand breaks. The tear is wide enough to remember you."
+    },
+    {
+      "threshold": 50000,
+      "message": "Echo approaches — fifty thousand mines. The void is listening."
     }
   ],
 
@@ -49,7 +57,8 @@
     "500": "354911A44E0FE192",
     "1000": "4F8ACEF07DC37A1F",
     "2500": "052F6E722C91858A",
-    "5000": "461A129540477F54"
+    "5000": "461A129540477F54",
+    "50000": "5C0E110A7E110020"
   },
 
   "ftb_mine_count_tasks": {
@@ -57,7 +66,8 @@
     "036077D54B54F1F1": 500,
     "284BB242E685CD86": 1000,
     "6FCA2BE21E690252": 2500,
-    "7F7295BF1DFDA590": 5000
+    "7F7295BF1DFDA590": 5000,
+    "5C0E110A7E110021": 50000
   },
 
   "ftb_choice_quest_by_token": {
@@ -86,9 +96,15 @@
   },
 
   "echo": {
-    "enabled": false,
+    "enabled": true,
     "threshold": 100000,
     "block_id": "kubejs:echo_block",
-    "force_on_break": true
+    "seal_item_id": "kubejs:echo_seal",
+    "force_on_break": true,
+    "message": "The void answers once: The Echo.",
+    "quest_id": "5C0E110A7E110030",
+    "task_id": "5C0E110A7E110031",
+    "ending_quest_id": "5C0E110A7E110040",
+    "ending_task_id": "5C0E110A7E110041"
   }
 }

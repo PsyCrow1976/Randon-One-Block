@@ -1,0 +1,49 @@
+{
+  "quest.5C0E110A7E110010.title": "The Tear",
+  "quest.5C0E110A7E110010.quest_subtitle": "What the Echo is",
+  "quest.5C0E110A7E110010.quest_desc": [
+    "Every center-block break is a page in the &6Randon Atlas&r. The dedication win is separate.",
+    "",
+    "At &e100,000&r team &eRandon Mined&r, the next center block is &dThe Echo&r (&fkubejs:echo_block&r). It is not in the random pool. It happens once per island team.",
+    "",
+    "Online teammates receive an &dEcho Seal&r. Mine The Echo to pick the block up and place it on the island.",
+    "",
+    "&6The Randon Ending&r needs both the &eAtlas Seal&r (finish the active Atlas set) and the Echo. Either order is fine.",
+    "",
+    "&c50,000 and 100,000 cannot be checked off by hand.&r They follow the team counter."
+  ],
+  "task.5C0E110A7E110011.title": "Read about The Echo",
+
+  "quest.5C0E110A7E110020.title": "Echo Approaches",
+  "quest.5C0E110A7E110020.quest_subtitle": "50,000 Randon Mined",
+  "quest.5C0E110A7E110020.quest_desc": [
+    "Reach &e50,000&r team Randon Mined.",
+    "",
+    "The void is listening. The Echo is still &e50,000&r breaks away.",
+    "",
+    "Completes automatically from the counter. Check progress with &f/randomblock milestones&r."
+  ],
+  "task.5C0E110A7E110021.title": "Mine to 50,000 Randon Mined",
+
+  "quest.5C0E110A7E110030.title": "The Echo",
+  "quest.5C0E110A7E110030.quest_subtitle": "100,000 — the void answers once",
+  "quest.5C0E110A7E110030.quest_desc": [
+    "The break that takes your team to &e100,000&r Randon Mined places &dThe Echo&r on the center block.",
+    "",
+    "You also receive the &dEcho Seal&r. Later center breaks go back to the normal random pool and do not grant The Echo again.",
+    "",
+    "If the counter was already past 100,000 before this chapter existed, the &enext&r center break grants it once."
+  ],
+  "task.5C0E110A7E110031.title": "Receive The Echo",
+
+  "quest.5C0E110A7E110040.title": "The Randon Ending",
+  "quest.5C0E110A7E110040.quest_subtitle": "Atlas Seal and Echo Seal",
+  "quest.5C0E110A7E110040.quest_desc": [
+    "Finish both endgames for this pack:",
+    "• &eAtlas Seal&r — every active page in &6The Atlas&r",
+    "• &dEcho Seal&r — 100,000 team Randon Mined",
+    "",
+    "Collection-heavy teams can finish the Atlas first. Mine-heavy teams can earn The Echo first. This quest completes when the team has both."
+  ],
+  "task.5C0E110A7E110041.title": "Hold both endings"
+}

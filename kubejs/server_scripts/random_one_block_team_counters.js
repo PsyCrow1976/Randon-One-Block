@@ -347,6 +347,14 @@ function onRandomBlockMined(player, server) {
     console.warn('[RandomOneBlock] Milestone process failed: ' + String(milestoneErr))
   }
 
+  try {
+    if (typeof RandonOneBlockMilestones !== 'undefined' && RandonOneBlockMilestones.claimEchoBlock) {
+      RandonOneBlockMilestones.claimEchoBlock(scopeId, count, player, server)
+    }
+  } catch (echoErr) {
+    console.warn('[RandomOneBlock] Echo claim failed: ' + String(echoErr))
+  }
+
   return count
 }
 

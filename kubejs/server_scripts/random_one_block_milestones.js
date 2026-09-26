@@ -85,17 +85,24 @@ const DEFAULT_MILESTONES_CONFIG = {
     '29C704D46039E1FC': '39A188E8418C47B7'
   },
   echo: {
-    enabled: false,
+    enabled: true,
     threshold: 100000,
     block_id: 'kubejs:echo_block',
-    force_on_break: true
+    seal_item_id: 'kubejs:echo_seal',
+    force_on_break: true,
+    message: 'The void answers once: The Echo.',
+    quest_id: '5C0E110A7E110030',
+    task_id: '5C0E110A7E110031',
+    ending_quest_id: '5C0E110A7E110040',
+    ending_task_id: '5C0E110A7E110041'
   }
 }
 
 const MILESTONE_STATE = {
   config: null,
   choiceHandlersRegistered: false,
-  choiceInProgress: false
+  choiceInProgress: false,
+  pendingEchoBlock: null
 }
 
 function milestonesClone(obj) {
@@ -320,13 +327,26 @@ function sanitizeMilestonesConfig(raw) {
   echo = milestonesReadField(next, 'echo') || {}
   var echoThreshold = milestonesReadField(echo, 'threshold')
   var echoBlockId = milestonesReadField(echo, 'block_id')
+  var echoSealId = milestonesReadField(echo, 'seal_item_id')
   var echoForce = milestonesReadField(echo, 'force_on_break')
   var echoEnabled = milestonesReadField(echo, 'enabled')
+  var echoMessage = milestonesReadField(echo, 'message')
+  var echoQuestId = milestonesReadField(echo, 'quest_id')
+  var echoTaskId = milestonesReadField(echo, 'task_id')
+  var echoEndingQuestId = milestonesReadField(echo, 'ending_quest_id')
+  var echoEndingTaskId = milestonesReadField(echo, 'ending_task_id')
+  var echoDefaults = DEFAULT_MILESTONES_CONFIG.echo
   next.echo = {
     enabled: !!(echoEnabled === true || echoEnabled === 'true'),
     threshold: Math.max(1, Math.floor(Number(echoThreshold != null ? echoThreshold : 100000) || 100000)),
-    block_id: echoBlockId != null ? String(echoBlockId) : 'kubejs:echo_block',
-    force_on_break: !(echoForce === false || echoForce === 'false')
+    block_id: echoBlockId != null ? String(echoBlockId) : echoDefaults.block_id,
+    seal_item_id: echoSealId != null ? String(echoSealId) : echoDefaults.seal_item_id,
+    force_on_break: !(echoForce === false || echoForce === 'false'),
+    message: echoMessage != null ? String(echoMessage) : echoDefaults.message,
+    quest_id: echoQuestId != null ? String(echoQuestId) : echoDefaults.quest_id,
+    task_id: echoTaskId != null ? String(echoTaskId) : echoDefaults.task_id,
+    ending_quest_id: echoEndingQuestId != null ? String(echoEndingQuestId) : echoDefaults.ending_quest_id,
+    ending_task_id: echoEndingTaskId != null ? String(echoEndingTaskId) : echoDefaults.ending_task_id
   }
 
   // FTB Quests chapter hooks (Randon Mined tab)
@@ -480,7 +500,8 @@ function reloadMilestonesConfig() {
       (MILESTONE_STATE.config.milestone_auto_unlocks || []).length +
       ' auto, ' +
       (MILESTONE_STATE.config.milestone_choices || []).length +
-      ' choice token(s)'
+      ' choice token(s), echo=' +
+      (MILESTONE_STATE.config.echo && MILESTONE_STATE.config.echo.enabled ? 'on@' + MILESTONE_STATE.config.echo.threshold : 'off')
   )
   return MILESTONE_STATE.config
 }
@@ -1019,6 +1040,11 @@ function backfillMilestonesForPlayer(player, server) {
   mined = counters && counters.getTeamBlocksMined ? counters.getTeamBlocksMined(scopeId) : 0
   // Quiet backfill on login (no spam if many thresholds already crossed)
   processMilestonesForScope(scopeId, mined, server, false)
+  try {
+    syncEchoQuests(scopeId, server)
+  } catch (echoBackfillErr) {
+    console.warn('[RandomOneBlock] Echo quest backfill failed: ' + String(echoBackfillErr))
+  }
 }
 
 function findChoiceByTokenId(tokenId) {
@@ -1256,6 +1282,195 @@ function registerFtbMineCountCustomTasks() {
   return count
 }
 
+function giveEchoItem(player, itemId) {
+  if (!player || !itemId) return
+  try {
+    player.give(Item.of(itemId, 1))
+  } catch (ignored) {
+    try {
+      player.inventory.add(Item.of(itemId, 1))
+    } catch (ignored2) {}
+  }
+}
+
+function isAtlasSealGranted(scopeId) {
+  var record = null
+  if (!scopeId) return false
+  try {
+    if (typeof RandonOneBlockAtlas === 'undefined' || !RandonOneBlockAtlas.loadTeamAtlas) return false
+    record = RandonOneBlockAtlas.loadTeamAtlas(scopeId)
+  } catch (ignored) {
+    return false
+  }
+  return !!(record && record.seal_granted)
+}
+
+function setCustomTaskProgress(task) {
+  if (!task) return
+  try {
+    task.progress = 1
+  } catch (ignored) {
+    try {
+      if (task.setProgress) task.setProgress(1)
+    } catch (ignored2) {}
+  }
+}
+
+/**
+ * Complete Echo / Randon Ending quests for online teammates when the flags allow it.
+ * Does not place a block and does not grant the seal again.
+ */
+function syncEchoQuests(scopeId, server) {
+  var echo = null
+  var record = null
+
+  if (!scopeId || !isMilestonesEnabled()) return
+  echo = ensureMilestonesConfig().echo || {}
+  if (!echo.enabled) return
+  record = loadCounterRecord(scopeId)
+  if (record.echo_granted && echo.quest_id) {
+    completeFtbQuestForScope(server, scopeId, echo.quest_id)
+  }
+  if (record.echo_granted && isAtlasSealGranted(scopeId) && echo.ending_quest_id) {
+    completeFtbQuestForScope(server, scopeId, echo.ending_quest_id)
+  }
+}
+
+/**
+ * First time the team counter reaches the Echo threshold, reserve the trophy block
+ * for the replacement that this break is about to place. Further breaks do not re-grant.
+ * @returns {string|null} block id to force, or null
+ */
+function claimEchoBlock(scopeId, blocksMined, player, server) {
+  var echo = null
+  var record = null
+  var mined = Math.max(0, Math.floor(Number(blocksMined) || 0))
+  var blockId = null
+
+  MILESTONE_STATE.pendingEchoBlock = null
+  if (!scopeId || !isMilestonesEnabled()) return null
+
+  echo = ensureMilestonesConfig().echo || {}
+  if (!echo.enabled || echo.force_on_break === false) return null
+  if (mined < echo.threshold) return null
+
+  record = loadCounterRecord(scopeId)
+  if (record.echo_granted) return null
+
+  blockId = echo.block_id || 'kubejs:echo_block'
+  record.echo_granted = true
+  saveCounterRecord(scopeId, record)
+  MILESTONE_STATE.pendingEchoBlock = blockId
+
+  console.info(
+    '[RandomOneBlock] Echo granted for ' +
+      scopeId +
+      ' at ' +
+      mined +
+      ' mines — forcing ' +
+      blockId
+  )
+
+  forEachPlayerInScope(server, scopeId, function (member) {
+    giveEchoItem(member, echo.seal_item_id || 'kubejs:echo_seal')
+  })
+  notifyScopePlayers(
+    server,
+    scopeId,
+    '§d[Randon] §f' + (echo.message || 'The void answers once: The Echo.') + ' §7(' + blockId + ')'
+  )
+
+  try {
+    syncEchoQuests(scopeId, server)
+  } catch (questErr) {
+    console.warn('[RandomOneBlock] Echo quest complete failed: ' + String(questErr))
+  }
+
+  return blockId
+}
+
+function takePendingEchoBlock() {
+  var blockId = MILESTONE_STATE.pendingEchoBlock
+  MILESTONE_STATE.pendingEchoBlock = null
+  return blockId || null
+}
+
+function registerFtbEchoCustomTasks() {
+  var echo = ensureMilestonesConfig().echo || {}
+  var count = 0
+
+  if (!echo.enabled) return 0
+  if (typeof FTBQuestsEvents === 'undefined' || !FTBQuestsEvents.customTask) {
+    console.warn('[RandomOneBlock] FTBQuestsEvents.customTask unavailable — Echo quests use change_progress only')
+    return 0
+  }
+
+  if (echo.task_id) {
+    FTBQuestsEvents.customTask(String(echo.task_id), function (event) {
+      try {
+        event.maxProgress = 1
+      } catch (ignored) {}
+      try {
+        if (event.setCheckTimer) event.setCheckTimer(20)
+        else event.checkTimer = 20
+      } catch (ignored2) {}
+      var checker = function (task, player) {
+        var pools = poolsApi()
+        var scopeId = null
+        var record = null
+        if (!player || !task) return
+        try {
+          if (pools && pools.resolveUnlockScopeId) scopeId = pools.resolveUnlockScopeId(player, player.server)
+        } catch (ignored3) {}
+        if (!scopeId) return
+        record = loadCounterRecord(scopeId)
+        if (record.echo_granted) setCustomTaskProgress(task)
+      }
+      try {
+        if (event.setCheck) event.setCheck(checker)
+        else event.check = checker
+      } catch (ignored4) {
+        event.check = checker
+      }
+    })
+    count++
+  }
+
+  if (echo.ending_task_id) {
+    FTBQuestsEvents.customTask(String(echo.ending_task_id), function (event) {
+      try {
+        event.maxProgress = 1
+      } catch (ignored) {}
+      try {
+        if (event.setCheckTimer) event.setCheckTimer(20)
+        else event.checkTimer = 20
+      } catch (ignored2) {}
+      var checker = function (task, player) {
+        var pools = poolsApi()
+        var scopeId = null
+        var record = null
+        if (!player || !task) return
+        try {
+          if (pools && pools.resolveUnlockScopeId) scopeId = pools.resolveUnlockScopeId(player, player.server)
+        } catch (ignored3) {}
+        if (!scopeId) return
+        record = loadCounterRecord(scopeId)
+        if (record.echo_granted && isAtlasSealGranted(scopeId)) setCustomTaskProgress(task)
+      }
+      try {
+        if (event.setCheck) event.setCheck(checker)
+        else event.check = checker
+      } catch (ignored4) {
+        event.check = checker
+      }
+    })
+    count++
+  }
+
+  console.info('[RandomOneBlock] Registered ' + count + ' FTB Echo custom task(s)')
+  return count
+}
+
 function registerFtbChoiceTaskHandlers() {
   var config = ensureMilestonesConfig()
   var tasks = config.ftb_choice_tasks || {}
@@ -1455,6 +1670,16 @@ function buildMilestonesStatus(player, server) {
     lines.push('§7Unspent tokens: none')
   }
 
+  var echoCfg = config.echo || {}
+  if (echoCfg.enabled) {
+    var echoLeft = Math.max(0, (echoCfg.threshold || 100000) - mined)
+    lines.push(
+      record.echo_granted
+        ? '§dEcho: §agranted §7(' + (echoCfg.block_id || 'kubejs:echo_block') + ')'
+        : '§dEcho: §e' + echoLeft + ' mines left §7(at ' + echoCfg.threshold + ')'
+    )
+  }
+
   return { scopeId: scopeId, mined: mined, lines: lines, record: record }
 }
 
@@ -1563,7 +1788,10 @@ var RandonOneBlockMilestones = {
   buildMilestonesStatus: buildMilestonesStatus,
   buildUnlockListStatus: buildUnlockListStatus,
   getEligibleLockedMods: getEligibleLockedMods,
-  syncFtbMilestoneQuests: syncFtbMilestoneQuests
+  syncFtbMilestoneQuests: syncFtbMilestoneQuests,
+  claimEchoBlock: claimEchoBlock,
+  takePendingEchoBlock: takePendingEchoBlock,
+  syncEchoQuests: syncEchoQuests
 }
 
 // Register FTB handlers at script load (FTB requires this timing — not after /reload only)
@@ -1571,6 +1799,7 @@ try {
   ensureMilestonesConfig()
   registerFtbMineCountCustomTasks()
   registerFtbChoiceTaskHandlers()
+  registerFtbEchoCustomTasks()
   MILESTONE_STATE.choiceHandlersRegistered = true
 } catch (regErr) {
   console.warn('[RandomOneBlock] FTB Randon Mined handler registration failed: ' + String(regErr))

@@ -4,9 +4,7 @@
 
 This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Randon One Block** is that experiment made playable.
 
-**1.0.5.0** is the first “finished first pass” milestone: a complete FTB Quest book, Equivox (EMC / Equivalent Exchange fork), full quest descriptions, and confirmed random-block pool unlocks.
-
-There is no deep endgame vision here — it is a sandbox to learn what AI can ship on the latest Minecraft version.
+**1.1.0.0** is the endgame milestone: the quest book still opens the mod pools, the **Randon Atlas** is the collection finish, and **The Echo** is the 100,000-mine finish.
 
 ### Why “Randon”?
 
@@ -24,10 +22,13 @@ Early rolls stay mostly **vanilla + a few starter mods**. Completing certain que
 
 Progression highlights:
 
-- **FTB Quests** — **16 chapters · ~888 quests** with dependency lines and full descriptions (Getting Started, Storage, Ex Deorum, Equivox, Iron Furnaces, Mystical Agriculture, Ender IO, Refined Storage, Powah, and more).
+- **FTB Quests** — mod chapters with full descriptions (Getting Started, Storage, Ex Deorum, Equivox, Iron Furnaces, Mystical Agriculture, Ender IO, Refined Storage, Powah, and more), plus **Randon Mined**, **The Atlas**, and **The Echo**.
 - **The Uncrafting Table** — a custom mod for **Minecraft 26.1.2**: reverse a crafting recipe and get ingredients back. Nothing like it existed for this version, so AI helped create it for the pack.
 - **Equivox** — feed the ingredients you recover from the Uncrafting Table into Equivox’s transmutation grid to build **EMC** (Energy-Matter Currency). Craft the Philosopher’s Stone (*The Red Rock*) to unlock Equivox blocks in your random pool. (ProjectE was renamed Equivox for copyright reasons.)
-- **Randon Mined** — team counter above the hotbar for center blocks broken.
+- **Randon Mined** — team counter above the hotbar for center blocks broken. Milestones unlock more pools (BBL Utility at 500, a choice at 1,000 and 5,000, Easy Ore Generation at 2,500).
+- **The Atlas** — every distinct center-block roll is a page for your team. A curated endgame set is the real collection goal. Filling the active set grants the **Atlas Seal**. Open the quest tab **The Atlas**, or run `/randomblock atlas`.
+- **The Echo** — at **100,000** team mines the center block becomes **The Echo** once (not a random roll). Online teammates get an **Echo Seal**. At 50,000 the book marks **Echo Approaches**.
+- **The Randon Ending** — the quest tab **The Echo** completes when the team has both seals. Finish the Atlas first or the mine count first; either order works.
 - Everything else is “mods I liked” thrown together on skyblock.
 
 ---
@@ -48,7 +49,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | Part | How |
 |------|-----|
-| Mod selection & versions | Picked for MC 26.1.2 / NeoForge 26.1.2.94 |
+| Mod selection & versions | Picked for MC 26.1.2 / NeoForge 26.1.2.109 |
 | Random center block | KubeJS (`kubejs/server_scripts/random_one_block.js`) |
 | Skyblock islands | Haven Skyblock Builder + `oneblock_island` template |
 | Quest book | FTB Quests JSON5 in `config/ftbquests/` — AI-assisted authoring |
@@ -64,16 +65,16 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | | |
 |--|--|
-| Pack version | **1.0.5.0** |
+| Pack version | **1.1.0.0** |
 | Minecraft | 26.1.2 |
-| NeoForge | 26.1.2.94 |
-| Mods | 81 |
+| NeoForge | 26.1.2.109 |
+| Mods | 87 |
 
 ---
 
 ## Expectations
 
-- This is an **experimental AI-assisted pack**, not a polished expert pack — but **1.0.5.0** is a real playable milestone with a finished first quest-book pass.
+- This is an **experimental AI-assisted pack**, not a polished expert pack — but **1.1.0.0** has a real end: Atlas Seal, Echo Seal, then **The Randon Ending**.
 - Balance and content will keep growing as the AI-assisted workflow continues.
 - Bug reports and ideas welcome on [GitHub Issues](https://github.com/PsyCrow1976/Randon-One-Block/issues).
 

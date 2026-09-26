@@ -4,7 +4,30 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. **`1.1.0.0`** = **The Echo** at 100,000 team mines, plus **The Randon Ending** (Atlas Seal and Echo Seal). Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.1.0.0] — 2026-09-26
+
+### The Echo
+
+The 100,000th team center-block break (Randon Mined) places **The Echo** (`kubejs:echo_block`) once. It is not in the random pool. Online teammates get an **Echo Seal**. The next break is a normal roll.
+
+| Piece | What it does |
+|-------|----------------|
+| **10,000 / 50,000** | Story messages. 50,000 also completes **Echo Approaches** |
+| **100,000** | Forces The Echo, grants the Echo Seal, completes **The Echo** |
+| **The Randon Ending** | Completes when the team has both the **Atlas Seal** and the **Echo Seal**, in either order |
+| **Quest tab** | **The Echo**, opened from Getting Started → Randon Mined |
+
+`/randomblock milestones` shows how many mines are left. A team already past 100,000 gets The Echo on the next center break, once.
+
+Restart the instance so the new block registers. Then `/reload` is enough for the scripts.
+
+### Still planned
+
+- Playtest of the 100,000 break is still open
 
 ---
 

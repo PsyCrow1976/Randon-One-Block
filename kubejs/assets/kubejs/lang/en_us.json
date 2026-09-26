@@ -9,5 +9,8 @@
   "item.kubejs.potato_block": "Potato Block",
   "block.kubejs.torch_block": "Torch Block",
   "item.kubejs.torch_block": "Torch Block",
-  "item.kubejs.atlas_seal": "Atlas Seal"
+  "item.kubejs.atlas_seal": "Atlas Seal",
+  "block.kubejs.echo_block": "The Echo",
+  "item.kubejs.echo_block": "The Echo",
+  "item.kubejs.echo_seal": "Echo Seal"
 }

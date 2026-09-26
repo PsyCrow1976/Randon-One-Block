@@ -591,6 +591,13 @@ function grantAtlasSealIfNeeded(scopeId, player, server) {
   console.info(
     '[RandomOneBlock] Atlas seal granted for ' + scopeId + ' (' + progress.owned + '/' + progress.active + ')'
   )
+  try {
+    if (typeof RandonOneBlockMilestones !== 'undefined' && RandonOneBlockMilestones.syncEchoQuests) {
+      RandonOneBlockMilestones.syncEchoQuests(scopeId, server)
+    }
+  } catch (echoEndingErr) {
+    console.warn('[RandomOneBlock] Randon Ending sync after Atlas seal failed: ' + String(echoEndingErr))
+  }
   return true
 }
 

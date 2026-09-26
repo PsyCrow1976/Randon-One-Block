@@ -26,7 +26,8 @@ const DEFAULT_CONFIG = {
     'minecraft:crafting_table': 5,
     'minecraft:dirt': 10,
     'minecraft:cobblestone': 10,
-    'uncraftingtable:uncrafting_table': 3
+    'uncraftingtable:uncrafting_table': 3,
+    'kubejs:echo_block': 0
   },
   blacklist: [
     'minecraft:air',
@@ -45,7 +46,8 @@ const DEFAULT_CONFIG = {
     'minecraft:chain_command_block',
     'minecraft:repeating_command_block',
     'minecraft:structure_block',
-    'minecraft:jigsaw'
+    'minecraft:jigsaw',
+    'kubejs:echo_block'
   ],
   initial_block: 'minecraft:dirt',
   foundation_block: 'minecraft:bedrock',
@@ -2446,10 +2448,14 @@ BlockEvents.broken(event => {
   if (breaker && counters && counters.onRandomBlockMined) {
     counters.onRandomBlockMined(breaker, event.server)
   }
+  var echoMilestones = milestonesApi()
+  var echoBlockId =
+    echoMilestones && echoMilestones.takePendingEchoBlock ? echoMilestones.takePendingEchoBlock() : null
   const fallback = getInitialBlock()
   var modPoolsPick = modPoolsApi()
-  const nextId =
-    breaker && modPoolsPick && modPoolsPick.pickRandomBlockIdForPlayer
+  const nextId = echoBlockId
+    ? echoBlockId
+    : breaker && modPoolsPick && modPoolsPick.pickRandomBlockIdForPlayer
       ? modPoolsPick.pickRandomBlockIdForPlayer(breaker, event.server, fallback)
       : pickRandomBlockId()
   const poolSize = STATE.pool.length
@@ -2473,9 +2479,15 @@ BlockEvents.broken(event => {
 
   event.server.scheduleInTicks(1, () => {
     level.getBlock(coords.x, coords.y, coords.z).set(nextId)
-    console.info(
-      `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}/${totalWeight}, w=${pickedWeight}, chance=${chancePct}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
-    )
+    if (echoBlockId) {
+      console.info(
+        `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (echo=forced, effectivePool=${effectiveSize}, master=${poolSize}, roll=1/1, w=1, chance=100%, scope=${pickMeta.scopeId || 'global'}, mod=kubejs)`
+      )
+    } else {
+      console.info(
+        `[RandomOneBlock] Replaced broken block at ${coords.x} ${coords.y} ${coords.z} with ${nextId} (effectivePool=${effectiveSize}, master=${poolSize}, roll=${roll}/${totalWeight}, w=${pickedWeight}, chance=${chancePct}, scope=${pickMeta.scopeId || 'global'}, mod=${rolledNamespace})`
+      )
+    }
 
     // Randon Atlas — unique center rolls (same successful replace path)
     try {

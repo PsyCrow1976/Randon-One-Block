@@ -45,7 +45,7 @@ Team-scoped milestones (not per-player) when the **Randon Mined** counter hits. 
 - [ ] Playtest remaining milestones (1k book claim, 2.5k, 5k)
 - [ ] **10,000** — reserved
 - [ ] **50,000** — reserved (pre-Echo)
-- [ ] **100,000** — Echo trophy (Phase 3)
+- [x] **100,000** — Echo trophy (Phase 3) — implemented; playtest still open (`theatlasplan.md` Phase 3)
 
 Commands: `/randomblock milestones`, `/randomblock unlock list`, `/randomblock unlock choose <mod>` · Quest book tab **Randon Mined**
 

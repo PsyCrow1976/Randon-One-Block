@@ -1,0 +1,125 @@
+{
+  id: "5C0E110A7E110000",
+  group: "",
+  order_index: 4,
+  icon: {
+    id: "minecraft:crying_obsidian",
+    count: 1,
+  },
+  filename: "the_echo",
+  default_quest_shape: "",
+  default_hide_dependency_lines: false,
+  quests: [
+    {
+      icon: {
+        id: "minecraft:amethyst_shard",
+        count: 1,
+      },
+      x: 0.0,
+      y: 0.0,
+      shape: "gear",
+      dependencies: [
+        "1E7624ECE0EA67D4",
+      ],
+      size: 1.5,
+      id: "5C0E110A7E110010",
+      tasks: [
+        {
+          id: "5C0E110A7E110011",
+          type: "checkmark",
+        },
+      ],
+      rewards: [
+        {
+          id: "5C0E110A7E110012",
+          type: "xp",
+          xp: 10,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "minecraft:crying_obsidian",
+        count: 1,
+      },
+      x: 3.0,
+      y: 0.0,
+      dependencies: [
+        "5C0E110A7E110010",
+      ],
+      size: 1.0,
+      id: "5C0E110A7E110020",
+      tasks: [
+        {
+          id: "5C0E110A7E110021",
+          type: "custom",
+        },
+      ],
+      rewards: [
+        {
+          id: "5C0E110A7E110022",
+          type: "xp",
+          xp: 25,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "kubejs:echo_block",
+        count: 1,
+      },
+      x: 6.0,
+      y: 0.0,
+      shape: "hexagon",
+      dependencies: [
+        "5C0E110A7E110020",
+      ],
+      size: 1.5,
+      id: "5C0E110A7E110030",
+      tasks: [
+        {
+          id: "5C0E110A7E110031",
+          type: "custom",
+        },
+      ],
+      rewards: [
+        {
+          id: "5C0E110A7E110032",
+          type: "xp",
+          xp: 100,
+        },
+      ],
+    },
+    {
+      icon: {
+        id: "kubejs:echo_seal",
+        count: 1,
+      },
+      x: 9.0,
+      y: 0.0,
+      shape: "hexagon",
+      dependencies: [
+        "5C0E110A7E110030",
+      ],
+      size: 1.75,
+      id: "5C0E110A7E110040",
+      tasks: [
+        {
+          id: "5C0E110A7E110041",
+          type: "custom",
+        },
+      ],
+      rewards: [
+        {
+          id: "5C0E110A7E110042",
+          type: "xp",
+          xp: 100,
+        },
+      ],
+    },
+  ],
+  quest_links: [
+  ],
+  images: [
+  ],
+}
