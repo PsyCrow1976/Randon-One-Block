@@ -15,7 +15,7 @@ A modded Minecraft **skyblock** server modpack where players start on template-b
 | Skyblock islands | **Haven Skyblock Builder** (`haven_skyblock_builder`) | World preset, island templates, teams, visits, spawn island |
 | Quest book & progression | **FTB Quests** (`ftbquests`) | In-game quest book; chapters, tasks, and rewards |
 | FTB support | FTB Library, FTB Teams, FTB Chunks, FTB Essentials | Shared FTB infrastructure (claims, teams, utilities) |
-| Pack scripting | **KubeJS** (`kubejs` 8.0.3) | Random One Block mechanic, future recipes/integrations |
+| Pack scripting | **KubeJS** (`kubejs` 8.0.6) | Random One Block mechanic, future recipes/integrations |
 
 ### Inspired by Chaos OneBlock
 
@@ -38,8 +38,8 @@ If you enjoy this pack, play the original too — [Chaos OneBlock](https://www.c
 | Component | Version |
 |-----------|---------|
 | Minecraft | 26.1.2 |
-| NeoForge | 26.1.2.94 |
-| KubeJS | 26.1.2-8.0.3 |
+| NeoForge | 26.1.2.109 |
+| KubeJS | 26.1.2-8.0.6 |
 
 ## Quick start (Random One Block)
 
@@ -495,7 +495,7 @@ MODLIST_INSTANCE="/path/to/instance" ./update-modlist.sh
 3. Paste the printed mod bullets into `CHANGELOG.md` under a new version heading.
 4. Commit `modlist.md`, `modlist.json`, and `CHANGELOG.md` together.
 
-Current inventory: see [`modlist.md`](modlist.md) (85 mods, Minecraft 26.1.2 / NeoForge 26.1.2.94 as of last refresh).
+Current inventory: see [`modlist.md`](modlist.md) (87 mods, Minecraft 26.1.2 / NeoForge 26.1.2.109 as of last refresh).
 
 ## Status
 

@@ -4,7 +4,22 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.0.6.2] — 2026-09-26
+
+### Mods and NeoForge
+
+- **NeoForge** **26.1.2.94** → **26.1.2.109**
+- **Added:** MezzConfig, TrashSlot
+- **Updated:** Balm, BBL Core, BBL Utility, Construction Sticks, Controlling, Cooking for Blockheads, Cucumber, Ender IO, Equivox (`26.1.2-1.2.1` → `26.1.2-1.3.7`), Farming for Blockheads, Forgiving Void, FTB Chunks, FTB Library, FTB Quests, FTB XMod Compat, GraveStone, Jade, JEI, KubeJS (`8.0.4` → `8.0.6`), Mystical Agradditions, Mystical Agriculture, Puzzles Lib, Simple Voice Chat, Sodium, Sophisticated Backpacks, Sophisticated Core, Sophisticated Storage, Trade Cycling
+- Now **87 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.109**
+
+### Still planned
+
+- **Echo** trophy at 100k mines and final “Randon Ending” quest are **not** in this release yet
 
 ---
 

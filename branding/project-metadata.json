@@ -1,16 +1,16 @@
 {
   "name": "Randon One Block",
   "slug": "randon-one-block",
-  "version": "1.0.6.1",
+  "version": "1.0.6.2",
   "author": "PsyCrow1976",
   "tagline": "Experimental AI-built NeoForge skyblock — random center block, FTB quests, milestones, Randon Atlas",
-  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2 (1.0.6.1). Core loop: mine one skyblock center block, get a random pack block back. Randon Atlas: unique center rolls tracked per team, curated endgame set, FTB The Atlas chapter (66 pages, 10 XP), /randomblock atlas commands, Atlas Seal on completion. Mine milestones (Utility @ 500, choice @ 1k/5k, Easy Ore Gen @ 2500) and quest-gated minable pools. Equivox Philosopher’s Stone crash fixed (Yaskulsky/Equivox#5 → Equivox 26.1.2-1.2.1). NeoForge 26.1.2.94. Echo at 100k still planned.",
+  "pitch": "100% AI-assisted modpack experiment on Minecraft 26.1.2 (1.0.6.2). Core loop: mine one skyblock center block, get a random pack block back. Randon Atlas: unique center rolls tracked per team, curated endgame set, FTB The Atlas chapter (66 pages, 10 XP), /randomblock atlas commands, Atlas Seal on completion. Mine milestones (Utility @ 500, choice @ 1k/5k, Easy Ore Gen @ 2500) and quest-gated minable pools. Equivox Philosopher’s Stone crash fixed (Yaskulsky/Equivox#5 → Equivox 26.1.2-1.3.7). NeoForge 26.1.2.109. Echo at 100k still planned.",
   "minecraft": "26.1.2",
   "modloader": {
     "id": "neoforge",
-    "version": "26.1.2.94"
+    "version": "26.1.2.109"
   },
-  "mod_count": 85,
+  "mod_count": 87,
   "source_url": "https://github.com/PsyCrow1976/Randon-One-Block",
   "issues_url": "https://github.com/PsyCrow1976/Randon-One-Block/issues",
   "license": "MIT",
