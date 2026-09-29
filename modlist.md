@@ -1,8 +1,8 @@
 # Mod list
 
-**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.109 · **Mods:** 87
+**Minecraft:** 26.1.2 · **NeoForge:** 26.1.2.109 · **Mods:** 88
 
-*Last updated: 2026-09-26*
+*Last updated: 2026-09-29*
 
 Canonical source for installed mods in the CurseForge playtest instance. To refresh after adding, removing, or updating mods, run:
 
@@ -23,7 +23,7 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Balm | 26.1.2.15 | `balm-neoforge-26.1.2-26.1.2.15.jar` |
 | Baubley Heart Canisters | 26.1.2-1.7.3 | `baubley-heart-canisters-26.1.2-1.7.3.jar` |
 | BBL Core | 26.1.2-12.6.12 | `bblcore-26.1.2-12.6.12.jar` |
-| BBL Utility | 26.1.2-2.8.5 | `utility-26.1.2-2.8.5.jar` |
+| BBL Utility | 26.1.2-2.8.6 | `utility-26.1.2-2.8.6.jar` |
 | Better Advanced Tooltips | 2601.1.0-build.9 | `better-advanced-tooltips-2601.1.0-build.9.jar` |
 | Bookshelf | 26.1.2.15 | `Bookshelf-neoforge-MC26.1.2-26.1.2.15.jar` |
 | Cloth Config API (Fabric/Forge/NeoForge) | 26.1.154 | `cloth-config-26.1.154.jar` |
@@ -49,14 +49,14 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Forgiving Void | 26.1.2.2 | `forgivingvoid-neoforge-26.1.2-26.1.2.2.jar` |
 | FTB Chunks (NeoForge) | chunks-neoforge-26.1.2.8 | `ftb-chunks-neoforge-26.1.2.8.jar` |
 | FTB Essentials (Forge & Fabric) | essentials-neoforge-26.1.2.4 | `ftb-essentials-neoforge-26.1.2.4.jar` |
-| FTB Library (NeoForge) | library-neoforge-26.1.2.8 | `ftb-library-neoforge-26.1.2.8.jar` |
+| FTB Library (NeoForge) | library-neoforge-26.1.2.9 | `ftb-library-neoforge-26.1.2.9.jar` |
 | FTB Quests (NeoForge) | quests-neoforge-26.1.2.8 | `ftb-quests-neoforge-26.1.2.8.jar` |
 | FTB Teams (NeoForge) | teams-neoforge-26.1.2.4 | `ftb-teams-neoforge-26.1.2.4.jar` |
 | FTB XMod Compat | neoforge-26.1.2.4 | `ftb-xmod-compat-neoforge-26.1.2.4.jar` |
 | Fzzy Config | 0.7.6+26.1+neoforge | `fzzy_config-0.7.6+26.1+neoforge.jar` |
 | Gateways to Eternity | 26.1.2-6.0.2 | `GatewaysToEternity-26.1.2-6.0.2.jar` |
 | GraveStone Mod | neoforge-1.0.40+26.1.2 | `gravestone-neoforge-1.0.40+26.1.2.jar` |
-| GuideME | 26.1.12-beta | `guideme-26.1.12-beta.jar` |
+| GuideME | 26.1.14-beta | `guideme-26.1.14-beta.jar` |
 | Haven Skyblock Builder | 26.1.2-0.2.1 | `HavenSkyblockBuilder-26.1.2-0.2.1.jar` |
 | Iron Furnaces (Fabric & NeoForge) | 26.1-1.2.0 | `ironfurnacesneoforge-26.1-1.2.0.jar` |
 | Jade 🔍 | NeoForge-26.1.10 | `Jade-mc26.1-NeoForge-26.1.10.jar` |
@@ -66,8 +66,9 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Kotlin for Forge | 6.3.0-all | `kotlinforforge-6.3.0-all.jar` |
 | KubeJS | 8.0.6 | `kubejs-neoforge-26.1.2-8.0.6.jar` |
 | Leaves Be Gone | v26.1.0-mc26.1.x-NeoForge | `LeavesBeGone-v26.1.0-mc26.1.x-NeoForge.jar` |
+| LightLevelOverlay | 0.1.1-alpha | `lightleveloverlay-0.1.1-alpha.jar` |
 | Melody | neoforge_1.0.16_MC_26.1.1 | `melody_neoforge_1.0.16_MC_26.1.1.jar` |
-| MezzConfig | 26.1.2-neoforge-0.6.3 | `mezz_config-26.1.2-neoforge-0.6.3.jar` |
+| MezzConfig | 26.1.2-neoforge-0.6.5 | `mezz_config-26.1.2-neoforge-0.6.5.jar` |
 | More Overlays Updated | 1.24.4-mc26.1.2-neoforge | `moreoverlays-1.24.4-mc26.1.2-neoforge.jar` |
 | Mouse Tweaks | 2.31 | `MouseTweaks-neoforge-mc26.1-2.31.jar` |
 | Mystical Agradditions | 26.1.2-9.0.3 | `MysticalAgradditions-26.1.2-9.0.3.jar` |
@@ -93,11 +94,11 @@ Use `./update-modlist.sh --changelog` to print added/removed/changed mods for pa
 | Simple Voice Chat | neoforge-2.6.22+26.1.2 | `voicechat-neoforge-2.6.22+26.1.2.jar` |
 | Simplest Paxels | 26.1-1.0.6 | `simplest_paxels-26.1-1.0.6.jar` |
 | Sodium | neoforge-0.9.2+mc26.1.2 | `sodium-neoforge-0.9.2+mc26.1.2.jar` |
-| Sophisticated Backpacks | 26.1.2-3.26.2.2156 | `sophisticatedbackpacks-26.1.2-3.26.2.2156.jar` |
-| Sophisticated Core | 26.1.2-1.5.0.2334 | `sophisticatedcore-26.1.2-1.5.0.2334.jar` |
-| Sophisticated Storage | 26.1.2-1.5.113.2133 | `sophisticatedstorage-26.1.2-1.5.113.2133.jar` |
+| Sophisticated Backpacks | 26.1.2-3.26.3.2169 | `sophisticatedbackpacks-26.1.2-3.26.3.2169.jar` |
+| Sophisticated Core | 26.1.2-1.5.2.2347 | `sophisticatedcore-26.1.2-1.5.2.2347.jar` |
+| Sophisticated Storage | 26.1.2-1.5.113.2134 | `sophisticatedstorage-26.1.2-1.5.113.2134.jar` |
 | The Ultimate Poop Mod | 1.2.0-neoforge-26.1.2 | `the-ultimate-poop-mod-1.2.0-neoforge-26.1.2.jar` |
 | The Uncrafting Table | 0.0.4 | `uncraftingtable-0.0.4.jar` |
-| Time in a Bottle | neoforge-7.1.0 | `tiab-neoforge-7.1.0.jar` |
+| Time in a Bottle | neoforge-8.0.0 | `tiab-neoforge-8.0.0.jar` |
 | Trade Cycling | neoforge-1.0.22+26.1.2 | `trade-cycling-neoforge-1.0.22+26.1.2.jar` |
 | TrashSlot | 26.1.2.4 | `trashslot-neoforge-26.1.2-26.1.2.4.jar` |

@@ -4,7 +4,7 @@
 
 This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Randon One Block** is that experiment made playable.
 
-**1.1.0.0** is the endgame milestone: the quest book still opens the mod pools, the **Randon Atlas** is the collection finish, and **The Echo** is the 100,000-mine finish.
+**1.1.0.0** is the endgame milestone: the quest book still opens the mod pools, the **Randon Atlas** is the collection finish, and **The Echo** is the 100,000-mine finish. **1.1.0.1** adds **Light Level Overlay** — press **F7** to show or hide where mobs can spawn.
 
 ### Why “Randon”?
 
@@ -65,10 +65,10 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | | |
 |--|--|
-| Pack version | **1.1.0.0** |
+| Pack version | **1.1.0.1** |
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.109 |
-| Mods | 87 |
+| Mods | 88 |
 
 ---
 

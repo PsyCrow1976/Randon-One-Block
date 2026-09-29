@@ -1,0 +1,4 @@
+#Radius (in Bloecken) um den Spieler, in dem Spawn-Punkte gesucht und angezeigt werden.
+# Default: 16
+# Range: 1 ~ 64
+displayRadius = 16

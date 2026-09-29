@@ -495,7 +495,7 @@ MODLIST_INSTANCE="/path/to/instance" ./update-modlist.sh
 3. Paste the printed mod bullets into `CHANGELOG.md` under a new version heading.
 4. Commit `modlist.md`, `modlist.json`, and `CHANGELOG.md` together.
 
-Current inventory: see [`modlist.md`](modlist.md) (87 mods, Minecraft 26.1.2 / NeoForge 26.1.2.109 as of last refresh).
+Current inventory: see [`modlist.md`](modlist.md) (88 mods, Minecraft 26.1.2 / NeoForge 26.1.2.109 as of last refresh).
 
 ## Status
 

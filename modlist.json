@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-26",
+  "generated": "2026-09-29",
   "minecraft": "26.1.2",
   "neoforge": "26.1.2.109",
-  "mod_count": 87,
+  "mod_count": 88,
   "mods": [
     {
       "name": "Animal Pens",
@@ -69,8 +69,8 @@
     },
     {
       "name": "BBL Utility",
-      "version": "26.1.2-2.8.5",
-      "jar": "utility-26.1.2-2.8.5.jar",
+      "version": "26.1.2-2.8.6",
+      "jar": "utility-26.1.2-2.8.6.jar",
       "curseforge_id": 649644,
       "url": "https://www.curseforge.com/minecraft/mc-mods/bbl-utility"
     },
@@ -251,8 +251,8 @@
     },
     {
       "name": "FTB Library (NeoForge)",
-      "version": "library-neoforge-26.1.2.8",
-      "jar": "ftb-library-neoforge-26.1.2.8.jar",
+      "version": "library-neoforge-26.1.2.9",
+      "jar": "ftb-library-neoforge-26.1.2.9.jar",
       "curseforge_id": 404465,
       "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge"
     },
@@ -300,8 +300,8 @@
     },
     {
       "name": "GuideME",
-      "version": "26.1.12-beta",
-      "jar": "guideme-26.1.12-beta.jar",
+      "version": "26.1.14-beta",
+      "jar": "guideme-26.1.14-beta.jar",
       "curseforge_id": 1173950,
       "url": "https://www.curseforge.com/minecraft/mc-mods/guideme"
     },
@@ -369,6 +369,13 @@
       "url": "https://www.curseforge.com/minecraft/mc-mods/leaves-be-gone"
     },
     {
+      "name": "LightLevelOverlay",
+      "version": "0.1.1-alpha",
+      "jar": "lightleveloverlay-0.1.1-alpha.jar",
+      "curseforge_id": 1713667,
+      "url": "https://www.curseforge.com/minecraft/mc-mods/lightleveloverlay"
+    },
+    {
       "name": "Melody",
       "version": "neoforge_1.0.16_MC_26.1.1",
       "jar": "melody_neoforge_1.0.16_MC_26.1.1.jar",
@@ -377,8 +384,8 @@
     },
     {
       "name": "MezzConfig",
-      "version": "26.1.2-neoforge-0.6.3",
-      "jar": "mezz_config-26.1.2-neoforge-0.6.3.jar",
+      "version": "26.1.2-neoforge-0.6.5",
+      "jar": "mezz_config-26.1.2-neoforge-0.6.5.jar",
       "curseforge_id": 1689768,
       "url": "https://www.curseforge.com/minecraft/mc-mods/mezzconfig"
     },
@@ -559,22 +566,22 @@
     },
     {
       "name": "Sophisticated Backpacks",
-      "version": "26.1.2-3.26.2.2156",
-      "jar": "sophisticatedbackpacks-26.1.2-3.26.2.2156.jar",
+      "version": "26.1.2-3.26.3.2169",
+      "jar": "sophisticatedbackpacks-26.1.2-3.26.3.2169.jar",
       "curseforge_id": 422301,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
     },
     {
       "name": "Sophisticated Core",
-      "version": "26.1.2-1.5.0.2334",
-      "jar": "sophisticatedcore-26.1.2-1.5.0.2334.jar",
+      "version": "26.1.2-1.5.2.2347",
+      "jar": "sophisticatedcore-26.1.2-1.5.2.2347.jar",
       "curseforge_id": 618298,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
     },
     {
       "name": "Sophisticated Storage",
-      "version": "26.1.2-1.5.113.2133",
-      "jar": "sophisticatedstorage-26.1.2-1.5.113.2133.jar",
+      "version": "26.1.2-1.5.113.2134",
+      "jar": "sophisticatedstorage-26.1.2-1.5.113.2134.jar",
       "curseforge_id": 619320,
       "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
     },
@@ -594,8 +601,8 @@
     },
     {
       "name": "Time in a Bottle",
-      "version": "neoforge-7.1.0",
-      "jar": "tiab-neoforge-7.1.0.jar",
+      "version": "neoforge-8.0.0",
+      "jar": "tiab-neoforge-8.0.0.jar",
       "curseforge_id": 895919,
       "url": "https://www.curseforge.com/minecraft/mc-mods/time-in-a-bottle"
     },

@@ -29,6 +29,7 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 |------|-------|
 | Repo | `/home/christer/repo/Randon-One-Block` (GitHub: `PsyCrow1976/Randon-One-Block`) |
 | Playtest instance | `/home/christer/Documents/curseforge/minecraft/Instances/Modded Randon One Block` |
+| Pack version | 1.1.0.1 |
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.109 |
 | KubeJS | 26.1.2-8.0.6 |
