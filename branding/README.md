@@ -41,7 +41,7 @@ The script:
 
 - Builds `dist/Randon-One-Block-<version>.zip` from instance mod IDs + repo `config/` and `kubejs/`
 - Pushes summary, description, source/issues links, and license via `update-project`
-- Uploads the zip via `upload-file` (beta release, MC 26.1.2 + NeoForge)
+- Uploads the zip via `upload-file` (default **beta**, MC 26.1.2 + NeoForge). Pass `CF_RELEASE_TYPE=release` for a full release. **1.2.0.0** is the first file published as `release`.
 
 Optional env: `CF_VERSION`, `CF_RELEASE_TYPE` (`alpha` / `beta` / `release`), `CF_SKIP_UPLOAD=1` (zip only), `CF_SKIP_METADATA=1`.
 
@@ -65,5 +65,6 @@ The upload API **cannot** set logo, categories, or delete files. After each publ
 | Minecraft | 26.1.2 |
 | Mod loader | NeoForge 26.1.2.122 |
 | Mod count | 88 (see [`modlist.md`](../modlist.md)) |
-| Pack version | 1.1.0.2 |
+| Pack version | 1.2.0.0 |
+| Spawn lobby | Custom `spawn_island.nbt` plus `/randonspawn`. Implementation is in the root [`README.md`](../README.md) |
 | Source repo | https://github.com/PsyCrow1976/Randon-One-Block |

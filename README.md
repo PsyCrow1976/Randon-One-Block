@@ -43,8 +43,8 @@ If you enjoy this pack, play the original too — [Chaos OneBlock](https://www.c
 
 ## Quick start (Random One Block)
 
-1. Create or join a Haven skyblock world (`haven_skyblock_builder:skyblock_world`).
-2. Create a team island with the one-block template:
+1. Create or join a Haven skyblock world (`haven_skyblock_builder:skyblock_world`). You arrive on the Randon lobby.
+2. Step on the stone plate, or create a team island with the one-block template:
    ```text
    /havensb island create oneblock_island My Island
    ```
@@ -88,7 +88,7 @@ haven_skyblock_builder:skyblock_world
 | `config/haven_skyblock_builder-common.toml` | Island height, distance, cooldowns, nether skyblock, layers |
 | `config/HavenSkyblockBuilder/Templates/` | Main island `.nbt` templates (e.g. `classic_island.nbt`) |
 | `config/HavenSkyblockBuilder/AdditionalIslands/` | Extra structures pasted with a template |
-| `config/HavenSkyblockBuilder/spawn_island.nbt` | Lobby / spawn island (created once per world) |
+| `config/HavenSkyblockBuilder/spawn_island.nbt` | Randon lobby (created once per world). Signs plus a plate that creates `oneblock_island` |
 
 **Current setup:**
 
@@ -97,7 +97,36 @@ haven_skyblock_builder:skyblock_world
 | `classic_island` | `additional_sand_island` at `0,0,-75`; spawn offset `1,1,-3` (west) |
 | `oneblock_island` | **Recommended** — 3×3 grass + bedrock/dirt pyramid; spawn `0,1,0` (west); random block auto-setup |
 
-**Player flow:** spawn island → `/havensb island create <template> <name>` → team island at configured distance. In-game UI: `J`.
+**Player flow:** Randon lobby → step on the plate, or `/havensb island create oneblock_island <name>` → team island at configured distance. In-game UI: `J`.
+
+### Spawn lobby implementation (1.2.0.0)
+
+Playtest confirmed 2026-10-18. Stepping on the plate creates `oneblock_island` and names the team after the player.
+
+Haven pastes `config/HavenSkyblockBuilder/spawn_island.nbt` **once**, on first world start, with the structure corner fixed at `(-3, 68, -3)`. The marker is `saves/<world>/serverconfig/hsb`. Replacing the file does not move an island that is already placed. A new world is required.
+
+The structure stays **7×6×7**, the same footprint as Haven’s default lobby, so local `(3, y, 3)` is world `(0, 68+y, 0)`. Login looks near `(0, 71, 0)` and drops the player onto the center grass. The plate is one block south of that spot, so a new player does not land on it.
+
+| Local block | World | What it is |
+|-------------|-------|------------|
+| `(3, 1, 3)` | `(0, 69, 0)` | Center grass. This is the drop spot. |
+| `(3, 1, 4)` | `(0, 69, 1)` | Impulse command block |
+| `(3, 2, 4)` | `(0, 70, 1)` | Stone pressure plate on that command block |
+| wall at `z=6`, signs at `z=5` | south wall | Waxed glowing oak signs, facing north |
+
+The signs cover the greeting, the create command, team invite / accept / deny, and mining the center block. The command block runs:
+
+```text
+execute as @p run randonspawn
+```
+
+`kubejs/server_scripts/spawn_island.js` registers `/randonspawn` with `ServerEvents.basicPublicCommand`, so a normal player can run it. `basicCommand` would require gamemaster permission, and `execute as @p` uses the player’s permission. The script reads that player’s name and runs:
+
+```text
+havensb island create oneblock_island <name>
+```
+
+through `player.runCommand`, which makes the player the command source. Haven’s create command calls `getPlayerOrException()`, so the command block cannot run it on its own. A command block also stores the island name as literal text. It cannot expand `%username%`. `/randonspawn` is the stand-in that fills in the name of whoever stepped on the plate.
 
 ### `oneblock_island` layout
 
@@ -499,11 +528,12 @@ Current inventory: see [`modlist.md`](modlist.md) (88 mods, Minecraft 26.1.2 / N
 
 ## Status
 
-**Last playtest-verified:** 2026-06-24 — full `oneblock_island` create → auto setbelow → mining → quest book flow works in the CurseForge instance.
+**Last playtest-verified:** 2026-10-18 — Randon lobby plate creates `oneblock_island` named after the player. Earlier full flow (2026-06-24): island create → auto setbelow → mining → quest book.
 
 | Area | Status |
 |------|--------|
 | Haven Skyblock templates & config | In repo |
+| Randon spawn lobby | **Confirmed** 2026-10-18 — plate at world `(0, 70, 1)` runs `/randonspawn`, which creates `oneblock_island` named after the player |
 | `oneblock_island` template + Haven spawn | **Confirmed** — spawn on center dirt, offset `0,1,0` from structure center |
 | Random One Block (KubeJS) | **Confirmed** — mining, pool (~2100+ blocks), `roll=X/Y` logs, auto setbelow on island create |
 | Auto setbelow (`oneblock_island`) | **Confirmed** — `player_feet`, `auto_setbelow_y_offset: 0`, `auto_setbelow_delay_ticks: 40` |

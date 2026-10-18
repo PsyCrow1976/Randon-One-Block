@@ -4,7 +4,7 @@
 
 This pack exists because I wanted to see how far **AI** (Grok Composer 2.5 fast) could take a real Minecraft **26.1.2** NeoForge project. I do not mod by hand: I describe what I want, and the AI writes configs, KubeJS scripts, quests, and pack structure. **Randon One Block** is that experiment made playable.
 
-**1.1.0.0** is the endgame milestone: the quest book still opens the mod pools, the **Randon Atlas** is the collection finish, and **The Echo** is the 100,000-mine finish. **1.1.0.1** adds **Light Level Overlay** — press **F7** to show or hide where mobs can spawn. **1.1.0.2** updates NeoForge to **26.1.2.122** and refreshes 27 mods. The Atlas and The Echo are unchanged.
+**1.1.0.0** is the endgame milestone: the quest book still opens the mod pools, the **Randon Atlas** is the collection finish, and **The Echo** is the 100,000-mine finish. **1.1.0.1** adds **Light Level Overlay** — press **F7** to show or hide where mobs can spawn. **1.1.0.2** updates NeoForge to **26.1.2.122** and refreshes 27 mods. **1.2.0.0** replaces the default Haven spawn island with a Randon lobby: read the signs, then step on the plate to create your island. The Atlas and The Echo are unchanged.
 
 ### Why “Randon”?
 
@@ -36,7 +36,7 @@ Progression highlights:
 ## Quick start
 
 1. Create a world with preset **`haven_skyblock_builder:skyblock_world`**
-2. Run: `/havensb island create oneblock_island My Island`
+2. Read the lobby signs. Step on the stone plate, or run: `/havensb island create oneblock_island My Island`
 3. Mine the **center dirt** on the small pyramid — it will keep re-rolling random blocks
 4. Watch **Randon Mined :** above the hotbar — your **team** total for center blocks broken
 5. Open the **FTB Quest book** in your hotbar for starter tasks
@@ -65,7 +65,7 @@ Stuck with an unbreakable roll? Use the repeatable **Cant mine the block?** ques
 
 | | |
 |--|--|
-| Pack version | **1.1.0.2** |
+| Pack version | **1.2.0.0** |
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.122 |
 | Mods | 88 |

@@ -2,7 +2,7 @@
 
 **Read this file first** at the start of a new session (human or AI) to understand what the project is, what must keep working, what is required next, and which technical constraints must not be broken.
 
-**Last playtest-verified:** 2026-06-30 — `oneblock_island` create, auto setbelow, mod pool gating + quest unlocks, custom `kubejs` compression blocks, `/randomblock pools` commands, **Randon Mined** team counter overlay. Treat this flow as the regression baseline.
+**Last playtest-verified:** 2026-10-18 — Randon lobby plate creates `oneblock_island` named after the player. Earlier baseline (2026-06-30): `oneblock_island` create, auto setbelow, mod pool gating + quest unlocks, custom `kubejs` compression blocks, `/randomblock pools` commands, **Randon Mined** team counter overlay. Treat that flow as the regression baseline.
 
 Also read [`README.md`](README.md) for player-facing docs and quick start.
 
@@ -23,13 +23,13 @@ Also read [`README.md`](README.md) for player-facing docs and quick start.
 
 ## Project summary
 
-**Randon One Block** is a NeoForge skyblock pack repo. Players start on Haven Skyblock islands and progress via FTB Quests. The signature mechanic is a **random block generator** on the center dirt of the **`oneblock_island`** template: mining it replaces it with a weighted random block from the full modpack block registry (~2100+ eligible blocks). Each team island can use the same layout; `island_template_mode` detects the pyramid pattern without per-island config.
+**Randon One Block** is a NeoForge skyblock pack repo. Players start on the Randon lobby, create a Haven **`oneblock_island`**, and progress via FTB Quests. The signature mechanic is a **random block generator** on the center dirt of the **`oneblock_island`** template: mining it replaces it with a weighted random block from the full modpack block registry (~2100+ eligible blocks). Each team island can use the same layout; `island_template_mode` detects the pyramid pattern without per-island config.
 
 | Item | Value |
 |------|-------|
 | Repo | `/home/christer/repo/Randon-One-Block` (GitHub: `PsyCrow1976/Randon-One-Block`) |
 | Playtest instance | `/home/christer/Documents/curseforge/minecraft/Instances/Modded Randon One Block` |
-| Pack version | 1.1.0.2 |
+| Pack version | 1.2.0.0 |
 | Minecraft | 26.1.2 |
 | NeoForge | 26.1.2.122 |
 | KubeJS | 26.1.2-8.0.7 |
@@ -319,6 +319,7 @@ Key functions in `random_one_block.js`:
 - World preset: `haven_skyblock_builder:skyblock_world`
 - Haven config: `config/haven_skyblock_builder-common.toml`
 - Templates: `config/HavenSkyblockBuilder/Templates/` (`classic_island.nbt`, `oneblock_island.nbt`), `spawn_island.nbt`
+- **1.2.0.0 lobby:** `spawn_island.nbt` is the Randon sign wall. Haven pastes it once at `(-3, 68, -3)`. The plate at world `(0, 70, 1)` runs `/randonspawn`, which runs `/havensb island create oneblock_island <name>`. Existing worlds keep the old island until a new world is created.
 - `oneblock_island` spawn: `island_specific_offsets = [..., "oneblock_island=0,1,0,-90"]`
 - FTB Quest definitions: `config/ftbquests/quests/` (**JSON5** for 26.1; starter chapter in repo)
 - Per-world progress stays in saves — do not commit

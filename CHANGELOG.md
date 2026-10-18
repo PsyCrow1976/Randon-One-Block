@@ -4,7 +4,31 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. **`1.1.0.0`** = **The Echo** at 100,000 team mines, plus **The Randon Ending** (Atlas Seal and Echo Seal). **`1.1.0.1`** = **Light Level Overlay** (F7) and mod updates. **`1.1.0.2`** = NeoForge **26.1.2.122** and mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. **`1.1.0.0`** = **The Echo** at 100,000 team mines, plus **The Randon Ending** (Atlas Seal and Echo Seal). **`1.1.0.1`** = **Light Level Overlay** (F7) and mod updates. **`1.1.0.2`** = NeoForge **26.1.2.122** and mod updates. **`1.2.0.0`** = custom Haven spawn lobby. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.2.0.0] — 2026-10-18
+
+### Spawn lobby
+
+New worlds use a **Randon lobby** instead of the default Haven spawn island. Haven still pastes `config/HavenSkyblockBuilder/spawn_island.nbt` once, when the world is first created.
+
+The island is the same small grass platform and stone-brick sign wall. The signs greet you and explain how to make an island and a team. In front of the wall, a stone pressure plate sits on a command block.
+
+Step on the plate and the pack runs:
+
+`/havensb island create oneblock_island <your name>`
+
+That creates your **oneblock_island** and names the team after you. You can type the same command yourself with any team name. Teams are still **J**, `/havensb team invite <player>`, and `/havensb team accept`.
+
+A command block is not a player, and it cannot fill in `%username%`. The plate runs the public command `/randonspawn` as you, and that command runs the Haven line above with your name.
+
+Playtest confirmed 2026-10-18.
+
+Worlds created before this release keep the old lobby. The new island appears on a new world.
+
+The Echo, the Randon Atlas, and The Randon Ending are unchanged.
 
 ---
 
