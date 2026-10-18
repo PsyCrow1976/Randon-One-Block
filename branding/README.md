@@ -63,7 +63,7 @@ The upload API **cannot** set logo, categories, or delete files. After each publ
 | Display name | Randon One Block |
 | Name note | Typo for “Random” when creating the GitHub repo — explained in [`description.md`](description.md) |
 | Minecraft | 26.1.2 |
-| Mod loader | NeoForge 26.1.2.109 |
+| Mod loader | NeoForge 26.1.2.122 |
 | Mod count | 88 (see [`modlist.md`](../modlist.md)) |
-| Pack version | 1.1.0.1 |
+| Pack version | 1.1.0.2 |
 | Source repo | https://github.com/PsyCrow1976/Randon-One-Block |

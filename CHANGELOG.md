@@ -4,7 +4,45 @@ User-friendly summary of what changed in **Randon One Block**. Technical details
 
 The format is simple: newest release first, plain language, no mod jargon unless it helps.
 
-**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. **`1.1.0.0`** = **The Echo** at 100,000 team mines, plus **The Randon Ending** (Atlas Seal and Echo Seal). **`1.1.0.1`** = **Light Level Overlay** (F7) and mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+**Versioning:** **`1.0.5.0`** = milestone CurseForge release — finished first quest-book iteration, Equivox (ex-ProjectE), full descriptions, modlist refresh, dual Red Rock pool unlock. **`1.0.5.1`** = documented Equivox Philosopher’s Stone crash + upstream report. **`1.0.5.2`** = endgame design plan (Randon Atlas + Echo) checked in; not implemented yet. **`1.0.5.3`** = NeoForge **26.1.2.94**, mod updates, and bootstrap crash fix (Better Advanced Tooltips). **`1.0.5.4`** = quest → minable pool unlocks expanded (Iron Furnaces through Mystical Agriculture trio; multi-mod unlocks). **`1.0.5.6`** = **mine milestones + player-choice pool unlocks** and FTB **Randon Mined** chapter (Atlas Phase 1). **`1.0.6.0`** = **Randon Atlas** (Phase 2) — unique center rolls, endgame set, FTB **The Atlas** chapter, Atlas Seal. **`1.0.6.1`** = Equivox crash fix ([Yaskulsky/Equivox#5](https://github.com/Yaskulsky/Equivox/issues/5)) + mod updates. **`1.0.6.2`** = NeoForge **26.1.2.109** and mod updates. **`1.1.0.0`** = **The Echo** at 100,000 team mines, plus **The Randon Ending** (Atlas Seal and Echo Seal). **`1.1.0.1`** = **Light Level Overlay** (F7) and mod updates. **`1.1.0.2`** = NeoForge **26.1.2.122** and mod updates. Development patches **`1.0.4.0`–`1.0.4.11`** are summarized under the 1.0.5.0 milestone; detailed patch notes remain below. Previous milestones: **`1.0.4.0`** = ProjectE quest book + pool unlocks; **`1.0.3.0`** = team Randon Mined counter; **`1.0.2.0`** = Ex Deorum quest book.
+
+---
+
+## [1.1.0.2] — 2026-10-18
+
+### Mods and NeoForge
+
+- **NeoForge** **26.1.2.109** → **26.1.2.122**
+- **Updated:** Animal Pens `2.4.3` → `2.5.1`
+- **Updated:** Apotheosis `9.0.3` → `9.1.0`
+- **Updated:** Apothic Attributes `3.0.1` → `3.1.0`
+- **Updated:** Apothic Enchanting `2.0.0` → `2.1.0`
+- **Updated:** BBL Utility `26.1.2-2.8.6` → `26.1.2-2.9.0`
+- **Updated:** Better Advanced Tooltips `2601.1.0-build.9` → `2601.1.0-build.11`
+- **Updated:** Cooking for Blockheads `26.1.2.5` → `26.1.2.6`
+- **Updated:** Dank Storage `26.1-0` → `26.1.2-1`
+- **Updated:** Equivox `26.1.2-1.3.7` → `26.1.2-1.4.0`
+- **Updated:** FTB Essentials `26.1.2.4` → `26.1.2.5`
+- **Updated:** FTB Quests `26.1.2.8` → `26.1.2.9`
+- **Updated:** Fzzy Config `0.7.6` → `0.7.7`
+- **Updated:** GuideME `26.1.14-beta` → `26.1.15-beta`
+- **Updated:** Jade `26.1.10` → `26.1.12`
+- **Updated:** Just Enough Items `29.43.0.105` → `29.47.0.111`
+- **Updated:** Kotlin for Forge `6.3.0` → `6.4.0`
+- **Updated:** KubeJS `8.0.6` → `8.0.7`
+- **Updated:** Light Level Overlay `0.1.1-alpha` → `0.1.2`
+- **Updated:** MezzConfig `0.6.5` → `0.6.8`
+- **Updated:** Mystical Agradditions `9.0.3` → `9.0.4`
+- **Updated:** Mystical Agriculture `9.0.9` → `9.0.10`
+- **Updated:** Mystical Automation `2.0.6` → `2.0.7`
+- **Updated:** Puzzles Lib `26.1.15` → `26.1.16`
+- **Updated:** Sophisticated Backpacks `3.26.3.2169` → `3.26.11.2198`
+- **Updated:** Sophisticated Core `1.5.2.2347` → `1.5.14.2409`
+- **Updated:** Sophisticated Storage `1.5.113.2134` → `1.5.122.2185`
+- **Updated:** Trade Cycling `1.0.22` → `1.0.23`
+- Now **88 mods** on Minecraft **26.1.2** / NeoForge **26.1.2.122**
+
+The Echo, the Randon Atlas, and The Randon Ending are unchanged.
 
 ---
 
